@@ -1,10 +1,10 @@
 {
   "generated_utc": "2026-10-12T12:31:09.986147+00:00",
-  "input_key": "cad3268665d400a14b9356a1ca7e3793476749246627f33d00e4e2dbfbbbb965",
+  "input_key": "0ca5db9fc43750d046f81925e031a0960d584cf3b849b5c971783656f851fbe6",
   "inputs": {
     "schema_version": 1,
     "source_step_sha256": "72d8de23d3ff08c116ca9616ba3ede45bb44a073d262d39458dc858096344932",
-    "catalog_sha256": "8f551f3eed5c4b2ab6fddd995f19dc1747b352f44e4085368877419420986f99",
+    "catalog_sha256": "20258dfa76eea812c8e606f838046aa9c014ad5b59d739eccefb7a36fb30f307",
     "implementation": {
       "tools/print_export.py": "7352368f152b04ff938a4656c1505014616600a870e78c51bf3fdf8e40a4cdd6",
       "tools/components.py": "bcd2c6030287b2755e7b0a584ee72d6ac51df1dfd8a75ae03978093f69f21313"
@@ -23,7 +23,7 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "28a39b054c9d04dcf70be0023205e30fe0e838bf06379a394308f30db5da51ab",
+    "build_input_key": "90a7f2b6baadbd8d41da35f494348440e4f273541534dff327d81957e9867a9f",
     "assembly_data_sha256": "e6ffe539b9342fb801f9322fd961a2b9346f307d1c8c594beec5f99015c0ade3",
     "additions_sha256": "32aa26c88f4d6b70f4c9039d2d44b7827127efbe22eaafdc6d273b4f64a24b0d"
   },
@@ -3169,5 +3169,9 @@
     "PARTS.csv": "44ab63f8bc1c0a3c6ec8e832bdc95b1f624e92619f4e93d1c3f8d69f1e56e795",
     "README.md": "643631fdb42a3a8c04c48cfe2950281fad88d94f50caaa30a810d9493c0b95e9"
   },
-  "manifest_content_sha256": "9c633a8080900fef7d0dd723f0478f7a677afc3456f9ffe95c9208c599846da7"
+  "reference_normalization": {
+    "description": "Reference labels and import aliases normalized; rebuilt assembly STEP and all 45 print packages are byte-identical.",
+    "previous_input_key": "cad3268665d400a14b9356a1ca7e3793476749246627f33d00e4e2dbfbbbb965"
+  },
+  "manifest_content_sha256": "1be0e6ee5e16f6e1abd4064ff64cbb31f28a44ea3fe130f0935759310a460e3a"
 }

@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
     SIDE = -1
@@ -135,7 +135,7 @@ def make():
     body = body.cut(cq.Workplane('XZ', origin=(0, y_cb, 0)).pushPoints(ypts).circle(cb_r).extrude(5))
     if SIDE < 0:
         body = body.mirror('XZ')
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('pla', color='#8a8a90')

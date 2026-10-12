@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
     cx = 35.1
@@ -53,7 +53,7 @@ def make():
     body = body.newObject(floor_edges + corner_edges).fillet(rec_fillet)
     body = body.cut(xz(cb_y).pushPoints(holes).circle(cb_d / 2).extrude(cb_y - y_back + 1))
     body = body.cut(xz(boss_y + 1).pushPoints(holes).circle(hole_d / 2).extrude(boss_y - y_back + 2))
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('pla', color='#8a8a90')

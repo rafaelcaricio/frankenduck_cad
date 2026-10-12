@@ -1,9 +1,9 @@
-"""Regenerate local source files from the frozen STEVE snapshot (no network)."""
+"""Regenerate local source files from the frozen CAD snapshot (no network)."""
 from pathlib import Path
 import ast, hashlib, json, zipfile
 import sys
 ROOT=Path(__file__).resolve().parents[2]
-SOURCE=ROOT/'source/steve'
+SOURCE=ROOT/'source/reference'
 if '--replace-local-source' not in sys.argv:
     raise SystemExit('Migration only: this replaces local CAD source edits. To deliberately restore the original port, pass --replace-local-source.')
 
@@ -68,22 +68,22 @@ for (alias,param_json),stem in variants.items():
     else:
         code=(SOURCE/'assembly/components'/f'{alias}.py').read_text();label=alias
     t=ast.parse(code)
-    # STEVE lets a linked part override top-level parameters before evaluation.
+    # CAD lets a linked part override top-level parameters before evaluation.
     for stmt in t.body:
         if isinstance(stmt,ast.Assign) and isinstance(stmt.targets[0],ast.Name) and stmt.targets[0].id in params:
             stmt.value=ast.Constant(value=params[stmt.targets[0].id])
     ast.fix_missing_locations(t)
-    code=ast.unparse(t).replace('from steve import','from lib.steve_compat import')
+    code=ast.unparse(t).replace('from source_api import','from lib.cadquery_adapter import')
     if not part.exists():code+='\nmodel = '+alias+'\n'
     # Preserve source comments and layout in the frozen source tree; transformed code
     # is a standalone factory, with no server loader or dynamic source execution.
-    pre='from __future__ import annotations\nfrom cadgen import step\n\n\ndef make():\n    from lib.steve_compat import to_build123d\n'
+    pre='from __future__ import annotations\nfrom cadgen import step\n\n\ndef make():\n    from lib.cadquery_adapter import to_build123d\n'
     input_note=''
     for node in ast.walk(t):
         if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute) and node.func.attr=='import_step':
             input_note += f'    declare_input(ROOT / IMPORTS[{ast.literal_eval(node.args[1])!r}])\n'
     if input_note:
-        pre += '    from cadgen import declare_input\n    from lib.steve_compat import ROOT\n    from lib.import_paths import IMPORTS\n' + input_note
+        pre += '    from cadgen import declare_input\n    from lib.cadquery_adapter import ROOT\n    from lib.import_paths import IMPORTS\n' + input_note
     post=f'\n    return to_build123d(model, {label!r})\n\n\n@step(out="../../STEP/parts/{stem}.step")\ndef {stem}():\n    return make()\n\n\nif __name__ == "__main__":\n    {stem}()\n'
     write(ROOT/'src/parts'/f'{stem}.py',pre+'\n'.join('    '+line for line in code.splitlines())+post)
 
@@ -91,7 +91,7 @@ for (alias,param_json),stem in variants.items():
 kin=json.loads(json.dumps(dict(mates=r.mates,poses=r.poses)))
 for m in kin['mates']:
     if m['kind']=='revolute' and 'limits' not in m:
-        m['limits']=[-180,180]  # Viewer range only; STEVE has no measured jaw limits.
+        m['limits']=[-180,180]  # Viewer range only; CAD has no measured jaw limits.
 write(ROOT/'source/kinematics.json',json.dumps(kin,indent=2))
 
 # For animation each world-space rotation applies to all downstream occurrences.

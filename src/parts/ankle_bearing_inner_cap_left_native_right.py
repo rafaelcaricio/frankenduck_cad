@@ -3,8 +3,8 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import to_build123d
+    from lib.cadquery_adapter import Model
     SIDE = -1
     axis_x = -42.899
     axis_z = 3.975

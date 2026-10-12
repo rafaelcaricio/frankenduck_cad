@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """bottom_head_shell_native: Frankenduck head, printed lower shell (R06), robot world frame, Z up, mm.
     
     Native port of build_shell_r06.py (build123d). Construction:
@@ -14,14 +14,14 @@ def make():
       5. openings: neck/servo aperture, yoke sweep extension, rear harness opening;
       6. screw seats: rear seat, four cover lands, mic and UBEC-strap self-forming M2 holes, acoustic port,
          front and rear head-cover screws; the two rear posts are clipped to the outer skin (R06 fix).
-    Feature form (sketch/extrude/box/cylinder/combine) is used wherever STEVE can express the step.
+    Feature form (sketch/extrude/box/cylinder/combine) is used wherever CAD can express the step.
     Raw CadQuery is used only for the two section lofts and the plan-outline inset bands, which need
     computed station tables and 2D wire offsets.
     """
     import cadquery as cq
     import numpy as np
     from scipy.interpolate import PchipInterpolator
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     plan_half_widths = [(-41.04, 0.0), (-40.38, 11.26), (-38.988, 19.097), (-36.236, 27.424), (-31.622, 35.366), (-25.634, 41.468), (-17.46, 46.473), (-7.235, 50.099), (8.098, 53.198), (23.086, 55.055), (56.273, 57.88), (112.89, 61.903), (114.01, 61.795), (114.85, 61.447), (115.58, 60.869), (116.06, 60.224), (116.57, 58.503)]
     flank_x0 = 56.273
     flank_x1 = 112.89

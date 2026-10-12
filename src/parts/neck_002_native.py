@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
     x_min = 20.8
@@ -57,7 +57,7 @@ def make():
         body = body.union(cq.Workplane('XY', origin=(0, 0, z0)).center(35.1, (tp_y + y_floor + 0.05) / 2).rect(2 * tp_hx, y_floor + 0.05 - tp_y).extrude(z1 - z0))
     body = body.cut(prism_xz(lambda w: w.pushPoints(pts).circle(hole_r), y_face - 1, y_top + 1))
     body = body.cut(prism_xz(lambda w: w.pushPoints(pts).circle(cb_r), cb_y, y_top + 1))
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('pla', color='#8a8a90')

@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """roll_front_bulkhead (R05) - native rebuild of the Frankenduck head roll front bulkhead, robot world frame, mm.
     
     Source: front_bulkhead() in cad_blender/code_cad/head_internals/code/build_parts_r05.py (same coordinates, so the
@@ -15,7 +15,7 @@ def make():
     """
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     x_back = 53.0
     x_front = 60.0
     roll_axis_z = 280.58

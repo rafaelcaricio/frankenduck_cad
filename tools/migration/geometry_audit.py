@@ -1,10 +1,10 @@
-"""Independent local reconstruction and comparison with pinned STEVE measurements."""
+"""Independent local reconstruction and comparison with pinned CAD measurements."""
 from pathlib import Path
 import importlib, json, time, traceback, sys
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'src'))
 variants=json.loads((ROOT/'source/variants.json').read_text())
-baselines=json.loads((ROOT/'source/port_audit/steve_baselines.json').read_text())
+baselines=json.loads((ROOT/'source/port_audit/reference_baselines.json').read_text())
 report=[]
 for v in variants:
     name=v['model'];t=time.monotonic()

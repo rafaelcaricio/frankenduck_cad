@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """head_frame_native: Frankenduck head internals R05 head frame, robot world frame, Z up, mm.
     
     Native port of head_frame() in cad_blender/code_cad/head_internals/code/build_parts_r05.py (build123d).
@@ -23,7 +23,7 @@ def make():
     """
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     z0_roll = 280.58
     roll_back_x = -20.265
     bed_x = -25.27

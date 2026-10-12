@@ -1,0 +1,12 @@
+{
+  "code": "# ankle_bearing_inner_cap_<side>_native: printed cap on the inner race of the ankle F688 flanged bearing (Frankenduck).\n# Native rebuild of mesh ankle_bearing_inner_cap_<side>, robot world frame, mm, Z up. Left = +Y, right = -Y (exact mirror about Y = 0).\n# Ø9.5 disk 1 mm thick on the bearing axis (along Y) with two Ø1.8 holes.\nfrom source_api import Model\n\nSIDE = 1  # side switch: 1 = left (+Y), -1 = right (-Y); the only line that differs between the two documents\n\naxis_x = -42.899  # mm Bearing axis X\naxis_z = 3.975  # mm Bearing axis Z\ny_inner = 39.605  # mm |Y| of the face against the bearing inner race\nthickness = 1.0  # mm Cap thickness along Y\ncap_r = 4.75  # mm Cap radius (Ø9.5, inside the F688 inner race shoulder)\nhole_offset = 1.8  # mm Hole offset from the axis along X\nhole_r = 0.9  # mm Hole radius (Ø1.8)\n\nmodel = Model()\nmodel.cylinder(\"cap\", radius=cap_r, height=thickness, at=(axis_x, SIDE * y_inner, axis_z), direction=(0, SIDE, 0))\nfor n, dx in ((\"a\", hole_offset), (\"b\", -hole_offset)):\n    model.cylinder(f\"hole_{n}\", radius=hole_r, height=thickness + 2,\n                   at=(axis_x + dx, SIDE * (y_inner - 1), axis_z), direction=(0, SIDE, 0), op=\"cut\")\n\n# Aluminium (user, 2026-10-10; alloy not stated, 6061-T6 assumed). The Frankenduck design's\n# simulation export overrides its mass with design.mass (mass_record.py), so this sets appearance\n# and the part's own reported mass only.\nmodel.material(\"aluminum-6061-t6\", color=\"#f96c0a\")\nresult = model.result()\n",
+  "created_at": "2026-10-04T12:32:09.145293+00:00",
+  "files": {},
+  "id": "742071f3-c85b-4047-a337-989ac0139abc",
+  "kind": "part",
+  "links": {},
+  "name": "ankle_bearing_inner_cap_left_native",
+  "preview_build_id": "a20671f1-5d7e-4332-8104-e6753bc6a751",
+  "revision": 4,
+  "updated_at": "2026-10-10T17:38:02.146818+00:00"
+}

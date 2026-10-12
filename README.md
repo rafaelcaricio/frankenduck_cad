@@ -1,11 +1,9 @@
 # Frankenduck CAD
 
-Standalone parametric Text to CAD project originally ported from **The Frankenduck, STEVE revision 91**,
-captured on 2026-10-12. The active model includes the local Radxa revision below.
-The original import reference is [The Frankenduck in STEVE](https://stevecad.studio/?document=ddc406fe-ad83-4176-be52-cf163852c1ac).
-This repository owns the current editable CAD in `src/`, its interpreter, cache, imported inputs,
-exports, and review evidence. It has no dependency on robotd, hardware calibration,
-or microduck_rl, and building it does not contact STEVE or write to a robot.
+Standalone parametric Text to CAD project for the Frankenduck.
+This repository owns the current editable CAD in `src/`, its interpreter,
+imported components, print exports and review evidence. The active model includes
+the Radxa and jumper-wire revision described below.
 
 Repository: `~/development/frankenduck_cad`. Working guidance is in [AGENTS.md](AGENTS.md).
 
@@ -15,8 +13,7 @@ The active `STEP/frankenduck.step` changes five original occurrences: the Radxa 
 `#o1.6`, the Radxa board `#o1.15`, the speaker `#o1.16`, and its bulkhead mount
 `#o1.3`, and a small internal heatsink clearance in the upper shell `#o1.10`.
 It adds the cooler as `#o1.74`. The other 68 original occurrences retain their placed geometry. The
-frozen source and original STEP remain in `source/steve/` and `revisions/r91_import/`.
-This revision is local to the project and makes no STEVE edits.
+frozen source and original STEP remain in `source/reference/` and `revisions/r91_import/`.
 
 - Flip the bracket front/back about vertical Z; retain USB-C facing up.
 - Seat the PCB on the support and align all four M2 mounting holes. Move the
@@ -92,9 +89,8 @@ are retained. The pre-cooler STEP and source are saved under
 
 ## Standalone PARKSIDE battery
 
-[`src/parts/parkside_pap_204_a1.py`](src/parts/parkside_pap_204_a1.py) ports the
-[PARKSIDE PAP 204 A1 — 20 V 4 Ah battery in STEVE](https://stevecad.studio/?document=d08bce05-3ec5-4847-9ca4-395f8f05d915)
-at **revision 6** as one reusable local component. Its case, slide rail, contacts,
+[`src/parts/parkside_pap_204_a1.py`](src/parts/parkside_pap_204_a1.py) models the
+PARKSIDE PAP 204 A1 — 20 V 4 Ah battery as one reusable local component. Its case, slide rail, contacts,
 locking tooth, release paddle, charge button, lens and side artwork remain grouped
 inside one selectable battery component containing 66 solids. The 30 source
 geometry groups are internal construction details, not separate viewer parts.
@@ -112,15 +108,15 @@ CADGEN_CACHE_DIR="$PWD/.cadgen" PYTHONPATH=src .venv/bin/python src/parts/parksi
 
 This produces `STEP/parts/parkside_pap_204_a1.step`. Other models
 can reuse `parts.parkside_pap_204_a1.make()`. The build uses the existing pinned
-local CAD runtime and needs no STEVE connection. The original source, exported
+local CAD runtime. The original source, exported
 reference STEP and baseline measurements are frozen under
-`source/steve/parts/parkside_pap_204_a1/`. The DejaVu Sans Bold font and its license
+`source/reference/parts/parkside_pap_204_a1/`. The DejaVu Sans Bold font and its license
 are retained under `source/fonts/`; the model declares the font as a build input
 and uses its explicit path to reproduce the lettering across machines.
 
 Units are millimetres. The origin is the centre of the bottom face; +X points
 toward the red release paddle, -X toward the contact nose, and +Z points up.
-The modeled envelope is **123 × 83 × 66.4 mm**. The STEVE source cites a listed
+The modeled envelope is **123 × 83 × 66.4 mm**. The retained reference cites a listed
 product height of **70 mm** and product mass of **711 g**, while following the
 photos for the 66.4 mm paddle height. Those product claims are preserved from
 the source. Other dimensions, including the rail and latch, are photo-derived:
@@ -129,7 +125,7 @@ CAD volume and appearance materials do not reproduce the battery's internal
 construction or product mass.
 
 Port verification is recorded in `source/port_audit/parkside_pap_204_a1.json`:
-saved local geometry is checked against the retained STEVE export and baseline,
+saved local geometry is checked against the retained reference STEP and baseline,
 including one leaf component, retained face colours, original solid ordering,
 positive valid solids, bounds, faces, volume and
 bidirectional geometric differences. Isometric and opposing views are reviewed
@@ -327,7 +323,7 @@ Runner regression tests use temporary fixtures and do not load CAD geometry:
 Use Text to CAD's **Kinematics** tab for the joint sliders and `zero` / `home`
 presets. Use **Animation** for `walk_sit_stand_walk_sit`: 58.12 seconds, 1,702
 original keyframes, linear interpolation, one playback ending in the recorded
-seated pose. The trunk remains grounded, as in the canonical STEVE design.
+seated pose. The trunk remains grounded, as in the retained assembly reference.
 The animated GLB contains 1,744 samples at 30 fps; the cooler adds four moving
 body occurrences to the original 296.
 
@@ -344,12 +340,11 @@ pose presets, body colors, and the active recorded animation.
 
 The geometry source retains its CadQuery/OCP construction through a small local
 adapter, then returns build123d shapes to cadgen. It is executable Text to CAD
-source with independent per-model STEP outputs. It is not a reconstruction of
-STEVE's graphical feature editor. Original comments and source files are retained
-byte-for-byte under `source/steve/`; transformed, editable factories are under
-`src/parts/`. All imported geometry is stored locally under `STEP/imported/`.
+source with independent per-model STEP outputs. Retained geometry declarations
+and comments are under `source/reference/`, with platform labels and external
+links normalized. Editable factories are under `src/parts/`. All imported geometry is stored locally under `STEP/imported/`.
 
-STEVE's historical simulation mass overrides and lumped masses are preserved in
+Historical simulation mass overrides and lumped masses are preserved in
 `source/assembly_data.json` and the original `mass_record.py`. They are not
 physical mass measurements and are not a cadgen dynamics model. Source comments
 identify that frozen training reference as predating the updated camera, ToF,
@@ -357,7 +352,7 @@ speaker, and Radxa orientation.
 
 ## Format adaptation
 
-STEVE declares no measured jaw range. cadgen requires finite limits for every
+The retained reference declares no measured jaw range. cadgen requires finite limits for every
 revolute slider, so this viewer uses **jaw = -180 to +180 degrees solely as a
 presentation range**. The unmodified source record retains the absence of a
 measured limit. The other 14 revolute limits and all pivots/axis signs match the
@@ -388,11 +383,9 @@ approximately **190.350 × 194.580 × 366.733 mm**.
 - `review/`: reviewed rest isometric/front, HOME isometric, and seated-end PNGs.
   Live viewer playback was also exercised and the final frame was checked.
 
-The separate [STEVE geometry reference](https://stevecad.studio/?document=c3b740ee-146e-4b23-a9bc-9ff920903616)
-was created only for export and comparison; the canonical document was not edited.
-Its optional full comparison export was still processing at handoff;
-`reports/archive/import/steve_reference_status.json` records that boundary. A build or visual
-review is not a new collision study, manufacturing release, or hardware test.
+Historical import and comparison records remain in
+`reports/archive/import/`. A build or visual review is not a new collision study,
+manufacturing release or hardware test.
 
 The initial source-equivalence and broad review reports describe the frozen
 import. The current Radxa changes are covered by the separate mount fit report;

@@ -3,11 +3,11 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """Measured bare ToF board layout from user's caliper photos, for the Frankenduck fit study.
     Measured: 24.81 mm long, 10.16 mm wide, 18.72 mm hole centres (confirmed by user), M3 holes,
     7.02 mm bare sensor length. Depth, chip width and its offset are provisional; cover/header not represented."""
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     pcb_length = 24.81
     pcb_width = 10.16
     hole_pitch = 18.72

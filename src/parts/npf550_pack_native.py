@@ -3,9 +3,9 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     pack_x0 = -62.6
     pack_x1 = -39.8
     pack_hy = 19.25

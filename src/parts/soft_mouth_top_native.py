@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import cadquery as cq
     piv_x = 91.5
     piv_z = 270.0
@@ -54,7 +54,7 @@ def make():
     part = outer.intersect(slab)
     part = part.rotate((0, 0, 0), (0, 1, 0), tilt).translate((piv_x, 0, piv_z))
     back_cutter = cq.Workplane('XY').box(10, 200, 200).translate((back_x - 5, 0, piv_z))
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', part.cut(back_cutter))
     model.material('fdm-tpu', color='#f79507')

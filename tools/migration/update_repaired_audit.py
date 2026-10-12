@@ -1,7 +1,7 @@
 from pathlib import Path
 import json, sys, importlib, time
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'src'))
-p=ROOT/'reports/archive/import/geometry_audit.json';rows=json.loads(p.read_text());baselines=json.loads((ROOT/'source/port_audit/steve_baselines.json').read_text())
+p=ROOT/'reports/archive/import/geometry_audit.json';rows=json.loads(p.read_text());baselines=json.loads((ROOT/'source/port_audit/reference_baselines.json').read_text())
 for row in rows:
  if row['status']=='failed':
   t=time.monotonic();s=importlib.import_module('parts.'+row['model']).make();b=s.bounding_box();v=sum(x.volume for x in s.solids());target=baselines[row['component']]['model']['metadata']['volume_mm3'];delta=abs(v-target)

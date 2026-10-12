@@ -16,19 +16,12 @@
     "name": "Frankenduck r91 — isolated Text to CAD imported inputs",
     "preview_build_id": "f73a0660-4d1b-4311-8bc4-a122aeb25e4b",
     "revision": 1,
-    "updated_at": "2026-10-11T22:41:52.108544+00:00",
-    "url": "https://stevecad.studio/?document=c3b740ee-146e-4b23-a9bc-9ff920903616"
+    "updated_at": "2026-10-11T22:41:52.108544+00:00"
   },
   "model": {
-    "artifacts": {
-      "bodies_mesh": "https://stevecad.studio/v1/builds/f73a0660-4d1b-4311-8bc4-a122aeb25e4b/artifacts/bodies_mesh",
-      "components_step": "https://stevecad.studio/v1/builds/f73a0660-4d1b-4311-8bc4-a122aeb25e4b/artifacts/components_step",
-      "preview": "https://stevecad.studio/v1/builds/f73a0660-4d1b-4311-8bc4-a122aeb25e4b/artifacts/preview",
-      "step": "https://stevecad.studio/v1/builds/f73a0660-4d1b-4311-8bc4-a122aeb25e4b/artifacts/step",
-      "topology": "https://stevecad.studio/v1/builds/f73a0660-4d1b-4311-8bc4-a122aeb25e4b/artifacts/topology"
-    },
+    "artifacts": {},
     "id": "f73a0660-4d1b-4311-8bc4-a122aeb25e4b",
-    "logs": "STEVE stage: sheet-metal export\nSTEVE stage: STEP export\nSTEVE stage: preview mesh\nSTEVE stage: topology\nSTEVE stage: summary\n",
+    "logs": "CAD stage: sheet-metal export\nCAD stage: STEP export\nCAD stage: preview mesh\nCAD stage: topology\nCAD stage: summary\n",
     "metadata": {
       "bounds_mm": [
         117.07734086782,
@@ -553,8 +546,6 @@
       "volume_mm3": 17091.04481063394
     },
     "mode": "full",
-    "status": "succeeded",
-    "url": "https://stevecad.studio/?model=f73a0660-4d1b-4311-8bc4-a122aeb25e4b"
-  },
-  "url": "https://stevecad.studio/?document=c3b740ee-146e-4b23-a9bc-9ff920903616"
+    "status": "succeeded"
+  }
 }

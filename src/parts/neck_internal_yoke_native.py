@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """neck_internal_yoke_native: Frankenduck neck yoke (stage B, the canonical part), robot world frame, Z up, mm.
     
     Native port of cad_blender/code_cad/neck_internal_yoke/build.py --stage B (build123d), same coordinates.
@@ -20,7 +20,7 @@ def make():
     """
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     axis_x = 35.1
     axis_z = 163.769
     plate_z0 = 164.45

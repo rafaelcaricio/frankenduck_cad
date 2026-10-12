@@ -3,10 +3,10 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     floor_x = -39.8
     panel_t = 3.5
     panel_hy = 22.34

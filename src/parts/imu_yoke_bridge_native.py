@@ -3,10 +3,10 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     bar_x0 = -20.0
     bar_x1 = -12.0
     bar_half_y = 31.5

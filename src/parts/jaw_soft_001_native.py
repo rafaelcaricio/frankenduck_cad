@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """jaw_soft_001_native: soft (TPU) cover of the lower jaw, Frankenduck head.
     
     Rebuilt natively from the Blender mesh jaw_soft.001 (robot world frame, Z up, mm).
@@ -139,7 +139,7 @@ def make():
     pts = [(x, -y) for x, y in reversed(half)] + half[1:]
     notch = cq.Workplane('XY', origin=(0, 0, 250)).spline(pts, includeCurrent=False).lineTo(60.0, notch_end_y).lineTo(60.0, -notch_end_y).close().extrude(30)
     body = body.cut(notch)
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('fdm-tpu', color='#f79507')

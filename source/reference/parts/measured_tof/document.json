@@ -1,0 +1,12 @@
+{
+  "code": "\"\"\"Measured bare ToF board layout from user's caliper photos, for the Frankenduck fit study.\nMeasured: 24.81 mm long, 10.16 mm wide, 18.72 mm hole centres (confirmed by user), M3 holes,\n7.02 mm bare sensor length. Depth, chip width and its offset are provisional; cover/header not represented.\"\"\"\nfrom source_api import Model\npcb_length = 24.81  # mm Measured full PCB length\npcb_width = 10.16  # mm Measured PCB width\nhole_pitch = 18.72  # mm User-confirmed centre-to-centre measurement\nhole_radius = 1.6  # mm Nominal M3 clearance representation, actual bore diameter not measured\npcb_thickness = 1.0  # mm PROVISIONAL, retained from previous mechanical model\nsensor_length = 7.02  # mm Measured bare package length\nsensor_width = 3.3  # mm PROVISIONAL visual width\nsensor_height = 1.6  # mm PROVISIONAL, retained previous nominal total 2.6 mm\ny_center = 30.252  # mm Existing front opening axis, robot world frame\nz_center = 298.805  # mm Existing screw/opening row, sensor offset unmeasured\nseat_x = 104.085  # mm Existing face boss seating plane\near_radius = (pcb_length-hole_pitch)/2  # mm Ends preserve measured length and pitch\nmodel = Model()\nmodel.box(\"pcb\", pcb_thickness, hole_pitch, pcb_width,\n          at=(seat_x-pcb_thickness/2,y_center,z_center),name=\"Measured PCB outline\")\nfor i,yy in enumerate((y_center-hole_pitch/2,y_center+hole_pitch/2)):\n    model.cylinder(f\"ear_{i}\",ear_radius,pcb_thickness,\n                   at=(seat_x-pcb_thickness,yy,z_center),direction=(1,0,0),op=\"join\")\nfor i,yy in enumerate((y_center-hole_pitch/2,y_center+hole_pitch/2)):\n    model.cylinder(f\"mount_hole_{i}\",hole_radius,pcb_thickness,\n                   at=(seat_x-pcb_thickness,yy,z_center),direction=(1,0,0),op=\"cut\")\nmodel.box(\"sensor\",sensor_height,sensor_length,sensor_width,\n          at=(seat_x+sensor_height/2,y_center,z_center),op=\"new\",name=\"Bare sensor, nominal depth\")\nmodel.material(\"pla\",color=\"#24875c\",bodies=[\"pcb\"])\nmodel.material(\"pla\",color=\"#232329\",bodies=[\"sensor\"])\nresult=model.result()\n",
+  "created_at": "2026-10-11T18:39:30.846046+00:00",
+  "files": {},
+  "id": "3274d27d-1c98-47fc-a305-4d65f0811964",
+  "kind": "part",
+  "links": {},
+  "name": "Frankenduck ToF — measured bare-board layout (provisional depth)",
+  "preview_build_id": "5aa6e63f-7f2f-4a1c-bd74-15ca321ec9c1",
+  "revision": 1,
+  "updated_at": "2026-10-11T18:39:30.846046+00:00"
+}

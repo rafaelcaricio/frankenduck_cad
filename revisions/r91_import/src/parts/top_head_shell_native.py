@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """top_head_shell (R05) - native rebuild of the Frankenduck head top cover (lid), robot world frame, mm.
     
     Outer skin: a loft through 29 fitted cross-sections (x-stations), each a symmetric cubic B-spline (14 poles)
@@ -24,7 +24,7 @@ def make():
     from OCP.GeomLProp import GeomLProp_SLProps
     from OCP.TColgp import TColgp_Array1OfPnt
     from OCP.gp import gp_Pnt
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     z_bottom = 274.503
     wall = 2.295
     lip = 1.03

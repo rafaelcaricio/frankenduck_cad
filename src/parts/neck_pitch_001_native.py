@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
     axis_x = 35.1
@@ -130,7 +130,7 @@ def make():
     body = body.cut(cq.Workplane('XY', origin=(boss_x, boss_y, plate_z0 - 1)).circle(c_d0 / 2).extrude(c_z0 - plate_z0 + 1))
     body = body.cut(cq.Workplane('XY', origin=(boss_x, boss_y, plate_z0 - 1)).circle(c_d1 / 2).extrude(10))
     body = body.cut(cq.Workplane('XY', origin=(boss_x, boss_y, c_z1)).circle(c_d2 / 2).extrude(10))
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('pla', color='#8a8a90')

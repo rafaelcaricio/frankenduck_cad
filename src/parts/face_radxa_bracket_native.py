@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """face_radxa_bracket_native: Frankenduck head, face Radxa bracket (R02), robot world frame, Z up, mm.
     
     Native port of face_bracket() in head_internals/code/build_parts_r05.py (build123d).
@@ -14,7 +14,7 @@ def make():
     clearance holes retain their pan-head wells and 1.6 mm screw grip.
     No heat-set insert pockets in this part (the M3 inserts sit in the face bosses, not here).
     """
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     x0 = 76.0
     # A 3.2 mm rail keeps the 1.6 mm screw grip and moves the PCB 2 mm
     # toward the face, giving the rear-facing GPIO plugs a larger exit bay.

@@ -7,18 +7,12 @@
     "name": "Frankenduck face — MightyCamera mount study",
     "preview_build_id": "cae98e9d-8835-4e63-8af4-421ec12dac89",
     "revision": 4,
-    "updated_at": "2026-10-11T19:42:29.107314+00:00",
-    "url": "https://stevecad.studio/?document=44b1fc95-19da-4f48-b364-ae8bf5f6a9a6"
+    "updated_at": "2026-10-11T19:42:29.107314+00:00"
   },
   "model": {
-    "artifacts": {
-      "bodies_mesh": "https://stevecad.studio/v1/builds/cae98e9d-8835-4e63-8af4-421ec12dac89/artifacts/bodies_mesh",
-      "preview": "https://stevecad.studio/v1/builds/cae98e9d-8835-4e63-8af4-421ec12dac89/artifacts/preview",
-      "step": "https://stevecad.studio/v1/builds/cae98e9d-8835-4e63-8af4-421ec12dac89/artifacts/step",
-      "topology": "https://stevecad.studio/v1/builds/cae98e9d-8835-4e63-8af4-421ec12dac89/artifacts/topology"
-    },
+    "artifacts": {},
     "id": "cae98e9d-8835-4e63-8af4-421ec12dac89",
-    "logs": "STEVE stage: sheet-metal export\nSTEVE stage: STEP export\nSTEVE stage: preview mesh\nSTEVE stage: topology\nSTEVE stage: summary\nSTEVE stage: history check\n",
+    "logs": "CAD stage: sheet-metal export\nCAD stage: STEP export\nCAD stage: preview mesh\nCAD stage: topology\nCAD stage: summary\nCAD stage: history check\n",
     "metadata": {
       "bounds_mm": [
         16.875000099999994,
@@ -670,8 +664,6 @@
       "volume_mm3": 13276.867381777824
     },
     "mode": "full",
-    "status": "succeeded",
-    "url": "https://stevecad.studio/?model=cae98e9d-8835-4e63-8af4-421ec12dac89"
-  },
-  "url": "https://stevecad.studio/?document=44b1fc95-19da-4f48-b364-ae8bf5f6a9a6"
+    "status": "succeeded"
+  }
 }

@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """ubec_clamp_native: Frankenduck head, UBEC clamp (R02), robot world frame, Z up, mm.
     
     Native port of ubec_clamp() in cad_blender/code_cad/head_internals/code/build_parts_r05.py.
@@ -12,7 +12,7 @@ def make():
     No M3 insert pockets in this part; the M2 holes are clearances (the self-forming M2 holes are in the shell).
     Printed upright: underside (z 282.9) on the bed.
     """
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     clamp_z0 = 282.9
     clamp_z1 = 285.9
     bar_x0 = 65.0

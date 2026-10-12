@@ -1,0 +1,570 @@
+{
+  "document_id": "d08bce05-3ec5-4847-9ca4-395f8f05d915",
+  "revision": 6,
+  "name": "PARKSIDE PAP 204 A1 — 20 V 4 Ah battery",
+  "model_id": "d0641ab5-ce4e-4983-95fa-0f76058fc1ad",
+  "units": "mm",
+  "bounds_mm": [
+    123.0000002,
+    83.00000020000012,
+    66.40000010000001
+  ],
+  "extent_mm": [
+    -61.5000001,
+    -41.50000010000006,
+    -1.0000000355271367e-07,
+    61.5000001,
+    41.50000010000006,
+    66.4
+  ],
+  "solids": 66,
+  "faces": 1628,
+  "volume_mm3": 544625.3301676543,
+  "surface_area_mm2": 85942.43464554336,
+  "bodies": {
+    "capacity_0": {
+      "color": "#ebebea",
+      "extent_mm": [
+        15.51,
+        -39.41932214542829,
+        46.41089739460028,
+        36.69,
+        -36.29950119183576,
+        49.413444353403015
+      ],
+      "faces": 123,
+      "finish": "matte",
+      "index": 26,
+      "mass": 0.0026,
+      "material": "abs",
+      "name": null,
+      "volume": 2.4454
+    },
+    "capacity_1": {
+      "color": "#ebebea",
+      "extent_mm": [
+        15.759999999999998,
+        36.29950119183576,
+        46.41089739460028,
+        36.94,
+        39.41932214542829,
+        49.413444353403015
+      ],
+      "faces": 123,
+      "finish": "matte",
+      "index": 29,
+      "mass": 0.0026,
+      "material": "abs",
+      "name": null,
+      "volume": 2.4454
+    },
+    "check_button": {
+      "color": "#c8141f",
+      "extent_mm": [
+        28.599999999999998,
+        18.414130864744063,
+        63.47703276830988,
+        37.75,
+        23.0596667508693,
+        65.51720261744981
+      ],
+      "faces": 25,
+      "finish": "matte",
+      "index": 15,
+      "mass": 0.0641,
+      "material": "abs",
+      "name": null,
+      "volume": 60.5124
+    },
+    "contact_0": {
+      "color": "#b7b9b8",
+      "extent_mm": [
+        -30,
+        -11.8,
+        58.8,
+        -19.6,
+        -11.3,
+        60
+      ],
+      "faces": 6,
+      "finish": "polished",
+      "index": 17,
+      "mass": 0.0487,
+      "material": "stainless-304",
+      "name": null,
+      "volume": 6.24
+    },
+    "contact_1": {
+      "color": "#b7b9b8",
+      "extent_mm": [
+        -30,
+        -4.15,
+        58.8,
+        -19.6,
+        -3.65,
+        60
+      ],
+      "faces": 6,
+      "finish": "polished",
+      "index": 18,
+      "mass": 0.0487,
+      "material": "stainless-304",
+      "name": null,
+      "volume": 6.24
+    },
+    "contact_2": {
+      "color": "#b7b9b8",
+      "extent_mm": [
+        -30,
+        3.65,
+        58.8,
+        -19.6,
+        4.15,
+        60
+      ],
+      "faces": 6,
+      "finish": "polished",
+      "index": 19,
+      "mass": 0.0487,
+      "material": "stainless-304",
+      "name": null,
+      "volume": 6.24
+    },
+    "contact_3": {
+      "color": "#b7b9b8",
+      "extent_mm": [
+        -30,
+        11.3,
+        58.8,
+        -19.6,
+        11.8,
+        60
+      ],
+      "faces": 6,
+      "finish": "polished",
+      "index": 20,
+      "mass": 0.0487,
+      "material": "stainless-304",
+      "name": null,
+      "volume": 6.24
+    },
+    "end_red_0": {
+      "color": "#c8141f",
+      "extent_mm": [
+        57.3,
+        -19.75,
+        0,
+        59.3,
+        -14.25,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 6,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "end_red_1": {
+      "color": "#c8141f",
+      "extent_mm": [
+        57.3,
+        -2.75,
+        0,
+        59.3,
+        2.75,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 7,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "end_red_2": {
+      "color": "#c8141f",
+      "extent_mm": [
+        57.3,
+        14.25,
+        0,
+        59.3,
+        19.75,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 8,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "end_red_3": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -59.3,
+        -19.75,
+        0,
+        -57.3,
+        -14.25,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 9,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "end_red_4": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -59.3,
+        -2.75,
+        0,
+        -57.3,
+        2.75,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 10,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "end_red_5": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -59.3,
+        14.25,
+        0,
+        -57.3,
+        19.75,
+        9.3
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 11,
+      "mass": 0.1084,
+      "material": "abs",
+      "name": null,
+      "volume": 102.3
+    },
+    "foot_strip_0": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -33,
+        -39.599999999999994,
+        0.85,
+        -27,
+        39.599999999999994,
+        1.2
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 1,
+      "mass": 0.1763,
+      "material": "abs",
+      "name": null,
+      "volume": 166.32
+    },
+    "foot_strip_1": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -18,
+        -39.599999999999994,
+        0.85,
+        -12,
+        39.599999999999994,
+        1.2
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 2,
+      "mass": 0.1763,
+      "material": "abs",
+      "name": null,
+      "volume": 166.32
+    },
+    "foot_strip_2": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -3,
+        -39.599999999999994,
+        0.85,
+        3,
+        39.599999999999994,
+        1.2
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 3,
+      "mass": 0.1763,
+      "material": "abs",
+      "name": null,
+      "volume": 166.32
+    },
+    "foot_strip_3": {
+      "color": "#c8141f",
+      "extent_mm": [
+        12,
+        -39.599999999999994,
+        0.85,
+        18,
+        39.599999999999994,
+        1.2
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 4,
+      "mass": 0.1763,
+      "material": "abs",
+      "name": null,
+      "volume": 166.32
+    },
+    "foot_strip_4": {
+      "color": "#c8141f",
+      "extent_mm": [
+        27,
+        -39.599999999999994,
+        0.85,
+        33,
+        39.599999999999994,
+        1.2
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 5,
+      "mass": 0.1763,
+      "material": "abs",
+      "name": null,
+      "volume": 166.32
+    },
+    "led_lens": {
+      "color": "#12c46a",
+      "extent_mm": [
+        59.8,
+        -21,
+        40,
+        61,
+        21,
+        42.3
+      ],
+      "faces": 8,
+      "finish": "glossy",
+      "index": 12,
+      "mass": 0.1353,
+      "material": "pc",
+      "name": null,
+      "volume": 112.746
+    },
+    "locking_tooth": {
+      "color": "#c8141f",
+      "extent_mm": [
+        12.5,
+        -16,
+        58.3,
+        19.5,
+        16,
+        64.6
+      ],
+      "faces": 24,
+      "finish": "matte",
+      "index": 21,
+      "mass": 1.3542,
+      "material": "abs",
+      "name": null,
+      "volume": 1277.5268
+    },
+    "lower_case": {
+      "color": "#1b1c1d",
+      "extent_mm": [
+        -60.800000100000005,
+        -40.800000100000005,
+        -1.0000000355271367e-07,
+        60.800000100000005,
+        40.800000100000005,
+        41.500000000000014
+      ],
+      "faces": 90,
+      "finish": "textured",
+      "index": 0,
+      "mass": 421.6512,
+      "material": "abs",
+      "name": null,
+      "volume": 397784.1269
+    },
+    "print_red_0": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -43.45,
+        -40.96999999999999,
+        5.92,
+        15.190000000000005,
+        -40.919999999999995,
+        25.18
+      ],
+      "faces": 215,
+      "finish": "matte",
+      "index": 24,
+      "mass": 0.0066,
+      "material": "abs",
+      "name": null,
+      "volume": 6.2464
+    },
+    "print_red_1": {
+      "color": "#c8141f",
+      "extent_mm": [
+        -39.47,
+        40.919999999999995,
+        6,
+        15.73,
+        40.96999999999999,
+        25.47
+      ],
+      "faces": 215,
+      "finish": "matte",
+      "index": 27,
+      "mass": 0.0066,
+      "material": "abs",
+      "name": null,
+      "volume": 6.2464
+    },
+    "print_white_0": {
+      "color": "#ebebea",
+      "extent_mm": [
+        -37.8751049900463,
+        -40.97000009999999,
+        6.05,
+        -1.7299999999999969,
+        -40.91999989999999,
+        25.309616869547327
+      ],
+      "faces": 226,
+      "finish": "matte",
+      "index": 25,
+      "mass": 0.008,
+      "material": "abs",
+      "name": null,
+      "volume": 7.5535
+    },
+    "print_white_1": {
+      "color": "#ebebea",
+      "extent_mm": [
+        -43.216035799254115,
+        40.91999989999999,
+        6.13,
+        6.8100000000000005,
+        40.97000009999999,
+        25.599616869547326
+      ],
+      "faces": 226,
+      "finish": "matte",
+      "index": 28,
+      "mass": 0.008,
+      "material": "abs",
+      "name": null,
+      "volume": 7.5535
+    },
+    "rail": {
+      "color": "#1d1e1f",
+      "extent_mm": [
+        -45,
+        -22.000000000000004,
+        52.05,
+        13.500000000000007,
+        22.000000000000007,
+        62.00000000000001
+      ],
+      "faces": 128,
+      "finish": "matte",
+      "index": 16,
+      "mass": 22.433,
+      "material": "abs",
+      "name": null,
+      "volume": 21163.2398
+    },
+    "release_paddle": {
+      "color": "#c8141f",
+      "extent_mm": [
+        28.3,
+        -14.600000099999999,
+        54.5999999,
+        54.8592483364292,
+        14.600000100000004,
+        66.4
+      ],
+      "faces": 46,
+      "finish": "matte",
+      "index": 14,
+      "mass": 2.2062,
+      "material": "abs",
+      "name": null,
+      "volume": 2081.3622
+    },
+    "side_label_0": {
+      "color": "#323b42",
+      "extent_mm": [
+        -45.84,
+        -40.92,
+        4.44,
+        27.33,
+        -40.75,
+        27.26
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 22,
+      "mass": 0.2667,
+      "material": "abs",
+      "name": null,
+      "volume": 251.6373
+    },
+    "side_label_1": {
+      "color": "#323b42",
+      "extent_mm": [
+        -45.84,
+        40.75,
+        4.44,
+        27.33,
+        40.92,
+        27.26
+      ],
+      "faces": 6,
+      "finish": "matte",
+      "index": 23,
+      "mass": 0.2667,
+      "material": "abs",
+      "name": null,
+      "volume": 251.6373
+    },
+    "upper_case": {
+      "color": "#1b1c1d",
+      "extent_mm": [
+        -61.5000001,
+        -41.50000010000006,
+        42.299999899999996,
+        61.5000001,
+        41.50000010000006,
+        66.00000000000001
+      ],
+      "faces": 77,
+      "finish": "textured",
+      "index": 13,
+      "mass": 127.3481,
+      "material": "abs",
+      "name": null,
+      "volume": 120139.6908
+    }
+  },
+  "reference_product_mass_g": 711,
+  "listed_height_mm": 70,
+  "geometry_fidelity": "dimensioned_approximation",
+  "notes": "Photo-derived exterior model; interface dimensions are not measured mating tolerances. Manufacturer dimensions and mass are claims preserved from CAD source."
+}

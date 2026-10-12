@@ -126,7 +126,7 @@ def make():
     """Return the complete coloured battery as one selectable component."""
     import cadquery as cq
     from cadgen import declare_input
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     font_path = Path(__file__).resolve().parents[2] / 'source/fonts/DejaVuSans-Bold.ttf'
     declare_input(font_path)
     model = Model("PARKSIDE PAP 204 A1 - 20V 4Ah")

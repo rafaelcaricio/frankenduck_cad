@@ -932,7 +932,7 @@
       "material_hint": "mixed: ABS case, PC lens, metal contacts; appearance only",
       "export": false,
       "active_variant": false,
-      "notes": "Standalone port of STEVE d08bce05-3ec5-4847-9ca4-395f8f05d915 revision 6. Photo-derived exterior, rail and latch; not a measured mating interface. Not installed in the robot assembly. Product reference mass 711 g; CAD solids do not represent battery internals."
+      "notes": "Standalone port of CAD d08bce05-3ec5-4847-9ca4-395f8f05d915 revision 6. Photo-derived exterior, rail and latch; not a measured mating interface. Not installed in the robot assembly. Product reference mass 711 g; CAD solids do not represent battery internals."
     }
   ],
   "review_geometry": [

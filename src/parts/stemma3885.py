@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """Adafruit STEMMA Speaker 3885 mechanical envelope, mm.
     Manufacturer PCB: https://github.com/adafruit/Adafruit-STEMMA-Speaker-PCB
     Designed by Limor Fried/Ladyada for Adafruit Industries, CC BY-SA; support open hardware.
@@ -13,7 +13,7 @@ def make():
     Origin at PCB lower-left underside; local +Z toward speaker face.
     """
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     board_w = 30.48
     board_l = 36.88
     board_t = 1.6

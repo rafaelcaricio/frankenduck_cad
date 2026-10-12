@@ -2,7 +2,6 @@
   "captured_canonical": {
     "document_id": "ddc406fe-ad83-4176-be52-cf163852c1ac",
     "revision": 91,
-    "url": "https://stevecad.studio/?document=ddc406fe-ad83-4176-be52-cf163852c1ac",
     "linked_revisions": {
       "ankle_bearing_inner_cap_left_native": {
         "document_id": "742071f3-c85b-4047-a337-989ac0139abc",
@@ -339,11 +338,11 @@
       "bytes": 541,
       "sha256": "411a62952c1d8afae1229520683f40b7b294dc7840d642c1ee693d02bb7e6a93"
     },
-    "checks/steve_baselines.json": {
+    "checks/reference_baselines.json": {
       "bytes": 438514,
       "sha256": "3b1a4067242f5cb1dab7c2fd388b2f0ad877ea5179ce7d7b435fc3f69b19f263"
     },
-    "checks/steve_reference_status.json": {
+    "checks/reference_status.json": {
       "bytes": 650,
       "sha256": "934705c773383b7be2e934b719f8816439b818933d90193ebe6f96029e2fa06c"
     },
@@ -463,383 +462,383 @@
       "bytes": 293,
       "sha256": "32aa26c88f4d6b70f4c9039d2d44b7827127efbe22eaafdc6d273b4f64a24b0d"
     },
-    "source/steve/assembly/components/import_horn_lower_passive.py": {
+    "source/reference/assembly/components/import_horn_lower_passive.py": {
       "bytes": 384,
       "sha256": "d1b9a79ae24b7b904df739e09770027201fd39148f6e1243ae1bb4018ba2f710"
     },
-    "source/steve/assembly/components/import_horn_upper_passive.py": {
+    "source/reference/assembly/components/import_horn_upper_passive.py": {
       "bytes": 384,
       "sha256": "9f41ca03d466c60ce2531466753983b308ddf1e8166bf1c6ba9e0fb1729559dd"
     },
-    "source/steve/assembly/components/import_pcb_bno055.py": {
+    "source/reference/assembly/components/import_pcb_bno055.py": {
       "bytes": 336,
       "sha256": "3d5cd8805192d8eaf50d961c18e9bec89196c08f9980a34a8f6dbd479cc604e9"
     },
-    "source/steve/assembly/components/import_pcb_radxa_cubie_a7z.py": {
+    "source/reference/assembly/components/import_pcb_radxa_cubie_a7z.py": {
       "bytes": 390,
       "sha256": "f07d7a93016c8d0aebe2ba79f853a1799aa70b3dda122aa2cebc8cea993bb45b"
     },
-    "source/steve/assembly/components/import_pcb_sph0645_mic.py": {
+    "source/reference/assembly/components/import_pcb_sph0645_mic.py": {
       "bytes": 366,
       "sha256": "cdcf8910b60c57ecd9ecd48f7f41cc4af146eaca445a1bef62b72b7e5d0487d3"
     },
-    "source/steve/assembly/components/import_pcb_ubec_henge_4a.py": {
+    "source/reference/assembly/components/import_pcb_ubec_henge_4a.py": {
       "bytes": 378,
       "sha256": "f8d6e393cb59293cf58be353f258be5cd91d0785773eb893289ad711e41a0b2a"
     },
-    "source/steve/assembly/components/import_pcb_waveshare_adapter.py": {
+    "source/reference/assembly/components/import_pcb_waveshare_adapter.py": {
       "bytes": 402,
       "sha256": "89445def403f991c823e3c754aa011095b4e45d1febd89d8efa42a6d36cd4b6c"
     },
-    "source/steve/assembly/document.json": {
+    "source/reference/assembly/document.json": {
       "bytes": 885618,
       "sha256": "a84652e5a077a30715c5fc4e447043512d659ca7277a6f4c5ba252ffa41731af"
     },
-    "source/steve/assembly/main.py": {
+    "source/reference/assembly/main.py": {
       "bytes": 602645,
       "sha256": "13e2453c866d16e3610a6afe002c57ca2b0feb185cec72bc69f202207c9f283a"
     },
-    "source/steve/assembly/mass_record.py": {
+    "source/reference/assembly/mass_record.py": {
       "bytes": 33546,
       "sha256": "2a6cec4ebc64eecc7dc26ab2389e9f4f382e2666cc76159a06642381a9ef0368"
     },
-    "source/steve/assembly/mujoco_seat_cycle.py": {
+    "source/reference/assembly/mujoco_seat_cycle.py": {
       "bytes": 1,
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
-    "source/steve/assembly/mujoco_walk.py": {
+    "source/reference/assembly/mujoco_walk.py": {
       "bytes": 1,
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
-    "source/steve/assembly/walk_sit_stand_cycle.py": {
+    "source/reference/assembly/walk_sit_stand_cycle.py": {
       "bytes": 182994,
       "sha256": "f5ca4d225e40e9b83c32a7959904206ef6f2327532c1d271e6c53e3d29566271"
     },
-    "source/steve/parts/ankle_bearing_inner_cap_left_native/document.json": {
+    "source/reference/parts/ankle_bearing_inner_cap_left_native/document.json": {
       "bytes": 1962,
       "sha256": "2182562c6d9ad7d37567484fcaa66cf85ce923c108c97e7f4a313e1069594f10"
     },
-    "source/steve/parts/ankle_bearing_inner_cap_left_native/main.py": {
+    "source/reference/parts/ankle_bearing_inner_cap_left_native/main.py": {
       "bytes": 1495,
       "sha256": "1b6f1b77b91e17bfc8446115d27e7869603113e54ebb5e4fbbb8813a2a539447"
     },
-    "source/steve/parts/ankle_bearing_outer_keeper_left_native/document.json": {
+    "source/reference/parts/ankle_bearing_outer_keeper_left_native/document.json": {
       "bytes": 2950,
       "sha256": "f6cd25b52d85842ac3416a036d5bf2fbda3e77cb024c323d2e06e2eea2928d48"
     },
-    "source/steve/parts/ankle_bearing_outer_keeper_left_native/main.py": {
+    "source/reference/parts/ankle_bearing_outer_keeper_left_native/main.py": {
       "bytes": 2461,
       "sha256": "1cd18300f91c3a430ae49ed59791790fada5855623426f76787f3693a631bbcd"
     },
-    "source/steve/parts/ankle_eye_left_native/document.json": {
+    "source/reference/parts/ankle_eye_left_native/document.json": {
       "bytes": 14776,
       "sha256": "7d5bf03496aff121b7281a60231ac090bdc2e5a4581b40987d6d0c9590e95232"
     },
-    "source/steve/parts/ankle_eye_left_native/main.py": {
+    "source/reference/parts/ankle_eye_left_native/main.py": {
       "bytes": 13696,
       "sha256": "37f034e86f71979180c115e3450a65e92f9ad83492d3b4b89ddd0457045f8026"
     },
-    "source/steve/parts/ankle_left_native/document.json": {
+    "source/reference/parts/ankle_left_native/document.json": {
       "bytes": 17513,
       "sha256": "2dd884fdd1650595dca5da51e213ce6be536ceb38cce6e556612e6a3c39c5fd1"
     },
-    "source/steve/parts/ankle_left_native/main.py": {
+    "source/reference/parts/ankle_left_native/main.py": {
       "bytes": 16255,
       "sha256": "6956bd119c9569ba7628a523d64cc4ec9c9419997e0e4b44e247f2e7ef56f2da"
     },
-    "source/steve/parts/battery_carrier_native/document.json": {
+    "source/reference/parts/battery_carrier_native/document.json": {
       "bytes": 11621,
       "sha256": "24360bcebdab4f44453054df6467921e34cc00146cc24f6b2fa83cd7b4f35c21"
     },
-    "source/steve/parts/battery_carrier_native/main.py": {
+    "source/reference/parts/battery_carrier_native/main.py": {
       "bytes": 10841,
       "sha256": "b422320e46e4680b1f6540551ffda193e55dd5b361d035389e329a299049721e"
     },
-    "source/steve/parts/battery_donor_cover_native/document.json": {
+    "source/reference/parts/battery_donor_cover_native/document.json": {
       "bytes": 3469,
       "sha256": "d71c863914acc57d9f4d9f982fb2c53d4a122bf70539624ed524e8ec321573f3"
     },
-    "source/steve/parts/battery_donor_cover_native/main.py": {
+    "source/reference/parts/battery_donor_cover_native/main.py": {
       "bytes": 2948,
       "sha256": "6d659232d00f874f5d5053c041c036d7d209d2576384f53cc9ea783c3542dbda"
     },
-    "source/steve/parts/bottom_head_shell_native/document.json": {
+    "source/reference/parts/bottom_head_shell_native/document.json": {
       "bytes": 33921,
       "sha256": "33d35dc5e4d1f3b7bca7df14593908478ad10cbcf41e45c73ef86bc121157b12"
     },
-    "source/steve/parts/bottom_head_shell_native/main.py": {
+    "source/reference/parts/bottom_head_shell_native/main.py": {
       "bytes": 32375,
       "sha256": "f0475937cdc0594dc448386fd9983d7907ae2650ddaa174eca7dab07ae327f3a"
     },
-    "source/steve/parts/electronics_deck_native/document.json": {
+    "source/reference/parts/electronics_deck_native/document.json": {
       "bytes": 8166,
       "sha256": "ed1429d24a295d288783d8ea868b1c1e7d1e7f3e268d361dfc2b7ec7f37307d0"
     },
-    "source/steve/parts/electronics_deck_native/main.py": {
+    "source/reference/parts/electronics_deck_native/main.py": {
       "bytes": 7459,
       "sha256": "2de51a14f3eba701a78ef3f0e7a5a3cc0610621fe9e161b1a652609719ece1a1"
     },
-    "source/steve/parts/face_part_native/document.json": {
+    "source/reference/parts/face_part_native/document.json": {
       "bytes": 13396,
       "sha256": "e6b6d0c6f35bcd856649ca93afbd5dc61aaf882f003bb835e3e03e34e5532b44"
     },
-    "source/steve/parts/face_part_native/main.py": {
+    "source/reference/parts/face_part_native/main.py": {
       "bytes": 12519,
       "sha256": "5d71d98da22ec83ace9b59c85da90d5b11610001fd1ddc5ce81860936542800c"
     },
-    "source/steve/parts/face_radxa_bracket_native/document.json": {
+    "source/reference/parts/face_radxa_bracket_native/document.json": {
       "bytes": 7613,
       "sha256": "da9f3fadac082e60bce6cbc8e1b71cb8c0dcc33136e97fe4be4905ad35d40934"
     },
-    "source/steve/parts/face_radxa_bracket_native/main.py": {
+    "source/reference/parts/face_radxa_bracket_native/main.py": {
       "bytes": 6894,
       "sha256": "1b0367bdac4629966e7a95cbdb8b46339767f58ff45296a68381a3dcbef6c7a4"
     },
-    "source/steve/parts/foot_left_native_a/document.json": {
+    "source/reference/parts/foot_left_native_a/document.json": {
       "bytes": 33725,
       "sha256": "e407e0edcc00ffc0022470529485e735e90841062ddbd694bce0f0e5dab99780"
     },
-    "source/steve/parts/foot_left_native_a/main.py": {
+    "source/reference/parts/foot_left_native_a/main.py": {
       "bytes": 31221,
       "sha256": "a07e26a22a1c8f3641c5b37d66ccd26c472dd13ed01863efc72f6087b7879de8"
     },
-    "source/steve/parts/foot_left_native_b/document.json": {
+    "source/reference/parts/foot_left_native_b/document.json": {
       "bytes": 11817,
       "sha256": "c5cf9018033a8ac89dfaa2c0603c006aea7bb0a666b392015f45cdb173bfdc8b"
     },
-    "source/steve/parts/foot_left_native_b/main.py": {
+    "source/reference/parts/foot_left_native_b/main.py": {
       "bytes": 10864,
       "sha256": "51d43aabcb7dd4af8b2b9172beb0c4420692439a8a917d728cf38cc7c4576c2b"
     },
-    "source/steve/parts/head_frame_native/document.json": {
+    "source/reference/parts/head_frame_native/document.json": {
       "bytes": 26123,
       "sha256": "8247f5d56a1eea2d445d0dc51811bf0c48fcb14d11ec2562b2fc40204ad2b369"
     },
-    "source/steve/parts/head_frame_native/main.py": {
+    "source/reference/parts/head_frame_native/main.py": {
       "bytes": 24649,
       "sha256": "2223075a9ad6324def6aba032c79d90d7127c69a79c8a968a4cce2df5bd27fdc"
     },
-    "source/steve/parts/hip_left_native/document.json": {
+    "source/reference/parts/hip_left_native/document.json": {
       "bytes": 10774,
       "sha256": "27d1a3799bfc277626df7f4a8da3259f0c4b597cb56b337960a0305dbbfe617d"
     },
-    "source/steve/parts/hip_left_native/main.py": {
+    "source/reference/parts/hip_left_native/main.py": {
       "bytes": 10127,
       "sha256": "2b6da6e93944aee4c78756bf92a6620df6ff8156fe6482cd12443b82e6dd5cc7"
     },
-    "source/steve/parts/imu_yoke_bridge_native/document.json": {
+    "source/reference/parts/imu_yoke_bridge_native/document.json": {
       "bytes": 4057,
       "sha256": "7794418778b37f9e965827e36d61384397a304b863b96256c5a76f7fe7ee21a0"
     },
-    "source/steve/parts/imu_yoke_bridge_native/main.py": {
+    "source/reference/parts/imu_yoke_bridge_native/main.py": {
       "bytes": 3547,
       "sha256": "7698066da4007115f4919d2a99512f069929c11df76769663b0395445aafe3d8"
     },
-    "source/steve/parts/jaw_native/document.json": {
+    "source/reference/parts/jaw_native/document.json": {
       "bytes": 16729,
       "sha256": "0575e8e02219284e2bc8859003d5dfcb4efe83b9e79dc76a41c02c274659793b"
     },
-    "source/steve/parts/jaw_native/main.py": {
+    "source/reference/parts/jaw_native/main.py": {
       "bytes": 15890,
       "sha256": "0368c4be998055292d50183965c6e3d23a7e694fc69a341eaa4d3104c2106865"
     },
-    "source/steve/parts/jaw_soft_001_native/document.json": {
+    "source/reference/parts/jaw_soft_001_native/document.json": {
       "bytes": 8728,
       "sha256": "2a246e8b0b8d10e9200b7b48f6a15f62abbf3da2709fccca8039c71f672d618c"
     },
-    "source/steve/parts/jaw_soft_001_native/main.py": {
+    "source/reference/parts/jaw_soft_001_native/main.py": {
       "bytes": 8113,
       "sha256": "9717678f06e6f12fa3a110ed4e34040267de7664d7f590a4825ee9b39b21833f"
     },
-    "source/steve/parts/left_shell_native/document.json": {
+    "source/reference/parts/left_shell_native/document.json": {
       "bytes": 16645,
       "sha256": "2a47775b27049b4098bdaf6fbc37e009987bf9adfdfa0234e65c305c5cee1b45"
     },
-    "source/steve/parts/left_shell_native/main.py": {
+    "source/reference/parts/left_shell_native/main.py": {
       "bytes": 15754,
       "sha256": "e58b9ccb419659e7e56f5610141b0846a4fcf025107b1a57cab9240f36a2f889"
     },
-    "source/steve/parts/leg_left_native/document.json": {
+    "source/reference/parts/leg_left_native/document.json": {
       "bytes": 12988,
       "sha256": "76298f5525ca9281dafd882246ac7d5cd11189e151cc325e0d84bbfd6ee314be"
     },
-    "source/steve/parts/leg_left_native/main.py": {
+    "source/reference/parts/leg_left_native/main.py": {
       "bytes": 12329,
       "sha256": "5485da10732efa10fa588218e5c1dd4896654014e61c3a7f11c0fdb95fb34a6a"
     },
-    "source/steve/parts/measured_tof/document.json": {
+    "source/reference/parts/measured_tof/document.json": {
       "bytes": 2535,
       "sha256": "7eef95b26b24fb181b75dfdc7d2aa0cdba07ff219c69eb567bfa8966c05f62bc"
     },
-    "source/steve/parts/measured_tof/main.py": {
+    "source/reference/parts/measured_tof/main.py": {
       "bytes": 2011,
       "sha256": "7b6858e7bf0e575f476f93f879e38cb22f65084a705b79d76f9699f11bb4818b"
     },
-    "source/steve/parts/mighty_camera/document.json": {
+    "source/reference/parts/mighty_camera/document.json": {
       "bytes": 637,
       "sha256": "dacf7147cb20918a3aabc016e9455b378023dee9a979d6a80637c510ba539a03"
     },
-    "source/steve/parts/mighty_camera/main.py": {
+    "source/reference/parts/mighty_camera/main.py": {
       "bytes": 210,
       "sha256": "39186136ce25f222acaad33f79ec4877479df0a2983797a75049aedd672b1882"
     },
-    "source/steve/parts/mpu6050_trunk_native/document.json": {
+    "source/reference/parts/mpu6050_trunk_native/document.json": {
       "bytes": 1656,
       "sha256": "de3bf5860cdf32dabdfb59c24107496ce14ee4c391c9e5e795c0c374ee5161ea"
     },
-    "source/steve/parts/mpu6050_trunk_native/main.py": {
+    "source/reference/parts/mpu6050_trunk_native/main.py": {
       "bytes": 1204,
       "sha256": "1d5b3bad50749245cab7cbc36b1af96a69d870f9aded852adf9a156228b16b4f"
     },
-    "source/steve/parts/neck_001_native/document.json": {
+    "source/reference/parts/neck_001_native/document.json": {
       "bytes": 4307,
       "sha256": "4a55a210d3f324aa227164c9b81bfa4edf1283f26e67faee40f04be1369c0c0d"
     },
-    "source/steve/parts/neck_001_native/main.py": {
+    "source/reference/parts/neck_001_native/main.py": {
       "bytes": 3812,
       "sha256": "303a7a1c8bb342d05cbdf40c67e80fccf033992c225b9056b395ec610b2dec92"
     },
-    "source/steve/parts/neck_002_native/document.json": {
+    "source/reference/parts/neck_002_native/document.json": {
       "bytes": 4930,
       "sha256": "109897e6b604589c33dd5efb14e1073467d7d329cdd222b9673d372b98ca4f20"
     },
-    "source/steve/parts/neck_002_native/main.py": {
+    "source/reference/parts/neck_002_native/main.py": {
       "bytes": 4417,
       "sha256": "83fe2ba56ac29c4d42828a66a1f3be077e3107ec1966a4da83ac54da4876f026"
     },
-    "source/steve/parts/neck_internal_yoke_native/document.json": {
+    "source/reference/parts/neck_internal_yoke_native/document.json": {
       "bytes": 26212,
       "sha256": "f1afd2168a673879f373cb940bac09518ff9a1ac47caf7d0fd544fc8a1b52fd6"
     },
-    "source/steve/parts/neck_internal_yoke_native/main.py": {
+    "source/reference/parts/neck_internal_yoke_native/main.py": {
       "bytes": 25024,
       "sha256": "8f332500be4f061a8baf501d91c97b6279a08329f7caa498f9936faac72c6bcc"
     },
-    "source/steve/parts/neck_pitch_001_native/document.json": {
+    "source/reference/parts/neck_pitch_001_native/document.json": {
       "bytes": 10111,
       "sha256": "5405a31e4f4f3c53210401cf9c989d370b4970e93361dc46e45c37ba37be272b"
     },
-    "source/steve/parts/neck_pitch_001_native/main.py": {
+    "source/reference/parts/neck_pitch_001_native/main.py": {
       "bytes": 9473,
       "sha256": "8e74c24d1fb73a1382a38ed623e331f68d495862db383fb58993dbe441c6f04c"
     },
-    "source/steve/parts/noenoeil_native/document.json": {
+    "source/reference/parts/noenoeil_native/document.json": {
       "bytes": 3521,
       "sha256": "a731dd1b1683803d82eb9790c07b569a775fb0e4cd734e6267a8b2cf7182485b"
     },
-    "source/steve/parts/noenoeil_native/main.py": {
+    "source/reference/parts/noenoeil_native/main.py": {
       "bytes": 2991,
       "sha256": "f2714d551c427c5583d7ded741f5a1494efa07b20490f53b9281f013640f6be5"
     },
-    "source/steve/parts/npf550_pack_native/document.json": {
+    "source/reference/parts/npf550_pack_native/document.json": {
       "bytes": 2780,
       "sha256": "31f166ab75b7caa3ce4d1bf0010758ef2e5932d90f5354374e816b320b759c3b"
     },
-    "source/steve/parts/npf550_pack_native/main.py": {
+    "source/reference/parts/npf550_pack_native/main.py": {
       "bytes": 2291,
       "sha256": "208df06e52e07d62dedb233c91066c19d8de31ace524cae9cec96234b7c83c59"
     },
-    "source/steve/parts/power_switch_kcd1_native/document.json": {
+    "source/reference/parts/power_switch_kcd1_native/document.json": {
       "bytes": 1548,
       "sha256": "719e7d269fe5b96b1ab34ec702471abfb8c6f75064033ebba4059193905d347e"
     },
-    "source/steve/parts/power_switch_kcd1_native/main.py": {
+    "source/reference/parts/power_switch_kcd1_native/main.py": {
       "bytes": 1094,
       "sha256": "523a7e429b3aec5dd14c4af2223baf8aeaa69bba3ffdc427acdb7f582783b396"
     },
-    "source/steve/parts/right_shell_native/document.json": {
+    "source/reference/parts/right_shell_native/document.json": {
       "bytes": 16647,
       "sha256": "02f6bff61b058e5326922f45990201ae488f22c76021536d3cf308717f7abd61"
     },
-    "source/steve/parts/right_shell_native/main.py": {
+    "source/reference/parts/right_shell_native/main.py": {
       "bytes": 15755,
       "sha256": "294886d4a44442c28c20ffed3480cfdb209894f8e552efa0aea5bf1e118109a6"
     },
-    "source/steve/parts/roll_front_bulkhead_native/document.json": {
+    "source/reference/parts/roll_front_bulkhead_native/document.json": {
       "bytes": 13527,
       "sha256": "e5f3388df2771784aaad0c5b55105258c4c6a3af6ff4dbb74ac74c087ce2c9b1"
     },
-    "source/steve/parts/roll_front_bulkhead_native/main.py": {
+    "source/reference/parts/roll_front_bulkhead_native/main.py": {
       "bytes": 12638,
       "sha256": "f6bde9ddcf04692346391dd3c79ad4940ee13abf6988dc7d55a50b1d870b6277"
     },
-    "source/steve/parts/soft_mouth_top_native/document.json": {
+    "source/reference/parts/soft_mouth_top_native/document.json": {
       "bytes": 4715,
       "sha256": "7783db8b7eab4cbf781fce0bfccc25b8d456dd8fcccc1cf2fabb831a4e970330"
     },
-    "source/steve/parts/soft_mouth_top_native/main.py": {
+    "source/reference/parts/soft_mouth_top_native/main.py": {
       "bytes": 4193,
       "sha256": "a1799826002d2d74d58a312d414133dc0e8206bd12d2800052bcd0ab9b169b17"
     },
-    "source/steve/parts/sole_left_native/document.json": {
+    "source/reference/parts/sole_left_native/document.json": {
       "bytes": 31715,
       "sha256": "32854ef16a6e7e696d1427cecff6ab3a85b682fa5e8832eed1753c84aa304bcd"
     },
-    "source/steve/parts/sole_left_native/main.py": {
+    "source/reference/parts/sole_left_native/main.py": {
       "bytes": 31128,
       "sha256": "7a65788b7f67ed0449be4e44c0b77255c62134f42ae379736c5fd7c2fc651e5e"
     },
-    "source/steve/parts/stemma3885/document.json": {
+    "source/reference/parts/stemma3885/document.json": {
       "bytes": 2306,
       "sha256": "6dd6bb74079245accc74a2258efcf3276bf867cef9dde72246acf6c992978424"
     },
-    "source/steve/parts/stemma3885/main.py": {
+    "source/reference/parts/stemma3885/main.py": {
       "bytes": 1769,
       "sha256": "db57876e5d64421e08ef3efc2520c1eabe4cb692a1e52c3082d57c61532b3245"
     },
-    "source/steve/parts/sts3215_servo_native/document.json": {
+    "source/reference/parts/sts3215_servo_native/document.json": {
       "bytes": 11870,
       "sha256": "522eeb8f6fa087a6ea77df53b0fcb5da138bc7bd5d35bc8e723bedd02069062c"
     },
-    "source/steve/parts/sts3215_servo_native/main.py": {
+    "source/reference/parts/sts3215_servo_native/main.py": {
       "bytes": 11228,
       "sha256": "387185afd7b2c362f5638aec37ae4ff35a2f4e7d565f689bc12f1e4836826f3b"
     },
-    "source/steve/parts/top_head_shell_native/document.json": {
+    "source/reference/parts/top_head_shell_native/document.json": {
       "bytes": 29527,
       "sha256": "f758ffed63cd475f20975233cf7310b059f2cb84c4eaf0f232bb3275f14af7dc"
     },
-    "source/steve/parts/top_head_shell_native/main.py": {
+    "source/reference/parts/top_head_shell_native/main.py": {
       "bytes": 28100,
       "sha256": "02f6f49c8aebec2183a3b1453c0f41ea5db3fb4455f3b4cb6b3ff85cafe1aabf"
     },
-    "source/steve/parts/trunk_base_native/document.json": {
+    "source/reference/parts/trunk_base_native/document.json": {
       "bytes": 11260,
       "sha256": "22cd403a9c166f2b25fa294767a3399acda78018a6c402c0aedd7247f2f847c4"
     },
-    "source/steve/parts/trunk_base_native/main.py": {
+    "source/reference/parts/trunk_base_native/main.py": {
       "bytes": 10586,
       "sha256": "b8c893c1e33ff10cc42f919c7fa003a52cbd0743990af296d2360439b72f9d0a"
     },
-    "source/steve/parts/ubec_clamp_native/document.json": {
+    "source/reference/parts/ubec_clamp_native/document.json": {
       "bytes": 4226,
       "sha256": "549163a7cdfa1ed0e7df60f753b3fadc39da5cb6989a319ef017ea5889afe57f"
     },
-    "source/steve/parts/ubec_clamp_native/main.py": {
+    "source/reference/parts/ubec_clamp_native/main.py": {
       "bytes": 3669,
       "sha256": "14cde787fbb9ce9e1d6675691bcf156ca93e271c7ee4ae73074be94321de5ac2"
     },
-    "source/steve/parts/upper_leg_left_native/document.json": {
+    "source/reference/parts/upper_leg_left_native/document.json": {
       "bytes": 10461,
       "sha256": "9542b97589fff492ac11f4bdb13c7fc14590bc7b9c6e6d3dddc3ee753ca79230"
     },
-    "source/steve/parts/upper_leg_left_native/main.py": {
+    "source/reference/parts/upper_leg_left_native/main.py": {
       "bytes": 9837,
       "sha256": "b8ee9da9849ee2b911e6fbee15be83990d84da150b79b1391e888b34b2fbc929"
     },
-    "source/steve/parts/yaw2roll_left_native/document.json": {
+    "source/reference/parts/yaw2roll_left_native/document.json": {
       "bytes": 4650,
       "sha256": "86f2185cd26288d0da007e2706a21f13c69b2d881c7682f967b0d765bcba2c89"
     },
-    "source/steve/parts/yaw2roll_left_native/main.py": {
+    "source/reference/parts/yaw2roll_left_native/main.py": {
       "bytes": 4132,
       "sha256": "1cb26435c730cfe8a5834c896ce78268247023c13399f916ae811a1e50ac91c8"
     },
-    "source/steve/parts/yaw_roll_link_native/document.json": {
+    "source/reference/parts/yaw_roll_link_native/document.json": {
       "bytes": 14283,
       "sha256": "146d3533998543c5cf556dc26200591fe6be86186b35f27958422438e06f6200"
     },
-    "source/steve/parts/yaw_roll_link_native/main.py": {
+    "source/reference/parts/yaw_roll_link_native/main.py": {
       "bytes": 13403,
       "sha256": "099965184c792e6ff2f811c6f5718532a43d873aed5f8f71a37fdd2ce5a54d1b"
     },
@@ -891,7 +890,7 @@
       "bytes": 881,
       "sha256": "5c1e7e6b8b5164b094225a7200d1814dc7d6fc5f06acf29da5bfad463ec2ea49"
     },
-    "src/lib/steve_compat.py": {
+    "src/lib/cadquery_adapter.py": {
       "bytes": 8688,
       "sha256": "d259091639c1cbd8beaad7328a204c01f83fd299ab71f5610badd8761db5706f"
     },
@@ -1183,5 +1182,9 @@
       "bytes": 1338,
       "sha256": "6f99e71050130936e2b37a4d7e0ff67a5df2b60ba44b9ff376683ce43abd9d75"
     }
+  },
+  "reference_normalization": {
+    "description": "Platform labels, import aliases and external links normalized; geometry declarations unchanged.",
+    "capture_fingerprints": "Recorded fingerprints describe the original capture before reference normalization."
   }
 }

@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """electronics_deck_native: Frankenduck head electronics deck (R02 geometry), robot world frame, Z up, mm.
     
     Native port of deck() in head_internals/code/build_parts_r05.py (build123d). Holds the Waveshare bus servo
@@ -17,7 +17,7 @@ def make():
     The deck has no M3 heat-set insert pockets, so no self-forming holes are needed here.
     """
     import math
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     deck_z0 = 300.6
     deck_z1 = 303.6
     outline = [(-24.5, -21.0), (0.0, -21.0), (14.0, -14.0), (14.0, 0.5), (61.5, 0.5), (61.5, 7.5), (49.5, 7.5), (49.5, 14.5), (50.0, 14.5), (50.0, 39.5), (26.0, 39.5), (14.0, 33.0), (2.0, 33.0), (-24.5, 15.5)]

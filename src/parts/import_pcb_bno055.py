@@ -3,12 +3,12 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     from cadgen import declare_input
-    from lib.steve_compat import ROOT
+    from lib.cadquery_adapter import ROOT
     from lib.import_paths import IMPORTS
     declare_input(ROOT / IMPORTS['b46da23dcb87978bd4709aab0ad88485cdaee24505fb8829c6c455e55f58b09c'])
-    from lib.steve_compat import Component
+    from lib.cadquery_adapter import Component
     import_pcb_bno055 = Component('import_pcb_bno055', name='pcb_bno055')
     import_pcb_bno055.import_step('import_1', 'b46da23dcb87978bd4709aab0ad88485cdaee24505fb8829c6c455e55f58b09c', name='pcb_bno055')
     model = import_pcb_bno055

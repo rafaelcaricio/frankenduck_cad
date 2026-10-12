@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """yaw_roll_link (R05) - native rebuild of the Frankenduck head yaw-roll link, robot world frame, mm, Z up.
     
     Box around the yaw servo: rear wall bolted to the roll servo horn, front wall carrying the printed F688 journal,
@@ -15,7 +15,7 @@ def make():
     """
     import math
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     roll_z = 280.58
     rear_x0 = 14.935
     rear_x1 = 22.24

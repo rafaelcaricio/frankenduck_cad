@@ -1,12 +1,11 @@
 # Working on Frankenduck CAD
 
 This repository owns the standalone, editable Frankenduck Text to CAD model.
-The original import was captured from The Frankenduck in STEVE at revision 91.
-`src/` owns the current geometry and assembly; `source/steve/` is frozen import
-provenance. This project builds without contacting STEVE or either robot runtime
-repository. Do not edit STEVE, robot calibration, firmware, or hardware as part
-of ordinary CAD work here. Deployment and servo writes require a separate user
-request and authorization.
+`src/` owns current geometry and assembly; `source/reference/` retains local
+reference declarations and baseline data. Platform labels and external links in
+those references are normalized. The project builds from local inputs.
+Keep ordinary work within CAD. Robot calibration, firmware, deployment and
+servo writes require a separate user request and authorization.
 
 ## Model and outputs
 

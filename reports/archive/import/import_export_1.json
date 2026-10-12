@@ -7,18 +7,12 @@
     "name": "Imported MightyCamera",
     "preview_build_id": "9f1ef827-372e-4907-bda7-283797c16061",
     "revision": 1,
-    "updated_at": "2026-10-08T11:15:24.951628+00:00",
-    "url": "https://stevecad.studio/?document=9be98a01-e5af-4426-8012-83de2fc955fb"
+    "updated_at": "2026-10-08T11:15:24.951628+00:00"
   },
   "model": {
-    "artifacts": {
-      "bodies_mesh": "https://stevecad.studio/v1/builds/9f1ef827-372e-4907-bda7-283797c16061/artifacts/bodies_mesh",
-      "preview": "https://stevecad.studio/v1/builds/9f1ef827-372e-4907-bda7-283797c16061/artifacts/preview",
-      "step": "https://stevecad.studio/v1/builds/9f1ef827-372e-4907-bda7-283797c16061/artifacts/step",
-      "topology": "https://stevecad.studio/v1/builds/9f1ef827-372e-4907-bda7-283797c16061/artifacts/topology"
-    },
+    "artifacts": {},
     "id": "9f1ef827-372e-4907-bda7-283797c16061",
-    "logs": "STEVE stage: sheet-metal export\nSTEVE stage: STEP export\nSTEVE stage: preview mesh\nSTEVE stage: topology\nSTEVE stage: summary\nSTEVE stage: history check\n",
+    "logs": "CAD stage: sheet-metal export\nCAD stage: STEP export\nCAD stage: preview mesh\nCAD stage: topology\nCAD stage: summary\nCAD stage: history check\n",
     "metadata": {
       "bounds_mm": [
         33,
@@ -3643,8 +3637,6 @@
       "volume_mm3": 3010.1352739637414
     },
     "mode": "full",
-    "status": "succeeded",
-    "url": "https://stevecad.studio/?model=9f1ef827-372e-4907-bda7-283797c16061"
-  },
-  "url": "https://stevecad.studio/?document=9be98a01-e5af-4426-8012-83de2fc955fb"
+    "status": "succeeded"
+  }
 }

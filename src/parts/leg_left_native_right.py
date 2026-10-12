@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
     import cadquery as cq
     SIDE = -1
@@ -177,7 +177,7 @@ def make():
     body = body.cut(strip.cut(corners))
     lip = rr_prism(lip_x0, lip_x1, strip_z0, slot_z1, lip_r, lip_y, 60)
     body = body.cut(lip)
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', side(body))
     model.material('pla', color='#8a8a90')

@@ -3,9 +3,9 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import math
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     axis_y = -0.12336
     axis_z = 301.50477
     ring_x0 = 109.89

@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import cadquery as cq
     SIDE = 1
     x0 = -7.825
@@ -60,7 +60,7 @@ def make():
     body = body.union(yz(pk_x).center(sum(isl_y) / 2, sum(isl_z) / 2).rect(isl_y[1] - isl_y[0], isl_z[1] - isl_z[0]).extrude(isl_x - pk_x))
     if SIDE < 0:
         body = body.mirror('XZ')
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('printed_body', body)
     model.material('pla', color='#1d1d1f')

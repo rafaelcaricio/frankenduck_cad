@@ -1,6 +1,6 @@
 # Original port utilities
 
-These utilities read frozen local inputs and never contact STEVE. They are
+These utilities read retained local reference inputs. They are
 outside every maintained check suite.
 
 - `prepare_port.py`: recreate the original source from the pinned snapshot.

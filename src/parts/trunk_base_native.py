@@ -3,9 +3,9 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     plate_x0 = -35.0
     plate_x1 = 24.0
     plate_half_y = 37.0

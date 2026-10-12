@@ -3,8 +3,8 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
-    """Frankenduck body shell side, native STEVE part (port of cad_blender/code_cad/body_shell/build.py,
+    from lib.cadquery_adapter import to_build123d
+    """Frankenduck body shell side, parametric CAD part (port of cad_blender/code_cad/body_shell/build.py,
     canonical variant `--collar --locators`). World millimetres at the saved assembly pose.
     
     Parameter SIDE: +1 builds left_shell (Y >= 0), -1 builds right_shell (Y <= 0, KCD1 port and collar).
@@ -22,7 +22,7 @@ def make():
     from OCP.TColStd import TColStd_Array1OfReal, TColStd_Array1OfInteger, TColStd_Array2OfReal
     from OCP.TColgp import TColgp_Array2OfPnt
     from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt, gp_Trsf
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     SIDE = -1
     SWITCH_PORT = 1
     NECK_NOTCH_HALF_WIDTH = 20.6

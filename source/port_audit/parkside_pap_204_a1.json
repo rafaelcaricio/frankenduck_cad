@@ -27,12 +27,12 @@
   "bidirectional_difference_tolerance_mm3": 1e-05,
   "inputs": {
     "STEP/parts/parkside_pap_204_a1.step": "ebeb19fd850d1dd1f40f3519bba827eb93be26a5090e68905fe8448ba545a707",
-    "source/steve/parts/parkside_pap_204_a1/reference.step": "1a90c54d136a5f2692a7b1c9db39970892e339642927976c202b507e20fc48a6",
-    "source/steve/parts/parkside_pap_204_a1/document.json": "ddb0357f2692d977090790ecc32dcc52eb673154c465f9d9096bbd0c89f9a701",
+    "source/reference/parts/parkside_pap_204_a1/reference.step": "1a90c54d136a5f2692a7b1c9db39970892e339642927976c202b507e20fc48a6",
+    "source/reference/parts/parkside_pap_204_a1/document.json": "ddb0357f2692d977090790ecc32dcc52eb673154c465f9d9096bbd0c89f9a701",
     "src/parts/parkside_pap_204_a1.py": "ef236d2e788666083e5702de7c9e1b6bd5cb5d3ee65dfacaeb1369cd173b04bf",
-    "src/lib/steve_compat.py": "d259091639c1cbd8beaad7328a204c01f83fd299ab71f5610badd8761db5706f",
+    "src/lib/cadquery_adapter.py": "d259091639c1cbd8beaad7328a204c01f83fd299ab71f5610badd8761db5706f",
     "source/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
-    "source/steve/parts/parkside_pap_204_a1/main.py": "077e25ddd895c5a52123b482ebfe5cf00225a4bee11d281e7b043d983c89813e"
+    "source/reference/parts/parkside_pap_204_a1/main.py": "077e25ddd895c5a52123b482ebfe5cf00225a4bee11d281e7b043d983c89813e"
   },
   "bodies": [
     {
@@ -576,7 +576,7 @@
       "removed_mm3": 0
     }
   ],
-  "coverage": "One leaf component containing 66 solids, with 1628 coloured faces. All 30 original geometry groups reconstructed from solid order and compared to the retained STEVE reference: valid positive solids, topology counts, bounds, volume and bidirectional B-rep difference. Physical fit untested.",
+  "coverage": "One leaf component containing 66 solids, with 1628 coloured faces. All 30 original geometry groups reconstructed from solid order and compared to the retained CAD reference: valid positive solids, topology counts, bounds, volume and bidirectional B-rep difference. Physical fit untested.",
   "runtime_versions": {
     "cadgen": "0.6.5",
     "cadquery": "2.8.0",
@@ -611,5 +611,9 @@
       "python_workflow_tests": 27,
       "passed": true
     }
+  },
+  "reference_normalization": {
+    "description": "Platform labels, import aliases and external links normalized; geometry declarations unchanged.",
+    "capture_fingerprints": "Recorded fingerprints describe the original capture before reference normalization."
   }
 }

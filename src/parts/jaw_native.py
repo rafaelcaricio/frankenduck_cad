@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """jaw (R05 = jaw_r01) - native rebuild of the Frankenduck jaw, robot world frame, mm, CAD pose.
     
     Source: cad_blender/code_cad/head_internals/jaw_r01/build_jaw.py (build123d), used unchanged by head internals
@@ -29,7 +29,7 @@ def make():
     from OCP.BRepFilletAPI import BRepFilletAPI_MakeFillet
     from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox, BRepPrimAPI_MakeCone, BRepPrimAPI_MakeCylinder, BRepPrimAPI_MakePrism
     from OCP.gp import gp_Ax2, gp_Circ, gp_Dir, gp_Pnt, gp_Vec
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     axis_x = 35.235
     axis_y = 54.0
     axis_z = 284.63

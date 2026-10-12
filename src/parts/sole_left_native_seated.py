@@ -1,11 +1,11 @@
 from __future__ import annotations
 from cadgen import step
-from lib.steve_compat import to_build123d
+from lib.cadquery_adapter import to_build123d
 
 
 def make():
     import cadquery as cq
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     SIDE = 1
     origin_x = -33.45
     origin_y = 67.0

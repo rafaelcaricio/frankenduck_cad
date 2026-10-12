@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     """face_radxa_bracket_native: Frankenduck head, face Radxa bracket (R02), robot world frame, Z up, mm.
     
     Native port of face_bracket() in head_internals/code/build_parts_r05.py (build123d).
@@ -13,7 +13,7 @@ def make():
     bosses, four M2 clearance holes with pan-head wells for the Cubie screws.
     No heat-set insert pockets in this part (the M3 inserts sit in the face bosses, not here).
     """
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     x0 = 76.0
     x1 = 81.2
     rail_r = 2.0

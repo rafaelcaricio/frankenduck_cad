@@ -3,7 +3,7 @@ from cadgen import step
 
 
 def make():
-    from lib.steve_compat import to_build123d
+    from lib.cadquery_adapter import to_build123d
     import cadquery as cq
     horn_r = 9.6
     horn_t = 2.5
@@ -143,7 +143,7 @@ def make():
     horn = horn.cut(at_z(horn_cb_z0).circle(horn_cb_r).extrude(shaft_z0 - horn_cb_z0))
     shaft = at_z(shaft_z0).circle(shaft_r).extrude(case_z0 - shaft_z0 + 0.01)
     body = body.union(horn).union(shaft)
-    from lib.steve_compat import Model
+    from lib.cadquery_adapter import Model
     model = Model()
     model.add('servo_envelope', body, body='servo')
     result = model.result()
