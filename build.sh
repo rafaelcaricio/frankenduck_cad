@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+export CADGEN_CACHE_DIR="$PWD/.cadgen"
+export CADGEN_JOBS=4
+export PYTHONPATH="$PWD/src"
+exec .venv/bin/python src/frankenduck.py "$@"

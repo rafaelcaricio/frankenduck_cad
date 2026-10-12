@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "id": "assembly.metadata",
+      "call": "checks.assembly:metadata",
+      "purpose": "Joint, pose and animation declarations",
+      "suites": [
+        "fast",
+        "radxa",
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
+        "source/local_additions.json",
+        "src/animation.js",
+        "checks/assembly.py"
+      ],
+      "report": "reports/latest/metadata_verification.json",
+      "coverage": "All declared mates, references, joint axes/limits, presets and original animation keys; cooler follows board. No motion collision sweep."
+    },
+    {
+      "id": "assembly.catalog",
+      "call": "checks.assembly:catalog",
+      "purpose": "Explicit component roles and print-export selection",
+      "suites": [
+        "fast",
+        "radxa",
+        "full"
+      ],
+      "inputs": [
+        "source/components.json",
+        "source/variants.json",
+        "source/assembly_data.json",
+        "source/local_additions.json",
+        "src/parts/*.py",
+        "tools/components.py",
+        "checks/assembly.py"
+      ],
+      "report": "reports/latest/component_classification.json",
+      "coverage": "Every part script, active model variant and assembly occurrence classified; only active printed parts export; purchased hardware and review volumes excluded; metadata-only, no printability certification."
+    },
+    {
+      "id": "assembly.inventory",
+      "call": "checks.assembly:inventory",
+      "purpose": "Saved assembly inventory and placed geometry",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
+        "source/local_additions.json",
+        "checks/assembly.py"
+      ],
+      "report": "reports/latest/assembly_verification.json",
+      "coverage": "Expected occurrence labels/order/count; saved solid counts, placed bounds and volumes. No all-pairs robot collision study."
+    },
+    {
+      "id": "radxa.mount",
+      "call": "checks.radxa:mount",
+      "purpose": "Radxa mount, GPIO jumper and cable fit",
+      "suites": [
+        "radxa",
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
+        "source/local_additions.json",
+        "checks/radxa.py",
+        "src/lib/radxa_clearance.py",
+        "src/lib/radxa_6530b_parameters.py",
+        "src/frankenduck.py",
+        "revisions/r91_import/STEP/frankenduck.step",
+        "revisions/r91_import/checks/radxa_initial_overlap.json"
+      ],
+      "report": "reports/latest/radxa_mount_fit.json",
+      "coverage": "Saved rest pose; 1e-5 mm3 positive-overlap threshold; modified parts and plug/cable envelopes, mounting axes/seats, protected bearing region and 68 original placed occurrences. Physical cable bending and fastener assembly access untested."
+    },
+    {
+      "id": "radxa.heatsink",
+      "call": "checks.radxa:heatsink",
+      "purpose": "Cooler envelope, fan inlet and cover wall fit",
+      "suites": [
+        "radxa",
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
+        "source/local_additions.json",
+        "checks/radxa.py",
+        "src/lib/radxa_clearance.py",
+        "src/lib/radxa_6530b_parameters.py",
+        "revisions/radxa_jumper_bay_before_heatsink/STEP/frankenduck.step"
+      ],
+      "report": "reports/latest/radxa_heatsink_fit.json",
+      "coverage": "Saved rest pose; official outer envelope and modeled inlet, 1e-5 mm3 overlap threshold, three cover-wall samples >=2 mm and nominal mounting stack. Detailed cooler geometry approximate; no thermal validation."
+    }
+  ]
+}

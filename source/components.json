@@ -1,0 +1,958 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "models": [
+    {
+      "model": "ankle_bearing_inner_cap_left_native",
+      "component": "ankle_bearing_inner_cap_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "export": true,
+      "active_variant": true,
+      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+    },
+    {
+      "model": "ankle_bearing_inner_cap_left_native_right",
+      "component": "ankle_bearing_inner_cap_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "export": true,
+      "active_variant": true,
+      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+    },
+    {
+      "model": "ankle_bearing_inner_cap_left_native_seated",
+      "component": "ankle_bearing_inner_cap_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "export": false,
+      "active_variant": false,
+      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+    },
+    {
+      "model": "ankle_bearing_outer_keeper_left_native",
+      "component": "ankle_bearing_outer_keeper_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_bearing_outer_keeper_left_native_right",
+      "component": "ankle_bearing_outer_keeper_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_bearing_outer_keeper_left_native_seated",
+      "component": "ankle_bearing_outer_keeper_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "ankle_eye_left_native",
+      "component": "ankle_eye_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_eye_left_native_right",
+      "component": "ankle_eye_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_eye_left_native_seated",
+      "component": "ankle_eye_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "ankle_left_native",
+      "component": "ankle_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_left_native_right",
+      "component": "ankle_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ankle_left_native_seated",
+      "component": "ankle_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "battery_carrier_native",
+      "component": "battery_carrier_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "battery_donor_cover_native",
+      "component": "battery_donor_cover_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "bottom_head_shell_native",
+      "component": "bottom_head_shell_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "electronics_deck_native",
+      "component": "electronics_deck_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "face_part_native",
+      "component": "face_part_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "face_radxa_bracket_native",
+      "component": "face_radxa_bracket_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "foot_left_native_a",
+      "component": "foot_left_native_a",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "foot_left_native_a_right",
+      "component": "foot_left_native_a",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "foot_left_native_a_seated",
+      "component": "foot_left_native_a",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "foot_left_native_b",
+      "component": "foot_left_native_b",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "foot_left_native_b_right",
+      "component": "foot_left_native_b",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "foot_left_native_b_seated",
+      "component": "foot_left_native_b",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "head_frame_native",
+      "component": "head_frame_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "hip_left_native",
+      "component": "hip_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "hip_left_native_right",
+      "component": "hip_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "hip_left_native_seated",
+      "component": "hip_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "import_horn_lower_passive",
+      "component": "import_horn_lower_passive",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_horn_upper_passive",
+      "component": "import_horn_upper_passive",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_pcb_bno055",
+      "component": "import_pcb_bno055",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_pcb_radxa_cubie_a7z",
+      "component": "import_pcb_radxa_cubie_a7z",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_pcb_sph0645_mic",
+      "component": "import_pcb_sph0645_mic",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_pcb_ubec_henge_4a",
+      "component": "import_pcb_ubec_henge_4a",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "import_pcb_waveshare_adapter",
+      "component": "import_pcb_waveshare_adapter",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "imu_yoke_bridge_native",
+      "component": "imu_yoke_bridge_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "jaw_native",
+      "component": "jaw_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "jaw_soft_001_native",
+      "component": "jaw_soft_001_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "left_shell_native",
+      "component": "left_shell_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "leg_left_native",
+      "component": "leg_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "leg_left_native_right",
+      "component": "leg_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "leg_left_native_seated",
+      "component": "leg_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "measured_tof_seated",
+      "component": "measured_tof",
+      "params": {
+        "seat_x": 105.64
+      },
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "mighty_camera",
+      "component": "mighty_camera",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "mpu6050_trunk_native",
+      "component": "mpu6050_trunk_native",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "neck_001_native",
+      "component": "neck_001_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "neck_002_native",
+      "component": "neck_002_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "neck_internal_yoke_native",
+      "component": "neck_internal_yoke_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "neck_pitch_001_native",
+      "component": "neck_pitch_001_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "noenoeil_native",
+      "component": "noenoeil_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "npf550_pack_native",
+      "component": "npf550_pack_native",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "power_switch_kcd1_native",
+      "component": "power_switch_kcd1_native",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "radxa_6530b",
+      "component": "radxa_6530b",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Official outer size and mounting grid; fan, fins, feet, notch and seating details approximate."
+    },
+    {
+      "model": "right_shell_native",
+      "component": "right_shell_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "roll_front_bulkhead_native",
+      "component": "roll_front_bulkhead_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "soft_mouth_top_native",
+      "component": "soft_mouth_top_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "sole_left_native",
+      "component": "sole_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "sole_left_native_right",
+      "component": "sole_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "sole_left_native_seated",
+      "component": "sole_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "stemma3885",
+      "component": "stemma3885",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "sts3215_servo_native",
+      "component": "sts3215_servo_native",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "not_applicable",
+      "export": false,
+      "active_variant": true,
+      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+    },
+    {
+      "model": "top_head_shell_native",
+      "component": "top_head_shell_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "trunk_base_native",
+      "component": "trunk_base_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "ubec_clamp_native",
+      "component": "ubec_clamp_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "upper_leg_left_native",
+      "component": "upper_leg_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "upper_leg_left_native_right",
+      "component": "upper_leg_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "upper_leg_left_native_seated",
+      "component": "upper_leg_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "yaw2roll_left_native",
+      "component": "yaw2roll_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "yaw2roll_left_native_right",
+      "component": "yaw2roll_left_native",
+      "params": {
+        "SIDE": -1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "yaw2roll_left_native_seated",
+      "component": "yaw2roll_left_native",
+      "params": {
+        "SIDE": 1
+      },
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": false,
+      "active_variant": false,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+    },
+    {
+      "model": "yaw_roll_link_native",
+      "component": "yaw_roll_link_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+    },
+    {
+      "model": "parkside_pap_204_a1",
+      "component": "parkside_pap_204_a1",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "mixed: ABS case, PC lens, metal contacts; appearance only",
+      "export": false,
+      "active_variant": false,
+      "notes": "Standalone port of STEVE d08bce05-3ec5-4847-9ca4-395f8f05d915 revision 6. Photo-derived exterior, rail and latch; not a measured mating interface. Not installed in the robot assembly. Product reference mass 711 g; CAD solids do not represent battery internals."
+    }
+  ],
+  "review_geometry": [
+    {
+      "id": "gpio_plug_turn_bay",
+      "role": "review_geometry",
+      "provider": "src/lib/radxa_clearance.py:clearance_shapes[0]",
+      "notes": "Reserved space for jumper plug housings and cable turn; never printed."
+    },
+    {
+      "id": "gpio_upward_cable_path",
+      "role": "review_geometry",
+      "provider": "src/lib/radxa_clearance.py:clearance_shapes[1]",
+      "notes": "Reserved cable path; never printed."
+    },
+    {
+      "id": "fan_inlet_allowance",
+      "role": "review_geometry",
+      "provider": "src/lib/radxa_6530b_parameters.py:fan_inlet_allowance",
+      "notes": "Empty space before modeled fan inlet; never printed."
+    }
+  ]
+}

@@ -1,0 +1,3173 @@
+{
+  "generated_utc": "2026-10-12T12:31:09.986147+00:00",
+  "input_key": "cad3268665d400a14b9356a1ca7e3793476749246627f33d00e4e2dbfbbbb965",
+  "inputs": {
+    "schema_version": 1,
+    "source_step_sha256": "72d8de23d3ff08c116ca9616ba3ede45bb44a073d262d39458dc858096344932",
+    "catalog_sha256": "8f551f3eed5c4b2ab6fddd995f19dc1747b352f44e4085368877419420986f99",
+    "implementation": {
+      "tools/print_export.py": "7352368f152b04ff938a4656c1505014616600a870e78c51bf3fdf8e40a4cdd6",
+      "tools/components.py": "bcd2c6030287b2755e7b0a584ee72d6ac51df1dfd8a75ae03978093f69f21313"
+    },
+    "runtime": {
+      "python": "3.12.0",
+      "cadgen": "0.6.5",
+      "cadquery": "2.8.0",
+      "build123d": "0.11.1",
+      "cadquery-ocp": "7.9.3.1.1",
+      "shapely": "2.2.0",
+      "scipy": "1.18.1",
+      "numpy": "2.5.4"
+    },
+    "mesh_tolerance_absolute_mm": 0.01,
+    "mesh_angular_tolerance_rad": 0.1,
+    "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
+    "mesh_min_size_mm": 1e-05,
+    "build_input_key": "28a39b054c9d04dcf70be0023205e30fe0e838bf06379a394308f30db5da51ab",
+    "assembly_data_sha256": "e6ffe539b9342fb801f9322fd961a2b9346f307d1c8c594beec5f99015c0ade3",
+    "additions_sha256": "32aa26c88f4d6b70f4c9039d2d44b7827127efbe22eaafdc6d273b4f64a24b0d"
+  },
+  "units": "mm",
+  "source": "STEP/frankenduck.step",
+  "export_count": 45,
+  "orientation": "Saved rest-pose axes; translation only, XY centred and min Z=0",
+  "max_relative_volume_error": 0.02,
+  "parts": [
+    {
+      "model": "ankle_bearing_inner_cap_left_native",
+      "filename": "3mf/ankle_bearing_inner_cap_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.44",
+          "name": "ankle_bearing_inner_cap_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "source_volume_mm3": 65.79280414780423,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.551115123125783e-16,
+        "volume_difference_mm3": 2.0179413695586845e-12,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -40.10499999999999,
+        -42.89900000000001,
+        0.7749999999999999
+      ],
+      "expected_bounds_mm": [
+        -0.5,
+        -4.75,
+        0,
+        0.5,
+        4.75,
+        9.5
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 1150,
+        "triangles": 2304,
+        "volume_mm3": 65.78971895167199,
+        "bounds_mm": [
+          -0.5,
+          -4.749938,
+          0.000249,
+          0.5,
+          4.749938,
+          9.5
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000249,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 4.689260736350386e-05,
+      "sha256": "0cad189d50a565bf538a5f5b168667ad772bb55800001e2352be183508d8cdba",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_bearing_inner_cap_left_native_right",
+      "filename": "3mf/ankle_bearing_inner_cap_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.55",
+          "name": "ankle_bearing_inner_cap_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "source_volume_mm3": 65.79280414780423,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.551115123125783e-16,
+        "volume_difference_mm3": 2.0179413695586845e-12,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        40.105000000000004,
+        -42.898999999999994,
+        0.775
+      ],
+      "expected_bounds_mm": [
+        -0.5,
+        -4.75,
+        0,
+        0.5,
+        4.75,
+        9.5
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 1150,
+        "triangles": 2304,
+        "volume_mm3": 65.78971882933301,
+        "bounds_mm": [
+          -0.5,
+          -4.749938,
+          0.0,
+          0.5,
+          4.749938,
+          9.499751
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00024900000000016576,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 4.689446682178492e-05,
+      "sha256": "bfd9aa9e88b850d13455099df4c7e1a8aa074208fb090cafa10be9abb8a1ac11",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_bearing_outer_keeper_left_native",
+      "filename": "3mf/ankle_bearing_outer_keeper_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.43",
+          "name": "ankle_bearing_outer_keeper_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 617.7538782227123,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.105427357601002e-15,
+        "volume_difference_mm3": 1.2164491636212915e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -39.754999999999995,
+        -42.899,
+        9.175
+      ],
+      "expected_bounds_mm": [
+        -0.8499999999999979,
+        -13.150000000000002,
+        0,
+        0.8499999999999979,
+        13.150000000000002,
+        26.3
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 4895,
+        "triangles": 9798,
+        "volume_mm3": 617.7463772454514,
+        "bounds_mm": [
+          -0.85,
+          -13.15,
+          0.000249,
+          0.85,
+          13.15,
+          26.299752
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000249,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.2142339409412361e-05,
+      "sha256": "253b8be532bb2a56425cd03a426f6b97af194aa64a83ab5931a79d873a0a1374",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_bearing_outer_keeper_left_native_right",
+      "filename": "3mf/ankle_bearing_outer_keeper_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.54",
+          "name": "ankle_bearing_outer_keeper_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 617.7538782227123,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 8.104628079763643e-15,
+        "volume_difference_mm3": 4.9112713895738125e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        39.755,
+        -42.898999999999994,
+        9.175
+      ],
+      "expected_bounds_mm": [
+        -0.8500000000000014,
+        -13.149999999999999,
+        0,
+        0.8500000000000014,
+        13.149999999999999,
+        26.3
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 4895,
+        "triangles": 9798,
+        "volume_mm3": 617.7463772454513,
+        "bounds_mm": [
+          -0.85,
+          -13.15,
+          0.000249,
+          0.85,
+          13.15,
+          26.299752
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000249,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.2142339409596394e-05,
+      "sha256": "76d42e03345aec7282777791aa9234d7543106f17c6935dce60ba2f2d56d820e",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_eye_left_native",
+      "filename": "3mf/ankle_eye_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.42",
+          "name": "ankle_eye_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 5704.676329474861,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.329070518200751e-15,
+        "volume_difference_mm3": 4.547473508864641e-12,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": false
+      },
+      "translation_mm": [
+        -44.224999999999994,
+        -38.056500000000014,
+        18.032821465650244
+      ],
+      "expected_bounds_mm": [
+        -5.350000000000005,
+        -24.637500000000006,
+        0,
+        5.350000000000005,
+        24.637500000000006,
+        36.507932193528525
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 1e-05,
+        "algorithm": "Delabella",
+        "native_parallel": false,
+        "constrained_planar_faces": 1,
+        "planar_boundary_loops": [
+          {
+            "boundary_vertices": 95,
+            "area_mm2": 0.11306353881200436,
+            "native_face_area_mm2": 0.11306711954575552,
+            "native_surface_tolerance_mm": 0.001
+          }
+        ],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 143224,
+        "triangles": 277878,
+        "volume_mm3": 5704.675876071241,
+        "bounds_mm": [
+          -5.35,
+          -24.6375,
+          0.0,
+          5.35,
+          24.6375,
+          36.507932
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.93528528313891e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 7.947928919572144e-08,
+      "sha256": "37b31747c912ace67e408f185ec092b984444286c9ce253dac5928063896dbfe",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_eye_left_native_right",
+      "filename": "3mf/ankle_eye_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.53",
+          "name": "ankle_eye_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 5704.676329474864,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.7711166694643907e-13,
+        "volume_difference_mm3": 1.0600888344924897e-07,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        44.22500000000001,
+        -38.0565,
+        18.032821465650002
+      ],
+      "expected_bounds_mm": [
+        -5.350000000000001,
+        -24.637500000000006,
+        0,
+        5.350000000000001,
+        24.637500000000006,
+        36.507932193528006
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 1e-05,
+        "algorithm": "Delabella",
+        "native_parallel": false,
+        "constrained_planar_faces": 1,
+        "planar_boundary_loops": [
+          {
+            "boundary_vertices": 95,
+            "area_mm2": 0.11306353881200452,
+            "native_face_area_mm2": 0.11306711954575552,
+            "native_surface_tolerance_mm": 0.001
+          }
+        ],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 143224,
+        "triangles": 277878,
+        "volume_mm3": 5704.675867370529,
+        "bounds_mm": [
+          -5.35,
+          -24.6375,
+          0.0,
+          5.35,
+          24.6375,
+          36.507932
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.935280096176939e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 8.100447925433253e-08,
+      "sha256": "ae356ae9426c5b93b7181ca045a9fd464780d068b4d23062ff161c30916ac95f",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_left_native",
+      "filename": "3mf/ankle_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.41",
+          "name": "ankle_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 13358.914757177827,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 4.263256414560601e-14,
+        "volume_difference_mm3": 1.1641532182693481e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -71.8035,
+        -38.08104906370801,
+        18.030000293939004
+      ],
+      "expected_bounds_mm": [
+        -22.228500000000007,
+        -24.662049063708,
+        0,
+        22.228500000000007,
+        24.662049063708,
+        33.704000293939
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "topology_cleanup": {
+          "precision_mm": 0.0001,
+          "bounds_error_mm": 0.0,
+          "volume_difference_mm3": 0.0016269193565676687,
+          "original_mesh_error": "Planar mesh boundary is branched"
+        }
+      },
+      "mesh": {
+        "vertices": 18867,
+        "triangles": 37310,
+        "volume_mm3": 13358.862538445714,
+        "bounds_mm": [
+          -22.2285,
+          -24.662048,
+          0.0,
+          22.2285,
+          24.661882,
+          33.704
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00016706370800179116,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.908905256317751e-06,
+      "sha256": "1dfddf9ebfde354d5ff7fd75725cab422dff036142a76a7fcc990cbc17a321f3",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ankle_left_native_right",
+      "filename": "3mf/ankle_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.52",
+          "name": "ankle_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 13358.914757177823,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 4.618527782440651e-14,
+        "volume_difference_mm3": 5.995389074087143e-09,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        71.80350000000001,
+        -38.08104906370799,
+        18.030000293939004
+      ],
+      "expected_bounds_mm": [
+        -22.228500000000004,
+        -24.662049063708004,
+        0,
+        22.228500000000004,
+        24.662049063708004,
+        33.704000293939
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "topology_cleanup": {
+          "precision_mm": 0.0001,
+          "bounds_error_mm": 0.0,
+          "volume_difference_mm3": 0.0016269193583866581,
+          "original_mesh_error": "Planar mesh boundary is branched"
+        }
+      },
+      "mesh": {
+        "vertices": 18867,
+        "triangles": 37310,
+        "volume_mm3": 13358.862574104545,
+        "bounds_mm": [
+          -22.2285,
+          -24.662048,
+          0.0,
+          22.2285,
+          24.661882,
+          33.704
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00016706370800534387,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.906235964993796e-06,
+      "sha256": "1af17a078afafd15c0b64e0b7a57a33752ca7b5dab8519836642682714135fd3",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "battery_carrier_native",
+      "filename": "3mf/battery_carrier_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.31",
+          "name": "battery_carrier_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 18247.098338454165,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.329070518200751e-15,
+        "volume_difference_mm3": 4.5838605728931725e-06,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        7.105427357601002e-15,
+        -37.85,
+        -74.0
+      ],
+      "expected_bounds_mm": [
+        -34.5000001,
+        -10.350000000000003,
+        0,
+        34.5000001,
+        10.350000000000003,
+        88.0
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 14318,
+        "triangles": 28672,
+        "volume_mm3": 18247.080767091677,
+        "bounds_mm": [
+          -34.5,
+          -10.35,
+          0.0,
+          34.5,
+          10.35,
+          88.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.0000000116860974e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.629674900964745e-07,
+      "sha256": "64c03cf085103b90e8a47991b60ed16839da9e3473112d39dd68419f52d82922",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "battery_donor_cover_native",
+      "filename": "3mf/battery_donor_cover_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.30",
+          "name": "battery_donor_cover_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 1985.330933798486,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.7763568394002505e-15,
+        "volume_difference_mm3": 2.0463630789890885e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        7.105427357601002e-15,
+        -43.025000000000006,
+        -149.0
+      ],
+      "expected_bounds_mm": [
+        -34.5,
+        -5.575000000000003,
+        0,
+        34.5,
+        5.575000000000003,
+        9.0
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 1152,
+        "triangles": 2308,
+        "volume_mm3": 1985.33701297044,
+        "bounds_mm": [
+          -34.5,
+          -5.575,
+          0.0,
+          34.5,
+          5.575,
+          9.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 2.6645352591003757e-15,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.062044644724169e-06,
+      "sha256": "09582074df399747724119cb7add00e1c20b85f849cb9c5213ffc432ead8d61c",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "bottom_head_shell_native",
+      "filename": "3mf/bottom_head_shell_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.9",
+          "name": "bottom_head_shell_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 41363.83114214185,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 3.321076746942708e-11,
+        "volume_difference_mm3": 0.0003491066017886624,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -1.0658141036401503e-13,
+        37.8350000000166,
+        -258.3355999
+      ],
+      "expected_bounds_mm": [
+        -61.90300010000009,
+        -78.7350001000166,
+        0,
+        61.90300010000009,
+        78.7350001000166,
+        24.56440020103298
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 120009,
+        "triangles": 240030,
+        "volume_mm3": 41363.5073683947,
+        "bounds_mm": [
+          -61.903,
+          -78.735,
+          0.0,
+          61.903,
+          78.735,
+          24.5644
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 2.0103298226104016e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 7.827460324875653e-06,
+      "sha256": "36933d50a7fa64849bceb8418047a0134e7c469a24b88569dc4ff39323546128",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "electronics_deck_native",
+      "filename": "3mf/electronics_deck_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.5",
+          "name": "electronics_deck_r02"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 9671.028193809601,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 0.0,
+        "volume_difference_mm3": 1.8735590856522322e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -9.250000000000002,
+        18.5,
+        -300.6
+      ],
+      "expected_bounds_mm": [
+        -30.250000000000007,
+        -43.0,
+        0,
+        30.250000000000007,
+        43.0,
+        5.449999999999989
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 8161,
+        "triangles": 16330,
+        "volume_mm3": 9671.003981957272,
+        "bounds_mm": [
+          -30.25,
+          -43.0,
+          0.0,
+          30.25,
+          43.0,
+          5.45
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.1546319456101628e-14,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 2.5035447983434337e-06,
+      "sha256": "f74706692b4bc335f642fd7d2aedf252a0533167118c5ef0cb5890d04f3005e8",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "face_part_native",
+      "filename": "3mf/face_part_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.14",
+          "name": "face_part_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 13277.604504654992,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 6.608047442568932e-13,
+        "volume_difference_mm3": 1.0732037480920553e-09,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        0.12335999999998393,
+        101.45250005,
+        -273.4249999
+      ],
+      "expected_bounds_mm": [
+        -59.163600100000004,
+        -8.437500049999997,
+        0,
+        59.163600100000004,
+        8.437500049999997,
+        60.241021033332686
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 47326,
+        "triangles": 94668,
+        "volume_mm3": 13315.351210754281,
+        "bounds_mm": [
+          -59.1636,
+          -8.4375,
+          0.0,
+          59.1636,
+          8.4375,
+          60.241008
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.303333268509732e-05,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 0.002842885257356162,
+      "sha256": "515ea16a91ebb2817380a375c0fd2e2d7a64b137ca77b7e7f8ab36f550061bd6",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "face_radxa_bracket_native",
+      "filename": "3mf/face_radxa_bracket_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.6",
+          "name": "face_radxa_bracket_r02"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 3943.2104494264327,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.398081733190338e-14,
+        "volume_difference_mm3": 5.161382432561368e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        0.2499999999999929,
+        91.41499999999999,
+        -281.87
+      ],
+      "expected_bounds_mm": [
+        -46.0,
+        -1.6000000000000156,
+        0,
+        46.0,
+        1.6000000000000156,
+        38.870000000000005
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 9360,
+        "triangles": 18744,
+        "volume_mm3": 3943.227815195613,
+        "bounds_mm": [
+          -46.0,
+          -1.6,
+          0.0,
+          46.0,
+          1.6,
+          38.869884
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0001160000000055561,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 4.40396712349281e-06,
+      "sha256": "fe1bfcb806ea2c952286f4774582e53a6ac6799c4e8d182a02fa2cb496b14ff7",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "foot_left_native_a",
+      "filename": "3mf/foot_left_native_a.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.46",
+          "name": "foot_a_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 20879.712767942474,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.105427357601002e-15,
+        "volume_difference_mm3": 1.0913936421275139e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": false
+      },
+      "translation_mm": [
+        -67.23028976941275,
+        -33.448999999999955,
+        27.101757630786743
+      ],
+      "expected_bounds_mm": [
+        -24.84028986941493,
+        -33.615000100000046,
+        0,
+        24.84028986941493,
+        33.615000100000046,
+        22.81575763078674
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 8241,
+        "triangles": 16486,
+        "volume_mm3": 20879.679914150867,
+        "bounds_mm": [
+          -24.84029,
+          -33.615,
+          0.0,
+          24.840232,
+          33.615,
+          22.815758
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 5.786941493113318e-05,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.5734790977131807e-06,
+      "sha256": "8bba8ceaead9e095bc13b1307c18cfc68c89775b4df32316097daddfcedc6209",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "foot_left_native_a_right",
+      "filename": "3mf/foot_left_native_a_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.57",
+          "name": "foot_a_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 20879.712767938323,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.105427357601002e-15,
+        "volume_difference_mm3": 2.1827872842550278e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": false
+      },
+      "translation_mm": [
+        67.23028976941275,
+        -33.44899999999995,
+        27.101757630786743
+      ],
+      "expected_bounds_mm": [
+        -24.84028986941493,
+        -33.61500010000005,
+        0,
+        24.84028986941493,
+        33.61500010000005,
+        22.81575763078674
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 8241,
+        "triangles": 16486,
+        "volume_mm3": 20879.679347857968,
+        "bounds_mm": [
+          -24.840232,
+          -33.615,
+          0.0,
+          24.84029,
+          33.615,
+          22.815758
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 5.786941493113318e-05,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.600600579465092e-06,
+      "sha256": "fdfa0cce2cccef1840021788945630bc5cf377fb223776dde2383efc27bd209c",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "foot_left_native_b",
+      "filename": "3mf/foot_left_native_b.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.47",
+          "name": "foot_b_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 9404.033406004837,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.830091716532479e-11,
+        "volume_difference_mm3": 7.12464316166006e-06,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -67.39699999999274,
+        -33.44899999998668,
+        12.38600010000219
+      ],
+      "expected_bounds_mm": [
+        -27.05800010000707,
+        -36.45000010001502,
+        0,
+        27.05800010000707,
+        36.45000010001502,
+        6.750000200002343
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 1e-05,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 29159,
+        "triangles": 57846,
+        "volume_mm3": 9404.032535677565,
+        "bounds_mm": [
+          -27.058,
+          -36.45,
+          0.0,
+          27.058,
+          36.45,
+          6.75
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 2.000023426873554e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.254829654981583e-08,
+      "sha256": "59f8080a49087fe37bfde462ea364788f86e7fd96aa22fb47d38b87dd46b3f35",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "foot_left_native_b_right",
+      "filename": "3mf/foot_left_native_b_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.58",
+          "name": "foot_b_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 9404.03340600516,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.886224592657527e-11,
+        "volume_difference_mm3": 0.0005574726637860294,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        67.39699999998825,
+        -33.44899999998639,
+        12.386000100002219
+      ],
+      "expected_bounds_mm": [
+        -27.05800010000358,
+        -36.450000100015295,
+        0,
+        27.05800010000358,
+        36.450000100015295,
+        6.750000200002371
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 1e-05,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 29159,
+        "triangles": 57846,
+        "volume_mm3": 9404.032536014374,
+        "bounds_mm": [
+          -27.058,
+          -36.45,
+          0.0,
+          27.058,
+          36.45,
+          6.75
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 2.0000237110906482e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.25125153526096e-08,
+      "sha256": "107b0b9496ae8270085b6e244e91a3e9a94f185a08d8e8d8b978df545aa1e249",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "head_frame_native",
+      "filename": "3mf/head_frame_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.2",
+          "name": "head_frame_r05"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 32542.759633124584,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.1952360081531656e-12,
+        "volume_difference_mm3": 9.92125496850349e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        9.574999999999473,
+        24.364999999999128,
+        -261.79999989999465
+      ],
+      "expected_bounds_mm": [
+        -43.42500000000052,
+        -49.63500000000087,
+        0,
+        43.42500000000052,
+        49.63500000000087,
+        44.200000100005354
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 13005,
+        "triangles": 26054,
+        "volume_mm3": 32542.77830742549,
+        "bounds_mm": [
+          -43.425,
+          -49.635,
+          0.0,
+          43.425,
+          49.635,
+          44.2
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.0000535155541002e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 5.738388851369087e-07,
+      "sha256": "c9cea280c3593a8fd4fc857df6da2eba705c8f204d9ec050e6bba53e58d40ac4",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "hip_left_native",
+      "filename": "3mf/hip_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.37",
+          "name": "hip_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 10378.565534050584,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.3642420526593924e-12,
+        "volume_difference_mm3": 7.774621489237688,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -31.387500000000685,
+        15.862499999999997,
+        -87.54999989999928
+      ],
+      "expected_bounds_mm": [
+        -20.587500100000682,
+        -23.287500100000003,
+        0,
+        20.587500100000682,
+        23.287500100000003,
+        25.650000200001088
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 22716,
+        "triangles": 45340,
+        "volume_mm3": 10384.08478607768,
+        "bounds_mm": [
+          -20.583514,
+          -23.2875,
+          0.0,
+          20.5875,
+          23.283514,
+          25.65
+        ],
+        "nonmanifold_edges": 79,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 0.003986100000680892,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0005317933397431315,
+      "sha256": "14ee3cc98a155582a0c8af6757d53dccd95a27d79d265565db61514b18d1d306",
+      "producer_implementation_sha256": "988463bda14b0d118bbd618fb016c4de6120968538af9b9177163c728a80d5bd",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "hip_left_native_right",
+      "filename": "3mf/hip_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.48",
+          "name": "hip_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 10378.565534050587,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.1103119252074976e-12,
+        "volume_difference_mm3": 9.754732408779091,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        31.38750000000068,
+        15.86250000000001,
+        -87.54999989999928
+      ],
+      "expected_bounds_mm": [
+        -20.587500100000685,
+        -23.287500100000006,
+        0,
+        20.587500100000685,
+        23.287500100000006,
+        25.65000020000285
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 22715,
+        "triangles": 45338,
+        "volume_mm3": 10384.084784528903,
+        "bounds_mm": [
+          -20.5875,
+          -23.2875,
+          0.0,
+          20.583514,
+          23.283514,
+          25.65
+        ],
+        "nonmanifold_edges": 79,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 0.003986100000684445,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0005317931905143828,
+      "sha256": "3c2a2326722273238a7aad62ffbe4a5e85c3bcfc93b972b77b167699a6de15ce",
+      "producer_implementation_sha256": "988463bda14b0d118bbd618fb016c4de6120968538af9b9177163c728a80d5bd",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "imu_yoke_bridge_native",
+      "filename": "3mf/imu_yoke_bridge_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.29",
+          "name": "imu_yoke_bridge_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 3402.1785265611834,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 8.881784197001252e-16,
+        "volume_difference_mm3": 4.547473508864641e-12,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        1.7763568394002505e-15,
+        -12.450000000000001,
+        -128.0
+      ],
+      "expected_bounds_mm": [
+        -31.5,
+        -7.5500000000000025,
+        0,
+        31.5,
+        7.5500000000000025,
+        42.44999999999999
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 7112,
+        "triangles": 14244,
+        "volume_mm3": 3402.1798846646043,
+        "bounds_mm": [
+          -31.5,
+          -7.55,
+          0.0,
+          31.5,
+          7.55,
+          42.45
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.4210854715202004e-14,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.991864066789549e-07,
+      "sha256": "75dfe7e575a519b2776403a6cf62074585871b8b0d4406ee8d1aef924e9ea7ce",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "jaw_native",
+      "filename": "3mf/jaw_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.8",
+          "name": "jaw_r01"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 24703.49657432881,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.396749879262643e-12,
+        "volume_difference_mm3": 0.0013483792790793814,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -3.5136338283336954e-12,
+        67.93188411372917,
+        -256.9844810376486
+      ],
+      "expected_bounds_mm": [
+        -61.69998288270736,
+        -47.89688421372918,
+        0,
+        61.69998288270736,
+        47.89688421372918,
+        42.84547156257406
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 721171,
+        "triangles": 1442350,
+        "volume_mm3": 24689.41176541519,
+        "bounds_mm": [
+          -61.699976,
+          -47.896884,
+          0.000163,
+          61.69996,
+          47.896884,
+          42.845472
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000163,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 0.0005701544666456783,
+      "sha256": "137d214ece22b007c90d2b1e3e6d0849cd83d96a3e7e877c0507580c118209a2",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "jaw_soft_001_native",
+      "filename": "3mf/jaw_soft_001_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.13",
+          "name": "jaw_soft_001_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "source_volume_mm3": 45784.072254371335,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 9.229950137523701e-12,
+        "volume_difference_mm3": 0.14661539846565574,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -4.515499085755437e-12,
+        91.4192201640933,
+        -259.30645721279404
+      ],
+      "expected_bounds_mm": [
+        -59.17639122482399,
+        -21.758220264098355,
+        0,
+        59.17639122482399,
+        21.758220264098355,
+        11.403730387205997
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 245010,
+        "triangles": 490016,
+        "volume_mm3": 45783.55889178956,
+        "bounds_mm": [
+          -59.176392,
+          -21.75822,
+          0.000153,
+          59.176392,
+          21.75822,
+          11.40373
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000153,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.1212689402637171e-05,
+      "sha256": "53f847a861994a0d4ba7758c24c17a2769ed326f20f886726294a1af316fcafb",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "left_shell_native",
+      "filename": "3mf/left_shell_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.35",
+          "name": "left_shell_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 22965.764184956577,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 4.412470389070222e-12,
+        "volume_difference_mm3": 1.5449067067020223,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -21.499999999999996,
+        -16.87965388592692,
+        -122.34246812578748
+      ],
+      "expected_bounds_mm": [
+        -21.500000100000005,
+        -45.30996861758087,
+        0,
+        21.500000100000005,
+        45.30996861758087,
+        52.55438217176173
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 544343,
+        "triangles": 1088690,
+        "volume_mm3": 22958.90709141195,
+        "bounds_mm": [
+          -21.5,
+          -45.309972,
+          6e-06,
+          21.5,
+          45.309968,
+          52.55438
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 6e-06,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 0.0002985789407834126,
+      "sha256": "cd8a1dc90cf61a5a727eb73b946c9099257ce60dd63cdeb5507a73c985e179f1",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "leg_left_native",
+      "filename": "3mf/leg_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.40",
+          "name": "leg_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 8908.128854126868,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.6992250948985702e-13,
+        "volume_difference_mm3": 7.782646207488142e-06,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -46.91999999999999,
+        -42.89899999999996,
+        1.1760001000161764
+      ],
+      "expected_bounds_mm": [
+        -6.260000000000002,
+        -13.500000100000076,
+        0,
+        6.260000000000002,
+        13.500000100000076,
+        85.35100020001617
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 110206,
+        "triangles": 220448,
+        "volume_mm3": 8908.212803784072,
+        "bounds_mm": [
+          -6.26,
+          -13.5,
+          0.0,
+          6.26,
+          13.5,
+          85.350992
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 8.200016168302682e-06,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.423938357769248e-06,
+      "sha256": "d4cc861bc262e4c6a70383ac8eb4e121a5eb80af820fa2d682e672a0ed4ff273",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "leg_left_native_right",
+      "filename": "3mf/leg_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.51",
+          "name": "leg_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 8908.12885412687,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.6992250948985702e-13,
+        "volume_difference_mm3": 4.1698385757626966e-06,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        46.92,
+        -42.898999999999944,
+        1.1760001000161764
+      ],
+      "expected_bounds_mm": [
+        -6.260000000000002,
+        -13.500000100000076,
+        0,
+        6.260000000000002,
+        13.500000100000076,
+        85.35100020001617
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 110184,
+        "triangles": 220404,
+        "volume_mm3": 8908.212882150125,
+        "bounds_mm": [
+          -6.26,
+          -13.5,
+          0.0,
+          6.26,
+          13.5,
+          85.350992
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 8.200016168302682e-06,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.432735497102635e-06,
+      "sha256": "31a39157185cc631d93e664f2628fb07612aed265d370d74b416bd8960945171",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "neck_001_native",
+      "filename": "3mf/neck_001_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.24",
+          "name": "neck_001_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 1801.7721093712937,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 6.809885988445785e-12,
+        "volume_difference_mm3": 7.273647497640923e-07,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        20.0,
+        35.10000000000001,
+        -190.76899999999318
+      ],
+      "expected_bounds_mm": [
+        -2.4000000000000004,
+        -14.3,
+        0,
+        2.4000000000000004,
+        14.3,
+        18.00000000000682
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 22325,
+        "triangles": 44662,
+        "volume_mm3": 1801.7746407964778,
+        "bounds_mm": [
+          -2.4,
+          -14.3,
+          0.0,
+          2.4,
+          14.3,
+          18.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 6.821210263296962e-12,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.4049641299928493e-06,
+      "sha256": "88b232dfda8cad0073e02f933c3a71fbbe00c4f5dcaf2e9ae750e999c37870e9",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "neck_002_native",
+      "filename": "3mf/neck_002_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.25",
+          "name": "neck_002_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 3329.9653059207735,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 9.999999406318238e-08,
+        "volume_difference_mm3": 7.457856554538012e-09,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -17.350000000000005,
+        35.099999999999994,
+        -187.0189999
+      ],
+      "expected_bounds_mm": [
+        -2.950000000000002,
+        -14.3,
+        0,
+        2.950000000000002,
+        14.3,
+        25.500000199999988
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 24513,
+        "triangles": 49038,
+        "volume_mm3": 3329.9778632844955,
+        "bounds_mm": [
+          -2.95,
+          -14.3,
+          0.0,
+          2.95,
+          14.3,
+          25.5
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.9999998812636477e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.771019385585129e-06,
+      "sha256": "4ec2564e5dc2d8f364b0481238bcfc6363e98e1844cebc30a4c828ab14e61d7d",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "neck_internal_yoke_native",
+      "filename": "3mf/neck_internal_yoke_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.26",
+          "name": "import_neck_internal_yoke"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 11552.964913600661,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.713174450168028e-15,
+        "volume_difference_mm3": 0.00010918971929640975,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -0.0,
+        13.55000005,
+        -151.2689999
+      ],
+      "expected_bounds_mm": [
+        -34.0000001,
+        -34.05000005,
+        0,
+        34.0000001,
+        34.05000005,
+        25.000000199999988
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 47454,
+        "triangles": 94952,
+        "volume_mm3": 11553.031672967352,
+        "bounds_mm": [
+          -34.0,
+          -34.049996,
+          6.9e-05,
+          34.0,
+          34.05,
+          24.999872
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00012819999998825438,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 5.778548380482482e-06,
+      "sha256": "3d9d494643d2e101365bb9e4bc40b75709841d6e3cae099b6af8913adc6cc586",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "neck_pitch_001_native",
+      "filename": "3mf/neck_pitch_001_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.23",
+          "name": "neck_pitch_001_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 9976.264882028612,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.815970093361102e-14,
+        "volume_difference_mm3": 3.173921868437901e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        1.849999999999996,
+        35.1,
+        -222.2689999
+      ],
+      "expected_bounds_mm": [
+        -23.450000100000004,
+        -13.500000100000003,
+        0,
+        23.450000100000004,
+        13.500000100000003,
+        35.73600020000035
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 178082,
+        "triangles": 356210,
+        "volume_mm3": 9976.203668010437,
+        "bounds_mm": [
+          -23.45,
+          -13.5,
+          0.0,
+          23.45,
+          13.5,
+          35.736
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 2.0000035050316e-07,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 6.135965604220817e-06,
+      "sha256": "8c4e5e754a23b56970ee2ffaa92b1e8c7d56c6624956d476071477eb30f1bac7",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "noenoeil_native",
+      "filename": "3mf/noenoeil_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.11",
+          "name": "noenoeil_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 10470.413963048055,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 8.881784197001252e-15,
+        "volume_difference_mm3": 2.219167072325945e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        0.12335999999998748,
+        114.2775,
+        -281.25477
+      ],
+      "expected_bounds_mm": [
+        -20.25,
+        -6.412500000000001,
+        0,
+        20.25,
+        6.412500000000001,
+        40.5
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 6957,
+        "triangles": 13914,
+        "volume_mm3": 10470.311394640561,
+        "bounds_mm": [
+          -20.24975,
+          -6.4125,
+          6.2e-05,
+          20.25,
+          6.4125,
+          40.49994
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0002500000000011937,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 9.796022187458196e-06,
+      "sha256": "3ece3acb3aa23c987843bdb0f6efcf4477d291d0e67505436f037fd5319dc256",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "right_shell_native",
+      "filename": "3mf/right_shell_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.36",
+          "name": "right_shell_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 23746.415188809966,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 3.872457909892546e-12,
+        "volume_difference_mm3": 0.8619620254467009,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        25.299999950000004,
+        -16.879653885926913,
+        -122.34246812578748
+      ],
+      "expected_bounds_mm": [
+        -25.300000050000005,
+        -45.30996861758088,
+        0,
+        25.300000050000005,
+        45.30996861758088,
+        52.554382171922256
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 549440,
+        "triangles": 1098888,
+        "volume_mm3": 23587.498015363017,
+        "bounds_mm": [
+          -25.3,
+          -45.309972,
+          6e-06,
+          25.3,
+          45.309972,
+          52.55438
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 6e-06,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 0.006692259534055303,
+      "sha256": "c6e87fdea51b3f5137b55340597a6a689e9e1971843c12ee0b3ad72856102c9a",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "roll_front_bulkhead_native",
+      "filename": "3mf/roll_front_bulkhead_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.3",
+          "name": "roll_front_bulkhead_r05"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 13029.547594988391,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.5757174171303632e-14,
+        "volume_difference_mm3": 4.0590746721136384e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        17.589999999999993,
+        60.24499999999999,
+        -265.0
+      ],
+      "expected_bounds_mm": [
+        -32.91,
+        -7.245000000000001,
+        0,
+        32.91,
+        7.245000000000001,
+        39.25
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 8663,
+        "triangles": 17338,
+        "volume_mm3": 13029.591552833763,
+        "bounds_mm": [
+          -32.91,
+          -7.244836,
+          0.0,
+          32.90992,
+          7.245,
+          39.25
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00016400000000071913,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 3.373704654830757e-06,
+      "sha256": "151798036ff77aa1acb0d9b10b5e8d27d5a08c2c5df80a63658ef7ae515bf925",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "soft_mouth_top_native",
+      "filename": "3mf/soft_mouth_top_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.12",
+          "name": "soft_mouth_top_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "source_volume_mm3": 6639.627411896121,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 8.151093788915182e-12,
+        "volume_difference_mm3": 0.0005792631045551389,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -3.552713678800501e-15,
+        91.75024628703497,
+        -268.198298472481
+      ],
+      "expected_bounds_mm": [
+        -59.27359673923699,
+        -21.978486387035026,
+        0,
+        59.27359673923699,
+        21.978486387035026,
+        4.422853690633588
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001
+      },
+      "mesh": {
+        "vertices": 21300,
+        "triangles": 42590,
+        "volume_mm3": 6639.550072067669,
+        "bounds_mm": [
+          -59.273544,
+          -21.978478,
+          0.0,
+          59.273536,
+          21.978486,
+          4.422854
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 6.0739236992901624e-05,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 1.1648218138456401e-05,
+      "sha256": "37063d2858a0484954ad6c7cca1c977da097fcf673e546fa109d508e88e449f2",
+      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "sole_left_native",
+      "filename": "3mf/sole_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.45",
+          "name": "sole_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "source_volume_mm3": 15336.180297673212,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.757780263588779e-12,
+        "volume_difference_mm3": 0.008314233398778015,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -67.23692711462522,
+        -33.449024010680276,
+        29.79845605485204
+      ],
+      "expected_bounds_mm": [
+        -27.740134114781995,
+        -36.526973828708975,
+        0,
+        27.740134114781995,
+        36.526973828708975,
+        17.45225057797078
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 128267,
+        "triangles": 256450,
+        "volume_mm3": 15360.067333557441,
+        "bounds_mm": [
+          -27.740128,
+          -36.526048,
+          0.0,
+          27.737456,
+          36.526264,
+          17.452032
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0026781147819932016,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0015575609715447068,
+      "sha256": "c4786c242c7acf718c3ca6afef56bf35161b9d913a604ad1d87c46ecb6fe5d5d",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "sole_left_native_right",
+      "filename": "3mf/sole_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.56",
+          "name": "sole_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "fdm-tpu",
+      "source_volume_mm3": 15336.171981571757,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.757780263588779e-12,
+        "volume_difference_mm3": 8.94300094879327,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        67.23692711462122,
+        -33.44902401068027,
+        29.79845605485204
+      ],
+      "expected_bounds_mm": [
+        -27.74013411478182,
+        -36.52697382870898,
+        0,
+        27.74013411478182,
+        36.52697382870898,
+        17.45225057797078
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 128267,
+        "triangles": 256450,
+        "volume_mm3": 15360.05593509318,
+        "bounds_mm": [
+          -27.737456,
+          -36.526048,
+          0.0,
+          27.740128,
+          36.526264,
+          17.452032
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0026781147818191187,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0015573608296856807,
+      "sha256": "8b4ec0e48f9a8dfddff6ee1e0578547e781dc664cfe7217e836019a94f6f82eb",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "top_head_shell_native",
+      "filename": "3mf/top_head_shell_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.10",
+          "name": "top_head_shell_native"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 73277.97716456643,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.097001323883892e-09,
+        "volume_difference_mm3": 0.06700818156241439,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        1.1043965741919237e-10,
+        41.82722658296116,
+        -274.5029998936994
+      ],
+      "expected_bounds_mm": [
+        -62.02923045786454,
+        -82.77722668296116,
+        0,
+        62.02923045786454,
+        82.77722668296116,
+        62.43164376456821
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.05,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 16749,
+        "triangles": 33494,
+        "volume_mm3": 73220.52724983901,
+        "bounds_mm": [
+          -62.028572,
+          -82.771488,
+          0.0,
+          62.028572,
+          82.777232,
+          62.408232
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.023411764568209037,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.0007839997356695338,
+      "sha256": "67f21a3c5af80ab63539a6c789b0ebb6d3c0ae07e449894f5946468a0fa9b0be",
+      "producer_implementation_sha256": "7352368f152b04ff938a4656c1505014616600a870e78c51bf3fdf8e40a4cdd6"
+    },
+    {
+      "model": "trunk_base_native",
+      "filename": "3mf/trunk_base_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.1",
+          "name": "trunk_base"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 15477.044639242018,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.758593271006248e-12,
+        "volume_difference_mm3": 1.5076875570230186e-07,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -0.0,
+        -5.84999994999912,
+        -155.45
+      ],
+      "expected_bounds_mm": [
+        -38.2750001,
+        -29.850000050000883,
+        0,
+        38.2750001,
+        29.850000050000883,
+        9.000000100000847
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 26727,
+        "triangles": 53518,
+        "volume_mm3": 15637.711514826411,
+        "bounds_mm": [
+          -38.275,
+          -29.85,
+          0.0,
+          38.275,
+          29.85,
+          9.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.000008467144653e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.010380979013074785,
+      "sha256": "3bf5bc1cf47087628b41976cedccbe192ab32c9f97e04266b80652b258c26e54",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "ubec_clamp_native",
+      "filename": "3mf/ubec_clamp_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.7",
+          "name": "ubec_clamp_r02"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 547.6774382386234,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.7763568394002505e-15,
+        "volume_difference_mm3": 5.32054400537163e-11,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        24.999999999999993,
+        82.0,
+        -282.9
+      ],
+      "expected_bounds_mm": [
+        -4.000000000000002,
+        -17.5,
+        0,
+        4.000000000000002,
+        17.5,
+        4.600000000000023
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 1460,
+        "triangles": 2924,
+        "volume_mm3": 547.606376567756,
+        "bounds_mm": [
+          -3.999032,
+          -17.499994,
+          0.0,
+          3.999105,
+          17.499994,
+          4.6
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0009680000000016342,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00012975095540893557,
+      "sha256": "58e27cde059b10a98e5f51ef147f2a2651dadff789c1ca3c642355cf24fe82c6",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "upper_leg_left_native",
+      "filename": "3mf/upper_leg_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.39",
+          "name": "upper_leg_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 12653.913189734958,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.9184653865522705e-12,
+        "volume_difference_mm3": 0.06442604891162773,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -76.27499999999999,
+        -19.14600354555934,
+        -53.888046928929
+      ],
+      "expected_bounds_mm": [
+        -18.9000001,
+        -41.332956616630334,
+        0,
+        18.9000001,
+        41.332956616630334,
+        64.66795317107099
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 53292,
+        "triangles": 106612,
+        "volume_mm3": 12479.67350822937,
+        "bounds_mm": [
+          -18.9,
+          -41.33172,
+          0.004519,
+          18.9,
+          41.332844,
+          64.667952
+        ],
+        "nonmanifold_edges": 52,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 0.004519,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.013769628327064312,
+      "sha256": "2a932681200a67a2b88f176899f3feed977a3f0a9c292fb80ec5e30ab221e492",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "upper_leg_left_native_right",
+      "filename": "3mf/upper_leg_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.50",
+          "name": "upper_leg_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 12653.913183890061,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.9184653865522705e-12,
+        "volume_difference_mm3": 0.0018739531424216693,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        76.27499999999999,
+        -19.146003545559324,
+        -53.888046928929
+      ],
+      "expected_bounds_mm": [
+        -18.900000099999996,
+        -41.332956616630334,
+        0,
+        18.900000099999996,
+        41.332956616630334,
+        64.66795317107099
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 53569,
+        "triangles": 107166,
+        "volume_mm3": 12479.704382454605,
+        "bounds_mm": [
+          -18.9,
+          -41.33172,
+          0.004519,
+          18.9,
+          41.332872,
+          64.667952
+        ],
+        "nonmanifold_edges": 48,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 0.004519,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.013767187976067703,
+      "sha256": "bccdd696ad881477df64e50fc689df131d49adca8c524509b552d22e9150ae01",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "yaw2roll_left_native",
+      "filename": "3mf/yaw2roll_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.38",
+          "name": "yaw2roll_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 8898.556814294303,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 9.947598300641403e-14,
+        "volume_difference_mm3": 1.683981463429518e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -23.625,
+        6.524999999999967,
+        -63.175
+      ],
+      "expected_bounds_mm": [
+        -15.5250000000001,
+        -14.350000000000072,
+        0,
+        15.5250000000001,
+        14.350000000000072,
+        57.075
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 4446,
+        "triangles": 8932,
+        "volume_mm3": 8895.492424566213,
+        "bounds_mm": [
+          -15.525,
+          -14.35,
+          0.0,
+          15.525,
+          14.35,
+          57.075
+        ],
+        "nonmanifold_edges": 66,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 9.947598300641403e-14,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00034436929403734517,
+      "sha256": "9996714ff19f42e5bdc181514a3459153aec2a0b07a9f72fa44f8871479f74a7",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "yaw2roll_left_native_right",
+      "filename": "3mf/yaw2roll_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.49",
+          "name": "yaw2roll_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 8898.556814294298,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 9.769962616701378e-14,
+        "volume_difference_mm3": 4.589582749758847e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        23.625,
+        6.524999999999972,
+        -63.175
+      ],
+      "expected_bounds_mm": [
+        -15.5250000000001,
+        -14.35000000000007,
+        0,
+        15.5250000000001,
+        14.35000000000007,
+        57.075
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 4446,
+        "triangles": 8932,
+        "volume_mm3": 8895.492424566213,
+        "bounds_mm": [
+          -15.525,
+          -14.35,
+          0.0,
+          15.525,
+          14.35,
+          57.075
+        ],
+        "nonmanifold_edges": 66,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
+      },
+      "max_bound_error_mm": 9.947598300641403e-14,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00034436929403673216,
+      "sha256": "6ab519ca05fc0a21df846cad49f21c50023ce5a1b02552bd10df157f9efec7b3",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    },
+    {
+      "model": "yaw_roll_link_native",
+      "filename": "3mf/yaw_roll_link_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.4",
+          "name": "yaw_roll_link_r05"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 14018.873690760724,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 6.714628852932947e-13,
+        "volume_difference_mm3": 0.0005872142191947205,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        12.7,
+        36.8925000500045,
+        -268.3
+      ],
+      "expected_bounds_mm": [
+        -25.7,
+        -21.957500050004498,
+        0,
+        25.7,
+        21.957500050004498,
+        28.905000000000655
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 6227,
+        "triangles": 12490,
+        "volume_mm3": 14021.03585123061,
+        "bounds_mm": [
+          -25.7,
+          -21.9575,
+          0.0,
+          25.698912,
+          21.9575,
+          28.905
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0010879999999993117,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00015423211005258225,
+      "sha256": "b3d98b55bcf1a234b9c4dd1c63d4abc182ca22c837a9c9a10d6ab4f582cbd938",
+      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
+      "reused_verified_same_source_conversion": true
+    }
+  ],
+  "files": {
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "0cad189d50a565bf538a5f5b168667ad772bb55800001e2352be183508d8cdba",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "bfd9aa9e88b850d13455099df4c7e1a8aa074208fb090cafa10be9abb8a1ac11",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "253b8be532bb2a56425cd03a426f6b97af194aa64a83ab5931a79d873a0a1374",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "76d42e03345aec7282777791aa9234d7543106f17c6935dce60ba2f2d56d820e",
+    "3mf/ankle_eye_left_native.3mf": "37b31747c912ace67e408f185ec092b984444286c9ce253dac5928063896dbfe",
+    "3mf/ankle_eye_left_native_right.3mf": "ae356ae9426c5b93b7181ca045a9fd464780d068b4d23062ff161c30916ac95f",
+    "3mf/ankle_left_native.3mf": "1dfddf9ebfde354d5ff7fd75725cab422dff036142a76a7fcc990cbc17a321f3",
+    "3mf/ankle_left_native_right.3mf": "1af17a078afafd15c0b64e0b7a57a33752ca7b5dab8519836642682714135fd3",
+    "3mf/battery_carrier_native.3mf": "64c03cf085103b90e8a47991b60ed16839da9e3473112d39dd68419f52d82922",
+    "3mf/battery_donor_cover_native.3mf": "09582074df399747724119cb7add00e1c20b85f849cb9c5213ffc432ead8d61c",
+    "3mf/bottom_head_shell_native.3mf": "36933d50a7fa64849bceb8418047a0134e7c469a24b88569dc4ff39323546128",
+    "3mf/electronics_deck_native.3mf": "f74706692b4bc335f642fd7d2aedf252a0533167118c5ef0cb5890d04f3005e8",
+    "3mf/face_part_native.3mf": "515ea16a91ebb2817380a375c0fd2e2d7a64b137ca77b7e7f8ab36f550061bd6",
+    "3mf/face_radxa_bracket_native.3mf": "fe1bfcb806ea2c952286f4774582e53a6ac6799c4e8d182a02fa2cb496b14ff7",
+    "3mf/foot_left_native_a.3mf": "8bba8ceaead9e095bc13b1307c18cfc68c89775b4df32316097daddfcedc6209",
+    "3mf/foot_left_native_a_right.3mf": "fdfa0cce2cccef1840021788945630bc5cf377fb223776dde2383efc27bd209c",
+    "3mf/foot_left_native_b.3mf": "59f8080a49087fe37bfde462ea364788f86e7fd96aa22fb47d38b87dd46b3f35",
+    "3mf/foot_left_native_b_right.3mf": "107b0b9496ae8270085b6e244e91a3e9a94f185a08d8e8d8b978df545aa1e249",
+    "3mf/head_frame_native.3mf": "c9cea280c3593a8fd4fc857df6da2eba705c8f204d9ec050e6bba53e58d40ac4",
+    "3mf/hip_left_native.3mf": "14ee3cc98a155582a0c8af6757d53dccd95a27d79d265565db61514b18d1d306",
+    "3mf/hip_left_native_right.3mf": "3c2a2326722273238a7aad62ffbe4a5e85c3bcfc93b972b77b167699a6de15ce",
+    "3mf/imu_yoke_bridge_native.3mf": "75dfe7e575a519b2776403a6cf62074585871b8b0d4406ee8d1aef924e9ea7ce",
+    "3mf/jaw_native.3mf": "137d214ece22b007c90d2b1e3e6d0849cd83d96a3e7e877c0507580c118209a2",
+    "3mf/jaw_soft_001_native.3mf": "53f847a861994a0d4ba7758c24c17a2769ed326f20f886726294a1af316fcafb",
+    "3mf/left_shell_native.3mf": "cd8a1dc90cf61a5a727eb73b946c9099257ce60dd63cdeb5507a73c985e179f1",
+    "3mf/leg_left_native.3mf": "d4cc861bc262e4c6a70383ac8eb4e121a5eb80af820fa2d682e672a0ed4ff273",
+    "3mf/leg_left_native_right.3mf": "31a39157185cc631d93e664f2628fb07612aed265d370d74b416bd8960945171",
+    "3mf/neck_001_native.3mf": "88b232dfda8cad0073e02f933c3a71fbbe00c4f5dcaf2e9ae750e999c37870e9",
+    "3mf/neck_002_native.3mf": "4ec2564e5dc2d8f364b0481238bcfc6363e98e1844cebc30a4c828ab14e61d7d",
+    "3mf/neck_internal_yoke_native.3mf": "3d9d494643d2e101365bb9e4bc40b75709841d6e3cae099b6af8913adc6cc586",
+    "3mf/neck_pitch_001_native.3mf": "8c4e5e754a23b56970ee2ffaa92b1e8c7d56c6624956d476071477eb30f1bac7",
+    "3mf/noenoeil_native.3mf": "3ece3acb3aa23c987843bdb0f6efcf4477d291d0e67505436f037fd5319dc256",
+    "3mf/right_shell_native.3mf": "c6e87fdea51b3f5137b55340597a6a689e9e1971843c12ee0b3ad72856102c9a",
+    "3mf/roll_front_bulkhead_native.3mf": "151798036ff77aa1acb0d9b10b5e8d27d5a08c2c5df80a63658ef7ae515bf925",
+    "3mf/soft_mouth_top_native.3mf": "37063d2858a0484954ad6c7cca1c977da097fcf673e546fa109d508e88e449f2",
+    "3mf/sole_left_native.3mf": "c4786c242c7acf718c3ca6afef56bf35161b9d913a604ad1d87c46ecb6fe5d5d",
+    "3mf/sole_left_native_right.3mf": "8b4ec0e48f9a8dfddff6ee1e0578547e781dc664cfe7217e836019a94f6f82eb",
+    "3mf/top_head_shell_native.3mf": "67f21a3c5af80ab63539a6c789b0ebb6d3c0ae07e449894f5946468a0fa9b0be",
+    "3mf/trunk_base_native.3mf": "3bf5bc1cf47087628b41976cedccbe192ab32c9f97e04266b80652b258c26e54",
+    "3mf/ubec_clamp_native.3mf": "58e27cde059b10a98e5f51ef147f2a2651dadff789c1ca3c642355cf24fe82c6",
+    "3mf/upper_leg_left_native.3mf": "2a932681200a67a2b88f176899f3feed977a3f0a9c292fb80ec5e30ab221e492",
+    "3mf/upper_leg_left_native_right.3mf": "bccdd696ad881477df64e50fc689df131d49adca8c524509b552d22e9150ae01",
+    "3mf/yaw2roll_left_native.3mf": "9996714ff19f42e5bdc181514a3459153aec2a0b07a9f72fa44f8871479f74a7",
+    "3mf/yaw2roll_left_native_right.3mf": "6ab519ca05fc0a21df846cad49f21c50023ce5a1b02552bd10df157f9efec7b3",
+    "3mf/yaw_roll_link_native.3mf": "b3d98b55bcf1a234b9c4dd1c63d4abc182ca22c837a9c9a10d6ab4f582cbd938",
+    "PARTS.csv": "44ab63f8bc1c0a3c6ec8e832bdc95b1f624e92619f4e93d1c3f8d69f1e56e795",
+    "README.md": "643631fdb42a3a8c04c48cfe2950281fad88d94f50caaa30a810d9493c0b95e9"
+  },
+  "manifest_content_sha256": "9c633a8080900fef7d0dd723f0478f7a677afc3456f9ffe95c9208c599846da7"
+}

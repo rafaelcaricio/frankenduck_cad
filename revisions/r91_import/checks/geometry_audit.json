@@ -1,0 +1,1650 @@
+[
+  {
+    "component": "trunk_base_native",
+    "params": {},
+    "model": "trunk_base_native",
+    "status": "ok",
+    "seconds": 30.88907524989918,
+    "metrics": {
+      "volume_mm3": 15477.044639242034,
+      "extent_mm": [
+        -35.7,
+        -38.2750001,
+        155.45,
+        24.00000010000001,
+        38.2750001,
+        164.4500001
+      ],
+      "solids": 1,
+      "faces": 180,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 15477.044639242493,
+      "delta_mm3": 4.5838532969355583e-10,
+      "relative_error": 2.9617109750482116e-14,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "head_frame_native",
+    "params": {},
+    "model": "head_frame_native",
+    "status": "ok",
+    "seconds": 5.2644357909448445,
+    "metrics": {
+      "volume_mm3": 32542.759633124584,
+      "extent_mm": [
+        -25.27,
+        -53.0,
+        261.7999998999998,
+        74.0,
+        33.85,
+        306.0
+      ],
+      "solids": 1,
+      "faces": 416,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 32542.759847830148,
+      "delta_mm3": 0.0002147055638488382,
+      "relative_error": 6.597644602141945e-09,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "roll_front_bulkhead_native",
+    "params": {},
+    "model": "roll_front_bulkhead_native",
+    "status": "ok",
+    "seconds": 1.589135458925739,
+    "metrics": {
+      "volume_mm3": 13462.794899158727,
+      "extent_mm": [
+        52.999999999999964,
+        -50.5,
+        265.0,
+        67.49,
+        15.32,
+        304.25
+      ],
+      "solids": 1,
+      "faces": 93,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 13462.794899168326,
+      "delta_mm3": 9.598807082511485e-09,
+      "relative_error": 7.129876934472543e-13,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "yaw_roll_link_native",
+    "params": {},
+    "model": "yaw_roll_link_native",
+    "status": "ok",
+    "seconds": 1.0169761250726879,
+    "metrics": {
+      "volume_mm3": 14018.873690760736,
+      "extent_mm": [
+        14.934999999999997,
+        -38.4,
+        268.3,
+        58.85000010000901,
+        13.0,
+        297.205
+      ],
+      "solids": 1,
+      "faces": 82,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 14018.873690769493,
+      "delta_mm3": 8.756614988669753e-09,
+      "relative_error": 6.246304219457665e-13,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "electronics_deck_native",
+    "params": {},
+    "model": "electronics_deck_native",
+    "status": "ok",
+    "seconds": 0.36644116695970297,
+    "metrics": {
+      "volume_mm3": 9671.028193809598,
+      "extent_mm": [
+        -24.5,
+        -21.0,
+        300.6,
+        61.5,
+        39.5,
+        306.05
+      ],
+      "solids": 1,
+      "faces": 89,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 9671.028193809601,
+      "delta_mm3": 3.637978807091713e-12,
+      "relative_error": 3.761729088351095e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "face_radxa_bracket_native",
+    "params": {},
+    "model": "face_radxa_bracket_native",
+    "status": "ok",
+    "seconds": 0.5161334578879178,
+    "metrics": {
+      "volume_mm3": 7189.058383200218,
+      "extent_mm": [
+        76.0,
+        -43.0,
+        281.87,
+        93.02,
+        43.120000000000005,
+        320.74
+      ],
+      "solids": 1,
+      "faces": 39,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": true
+  },
+  {
+    "component": "ubec_clamp_native",
+    "params": {},
+    "model": "ubec_clamp_native",
+    "status": "ok",
+    "seconds": 0.1886126659810543,
+    "metrics": {
+      "volume_mm3": 547.6774382386237,
+      "extent_mm": [
+        64.5,
+        -29.0,
+        282.9,
+        99.5,
+        -21.0,
+        287.5
+      ],
+      "solids": 1,
+      "faces": 21,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 547.6774382386236,
+      "delta_mm3": 1.1368683772161603e-13,
+      "relative_error": 2.0757991800290768e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "jaw_native",
+    "params": {},
+    "model": "jaw_native",
+    "status": "ok",
+    "seconds": 2.8836356659885496,
+    "metrics": {
+      "volume_mm3": 24703.496574328798,
+      "extent_mm": [
+        20.0349999,
+        -61.69998288271126,
+        256.9844810376505,
+        115.82876832745166,
+        61.69998288271123,
+        299.82995260022267
+      ],
+      "solids": 1,
+      "faces": 67,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 24703.496574369387,
+      "delta_mm3": 4.058892955072224e-08,
+      "relative_error": 1.6430439079152247e-12,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "bottom_head_shell_native",
+    "params": {},
+    "model": "bottom_head_shell_native",
+    "status": "ok",
+    "seconds": 28.699988125124946,
+    "metrics": {
+      "volume_mm3": 41363.83114214197,
+      "extent_mm": [
+        -40.9000001,
+        -61.9030001,
+        258.3355999,
+        116.5700001,
+        61.9030001,
+        282.9000001010367
+      ],
+      "solids": 1,
+      "faces": 1836,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 41363.831141421804,
+      "delta_mm3": 7.201670086942613e-07,
+      "relative_error": 1.7410548994652602e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "top_head_shell_native",
+    "params": {},
+    "model": "top_head_shell_native",
+    "status": "ok",
+    "seconds": 21.842144916998222,
+    "metrics": {
+      "volume_mm3": 73285.04624151286,
+      "extent_mm": [
+        -40.950000100000004,
+        -62.02923045798036,
+        274.50299989879636,
+        124.60445326592752,
+        62.02923045775419,
+        336.93464365827214
+      ],
+      "solids": 1,
+      "faces": 127,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": true
+  },
+  {
+    "component": "noenoeil_native",
+    "params": {},
+    "model": "noenoeil_native",
+    "status": "ok",
+    "seconds": 0.047691915882751346,
+    "metrics": {
+      "volume_mm3": 10470.413963048055,
+      "extent_mm": [
+        107.865,
+        -20.37336,
+        281.25477,
+        120.69,
+        20.12664,
+        321.75477
+      ],
+      "solids": 1,
+      "faces": 21,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 10470.413963048053,
+      "delta_mm3": 1.8189894035458565e-12,
+      "relative_error": 1.7372659858200377e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "soft_mouth_top_native",
+    "params": {},
+    "model": "soft_mouth_top_native",
+    "status": "ok",
+    "seconds": 0.5253445839043707,
+    "metrics": {
+      "volume_mm3": 6639.627411896123,
+      "extent_mm": [
+        69.77175989999999,
+        -59.273596739241185,
+        268.1982984724891,
+        113.72873267407618,
+        59.27359673923696,
+        272.62115216311616
+      ],
+      "solids": 1,
+      "faces": 35,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 6639.627411877733,
+      "delta_mm3": 1.838998286984861e-08,
+      "relative_error": 2.7697311504182424e-12,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "jaw_soft_001_native",
+    "params": {},
+    "model": "jaw_soft_001_native",
+    "status": "ok",
+    "seconds": 0.7577811661176383,
+    "metrics": {
+      "volume_mm3": 45784.07225437135,
+      "extent_mm": [
+        69.66099989999617,
+        -59.17639122482872,
+        259.3064572127993,
+        113.17744042819322,
+        59.1763912248287,
+        270.7101876
+      ],
+      "solids": 1,
+      "faces": 33,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 45784.072254373896,
+      "delta_mm3": 2.546585164964199e-09,
+      "relative_error": 5.562163956966313e-14,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "face_part_native",
+    "params": {},
+    "model": "face_part_native",
+    "status": "ok",
+    "seconds": 0.5871636669617146,
+    "metrics": {
+      "volume_mm3": 13277.604504654995,
+      "extent_mm": [
+        93.015,
+        -59.2869601,
+        273.4249999,
+        109.8900001,
+        59.040240100000005,
+        333.66602093333336
+      ],
+      "solids": 1,
+      "faces": 87,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 13276.867381777824,
+      "delta_mm3": 0.7371228771717142,
+      "relative_error": 5.551933720324701e-05,
+      "pass_volume": false,
+      "numerical_integration_note": "Default OCCT volume estimate differs despite equivalent B-reps. See face_equivalence.json: empty subtraction both ways and converged adaptive volumes.",
+      "pass_geometry": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "import_pcb_radxa_cubie_a7z",
+    "params": {},
+    "model": "import_pcb_radxa_cubie_a7z",
+    "status": "ok",
+    "seconds": 1.3255891250446439,
+    "metrics": {
+      "volume_mm3": 5234.890624999295,
+      "extent_mm": [
+        79.199862460107,
+        -32.62335968017,
+        285.70012907315,
+        91.449862460107,
+        37.376640319824,
+        317.20012907315
+      ],
+      "solids": 1,
+      "faces": 1238,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "stemma3885",
+    "params": {},
+    "model": "stemma3885",
+    "status": "ok",
+    "seconds": 0.11272387485951185,
+    "metrics": {
+      "volume_mm3": 4693.8725033337605,
+      "extent_mm": [
+        -1.7763568394002505e-15,
+        -8.881784197001252e-16,
+        -1.5,
+        30.480000000000004,
+        36.88,
+        5.75
+      ],
+      "solids": 6,
+      "faces": 41,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 4693.8725033337605,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "import_pcb_sph0645_mic",
+    "params": {},
+    "model": "import_pcb_sph0645_mic",
+    "status": "ok",
+    "seconds": 0.06076329108327627,
+    "metrics": {
+      "volume_mm3": 349.5199999999937,
+      "extent_mm": [
+        79.7499313339,
+        15.64999961853,
+        278.10695721845,
+        96.3499313339,
+        28.44999961853,
+        281.50695721845
+      ],
+      "solids": 1,
+      "faces": 93,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "mighty_camera",
+    "params": {},
+    "model": "mighty_camera",
+    "status": "ok",
+    "seconds": 6.012386582791805,
+    "metrics": {
+      "volume_mm3": 3010.13527390608,
+      "extent_mm": [
+        -2.22044604925e-16,
+        -0.6500001000000003,
+        -3.3660001000000004,
+        33.0,
+        30.0,
+        16.4012
+      ],
+      "solids": 232,
+      "faces": 7393,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 3010.1352739637414,
+      "delta_mm3": 5.7661509345052764e-08,
+      "relative_error": 1.915578673284147e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "measured_tof",
+    "params": {
+      "seat_x": 105.64
+    },
+    "model": "measured_tof_seated",
+    "status": "ok",
+    "seconds": 0.026848833076655865,
+    "metrics": {
+      "volume_mm3": 37.06559999999941,
+      "extent_mm": [
+        105.64,
+        26.741999999999997,
+        297.15500000000003,
+        107.24,
+        33.762,
+        300.45500000000004
+      ],
+      "solids": 1,
+      "faces": 6,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "import_pcb_ubec_henge_4a",
+    "params": {},
+    "model": "import_pcb_ubec_henge_4a",
+    "status": "ok",
+    "seconds": 0.009631374850869179,
+    "metrics": {
+      "volume_mm3": 4060.03542879467,
+      "extent_mm": [
+        72.089485163809,
+        -41.10976791381,
+        276.93809861492,
+        92.089481612617,
+        -6.109767913817997,
+        282.73815025734
+      ],
+      "solids": 1,
+      "faces": 6,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "import_pcb_bno055",
+    "params": {},
+    "model": "import_pcb_bno055",
+    "status": "ok",
+    "seconds": 8.273990167072043,
+    "metrics": {
+      "volume_mm3": 472.2319999999209,
+      "extent_mm": [
+        28.140002877712,
+        13.299999539852,
+        305.19999283716,
+        48.740002877712,
+        38.899999539852,
+        309.99999283716
+      ],
+      "solids": 1,
+      "faces": 4929,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "import_pcb_waveshare_adapter",
+    "params": {},
+    "model": "import_pcb_waveshare_adapter",
+    "status": "ok",
+    "seconds": 10.056348874932155,
+    "metrics": {
+      "volume_mm3": 5798.8749999995825,
+      "extent_mm": [
+        -20.72740953392,
+        -17.89923811442,
+        304.04819240566,
+        30.772590466079,
+        30.100761885575,
+        319.04819240566
+      ],
+      "solids": 1,
+      "faces": 5446,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "neck_pitch_001_native",
+    "params": {},
+    "model": "neck_pitch_001_native",
+    "status": "ok",
+    "seconds": 2.366950249997899,
+    "metrics": {
+      "volume_mm3": 9976.264882028618,
+      "extent_mm": [
+        21.5999999,
+        -25.300000100000005,
+        222.2689999,
+        48.6000001,
+        21.600000100000003,
+        258.0050001000003
+      ],
+      "solids": 1,
+      "faces": 157,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 9976.264882028441,
+      "delta_mm3": 1.7644197214394808e-10,
+      "relative_error": 1.7686175560734782e-14,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "neck_001_native",
+    "params": {},
+    "model": "neck_001_native",
+    "status": "ok",
+    "seconds": 0.44216991611756384,
+    "metrics": {
+      "volume_mm3": 1801.7721093712946,
+      "extent_mm": [
+        20.8,
+        -22.4,
+        190.769,
+        49.400000000000006,
+        -17.6,
+        208.769
+      ],
+      "solids": 1,
+      "faces": 70,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 1801.7721093712946,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "neck_002_native",
+    "params": {},
+    "model": "neck_002_native",
+    "status": "ok",
+    "seconds": 0.5075085840653628,
+    "metrics": {
+      "volume_mm3": 3329.9653059207735,
+      "extent_mm": [
+        20.800000000000004,
+        14.4,
+        187.0189999,
+        49.4,
+        20.3,
+        212.519
+      ],
+      "solids": 1,
+      "faces": 78,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 3329.9653059207735,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "neck_internal_yoke_native",
+    "params": {},
+    "model": "neck_internal_yoke_native",
+    "status": "ok",
+    "seconds": 1.5286747911013663,
+    "metrics": {
+      "volume_mm3": 11552.964913600661,
+      "extent_mm": [
+        -20.500000000000004,
+        -34.0000001,
+        151.2689999,
+        47.6000001,
+        34.0000001,
+        176.2690001
+      ],
+      "solids": 1,
+      "faces": 120,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 11552.964913579017,
+      "delta_mm3": 2.1644154912792146e-08,
+      "relative_error": 1.8734718814347163e-12,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "import_horn_upper_passive",
+    "params": {},
+    "model": "import_horn_upper_passive",
+    "status": "ok",
+    "seconds": 1.5280975841451436,
+    "metrics": {
+      "volume_mm3": 587.7460177263791,
+      "extent_mm": [
+        25.124995562913362,
+        -19.800003254852275,
+        225.79399556273,
+        45.075001385329,
+        -16.69999926424827,
+        245.74399882202
+      ],
+      "solids": 1,
+      "faces": 2602,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "import_horn_lower_passive",
+    "params": {},
+    "model": "import_horn_lower_passive",
+    "status": "ok",
+    "seconds": 1.6258755000308156,
+    "metrics": {
+      "volume_mm3": 587.7457391140972,
+      "extent_mm": [
+        25.124997941139,
+        -19.79999879677,
+        153.7940272527284,
+        45.07499900710458,
+        -16.69999646426,
+        173.74402816718234
+      ],
+      "solids": 1,
+      "faces": 2602,
+      "valid": true
+    },
+    "comparison": null,
+    "baseline_stale": false
+  },
+  {
+    "component": "imu_yoke_bridge_native",
+    "params": {},
+    "model": "imu_yoke_bridge_native",
+    "status": "ok",
+    "seconds": 0.13121112482622266,
+    "metrics": {
+      "volume_mm3": 3402.1785265611816,
+      "extent_mm": [
+        -20.0,
+        -31.5,
+        128.0,
+        -4.9,
+        31.5,
+        170.45
+      ],
+      "solids": 1,
+      "faces": 56,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 3402.1785265611816,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "battery_donor_cover_native",
+    "params": {},
+    "model": "battery_donor_cover_native",
+    "status": "ok",
+    "seconds": 0.1216033750679344,
+    "metrics": {
+      "volume_mm3": 1985.330933798486,
+      "extent_mm": [
+        -48.6,
+        -34.5,
+        149.0,
+        -37.45,
+        34.5,
+        158.0
+      ],
+      "solids": 1,
+      "faces": 42,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 1985.330933798486,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "battery_carrier_native",
+    "params": {},
+    "model": "battery_carrier_native",
+    "status": "ok",
+    "seconds": 1.7415473328437656,
+    "metrics": {
+      "volume_mm3": 18247.098338454147,
+      "extent_mm": [
+        -48.199999999999996,
+        -34.5000001,
+        74.0,
+        -27.5,
+        34.5000001,
+        162.0
+      ],
+      "solids": 1,
+      "faces": 243,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 18247.098338454016,
+      "delta_mm3": 1.3096723705530167e-10,
+      "relative_error": 7.177428138220789e-15,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "power_switch_kcd1_native",
+    "params": {},
+    "model": "power_switch_kcd1_native",
+    "status": "ok",
+    "seconds": 0.008817957947030663,
+    "metrics": {
+      "volume_mm3": 2792.580315854811,
+      "extent_mm": [
+        -44.25,
+        -44.6,
+        130.75,
+        -27.75,
+        -23.4,
+        147.25
+      ],
+      "solids": 1,
+      "faces": 10,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 2792.5803158548088,
+      "delta_mm3": 2.2737367544323206e-12,
+      "relative_error": 8.14206395971222e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "mpu6050_trunk_native",
+    "params": {},
+    "model": "mpu6050_trunk_native",
+    "status": "ok",
+    "seconds": 0.05437350017018616,
+    "metrics": {
+      "volume_mm3": 682.3023121263413,
+      "extent_mm": [
+        -4.900000000000001,
+        -8.89,
+        130.3,
+        -3.3000000000000003,
+        8.89,
+        155.7
+      ],
+      "solids": 1,
+      "faces": 14,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 682.3023121263413,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "npf550_pack_native",
+    "params": {},
+    "model": "npf550_pack_native",
+    "status": "ok",
+    "seconds": 0.073940291069448,
+    "metrics": {
+      "volume_mm3": 62945.822871941025,
+      "extent_mm": [
+        -62.6,
+        -25.0,
+        75.0,
+        -37.3,
+        25.0,
+        153.17
+      ],
+      "solids": 2,
+      "faces": 30,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 62945.822871941025,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "left_shell_native",
+    "params": {},
+    "model": "left_shell_native",
+    "status": "ok",
+    "seconds": 2.555607915855944,
+    "metrics": {
+      "volume_mm3": 22965.764184956606,
+      "extent_mm": [
+        -62.18962250350779,
+        -1.0000001498376423e-07,
+        122.3424681257898,
+        28.430314731653958,
+        43.0000001,
+        174.8968502975536
+      ],
+      "solids": 1,
+      "faces": 59,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 22965.76418496155,
+      "delta_mm3": 4.944013198837638e-09,
+      "relative_error": 2.152775391674133e-13,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "right_shell_native",
+    "params": {},
+    "model": "right_shell_native",
+    "status": "ok",
+    "seconds": 3.146641875151545,
+    "metrics": {
+      "volume_mm3": 23746.415188809977,
+      "extent_mm": [
+        -62.18962250350779,
+        -50.6,
+        122.3424681257898,
+        28.430314731653958,
+        1e-07,
+        174.8968502977136
+      ],
+      "solids": 1,
+      "faces": 72,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 23746.415199241954,
+      "delta_mm3": 1.0431976988911629e-05,
+      "relative_error": 4.3930744499256644e-10,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "hip_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "hip_left_native",
+    "status": "ok",
+    "seconds": 2.0229846669826657,
+    "metrics": {
+      "volume_mm3": 10378.565534050578,
+      "extent_mm": [
+        -7.425000100000001,
+        10.799999900000003,
+        87.54999989999997,
+        39.1500001,
+        51.9750001,
+        113.20000010000001
+      ],
+      "solids": 1,
+      "faces": 115,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 10378.56553445157,
+      "delta_mm3": 4.0099257603287697e-07,
+      "relative_error": 3.863660875886799e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "yaw2roll_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "yaw2roll_left_native",
+    "status": "ok",
+    "seconds": 0.4089627908542752,
+    "metrics": {
+      "volume_mm3": 8898.556814294296,
+      "extent_mm": [
+        -7.825000000000001,
+        8.1,
+        63.175000000000004,
+        20.875,
+        39.15,
+        120.25
+      ],
+      "solids": 1,
+      "faces": 56,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 8898.556814294296,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "upper_leg_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "upper_leg_left_native",
+    "status": "ok",
+    "seconds": 11.710705624893308,
+    "metrics": {
+      "volume_mm3": 12653.91318973493,
+      "extent_mm": [
+        -60.47896016219158,
+        57.374999899999985,
+        53.88804692892889,
+        22.186953071071105,
+        95.17500009999998,
+        118.55600009999999
+      ],
+      "solids": 1,
+      "faces": 155,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 12653.913196633006,
+      "delta_mm3": 6.898075298522599e-06,
+      "relative_error": 5.451337614958558e-10,
+      "pass_volume": true
+    }
+  },
+  {
+    "component": "leg_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "leg_left_native",
+    "status": "ok",
+    "seconds": 1.3944557500071824,
+    "metrics": {
+      "volume_mm3": 8908.12885412687,
+      "extent_mm": [
+        -56.39900010000001,
+        40.66,
+        -1.1760001000160065,
+        -29.39899989999998,
+        53.18,
+        84.17500009999999
+      ],
+      "solids": 1,
+      "faces": 126,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 8908.128853553993,
+      "delta_mm3": 5.728761607315391e-07,
+      "relative_error": 6.430937070504813e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_left_native",
+    "status": "ok",
+    "seconds": 1.4290960838552564,
+    "metrics": {
+      "volume_mm3": 13358.91475717782,
+      "extent_mm": [
+        -62.74309812741604,
+        49.575,
+        -18.030000293939004,
+        -13.418999999999997,
+        94.032,
+        15.674
+      ],
+      "solids": 1,
+      "faces": 414,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 13358.914757177832,
+      "delta_mm3": 1.2732925824820995e-11,
+      "relative_error": 9.531407345779724e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_eye_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_eye_left_native",
+    "status": "ok",
+    "seconds": 1.110920957988128,
+    "metrics": {
+      "volume_mm3": 5704.676329474864,
+      "extent_mm": [
+        -62.69400000000001,
+        38.875,
+        -18.032821465650244,
+        -13.419,
+        49.575,
+        18.47511072787828
+      ],
+      "solids": 1,
+      "faces": 199,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 5704.676329475337,
+      "delta_mm3": 4.729372449219227e-10,
+      "relative_error": 8.290343178250378e-14,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_bearing_outer_keeper_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_bearing_outer_keeper_left_native",
+    "status": "ok",
+    "seconds": 0.017675708048045635,
+    "metrics": {
+      "volume_mm3": 617.7538782227125,
+      "extent_mm": [
+        -56.049,
+        38.905,
+        -9.174999999999999,
+        -29.749000000000002,
+        40.605000000000004,
+        17.125
+      ],
+      "solids": 1,
+      "faces": 11,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 617.7538782227123,
+      "delta_mm3": 2.2737367544323206e-13,
+      "relative_error": 3.6806515257725253e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_bearing_inner_cap_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_bearing_inner_cap_left_native",
+    "status": "ok",
+    "seconds": 0.006681750062853098,
+    "metrics": {
+      "volume_mm3": 65.79280414780423,
+      "extent_mm": [
+        -47.649,
+        39.605,
+        -0.7749999999999999,
+        -38.149,
+        40.605,
+        8.725
+      ],
+      "solids": 1,
+      "faces": 5,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 65.79280414780423,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "sole_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "sole_left_native",
+    "status": "ok",
+    "seconds": 1.6377033749595284,
+    "metrics": {
+      "volume_mm3": 15336.180297673216,
+      "extent_mm": [
+        -69.97599783939467,
+        39.49679299984356,
+        -29.798456054857798,
+        3.077949818028595,
+        94.97706122940741,
+        -12.346205476880023
+      ],
+      "solids": 1,
+      "faces": 5,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 15336.180306564254,
+      "delta_mm3": 8.891038305591792e-06,
+      "relative_error": 5.797426821974839e-10,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "foot_left_native_a",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "foot_left_native_a",
+    "status": "ok",
+    "seconds": 1.97807208285667,
+    "metrics": {
+      "volume_mm3": 20879.712767942507,
+      "extent_mm": [
+        -67.0640001,
+        42.38999989999782,
+        -27.101757630786743,
+        0.16600010000010207,
+        92.07057963882768,
+        -4.286
+      ],
+      "solids": 1,
+      "faces": 435,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 20879.712767957528,
+      "delta_mm3": 1.5021214494481683e-08,
+      "relative_error": 7.194167209777701e-13,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "foot_left_native_b",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "foot_left_native_b",
+    "status": "ok",
+    "seconds": 0.6315126668196172,
+    "metrics": {
+      "volume_mm3": 9404.033406004835,
+      "extent_mm": [
+        -69.8990001,
+        40.33899989999999,
+        -12.386000100000023,
+        3.001000100000033,
+        94.45500009999998,
+        -5.635999899999927
+      ],
+      "solids": 1,
+      "faces": 143,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 9404.033188515681,
+      "delta_mm3": 0.00021748915423813742,
+      "relative_error": 2.3127221042109654e-08,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "hip_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "hip_left_native_right",
+    "status": "ok",
+    "seconds": 2.0134606671053916,
+    "metrics": {
+      "volume_mm3": 10378.565534050576,
+      "extent_mm": [
+        -7.425000100000001,
+        -51.9750001,
+        87.54999989999997,
+        39.1500001,
+        -10.799999900000003,
+        113.20000010000001
+      ],
+      "solids": 1,
+      "faces": 115,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 10378.56553445157,
+      "delta_mm3": 4.009943950222805e-07,
+      "relative_error": 3.863678402291556e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "yaw2roll_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "yaw2roll_left_native_right",
+    "status": "ok",
+    "seconds": 0.39614104200154543,
+    "metrics": {
+      "volume_mm3": 8898.5568142943,
+      "extent_mm": [
+        -7.825000000000001,
+        -39.15,
+        63.175000000000004,
+        20.875,
+        -8.1,
+        120.25
+      ],
+      "solids": 1,
+      "faces": 56,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 8898.556814294296,
+      "delta_mm3": 3.637978807091713e-12,
+      "relative_error": 4.0882795750068207e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "upper_leg_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "upper_leg_left_native_right",
+    "status": "ok",
+    "seconds": 2.1473708341363817,
+    "metrics": {
+      "volume_mm3": 12653.913183890056,
+      "extent_mm": [
+        -60.47896016219158,
+        -95.17500009999998,
+        53.88804692892889,
+        22.186953071071102,
+        -57.37499989999998,
+        118.55600009999999
+      ],
+      "solids": 1,
+      "faces": 155,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 12653.913196633006,
+      "delta_mm3": 1.2742950275423937e-05,
+      "relative_error": 1.0070363276092822e-09,
+      "pass_volume": true
+    }
+  },
+  {
+    "component": "leg_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "leg_left_native_right",
+    "status": "ok",
+    "seconds": 1.36365883378312,
+    "metrics": {
+      "volume_mm3": 8908.128854126868,
+      "extent_mm": [
+        -56.39900010000001,
+        -53.18,
+        -1.1760001000160065,
+        -29.39899989999998,
+        -40.66,
+        84.17500009999999
+      ],
+      "solids": 1,
+      "faces": 126,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 8908.128853553993,
+      "delta_mm3": 5.728743417421356e-07,
+      "relative_error": 6.430916651071804e-11,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_left_native_right",
+    "status": "ok",
+    "seconds": 1.4676630410831422,
+    "metrics": {
+      "volume_mm3": 13358.91475717782,
+      "extent_mm": [
+        -62.74309812741604,
+        -94.032,
+        -18.030000293939004,
+        -13.418999999999997,
+        -49.575,
+        15.674
+      ],
+      "solids": 1,
+      "faces": 414,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 13358.914757177832,
+      "delta_mm3": 1.2732925824820995e-11,
+      "relative_error": 9.531407345779724e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_eye_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_eye_left_native_right",
+    "status": "ok",
+    "seconds": 1.1364327089395374,
+    "metrics": {
+      "volume_mm3": 5704.6763294748625,
+      "extent_mm": [
+        -62.69400000000001,
+        -49.575,
+        -18.032821465650244,
+        -13.419,
+        -38.875,
+        18.47511072787828
+      ],
+      "solids": 1,
+      "faces": 199,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 5704.676329475337,
+      "delta_mm3": 4.747562343254685e-10,
+      "relative_error": 8.322229113551341e-14,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_bearing_outer_keeper_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_bearing_outer_keeper_left_native_right",
+    "status": "ok",
+    "seconds": 0.01786591694690287,
+    "metrics": {
+      "volume_mm3": 617.7538782227123,
+      "extent_mm": [
+        -56.049,
+        -40.605000000000004,
+        -9.174999999999999,
+        -29.749000000000002,
+        -38.905,
+        17.125
+      ],
+      "solids": 1,
+      "faces": 11,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 617.7538782227123,
+      "delta_mm3": 0.0,
+      "relative_error": 0.0,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "ankle_bearing_inner_cap_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_bearing_inner_cap_left_native_right",
+    "status": "ok",
+    "seconds": 0.0076262918300926685,
+    "metrics": {
+      "volume_mm3": 65.79280414780425,
+      "extent_mm": [
+        -47.649,
+        -40.605,
+        -0.775,
+        -38.149,
+        -39.605,
+        8.725
+      ],
+      "solids": 1,
+      "faces": 5,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 65.79280414780423,
+      "delta_mm3": 1.4210854715202004e-14,
+      "relative_error": 2.1599405739383243e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "sole_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "sole_left_native_right",
+    "status": "ok",
+    "seconds": 1.6602214579470456,
+    "metrics": {
+      "volume_mm3": 15336.17198157176,
+      "extent_mm": [
+        -69.97599783939467,
+        -94.97706122940741,
+        -29.798456054857798,
+        3.077949818028595,
+        -39.49679299984356,
+        -12.346205476880023
+      ],
+      "solids": 1,
+      "faces": 5,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 15336.180306564254,
+      "delta_mm3": 0.008324992493726313,
+      "relative_error": 5.428335039959732e-07,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "foot_left_native_a",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "foot_left_native_a_right",
+    "status": "ok",
+    "seconds": 2.188464832957834,
+    "metrics": {
+      "volume_mm3": 20879.712767938352,
+      "extent_mm": [
+        -67.0640001,
+        -92.07057963882768,
+        -27.101757630786743,
+        0.16600010000010207,
+        -42.38999989999782,
+        -4.286
+      ],
+      "solids": 1,
+      "faces": 435,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 20879.712767957528,
+      "delta_mm3": 1.917578629218042e-08,
+      "relative_error": 9.183932032632177e-13,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "foot_left_native_b",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "foot_left_native_b_right",
+    "status": "ok",
+    "seconds": 0.6694244171958417,
+    "metrics": {
+      "volume_mm3": 9404.033406005157,
+      "extent_mm": [
+        -69.8990001,
+        -94.45500009999998,
+        -12.386000100000023,
+        3.001000100000033,
+        -40.33899989999999,
+        -5.635999899999927
+      ],
+      "solids": 1,
+      "faces": 143,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 9404.033188515681,
+      "delta_mm3": 0.00021748947619926184,
+      "relative_error": 2.3127255278603507e-08,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  },
+  {
+    "component": "sts3215_servo_native",
+    "params": {},
+    "model": "sts3215_servo_native",
+    "status": "ok",
+    "seconds": 1.3596085829194635,
+    "metrics": {
+      "volume_mm3": 33990.70482272239,
+      "extent_mm": [
+        -12.310000000000002,
+        -35.06,
+        -8.390542090977248e-18,
+        12.31,
+        10.060000000000004,
+        37.800000000000004
+      ],
+      "solids": 1,
+      "faces": 187,
+      "valid": true
+    },
+    "comparison": {
+      "expected_volume_mm3": 33990.70482272238,
+      "delta_mm3": 1.4551915228366852e-11,
+      "relative_error": 4.2811454791131813e-16,
+      "pass_volume": true
+    },
+    "baseline_stale": false
+  }
+]

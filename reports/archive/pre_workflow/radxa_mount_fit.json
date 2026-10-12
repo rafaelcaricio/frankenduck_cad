@@ -1,0 +1,4914 @@
+{
+  "document_sha256": "72d8de23d3ff08c116ca9616ba3ede45bb44a073d262d39458dc858096344932",
+  "baseline_document_sha256": "58513944f5061410772e61cbc10c6a14d229b6a164506b26dd142bdfb505e182",
+  "units": "mm",
+  "overlap_tolerance_mm3": 1e-05,
+  "pose": "saved rest",
+  "changed_occurrences": [
+    "#o1.3",
+    "#o1.6",
+    "#o1.10",
+    "#o1.15",
+    "#o1.16"
+  ],
+  "added_occurrences": [
+    "#o1.74"
+  ],
+  "pairs": [
+    {
+      "a": "bulkhead",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 104.64847095915798,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.2:head_frame_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.11376083316281438,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.039772459072992206,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.04971620813012123,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.6:face_radxa_bracket_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 22.324999999999974,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.015238416846841574,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.03723416686989367,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.28991166688501835,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 2.862252250080928,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 40.375,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 2.2817598999999404,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 2.1709998999949534,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 25.525000000000006,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 12.074999999993025,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.16:stemma3885",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.03342254087328911,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 12.264371816777775,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 27.343999900000014,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 39.82316642357813,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.599485163809007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.364637656502226,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 22.227409533920994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 8.26377775118589,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 56.346121082111765,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 52.60432824876485,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 88.89516489761296,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 20.8230445518638,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 91.59944342565299,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 110.86979976531032,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 140.1078245495233,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 130.72585819186654,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 142.77823713717717,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 122.94787513413968,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.73600418823392,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 93.39297093725972,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 93.39297093710485,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 152.43051684905453,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 148.27197349802827,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 155.4474573106443,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 200.32321725989524,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 260.2851184028776,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 256.39977109317397,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 262.384574338889,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 273.08382788257524,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.83855130896313,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 275.75200132730134,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 276.3506735813495,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 152.43051684905276,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 148.27197349802827,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 149.8083929270339,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 198.7140552989526,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 258.0211964878079,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 255.31550010062455,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 261.3224303920351,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 272.0018673207961,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 281.8033512696322,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 274.42008188437325,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 275.2158142855712,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 156.21213093098757,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 156.21213093098757,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 112.48167895261876,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 112.48167895261876,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 183.56488468334567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 179.8739933642715,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 161.09841665888587,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 156.87984717611118,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 243.31103733454015,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 240.93020577922562,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 19.96936005484401,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 66.40669650720474,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 38.06499999999999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.589999999999989,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.013470083009451628,
+      "passed": true
+    },
+    {
+      "a": "bulkhead",
+      "b": "o1.74:radxa_6530b",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 9.075000000000003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 134.60709709503644,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.2:head_frame_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 15.81499999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 30.96499989999097,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 28.31499999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.009883332997560501,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.010919500142335892,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.13856654101982713,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.9626072500832379,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 14.849999999999994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 9.248847836885432,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 11.159812399999964,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.14:face_part_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.053638708079233766,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.21400079177692533,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.16:stemma3885",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 24.064999999999955,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.363042781550007,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 1.8189999000000086,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 12.625,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.007061958080157638,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 41.07499712228797,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 59.042409533920974,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 47.62577492266116,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 83.5292070236513,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 80.26788530994072,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 113.72632675171039,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 57.5043949377104,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 117.01663759327371,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 146.23729902114576,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.5954873441327,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 167.72485243695996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.7290508703048,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 156.80966846785947,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 180.8919932584082,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 123.33423832317142,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 123.33423832303218,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.11505069451866,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 175.70927124087675,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.1444492989651,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.85772839049199,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 285.538438387899,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.90303365406567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 290.49176429117574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.6338447870198,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 306.7352138889244,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 299.8703044968911,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 300.32710593140104,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.11505069451695,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 175.70927124087675,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.11233982287519,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.85772839049199,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 285.53217821639646,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.90303365406567,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 290.49176429117574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.6338447870198,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 306.7352138889244,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 299.87030449689104,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 300.32710593140087,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.4471626259281,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.4471626259281,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.058839031358,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.058839031358,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 213.44656508552671,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 213.4325681493103,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 184.90803355992946,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 184.89187617361665,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 271.0690136234866,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 271.0630633613329,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 55.65193353334632,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 93.24157713166372,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 74.87999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 42.404999999999966,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.62341770239415,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "bracket",
+      "b": "o1.74:radxa_6530b",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 1.7499999999999716,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 134.78616097109466,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.2:head_frame_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.56499999999302,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 20.714999899984022,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.06499999999302,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.04336162516847253,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.05090120807290077,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.3499998989670985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 27.767729917075485,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 16.05000000000696,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 14.628847836885484,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 16.539812400000017,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 1.2000000000069662,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.16:stemma3885",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 13.814999999993006,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.743042781550059,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 3.0189999000069747,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 13.892912185722944,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.511849742660047,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 30.82499712228102,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 48.792409533914025,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 42.592267349338776,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 84.07850251996396,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 80.589388700085,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 115.49261256639043,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 53.96580526802142,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 118.63037473683481,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 144.14082081422612,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 174.35043081391677,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 164.77401714165532,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.3987222884523,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 155.47350489713307,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.86195384341866,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 123.44223866065222,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 123.44223866050612,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.6806499935187,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.0127568849183,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.03653192170407,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.96838086324905,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 288.07191820272766,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 284.72504347921404,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 291.719492742598,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.71339026544325,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 309.5282240154274,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.63364135155996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 303.09788184035614,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.68064999351697,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.0127568849183,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.64025552514696,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.46172970493535,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 287.09580466631473,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 284.4045804118495,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 291.405329774523,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.37850687672625,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 309.2056842648337,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.15466317948574,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.7280215277476,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 183.52983497240805,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 183.52983497240805,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.04969075464356,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.04969075464356,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 213.9846886971327,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 212.451335596669,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 187.85690371929226,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 186.10840731949517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 272.6097228581709,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 271.5994082630308,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 52.43704097295685,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 94.08622250892826,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 64.62999999999302,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 32.15499999999302,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 8.3734177023872,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "board",
+      "b": "o1.74:radxa_6530b",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.12097224988974631,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 128.5847069768628,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.2:head_frame_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.03355462499894202,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.02114274981431663,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.034974542213603854,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.8199999999999932,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.022365208016708493,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.419999898967035,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.6088493750430644,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 42.11499999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 16.205813034184043,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.038886134707777,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 27.264999999999986,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 24.387056299946522,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 29.083999899999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 49.829219781168554,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 8.446663169073783,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 19.10167345328178,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 27.727409533921,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 31.890581947606062,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 80.06979206292469,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 78.32976436731953,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 112.57991195772806,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 44.64242896742148,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 115.35980224104871,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 133.83907090233404,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 161.83233576760855,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 152.81604104281723,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 165.3475352099329,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 146.3123521784815,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 165.65977936723206,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 117.38284056853432,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 117.34136892215606,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.73483883581605,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 172.59505764940081,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 183.8425904196598,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 226.53499413466164,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 286.85352865530524,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.4042968020915,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 288.2719456537524,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 298.89767287652137,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 308.68748242815195,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.81498781740976,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.28951940054543,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.18580209853818,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 172.22997858967526,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 174.47161276504207,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 222.26527116846478,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.1344794632517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 279.2644030793824,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 285.1922404729834,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 295.828317146956,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 305.73153380415164,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 298.37365647765773,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 299.1494338755096,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 180.67223935901163,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 180.09466635633603,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 137.13481587474422,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 136.3729756953334,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 210.4984774025931,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 203.51302314301654,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 189.03849832772158,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.22774470262547,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 269.8612884220521,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 264.8885733678031,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 43.91438467062926,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 90.17553537961389,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 43.565,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 11.089999999999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.313239172141895,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "speaker",
+      "b": "o1.74:radxa_6530b",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 10.814999999999984,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 133.80725574450963,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.2:head_frame_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 2.5649999999999977,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 17.714999899991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 15.064999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.022004541009664536,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.02696337504312396,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.599999898967042,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 1.916191500145942,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 19.799999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 14.878847836885427,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 16.78981239999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.950000000000003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.9930427815500025,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 6.768999900000011,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.694464662032992,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 4.76184974265999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 27.824997122287996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 45.792409533921,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 40.644756593046274,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 83.28569856824159,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 79.7501571848219,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 114.94044787611018,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 52.2989832322527,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 118.03406834537797,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 142.60872597776057,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 172.53889481795113,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 163.03304642004332,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 174.7903936862664,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 154.10924120571096,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.0959599905688,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 122.45985974512332,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 122.4598597449757,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.2705028395244,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.27801507845496,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.29648950714684,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.17625628883223,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 287.8183916239544,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 284.2779385194663,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 291.11656333159743,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.0675216669279,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 309.31202319630336,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.424796234214,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.8846933664053,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 178.27050283952266,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.27801507845496,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 177.9367362645134,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 229.28023215956097,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 286.37553589124894,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 283.67501000947806,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 290.5259148871233,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.4544781903231,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 308.7200892124315,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.6220764163491,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 302.225704596177,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 182.99051976810165,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 182.99051976810165,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 142.0156559151138,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 142.0156559151138,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 213.3527417138341,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 211.1266572387532,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 187.86426290010562,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 185.33228071493642,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 272.125626130304,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 270.626096337419,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 50.85750943567724,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 93.34109634025089,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 61.629999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 29.154999999999994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "heatsink_representation",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.373417702394178,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 130.75827580588023,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.2:head_frame_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.02147820801474154,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.3:roll_front_bulkhead_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.00857687508687377,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 7.964999899991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 8.869003608072347,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.6:face_radxa_bracket_r02",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.01595104206353426,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.5,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.019477583933621645,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.099999898967042,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.19338033301755786,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.049999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 15.378847836885427,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 17.28981239999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 3.200000000000003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.16:stemma3885",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 1.0649999999999835,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 6.6180060128769576,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.018999900000011,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 20.417052529687044,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.26184974265999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 21.53126455553213,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 37.55422277238211,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 35.092538243307196,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 81.12233715814652,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 77.46395594664527,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 113.37121574637365,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 47.52049216200675,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 116.30586718920382,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 137.6991057523614,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 166.64690283650637,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 157.3890695855338,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 169.5673958194794,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 149.73110306479413,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 170.34982279121985,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 119.43913318408242,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 119.4391331839304,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.9756824665662,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 173.92684122929387,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 180.42273052805982,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 226.92053336133375,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 286.07400625887004,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 282.27939301009843,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 288.6171130511841,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 299.4140480104432,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 308.0610498532995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.0951932164596,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 301.6102053583594,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.97568246656448,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 173.92684122929387,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 176.22232178714728,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 225.40160882520823,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 284.1104328549024,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 281.2138345070342,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 287.5725079801614,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 298.3503268742972,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 307.03583836478225,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 299.8121621664291,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 300.4950044529266,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.26555884944057,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.26555884944057,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 138.7599060427759,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 138.7599060427759,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 210.05290987465514,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 207.0897823331948,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 186.51225502631186,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 183.16870440935045,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 269.6098828804501,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 267.5527945449832,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 46.421409564984124,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 91.25799288829444,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 51.879999999999995,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 19.404999999999994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.8232391721418999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_jumper_plug_allowance",
+      "b": "o1.74:radxa_6530b",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.021026042057201266,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.1:trunk_base",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 135.96700588976222,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.2:head_frame_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.02100870804861188,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.3:roll_front_bulkhead_r05",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.008684959029778838,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.4:yaw_roll_link_r05",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 7.964999899991,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.5:electronics_deck_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 5.314999999999998,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.6:face_radxa_bracket_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 16.99999999999997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.7:ubec_clamp_r02",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 6.0,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.8:jaw_r01",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.010056416038423777,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.9:bottom_head_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 10.599999898967042,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.10:top_head_shell_native",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.20214304188266397,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.11:noenoeil_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 35.05,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.12:soft_mouth_top_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 20.878847836885427,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.13:jaw_soft_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 22.78981239999996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.14:face_part_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 20.200000000000003,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 6.7499999999930225,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.16:stemma3885",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 1.0649999999999835,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.17:import_pcb_sph0645_mic",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 13.912754823881343,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.18:mighty_camera",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 22.01899990000001,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.19:import_pcb_vl53l5cx_tof",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 35.07915348180455,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 10.76184974265999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.21:import_pcb_bno055",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 18.074997122287996,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.22:import_pcb_waveshare_adapter",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 36.042409533921,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.23:neck_pitch_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 39.895879978488686,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.24:neck_001_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 86.50216520989517,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.25:neck_002_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 82.83239384325313,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.26:import_neck_internal_yoke",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 118.79530108009659,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.27:import_horn_upper_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 52.47154646355609,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.28:import_horn_lower_passive",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 121.71327139138818,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.29:imu_yoke_bridge_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 142.42311513585148,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.30:battery_donor_cover_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 170.9720451565109,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.31:battery_carrier_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 161.8257372144493,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.32:power_switch_kcd1_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 174.15970178258803,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.33:mpu6050_trunk_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 154.6122673819901,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.34:npf550_pack_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 174.73534881357006,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.35:left_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 124.65990206354222,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.36:right_shell_native",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 124.65990206338948,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.37:hip_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 182.41009342524572,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.38:yaw2roll_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 179.2374015098411,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.39:upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 185.59767156432994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.40:leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 231.87335651146336,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.41:ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 291.31456032440263,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.42:ankle_eye_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 287.53552737034596,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.43:ankle_bearing_outer_keeper_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 293.7851475925902,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.44:ankle_bearing_inner_cap_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 304.5505658277456,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.45:sole_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 313.4256988457755,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.46:foot_a_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 306.43712467332864,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.47:foot_b_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 306.9673630456693,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.48:hip_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 182.41009342524399,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.49:yaw2roll_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 179.2374015098411,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.50:upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 181.51705345491064,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.51:leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 230.38708787580129,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.52:ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 289.38654781623836,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.53:ankle_eye_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 286.4895190057447,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.54:ankle_bearing_outer_keeper_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 292.75898337369597,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.55:ankle_bearing_inner_cap_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 303.5048476482707,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.56:sole_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 312.4180921467423,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.57:foot_a_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 305.17655313426224,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.58:foot_b_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 305.87169483308577,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.59:servo_hip_l",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 186.65655044760683,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.60:servo_hip_l_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 186.65655044760683,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.61:servo_yaw2roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.92363087762897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.62:servo_bearing_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 143.92363087762897,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.63:servo_leg",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 214.84270978278505,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.64:servo_leg_2",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 211.9465568175383,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.65:servo_upper_leg_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 191.69125247386745,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.66:servo_upper_leg_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 188.4396170527843,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.67:servo_ankle_left",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 274.6968400743081,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.68:servo_ankle_right",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 272.6781325461028,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.69:servo_neck_upper",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 51.46919725428015,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.70:servo_neck_lower",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 96.63928945309975,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.71:servo_head_roll",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 51.88358838823698,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.72:servo_head_yaw",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 19.404999999999994,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.73:servo_jaw_direct",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.8232391721418999,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "gpio_upward_cable_allowance",
+      "b": "o1.74:radxa_6530b",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 3.75,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "B-rep intersection",
+      "overlap_mm3": 0,
+      "seconds": 0.051732584135606885,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 0.531849742659972,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 10.750000000005997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 42.23311688951811,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.15:import_pcb_radxa_cubie_a7z",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 10.750000000005997,
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "a": "M3 flat head",
+      "b": "o1.20:import_pcb_ubec_henge_4a",
+      "method": "disjoint exact bounds",
+      "separation_lower_bound_mm": 52.62536902783226,
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "before_overlap_mm3": {
+    "board_bracket": 736.5384942272761,
+    "board_head_frame": 23.432350591765136
+  },
+  "seating": {
+    "pcb_seat_y_mm": -89.81499999999303,
+    "bracket_seat_y_mm": -89.81499999999998,
+    "plane_gap_mm": 6.94910795573378e-12,
+    "pcb_holes_xz_mm": [
+      [
+        -41.12999999999999,
+        291.00000000000006
+      ],
+      [
+        -41.129999999999995,
+        314.00000000000006
+      ],
+      [
+        16.869999999994008,
+        291.00000000000006
+      ],
+      [
+        16.869999999994008,
+        314.00000000000006
+      ]
+    ],
+    "bracket_holes_xz_mm": [
+      [
+        -41.129999999999995,
+        291.0
+      ],
+      [
+        -41.129999999999995,
+        314.0
+      ],
+      [
+        16.870000000000008,
+        291.0
+      ],
+      [
+        16.870000000000008,
+        314.0
+      ]
+    ],
+    "max_hole_axis_error_mm": 6.00080263804065e-12
+  },
+  "face_attachment": {
+    "plane_gap_mm": 0.0,
+    "m3_centres_xz_mm": [
+      [
+        -39.169999999999995,
+        286.07
+      ],
+      [
+        38.92000000000001,
+        286.07
+      ],
+      [
+        38.92000000000001,
+        316.94
+      ]
+    ],
+    "expected_centres_xz_mm": [
+      [
+        -39.17,
+        286.07
+      ],
+      [
+        38.92,
+        286.07
+      ],
+      [
+        38.92,
+        316.94
+      ]
+    ],
+    "max_axis_error_mm": 7.105427357601002e-15
+  },
+  "short_pads": {
+    "depth_mm": 3.2000000000000313,
+    "previous_tube_depth_mm": 17.02,
+    "projection_beyond_rail_mm": 0.0,
+    "screw_head_allowance": "90 degree M3 flat head, nominal diameter 5.6 mm"
+  },
+  "protected_bores": [
+    {
+      "kind": "M2",
+      "centre_xz_mm": [
+        -41.12999999999999,
+        291.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2",
+      "centre_xz_mm": [
+        -41.129999999999995,
+        314.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2",
+      "centre_xz_mm": [
+        16.869999999994008,
+        291.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2",
+      "centre_xz_mm": [
+        16.869999999994008,
+        314.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3",
+      "centre_xz_mm": [
+        -39.169999999999995,
+        286.07
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3",
+      "centre_xz_mm": [
+        38.92000000000001,
+        286.07
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3",
+      "centre_xz_mm": [
+        38.92000000000001,
+        316.94
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2 pan-head well",
+      "centre_xz_mm": [
+        -41.12999999999999,
+        291.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2 pan-head well",
+      "centre_xz_mm": [
+        -41.129999999999995,
+        314.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2 pan-head well",
+      "centre_xz_mm": [
+        16.869999999994008,
+        291.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M2 pan-head well",
+      "centre_xz_mm": [
+        16.869999999994008,
+        314.00000000000006
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3 flat-head seat",
+      "centre_xz_mm": [
+        -39.169999999999995,
+        286.07
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3 flat-head seat",
+      "centre_xz_mm": [
+        38.92000000000001,
+        286.07
+      ],
+      "obstruction_mm3": 0
+    },
+    {
+      "kind": "M3 flat-head seat",
+      "centre_xz_mm": [
+        38.92000000000001,
+        316.94
+      ],
+      "obstruction_mm3": 0
+    }
+  ],
+  "clearance_allowances": {
+    "plug": {
+      "size_mm": [
+        53.0,
+        23.0,
+        5.5
+      ],
+      "centre_mm": [
+        -12.13,
+        -78.315,
+        290.75
+      ],
+      "bounds_mm": [
+        -38.63,
+        -89.815,
+        288.0,
+        14.369999999999997,
+        -66.815,
+        293.5
+      ],
+      "depth_from_pcb_seat_mm": 23.0,
+      "extends_past_existing_header_tip_mm": 12.749999999993022
+    },
+    "cable": {
+      "size_mm": [
+        53.0,
+        6.0,
+        18.0
+      ],
+      "centre_mm": [
+        -12.13,
+        -69.815,
+        302.5
+      ],
+      "bounds_mm": [
+        -38.63,
+        -72.815,
+        293.5,
+        14.369999999999997,
+        -66.815,
+        311.5
+      ],
+      "direction": "upward +Z"
+    },
+    "plug_to_ubec_clamp_vertical_gap_mm": 0.5,
+    "pcb_to_camera_separation_lower_bound_mm": 3.0189999000069747,
+    "assumptions": "Individual female jumper leads; exact housing and wire dimensions unmeasured."
+  },
+  "board_orientation": {
+    "rotation": [
+      [
+        1,
+        1,
+        0
+      ],
+      180.0
+    ],
+    "rotation_unchanged": true,
+    "usb_c": "upward, retained from the imported board placement"
+  },
+  "speaker_mount": {
+    "seat_y_mm": -60.0,
+    "lower_board_holes_xz_mm": [
+      [
+        -37.46000000000001,
+        290.86
+      ],
+      [
+        -5.710000000000008,
+        290.86
+      ]
+    ],
+    "pilot_holes_xz_mm": [
+      [
+        -37.459999999999994,
+        290.86
+      ],
+      [
+        -5.709999999999994,
+        290.86
+      ]
+    ],
+    "max_axis_error_mm": 1.4210854715202004e-14,
+    "rearward_shift_mm": 5.0,
+    "magnet_recess_remaining_plate_mm": 5.25,
+    "protected_bearing_seat_change_mm3": 0
+  },
+  "unchanged_occurrences": [
+    {
+      "ref": "o1.1",
+      "name": "trunk_base",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.2",
+      "name": "head_frame_r05",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.4",
+      "name": "yaw_roll_link_r05",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.5",
+      "name": "electronics_deck_r02",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.7",
+      "name": "ubec_clamp_r02",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.8",
+      "name": "jaw_r01",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.9",
+      "name": "bottom_head_shell_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.11",
+      "name": "noenoeil_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.12",
+      "name": "soft_mouth_top_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.13",
+      "name": "jaw_soft_001_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.14",
+      "name": "face_part_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.17",
+      "name": "import_pcb_sph0645_mic",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.18",
+      "name": "mighty_camera",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.19",
+      "name": "import_pcb_vl53l5cx_tof",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.20",
+      "name": "import_pcb_ubec_henge_4a",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.21",
+      "name": "import_pcb_bno055",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.22",
+      "name": "import_pcb_waveshare_adapter",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.23",
+      "name": "neck_pitch_001_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.24",
+      "name": "neck_001_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.25",
+      "name": "neck_002_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.26",
+      "name": "import_neck_internal_yoke",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.27",
+      "name": "import_horn_upper_passive",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.28",
+      "name": "import_horn_lower_passive",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.29",
+      "name": "imu_yoke_bridge_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.30",
+      "name": "battery_donor_cover_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.31",
+      "name": "battery_carrier_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.32",
+      "name": "power_switch_kcd1_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.33",
+      "name": "mpu6050_trunk_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.34",
+      "name": "npf550_pack_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.35",
+      "name": "left_shell_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.36",
+      "name": "right_shell_native",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.37",
+      "name": "hip_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.38",
+      "name": "yaw2roll_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.39",
+      "name": "upper_leg_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.40",
+      "name": "leg_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.41",
+      "name": "ankle_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.42",
+      "name": "ankle_eye_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.43",
+      "name": "ankle_bearing_outer_keeper_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.44",
+      "name": "ankle_bearing_inner_cap_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.45",
+      "name": "sole_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.46",
+      "name": "foot_a_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.47",
+      "name": "foot_b_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.48",
+      "name": "hip_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.49",
+      "name": "yaw2roll_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.50",
+      "name": "upper_leg_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.51",
+      "name": "leg_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.52",
+      "name": "ankle_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.53",
+      "name": "ankle_eye_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.54",
+      "name": "ankle_bearing_outer_keeper_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.55",
+      "name": "ankle_bearing_inner_cap_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.56",
+      "name": "sole_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.57",
+      "name": "foot_a_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.58",
+      "name": "foot_b_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.59",
+      "name": "servo_hip_l",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.60",
+      "name": "servo_hip_l_2",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.61",
+      "name": "servo_yaw2roll",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.62",
+      "name": "servo_bearing_roll",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.63",
+      "name": "servo_leg",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.64",
+      "name": "servo_leg_2",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.65",
+      "name": "servo_upper_leg_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.66",
+      "name": "servo_upper_leg_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.67",
+      "name": "servo_ankle_left",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.68",
+      "name": "servo_ankle_right",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.69",
+      "name": "servo_neck_upper",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.70",
+      "name": "servo_neck_lower",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.71",
+      "name": "servo_head_roll",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.72",
+      "name": "servo_head_yaw",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "ref": "o1.73",
+      "name": "servo_jaw_direct",
+      "bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "modified_parts": {
+    "bulkhead": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 13029.547635579138,
+      "bounds_mm": [
+        -50.49999999999999,
+        -67.49,
+        265.0,
+        15.320000000000007,
+        -52.99999999999999,
+        304.25
+      ]
+    },
+    "bracket": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3943.2104494259165,
+      "bounds_mm": [
+        -46.24999999999999,
+        -93.015,
+        281.87,
+        45.75000000000001,
+        -89.81499999999997,
+        320.74
+      ]
+    },
+    "board": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 5234.890624999288,
+      "bounds_mm": [
+        -44.62999999999999,
+        -91.81499999999303,
+        287.25000000000006,
+        25.369999999994015,
+        -79.56499999999302,
+        318.75000000000006
+      ]
+    },
+    "speaker": {
+      "valid": true,
+      "solids": 6,
+      "volume_mm3": 4693.872503333824,
+      "bounds_mm": [
+        -40.00000000000001,
+        -65.75000000000001,
+        288.32,
+        -3.1199999999999966,
+        -58.5,
+        318.8
+      ]
+    },
+    "heatsink_representation": {
+      "valid": true,
+      "solids": 4,
+      "volume_mm3": 6050.790520490516,
+      "bounds_mm": [
+        -44.63,
+        -88.065,
+        287.5,
+        20.369999999999997,
+        -76.565,
+        317.5
+      ]
+    }
+  },
+  "passed": true
+}

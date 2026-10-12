@@ -1,0 +1,14 @@
+.venv/
+.cadgen/
+tmp/
+__pycache__/
+*.pyc
+/STEP/parts/
+/STEP/frankenduck.step*
+/STEP/radxa_fit_review.step*
+/revisions/*/STEP/
+/GLB/
+.uv-cache/
+
+/scratch/
+/reports/latest/

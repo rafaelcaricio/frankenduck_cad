@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "mates": 72,
+  "revolute": 15,
+  "fastened": 57,
+  "poses": [
+    "zero",
+    "home"
+  ],
+  "animation_keyframes": 1702,
+  "animation_duration_s": 58.12,
+  "animation_loop": false,
+  "jaw_display_range_degrees": [
+    -180,
+    180
+  ],
+  "jaw_measured_range": null
+}

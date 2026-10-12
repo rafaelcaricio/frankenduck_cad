@@ -1,0 +1,28 @@
+{
+  "part": "Radxa Heatsink 6530B",
+  "official_dimensions_mm": [
+    65,
+    30,
+    11.5
+  ],
+  "official_board_hole_grid_mm": [
+    57.8,
+    22.9
+  ],
+  "sources": [
+    "https://docs.radxa.com/en/accessories/heatsink-case/heatsink-6530b",
+    "https://radxa.com/products/accessories/heatsink-6530b/",
+    "https://dl.radxa.com/cubie/a7z/docs/radxa_cubie_a7z_product_brief.pdf"
+  ],
+  "native_step_found": false,
+  "catalog_search": "catalog_search.json",
+  "download_directory_checked": "https://dl.radxa.com/accessories/",
+  "model_status": "Dimensioned representation; fin layout, fan dimensions and mounting standoff details approximate",
+  "photos_license": "Radxa Docs CC BY 4.0",
+  "captured_utc": "2026-10-12T05:02:31.030720+00:00",
+  "photo_sha256": {
+    "install-heatsink.webp": "ca3ee2a236a86b4c585cc6186c657f246503de0178209cf0fb31ccc53b38dac5",
+    "heatsink-6530b-view.webp": "97f60ec35adafad7090e73671356d2780dbb31dd91e5c05a9ef60f8fbbd27d63",
+    "install-silicon.webp": "6d3bf83050637e821fe9e12e561cf276b12d78486ffa87ccf5e5b87b1d176bca"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "jobs": [
+    {
+      "input": "STEP/radxa_fit_review.step",
+      "outputs": [
+        {
+          "path": "review/radxa_fit/heatsink_plugs_and_cables_iso.png",
+          "camera": "iso"
+        },
+        {
+          "path": "review/radxa_fit/heatsink_plugs_and_cables_side.png",
+          "camera": "right"
+        },
+        {
+          "path": "review/radxa_fit/heatsink_plugs_and_cables_rear.png",
+          "camera": "back"
+        }
+      ],
+      "output": {
+        "sizeProfile": "assembly",
+        "viewLabels": true
+      }
+    },
+    {
+      "input": "STEP/frankenduck.step",
+      "selection": {
+        "hide": [
+          "#o1.1",
+          "#o1.2",
+          "#o1.3",
+          "#o1.4",
+          "#o1.5",
+          "#o1.7",
+          "#o1.8",
+          "#o1.9",
+          "#o1.10",
+          "#o1.11",
+          "#o1.12",
+          "#o1.13",
+          "#o1.16",
+          "#o1.17",
+          "#o1.18",
+          "#o1.19",
+          "#o1.20",
+          "#o1.21",
+          "#o1.22",
+          "#o1.23",
+          "#o1.24",
+          "#o1.25",
+          "#o1.26",
+          "#o1.27",
+          "#o1.28",
+          "#o1.29",
+          "#o1.30",
+          "#o1.31",
+          "#o1.32",
+          "#o1.33",
+          "#o1.34",
+          "#o1.35",
+          "#o1.36",
+          "#o1.37",
+          "#o1.38",
+          "#o1.39",
+          "#o1.40",
+          "#o1.41",
+          "#o1.42",
+          "#o1.43",
+          "#o1.44",
+          "#o1.45",
+          "#o1.46",
+          "#o1.47",
+          "#o1.48",
+          "#o1.49",
+          "#o1.50",
+          "#o1.51",
+          "#o1.52",
+          "#o1.53",
+          "#o1.54",
+          "#o1.55",
+          "#o1.56",
+          "#o1.57",
+          "#o1.58",
+          "#o1.59",
+          "#o1.60",
+          "#o1.61",
+          "#o1.62",
+          "#o1.63",
+          "#o1.64",
+          "#o1.65",
+          "#o1.66",
+          "#o1.67",
+          "#o1.68",
+          "#o1.69",
+          "#o1.70",
+          "#o1.71",
+          "#o1.72",
+          "#o1.73"
+        ]
+      },
+      "outputs": [
+        {
+          "path": "review/radxa_fit/after_heatsink_mount_iso.png",
+          "camera": "iso"
+        },
+        {
+          "path": "review/radxa_fit/after_heatsink_mount_rear.png",
+          "camera": "back"
+        }
+      ],
+      "output": {
+        "sizeProfile": "assembly"
+      }
+    },
+    {
+      "input": "STEP/parts/radxa_6530b.step",
+      "outputs": [
+        {
+          "path": "review/radxa_fit/6530b_representation_iso.png",
+          "camera": "iso"
+        }
+      ],
+      "output": {
+        "sizeProfile": "assembly",
+        "viewLabels": true
+      }
+    },
+    {
+      "input": "STEP/parts/top_head_shell_native.step",
+      "outputs": [
+        {
+          "path": "review/radxa_fit/heatsink_cover_inside.png",
+          "camera": {
+            "direction": [
+              0,
+              0,
+              -1
+            ]
+          }
+        }
+      ],
+      "output": {
+        "sizeProfile": "assembly",
+        "viewLabels": true
+      }
+    }
+  ]
+}

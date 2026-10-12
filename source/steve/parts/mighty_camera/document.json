@@ -1,0 +1,13 @@
+{
+  "code": "import cadquery as cq\nfrom steve import Model\n\nmodel = Model()\n\nmodel.import_step(\"import_1\", \"f4484a3777bee86a3f443ff41f07cd8f1de65fdcbb7d7d6b99c878c8dadae972\", name=\"RV1103 Camera\")\n\nresult = model.result()\n",
+  "created_at": "2026-10-08T11:15:24.951628+00:00",
+  "files": {},
+  "id": "9be98a01-e5af-4426-8012-83de2fc955fb",
+  "kind": "part",
+  "links": {},
+  "name": "Imported MightyCamera",
+  "preview_build_id": "eca7e040-e18e-4845-ad7f-c5749ba1d4e3",
+  "revision": 1,
+  "updated_at": "2026-10-08T11:15:24.951628+00:00",
+  "url": "https://stevecad.studio/?document=9be98a01-e5af-4426-8012-83de2fc955fb"
+}

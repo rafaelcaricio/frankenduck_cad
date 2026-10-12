@@ -1,0 +1,590 @@
+{
+  "passed": true,
+  "generated_utc": "2026-10-12T11:21:47.098790+00:00",
+  "seconds": 14.265994375105947,
+  "document_id": "d08bce05-3ec5-4847-9ca4-395f8f05d915",
+  "revision": 6,
+  "units": "mm",
+  "component_roots": 1,
+  "coloured_bodies": 30,
+  "solids": 66,
+  "faces": 1628,
+  "volume_mm3": 544625.3297988767,
+  "extent_mm": [
+    -61.5000001,
+    -41.500000100003,
+    -1.0000389324900498e-07,
+    61.50000010000608,
+    41.500000100002396,
+    66.4
+  ],
+  "bounds_tolerance_mm": 1e-06,
+  "volume_tolerance_mm3": 0.001,
+  "bidirectional_difference_tolerance_mm3": 1e-05,
+  "inputs": {
+    "STEP/parts/parkside_pap_204_a1.step": "058da1141ff7fd0897a571abcfdb0dac4b9199f79c5f74cdb06c30345bd219d0",
+    "source/steve/parts/parkside_pap_204_a1/reference.step": "1a90c54d136a5f2692a7b1c9db39970892e339642927976c202b507e20fc48a6",
+    "source/steve/parts/parkside_pap_204_a1/document.json": "ddb0357f2692d977090790ecc32dcc52eb673154c465f9d9096bbd0c89f9a701",
+    "src/parts/parkside_pap_204_a1.py": "cf426e3bf548625845b6d777cfacbcc3c52bdcfdc82f42d2ea65976d3b5fc24a",
+    "src/lib/steve_compat.py": "d259091639c1cbd8beaad7328a204c01f83fd299ab71f5610badd8761db5706f",
+    "source/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "source/steve/parts/parkside_pap_204_a1/main.py": "077e25ddd895c5a52123b482ebfe5cf00225a4bee11d281e7b043d983c89813e"
+  },
+  "bodies": [
+    {
+      "body": "lower_case",
+      "solids": 1,
+      "faces": 90,
+      "volume_mm3": 397784.1269054824,
+      "extent_mm": [
+        -60.8000001,
+        -40.8000001,
+        -1.0000389324900498e-07,
+        60.800000100006,
+        40.800000100004006,
+        41.50000000000325
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 2.3283064365386963e-10,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "foot_strip_0",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 166.32,
+      "extent_mm": [
+        -33.0,
+        -39.6,
+        0.85,
+        -27.0,
+        39.6,
+        1.2
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "foot_strip_1",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 166.32,
+      "extent_mm": [
+        -18.0,
+        -39.6,
+        0.85,
+        -12.0,
+        39.6,
+        1.2
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "foot_strip_2",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 166.32,
+      "extent_mm": [
+        -3.0,
+        -39.6,
+        0.85,
+        3.0,
+        39.6,
+        1.2
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "foot_strip_3",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 166.32,
+      "extent_mm": [
+        12.0,
+        -39.6,
+        0.85,
+        18.0,
+        39.6,
+        1.2
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "foot_strip_4",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 166.32,
+      "extent_mm": [
+        27.0,
+        -39.6,
+        0.85,
+        33.0,
+        39.6,
+        1.2
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_0",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        57.3,
+        -19.75,
+        0.0,
+        59.3,
+        -14.25,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_1",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        57.3,
+        -2.75,
+        0.0,
+        59.3,
+        2.75,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_2",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        57.3,
+        14.25,
+        0.0,
+        59.3,
+        19.75,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_3",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        -59.3,
+        -19.75,
+        0.0,
+        -57.3,
+        -14.25,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_4",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        -59.3,
+        -2.75,
+        0.0,
+        -57.3,
+        2.75,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "end_red_5",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 102.3,
+      "extent_mm": [
+        -59.3,
+        14.25,
+        0.0,
+        -57.3,
+        19.75,
+        9.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "led_lens",
+      "solids": 1,
+      "faces": 8,
+      "volume_mm3": 112.74600000000012,
+      "extent_mm": [
+        59.8,
+        -21.0,
+        40.0,
+        61.0,
+        21.0,
+        42.3
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "upper_case",
+      "solids": 1,
+      "faces": 77,
+      "volume_mm3": 120139.69079463894,
+      "extent_mm": [
+        -61.5000001,
+        -41.500000100003,
+        42.29999989999525,
+        61.50000010000608,
+        41.500000100002396,
+        66.00000000000496
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 1.382431946694851e-09,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "release_paddle",
+      "solids": 1,
+      "faces": 46,
+      "volume_mm3": 2081.361845494818,
+      "extent_mm": [
+        28.3,
+        -14.6000001,
+        54.5999999,
+        54.859248336429005,
+        14.600000100000003,
+        66.4
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 2.7284841053187847e-12,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "check_button",
+      "solids": 1,
+      "faces": 25,
+      "volume_mm3": 60.51235566276473,
+      "extent_mm": [
+        28.599999899999997,
+        18.414130864743992,
+        63.47703276830902,
+        37.75,
+        23.059666750869,
+        65.51720261745047
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "rail",
+      "solids": 1,
+      "faces": 128,
+      "volume_mm3": 21163.239824285756,
+      "extent_mm": [
+        -45.000000000000256,
+        -22.0,
+        52.05,
+        13.5,
+        22.00000000000007,
+        62.00000000000193
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "contact_0",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 6.240000000000014,
+      "extent_mm": [
+        -30.0,
+        -11.8,
+        58.8,
+        -19.6,
+        -11.3,
+        60.0
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "contact_1",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 6.240000000000018,
+      "extent_mm": [
+        -30.0,
+        -4.15,
+        58.8,
+        -19.6,
+        -3.65,
+        60.0
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "contact_2",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 6.240000000000018,
+      "extent_mm": [
+        -30.0,
+        3.65,
+        58.8,
+        -19.6,
+        4.15,
+        60.0
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "contact_3",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 6.240000000000014,
+      "extent_mm": [
+        -30.0,
+        11.3,
+        58.8,
+        -19.6,
+        11.8,
+        60.0
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "locking_tooth",
+      "solids": 1,
+      "faces": 24,
+      "volume_mm3": 1277.526814508662,
+      "extent_mm": [
+        12.499999999999845,
+        -16.0,
+        58.3,
+        19.5,
+        16.0,
+        64.60000000000001
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "side_label_0",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 251.63728099999327,
+      "extent_mm": [
+        -45.84,
+        -40.92,
+        4.44,
+        27.33,
+        -40.75,
+        27.26
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "side_label_1",
+      "solids": 1,
+      "faces": 6,
+      "volume_mm3": 251.6372809999933,
+      "extent_mm": [
+        -45.84,
+        40.75,
+        4.44,
+        27.33,
+        40.92,
+        27.26
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "print_red_0",
+      "solids": 5,
+      "faces": 215,
+      "volume_mm3": 6.246419999999758,
+      "extent_mm": [
+        -43.45,
+        -40.97,
+        5.92,
+        15.190000000000003,
+        -40.92,
+        25.18
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "print_white_0",
+      "solids": 11,
+      "faces": 226,
+      "volume_mm3": 7.553510901681319,
+      "extent_mm": [
+        -37.87510499004,
+        -40.9700001,
+        6.05,
+        -1.7299999999988735,
+        -40.9199999,
+        25.309616869547
+      ],
+      "reference_bounds_max_delta_mm": 5.9969806898152456e-12,
+      "reference_volume_delta_mm3": 1.6973089600469393e-12,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "capacity_0",
+      "solids": 5,
+      "faces": 123,
+      "volume_mm3": 2.44541750000733,
+      "extent_mm": [
+        15.509999999999483,
+        -39.41932214542721,
+        46.4108973946,
+        36.69000000000021,
+        -36.29950119182801,
+        49.41344435340383
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "print_red_1",
+      "solids": 5,
+      "faces": 215,
+      "volume_mm3": 6.2464199999997065,
+      "extent_mm": [
+        -39.470000000000006,
+        40.92,
+        6.0,
+        15.73,
+        40.97,
+        25.47
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 0.0,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "print_white_1",
+      "solids": 11,
+      "faces": 226,
+      "volume_mm3": 7.553510901683055,
+      "extent_mm": [
+        -43.21603579925,
+        40.9199999,
+        6.13,
+        6.81,
+        40.9700001,
+        25.599616869547003
+      ],
+      "reference_bounds_max_delta_mm": 3.993250174971763e-12,
+      "reference_volume_delta_mm3": 3.659295089164516e-13,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    },
+    {
+      "body": "capacity_1",
+      "solids": 5,
+      "faces": 123,
+      "volume_mm3": 2.445417500009331,
+      "extent_mm": [
+        15.76,
+        36.29950119183584,
+        46.4108973946,
+        36.94000000000007,
+        39.41932214542826,
+        49.41344435340317
+      ],
+      "reference_bounds_max_delta_mm": 0.0,
+      "reference_volume_delta_mm3": 2.220446049250313e-15,
+      "added_mm3": 0,
+      "removed_mm3": 0
+    }
+  ],
+  "coverage": "All 30 body groups: saved STEP versus retained STEVE reference at original datum; valid positive solids, topology counts, bounds, volume and bidirectional B-rep difference. Exterior approximation; physical rail/latch fit and robot installation untested.",
+  "runtime_versions": {
+    "cadgen": "0.6.5",
+    "cadquery": "2.8.0",
+    "build123d": "0.11.1",
+    "cadquery-ocp": "7.9.3.1.1"
+  },
+  "visual_review": {
+    "passed": true,
+    "views": [
+      "review/parkside_pap_204_a1/iso.png",
+      "review/parkside_pap_204_a1/opposite.png"
+    ],
+    "observations": "Reviewed saved-artifact views: both side labels and recessed panels, case seam, rail/contact pocket, red latch/paddle/button and green end lens are preserved."
+  }
+}

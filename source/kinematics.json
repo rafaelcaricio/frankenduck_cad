@@ -1,0 +1,661 @@
+{
+  "mates": [
+    {
+      "name": "fix_imu_yoke_bridge_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#imu_yoke_bridge_native"
+    },
+    {
+      "name": "fix_battery_donor_cover_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#battery_donor_cover_native"
+    },
+    {
+      "name": "fix_battery_carrier_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#battery_carrier_native"
+    },
+    {
+      "name": "fix_power_switch_kcd1_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#power_switch_kcd1_native"
+    },
+    {
+      "name": "fix_mpu6050_trunk_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#mpu6050_trunk_native"
+    },
+    {
+      "name": "fix_npf550_pack_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#npf550_pack_native"
+    },
+    {
+      "name": "fix_left_shell_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#left_shell_native"
+    },
+    {
+      "name": "fix_right_shell_native",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#right_shell_native"
+    },
+    {
+      "name": "fix_servo_yaw2roll",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#servo_yaw2roll"
+    },
+    {
+      "name": "fix_servo_bearing_roll",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#servo_bearing_roll"
+    },
+    {
+      "name": "fix_import_horn_lower_passive",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#import_horn_lower_passive"
+    },
+    {
+      "name": "fix_import_neck_internal_yoke",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#import_neck_internal_yoke"
+    },
+    {
+      "name": "fix_servo_hip_l",
+      "kind": "fastened",
+      "parent": "#yaw2roll_left",
+      "child": "#servo_hip_l"
+    },
+    {
+      "name": "fix_servo_upper_leg_left",
+      "kind": "fastened",
+      "parent": "#upper_leg_left",
+      "child": "#servo_upper_leg_left"
+    },
+    {
+      "name": "fix_servo_leg",
+      "kind": "fastened",
+      "parent": "#upper_leg_left",
+      "child": "#servo_leg"
+    },
+    {
+      "name": "fix_servo_ankle_left",
+      "kind": "fastened",
+      "parent": "#leg_left",
+      "child": "#servo_ankle_left"
+    },
+    {
+      "name": "fix_ankle_bearing_inner_cap_left",
+      "kind": "fastened",
+      "parent": "#leg_left",
+      "child": "#ankle_bearing_inner_cap_left"
+    },
+    {
+      "name": "fix_ankle_eye_left",
+      "kind": "fastened",
+      "parent": "#ankle_left",
+      "child": "#ankle_eye_left"
+    },
+    {
+      "name": "fix_ankle_bearing_outer_keeper_left",
+      "kind": "fastened",
+      "parent": "#ankle_left",
+      "child": "#ankle_bearing_outer_keeper_left"
+    },
+    {
+      "name": "fix_sole_left",
+      "kind": "fastened",
+      "parent": "#ankle_left",
+      "child": "#sole_left"
+    },
+    {
+      "name": "fix_foot_a_left",
+      "kind": "fastened",
+      "parent": "#ankle_left",
+      "child": "#foot_a_left"
+    },
+    {
+      "name": "fix_foot_b_left",
+      "kind": "fastened",
+      "parent": "#ankle_left",
+      "child": "#foot_b_left"
+    },
+    {
+      "name": "left_hip_yaw",
+      "kind": "revolute",
+      "parent": "#trunk_base",
+      "child": "#yaw2roll_left",
+      "origin": [
+        23.625,
+        -8.1,
+        120.25
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "limits": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "name": "left_hip_roll",
+      "kind": "revolute",
+      "parent": "#yaw2roll_left",
+      "child": "#hip_left",
+      "origin": [
+        23.625,
+        -30.375,
+        100.375
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "limits": [
+        -31.0,
+        31.0
+      ]
+    },
+    {
+      "name": "left_hip_pitch",
+      "kind": "revolute",
+      "parent": "#hip_left",
+      "child": "#upper_leg_left",
+      "origin": [
+        51.975,
+        -5.4,
+        100.375
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "left_knee",
+      "kind": "revolute",
+      "parent": "#upper_leg_left",
+      "child": "#leg_left",
+      "origin": [
+        51.975,
+        42.8991,
+        70.675
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "limits": [
+        -134.0,
+        83.0
+      ]
+    },
+    {
+      "name": "left_ankle",
+      "kind": "revolute",
+      "parent": "#leg_left",
+      "child": "#ankle_left",
+      "origin": [
+        87.075,
+        42.8991,
+        3.975
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -77.0,
+        77.5
+      ]
+    },
+    {
+      "name": "fix_servo_hip_l_2",
+      "kind": "fastened",
+      "parent": "#yaw2roll_right",
+      "child": "#servo_hip_l_2"
+    },
+    {
+      "name": "fix_servo_upper_leg_right",
+      "kind": "fastened",
+      "parent": "#upper_leg_right",
+      "child": "#servo_upper_leg_right"
+    },
+    {
+      "name": "fix_servo_leg_2",
+      "kind": "fastened",
+      "parent": "#upper_leg_right",
+      "child": "#servo_leg_2"
+    },
+    {
+      "name": "fix_servo_ankle_right",
+      "kind": "fastened",
+      "parent": "#leg_right",
+      "child": "#servo_ankle_right"
+    },
+    {
+      "name": "fix_ankle_bearing_inner_cap_right",
+      "kind": "fastened",
+      "parent": "#leg_right",
+      "child": "#ankle_bearing_inner_cap_right"
+    },
+    {
+      "name": "fix_ankle_eye_right",
+      "kind": "fastened",
+      "parent": "#ankle_right",
+      "child": "#ankle_eye_right"
+    },
+    {
+      "name": "fix_ankle_bearing_outer_keeper_right",
+      "kind": "fastened",
+      "parent": "#ankle_right",
+      "child": "#ankle_bearing_outer_keeper_right"
+    },
+    {
+      "name": "fix_sole_right",
+      "kind": "fastened",
+      "parent": "#ankle_right",
+      "child": "#sole_right"
+    },
+    {
+      "name": "fix_foot_a_right",
+      "kind": "fastened",
+      "parent": "#ankle_right",
+      "child": "#foot_a_right"
+    },
+    {
+      "name": "fix_foot_b_right",
+      "kind": "fastened",
+      "parent": "#ankle_right",
+      "child": "#foot_b_right"
+    },
+    {
+      "name": "right_hip_yaw",
+      "kind": "revolute",
+      "parent": "#trunk_base",
+      "child": "#yaw2roll_right",
+      "origin": [
+        -23.625,
+        -8.1,
+        120.25
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "limits": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "name": "right_hip_roll",
+      "kind": "revolute",
+      "parent": "#yaw2roll_right",
+      "child": "#hip_right",
+      "origin": [
+        -23.625,
+        -30.375,
+        100.375
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "limits": [
+        -31.0,
+        31.0
+      ]
+    },
+    {
+      "name": "right_hip_pitch",
+      "kind": "revolute",
+      "parent": "#hip_right",
+      "child": "#upper_leg_right",
+      "origin": [
+        -51.975,
+        -5.4,
+        100.375
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "limits": [
+        -90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "right_knee",
+      "kind": "revolute",
+      "parent": "#upper_leg_right",
+      "child": "#leg_right",
+      "origin": [
+        -51.975,
+        42.8991,
+        70.675
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -83.0,
+        135.0
+      ]
+    },
+    {
+      "name": "right_ankle",
+      "kind": "revolute",
+      "parent": "#leg_right",
+      "child": "#ankle_right",
+      "origin": [
+        -87.075,
+        42.8991,
+        3.975
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "limits": [
+        -77.5,
+        77.0
+      ]
+    },
+    {
+      "name": "fix_neck_002_native",
+      "kind": "fastened",
+      "parent": "#neck_001_native",
+      "child": "#neck_002_native"
+    },
+    {
+      "name": "fix_servo_neck_upper",
+      "kind": "fastened",
+      "parent": "#neck_001_native",
+      "child": "#servo_neck_upper"
+    },
+    {
+      "name": "fix_servo_neck_lower",
+      "kind": "fastened",
+      "parent": "#neck_001_native",
+      "child": "#servo_neck_lower"
+    },
+    {
+      "name": "fix_import_horn_upper_passive",
+      "kind": "fastened",
+      "parent": "#neck_pitch_001_native",
+      "child": "#import_horn_upper_passive"
+    },
+    {
+      "name": "fix_servo_head_yaw",
+      "kind": "fastened",
+      "parent": "#yaw_roll_link_r05",
+      "child": "#servo_head_yaw"
+    },
+    {
+      "name": "fix_roll_front_bulkhead_r05",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#roll_front_bulkhead_r05"
+    },
+    {
+      "name": "fix_electronics_deck_r02",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#electronics_deck_r02"
+    },
+    {
+      "name": "fix_face_radxa_bracket_r02",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#face_radxa_bracket_r02"
+    },
+    {
+      "name": "fix_ubec_clamp_r02",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#ubec_clamp_r02"
+    },
+    {
+      "name": "fix_bottom_head_shell_native",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#bottom_head_shell_native"
+    },
+    {
+      "name": "fix_top_head_shell_native",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#top_head_shell_native"
+    },
+    {
+      "name": "fix_noenoeil_native",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#noenoeil_native"
+    },
+    {
+      "name": "fix_soft_mouth_top_native",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#soft_mouth_top_native"
+    },
+    {
+      "name": "fix_face_part_native",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#face_part_native"
+    },
+    {
+      "name": "fix_import_pcb_radxa_cubie_a7z",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_radxa_cubie_a7z"
+    },
+    {
+      "name": "fix_stemma3885",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#stemma3885"
+    },
+    {
+      "name": "fix_import_pcb_sph0645_mic",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_sph0645_mic"
+    },
+    {
+      "name": "fix_mighty_camera",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#mighty_camera"
+    },
+    {
+      "name": "fix_import_pcb_vl53l5cx_tof",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_vl53l5cx_tof"
+    },
+    {
+      "name": "fix_import_pcb_ubec_henge_4a",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_ubec_henge_4a"
+    },
+    {
+      "name": "fix_import_pcb_bno055",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_bno055"
+    },
+    {
+      "name": "fix_import_pcb_waveshare_adapter",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#import_pcb_waveshare_adapter"
+    },
+    {
+      "name": "fix_servo_head_roll",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#servo_head_roll"
+    },
+    {
+      "name": "fix_servo_jaw_direct",
+      "kind": "fastened",
+      "parent": "#head_frame_r05",
+      "child": "#servo_jaw_direct"
+    },
+    {
+      "name": "fix_jaw_soft_001_native",
+      "kind": "fastened",
+      "parent": "#jaw_r01",
+      "child": "#jaw_soft_001_native"
+    },
+    {
+      "name": "neck_pitch",
+      "kind": "revolute",
+      "parent": "#trunk_base",
+      "child": "#neck_001_native",
+      "origin": [
+        17.6,
+        -35.1,
+        163.769
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "limits": [
+        -90.0,
+        46.84
+      ]
+    },
+    {
+      "name": "head_pitch",
+      "kind": "revolute",
+      "parent": "#neck_001_native",
+      "child": "#neck_pitch_001_native",
+      "origin": [
+        17.6,
+        -35.1,
+        235.769
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -50.0,
+        97.73
+      ]
+    },
+    {
+      "name": "head_yaw",
+      "kind": "revolute",
+      "parent": "#neck_pitch_001_native",
+      "child": "#yaw_roll_link_r05",
+      "origin": [
+        0.0,
+        -35.1,
+        258.0048
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "limits": [
+        -107.05,
+        82.17
+      ]
+    },
+    {
+      "name": "head_roll",
+      "kind": "revolute",
+      "parent": "#yaw_roll_link_r05",
+      "child": "#head_frame_r05",
+      "origin": [
+        0.0,
+        -14.935,
+        280.5798
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "limits": [
+        -27.77,
+        17.57
+      ]
+    },
+    {
+      "name": "jaw",
+      "kind": "revolute",
+      "parent": "#head_frame_r05",
+      "child": "#jaw_r01",
+      "origin": [
+        53.0,
+        -35.235,
+        284.6348
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "limits": [
+        -180,
+        180
+      ]
+    }
+  ],
+  "poses": {
+    "zero": {},
+    "home": {
+      "left_hip_roll": -5.0,
+      "right_hip_roll": 5.0,
+      "left_hip_pitch": -26.24,
+      "right_hip_pitch": 26.24,
+      "left_knee": -0.28,
+      "right_knee": 0.28,
+      "left_ankle": 25.95,
+      "right_ankle": -25.95,
+      "neck_pitch": 20.0,
+      "head_pitch": 20.0
+    }
+  }
+}

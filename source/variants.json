@@ -1,0 +1,343 @@
+[
+  {
+    "component": "trunk_base_native",
+    "params": {},
+    "model": "trunk_base_native"
+  },
+  {
+    "component": "head_frame_native",
+    "params": {},
+    "model": "head_frame_native"
+  },
+  {
+    "component": "roll_front_bulkhead_native",
+    "params": {},
+    "model": "roll_front_bulkhead_native"
+  },
+  {
+    "component": "yaw_roll_link_native",
+    "params": {},
+    "model": "yaw_roll_link_native"
+  },
+  {
+    "component": "electronics_deck_native",
+    "params": {},
+    "model": "electronics_deck_native"
+  },
+  {
+    "component": "face_radxa_bracket_native",
+    "params": {},
+    "model": "face_radxa_bracket_native"
+  },
+  {
+    "component": "ubec_clamp_native",
+    "params": {},
+    "model": "ubec_clamp_native"
+  },
+  {
+    "component": "jaw_native",
+    "params": {},
+    "model": "jaw_native"
+  },
+  {
+    "component": "bottom_head_shell_native",
+    "params": {},
+    "model": "bottom_head_shell_native"
+  },
+  {
+    "component": "top_head_shell_native",
+    "params": {},
+    "model": "top_head_shell_native"
+  },
+  {
+    "component": "noenoeil_native",
+    "params": {},
+    "model": "noenoeil_native"
+  },
+  {
+    "component": "soft_mouth_top_native",
+    "params": {},
+    "model": "soft_mouth_top_native"
+  },
+  {
+    "component": "jaw_soft_001_native",
+    "params": {},
+    "model": "jaw_soft_001_native"
+  },
+  {
+    "component": "face_part_native",
+    "params": {},
+    "model": "face_part_native"
+  },
+  {
+    "component": "import_pcb_radxa_cubie_a7z",
+    "params": {},
+    "model": "import_pcb_radxa_cubie_a7z"
+  },
+  {
+    "component": "stemma3885",
+    "params": {},
+    "model": "stemma3885"
+  },
+  {
+    "component": "import_pcb_sph0645_mic",
+    "params": {},
+    "model": "import_pcb_sph0645_mic"
+  },
+  {
+    "component": "mighty_camera",
+    "params": {},
+    "model": "mighty_camera"
+  },
+  {
+    "component": "measured_tof",
+    "params": {
+      "seat_x": 105.64
+    },
+    "model": "measured_tof_seated"
+  },
+  {
+    "component": "import_pcb_ubec_henge_4a",
+    "params": {},
+    "model": "import_pcb_ubec_henge_4a"
+  },
+  {
+    "component": "import_pcb_bno055",
+    "params": {},
+    "model": "import_pcb_bno055"
+  },
+  {
+    "component": "import_pcb_waveshare_adapter",
+    "params": {},
+    "model": "import_pcb_waveshare_adapter"
+  },
+  {
+    "component": "neck_pitch_001_native",
+    "params": {},
+    "model": "neck_pitch_001_native"
+  },
+  {
+    "component": "neck_001_native",
+    "params": {},
+    "model": "neck_001_native"
+  },
+  {
+    "component": "neck_002_native",
+    "params": {},
+    "model": "neck_002_native"
+  },
+  {
+    "component": "neck_internal_yoke_native",
+    "params": {},
+    "model": "neck_internal_yoke_native"
+  },
+  {
+    "component": "import_horn_upper_passive",
+    "params": {},
+    "model": "import_horn_upper_passive"
+  },
+  {
+    "component": "import_horn_lower_passive",
+    "params": {},
+    "model": "import_horn_lower_passive"
+  },
+  {
+    "component": "imu_yoke_bridge_native",
+    "params": {},
+    "model": "imu_yoke_bridge_native"
+  },
+  {
+    "component": "battery_donor_cover_native",
+    "params": {},
+    "model": "battery_donor_cover_native"
+  },
+  {
+    "component": "battery_carrier_native",
+    "params": {},
+    "model": "battery_carrier_native"
+  },
+  {
+    "component": "power_switch_kcd1_native",
+    "params": {},
+    "model": "power_switch_kcd1_native"
+  },
+  {
+    "component": "mpu6050_trunk_native",
+    "params": {},
+    "model": "mpu6050_trunk_native"
+  },
+  {
+    "component": "npf550_pack_native",
+    "params": {},
+    "model": "npf550_pack_native"
+  },
+  {
+    "component": "left_shell_native",
+    "params": {},
+    "model": "left_shell_native"
+  },
+  {
+    "component": "right_shell_native",
+    "params": {},
+    "model": "right_shell_native"
+  },
+  {
+    "component": "hip_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "hip_left_native"
+  },
+  {
+    "component": "yaw2roll_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "yaw2roll_left_native"
+  },
+  {
+    "component": "upper_leg_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "upper_leg_left_native"
+  },
+  {
+    "component": "leg_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "leg_left_native"
+  },
+  {
+    "component": "ankle_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_left_native"
+  },
+  {
+    "component": "ankle_eye_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_eye_left_native"
+  },
+  {
+    "component": "ankle_bearing_outer_keeper_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_bearing_outer_keeper_left_native"
+  },
+  {
+    "component": "ankle_bearing_inner_cap_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "ankle_bearing_inner_cap_left_native"
+  },
+  {
+    "component": "sole_left_native",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "sole_left_native"
+  },
+  {
+    "component": "foot_left_native_a",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "foot_left_native_a"
+  },
+  {
+    "component": "foot_left_native_b",
+    "params": {
+      "SIDE": 1
+    },
+    "model": "foot_left_native_b"
+  },
+  {
+    "component": "hip_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "hip_left_native_right"
+  },
+  {
+    "component": "yaw2roll_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "yaw2roll_left_native_right"
+  },
+  {
+    "component": "upper_leg_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "upper_leg_left_native_right"
+  },
+  {
+    "component": "leg_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "leg_left_native_right"
+  },
+  {
+    "component": "ankle_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_left_native_right"
+  },
+  {
+    "component": "ankle_eye_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_eye_left_native_right"
+  },
+  {
+    "component": "ankle_bearing_outer_keeper_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_bearing_outer_keeper_left_native_right"
+  },
+  {
+    "component": "ankle_bearing_inner_cap_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "ankle_bearing_inner_cap_left_native_right"
+  },
+  {
+    "component": "sole_left_native",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "sole_left_native_right"
+  },
+  {
+    "component": "foot_left_native_a",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "foot_left_native_a_right"
+  },
+  {
+    "component": "foot_left_native_b",
+    "params": {
+      "SIDE": -1
+    },
+    "model": "foot_left_native_b_right"
+  },
+  {
+    "component": "sts3215_servo_native",
+    "params": {},
+    "model": "sts3215_servo_native"
+  }
+]

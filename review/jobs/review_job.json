@@ -1,0 +1,5 @@
+{"jobs":[
+{"input":"STEP/frankenduck.step","outputs":[{"path":"review/zero_iso.png","camera":"iso"},{"path":"review/zero_front.png","camera":"front"}],"output":{"sizeProfile":"assembly"}},
+{"input":"STEP/frankenduck.step","kinematics":"home","outputs":[{"path":"review/home_iso.png","camera":"iso"}],"output":{"sizeProfile":"assembly"}},
+{"input":"STEP/frankenduck.step","animation":{"clip":"walk_sit_stand_walk_sit","time":58.12},"outputs":[{"path":"review/animation_seated_end.png","camera":"iso"}],"output":{"sizeProfile":"assembly"}}
+]}
