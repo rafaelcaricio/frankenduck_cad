@@ -147,16 +147,6 @@
     "model": "imu_yoke_bridge_native"
   },
   {
-    "component": "battery_donor_cover_native",
-    "params": {},
-    "model": "battery_donor_cover_native"
-  },
-  {
-    "component": "battery_carrier_native",
-    "params": {},
-    "model": "battery_carrier_native"
-  },
-  {
     "component": "power_switch_kcd1_native",
     "params": {},
     "model": "power_switch_kcd1_native"
@@ -165,11 +155,6 @@
     "component": "mpu6050_trunk_native",
     "params": {},
     "model": "mpu6050_trunk_native"
-  },
-  {
-    "component": "npf550_pack_native",
-    "params": {},
-    "model": "npf550_pack_native"
   },
   {
     "component": "left_shell_native",
@@ -344,5 +329,15 @@
     "component": "radxa_6530b",
     "params": {},
     "model": "radxa_6530b"
+  },
+  {
+    "component": "parkside_pap_204_a1",
+    "params": {},
+    "model": "parkside_pap_204_a1"
+  },
+  {
+    "model": "backpack_dock_native",
+    "component": "backpack_dock_native",
+    "params": {}
   }
 ]

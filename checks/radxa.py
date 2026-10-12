@@ -24,7 +24,7 @@ def mount():
     report = dict(document_sha256=current.document_hash,
                   units="mm",
                   overlap_tolerance_mm3=TOLERANCE_MM3, pose="saved rest",
-                  checked_occurrences=["#o1.3", "#o1.6", "#o1.10", "#o1.15", "#o1.16", "#o1.74"], pairs=[])
+                  checked_occurrences=["#o1.3", "#o1.6", "#o1.10", "#o1.15", "#o1.16", "#o1.71"], pairs=[])
     checks = []
 
 
@@ -49,13 +49,13 @@ def mount():
     board = occurrences["o1.15"][2]
     bulkhead = occurrences["o1.3"][2]
     speaker = occurrences["o1.16"][2]
-    heatsink = occurrences["o1.74"][2]
+    heatsink = occurrences["o1.71"][2]
     plug, cable = [cq.Shape.cast(s.wrapped) for s in clearance_shapes()]
     targets = [("bulkhead", bulkhead, {"o1.3"}),
                ("bracket", bracket, {"o1.3", "o1.6"}),
                ("board", board, {"o1.3", "o1.6", "o1.15"}),
                ("speaker", speaker, {"o1.3", "o1.6", "o1.15", "o1.16"}),
-               ("heatsink_representation", heatsink, {"o1.3", "o1.6", "o1.15", "o1.16", "o1.74"}),
+               ("heatsink_representation", heatsink, {"o1.3", "o1.6", "o1.15", "o1.16", "o1.71"}),
                ("gpio_jumper_plug_allowance", plug, {"o1.15"}),
                ("gpio_upward_cable_allowance", cable, set())]
     # The socket allowance intentionally contains the existing GPIO header.
@@ -248,7 +248,7 @@ def heatsink():
     env=cq.Shape.cast(outer_envelope().wrapped);air=cq.Shape.cast(fan_inlet_allowance().wrapped)
     for name,a in [('official_outer_envelope',env),('fan_inlet_allowance',air)]:
      for ref,(label,b) in shapes.items():
-      if ref=='o1.74' or (name=='official_outer_envelope' and ref=='o1.15'):continue
+      if ref=='o1.71' or (name=='official_outer_envelope' and ref=='o1.15'):continue
       pair(name,a,ref+':'+label,b)
     # The full bounding envelope intentionally includes GPIO/SoC regions that
     # actual cooler cutouts leave open. Actual-representation checks cover these.

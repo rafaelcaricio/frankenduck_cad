@@ -2,10 +2,11 @@
 
 | Entry | Purpose |
 | --- | --- |
-| `frankenduck.py` | Complete assembly: 74 occurrences, joints, poses and animation |
+| `frankenduck.py` | Complete assembly: 73 occurrences, joints, poses and animation |
 | `radxa_fit_review.py` | Mounting context with GPIO and cooler clearance volumes |
 | `parts/*.py` | Individual component models and parameter variants |
-| `parts/parkside_pap_204_a1.py` | Standalone battery component with per-face colors |
+| `parts/parkside_pap_204_a1.py` | Exposed backpack battery with per-face colors |
+| `lib/backpack.py` | Two-part mount, shell reliefs, battery datum and access allowances |
 | `lib/cadquery_adapter.py` | Shared feature construction and build123d conversion |
 | `lib/import_paths.py` | Local purchased-component STEP inputs |
 | `lib/radxa_clearance.py` | Jumper-plug and upward cable space |

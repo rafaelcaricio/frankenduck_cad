@@ -1,6 +1,6 @@
 # Frankenduck printable parts
 
-This directory contains **45 individual 3MF files** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
+This directory contains **44 individual 3MF files** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
 
 Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).
 
@@ -20,8 +20,6 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [ankle_eye_left_native_right.3mf](3mf/ankle_eye_left_native_right.3mf) | 1 | pla |
 | [ankle_left_native.3mf](3mf/ankle_left_native.3mf) | 1 | pla |
 | [ankle_left_native_right.3mf](3mf/ankle_left_native_right.3mf) | 1 | pla |
-| [battery_carrier_native.3mf](3mf/battery_carrier_native.3mf) | 1 | pla |
-| [battery_donor_cover_native.3mf](3mf/battery_donor_cover_native.3mf) | 1 | pla |
 | [bottom_head_shell_native.3mf](3mf/bottom_head_shell_native.3mf) | 1 | pla |
 | [electronics_deck_native.3mf](3mf/electronics_deck_native.3mf) | 1 | pla |
 | [face_part_native.3mf](3mf/face_part_native.3mf) | 1 | pla |
@@ -57,3 +55,4 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [yaw2roll_left_native.3mf](3mf/yaw2roll_left_native.3mf) | 1 | pla |
 | [yaw2roll_left_native_right.3mf](3mf/yaw2roll_left_native_right.3mf) | 1 | pla |
 | [yaw_roll_link_native.3mf](3mf/yaw_roll_link_native.3mf) | 1 | pla |
+| [backpack_dock_native.3mf](3mf/backpack_dock_native.3mf) | 1 | unspecified |

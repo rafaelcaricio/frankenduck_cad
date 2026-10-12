@@ -178,9 +178,9 @@
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "export": true,
-      "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "export": false,
+      "active_variant": false,
+      "notes": "Frankenduck printed part. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
     },
     {
       "model": "battery_donor_cover_native",
@@ -190,9 +190,9 @@
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "export": true,
-      "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "export": false,
+      "active_variant": false,
+      "notes": "Frankenduck printed part. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
     },
     {
       "model": "bottom_head_shell_native",
@@ -510,7 +510,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Printed body shell retaining the Microduck outline and mounting features, with reinforced lower corner and local clearance for the two-part backpack mount. Physical fit and strength unverified."
     },
     {
       "model": "leg_left_native",
@@ -661,8 +661,8 @@
       "print_release": "not_applicable",
       "material_hint": "not_applicable",
       "export": false,
-      "active_variant": true,
-      "notes": "Purchased component representation."
+      "active_variant": false,
+      "notes": "Purchased component representation. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
     },
     {
       "model": "power_switch_kcd1_native",
@@ -698,7 +698,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Printed body shell retaining the Microduck outline and mounting features, with reinforced lower corner and local clearance for the two-part backpack mount. Physical fit and strength unverified."
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -812,7 +812,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Printed trunk frame with continuous compact gussets and four side-loaded M3 nut pockets; separate backpack dock. Physical fit and strength unverified."
     },
     {
       "model": "ubec_clamp_native",
@@ -931,8 +931,20 @@
       "print_release": "not_applicable",
       "material_hint": "mixed: ABS case, PC lens, metal contacts; appearance only",
       "export": false,
-      "active_variant": false,
-      "notes": "Standalone battery exterior; rail and latch are photo-derived, not a measured mating interface. Not installed in the assembly."
+      "active_variant": true,
+      "notes": "Active exposed PAP 204 A1 4 Ah backpack. Original single-component colors. Exterior visual model; rail/latch dimensions approximate; excluded from print exports."
+    },
+    {
+      "model": "backpack_dock_native",
+      "component": "backpack_dock_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "export": true,
+      "active_variant": true,
+      "notes": "Separate flat-backed exposed battery dock; four M3 x 12 socket-head screws and M3 hex nuts join it to the trunk. Physical rail/latch and printed joint fit unverified."
     }
   ],
   "review_geometry": [

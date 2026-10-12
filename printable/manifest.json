@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-10-12T18:26:46.692745+00:00",
-  "input_key": "9569a01f1cb3a6948932194aec5e3b7c33406b39cdb797c3c90fb97bb052c0cf",
+  "generated_utc": "2026-10-12T20:56:35.674882+00:00",
+  "input_key": "48ca55b36944cf4e2a39861d4749114bcfbb5ffd56fb26a710013547fbb6771b",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "72d8de23d3ff08c116ca9616ba3ede45bb44a073d262d39458dc858096344932",
-    "catalog_sha256": "63e2361e8e2613d353bb5b1823d3914a365e4efa512e05b02242595643edc591",
+    "source_step_sha256": "66985c60caea083702fbe172b7a62eb3f8d20ac03d49748102be3d5dc9176141",
+    "catalog_sha256": "77ccb0ed82ad6b53cdb3b6d20ea2aa55352261c8ff8272b4c343baba4318babd",
     "implementation": {
       "tools/print_export.py": "9fc89c93b562bdc3d48ac93f67225fbf632576822520f76e155b01d7563bd962",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
@@ -23,12 +23,12 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "b36cf5c3d28d2235dc70fac3533fb77358490cabfd7c3052ab83a09d1d3a3e9a",
-    "assembly_data_sha256": "8c3f7418cc65df8acc8855f91ad19054d880248078b19d441b1b4cdd0c0bd7d9"
+    "build_input_key": "1907f91e776721ed86c2f42d73657bc65fbd7cee63bc837a2f3f6a49b5671458",
+    "assembly_data_sha256": "239f1d9d00b0ee4f58017d5043ce1bb7d0a2537bea92840b9fb4dda88e2a538c"
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
-  "export_count": 45,
+  "export_count": 44,
   "orientation": "Saved rest-pose axes; translation only, XY centred and min Z=0",
   "max_relative_volume_error": 0.02,
   "parts": [
@@ -38,7 +38,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.44",
+          "ref": "#o1.41",
           "name": "ankle_bearing_inner_cap_left"
         }
       ],
@@ -67,23 +67,30 @@
         9.5
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 1150,
-        "triangles": 2304,
-        "volume_mm3": 65.78971895167199,
+        "vertices": 756,
+        "triangles": 1516,
+        "volume_mm3": 65.765538871701,
         "bounds_mm": [
           -0.5,
-          -4.749938,
-          0.000249,
+          -4.748524,
+          0.0,
           0.5,
-          4.749938,
+          4.748524,
           9.5
         ],
         "nonmanifold_edges": 0,
@@ -91,12 +98,10 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.000249,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 4.689260736350386e-05,
-      "sha256": "0cad189d50a565bf538a5f5b168667ad772bb55800001e2352be183508d8cdba",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.0014760000000002549,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00041441121801077843,
+      "sha256": "189ae8b7086d3778e6cbb4ab44faf8e0c10fc9136ff70a7767a228a3a0f0cd11"
     },
     {
       "model": "ankle_bearing_inner_cap_left_native_right",
@@ -104,7 +109,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.55",
+          "ref": "#o1.52",
           "name": "ankle_bearing_inner_cap_right"
         }
       ],
@@ -133,36 +138,41 @@
         9.5
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 1150,
-        "triangles": 2304,
-        "volume_mm3": 65.78971882933301,
+        "vertices": 756,
+        "triangles": 1516,
+        "volume_mm3": 65.765538871701,
         "bounds_mm": [
           -0.5,
-          -4.749938,
+          -4.748524,
           0.0,
           0.5,
-          4.749938,
-          9.499751
+          4.748524,
+          9.5
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.00024900000000016576,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 4.689446682178492e-05,
-      "sha256": "bfd9aa9e88b850d13455099df4c7e1a8aa074208fb090cafa10be9abb8a1ac11",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.0014760000000002549,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00041441121801077843,
+      "sha256": "571bd09b69ea2b6bd6773d3fb550a90d10babee49a8ab94f51c4c6c7ba8202b9"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native",
@@ -170,7 +180,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.43",
+          "ref": "#o1.40",
           "name": "ankle_bearing_outer_keeper_left"
         }
       ],
@@ -199,36 +209,41 @@
         26.3
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 4895,
-        "triangles": 9798,
-        "volume_mm3": 617.7463772454514,
+        "vertices": 1638,
+        "triangles": 3284,
+        "volume_mm3": 617.497893889805,
         "bounds_mm": [
           -0.85,
           -13.15,
-          0.000249,
+          0.004087,
           0.85,
           13.15,
-          26.299752
+          26.295914
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.000249,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.2142339409412361e-05,
-      "sha256": "253b8be532bb2a56425cd03a426f6b97af194aa64a83ab5931a79d873a0a1374",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.004087,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0004143791596156667,
+      "sha256": "5f08ef1b3021c7e74400e5cf476f5eb4eb1849047c7b06032548df13fdc7cbf2"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native_right",
@@ -236,7 +251,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.54",
+          "ref": "#o1.51",
           "name": "ankle_bearing_outer_keeper_right"
         }
       ],
@@ -265,36 +280,41 @@
         26.3
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 4895,
-        "triangles": 9798,
-        "volume_mm3": 617.7463772454513,
+        "vertices": 1638,
+        "triangles": 3284,
+        "volume_mm3": 617.497893919419,
         "bounds_mm": [
           -0.85,
           -13.15,
-          0.000249,
+          0.004087,
           0.85,
           13.15,
-          26.299752
+          26.295914
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.000249,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.2142339409596394e-05,
-      "sha256": "76d42e03345aec7282777791aa9234d7543106f17c6935dce60ba2f2d56d820e",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.004087,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.000414379111677573,
+      "sha256": "d5a5e023ee7e16b399f2e6a2963a51cf7769486aa98a793f786c2fc17546a5ad"
     },
     {
       "model": "ankle_eye_left_native",
@@ -302,7 +322,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.42",
+          "ref": "#o1.39",
           "name": "ankle_eye_left"
         }
       ],
@@ -332,23 +352,42 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 1e-05,
-        "algorithm": "Delabella",
+        "algorithm": "Watson",
         "native_parallel": false,
-        "constrained_planar_faces": 1,
-        "planar_boundary_loops": [
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
           {
-            "boundary_vertices": 95,
-            "area_mm2": 0.11306353881200436,
-            "native_face_area_mm2": 0.11306711954575552,
-            "native_surface_tolerance_mm": 0.001
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "t_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+          },
+          {
+            "algorithm": "Delabella",
+            "tolerance_mm": 0.0005,
+            "exit_code": 1,
+            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           }
-        ],
-        "seam_weld_tolerance_mm": 0.0001
+        ]
       },
       "mesh": {
         "vertices": 143224,
         "triangles": 277878,
-        "volume_mm3": 5704.675876071241,
+        "volume_mm3": 5793.1512587766665,
         "bounds_mm": [
           -5.35,
           -24.6375,
@@ -364,10 +403,8 @@
       },
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 7.947928919572144e-08,
-      "sha256": "37b31747c912ace67e408f185ec092b984444286c9ce253dac5928063896dbfe",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.015509193544368936,
+      "sha256": "0496a6c03f1b5de50f1535f67b1a03ebdfbda0f8cc3419325490d91aea0dd3ad"
     },
     {
       "model": "ankle_eye_left_native_right",
@@ -375,7 +412,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.53",
+          "ref": "#o1.50",
           "name": "ankle_eye_right"
         }
       ],
@@ -405,23 +442,42 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 1e-05,
-        "algorithm": "Delabella",
+        "algorithm": "Watson",
         "native_parallel": false,
-        "constrained_planar_faces": 1,
-        "planar_boundary_loops": [
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
           {
-            "boundary_vertices": 95,
-            "area_mm2": 0.11306353881200452,
-            "native_face_area_mm2": 0.11306711954575552,
-            "native_surface_tolerance_mm": 0.001
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+          },
+          {
+            "algorithm": "Delabella",
+            "tolerance_mm": 0.0005,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           }
-        ],
-        "seam_weld_tolerance_mm": 0.0001
+        ]
       },
       "mesh": {
         "vertices": 143224,
         "triangles": 277878,
-        "volume_mm3": 5704.675867370529,
+        "volume_mm3": 5793.151218582933,
         "bounds_mm": [
           -5.35,
           -24.6375,
@@ -437,10 +493,8 @@
       },
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 8.100447925433253e-08,
-      "sha256": "ae356ae9426c5b93b7181ca045a9fd464780d068b4d23062ff161c30916ac95f",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.015509186498616547,
+      "sha256": "3361f5c388e368865927a2fb18ddb6b33514a30cc6ed7e07826050927165529c"
     },
     {
       "model": "ankle_left_native",
@@ -448,7 +502,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.41",
+          "ref": "#o1.38",
           "name": "ankle_left"
         }
       ],
@@ -478,22 +532,36 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
+        "algorithm": "Delabella",
         "native_parallel": false,
-        "constrained_planar_faces": 0,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 1,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "topology_cleanup": {
-          "precision_mm": 0.0001,
-          "bounds_error_mm": 0.0,
-          "volume_difference_mm3": 0.0016269193565676687,
-          "original_mesh_error": "Planar mesh boundary is branched"
-        }
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 18867,
-        "triangles": 37310,
-        "volume_mm3": 13358.862538445714,
+        "vertices": 19276,
+        "triangles": 37308,
+        "volume_mm3": 13220.529375977458,
         "bounds_mm": [
           -22.2285,
           -24.662048,
@@ -509,10 +577,8 @@
       },
       "max_bound_error_mm": 0.00016706370800179116,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.908905256317751e-06,
-      "sha256": "1dfddf9ebfde354d5ff7fd75725cab422dff036142a76a7fcc990cbc17a321f3",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.010359028687267706,
+      "sha256": "a955765ff2a0e8d704b6a5bfe5ea054e58fcdce54d2dbe1969163ffd41cbc4f2"
     },
     {
       "model": "ankle_left_native_right",
@@ -520,7 +586,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.52",
+          "ref": "#o1.49",
           "name": "ankle_right"
         }
       ],
@@ -550,22 +616,36 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
+        "algorithm": "Delabella",
         "native_parallel": false,
-        "constrained_planar_faces": 0,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 1,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "topology_cleanup": {
-          "precision_mm": 0.0001,
-          "bounds_error_mm": 0.0,
-          "volume_difference_mm3": 0.0016269193583866581,
-          "original_mesh_error": "Planar mesh boundary is branched"
-        }
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 18867,
-        "triangles": 37310,
-        "volume_mm3": 13358.862574104545,
+        "vertices": 19276,
+        "triangles": 37308,
+        "volume_mm3": 13220.529375977458,
         "bounds_mm": [
           -22.2285,
           -24.662048,
@@ -581,142 +661,8 @@
       },
       "max_bound_error_mm": 0.00016706370800534387,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.906235964993796e-06,
-      "sha256": "1af17a078afafd15c0b64e0b7a57a33752ca7b5dab8519836642682714135fd3",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
-    },
-    {
-      "model": "battery_carrier_native",
-      "filename": "3mf/battery_carrier_native.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.31",
-          "name": "battery_carrier_native"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "pla",
-      "source_volume_mm3": 18247.098338454165,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 5.329070518200751e-15,
-        "volume_difference_mm3": 4.5838605728931725e-06,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        7.105427357601002e-15,
-        -37.85,
-        -74.0
-      ],
-      "expected_bounds_mm": [
-        -34.5000001,
-        -10.350000000000003,
-        0,
-        34.5000001,
-        10.350000000000003,
-        88.0
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
-      },
-      "mesh": {
-        "vertices": 14318,
-        "triangles": 28672,
-        "volume_mm3": 18247.080767091677,
-        "bounds_mm": [
-          -34.5,
-          -10.35,
-          0.0,
-          34.5,
-          10.35,
-          88.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 1.0000000116860974e-07,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.629674900964745e-07,
-      "sha256": "64c03cf085103b90e8a47991b60ed16839da9e3473112d39dd68419f52d82922",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
-    },
-    {
-      "model": "battery_donor_cover_native",
-      "filename": "3mf/battery_donor_cover_native.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.30",
-          "name": "battery_donor_cover_native"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "pla",
-      "source_volume_mm3": 1985.330933798486,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.7763568394002505e-15,
-        "volume_difference_mm3": 2.0463630789890885e-11,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        7.105427357601002e-15,
-        -43.025000000000006,
-        -149.0
-      ],
-      "expected_bounds_mm": [
-        -34.5,
-        -5.575000000000003,
-        0,
-        34.5,
-        5.575000000000003,
-        9.0
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
-      },
-      "mesh": {
-        "vertices": 1152,
-        "triangles": 2308,
-        "volume_mm3": 1985.33701297044,
-        "bounds_mm": [
-          -34.5,
-          -5.575,
-          0.0,
-          34.5,
-          5.575,
-          9.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 2.6645352591003757e-15,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.062044644724169e-06,
-      "sha256": "09582074df399747724119cb7add00e1c20b85f849cb9c5213ffc432ead8d61c",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.010359028687267437,
+      "sha256": "68fc2271fe4fea8bc52efd6cabcc5a6e531f2536eae75ca5bde7504aa785836e"
     },
     {
       "model": "bottom_head_shell_native",
@@ -753,17 +699,31 @@
         24.56440020103298
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: bottom_head_shell_native; bounds 2.0103298226104016e-07, volume fraction 0.04105345853528214\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 120009,
-        "triangles": 240030,
-        "volume_mm3": 41363.5073683947,
+        "vertices": 14453,
+        "triangles": 28918,
+        "volume_mm3": 41353.693022395746,
         "bounds_mm": [
           -61.903,
           -78.735,
@@ -778,11 +738,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 2.0103298226104016e-07,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 7.827460324875653e-06,
-      "sha256": "36933d50a7fa64849bceb8418047a0134e7c469a24b88569dc4ff39323546128",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.0002450962463139114,
+      "sha256": "c93d559de10b529d0e901e717bba8068b621c7dc4ebf6e64fc5c5e6180f71922"
     },
     {
       "model": "electronics_deck_native",
@@ -819,17 +777,24 @@
         5.449999999999989
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 8161,
-        "triangles": 16330,
-        "volume_mm3": 9671.003981957272,
+        "vertices": 5547,
+        "triangles": 11102,
+        "volume_mm3": 9660.832745415095,
         "bounds_mm": [
           -30.25,
           -43.0,
@@ -844,11 +809,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 1.1546319456101628e-14,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 2.5035447983434337e-06,
-      "sha256": "f74706692b4bc335f642fd7d2aedf252a0533167118c5ef0cb5890d04f3005e8",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0010542258992722753,
+      "sha256": "bb0257a9d30fafec23e54a1a2affa21110e8a647b518699c93293cb55d8c9c2f"
     },
     {
       "model": "face_part_native",
@@ -885,36 +848,41 @@
         60.241021033332686
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 47326,
-        "triangles": 94668,
-        "volume_mm3": 13315.351210754281,
+        "vertices": 22355,
+        "triangles": 44726,
+        "volume_mm3": 13313.396403819948,
         "bounds_mm": [
           -59.1636,
           -8.4375,
           0.0,
           59.1636,
           8.4375,
-          60.241008
+          60.238564
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 1.303333268509732e-05,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.002842885257356162,
-      "sha256": "515ea16a91ebb2817380a375c0fd2e2d7a64b137ca77b7e7f8ab36f550061bd6",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.002457033332689207,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0026956593828659703,
+      "sha256": "181d9c0f0212c48b41d23a541d1b59787c391d868f435d04827d4be485729435"
     },
     {
       "model": "face_radxa_bracket_native",
@@ -951,36 +919,41 @@
         38.870000000000005
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 9360,
-        "triangles": 18744,
-        "volume_mm3": 3943.227815195613,
+        "vertices": 4559,
+        "triangles": 9142,
+        "volume_mm3": 3943.2548829122293,
         "bounds_mm": [
           -46.0,
           -1.6,
-          0.0,
+          0.00131,
           46.0,
           1.6,
-          38.869884
+          38.869972
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.0001160000000055561,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 4.40396712349281e-06,
-      "sha256": "fe1bfcb806ea2c952286f4774582e53a6ac6799c4e8d182a02fa2cb496b14ff7",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.00131,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 1.1268352619394189e-05,
+      "sha256": "1a2cf1f03798c7daae880f743d4d1be46ceef898113544285cbfa6825bc6c765"
     },
     {
       "model": "foot_left_native_a",
@@ -988,7 +961,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.46",
+          "ref": "#o1.43",
           "name": "foot_a_left"
         }
       ],
@@ -1018,16 +991,36 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
+        "algorithm": "Delabella",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
         "vertices": 8241,
         "triangles": 16486,
-        "volume_mm3": 20879.679914150867,
+        "volume_mm3": 20739.954296002765,
         "bounds_mm": [
           -24.84029,
           -33.615,
@@ -1043,10 +1036,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.5734790977131807e-06,
-      "sha256": "8bba8ceaead9e095bc13b1307c18cfc68c89775b4df32316097daddfcedc6209",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.006693505485108318,
+      "sha256": "25a97791ce23492d2318a8e11037f092b4496e81619388c68ec1c6cf188f5747"
     },
     {
       "model": "foot_left_native_a_right",
@@ -1054,7 +1045,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.57",
+          "ref": "#o1.54",
           "name": "foot_a_right"
         }
       ],
@@ -1084,16 +1075,36 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.0005,
-        "algorithm": "Watson",
+        "algorithm": "Delabella",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
         "vertices": 8241,
         "triangles": 16486,
-        "volume_mm3": 20879.679347857968,
+        "volume_mm3": 20739.867565257668,
         "bounds_mm": [
           -24.840232,
           -33.615,
@@ -1109,10 +1120,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.600600579465092e-06,
-      "sha256": "fdfa0cce2cccef1840021788945630bc5cf377fb223776dde2383efc27bd209c",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.006697659313369173,
+      "sha256": "de7808077e285e19ed8277d48c57fd1d1926c1111fe871ae5227484d9d97e030"
     },
     {
       "model": "foot_left_native_b",
@@ -1120,7 +1129,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.47",
+          "ref": "#o1.44",
           "name": "foot_b_left"
         }
       ],
@@ -1152,14 +1161,40 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+          },
+          {
+            "algorithm": "Delabella",
+            "tolerance_mm": 0.0005,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
         "vertices": 29159,
         "triangles": 57846,
-        "volume_mm3": 9404.032535677565,
+        "volume_mm3": 9232.274695139584,
         "bounds_mm": [
           -27.058,
           -36.45,
@@ -1175,10 +1210,8 @@
       },
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.254829654981583e-08,
-      "sha256": "59f8080a49087fe37bfde462ea364788f86e7fd96aa22fb47d38b87dd46b3f35",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.01826436630431138,
+      "sha256": "892dc0f051953af18fb231da911e3209930ccf83d431f7ab609dedca24a55341"
     },
     {
       "model": "foot_left_native_b_right",
@@ -1186,7 +1219,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.58",
+          "ref": "#o1.55",
           "name": "foot_b_right"
         }
       ],
@@ -1218,14 +1251,40 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+          },
+          {
+            "algorithm": "WatsonControlled",
+            "tolerance_mm": 0.05,
+            "exit_code": 1,
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+          },
+          {
+            "algorithm": "Delabella",
+            "tolerance_mm": 0.0005,
+            "exit_code": 1,
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+          }
+        ]
       },
       "mesh": {
         "vertices": 29159,
         "triangles": 57846,
-        "volume_mm3": 9404.032536014374,
+        "volume_mm3": 9232.144053405706,
         "bounds_mm": [
           -27.058,
           -36.45,
@@ -1241,10 +1300,8 @@
       },
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.25125153526096e-08,
-      "sha256": "107b0b9496ae8270085b6e244e91a3e9a94f185a08d8e8d8b978df545aa1e249",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.018278258400240232,
+      "sha256": "45ff02a1350778802fe3243644047c3b7256370c7c97ae92d3e754d8f3649771"
     },
     {
       "model": "head_frame_native",
@@ -1281,17 +1338,24 @@
         44.200000100005354
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 13005,
-        "triangles": 26054,
-        "volume_mm3": 32542.77830742549,
+        "vertices": 7341,
+        "triangles": 14726,
+        "volume_mm3": 32576.717682754523,
         "bounds_mm": [
           -43.425,
           -49.635,
@@ -1306,11 +1370,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 1.0000535155541002e-07,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 5.738388851369087e-07,
-      "sha256": "c9cea280c3593a8fd4fc857df6da2eba705c8f204d9ec050e6bba53e58d40ac4",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0010434901653323045,
+      "sha256": "6930fe148b1cf82313b20270e1d594efbe8e770ab0827130792c16f58ef0898b"
     },
     {
       "model": "hip_left_native",
@@ -1318,7 +1380,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.37",
+          "ref": "#o1.34",
           "name": "hip_left"
         }
       ],
@@ -1350,41 +1412,50 @@
         25.650000200001088
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": []
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native; bounds 0.003986100000680892, volume fraction 0.03306013482204716\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 22716,
-        "triangles": 45340,
-        "volume_mm3": 10384.08478607768,
+        "vertices": 7623,
+        "triangles": 15286,
+        "volume_mm3": 10380.940949812082,
         "bounds_mm": [
-          -20.583514,
+          -20.5875,
           -23.2875,
           0.0,
           20.5875,
-          23.283514,
+          23.2875,
           25.65
         ],
-        "nonmanifold_edges": 79,
+        "nonmanifold_edges": 14,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.003986100000680892,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0005317933397431315,
-      "sha256": "14ee3cc98a155582a0c8af6757d53dccd95a27d79d265565db61514b18d1d306",
-      "producer_implementation_sha256": "988463bda14b0d118bbd618fb016c4de6120968538af9b9177163c728a80d5bd",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 2.000010894676052e-07,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.0002288770787933186,
+      "sha256": "56046daa55bd865b40c03e0a2ece723bfdf473f75cc1120583fa294265944740"
     },
     {
       "model": "hip_left_native_right",
@@ -1392,7 +1463,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.48",
+          "ref": "#o1.45",
           "name": "hip_right"
         }
       ],
@@ -1424,41 +1495,50 @@
         25.65000020000285
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": []
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native_right; bounds 0.003986100000684445, volume fraction 0.0330601348500766\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 22715,
-        "triangles": 45338,
-        "volume_mm3": 10384.084784528903,
+        "vertices": 7623,
+        "triangles": 15286,
+        "volume_mm3": 10380.940949518123,
         "bounds_mm": [
           -20.5875,
           -23.2875,
           0.0,
-          20.583514,
-          23.283514,
+          20.5875,
+          23.2875,
           25.65
         ],
-        "nonmanifold_edges": 79,
+        "nonmanifold_edges": 14,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.003986100000684445,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0005317931905143828,
-      "sha256": "3c2a2326722273238a7aad62ffbe4a5e85c3bcfc93b972b77b167699a6de15ce",
-      "producer_implementation_sha256": "988463bda14b0d118bbd618fb016c4de6120968538af9b9177163c728a80d5bd",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 2.0000285161358988e-07,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.00022887705046924632,
+      "sha256": "f63bf2347324fac7606bf7c29db58f4ff6bdc709e69375afa2573f4405d97bcd"
     },
     {
       "model": "imu_yoke_bridge_native",
@@ -1495,17 +1575,24 @@
         42.44999999999999
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 7112,
-        "triangles": 14244,
-        "volume_mm3": 3402.1798846646043,
+        "vertices": 3218,
+        "triangles": 6456,
+        "volume_mm3": 3402.169020335607,
         "bounds_mm": [
           -31.5,
           -7.55,
@@ -1520,11 +1607,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 1.4210854715202004e-14,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.991864066789549e-07,
-      "sha256": "75dfe7e575a519b2776403a6cf62074585871b8b0d4406ee8d1aef924e9ea7ce",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 2.7941583612299156e-06,
+      "sha256": "966352606e9b943e56c624f7300e2443d8ebf62d594d38b9fa7820531b6c7a99"
     },
     {
       "model": "jaw_native",
@@ -1561,23 +1646,37 @@
         42.84547156257406
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: jaw_native; bounds 0.003688213729176937, volume fraction 0.12161106711959703\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 721171,
-        "triangles": 1442350,
-        "volume_mm3": 24689.41176541519,
+        "vertices": 8575,
+        "triangles": 17158,
+        "volume_mm3": 24671.869412478558,
         "bounds_mm": [
-          -61.699976,
+          -61.697092,
           -47.896884,
-          0.000163,
-          61.69996,
-          47.896884,
+          0.00161,
+          61.698964,
+          47.89216,
           42.845472
         ],
         "nonmanifold_edges": 0,
@@ -1585,12 +1684,10 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.000163,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.0005701544666456783,
-      "sha256": "137d214ece22b007c90d2b1e3e6d0849cd83d96a3e7e877c0507580c118209a2",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.004724213729183191,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.0012802706594627026,
+      "sha256": "0299f57d030afca9c93aaf7a063bc4bad019976c90ead21058574ca5f03579c1"
     },
     {
       "model": "jaw_soft_001_native",
@@ -1630,22 +1727,29 @@
         11.403730387205997
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 245010,
-        "triangles": 490016,
-        "volume_mm3": 45783.55889178956,
+        "vertices": 2094,
+        "triangles": 4184,
+        "volume_mm3": 45160.51277121185,
         "bounds_mm": [
-          -59.176392,
+          -59.17638,
           -21.75822,
-          0.000153,
-          59.176392,
+          0.002665,
+          59.17638,
           21.75822,
           11.40373
         ],
@@ -1654,12 +1758,10 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.000153,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.1212689402637171e-05,
-      "sha256": "53f847a861994a0d4ba7758c24c17a2769ed326f20f886726294a1af316fcafb",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.002665,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.013619572319715412,
+      "sha256": "f2afd3d061d34133ff23556a1d707dc53acc7f155bb0908f9166766911362d95"
     },
     {
       "model": "left_shell_native",
@@ -1667,18 +1769,18 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.35",
+          "ref": "#o1.32",
           "name": "left_shell_native"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 22965.764184956577,
+      "source_volume_mm3": 21180.65025460495,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.412470389070222e-12,
-        "volume_difference_mm3": 1.5449067067020223,
+        "volume_difference_mm3": 0.5576767791317252,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -1686,49 +1788,61 @@
         "saved_step_valid": true
       },
       "translation_mm": [
-        -21.499999999999996,
-        -16.87965388592692,
+        -21.65,
+        -16.493542487682763,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
-        -21.500000100000005,
-        -45.30996861758087,
+        -21.350000100000003,
+        -44.923857219336725,
         0,
-        21.500000100000005,
-        45.30996861758087,
+        21.350000100000003,
+        44.923857219336725,
         52.55438217176173
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 0.0012052193367253494, volume fraction 0.07981767158956872\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 544343,
-        "triangles": 1088690,
-        "volume_mm3": 22958.90709141195,
+        "vertices": 7872,
+        "triangles": 15748,
+        "volume_mm3": 20927.29443614584,
         "bounds_mm": [
-          -21.5,
-          -45.309972,
-          6e-06,
-          21.5,
-          45.309968,
-          52.55438
+          -21.35,
+          -44.922996,
+          0.006985,
+          21.35,
+          44.904616,
+          52.554252
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 6e-06,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.0002985789407834126,
-      "sha256": "cd8a1dc90cf61a5a727eb73b946c9099257ce60dd63cdeb5507a73c985e179f1",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.01924121933672751,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.011961663849485755,
+      "sha256": "4eb5301ff7504b518d17443c468ede85028797270b3e431d5f5033aa49d9f97c"
     },
     {
       "model": "leg_left_native",
@@ -1736,7 +1850,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.40",
+          "ref": "#o1.37",
           "name": "leg_left"
         }
       ],
@@ -1765,36 +1879,43 @@
         85.35100020001617
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 110206,
-        "triangles": 220448,
-        "volume_mm3": 8908.212803784072,
+        "vertices": 17974,
+        "triangles": 35984,
+        "volume_mm3": 8918.242708894624,
         "bounds_mm": [
           -6.26,
           -13.5,
           0.0,
           6.26,
           13.5,
-          85.350992
+          85.350928
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 12,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 8.200016168302682e-06,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.423938357769248e-06,
-      "sha256": "d4cc861bc262e4c6a70383ac8eb4e121a5eb80af820fa2d682e672a0ed4ff273",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 7.220001617724847e-05,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0011353511981442711,
+      "sha256": "b62150c72a97d62955ee4ade5cbb846ea98dc01e20edf3a50e8bbf85c3654e82"
     },
     {
       "model": "leg_left_native_right",
@@ -1802,7 +1923,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.51",
+          "ref": "#o1.48",
           "name": "leg_right"
         }
       ],
@@ -1831,36 +1952,43 @@
         85.35100020001617
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 110184,
-        "triangles": 220404,
-        "volume_mm3": 8908.212882150125,
+        "vertices": 17974,
+        "triangles": 35984,
+        "volume_mm3": 8918.24270874467,
         "bounds_mm": [
           -6.26,
           -13.5,
           0.0,
           6.26,
           13.5,
-          85.350992
+          85.350928
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 12,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 8.200016168302682e-06,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.432735497102635e-06,
-      "sha256": "31a39157185cc631d93e664f2628fb07612aed265d370d74b416bd8960945171",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 7.220001617724847e-05,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0011353511813106947,
+      "sha256": "b8a601afd3ef39e1cf1fb61cf138d5a87e254a95ed378b63797fd3175382971a"
     },
     {
       "model": "neck_001_native",
@@ -1897,17 +2025,24 @@
         18.00000000000682
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 22325,
-        "triangles": 44662,
-        "volume_mm3": 1801.7746407964778,
+        "vertices": 9864,
+        "triangles": 19740,
+        "volume_mm3": 1801.7149398159768,
         "bounds_mm": [
           -2.4,
           -14.3,
@@ -1922,11 +2057,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 6.821210263296962e-12,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.4049641299928493e-06,
-      "sha256": "88b232dfda8cad0073e02f933c3a71fbbe00c4f5dcaf2e9ae750e999c37870e9",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 3.172962608289049e-05,
+      "sha256": "aec1c78de81df9eddf3253faec70c733b999187d146d4f05a3af7eccded91e5a"
     },
     {
       "model": "neck_002_native",
@@ -1963,17 +2096,24 @@
         25.500000199999988
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 24513,
-        "triangles": 49038,
-        "volume_mm3": 3329.9778632844955,
+        "vertices": 10674,
+        "triangles": 21360,
+        "volume_mm3": 3329.922975094876,
         "bounds_mm": [
           -2.95,
           -14.3,
@@ -1988,11 +2128,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 1.9999998812636477e-07,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.771019385585129e-06,
-      "sha256": "4ec2564e5dc2d8f364b0481238bcfc6363e98e1844cebc30a4c828ab14e61d7d",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 1.2712092171677171e-05,
+      "sha256": "8521b7630f4c893d53e833d7a14c649a6937bc6c31d3fa1b8ba4d8bb969e568f"
     },
     {
       "model": "neck_internal_yoke_native",
@@ -2029,36 +2167,48 @@
         25.000000199999988
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_internal_yoke_native; bounds 0.0022021999999886077, volume fraction 0.15196862003182443\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 47454,
-        "triangles": 94952,
-        "volume_mm3": 11553.031672967352,
+        "vertices": 6209,
+        "triangles": 12462,
+        "volume_mm3": 11549.163087297322,
         "bounds_mm": [
           -34.0,
-          -34.049996,
-          6.9e-05,
+          -34.049632,
+          0.007699,
           34.0,
           34.05,
-          24.999872
+          24.997562
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.00012819999998825438,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 5.778548380482482e-06,
-      "sha256": "3d9d494643d2e101365bb9e4bc40b75709841d6e3cae099b6af8913adc6cc586",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.007699,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.00032907797537439366,
+      "sha256": "aa584cdbbc6a6921e289b48221b86e1ce4c5f84605a264cdc85bf2d82e6968d3"
     },
     {
       "model": "neck_pitch_001_native",
@@ -2095,17 +2245,31 @@
         35.73600020000035
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_pitch_001_native; bounds 2.0000035050316e-07, volume fraction 0.05642141476893568\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 178082,
-        "triangles": 356210,
-        "volume_mm3": 9976.203668010437,
+        "vertices": 10950,
+        "triangles": 21952,
+        "volume_mm3": 9972.73879906958,
         "bounds_mm": [
           -23.45,
           -13.5,
@@ -2120,11 +2284,9 @@
         "warnings": []
       },
       "max_bound_error_mm": 2.0000035050316e-07,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 6.135965604220817e-06,
-      "sha256": "8c4e5e754a23b56970ee2ffaa92b1e8c7d56c6624956d476071477eb30f1bac7",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.0003534472070186801,
+      "sha256": "a86e9223002cc8eb3e32eb3d463da488ab40bfa1d8c8f81fcc734a0cdf2df723"
     },
     {
       "model": "noenoeil_native",
@@ -2161,36 +2323,41 @@
         40.5
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 6957,
-        "triangles": 13914,
-        "volume_mm3": 10470.311394640561,
+        "vertices": 1055,
+        "triangles": 2110,
+        "volume_mm3": 10467.697951160819,
         "bounds_mm": [
-          -20.24975,
+          -20.25,
           -6.4125,
-          6.2e-05,
+          0.004956,
           20.25,
           6.4125,
-          40.49994
+          40.495044
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.0002500000000011937,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 9.796022187458196e-06,
-      "sha256": "3ece3acb3aa23c987843bdb0f6efcf4477d291d0e67505436f037fd5319dc256",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.004956,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00025939871115138814,
+      "sha256": "524aded91cf747be54a5330f7d1d7152af1f0825a40752e5be0effa258e9e266"
     },
     {
       "model": "right_shell_native",
@@ -2198,18 +2365,18 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.36",
+          "ref": "#o1.33",
           "name": "right_shell_native"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 23746.415188809966,
+      "source_volume_mm3": 21818.803220658818,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.872457909892546e-12,
-        "volume_difference_mm3": 0.8619620254467009,
+        "volume_difference_mm3": 0.8212051026566769,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -2217,49 +2384,61 @@
         "saved_step_valid": true
       },
       "translation_mm": [
-        25.299999950000004,
-        -16.879653885926913,
+        25.449999950000002,
+        -16.493542487682763,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
-        -25.300000050000005,
-        -45.30996861758088,
+        -25.15000005,
+        -44.923857219336725,
         0,
-        25.300000050000005,
-        45.30996861758088,
+        25.15000005,
+        44.923857219336725,
         52.554382171922256
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.05,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 0.01,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 0.0012052193367253494, volume fraction 0.07473813910298578\n"
+          }
+        ]
       },
       "mesh": {
-        "vertices": 549440,
-        "triangles": 1098888,
-        "volume_mm3": 23587.498015363017,
+        "vertices": 8573,
+        "triangles": 17154,
+        "volume_mm3": 21555.62630880369,
         "bounds_mm": [
-          -25.3,
-          -45.309972,
-          6e-06,
-          25.3,
-          45.309972,
-          52.55438
+          -25.15,
+          -44.922996,
+          0.006985,
+          25.15,
+          44.904616,
+          52.554252
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 6e-06,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.006692259534055303,
-      "sha256": "c6e87fdea51b3f5137b55340597a6a689e9e1971843c12ee0b3ad72856102c9a",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.01924121933672751,
+      "allowed_bound_error_mm": 0.10001,
+      "relative_volume_error": 0.012061931591460623,
+      "sha256": "19f6a3c1a41dbf8a5af040ceffc08b748b023cd134e8a046525d9c9a5851b5d4"
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -2296,22 +2475,29 @@
         39.25
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 8663,
-        "triangles": 17338,
-        "volume_mm3": 13029.591552833763,
+        "vertices": 4390,
+        "triangles": 8792,
+        "volume_mm3": 13030.175696414135,
         "bounds_mm": [
           -32.91,
-          -7.244836,
+          -7.244184,
           0.0,
-          32.90992,
+          32.909992,
           7.245,
           39.25
         ],
@@ -2320,12 +2506,10 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.00016400000000071913,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 3.373704654830757e-06,
-      "sha256": "151798036ff77aa1acb0d9b10b5e8d27d5a08c2c5df80a63658ef7ae515bf925",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.0008160000000012602,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 4.820592742493965e-05,
+      "sha256": "37483b1a6bc013bc3282060324a5c50122ea464c87b462f8765ea62b722aec1c"
     },
     {
       "model": "soft_mouth_top_native",
@@ -2362,36 +2546,43 @@
         4.422853690633588
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.0005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": false,
+        "library_manifold": false,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 21300,
-        "triangles": 42590,
-        "volume_mm3": 6639.550072067669,
+        "vertices": 5769,
+        "triangles": 11534,
+        "volume_mm3": 6607.824942067333,
         "bounds_mm": [
-          -59.273544,
-          -21.978478,
-          0.0,
-          59.273536,
+          -59.271928,
+          -21.978472,
+          3.6e-05,
+          59.272,
           21.978486,
           4.422854
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 34,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 6.0739236992901624e-05,
-      "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 1.1648218138456401e-05,
-      "sha256": "37063d2858a0484954ad6c7cca1c977da097fcf673e546fa109d508e88e449f2",
-      "producer_implementation_sha256": "3cd387bc6f74b82f0794872303a04ba5292f248cc7ce0bd1545eee226c269cda",
-      "reused_verified_same_source_conversion": true
+      "max_bound_error_mm": 0.001668739236990291,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.004789797356973398,
+      "sha256": "7c02dce98ea8097c72e9df08ad6e86a5644b2647a810e51da0ea9f1f30af5c2c"
     },
     {
       "model": "sole_left_native",
@@ -2399,7 +2590,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.45",
+          "ref": "#o1.42",
           "name": "sole_left"
         }
       ],
@@ -2433,6 +2624,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2460,9 +2653,7 @@
       "max_bound_error_mm": 0.0026781147819932016,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0015575609715447068,
-      "sha256": "c4786c242c7acf718c3ca6afef56bf35161b9d913a604ad1d87c46ecb6fe5d5d",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "1a189d94948fc985023035de5a7ad7f4efc06ab721629344089e3e194e596c26"
     },
     {
       "model": "sole_left_native_right",
@@ -2470,7 +2661,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.56",
+          "ref": "#o1.53",
           "name": "sole_right"
         }
       ],
@@ -2507,6 +2698,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2534,9 +2727,7 @@
       "max_bound_error_mm": 0.0026781147818191187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0015573608296856807,
-      "sha256": "8b4ec0e48f9a8dfddff6ee1e0578547e781dc664cfe7217e836019a94f6f82eb",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "3ac12880d94fbcd736fe671eee4c7423af10e464d6da27128f62eedffe5d4928"
     },
     {
       "model": "top_head_shell_native",
@@ -2585,7 +2776,14 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": []
+        "prior_attempt_failures": [
+          {
+            "algorithm": "Watson",
+            "tolerance_mm": 0.01,
+            "exit_code": 1,
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: top_head_shell_native; bounds 0.022370682961152966, volume fraction 0.41482198440054\n"
+          }
+        ]
       },
       "mesh": {
         "vertices": 16749,
@@ -2607,8 +2805,7 @@
       "max_bound_error_mm": 0.023411764568209037,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.0007839997356695338,
-      "sha256": "67f21a3c5af80ab63539a6c789b0ebb6d3c0ae07e449894f5946468a0fa9b0be",
-      "producer_implementation_sha256": "7352368f152b04ff938a4656c1505014616600a870e78c51bf3fdf8e40a4cdd6"
+      "sha256": "025616b1689a9f8243bca3ffcb635cabbc37942c166622a5694ce9eb504b293d"
     },
     {
       "model": "trunk_base_native",
@@ -2623,26 +2820,26 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 15477.044639242018,
+      "source_volume_mm3": 40104.743015717875,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "bounds_error_mm": 1.758593271006248e-12,
-        "volume_difference_mm3": 1.5076875570230186e-07,
+        "bounds_error_mm": 3.772981926886132e-12,
+        "volume_difference_mm3": 0.00012074822734575719,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
         -0.0,
-        -5.84999994999912,
-        -155.45
+        -17.99999999999912,
+        -139.4499999
       ],
       "expected_bounds_mm": [
         -38.2750001,
-        -29.850000050000883,
+        -42.00000010000088,
         0,
         38.2750001,
-        29.850000050000883,
-        9.000000100000847
+        42.00000010000088,
+        25.000000200003797
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2650,6 +2847,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2658,28 +2857,26 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 26727,
-        "triangles": 53518,
-        "volume_mm3": 15637.711514826411,
+        "vertices": 28923,
+        "triangles": 57910,
+        "volume_mm3": 40270.285021657626,
         "bounds_mm": [
           -38.275,
-          -29.85,
+          -42.0,
           0.0,
           38.275,
-          29.85,
-          9.0
+          42.0,
+          25.0
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 1.000008467144653e-07,
+      "max_bound_error_mm": 2.0000379663542844e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.010380979013074785,
-      "sha256": "3bf5bc1cf47087628b41976cedccbe192ab32c9f97e04266b80652b258c26e54",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "relative_volume_error": 0.004127741346575187,
+      "sha256": "7cd8915bc14b4aea71daaf201788ada7187a7c2a684795d258e070bd7f771900"
     },
     {
       "model": "ubec_clamp_native",
@@ -2721,6 +2918,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2748,9 +2947,7 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00012975095540893557,
-      "sha256": "58e27cde059b10a98e5f51ef147f2a2651dadff789c1ca3c642355cf24fe82c6",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "e4ce44ff64c4bc06f4270bd56c1050d42151b0026022ea73cf94af0f0cfdab61"
     },
     {
       "model": "upper_leg_left_native",
@@ -2758,7 +2955,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.39",
+          "ref": "#o1.36",
           "name": "upper_leg_left"
         }
       ],
@@ -2795,6 +2992,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2824,9 +3023,7 @@
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.013769628327064312,
-      "sha256": "2a932681200a67a2b88f176899f3feed977a3f0a9c292fb80ec5e30ab221e492",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "4226d86f693244c7960b2b35a9ca68482a8493d035e8b23fc59cc091f15a8683"
     },
     {
       "model": "upper_leg_left_native_right",
@@ -2834,7 +3031,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.50",
+          "ref": "#o1.47",
           "name": "upper_leg_right"
         }
       ],
@@ -2868,6 +3065,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2897,9 +3096,7 @@
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.013767187976067703,
-      "sha256": "bccdd696ad881477df64e50fc689df131d49adca8c524509b552d22e9150ae01",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "b5016a2478654ad390df5bd0bc17a89f8a363291cc9b2bccea1462db35b3bc55"
     },
     {
       "model": "yaw2roll_left_native",
@@ -2907,7 +3104,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.38",
+          "ref": "#o1.35",
           "name": "yaw2roll_left"
         }
       ],
@@ -2941,6 +3138,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -2970,9 +3169,7 @@
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00034436929403734517,
-      "sha256": "9996714ff19f42e5bdc181514a3459153aec2a0b07a9f72fa44f8871479f74a7",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "c6c9c2d9ed673ac139cde9c19ab3802eaf4e9c4536827dc1eac3d3def208af5d"
     },
     {
       "model": "yaw2roll_left_native_right",
@@ -2980,7 +3177,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.49",
+          "ref": "#o1.46",
           "name": "yaw2roll_right"
         }
       ],
@@ -3014,6 +3211,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -3043,9 +3242,7 @@
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00034436929403673216,
-      "sha256": "6ab519ca05fc0a21df846cad49f21c50023ce5a1b02552bd10df157f9efec7b3",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "ee502d2f125c36dc952b799206d0b9b680a0a6c6e69dffa480790ca41c804f98"
     },
     {
       "model": "yaw_roll_link_native",
@@ -3087,6 +3284,8 @@
         "native_parallel": false,
         "control_surface_deflection": false,
         "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "seam_weld_tolerance_mm": 0.0001,
@@ -3114,59 +3313,127 @@
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00015423211005258225,
-      "sha256": "b3d98b55bcf1a234b9c4dd1c63d4abc182ca22c837a9c9a10d6ab4f582cbd938",
-      "producer_implementation_sha256": "329379667969f41a74f6442358d794379ad597ac6d7ec0c58e7e4231e3766845",
-      "reused_verified_same_source_conversion": true
+      "sha256": "742a5b26f699270dba362136435a54c2975ba6b69f7c2295151d035e4f302773"
+    },
+    {
+      "model": "backpack_dock_native",
+      "filename": "3mf/backpack_dock_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.73",
+          "name": "backpack_dock"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "unspecified",
+      "source_volume_mm3": 46411.03881574839,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 5.9368176107677775e-15,
+        "volume_difference_mm3": 1.0458192264195532e-05,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -0.0,
+        -70.25,
+        -79.9999999
+      ],
+      "expected_bounds_mm": [
+        -34.0000001,
+        -10.25,
+        0,
+        34.0000001,
+        10.25,
+        84.45000019999998
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "control_surface_deflection": false,
+        "internal_vertices": false,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 3189,
+        "triangles": 6390,
+        "volume_mm3": 46410.431861067074,
+        "bounds_mm": [
+          -34.0,
+          -10.25,
+          0.0,
+          34.0,
+          10.25,
+          84.45
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.9999997391551005e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 1.3077808573205838e-05,
+      "sha256": "0cd285b6a08df9d78dd9323e318fa5da5c12b0ce7ae243e1ef68058d11291088"
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "0cad189d50a565bf538a5f5b168667ad772bb55800001e2352be183508d8cdba",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "bfd9aa9e88b850d13455099df4c7e1a8aa074208fb090cafa10be9abb8a1ac11",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "253b8be532bb2a56425cd03a426f6b97af194aa64a83ab5931a79d873a0a1374",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "76d42e03345aec7282777791aa9234d7543106f17c6935dce60ba2f2d56d820e",
-    "3mf/ankle_eye_left_native.3mf": "37b31747c912ace67e408f185ec092b984444286c9ce253dac5928063896dbfe",
-    "3mf/ankle_eye_left_native_right.3mf": "ae356ae9426c5b93b7181ca045a9fd464780d068b4d23062ff161c30916ac95f",
-    "3mf/ankle_left_native.3mf": "1dfddf9ebfde354d5ff7fd75725cab422dff036142a76a7fcc990cbc17a321f3",
-    "3mf/ankle_left_native_right.3mf": "1af17a078afafd15c0b64e0b7a57a33752ca7b5dab8519836642682714135fd3",
-    "3mf/battery_carrier_native.3mf": "64c03cf085103b90e8a47991b60ed16839da9e3473112d39dd68419f52d82922",
-    "3mf/battery_donor_cover_native.3mf": "09582074df399747724119cb7add00e1c20b85f849cb9c5213ffc432ead8d61c",
-    "3mf/bottom_head_shell_native.3mf": "36933d50a7fa64849bceb8418047a0134e7c469a24b88569dc4ff39323546128",
-    "3mf/electronics_deck_native.3mf": "f74706692b4bc335f642fd7d2aedf252a0533167118c5ef0cb5890d04f3005e8",
-    "3mf/face_part_native.3mf": "515ea16a91ebb2817380a375c0fd2e2d7a64b137ca77b7e7f8ab36f550061bd6",
-    "3mf/face_radxa_bracket_native.3mf": "fe1bfcb806ea2c952286f4774582e53a6ac6799c4e8d182a02fa2cb496b14ff7",
-    "3mf/foot_left_native_a.3mf": "8bba8ceaead9e095bc13b1307c18cfc68c89775b4df32316097daddfcedc6209",
-    "3mf/foot_left_native_a_right.3mf": "fdfa0cce2cccef1840021788945630bc5cf377fb223776dde2383efc27bd209c",
-    "3mf/foot_left_native_b.3mf": "59f8080a49087fe37bfde462ea364788f86e7fd96aa22fb47d38b87dd46b3f35",
-    "3mf/foot_left_native_b_right.3mf": "107b0b9496ae8270085b6e244e91a3e9a94f185a08d8e8d8b978df545aa1e249",
-    "3mf/head_frame_native.3mf": "c9cea280c3593a8fd4fc857df6da2eba705c8f204d9ec050e6bba53e58d40ac4",
-    "3mf/hip_left_native.3mf": "14ee3cc98a155582a0c8af6757d53dccd95a27d79d265565db61514b18d1d306",
-    "3mf/hip_left_native_right.3mf": "3c2a2326722273238a7aad62ffbe4a5e85c3bcfc93b972b77b167699a6de15ce",
-    "3mf/imu_yoke_bridge_native.3mf": "75dfe7e575a519b2776403a6cf62074585871b8b0d4406ee8d1aef924e9ea7ce",
-    "3mf/jaw_native.3mf": "137d214ece22b007c90d2b1e3e6d0849cd83d96a3e7e877c0507580c118209a2",
-    "3mf/jaw_soft_001_native.3mf": "53f847a861994a0d4ba7758c24c17a2769ed326f20f886726294a1af316fcafb",
-    "3mf/left_shell_native.3mf": "cd8a1dc90cf61a5a727eb73b946c9099257ce60dd63cdeb5507a73c985e179f1",
-    "3mf/leg_left_native.3mf": "d4cc861bc262e4c6a70383ac8eb4e121a5eb80af820fa2d682e672a0ed4ff273",
-    "3mf/leg_left_native_right.3mf": "31a39157185cc631d93e664f2628fb07612aed265d370d74b416bd8960945171",
-    "3mf/neck_001_native.3mf": "88b232dfda8cad0073e02f933c3a71fbbe00c4f5dcaf2e9ae750e999c37870e9",
-    "3mf/neck_002_native.3mf": "4ec2564e5dc2d8f364b0481238bcfc6363e98e1844cebc30a4c828ab14e61d7d",
-    "3mf/neck_internal_yoke_native.3mf": "3d9d494643d2e101365bb9e4bc40b75709841d6e3cae099b6af8913adc6cc586",
-    "3mf/neck_pitch_001_native.3mf": "8c4e5e754a23b56970ee2ffaa92b1e8c7d56c6624956d476071477eb30f1bac7",
-    "3mf/noenoeil_native.3mf": "3ece3acb3aa23c987843bdb0f6efcf4477d291d0e67505436f037fd5319dc256",
-    "3mf/right_shell_native.3mf": "c6e87fdea51b3f5137b55340597a6a689e9e1971843c12ee0b3ad72856102c9a",
-    "3mf/roll_front_bulkhead_native.3mf": "151798036ff77aa1acb0d9b10b5e8d27d5a08c2c5df80a63658ef7ae515bf925",
-    "3mf/soft_mouth_top_native.3mf": "37063d2858a0484954ad6c7cca1c977da097fcf673e546fa109d508e88e449f2",
-    "3mf/sole_left_native.3mf": "c4786c242c7acf718c3ca6afef56bf35161b9d913a604ad1d87c46ecb6fe5d5d",
-    "3mf/sole_left_native_right.3mf": "8b4ec0e48f9a8dfddff6ee1e0578547e781dc664cfe7217e836019a94f6f82eb",
-    "3mf/top_head_shell_native.3mf": "67f21a3c5af80ab63539a6c789b0ebb6d3c0ae07e449894f5946468a0fa9b0be",
-    "3mf/trunk_base_native.3mf": "3bf5bc1cf47087628b41976cedccbe192ab32c9f97e04266b80652b258c26e54",
-    "3mf/ubec_clamp_native.3mf": "58e27cde059b10a98e5f51ef147f2a2651dadff789c1ca3c642355cf24fe82c6",
-    "3mf/upper_leg_left_native.3mf": "2a932681200a67a2b88f176899f3feed977a3f0a9c292fb80ec5e30ab221e492",
-    "3mf/upper_leg_left_native_right.3mf": "bccdd696ad881477df64e50fc689df131d49adca8c524509b552d22e9150ae01",
-    "3mf/yaw2roll_left_native.3mf": "9996714ff19f42e5bdc181514a3459153aec2a0b07a9f72fa44f8871479f74a7",
-    "3mf/yaw2roll_left_native_right.3mf": "6ab519ca05fc0a21df846cad49f21c50023ce5a1b02552bd10df157f9efec7b3",
-    "3mf/yaw_roll_link_native.3mf": "b3d98b55bcf1a234b9c4dd1c63d4abc182ca22c837a9c9a10d6ab4f582cbd938",
-    "PARTS.csv": "44ab63f8bc1c0a3c6ec8e832bdc95b1f624e92619f4e93d1c3f8d69f1e56e795",
-    "README.md": "9bdaeb92b98dcb0c8d67b47c284d1ecac355a789204a63aebe57e6297643763e"
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "189ae8b7086d3778e6cbb4ab44faf8e0c10fc9136ff70a7767a228a3a0f0cd11",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "571bd09b69ea2b6bd6773d3fb550a90d10babee49a8ab94f51c4c6c7ba8202b9",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "5f08ef1b3021c7e74400e5cf476f5eb4eb1849047c7b06032548df13fdc7cbf2",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "d5a5e023ee7e16b399f2e6a2963a51cf7769486aa98a793f786c2fc17546a5ad",
+    "3mf/ankle_eye_left_native.3mf": "0496a6c03f1b5de50f1535f67b1a03ebdfbda0f8cc3419325490d91aea0dd3ad",
+    "3mf/ankle_eye_left_native_right.3mf": "3361f5c388e368865927a2fb18ddb6b33514a30cc6ed7e07826050927165529c",
+    "3mf/ankle_left_native.3mf": "a955765ff2a0e8d704b6a5bfe5ea054e58fcdce54d2dbe1969163ffd41cbc4f2",
+    "3mf/ankle_left_native_right.3mf": "68fc2271fe4fea8bc52efd6cabcc5a6e531f2536eae75ca5bde7504aa785836e",
+    "3mf/backpack_dock_native.3mf": "0cd285b6a08df9d78dd9323e318fa5da5c12b0ce7ae243e1ef68058d11291088",
+    "3mf/bottom_head_shell_native.3mf": "c93d559de10b529d0e901e717bba8068b621c7dc4ebf6e64fc5c5e6180f71922",
+    "3mf/electronics_deck_native.3mf": "bb0257a9d30fafec23e54a1a2affa21110e8a647b518699c93293cb55d8c9c2f",
+    "3mf/face_part_native.3mf": "181d9c0f0212c48b41d23a541d1b59787c391d868f435d04827d4be485729435",
+    "3mf/face_radxa_bracket_native.3mf": "1a2cf1f03798c7daae880f743d4d1be46ceef898113544285cbfa6825bc6c765",
+    "3mf/foot_left_native_a.3mf": "25a97791ce23492d2318a8e11037f092b4496e81619388c68ec1c6cf188f5747",
+    "3mf/foot_left_native_a_right.3mf": "de7808077e285e19ed8277d48c57fd1d1926c1111fe871ae5227484d9d97e030",
+    "3mf/foot_left_native_b.3mf": "892dc0f051953af18fb231da911e3209930ccf83d431f7ab609dedca24a55341",
+    "3mf/foot_left_native_b_right.3mf": "45ff02a1350778802fe3243644047c3b7256370c7c97ae92d3e754d8f3649771",
+    "3mf/head_frame_native.3mf": "6930fe148b1cf82313b20270e1d594efbe8e770ab0827130792c16f58ef0898b",
+    "3mf/hip_left_native.3mf": "56046daa55bd865b40c03e0a2ece723bfdf473f75cc1120583fa294265944740",
+    "3mf/hip_left_native_right.3mf": "f63bf2347324fac7606bf7c29db58f4ff6bdc709e69375afa2573f4405d97bcd",
+    "3mf/imu_yoke_bridge_native.3mf": "966352606e9b943e56c624f7300e2443d8ebf62d594d38b9fa7820531b6c7a99",
+    "3mf/jaw_native.3mf": "0299f57d030afca9c93aaf7a063bc4bad019976c90ead21058574ca5f03579c1",
+    "3mf/jaw_soft_001_native.3mf": "f2afd3d061d34133ff23556a1d707dc53acc7f155bb0908f9166766911362d95",
+    "3mf/left_shell_native.3mf": "4eb5301ff7504b518d17443c468ede85028797270b3e431d5f5033aa49d9f97c",
+    "3mf/leg_left_native.3mf": "b62150c72a97d62955ee4ade5cbb846ea98dc01e20edf3a50e8bbf85c3654e82",
+    "3mf/leg_left_native_right.3mf": "b8a601afd3ef39e1cf1fb61cf138d5a87e254a95ed378b63797fd3175382971a",
+    "3mf/neck_001_native.3mf": "aec1c78de81df9eddf3253faec70c733b999187d146d4f05a3af7eccded91e5a",
+    "3mf/neck_002_native.3mf": "8521b7630f4c893d53e833d7a14c649a6937bc6c31d3fa1b8ba4d8bb969e568f",
+    "3mf/neck_internal_yoke_native.3mf": "aa584cdbbc6a6921e289b48221b86e1ce4c5f84605a264cdc85bf2d82e6968d3",
+    "3mf/neck_pitch_001_native.3mf": "a86e9223002cc8eb3e32eb3d463da488ab40bfa1d8c8f81fcc734a0cdf2df723",
+    "3mf/noenoeil_native.3mf": "524aded91cf747be54a5330f7d1d7152af1f0825a40752e5be0effa258e9e266",
+    "3mf/right_shell_native.3mf": "19f6a3c1a41dbf8a5af040ceffc08b748b023cd134e8a046525d9c9a5851b5d4",
+    "3mf/roll_front_bulkhead_native.3mf": "37483b1a6bc013bc3282060324a5c50122ea464c87b462f8765ea62b722aec1c",
+    "3mf/soft_mouth_top_native.3mf": "7c02dce98ea8097c72e9df08ad6e86a5644b2647a810e51da0ea9f1f30af5c2c",
+    "3mf/sole_left_native.3mf": "1a189d94948fc985023035de5a7ad7f4efc06ab721629344089e3e194e596c26",
+    "3mf/sole_left_native_right.3mf": "3ac12880d94fbcd736fe671eee4c7423af10e464d6da27128f62eedffe5d4928",
+    "3mf/top_head_shell_native.3mf": "025616b1689a9f8243bca3ffcb635cabbc37942c166622a5694ce9eb504b293d",
+    "3mf/trunk_base_native.3mf": "7cd8915bc14b4aea71daaf201788ada7187a7c2a684795d258e070bd7f771900",
+    "3mf/ubec_clamp_native.3mf": "e4ce44ff64c4bc06f4270bd56c1050d42151b0026022ea73cf94af0f0cfdab61",
+    "3mf/upper_leg_left_native.3mf": "4226d86f693244c7960b2b35a9ca68482a8493d035e8b23fc59cc091f15a8683",
+    "3mf/upper_leg_left_native_right.3mf": "b5016a2478654ad390df5bd0bc17a89f8a363291cc9b2bccea1462db35b3bc55",
+    "3mf/yaw2roll_left_native.3mf": "c6c9c2d9ed673ac139cde9c19ab3802eaf4e9c4536827dc1eac3d3def208af5d",
+    "3mf/yaw2roll_left_native_right.3mf": "ee502d2f125c36dc952b799206d0b9b680a0a6c6e69dffa480790ca41c804f98",
+    "3mf/yaw_roll_link_native.3mf": "742a5b26f699270dba362136435a54c2975ba6b69f7c2295151d035e4f302773",
+    "PARTS.csv": "f5d3a1eaeed0a685ce69491d8fea6908d24d6b1158576e64401d3b707a7ae904",
+    "README.md": "b56447cd186284ed5e05965ac4788d6c04b7a30d1f92be40eac91c14dd4ca9a6"
   },
-  "manifest_content_sha256": "fbb9025c5f17e868f16ceabc8f7a8229dc1507179dbe61686f7093978bd7a4d2"
+  "manifest_content_sha256": "bdb00a8b11c306d944002c7e49a7b7283c55312bc019dfab7ac01c7a2f01102f"
 }

@@ -94,6 +94,25 @@
       ],
       "report": "reports/latest/radxa_heatsink_fit.json",
       "coverage": "Saved rest pose; official outer envelope and modeled inlet, 1e-5 mm3 overlap threshold, three cover-wall samples >=2 mm and nominal mounting stack. Detailed cooler geometry approximate; no thermal validation."
+    },
+    {
+      "id": "assembly.backpack",
+      "call": "checks.assembly:backpack",
+      "purpose": "Two-part screwed battery mount, functional openings and sampled leg clearance",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
+        "src/animation.js",
+        "src/lib/backpack.py",
+        "checks/assembly.py",
+        "checks/common.py"
+      ],
+      "report": "reports/latest/backpack_verification.json",
+      "coverage": "Valid single-solid frame, dock and shells; four M3 screw/nut envelopes, clamping patches and battery-removed driver paths; continuous support roots; battery bounds; dock/shell/battery gaps; reinforced corner sections; static overlaps and thumb approach; 43 discrete samples for 30 leg occurrences against battery, frame, dock and corners. No continuous sweep, slicing or physical fit/strength verification."
     }
   ]
 }

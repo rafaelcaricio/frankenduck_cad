@@ -241,7 +241,8 @@ def make():
         model.add('switch_relief', _cone_in(SW_X, SW_Z, SW_RELIEF_R, SW_RELIEF_R + SW_RELIEF_DEPTH, SW_RELIEF_Y, SW_RELIEF_DEPTH), op='cut', name='KCD1 45-degree relief')
     model.material('pla', color='#99deef')
     result = model.result()
-    return to_build123d(model, 'right_shell_native')
+    from lib.backpack import relieve_shell
+    return relieve_shell(to_build123d(model, 'right_shell_native'), 'right_shell_native')
 
 
 @step(out="../../STEP/parts/right_shell_native.step")

@@ -475,38 +475,6 @@
       ]
     },
     {
-      "name": "battery_donor_cover_native",
-      "component": "battery_donor_cover_native",
-      "params": {},
-      "at": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          "Z",
-          -90
-        ]
-      ]
-    },
-    {
-      "name": "battery_carrier_native",
-      "component": "battery_carrier_native",
-      "params": {},
-      "at": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          "Z",
-          -90
-        ]
-      ]
-    },
-    {
       "name": "power_switch_kcd1_native",
       "component": "power_switch_kcd1_native",
       "params": {},
@@ -525,22 +493,6 @@
     {
       "name": "mpu6050_trunk_native",
       "component": "mpu6050_trunk_native",
-      "params": {},
-      "at": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          "Z",
-          -90
-        ]
-      ]
-    },
-    {
-      "name": "npf550_pack_native",
-      "component": "npf550_pack_native",
       "params": {},
       "at": [
         [
@@ -1293,6 +1245,42 @@
         ]
       ],
       "params": {}
+    },
+    {
+      "name": "parkside_battery",
+      "component": "parkside_pap_204_a1",
+      "params": {},
+      "at": [
+        [
+          0,
+          134.4,
+          126.815
+        ],
+        [
+          [
+            1,
+            -1,
+            1
+          ],
+          120
+        ]
+      ]
+    },
+    {
+      "name": "backpack_dock",
+      "component": "backpack_dock_native",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          0
+        ]
+      ]
     }
   ],
   "mates": [
@@ -1301,18 +1289,6 @@
       "kind": "fastened",
       "parent": "#trunk_base",
       "child": "#imu_yoke_bridge_native"
-    },
-    {
-      "name": "fix_battery_donor_cover_native",
-      "kind": "fastened",
-      "parent": "#trunk_base",
-      "child": "#battery_donor_cover_native"
-    },
-    {
-      "name": "fix_battery_carrier_native",
-      "kind": "fastened",
-      "parent": "#trunk_base",
-      "child": "#battery_carrier_native"
     },
     {
       "name": "fix_power_switch_kcd1_native",
@@ -1325,12 +1301,6 @@
       "kind": "fastened",
       "parent": "#trunk_base",
       "child": "#mpu6050_trunk_native"
-    },
-    {
-      "name": "fix_npf550_pack_native",
-      "kind": "fastened",
-      "parent": "#trunk_base",
-      "child": "#npf550_pack_native"
     },
     {
       "name": "fix_left_shell_native",
@@ -1943,6 +1913,18 @@
       "kind": "fastened",
       "parent": "#import_pcb_radxa_cubie_a7z",
       "child": "#radxa_6530b"
+    },
+    {
+      "name": "fix_parkside_pap_204_a1",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#parkside_battery"
+    },
+    {
+      "name": "backpack_dock_mount",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#backpack_dock"
     }
   ],
   "poses": {

@@ -4,6 +4,7 @@ import math
 import json
 from pathlib import Path
 from parts.trunk_base_native import trunk_base_native
+from parts.backpack_dock_native import backpack_dock_native
 from parts.head_frame_native import head_frame_native
 from parts.roll_front_bulkhead_native import roll_front_bulkhead_native
 from parts.yaw_roll_link_native import yaw_roll_link_native
@@ -34,11 +35,8 @@ from parts.neck_internal_yoke_native import neck_internal_yoke_native
 from parts.import_horn_upper_passive import import_horn_upper_passive
 from parts.import_horn_lower_passive import import_horn_lower_passive
 from parts.imu_yoke_bridge_native import imu_yoke_bridge_native
-from parts.battery_donor_cover_native import battery_donor_cover_native
-from parts.battery_carrier_native import battery_carrier_native
 from parts.power_switch_kcd1_native import power_switch_kcd1_native
 from parts.mpu6050_trunk_native import mpu6050_trunk_native
-from parts.npf550_pack_native import npf550_pack_native
 from parts.left_shell_native import left_shell_native
 from parts.right_shell_native import right_shell_native
 from parts.hip_left_native import hip_left_native
@@ -64,6 +62,8 @@ from parts.sole_left_native_right import sole_left_native_right
 from parts.foot_left_native_a_right import foot_left_native_a_right
 from parts.foot_left_native_b_right import foot_left_native_b_right
 from parts.sts3215_servo_native import sts3215_servo_native
+from parts.parkside_pap_204_a1 import parkside_pap_204_a1
+from lib.backpack import BATTERY_AT
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSEMBLY_PATH = ROOT / "source/assembly_data.json"
@@ -124,11 +124,8 @@ def frankenduck():
     children.append(place(import_horn_upper_passive(), 'import_horn_upper_passive', ((0, 0, 0), ('Z', -90))))
     children.append(place(import_horn_lower_passive(), 'import_horn_lower_passive', ((0, 0, 0), ('Z', -90))))
     children.append(place(imu_yoke_bridge_native(), 'imu_yoke_bridge_native', ((0, 0, 0), ('Z', -90))))
-    children.append(place(battery_donor_cover_native(), 'battery_donor_cover_native', ((0, 0, 0), ('Z', -90))))
-    children.append(place(battery_carrier_native(), 'battery_carrier_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(power_switch_kcd1_native(), 'power_switch_kcd1_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(mpu6050_trunk_native(), 'mpu6050_trunk_native', ((0, 0, 0), ('Z', -90))))
-    children.append(place(npf550_pack_native(), 'npf550_pack_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(left_shell_native(), 'left_shell_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(right_shell_native(), 'right_shell_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(hip_left_native(), 'hip_left', ((0, 0, 0), ('Z', -90))))
@@ -169,6 +166,8 @@ def frankenduck():
     children.append(place(sts3215_servo_native(), 'servo_head_yaw', ((0.0, -35.1, 258.0048), ('Z', -90))))
     children.append(place(sts3215_servo_native(), 'servo_jaw_direct', ((53.0, -35.235, 284.6348), ((-0.052265535382890235, -0.9972577629795188, 0.05239530502082981), 90.01400599288137))))
     children.append(place(radxa_6530b(), 'radxa_6530b', HEATSINK_AT))
+    children.append(place(parkside_pap_204_a1(), 'parkside_battery', BATTERY_AT))
+    children.append(place(backpack_dock_native(), 'backpack_dock', ((0,0,0), ('Z',0))))
     return bd.Compound(children=children, label="frankenduck")
 
 if __name__ == "__main__":
