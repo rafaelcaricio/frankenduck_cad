@@ -96,7 +96,10 @@ are retained. The pre-cooler STEP and source are saved under
 [PARKSIDE PAP 204 A1 — 20 V 4 Ah battery in STEVE](https://stevecad.studio/?document=d08bce05-3ec5-4847-9ca4-395f8f05d915)
 at **revision 6** as one reusable local component. Its case, slide rail, contacts,
 locking tooth, release paddle, charge button, lens and side artwork remain grouped
-under one battery root, with 30 named coloured bodies containing 66 solids.
+inside one selectable battery component containing 66 solids. The 30 source
+geometry groups are internal construction details, not separate viewer parts.
+Colours are retained on all 1,628 STEP faces. The project-local viewer patch
+displays the original seven-colour palette while keeping this as one component.
 The component is standalone; the robot assembly still uses its existing NP-F550.
 The component catalog classifies the PARKSIDE as purchased hardware, inactive in
 the assembly and excluded from print exports.
@@ -127,10 +130,26 @@ construction or product mass.
 
 Port verification is recorded in `source/port_audit/parkside_pap_204_a1.json`:
 saved local geometry is checked against the retained STEVE export and baseline,
-including body ordering, positive valid solids, bounds, faces, volume and
+including one leaf component, retained face colours, original solid ordering,
+positive valid solids, bounds, faces, volume and
 bidirectional geometric differences. Isometric and opposing views are reviewed
 from the generated STEP. These checks establish port fidelity; the battery's
 physical interface and installation in the robot remain untested.
+
+`./view.sh` and `./cad view` automatically prepare a local copy of cadgen 0.6.5's
+viewer client in the ignored `.cadgen/viewer-dist/` directory. The patch in
+`tools/prepare_viewer.py` and `tools/viewer/face_colours.mjs` fixes both the direct
+mesh converter and its background-worker copy: they now populate vertex colours
+from the tessellator's face ranges. Previously, both discarded those colours for
+single components. Uniform and uncoloured parts retain their existing path.
+The installed package and pinned CAD kernel remain unchanged. Generated asset
+names include the patch hash, so an existing tab loads the corrected code after
+refresh. An incompatible future runtime stops preparation for review.
+
+Run the colour regressions with
+`node --test tools/tests/test_viewer_face_colours.mjs`. Browser verification is
+saved in `review/parkside_pap_204_a1/single_component_colours_viewer.png`; the
+ordinary bundled CLI snapshot client is separate from this viewer patch.
 
 ## Components and printable files
 

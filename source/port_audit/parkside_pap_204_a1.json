@@ -1,12 +1,16 @@
 {
   "passed": true,
-  "generated_utc": "2026-10-12T11:21:47.098790+00:00",
-  "seconds": 14.265994375105947,
+  "generated_utc": "2026-10-12T12:42:33.580274+00:00",
+  "seconds": 7.611618833150715,
   "document_id": "d08bce05-3ec5-4847-9ca4-395f8f05d915",
   "revision": 6,
   "units": "mm",
   "component_roots": 1,
-  "coloured_bodies": 30,
+  "viewer_components": 1,
+  "assembly_leaf_occurrences": 1,
+  "source_geometry_groups": 30,
+  "coloured_faces": 1628,
+  "colour_palette_entries": 7,
   "solids": 66,
   "faces": 1628,
   "volume_mm3": 544625.3297988767,
@@ -22,10 +26,10 @@
   "volume_tolerance_mm3": 0.001,
   "bidirectional_difference_tolerance_mm3": 1e-05,
   "inputs": {
-    "STEP/parts/parkside_pap_204_a1.step": "058da1141ff7fd0897a571abcfdb0dac4b9199f79c5f74cdb06c30345bd219d0",
+    "STEP/parts/parkside_pap_204_a1.step": "ebeb19fd850d1dd1f40f3519bba827eb93be26a5090e68905fe8448ba545a707",
     "source/steve/parts/parkside_pap_204_a1/reference.step": "1a90c54d136a5f2692a7b1c9db39970892e339642927976c202b507e20fc48a6",
     "source/steve/parts/parkside_pap_204_a1/document.json": "ddb0357f2692d977090790ecc32dcc52eb673154c465f9d9096bbd0c89f9a701",
-    "src/parts/parkside_pap_204_a1.py": "cf426e3bf548625845b6d777cfacbcc3c52bdcfdc82f42d2ea65976d3b5fc24a",
+    "src/parts/parkside_pap_204_a1.py": "ef236d2e788666083e5702de7c9e1b6bd5cb5d3ee65dfacaeb1369cd173b04bf",
     "src/lib/steve_compat.py": "d259091639c1cbd8beaad7328a204c01f83fd299ab71f5610badd8761db5706f",
     "source/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
     "source/steve/parts/parkside_pap_204_a1/main.py": "077e25ddd895c5a52123b482ebfe5cf00225a4bee11d281e7b043d983c89813e"
@@ -572,7 +576,7 @@
       "removed_mm3": 0
     }
   ],
-  "coverage": "All 30 body groups: saved STEP versus retained STEVE reference at original datum; valid positive solids, topology counts, bounds, volume and bidirectional B-rep difference. Exterior approximation; physical rail/latch fit and robot installation untested.",
+  "coverage": "One leaf component containing 66 solids, with 1628 coloured faces. All 30 original geometry groups reconstructed from solid order and compared to the retained STEVE reference: valid positive solids, topology counts, bounds, volume and bidirectional B-rep difference. Physical fit untested.",
   "runtime_versions": {
     "cadgen": "0.6.5",
     "cadquery": "2.8.0",
@@ -580,11 +584,32 @@
     "cadquery-ocp": "7.9.3.1.1"
   },
   "visual_review": {
-    "passed": true,
-    "views": [
-      "review/parkside_pap_204_a1/iso.png",
-      "review/parkside_pap_204_a1/opposite.png"
+    "component_grouping_passed": true,
+    "viewer_tree": "No assembly tree",
+    "view": "review/parkside_pap_204_a1/single_component_colours_viewer.png",
+    "colours_in_saved_step": true,
+    "viewer_colour_display": "Original seven-colour palette restored by the project-local single-component face-colour patch.",
+    "notes": "Live viewer: dark case, red latch and inserts, white labels and green lens verified. The STEP hash is unchanged.",
+    "modes_verified": [
+      "Inspect",
+      "Render"
     ],
-    "observations": "Reviewed saved-artifact views: both side labels and recessed panels, case seam, rail/contact pocket, red latch/paddle/button and green end lens are preserved."
+    "render_view": "review/parkside_pap_204_a1/single_component_colours_render.png",
+    "cli_snapshot_note": "The separate bundled CLI snapshot client does not use this viewer-client patch. Colour validation used live viewer screenshots."
+  },
+  "viewer_patch": {
+    "cadgen_version": "0.6.5",
+    "bundled_module_sha256": "05183eb4103927f398be1c5840e3a7db2f2c10952ce8bf16d27e01cc6dcb1f8e",
+    "patched_module_sha256": "32129d01aadeba030062f7f963fdc110897823048b6c2ee5fd2220822b2140bb",
+    "bundled_worker_sha256": "7c313126fb7f3b041cb013822b444fc709856f991b3e6e92d97d7c31ddb896b1",
+    "patched_worker_sha256": "23c88768dac9ee8be41f7472360afbac14958aa73573ab80056689d790fcd66f",
+    "helper_sha256": "d0461a817d882cb6e5462f837528dab29cb878fe487af72e1073892a8baf71f8",
+    "patcher_sha256": "9ed78ec8c3c1ce878d17b8429056aaadc33299e8ffa7ff9fc319d57345984d43",
+    "purpose": "Preserve SURF face colours on one CAD component",
+    "regression_tests": {
+      "javascript_colour_tests": 5,
+      "python_workflow_tests": 27,
+      "passed": true
+    }
   }
 }

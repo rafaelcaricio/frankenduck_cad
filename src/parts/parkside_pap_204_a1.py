@@ -119,7 +119,7 @@ def _single_component(model):
     # The pinned cadgen STEP exporter persists this per-face colour map.
     # No build123d children means one selectable part rather than an assembly.
     battery.cad_face_ordinal_colors = face_colors
-    return battery
+    return bd.Compound(children=[battery], label='PARKSIDE PAP 204 A1')
 
 
 def make():
