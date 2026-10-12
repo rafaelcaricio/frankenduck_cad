@@ -4,15 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """roll_front_bulkhead (R05) - native rebuild of the Frankenduck head roll front bulkhead, robot world frame, mm.
-    
-    Source: front_bulkhead() in cad_blender/code_cad/head_internals/code/build_parts_r05.py (same coordinates, so the
-    part sits where the imported roll_front_bulkhead_r05 sits). It carries the roll F688 outer race, closes the ring,
-    holds the STEMMA 3885 mount and stands on two bottom-shell feet. The three M3 heat-set insert pockets of the script are
-    replaced by self-forming thread holes (three-ridge bore, Thomas Sanladerer; user 2026-10-04): the two shell-foot
-    holes from the bottom face, the deck screw hole from the top face. Profile corners are true arcs (the script
-    approximated them with 10-degree chords).
-    """
+    """Head roll bulkhead with F688 bearing seat, speaker mounts and self-forming M3 holes. World millimetres."""
     import math
     import cadquery as cq
     from lib.cadquery_adapter import Model
@@ -73,7 +65,7 @@ def make():
     
     def _rounded_profile(pts, radii):
         """Corner-rounded closed polygon as ('line', p, q) and ('arc', centre, r, a0, a1) items (angles in degrees,
-        counter-clockwise a0 -> a1). Same tangent-length rule as the source helper round_poly."""
+        counter-clockwise a0 -> a1). Uses tangent lengths at each rounded corner."""
         n = len(pts)
         corners = []
         for i in range(n):

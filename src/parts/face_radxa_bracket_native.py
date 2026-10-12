@@ -4,16 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """face_radxa_bracket_native: Frankenduck head, face Radxa bracket (R02), robot world frame, Z up, mm.
-    
-    Native port of face_bracket() in head_internals/code/build_parts_r05.py (build123d).
-    Local Text to CAD revision: 3.2 mm rails, short face screw pads and a
-    12 mm sideways PCB shift for full jumper housings and upward wires.
-    Three existing face bosses are used; the upper-left face boss is unused.
-    M3 countersunk screws seat flush beneath the PCB. The four Cubie M2
-    clearance holes retain their pan-head wells and 1.6 mm screw grip.
-    No heat-set insert pockets in this part (the M3 inserts sit in the face bosses, not here).
-    """
+    """Radxa face bracket with 3.2 mm rails, four M2 PCB wells and three flush M3 screw seats. World millimetres, Z up."""
     from lib.cadquery_adapter import Model
     x0 = 76.0
     # A 3.2 mm rail keeps the 1.6 mm screw grip and moves the PCB 2 mm
@@ -30,7 +21,7 @@ def make():
     tie_y1 = 43.0
     tie_z0 = 286.5
     tie_z1 = 312.0
-    # Remove the three long rearward tubes marked in the user's screenshot.
+    # Face screw pads stay flush with the rails.
     boss_x1 = x1
     boss_left_y = -39.17
     boss_right_y = 38.92
@@ -72,8 +63,7 @@ def make():
     model.box('tie_right', x1 - x0, tie_y1 - tie_y0, tie_z1 - tie_z0, at=((x0 + x1) / 2, (tie_y0 + tie_y1) / 2, (tie_z0 + tie_z1) / 2), op='join', body='bracket', name='Side tie +Y')
     with model.sketch('sketch_posts', on='plane_back', name='Face boss posts') as s:
         s.circle('post_left_up', (boss_left_y, boss_up_z), post_r_up)
-        # After the assembly flip, this is the right pair. Use the spare
-        # lower-left face boss so the shifted PCB's upper M2 well stays clear.
+        # Use the lower-left face boss to keep the upper M2 well clear.
         s.circle('post_left_low', (boss_left_y, boss_low_z), post_r_low)
         s.circle('post_right_low', (boss_right_y, boss_low_z), post_r_low)
     model.extrude('posts', 'sketch_posts', distance=boss_x1 - x0, op='join', body='bracket', name='Short face screw pads')

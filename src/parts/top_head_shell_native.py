@@ -4,15 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """top_head_shell (R05) - native rebuild of the Frankenduck head top cover (lid), robot world frame, mm.
-    
-    Outer skin: a loft through 29 fitted cross-sections (x-stations), each a symmetric cubic B-spline (14 poles)
-    fitted to the R05 lid mesh (fit <= 0.14 mm in-plane). Wall, ribs, front band and bottom lip are true 3D
-    offsets of that skin. The front bosses are the measured primitives (the source lid's six
-    locating pins and rear block are removed: no Frankenduck part uses them); the two R05 screw
-    bosses are the exact values of build_top_shell_r05.py. The four cover screws thread into self-forming M3 holes
-    (three-ridge bore, no heat-set inserts) on the R05 screw axes.
-    """
+    """Head top cover with internal cooler clearance. World millimetres."""
     import math
     import cadquery as cq
     from OCP.BRep import BRep_Tool

@@ -1,9 +1,0 @@
-{
-  "input": "STEP/parts/face_radxa_bracket_native.step",
-  "outputs": [
-    {"path": "review/radxa_fit/short_pads_bracket_iso.png", "camera": "iso"},
-    {"path": "review/radxa_fit/short_pads_bracket_depth.png", "camera": {"direction": [0, -1, 0]}},
-    {"path": "review/radxa_fit/short_pads_bracket_screw_seats.png", "camera": {"direction": [-1, 0, 0]}}
-  ],
-  "output": {"sizeProfile": "assembly", "viewLabels": true}
-}

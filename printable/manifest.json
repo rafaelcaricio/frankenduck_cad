@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-10-12T12:31:09.986147+00:00",
-  "input_key": "0ca5db9fc43750d046f81925e031a0960d584cf3b849b5c971783656f851fbe6",
+  "generated_utc": "2026-10-12T18:26:46.692745+00:00",
+  "input_key": "9569a01f1cb3a6948932194aec5e3b7c33406b39cdb797c3c90fb97bb052c0cf",
   "inputs": {
     "schema_version": 1,
     "source_step_sha256": "72d8de23d3ff08c116ca9616ba3ede45bb44a073d262d39458dc858096344932",
-    "catalog_sha256": "20258dfa76eea812c8e606f838046aa9c014ad5b59d739eccefb7a36fb30f307",
+    "catalog_sha256": "63e2361e8e2613d353bb5b1823d3914a365e4efa512e05b02242595643edc591",
     "implementation": {
-      "tools/print_export.py": "7352368f152b04ff938a4656c1505014616600a870e78c51bf3fdf8e40a4cdd6",
-      "tools/components.py": "bcd2c6030287b2755e7b0a584ee72d6ac51df1dfd8a75ae03978093f69f21313"
+      "tools/print_export.py": "9fc89c93b562bdc3d48ac93f67225fbf632576822520f76e155b01d7563bd962",
+      "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
     },
     "runtime": {
       "python": "3.12.0",
@@ -23,9 +23,8 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "90a7f2b6baadbd8d41da35f494348440e4f273541534dff327d81957e9867a9f",
-    "assembly_data_sha256": "e6ffe539b9342fb801f9322fd961a2b9346f307d1c8c594beec5f99015c0ade3",
-    "additions_sha256": "32aa26c88f4d6b70f4c9039d2d44b7827127efbe22eaafdc6d273b4f64a24b0d"
+    "build_input_key": "b36cf5c3d28d2235dc70fac3533fb77358490cabfd7c3052ab83a09d1d3a3e9a",
+    "assembly_data_sha256": "8c3f7418cc65df8acc8855f91ad19054d880248078b19d441b1b4cdd0c0bd7d9"
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
@@ -3167,11 +3166,7 @@
     "3mf/yaw2roll_left_native_right.3mf": "6ab519ca05fc0a21df846cad49f21c50023ce5a1b02552bd10df157f9efec7b3",
     "3mf/yaw_roll_link_native.3mf": "b3d98b55bcf1a234b9c4dd1c63d4abc182ca22c837a9c9a10d6ab4f582cbd938",
     "PARTS.csv": "44ab63f8bc1c0a3c6ec8e832bdc95b1f624e92619f4e93d1c3f8d69f1e56e795",
-    "README.md": "643631fdb42a3a8c04c48cfe2950281fad88d94f50caaa30a810d9493c0b95e9"
+    "README.md": "9bdaeb92b98dcb0c8d67b47c284d1ecac355a789204a63aebe57e6297643763e"
   },
-  "reference_normalization": {
-    "description": "Reference labels and import aliases normalized; rebuilt assembly STEP and all 45 print packages are byte-identical.",
-    "previous_input_key": "cad3268665d400a14b9356a1ca7e3793476749246627f33d00e4e2dbfbbbb965"
-  },
-  "manifest_content_sha256": "1be0e6ee5e16f6e1abd4064ff64cbb31f28a44ea3fe130f0935759310a460e3a"
+  "manifest_content_sha256": "fbb9025c5f17e868f16ceabc8f7a8229dc1507179dbe61686f7093978bd7a4d2"
 }

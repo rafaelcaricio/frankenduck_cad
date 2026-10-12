@@ -4,23 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """head_frame_native: Frankenduck head internals R05 head frame, robot world frame, Z up, mm.
-    
-    Native port of head_frame() in cad_blender/code_cad/head_internals/code/build_parts_r05.py (build123d).
-    Closed ring around the yaw/roll link bay, printed on its back (x = -25.27 face down):
-      1. rear bulkhead + top flange (holds the roll servo by three back-face M2 screws);
-      2. U-saddle round the roll servo: -Y wall, +Y wall, bottom bar;
-      3. -Y side: 45-degree jog and wall B (sloped to follow the top shell), jaw F688 seat boss, front end block,
-         rear -Y shell foot;
-      4. +Y side: jog, jaw servo cradle plate (zones R/S/M/C), top flange, rear +Y shell foot, rear-centre foot;
-      5. cuts: roll servo boss/cover pockets and plug window, roll M2 holes, jaw F688 seat/passage/retainer,
-         jaw servo boss hole and plug+cover window, jaw M2 holes, bulkhead-foot relief.
-    Every M3 heat-set insert pocket of the source is a self-forming thread hole here (Thomas Sanladerer: bore
-    d + 0.15 with three 0.4 mm ridges that grow over the entry taper), same axis, entry face and depth; the two
-    shell-foot holes include the source's screw-tip clearance (z 274..283).
-    Feature form (sketch/extrude/box/cylinder/combine) is used for every step; raw CadQuery only for the
-    self-forming hole tools. Rounded profile corners are polygons, 10-degree segments, as in the source.
-    """
+    """Head frame carrying the jaw and head electronics. World millimetres, Z up."""
     import math
     import cadquery as cq
     from lib.cadquery_adapter import Model

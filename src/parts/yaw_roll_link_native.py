@@ -4,15 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """yaw_roll_link (R05) - native rebuild of the Frankenduck head yaw-roll link, robot world frame, mm, Z up.
-    
-    Box around the yaw servo: rear wall bolted to the roll servo horn, front wall carrying the printed F688 journal,
-    top plate on the yaw servo back lands, -Y skirt. Geometry follows link() in build_parts_r05.py exactly (same world
-    coordinates); the script's polyline circles (72-gons) and polyline corner roundings (10 deg steps) are true arcs here.
-    Change from the script (user + coordinator decision 2026-10-04): the journal screw's M3 heat-set insert pocket and
-    the M3 clearance through the journal are replaced by ONE self-forming M3 hole entered from the screw side (journal
-    end face) and running through the front wall; the M3x10 screw forms its thread over x 49.8..58.85.
-    """
+    """Head yaw-to-roll link. World millimetres, Z up."""
     import math
     import cadquery as cq
     from lib.cadquery_adapter import Model

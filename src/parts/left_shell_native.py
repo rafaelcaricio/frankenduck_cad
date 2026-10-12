@@ -4,14 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """Frankenduck body shell side, parametric CAD part (port of cad_blender/code_cad/body_shell/build.py,
-    canonical variant `--collar --locators`). World millimetres at the saved assembly pose.
-    
-    Parameter SIDE: +1 builds left_shell (Y >= 0), -1 builds right_shell (Y <= 0, KCD1 port and collar).
-    The skin is the analytic fair surface (periodic cubic B-spline profile, straight band, rational
-    quarter-ellipse return, flat side panel), trimmed and thickened 3 mm inward; the rest are solid
-    features measured on the canonical mesh.
-    """
+    """Frankenduck left body shell with collars and locating features. World millimetres."""
     import math
     import cadquery as cq
     from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeFace, BRepBuilderAPI_Sewing, BRepBuilderAPI_Transform

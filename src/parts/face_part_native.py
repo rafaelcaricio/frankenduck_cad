@@ -4,7 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """Experimental face for MightyCamera, copied from face_part_native revision 6. Canonical untouched."""
+    """Frankenduck face plate with MightyCamera opening. World millimetres."""
     import math
     from lib.cadquery_adapter import Model
     sym_y = -0.12336

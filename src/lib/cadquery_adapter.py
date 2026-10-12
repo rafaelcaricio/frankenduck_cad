@@ -1,7 +1,6 @@
-"""Local CadQuery adapter for retained geometry declarations.
+"""Shared CadQuery feature construction for Frankenduck parts.
 
-CadQuery/OCP preserve the
-source construction; build123d objects are returned to cadgen for exports.
+Geometry is converted to build123d shapes for cadgen exports.
 """
 from __future__ import annotations
 import math

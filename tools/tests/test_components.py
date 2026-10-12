@@ -31,7 +31,6 @@ class ComponentCatalog(unittest.TestCase):
         self.write("variants.json",[dict(model="plate",component="plate",params={}),dict(model="board",component="board",params={})])
         self.write("assembly_data.json",dict(instances=[dict(name="plate_a",component="plate",params={}),
             dict(name="plate_b",component="plate",params={}),dict(name="board",component="board",params={})]))
-        self.write("local_additions.json",dict(instances=[]))
 
     def write(self,name,value):
         (self.root/"source"/name).write_text(json.dumps(value))

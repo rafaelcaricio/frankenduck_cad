@@ -4,18 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """electronics_deck_native: Frankenduck head electronics deck (R02 geometry), robot world frame, Z up, mm.
-    
-    Native port of deck() in head_internals/code/build_parts_r05.py (build123d). Holds the Waveshare bus servo
-    adapter and the BNO055 board, and closes the head-frame ring on top. Construction:
-      1. plate: rounded outline extruded z 300.6..303.6 (open over the yaw-roll link, y<0 for x 14..49.5);
-      2. tab to the front bulkhead, 4.5 mm thick in all (z 303.1..305.1);
-      3. three M3 clearance holes (two to the rear-flange screws, one to the bulkhead screw) and four 1.0 mm
-         blind reliefs under the adapter's through-hole pins;
-      4. four adapter standoffs (r3.0 to z 306.05) and four BNO055 standoffs (r2.6 to z 305.4);
-      5. eight M2 pilots in the standoffs.
-    The deck has no M3 heat-set insert pockets, so no self-forming holes are needed here.
-    """
+    """Head electronics deck for the bus-servo adapter. World millimetres, Z up."""
     import math
     from lib.cadquery_adapter import Model
     deck_z0 = 300.6

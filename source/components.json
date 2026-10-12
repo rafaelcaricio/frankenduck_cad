@@ -14,7 +14,7 @@
       "material_hint": "unspecified",
       "export": true,
       "active_variant": true,
-      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+      "notes": "Printed bearing cap; material unspecified."
     },
     {
       "model": "ankle_bearing_inner_cap_left_native_right",
@@ -28,7 +28,7 @@
       "material_hint": "unspecified",
       "export": true,
       "active_variant": true,
-      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+      "notes": "Printed bearing cap; material unspecified."
     },
     {
       "model": "ankle_bearing_inner_cap_left_native_seated",
@@ -42,7 +42,7 @@
       "material_hint": "unspecified",
       "export": false,
       "active_variant": false,
-      "notes": "User clarified print intent: inherited aluminum-6061-t6 label is incorrect metadata. Geometry and assembly references retained; print material remains unspecified."
+      "notes": "Printed bearing cap; material unspecified."
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native",
@@ -56,7 +56,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native_right",
@@ -70,7 +70,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native_seated",
@@ -84,7 +84,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "ankle_eye_left_native",
@@ -98,7 +98,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_eye_left_native_right",
@@ -112,7 +112,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_eye_left_native_seated",
@@ -126,7 +126,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "ankle_left_native",
@@ -140,7 +140,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_left_native_right",
@@ -154,7 +154,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ankle_left_native_seated",
@@ -168,7 +168,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "battery_carrier_native",
@@ -180,7 +180,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "battery_donor_cover_native",
@@ -192,7 +192,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "bottom_head_shell_native",
@@ -204,7 +204,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "electronics_deck_native",
@@ -216,7 +216,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "face_part_native",
@@ -228,7 +228,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "face_radxa_bracket_native",
@@ -240,7 +240,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "foot_left_native_a",
@@ -254,7 +254,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "foot_left_native_a_right",
@@ -268,7 +268,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "foot_left_native_a_seated",
@@ -282,7 +282,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "foot_left_native_b",
@@ -296,7 +296,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "foot_left_native_b_right",
@@ -310,7 +310,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "foot_left_native_b_seated",
@@ -324,7 +324,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "head_frame_native",
@@ -336,7 +336,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "hip_left_native",
@@ -350,7 +350,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "hip_left_native_right",
@@ -364,7 +364,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "hip_left_native_seated",
@@ -378,7 +378,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "import_horn_lower_passive",
@@ -390,7 +390,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_horn_upper_passive",
@@ -402,7 +402,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_pcb_bno055",
@@ -414,7 +414,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_pcb_radxa_cubie_a7z",
@@ -426,7 +426,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_pcb_sph0645_mic",
@@ -438,7 +438,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_pcb_ubec_henge_4a",
@@ -450,7 +450,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "import_pcb_waveshare_adapter",
@@ -462,7 +462,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "imu_yoke_bridge_native",
@@ -474,7 +474,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "jaw_native",
@@ -486,7 +486,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "jaw_soft_001_native",
@@ -498,7 +498,7 @@
       "material_hint": "fdm-tpu",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "left_shell_native",
@@ -510,7 +510,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "leg_left_native",
@@ -524,7 +524,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "leg_left_native_right",
@@ -538,7 +538,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "leg_left_native_seated",
@@ -552,7 +552,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "measured_tof_seated",
@@ -566,7 +566,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "mighty_camera",
@@ -578,7 +578,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "mpu6050_trunk_native",
@@ -590,7 +590,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "neck_001_native",
@@ -602,7 +602,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "neck_002_native",
@@ -614,7 +614,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "neck_internal_yoke_native",
@@ -626,7 +626,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "neck_pitch_001_native",
@@ -638,7 +638,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "noenoeil_native",
@@ -650,7 +650,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "npf550_pack_native",
@@ -662,7 +662,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "power_switch_kcd1_native",
@@ -674,7 +674,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "radxa_6530b",
@@ -698,7 +698,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -710,7 +710,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "soft_mouth_top_native",
@@ -722,7 +722,7 @@
       "material_hint": "fdm-tpu",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "sole_left_native",
@@ -736,7 +736,7 @@
       "material_hint": "fdm-tpu",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "sole_left_native_right",
@@ -750,7 +750,7 @@
       "material_hint": "fdm-tpu",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "sole_left_native_seated",
@@ -764,7 +764,7 @@
       "material_hint": "fdm-tpu",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "stemma3885",
@@ -776,7 +776,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "sts3215_servo_native",
@@ -788,7 +788,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": true,
-      "notes": "Purchased hardware representation; excluded from print exports. Import origin does not establish vendor-exact fidelity."
+      "notes": "Purchased component representation."
     },
     {
       "model": "top_head_shell_native",
@@ -800,7 +800,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "trunk_base_native",
@@ -812,7 +812,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "ubec_clamp_native",
@@ -824,7 +824,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "upper_leg_left_native",
@@ -838,7 +838,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "upper_leg_left_native_right",
@@ -852,7 +852,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "upper_leg_left_native_seated",
@@ -866,7 +866,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "yaw2roll_left_native",
@@ -880,7 +880,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "yaw2roll_left_native_right",
@@ -894,7 +894,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "yaw2roll_left_native_seated",
@@ -908,7 +908,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness. Retained unused source variant; not part of the active assembly."
+      "notes": "Alternative variant; not used by the current assembly."
     },
     {
       "model": "yaw_roll_link_native",
@@ -920,7 +920,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Custom design geometry; print intent does not establish manufacturing readiness."
+      "notes": "Frankenduck printed part."
     },
     {
       "model": "parkside_pap_204_a1",
@@ -932,7 +932,7 @@
       "material_hint": "mixed: ABS case, PC lens, metal contacts; appearance only",
       "export": false,
       "active_variant": false,
-      "notes": "Standalone port of CAD d08bce05-3ec5-4847-9ca4-395f8f05d915 revision 6. Photo-derived exterior, rail and latch; not a measured mating interface. Not installed in the robot assembly. Product reference mass 711 g; CAD solids do not represent battery internals."
+      "notes": "Standalone battery exterior; rail and latch are photo-derived, not a measured mating interface. Not installed in the assembly."
     }
   ],
   "review_geometry": [

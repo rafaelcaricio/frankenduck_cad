@@ -4,20 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """bottom_head_shell_native: Frankenduck head, printed lower shell (R06), robot world frame, Z up, mm.
-    
-    Native port of build_shell_r06.py (build123d). Construction:
-      1. hull: ruled loft of rounded U sections along X (outer skin), minus a ruled loft of inner sections;
-      2. seam: rebate cut around the top edge, then a two-step seam rim joined back;
-      3. front: mouth seat, perimeter skirt, deep front lip, optical-face land and seating pocket;
-      4. jaw-side return skirt and roof (two-level section above the moving jaw);
-      5. openings: neck/servo aperture, yoke sweep extension, rear harness opening;
-      6. screw seats: rear seat, four cover lands, mic and UBEC-strap self-forming M2 holes, acoustic port,
-         front and rear head-cover screws; the two rear posts are clipped to the outer skin (R06 fix).
-    Feature form (sketch/extrude/box/cylinder/combine) is used wherever CAD can express the step.
-    Raw CadQuery is used only for the two section lofts and the plan-outline inset bands, which need
-    computed station tables and 2D wire offsets.
-    """
+    """Head bottom shell. World millimetres."""
     import cadquery as cq
     import numpy as np
     from scipy.interpolate import PchipInterpolator

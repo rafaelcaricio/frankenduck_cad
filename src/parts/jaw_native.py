@@ -4,24 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """jaw (R05 = jaw_r01) - native rebuild of the Frankenduck jaw, robot world frame, mm, CAD pose.
-    
-    Source: cad_blender/code_cad/head_internals/jaw_r01/build_jaw.py (build123d), used unchanged by head internals
-    R05. Same construction, same numbers, same coordinates:
-     1. Envelope: floor cylinder (R 1945 bow) cut by the two tilted cheek planes, the tilted lip plane, a rear and a
-        top plane; outer fillets r6.75 (floor-cheek, floor-lip) and r3.375 (lip-cheek).
-     2. Shell: envelope minus the 2.3 mm inner envelope (open top and rear).
-     3. Floor rear edge: spline cut in plan.
-     4. Side profiles in (x, z): top edge, r10.8 blend, 60 deg arm band, hinge circle r12.15 (bearing side) or hub
-        r15.2 with r3 junction fillets (servo side), r9.849 heel arc.
-     5. Servo hub r15.2 (y 54.0..59.6) + horn boss r10 (y 53..54), 20 deg skirt into the arm, clip face r22 at y 59.6.
-        Two M3 clearance holes d3.3 + d6.3 counterbores (head seat y 56), centre clearance d6.4 x 3.2.
-     6. Bearing journal d7.80 (y -54..-48) for the jaw F688 inner race, land r5.4, shoulder r10.8 relieved 0.3,
-        root fillet r1.0, axial d3.4 hole, M3 hex nut trap AF5.7.
-    The jaw has no heat-set insert pockets: its M3 screws pass through clearance holes into the servo horn and into a
-    captive hex nut, so no self-forming thread hole applies. The R05 F688 seat change (16.55 bore) and the M2 keeper
-    pilots are on the head frame, not on the jaw.
-    """
+    """Frankenduck jaw at its assembly position. World millimetres."""
     import math
     import cadquery as cq
     from OCP.BRepAlgoAPI import BRepAlgoAPI_Common, BRepAlgoAPI_Cut, BRepAlgoAPI_Fuse

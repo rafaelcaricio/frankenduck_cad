@@ -4,20 +4,7 @@ from cadgen import step
 
 def make():
     from lib.cadquery_adapter import to_build123d
-    """neck_internal_yoke_native: Frankenduck neck yoke (stage B, the canonical part), robot world frame, Z up, mm.
-    
-    Native port of cad_blender/code_cad/neck_internal_yoke/build.py --stage B (build123d), same coordinates.
-    The yoke carries the lower neck servo on the trunk deck; horn axis X 35.1, Z 163.769 along Y.
-    Construction (as the source):
-      1. nine Y bands, each ONE intersection: plate plan prism (+ disc strip or gusset triangle) with a Y-extruded
-         side profile made by exact 2D booleans (plate strip + tangent shoulder sketch - cable channel + disc);
-         bands touch only along Y planes;
-      2. cuts: anchor bores and front wells, horn bores, head lanes, driven centre pocket and channel,
-         passive pockets and traces, passive rim rounds (outer sector, horn-face 360 deg);
-      3. edge breaks on the passive rib next to the cable channel (R1.2 corners, R0.8 floor), front wells re-cut.
-    No heat-set insert pockets: the anchors are plain M3 through bores (the inserts sit in the trunk deck).
-    Raw CadQuery is used for the band solids, the 45 deg slots, the rim-round revolves and the edge breaks.
-    """
+    """Internal neck yoke. World millimetres, Z up."""
     import math
     import cadquery as cq
     from lib.cadquery_adapter import Model

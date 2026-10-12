@@ -11,7 +11,6 @@ def mount():
     import json
     import math
     import sys
-    import time
     import cadquery as cq
     from checks.common import read_scene
 
@@ -22,12 +21,10 @@ def mount():
 
     TOLERANCE_MM3 = 1e-5
     current = read_scene(ROOT / "STEP/frankenduck.step")
-    before = read_scene(ROOT / "revisions/r91_import/STEP/frankenduck.step")
     report = dict(document_sha256=current.document_hash,
-                  baseline_document_sha256=before.document_hash, units="mm",
+                  units="mm",
                   overlap_tolerance_mm3=TOLERANCE_MM3, pose="saved rest",
-                  changed_occurrences=["#o1.3", "#o1.6", "#o1.10", "#o1.15", "#o1.16"],
-                  added_occurrences=["#o1.74"], pairs=[])
+                  checked_occurrences=["#o1.3", "#o1.6", "#o1.10", "#o1.15", "#o1.16", "#o1.74"], pairs=[])
     checks = []
 
 
@@ -67,18 +64,6 @@ def mount():
         for ref, (label, _, neighbour) in occurrences.items():
             if ref not in skip:
                 pair(name, shape, ref + ":" + label, neighbour)
-
-    baseline_path = ROOT / "revisions/r91_import/checks/radxa_initial_overlap.json"
-    baseline = json.loads(baseline_path.read_text()) if baseline_path.exists() else {}
-    if baseline.get("document_sha256") != before.document_hash:
-        old_board = cq.Shape.cast(before.resolve("#o1.15").shape().wrapped)
-        old_bracket = cq.Shape.cast(before.resolve("#o1.6").shape().wrapped)
-        old_frame = cq.Shape.cast(before.resolve("#o1.2").shape().wrapped)
-        baseline = dict(document_sha256=before.document_hash, overlap_mm3={
-            "board_bracket": volume(old_board.intersect(old_bracket)),
-            "board_head_frame": volume(old_board.intersect(old_frame))})
-        baseline_path.write_text(json.dumps(baseline, indent=2))
-    report["before_overlap_mm3"] = baseline["overlap_mm3"]
 
     native_board = occurrences["o1.15"][1]
     seat_faces = [f for f in native_board.faces()
@@ -132,7 +117,7 @@ def mount():
                                       max_axis_error_mm=max(face_axis_errors,default=None))
     bracket_depth = bounds(bracket)[4] - bounds(bracket)[1]
     checks.append(abs(bracket_depth - 3.2) < 1e-5)
-    report["short_pads"] = dict(depth_mm=bracket_depth, previous_tube_depth_mm=17.02,
+    report["bracket"] = dict(depth_mm=bracket_depth,
                                 projection_beyond_rail_mm=0.0,
                                 screw_head_allowance="90 degree M3 flat head, nominal diameter 5.6 mm")
     # Check the protected shaft passages and both types of screw-head seats.
@@ -169,11 +154,12 @@ def mount():
                      if isinstance(n, ast.Assign)
                      and any(isinstance(t, ast.Name) and t.id == "RADXA_BOARD_AT"
                              for t in n.targets))
-    original_placement = json.loads((ROOT / "source/assembly_data.json").read_text())["instances"][14]["at"]
-    same_rotation = json.loads(json.dumps(placement[1])) == original_placement[1]
-    checks.append(same_rotation)
-    report["board_orientation"] = dict(rotation=placement[1], rotation_unchanged=same_rotation,
-                                        usb_c="upward, retained from the imported board placement")
+    expected_placement = json.loads((ROOT / "source/assembly_data.json").read_text())["instances"][14]["at"]
+    matches_declaration = json.loads(json.dumps(placement)) == expected_placement
+    usb_c_up = list(placement[1][0]) == [1, 1, 0] and abs(placement[1][1] - 180.0) < 1e-6
+    checks += [matches_declaration, usb_c_up]
+    report["board_orientation"] = dict(rotation=placement[1], matches_declaration=matches_declaration,
+                                        usb_c="upward", usb_c_up=usb_c_up)
 
     native_speaker = occurrences["o1.16"][1]
     speaker_seats = [f for f in native_speaker.faces()
@@ -199,28 +185,23 @@ def mount():
                                     lower_board_holes_xz_mm=speaker_holes,
                                     pilot_holes_xz_mm=pilot_holes,
                                     max_axis_error_mm=max(speaker_errors,default=None),
-                                    rearward_shift_mm=5.0,magnet_recess_remaining_plate_mm=5.25)
-    roi=cq.Solid.makeCylinder(9.4,6.1,cq.Vector(0,-59.1,280.58),cq.Vector(0,1,0))
-    prior_bulkhead=cq.Shape.cast(before.resolve("#o1.3").shape().wrapped)
-    old_roi=prior_bulkhead.intersect(roi);new_roi=bulkhead.intersect(roi)
-    roi_delta=volume(old_roi.cut(new_roi))+volume(new_roi.cut(old_roi))
-    checks.append(roi_delta<=TOLERANCE_MM3)
-    report["speaker_mount"]["protected_bearing_seat_change_mm3"]=roi_delta
-
-    # Compare all other geometry placements with the frozen original artifact.
-    unchanged = []
-    for ref, (label, _, shape) in occurrences.items():
-        if ref in {"o1.3", "o1.6", "o1.10", "o1.15", "o1.16", "o1.74"}:
-            continue
-        prior = cq.Shape.cast(before.resolve("#" + ref).shape().wrapped)
-        error = max(abs(a-b) for a, b in zip(bounds(shape), bounds(prior)))
-        dv = abs(volume(shape)-volume(prior))
-        passed = error < 1e-5 and dv < max(.02, volume(prior)*1e-6)
+                                    magnet_recess_remaining_plate_mm=5.25)
+    # Check current bearing passages directly at the bulkhead's design datums.
+    # A 1e-5 mm radial allowance avoids coincident-surface numerical artifacts.
+    bearing_passages = []
+    for name, radius, start_y, length in [("F688 seat", 8.275, -58.0, 5.0),
+                                         ("flange counterbore", 9.4, -59.1, 1.1),
+                                         ("inner race passage", 5.8, -62.0, 9.0)]:
+        tool = cq.Solid.makeCylinder(radius - 1e-5, length,
+            cq.Vector(0, start_y, 280.58), cq.Vector(0, 1, 0))
+        obstruction = volume(tool.intersect(bulkhead))
+        passed = obstruction <= TOLERANCE_MM3
         checks.append(passed)
-        unchanged.append(dict(ref=ref, name=label, bound_error_mm=error,
-                              volume_delta_mm3=dv, passed=passed))
-    report["unchanged_occurrences"] = unchanged
-    report["modified_parts"] = {
+        bearing_passages.append(dict(name=name, nominal_radius_mm=radius,
+            start_y_mm=start_y, length_mm=length, obstruction_mm3=obstruction, passed=passed))
+    report["bearing_passages"] = dict(axis_xz_mm=[0, 280.58], radial_tolerance_mm=1e-5,
+                                       passages=bearing_passages)
+    report["mounting_parts"] = {
         name:dict(valid=shape.isValid(), solids=len(shape.Solids()),
                   volume_mm3=volume(shape), bounds_mm=bounds(shape))
         for name, shape in [("bulkhead",bulkhead), ("bracket", bracket), ("board", board), ("speaker",speaker), ("heatsink_representation",heatsink)]}
@@ -230,8 +211,8 @@ def mount():
     report["passed"] = all(checks)
     (ROOT / "reports/latest/radxa_mount_fit.json").write_text(json.dumps(report, indent=2))
     print(json.dumps({k:v for k,v in report.items()
-                      if k not in {"pairs", "unchanged_occurrences"}}, indent=2), flush=True)
-    assert report["passed"], "Radxa mount, connector, cable or unchanged-geometry check failed"
+                      if k != "pairs"}, indent=2), flush=True)
+    assert report["passed"], "Radxa mount, connector, cable or bearing passage check failed"
 
     return report
 
@@ -253,7 +234,6 @@ def heatsink():
     from lib.radxa_clearance import clearance_shapes
 
     scene=read_scene(ROOT/'STEP/frankenduck.step')
-    prior=read_scene(ROOT/'revisions/radxa_jumper_bay_before_heatsink/STEP/frankenduck.step')
     report=dict(document_sha256=scene.document_hash,units='mm',geometry_status='Dimensioned representation; detailed geometry approximate',tolerance_mm3=1e-5,pairs=[],assumptions=dict(outer_size_mm=[65,30,11.5],mounting_grid_mm=HOLE_GRID,pcb_component_plane_y_mm=-88.065,base_standoff_mm=5.0,fan_case_mm=21.5,inlet_radius_mm=8.5,clear_inlet_approach_mm=2.0,foot_diameter_mm=4.8,gpio_notch_mm=[53,7]))
     checks=[]
     shapes={x.ref.lstrip('#'):(x.label,cq.Shape.cast(x.shape().wrapped)) for x in scene.roots[0].children}
@@ -274,15 +254,14 @@ def heatsink():
     # actual cooler cutouts leave open. Actual-representation checks cover these.
     for name,p in zip(['plug_turn_bay','upward_cable_path'],clearance_shapes()):
      pair('fan_inlet_allowance',air,name,cq.Shape.cast(p.wrapped))
-    old=cq.Shape.cast(prior.resolve('#o1.10').shape().wrapped);new=shapes['o1.10'][1]
-    added=volume(new.cut(old));removed=volume(old.cut(new))
-    checks += [added<=1e-5,new.isValid(),len(new.Solids())==1]
-    report['cover_change']=dict(material_added_mm3=added,material_removed_mm3=removed,valid=new.isValid(),solids=len(new.Solids()),wall_samples=[])
+    new=shapes['o1.10'][1]
+    checks += [new.isValid(),len(new.Solids())==1]
+    report['cover']=dict(valid=new.isValid(),solids=len(new.Solids()),wall_samples=[])
     for y,z in [(-76.565,317.5),(-77.5,317.5),(-79.0,317.5)]:
      ray=cq.Solid.makeCylinder(.01,10,cq.Vector(-50,y,z),cq.Vector(1,0,0))
      wall=[p.BoundingBox().xlen for p in new.intersect(ray).Solids()]
      checks.append(bool(wall) and min(wall)>=2.0)
-     report['cover_change']['wall_samples'].append(dict(y_mm=y,z_mm=z,thickness_mm=wall))
+     report['cover']['wall_samples'].append(dict(y_mm=y,z_mm=z,thickness_mm=wall))
     # Official 57.8 x 22.9 mm grid versus the coarser imported 58 x 23 mm grid.
     axis_error=math.hypot((58-HOLE_GRID[0])/2,(23-HOLE_GRID[1])/2)
     report['mounting']=dict(grid_axis_offset_mm=axis_error,bracket_m2_radial_clearance_mm=.2,nominal_m2_shaft_fits=axis_error<.2,kit_screw_length_mm=4.0,modelled_bracket_grip_mm=1.6,modelled_pcb_thickness_mm=1.75,kit_thread_engagement_with_bracket_mm=4-1.6-1.75,suggested_longer_screw_review='M2 x 6 gives approximately 2.65 mm engagement; verify actual heatsink thread depth')

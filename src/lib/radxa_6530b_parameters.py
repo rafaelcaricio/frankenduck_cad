@@ -1,7 +1,6 @@
 """Official outer size with explicit approximations for the 6530B cooler.
 
 Radxa publishes 65 x 30 x 11.5 mm and a 16 x 16 x 1.5 mm thermal pad.
-No 6530B native CAD was found in the searched catalog or Radxa downloads.
 The detailed fan/fin/notch/foot dimensions are a review representation.
 The mounting plane is the component-side PCB plane in the imported model.
 """

@@ -1,8 +1,0 @@
-{
-  "instances": [
-    {"name": "radxa_6530b", "component": "radxa_6530b", "status": "Official outer dimensions; approximate detailed representation"}
-  ],
-  "mates": [
-    {"name": "fix_radxa_6530b", "kind": "fastened", "parent": "#import_pcb_radxa_cubie_a7z", "child": "#radxa_6530b"}
-  ]
-}

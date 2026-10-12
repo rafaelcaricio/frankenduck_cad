@@ -339,5 +339,10 @@
     "component": "sts3215_servo_native",
     "params": {},
     "model": "sts3215_servo_native"
+  },
+  {
+    "component": "radxa_6530b",
+    "params": {},
+    "model": "radxa_6530b"
   }
 ]

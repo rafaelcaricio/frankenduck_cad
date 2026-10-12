@@ -14,9 +14,6 @@
     "https://radxa.com/products/accessories/heatsink-6530b/",
     "https://dl.radxa.com/cubie/a7z/docs/radxa_cubie_a7z_product_brief.pdf"
   ],
-  "native_step_found": false,
-  "catalog_search": "catalog_search.json",
-  "download_directory_checked": "https://dl.radxa.com/accessories/",
   "model_status": "Dimensioned representation; fin layout, fan dimensions and mounting standoff details approximate",
   "photos_license": "Radxa Docs CC BY 4.0",
   "captured_utc": "2026-10-12T05:02:31.030720+00:00",

@@ -43,8 +43,7 @@ def validate(root=ROOT):
     if set(by_model) != scripts:
         raise ValueError(f"Unclassified scripts: {sorted(scripts-set(by_model))}; missing scripts: {sorted(set(by_model)-scripts)}")
     source = read("source/assembly_data.json")
-    additions = read("source/local_additions.json")
-    variants = read("source/variants.json") + [dict(model=e.get("model", e["component"]), component=e["component"], params=e.get("params", {})) for e in additions["instances"]]
+    variants = read("source/variants.json")
     active = {e["model"]: e for e in models if e["active_variant"]}
     if set(active) != {v["model"] for v in variants}:
         raise ValueError("Active catalog models differ from assembly variants")
@@ -58,7 +57,7 @@ def validate(root=ROOT):
             raise ValueError(f"Ambiguous active variant: {key}")
         by_variant[key] = entry
     bindings = {e["model"]: [] for e in models}
-    instances = source["instances"] + additions["instances"]
+    instances = source["instances"]
     for i, occurrence in enumerate(instances, 1):
         key = variant_key(occurrence["component"], occurrence.get("params", {}))
         if key not in by_variant:
