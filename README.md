@@ -48,9 +48,10 @@ exports and review models are explicit operations. Use `--force` on a build,
 check or export when a deliberate rerun is needed. Current reports and logs
 are in `reports/latest/`.
 
-The full suite checks the saved rest pose and 43 discrete leg poses for backpack
-clearance. It does not perform a continuous motion sweep or establish physical
-fit, printed strength, cable bending or thermal performance.
+The full suite checks the saved rest pose, all 1,702 recorded walking/sitting
+keyframes for backpack clearance, and 67 battery-removal positions with the head
+and legs neutral. It does not perform a continuous motion sweep or establish
+physical fit, printed strength, cable bending or thermal performance.
 
 ## Parts and printing
 

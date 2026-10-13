@@ -26,6 +26,7 @@ def make():
     PANEL_SCALE = 0.72
     WALL = 3.0
     PROFILE_CTL_XZ = [(-61.969364, 141.721413), (-60.769652, 133.872594), (-57.276993, 126.803988), (-50.794014, 122.358513), (-43.022885, 120.769484), (-35.077182, 120.67624), (-27.125195, 120.697049), (-19.174847, 120.866402), (-11.224499, 121.035755), (-3.274151, 121.205108), (4.676196, 121.374461), (12.626544, 121.543815), (20.576892, 121.713168), (26.636799, 126.072967), (28.103164, 133.853673), (28.415338, 141.798651), (28.519343, 149.748904), (26.829561, 157.478466), (22.453743, 164.065265), (16.146531, 168.833552), (8.767016, 171.7796), (1.031361, 173.596575), (-6.854049, 174.594652), (-14.797595, 174.91515), (-22.749282, 174.893843), (-30.701087, 174.819608), (-38.641541, 174.419028), (-46.516012, 173.371864), (-53.96208, 170.678255), (-59.525821, 165.128391), (-61.936164, 157.59931), (-62.307761, 149.666182)]
+    # Preserve the original body silhouette; mount relief stays within this skin.
     HIP_Y_HALF = 38.2
     HIP_Z_TOP = 127.5
     FRONT_X_MIN = 6.0
@@ -39,7 +40,8 @@ def make():
     CORRIDOR_X_MAX = -37.25
     CORRIDOR_Y_HALF = 22.5
     CORRIDOR_Z_TOP = 160.75
-    SERVICE_X_MIN = -28.5
+    # Open the central upper return through the rear: no bridge by the release paddle.
+    SERVICE_X_MIN = -80.0
     SERVICE_Y_HALF = 24.5
     SERVICE_Z_MIN = 164.0
     SERVICE_CORNER = 3.0
@@ -218,9 +220,6 @@ def make():
     model.add('wall', thickened_wall(), name='Fair skin, trimmed, thickened 3 mm inward')
     model.add('seam', seam_cut(), op='cut', name='Seam gap with rear patch window')
     model.add('top_service', top_service_cut(), op='cut', name='Top service opening')
-    model.add('rear_doorway', _box(-120, DOOR_X_MAX, -DOOR_Y_HALF, DOOR_Y_HALF, 60, DOOR_Z_TOP), op='cut', name='Rear battery doorway')
-    model.add('rear_chamfer', _halfspace((CHAMFER_NX, 0.0, CHAMFER_NZ), CHAMFER_D, (-80, -DOOR_Y_HALF, 140), (-55, DOOR_Y_HALF, 152)), op='cut', name='Rear patch chamfer')
-    model.add('corridor', _box(CORRIDOR_X_MIN, CORRIDOR_X_MAX, -CORRIDOR_Y_HALF, CORRIDOR_Y_HALF, 60, CORRIDOR_Z_TOP), op='cut', name='Carrier corridor')
     model.add('neck_notch', _halfspace((NOTCH_NX, 0.0, NOTCH_NZ), NOTCH_D, (NOTCH_X_MIN, -NECK_NOTCH_HALF_WIDTH, 120), (60, NECK_NOTCH_HALF_WIDTH, 200)), op='cut', name='Neck notch')
     model.add('boss_rear', boss(BOSS_REAR_X, BOSS_R, BOSS_ROUND), op='join', name='Rear screw boss')
     model.add('pad_rear', boss(PAD_X, PAD_R, 0.0), op='join', name='Rear screw pad')

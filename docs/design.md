@@ -69,23 +69,36 @@ The lettering uses the bundled DejaVu Sans Bold font and license in
 Retain geometry only when it provides support, location/retention, access or
 clearance, or preserves the familiar Microduck appearance. The mount uses two
 printed parts: the trunk frame with compact gussets, and a separate battery dock.
-There are no thin transition notches, long hanging ribs or cosmetic extra bodies.
-World +Y is rearward and +Z upward. `src/lib/backpack.py` owns shared geometry;
-`src/frankenduck.py` and the assembly declarations own the battery placement.
+The battery leans 20 degrees from upright with its top toward the body. The
+original shell outline is retained, with local hidden relief at the rear opening;
+the upper crossbar and tall dock ears are removed to keep the release path open.
+World +Y is rearward and +Z upward. `src/lib/backpack.py` owns the shared geometry
+and battery pose; `source/assembly_data.json` records the matching placement.
+
+The placement rotates the reference upright geometry 20 degrees about the X axis
+through (0, 101.2, 126.815), then translates it 15 mm forward and 23.761265 mm up.
+These are transform parameters, not a claim that every point on the pack moves
+15 mm toward the body. The final position accommodates the checked walking and
+sitting trajectory; the full independent hip ranges are not cleared.
 
 | Feature | Modeled dimension |
 | --- | --- |
-| Battery world bounds X / Y / Z | ±41.5 / 68–134.4 / 65.315–188.315 mm |
-| Lower battery datum | Z=65.315 mm, central hip servo bottom |
-| Compact supports | 18 mm wide, continuous top at Z=164.45, R2 profile transitions |
-| Dock plate / rail cheeks | 7 mm / 5 mm |
-| Rail lips | 4 mm nominal before local battery clearance relief |
-| Mounting face | Y=60 mm; intentional direct clamping contact |
-| Four screw axes | X=±22; Z=145.5 and 157.5 mm; parallel to Y |
-| Screw passages / head recesses | Ø3.4 / Ø6.4 mm; head seat Y=63.8 mm |
-| Nut side slots | Y=53–55.8 mm, height 5.8 mm |
-| Thumb approach | 36 mm wide, open from above |
-| Shell-to-support minimum / battery axial / switch axial allowance | 0.8 / 0.7 / 0.8 mm |
+| Battery world bounds X / Y / Z | ±41.5 / 39.116–137.919 / 89.464–218.791 mm |
+| Battery inclination | 20 degrees from upright, top toward the body |
+| Compact supports | 18 mm wide, continuous 18 mm roots, R2 profile transitions |
+| Dock backing / rail cheeks | 7 mm / 5 mm |
+| Rail lips / rail length | 4 mm nominal before local relief / 50 mm |
+| Dock upper shoulder | R6 corners; ends at reference Z=158.5 mm |
+| Turned lower support | 24 mm terminal width, R3 root blend |
+| Lower-support sampled normal sections | 5.04–6.80 mm |
+| Four screw axes, before inclination | X=±24; Z=138.5 and 150.5 mm; parallel to Y |
+| Mounting face, before inclination | Y=60 mm; intentional clamping contact |
+| Screw passages / head recesses | Ø3.4 / Ø6.4 mm; reference head seat Y=63.8 mm |
+| Nut side slots, before inclination | Y=53–55.8 mm, height 5.8 mm |
+| Thumb approach | Ø18 mm corridor along the slide direction, open from above |
+| Shell walls at six checked sections | 3 mm |
+| Shell-to-mount / shell-to-battery measured minimum gaps | 2.784 / 1.499 mm |
+| Battery-to-dock measured minimum gap | 0.690 mm |
 | Shell split | 0.6 mm total |
 
 The required joint hardware is four M3 × 12 socket-head screws and four M3 hex
@@ -94,31 +107,44 @@ before fitting the shells; remove the battery for screwdriver access from behind
 The screws clamp broad planar faces directly together. Clearances belong in the
 screw/nut passages and around removable parts, not between the clamping faces.
 Actual hardware dimensions, seating, torque and printed strength need verification.
-The hardware requirement is documented here; detailed fastener solids are not
-added as decorative assembly geometry.
+Detailed fastener solids are not added as decorative assembly geometry.
 
-The frame can be evaluated for printing with its broad top face on the bed; the
-separate dock has a flat body-facing surface, eliminating the old L-shaped
-one-piece print. The rail lips retain short overhangs: this is not a support-free
-or sliced qualification. Material, orientation and support settings remain a
-slicer decision. The dock's former central window is removed to give a continuous
-backing plate. The side nut slots are short necessary openings, not lightening cuts.
+The frame has a broad top face and the separate dock has a flat body-facing
+backing that can be evaluated as bed faces. The narrowed lower end turns toward
+the battery through a 45-degree root with a 3 mm blend. Rail lips retain short
+overhangs: this is not a support-free or sliced qualification. Material,
+orientation and support settings remain a slicer decision. The backing is
+continuous; the short side nut slots are necessary openings, not lightening cuts.
 
-The shell modifications preserve the familiar body outline and existing screw
-features. Both lower rear corners remain reinforced. The support clearances and
-release approach are cut continuously; the isolated donor rear patch below the
-release opening is removed rather than exported as a loose fragment. Four obsolete
-carrier bores in the trunk remain filled. The battery remains exposed and keeps
-its existing geometry, colors, height and fore/aft placement. Earlier NP-F550,
-carrier and donor cover models remain inactive library parts.
+The shell modifications retain the original outer profile and screw features.
+The lower mount bay is open, with no obsolete locating tongues or thin corner
+pads. The upper service opening ends before the release paddle; there is no
+raised rear crown or crossbar. Local internal relief provides battery clearance
+without changing the outer body silhouette. Offset surfaces are converted to
+B-splines before STEP export so the saved shells remain closed single solids.
+Four obsolete carrier bores in the trunk remain filled. The battery remains one
+exposed selectable component with its existing geometry and face colors. Earlier
+NP-F550, carrier and donor cover models remain inactive library parts.
 
-`assembly.backpack` checks valid connected solids, continuous support roots, four
-nominal screw/nut envelopes, direct clamping patches and screwdriver access with
-the battery removed. It checks shell and battery gaps, lower corner sections,
-rest-pose intersections and the thumb approach. It also checks 30 moving leg
-occurrences at 43 discrete times against the battery, frame, dock and shell
-corners. The 1e-5 mm³ overlap threshold handles numerical coincidence. This is not
-a continuous sweep, every joint pose, or a certification of all existing robot fits.
+`assembly.backpack` checks the saved frame, dock and shells as valid single solids;
+continuous support roots; four nominal screw/nut envelopes; clamping patches;
+battery-removed screwdriver paths; shell/battery gaps; sampled wall sections;
+static intersections; and the thumb approach. It also checks 30 moving leg
+occurrences at 43 discrete times against the battery, frame, dock and complete
+shells. Numerical positive-overlap tolerance is 1e-5 mm³.
+
+`backpack.motion` checks all 1,702 keyframes of `walk_sit_stand_walk_sit`: 30 leg
+occurrences against five fixed backpack/body targets, totaling 255,300 pairs.
+Conservative bounding volumes reject pairs separated by at least 2 mm; nearby
+pairs use exact CAD distances. The approved model has a sampled minimum
+clearance lower bound of 2 mm. This covers the recorded keyframes, not continuous
+interpolation or every combination of the declared joint ranges.
+
+`backpack.removal` checks a 51 mm slide along the rails followed by an 80 mm
+outward departure normal to the backing, with the head and legs neutral. The
+path has 67 positions: 2 mm increments plus the rail endpoint. All checked
+positions are free of intersections; the minimum shell gap is 1.499 mm and dock
+gap is 0.690 mm. Gaps of at least 3 mm may be reported as 3 mm lower bounds.
 
 The rail and latch in the existing battery model are photo-derived. The dock is
 a prototype based on that geometry, not a verified X20V mating interface. Real

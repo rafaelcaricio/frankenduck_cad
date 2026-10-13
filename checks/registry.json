@@ -98,7 +98,7 @@
     {
       "id": "assembly.backpack",
       "call": "checks.assembly:backpack",
-      "purpose": "Two-part screwed battery mount, functional openings and sampled leg clearance",
+      "purpose": "Inclined two-part battery mount, fastener paths, print gaps and sampled leg clearance",
       "suites": [
         "full"
       ],
@@ -112,7 +112,43 @@
         "checks/common.py"
       ],
       "report": "reports/latest/backpack_verification.json",
-      "coverage": "Valid single-solid frame, dock and shells; four M3 screw/nut envelopes, clamping patches and battery-removed driver paths; continuous support roots; battery bounds; dock/shell/battery gaps; reinforced corner sections; static overlaps and thumb approach; 43 discrete samples for 30 leg occurrences against battery, frame, dock and corners. No continuous sweep, slicing or physical fit/strength verification."
+      "coverage": "Valid single-solid frame, dock and shells; four M3 screw/nut envelopes, clamping patches and battery-removed driver paths; continuous support roots; 20-degree battery bounds; dock/shell/battery gaps; 3 mm shell-wall sections and an open lower mount bay; static overlaps and thumb approach; 43 discrete samples for 30 leg occurrences against battery, frame, dock and corners. No continuous sweep, slicing or physical fit/strength verification."
+    },
+    {
+      "id": "backpack.motion",
+      "call": "checks.backpack_paths:motion",
+      "purpose": "All 1702 recorded walking and sitting keyframes against the complete backpack and shells",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "src/animation.js",
+        "src/lib/backpack.py",
+        "checks/backpack_paths.py",
+        "checks/common.py"
+      ],
+      "report": "reports/latest/backpack_motion_verification.json",
+      "coverage": "Thirty leg occurrences; 1702 keyframes; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
+    },
+    {
+      "id": "backpack.removal",
+      "call": "checks.backpack_paths:removal",
+      "purpose": "Neutral-pose rail disengagement and outward battery departure",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "STEP/frankenduck.step",
+        "STEP/frankenduck.step.json",
+        "src/animation.js",
+        "src/lib/backpack.py",
+        "checks/backpack_paths.py",
+        "checks/common.py"
+      ],
+      "report": "reports/latest/backpack_removal_verification.json",
+      "coverage": "Neutral head/legs; 51 mm rail slide followed by 80 mm outward departure, sampled at 2 mm and rail endpoint. Exact solid pairs near conservative bounds; 3 mm distances may be lower bounds. Nominal geometry only, no physical latch fit validation."
     }
   ]
 }
