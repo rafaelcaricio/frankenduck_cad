@@ -240,7 +240,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "One continuous open carrier; four annular PCB screw seats, recessed lower rail, open button area. Flat back for printing."
     },
     {
       "model": "foot_left_native_a",

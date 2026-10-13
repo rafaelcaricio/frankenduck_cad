@@ -71,10 +71,12 @@
         "checks/radxa.py",
         "src/lib/radxa_clearance.py",
         "src/lib/radxa_6530b_parameters.py",
-        "src/frankenduck.py"
+        "src/frankenduck.py",
+        "src/lib/radxa_gpio_mount.py",
+        "src/parts/face_radxa_bracket_native.py"
       ],
       "report": "reports/latest/radxa_mount_fit.json",
-      "coverage": "Saved rest pose; 1e-5 mm3 overlap threshold; mounting context and GPIO allowances against the assembly, PCB seating, mounting axes, screw passages/head seats, speaker mount and bearing passages. Physical wire bending and tool access untested."
+      "coverage": "Saved rest pose; 1e-5 mm3 overlap threshold; mounting context and GPIO allowances against the assembly, PCB seating, mounting axes, screw passages/head seats, speaker mount and bearing passages. Physical wire bending and tool access untested. Explicit approximate underside button keepout and minimum bracket gap; actual actuator height/position unmeasured. One continuous open carrier, four PCB screw seats, open button-side strip between screw islands, no other PCB contact at the seating plane."
     },
     {
       "id": "radxa.heatsink",
@@ -90,10 +92,12 @@
         "source/assembly_data.json",
         "checks/radxa.py",
         "src/lib/radxa_clearance.py",
-        "src/lib/radxa_6530b_parameters.py"
+        "src/lib/radxa_6530b_parameters.py",
+        "src/parts/top_head_shell_native.py",
+        "src/parts/head_frame_native.py"
       ],
       "report": "reports/latest/radxa_heatsink_fit.json",
-      "coverage": "Saved rest pose; official outer envelope and modeled inlet, 1e-5 mm3 overlap threshold, three cover-wall samples >=2 mm and nominal mounting stack. Detailed cooler geometry approximate; no thermal validation."
+      "coverage": "Saved rest pose; official outer envelope and modeled inlet, 1e-5 mm3 overlap threshold, five cover-wall samples >=2 mm and nominal mounting stack. Detailed cooler geometry approximate; no thermal validation."
     },
     {
       "id": "assembly.backpack",

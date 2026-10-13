@@ -250,6 +250,11 @@ def make():
     model.cylinder('jaw_m2_c', m2_clr / 2, 10.0, at=(jaw_world(-10.26, -32.74, 35.2)[0], 10.0, jaw_world(-10.26, -32.74, 35.2)[2]), direction=(0, 1, 0), op='cut', body='frame', name='Jaw back M2 clearance')
     model.box('bulkhead_foot_relief', 5.5, 2.7, 13.5, at=(63.25, 14.35, 276.75), op='cut', body='frame', name='Relief round the front bulkhead +Y foot')
     model.add('rear_foot_hole', self_forming_hole((rear_foot_x, 0.0, rear_foot_z), (0, 0, 1), rear_hole_depth, sft_taper_short), op='cut', body='frame', name='Rear-centre foot self-forming M3 hole')
+    # Board standoffs move the fan 0.8 mm inward. A shallow circular relief
+    # preserves the full 2 mm inlet approach without changing the outer shell.
+    model.cylinder('radxa_fan_inlet_relief', 9.0, 2.5,
+                   at=(75.765, 7.87, 304.5), direction=(-1, 0, 0),
+                   op='cut', body='frame', name='Radxa fan inlet edge relief')
     model.material('pla', color='#8a8a90')
     result = model.result()
     return to_build123d(model, 'head_frame_native')

@@ -5,10 +5,12 @@ pose; check physical components and fasteners before manufacturing release.
 
 ## Radxa mount and GPIO wiring
 
-The Cubie A7Z is seated on four aligned M2 mounting holes with USB-C facing up.
-The face bracket is a single solid with 3.2 mm rails and flush mounting pads.
-It uses three M3 face attachments, four M2 pan-head wells and 1.6 mm M2 screw
-grip. The M3 seats accept nominal 5.6 mm, 90-degree flat-head screws.
+The Cubie A7Z is supported at all four M2 corner screws, with USB-C facing up.
+One continuous open carrier uses the three existing M3 face attachments. The board
+seats at world Y=-89.015 mm. The 4 mm carrier depth provides 2 mm webs plus
+2 mm raised screw seats, within the original outer head profile.
+The M2 pan-head wells are 1.6 mm deep and the remaining M2 screw grip is 2.4 mm.
+The M3 seats accept nominal 5.6 mm, 90-degree flat-head screws.
 
 The GPIO allowance is 53 × 23 × 5.5 mm behind the PCB, followed by a
 53 × 6 × 18 mm upward cable path. The 23 mm depth starts at the PCB seating
@@ -27,6 +29,25 @@ Run `./cad review radxa` to view the clearances: yellow is the plug/turn bay,
 purple is the upward cable path and blue is the fan-inlet approach. These
 volumes are excluded from the robot assembly and print set.
 
+The printed U-shaped carrier has a 7 mm tall lower rail. The PCB contacts
+four radius 3.2 mm annular screw lands only. All other support material has a measured minimum 2 mm clearance
+from the modeled Radxa, including the imported microSD housing. The screw
+islands are the local exception: the two right islands clear the microSD
+housing by at least 1.3 mm. There is no rail or bridge across the button area.
+The carrier is one connected solid with a flat mounting/printing face;
+the main recessed webs are 2 mm thick and the screw seats rise another 2 mm.
+
+The imported board omits the physical button, so a small photo-derived
+envelope alone is insufficient. `radxa.mount` checks both
+an approximate button allowance from Radxa's
+[underside layout](https://docs.radxa.com/en/cubie/a7z/hardware-use/hardware-info)
+and a broad open strip across the button area between the four screw islands.
+It separately checks the PCB-contact islands, the 2 mm non-island gap and each
+island's distance from the modeled microSD housing. The installed button and
+solder joints remain unmeasured; the orange review volume is an allowance.
+The original 23 mm GPIO-plug depth and full cable allowance remain reserved,
+translated with the board. Their clearance is rechecked against the speaker.
+
 ## Radxa 6530B cooler
 
 [Radxa's dimensions and installation guide](https://docs.radxa.com/en/accessories/heatsink-case/heatsink-6530b)
@@ -40,15 +61,17 @@ assumptions. The standoff follows the modeled 3.5 mm SoC plus thermal pad.
 The model remains a dimensioned approximation.
 
 The fit suite checks the outer envelope, a 2 mm approach to the fan inlet and
-three upper-cover wall samples of at least 2 mm. Inlet space is a clearance
+five upper-cover wall samples of at least 2 mm. Inlet space is a clearance
 allowance, not a thermal result. The cooler is rigidly attached to the board
-and follows it in animation.
+and follows it in animation. The 0.8 mm board shift extends the existing
+internal cover pocket and adds a shallow circular frame-edge relief. The
+external head profile is unchanged; all sampled cover sections retain 2 mm.
 
 The PCB model uses a 58 × 23 mm hole grid. Its 0.112 mm nominal axis offset
 from the cooler grid fits inside the bracket's 0.2 mm radial M2 allowance.
-The supplied 4 mm screws leave only 0.65 mm nominal engagement through the
-1.6 mm bracket grip and 1.75 mm PCB. Review screw length against the actual
-PCB thickness and heatsink thread depth.
+The 4 mm kit screws are too short for the new 2.4 mm bracket grip plus
+1.75 mm PCB. Four M2 x 6 screws give 1.85 mm nominal thread engagement.
+Check the actual heatsink thread depth before choosing the final screws.
 
 ## PARKSIDE battery component
 

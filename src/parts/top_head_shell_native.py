@@ -339,8 +339,8 @@ def make():
     # Local 6530B revision: clear the extreme corner of the manufacturer's
     # full 65 x 30 x 11.5 mm envelope, including a small fitting margin.
     # This lies inside the cover, away from its screw bosses and cutouts.
-    model.box('6530b_upper_corner_clearance', 3.4, 1.15, 1.3,
-              at=(77.7, -44.625, 317.35), op='cut', body='lid',
+    model.box('6530b_upper_corner_clearance', 4.3, 1.02, 1.3,
+              at=(77.25, -44.56, 317.35), op='cut', body='lid',
               name='Official heatsink envelope corner clearance')
     model.material('pla', color='#99deef')
     result = model.result()

@@ -17,7 +17,9 @@ def mount():
     ROOT = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(ROOT / "src"))
     from lib.radxa_clearance import (clearance_shapes, PCB_SEAT_Y, PLUG_SIZE,
-                                     PLUG_CENTRE, CABLE_SIZE, CABLE_CENTRE)
+                                     PLUG_CENTRE, CABLE_SIZE, CABLE_CENTRE,
+                                     button_clearance, BUTTON_SIZE, BUTTON_CENTRE,
+                                     BUTTON_CLEARANCE_SIZE, BUTTON_CLEARANCE_CENTRE)
 
     TOLERANCE_MM3 = 1e-5
     current = read_scene(ROOT / "STEP/frankenduck.step")
@@ -46,18 +48,21 @@ def mount():
                                        cq.Shape.cast(native.wrapped))
 
     bracket = occurrences["o1.6"][2]
+    from cadgen import build123d as bd
+    native_bracket=bd.Compound(bracket.wrapped)
     board = occurrences["o1.15"][2]
     bulkhead = occurrences["o1.3"][2]
     speaker = occurrences["o1.16"][2]
     heatsink = occurrences["o1.71"][2]
     plug, cable = [cq.Shape.cast(s.wrapped) for s in clearance_shapes()]
     targets = [("bulkhead", bulkhead, {"o1.3"}),
-               ("bracket", bracket, {"o1.3", "o1.6"}),
+               ("single_Radxa_carrier", bracket, {"o1.3", "o1.6"}),
                ("board", board, {"o1.3", "o1.6", "o1.15"}),
                ("speaker", speaker, {"o1.3", "o1.6", "o1.15", "o1.16"}),
                ("heatsink_representation", heatsink, {"o1.3", "o1.6", "o1.15", "o1.16", "o1.71"}),
                ("gpio_jumper_plug_allowance", plug, {"o1.15"}),
-               ("gpio_upward_cable_allowance", cable, set())]
+               ("gpio_upward_cable_allowance", cable, set()),
+               ("underside_button_clearance",cq.Shape.cast(button_clearance().wrapped),{"o1.15"})]
     # The socket allowance intentionally contains the existing GPIO header.
     # The cable allowance must be clear of the board as well as the other parts.
     for name, shape, skip in targets:
@@ -77,17 +82,18 @@ def mount():
         pcb_holes.append([(b.min.X+b.max.X)/2, (b.min.Z+b.max.Z)/2])
     pcb_holes.sort(key=lambda p: (round(p[0], 6), round(p[1], 6)))
     bracket_holes = []
-    for edge in occurrences["o1.6"][1].edges():
+    for edge in native_bracket.edges():
         if edge.geom_type.name == "CIRCLE" and abs(edge.radius - 1.2) < 1e-6:
             centre = edge.arc_center
             candidate = [centre.X, centre.Z]
             if not any(math.dist(candidate, p) < 1e-6 for p in bracket_holes):
                 bracket_holes.append(candidate)
     bracket_holes.sort(key=lambda p: (round(p[0], 6), round(p[1], 6)))
-    assert len(pcb_holes) == len(bracket_holes) == 4
-    hole_errors = [math.dist(a, b) for a, b in zip(pcb_holes, bracket_holes)]
-    bracket_seat_faces = [f for f in occurrences["o1.6"][1].faces()
-                          if f.geom_type.name == "PLANE" and f.area > 40
+    assert len(pcb_holes)==len(bracket_holes)==4
+    selected_holes=pcb_holes
+    hole_errors = [math.dist(a, b) for a, b in zip(selected_holes, bracket_holes)]
+    bracket_seat_faces = [f for f in native_bracket.faces()
+                          if f.geom_type.name == "PLANE" and f.area > 15
                           and abs(f.center().Y - PCB_SEAT_Y) < 1e-4]
     assert bracket_seat_faces, "Expected rail seating faces at the PCB datum"
     bracket_seat_y = bracket_seat_faces[0].center().Y
@@ -96,11 +102,11 @@ def mount():
     report["seating"] = dict(pcb_seat_y_mm=seat.center().Y,
                              bracket_seat_y_mm=bracket_seat_y,
                              plane_gap_mm=seat_gap, pcb_holes_xz_mm=pcb_holes,
-                             bracket_holes_xz_mm=bracket_holes,
+                             bracket_holes_xz_mm=bracket_holes, supporting_pair="all four corner screws; only local annular contact",
                              max_hole_axis_error_mm=max(hole_errors))
     face_seat_gap = abs(bounds(bracket)[1] - bounds(occurrences["o1.14"][2])[4])
     face_hole_centres = []
-    for edge in occurrences["o1.6"][1].edges():
+    for edge in native_bracket.edges():
         if edge.geom_type.name == "CIRCLE" and abs(edge.radius - 1.7) < 1e-6:
             centre = edge.arc_center
             candidate = [centre.X, centre.Z]
@@ -116,24 +122,78 @@ def mount():
                                       expected_centres_xz_mm=expected_face_holes,
                                       max_axis_error_mm=max(face_axis_errors,default=None))
     bracket_depth = bounds(bracket)[4] - bounds(bracket)[1]
-    checks.append(abs(bracket_depth - 3.2) < 1e-5)
+    checks.append(abs(bracket_depth - 4.0) < 1e-5)
     report["bracket"] = dict(depth_mm=bracket_depth,
                                 projection_beyond_rail_mm=0.0,
                                 screw_head_allowance="90 degree M3 flat head, nominal diameter 5.6 mm")
+    from OCP.BRepExtrema import BRepExtrema_DistShapeShape
+    roof_distance=BRepExtrema_DistShapeShape(bracket.wrapped,occurrences['o1.10'][2].wrapped)
+    assert roof_distance.IsDone()
+    checks.append(roof_distance.Value()>=0.8-1e-5)
+    report['bracket']['head_shell_gap_mm']=roof_distance.Value()
+    report['bracket']['head_shell_minimum_required_mm']=0.8
+    button=cq.Solid.makeBox(*BUTTON_SIZE,cq.Vector(*[c-d/2 for c,d in zip(BUTTON_CENTRE,BUTTON_SIZE)]))
+    distance=BRepExtrema_DistShapeShape(button.wrapped,bracket.wrapped)
+    assert distance.IsDone()
+    checks.append(distance.Value()>=2.0-1e-5)
+    report['underside_button']=dict(approximate_envelope_size_mm=BUTTON_SIZE,
+        approximate_envelope_centre_mm=BUTTON_CENTRE,
+        clearance_size_mm=BUTTON_CLEARANCE_SIZE,clearance_centre_mm=BUTTON_CLEARANCE_CENTRE,
+        bracket_gap_mm=distance.Value(),minimum_required_mm=2.0,
+        source='Radxa underside layout; imported PCB omits the button',
+        limitation='Envelope includes inferred position/protrusion; verify actual board and released actuator height')
+    # Protect the central button-side strip between the corner screw islands, not just a photo-derived switch
+    # envelope. No support material may remain anywhere behind this PCB region.
+    open_side=cq.Solid.makeBox(49.0,4.985,21.75,cq.Vector(-36.63,-94.0,297.0))
+    open_volume=volume(open_side.intersect(bracket))
+    checks.append(open_volume<=TOLERANCE_MM3)
+    # Within the PCB footprint, contact is limited to the four M2 annular lands.
+    contact_slab=cq.Solid.makeBox(70.0,.001,31.5,cq.Vector(-44.63,PCB_SEAT_Y-.001,287.25))
+    outside_lands=contact_slab
+    for x,z in selected_holes:
+        outside_lands=outside_lands.cut(cq.Solid.makeCylinder(3.2001,.003,cq.Vector(x,PCB_SEAT_Y-.002,z),cq.Vector(0,1,0)))
+    unexpected_contact=volume(bracket.intersect(outside_lands))
+    checks.append(unexpected_contact<=TOLERANCE_MM3)
+    report['gpio_only_support']=dict(printed_parts=1,pcb_screws=4,
+        button_side_zone_bounds_mm=bounds(open_side),button_side_obstruction_mm3=open_volume,
+        unexpected_pcb_contact_mm3=unexpected_contact,contact_land_radius_mm=3.2,
+        local_gpio_underside_recess_mm=2.0,
+        scope='The entire button-side strip is open through the support depth; only four annular lands touch the PCB. No installed-board measurement or load test.')
+    non_support=bracket
+    for x,z in selected_holes:
+        non_support=non_support.cut(cq.Solid.makeCylinder(3.2001,8,cq.Vector(x,-96,z),cq.Vector(0,1,0)))
+    board_gap=BRepExtrema_DistShapeShape(non_support.wrapped,board.wrapped)
+    assert board_gap.IsDone()
+    checks.append(board_gap.Value()>=2.0-1e-5)
+    report['gpio_only_support']['non_land_to_modeled_radxa_gap_mm']=board_gap.Value()
+    report['gpio_only_support']['minimum_required_non_land_gap_mm']=2.0
+    report['gpio_only_support']['near_screw_island_note']='Right R3.2 mounting islands are exempt from the non-land gap; they clear the modeled microSD housing by at least 1.3 mm and contacts only the PCB annulus.'
+    # Check all four complete screw islands against the modeled underside
+    # microSD housing separately; the 2 mm non-land test excludes these bosses.
+    sd_housing=cq.Solid.makeBox(17.75,2.0,13.75,cq.Vector(7.62,PCB_SEAT_Y-2,295.5))
+    boss_rows=[]
+    for x,z in selected_holes:
+        island=bracket.intersect(cq.Solid.makeCylinder(3.2,8,cq.Vector(x,-96,z),cq.Vector(0,1,0)))
+        d=BRepExtrema_DistShapeShape(island.wrapped,sd_housing.wrapped)
+        assert d.IsDone()
+        checks.append(d.Value()>=1.3-1e-5)
+        boss_rows.append(dict(screw_xz_mm=[x,z],microsd_housing_gap_mm=d.Value(),
+            locally_accepted_minimum_mm=1.3))
+    report['gpio_only_support']['screw_islands_to_microSD']=boss_rows
     # Check the protected shaft passages and both types of screw-head seats.
     protected_bores = []
-    for kind, centres, radius in [("M2", pcb_holes, 1.0), ("M3", face_hole_centres, 1.5)]:
+    for kind, centres, radius in [("M2", selected_holes, 1.0), ("M3", face_hole_centres, 1.5)]:
         for x, z in centres:
-            shaft = cq.Solid.makeCylinder(radius, 3.2, cq.Vector(x,-93.015,z), cq.Vector(0,1,0))
+            shaft = cq.Solid.makeCylinder(radius, 4.0, cq.Vector(x,-93.015,z), cq.Vector(0,1,0))
             v = volume(shaft.intersect(bracket))
             protected_bores.append(dict(kind=kind, centre_xz_mm=[x,z], obstruction_mm3=v))
             checks.append(v <= TOLERANCE_MM3)
-    for x,z in pcb_holes:
+    for x,z in selected_holes:
         head = cq.Solid.makeCylinder(2.0,1.6,cq.Vector(x,-93.015,z),cq.Vector(0,1,0))
         v=volume(head.intersect(bracket));checks.append(v <= TOLERANCE_MM3)
         protected_bores.append(dict(kind="M2 pan-head well",centre_xz_mm=[x,z],obstruction_mm3=v))
     for x,z in face_hole_centres:
-        head = cq.Solid.makeCone(1.7,2.8,1.1,cq.Vector(x,-90.915,z),cq.Vector(0,1,0))
+        head = cq.Solid.makeCone(1.7,2.8,1.1,cq.Vector(x,-90.115,z),cq.Vector(0,1,0))
         v=volume(head.intersect(bracket));checks.append(v <= TOLERANCE_MM3)
         protected_bores.append(dict(kind="M3 flat-head seat",centre_xz_mm=[x,z],obstruction_mm3=v))
         for ref in ["o1.15","o1.20"]:
@@ -234,7 +294,7 @@ def heatsink():
     from lib.radxa_clearance import clearance_shapes
 
     scene=read_scene(ROOT/'STEP/frankenduck.step')
-    report=dict(document_sha256=scene.document_hash,units='mm',geometry_status='Dimensioned representation; detailed geometry approximate',tolerance_mm3=1e-5,pairs=[],assumptions=dict(outer_size_mm=[65,30,11.5],mounting_grid_mm=HOLE_GRID,pcb_component_plane_y_mm=-88.065,base_standoff_mm=5.0,fan_case_mm=21.5,inlet_radius_mm=8.5,clear_inlet_approach_mm=2.0,foot_diameter_mm=4.8,gpio_notch_mm=[53,7]))
+    report=dict(document_sha256=scene.document_hash,units='mm',geometry_status='Dimensioned representation; detailed geometry approximate',tolerance_mm3=1e-5,pairs=[],assumptions=dict(outer_size_mm=[65,30,11.5],mounting_grid_mm=HOLE_GRID,pcb_component_plane_y_mm=-87.265,base_standoff_mm=5.0,fan_case_mm=21.5,inlet_radius_mm=8.5,clear_inlet_approach_mm=2.0,foot_diameter_mm=4.8,gpio_notch_mm=[53,7]))
     checks=[]
     shapes={x.ref.lstrip('#'):(x.label,cq.Shape.cast(x.shape().wrapped)) for x in scene.roots[0].children}
     from checks.common import volume, intersection
@@ -257,14 +317,14 @@ def heatsink():
     new=shapes['o1.10'][1]
     checks += [new.isValid(),len(new.Solids())==1]
     report['cover']=dict(valid=new.isValid(),solids=len(new.Solids()),wall_samples=[])
-    for y,z in [(-76.565,317.5),(-77.5,317.5),(-79.0,317.5)]:
+    for y,z in [(-79.0,317.5),(-77.5,317.5),(-76.565,317.5),(-75.765,317.5),(-75.1,317.5)]:
      ray=cq.Solid.makeCylinder(.01,10,cq.Vector(-50,y,z),cq.Vector(1,0,0))
      wall=[p.BoundingBox().xlen for p in new.intersect(ray).Solids()]
      checks.append(bool(wall) and min(wall)>=2.0)
      report['cover']['wall_samples'].append(dict(y_mm=y,z_mm=z,thickness_mm=wall))
     # Official 57.8 x 22.9 mm grid versus the coarser imported 58 x 23 mm grid.
     axis_error=math.hypot((58-HOLE_GRID[0])/2,(23-HOLE_GRID[1])/2)
-    report['mounting']=dict(grid_axis_offset_mm=axis_error,bracket_m2_radial_clearance_mm=.2,nominal_m2_shaft_fits=axis_error<.2,kit_screw_length_mm=4.0,modelled_bracket_grip_mm=1.6,modelled_pcb_thickness_mm=1.75,kit_thread_engagement_with_bracket_mm=4-1.6-1.75,suggested_longer_screw_review='M2 x 6 gives approximately 2.65 mm engagement; verify actual heatsink thread depth')
+    report['mounting']=dict(grid_axis_offset_mm=axis_error,bracket_m2_radial_clearance_mm=.2,nominal_m2_shaft_fits=axis_error<.2,kit_screw_length_mm=4.0,modelled_bracket_grip_mm=2.4,modelled_pcb_thickness_mm=1.75,kit_thread_engagement_with_bracket_mm=4-2.4-1.75,suggested_longer_screw_review='M2 x 6 gives approximately 1.85 mm engagement; verify actual heatsink thread depth')
     checks.append(axis_error<.2)
     report['passed']=all(checks)
     (ROOT/'reports/latest/radxa_heatsink_fit.json').write_text(json.dumps(report,indent=2))

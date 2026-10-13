@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-10-13T15:09:31.061408+00:00",
-  "input_key": "33061c145abcd5ecae56591a125cd88341a60675b92169c17ed16c7ad8248a32",
+  "generated_utc": "2026-10-13T21:27:13.863646+00:00",
+  "input_key": "d43f320b6d4d6b1d9b6c395c618b3eb51338be104e4d8ff7626e705480ef99af",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "e199de9de2d023a2880d625f5a1270856fb3424a3c62dde529245fb01cede7ca",
-    "catalog_sha256": "77ccb0ed82ad6b53cdb3b6d20ea2aa55352261c8ff8272b4c343baba4318babd",
+    "source_step_sha256": "eba882271337400d335ec9078632eb612c4612ce166f6d4bb36d177398e72892",
+    "catalog_sha256": "b3355f0cf666b3a4cfc7d384aa3d1ab27ab6de3c6f2d4a53dfc0e1695f37ffa0",
     "implementation": {
       "tools/print_export.py": "9fc89c93b562bdc3d48ac93f67225fbf632576822520f76e155b01d7563bd962",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
@@ -23,8 +23,8 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "99aa1770c57d191d06eb69f132237de25840c1dde16a7e9f23dffba50f30a553",
-    "assembly_data_sha256": "1b6733033aaf70b9dddc95368e7e245cd28e7747601e2d92a24add961ca5f97c"
+    "build_input_key": "4e78ee0ab11ef73f0fb5ad00ce244693116c5f9dcbad2d7015b9cf1f36ce6452",
+    "assembly_data_sha256": "8c31882bb55af7fbd4563a985544a93a27b9ce534d91955f8a9076391000ff76"
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
@@ -368,19 +368,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "t_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "e direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "e direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "e direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           }
         ]
       },
@@ -458,19 +458,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           }
         ]
       },
@@ -548,13 +548,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -632,13 +632,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -716,7 +716,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: bottom_head_shell_native; bounds 2.0103298226104016e-07, volume fraction 0.04105345853528214\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: bottom_head_shell_native; bounds 2.0103298226104016e-07, volume fraction 0.04105345853528214\n"
           }
         ]
       },
@@ -897,26 +897,26 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 3943.2104494264327,
+      "source_volume_mm3": 3607.022607324726,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "bounds_error_mm": 2.398081733190338e-14,
-        "volume_difference_mm3": 5.161382432561368e-10,
+        "bounds_error_mm": 4.430233957464225e-12,
+        "volume_difference_mm3": 4.849166452913778e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
-        0.2499999999999929,
-        91.41499999999999,
-        -281.87
+        1.254999999999992,
+        91.01499995,
+        -282.49999999999545
       ],
       "expected_bounds_mm": [
-        -46.0,
-        -1.6000000000000156,
+        -44.375,
+        -2.000000050000004,
         0,
-        46.0,
-        1.6000000000000156,
-        38.870000000000005
+        44.375,
+        2.000000050000004,
+        38.640000000004534
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -934,26 +934,26 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 4559,
-        "triangles": 9142,
-        "volume_mm3": 3943.2548829122293,
+        "vertices": 5109,
+        "triangles": 10242,
+        "volume_mm3": 3601.94848529842,
         "bounds_mm": [
-          -46.0,
-          -1.6,
-          0.00131,
-          46.0,
-          1.6,
-          38.869972
+          -44.375,
+          -2.0,
+          0.0,
+          44.375,
+          2.0,
+          38.63962
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.00131,
+      "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 1.1268352619394189e-05,
-      "sha256": "c05aa349bb358896101c8003be5f7250e60ab4b3ee6e631a23a1b13088da3b7c"
+      "relative_volume_error": 0.0014067341901328305,
+      "sha256": "bd7fe4ec3409f8e9b59c5d2a3248e3c3d5e29baf51dcb7c20e547bb3c931cbc1"
     },
     {
       "model": "foot_left_native_a",
@@ -1007,13 +1007,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1091,13 +1091,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1175,19 +1175,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1265,19 +1265,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "r\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1316,25 +1316,25 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 32542.759633124584,
+      "source_volume_mm3": 32535.92757463223,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.1952360081531656e-12,
-        "volume_difference_mm3": 9.92125496850349e-05,
+        "volume_difference_mm3": 0.00010224881043541245,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
         9.574999999999473,
-        24.364999999999128,
+        24.36499999999929,
         -261.79999989999465
       ],
       "expected_bounds_mm": [
         -43.42500000000052,
-        -49.63500000000087,
+        -49.635000000001035,
         0,
         43.42500000000052,
-        49.63500000000087,
+        49.635000000001035,
         44.200000100005354
       ],
       "tessellation": {
@@ -1353,9 +1353,9 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 7341,
-        "triangles": 14726,
-        "volume_mm3": 32576.717682754523,
+        "vertices": 7391,
+        "triangles": 14826,
+        "volume_mm3": 32570.07731740345,
         "bounds_mm": [
           -43.425,
           -49.635,
@@ -1371,8 +1371,8 @@
       },
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010434901653323045,
-      "sha256": "3ef72a71573bf22eb084072dbe2d363eaa7f406640fb9ed0af7cc4da87f757fb"
+      "relative_volume_error": 0.0010496010200688492,
+      "sha256": "4c0a6a67a5b9b4484106a4bba36d7037708d84c8e4747643c5a51df42ad580cc"
     },
     {
       "model": "hip_left_native",
@@ -1429,7 +1429,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native; bounds 0.003986100000680892, volume fraction 0.03306013482204716\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native; bounds 0.003986100000680892, volume fraction 0.03306013482204716\n"
           }
         ]
       },
@@ -1512,7 +1512,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native_right; bounds 0.003986100000684445, volume fraction 0.0330601348500766\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native_right; bounds 0.003986100000684445, volume fraction 0.0330601348500766\n"
           }
         ]
       },
@@ -1663,7 +1663,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: jaw_native; bounds 0.003688213729176937, volume fraction 0.12161106711959703\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: jaw_native; bounds 0.003688213729176937, volume fraction 0.12161106711959703\n"
           }
         ]
       },
@@ -1818,7 +1818,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 3.0171759568986545e-05, volume fraction 0.06445457656715632\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 3.0171759568986545e-05, volume fraction 0.06445457656715632\n"
           }
         ]
       },
@@ -2184,7 +2184,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_internal_yoke_native; bounds 0.0022021999999886077, volume fraction 0.15196862003182443\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_internal_yoke_native; bounds 0.0022021999999886077, volume fraction 0.15196862003182443\n"
           }
         ]
       },
@@ -2262,7 +2262,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_pitch_001_native; bounds 2.0000035050316e-07, volume fraction 0.05642141476893568\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_pitch_001_native; bounds 2.0000035050316e-07, volume fraction 0.05642141476893568\n"
           }
         ]
       },
@@ -2414,7 +2414,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 2.2e-05, volume fraction 0.06449345968933623\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 2.2e-05, volume fraction 0.06449345968933623\n"
           }
         ]
       },
@@ -2742,11 +2742,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 73277.97716456643,
+      "source_volume_mm3": 73277.79204004942,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.097001323883892e-09,
-        "volume_difference_mm3": 0.06700818156241439,
+        "volume_difference_mm3": 0.06724128320638556,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2781,14 +2781,14 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: top_head_shell_native; bounds 0.022370682961152966, volume fraction 0.41482198440054\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/.codex/visualizations/2026/10/12/01a130a1-8303-7d61-9461-d030f67a4a0a/radxa_print_export/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: top_head_shell_native; bounds 0.022370682961152966, volume fraction 0.4147544365251871\n"
           }
         ]
       },
       "mesh": {
-        "vertices": 16749,
-        "triangles": 33494,
-        "volume_mm3": 73220.52724983901,
+        "vertices": 16754,
+        "triangles": 33504,
+        "volume_mm3": 73220.09624350564,
         "bounds_mm": [
           -62.028572,
           -82.771488,
@@ -2804,8 +2804,8 @@
       },
       "max_bound_error_mm": 0.023411764568209037,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0007839997356695338,
-      "sha256": "28e4ec5e9edc1eefda453cbdd63ca44f1aa75a4e2fa9572a11ed57620c3e8e37"
+      "relative_volume_error": 0.000787357191551879,
+      "sha256": "3d3e4bb8e1a6e7dd9ec1abdded7268645b1a5f13d19d944c534d7c049a38afbd"
     },
     {
       "model": "trunk_base_native",
@@ -3332,7 +3332,7 @@
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 6.281197784119286e-12,
-        "volume_difference_mm3": 0.00013823693006997928,
+        "volume_difference_mm3": 0.00013823690824210644,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -3402,12 +3402,12 @@
     "3mf/bottom_head_shell_native.3mf": "6a36c7732a1d62006566861246191520e01cf81522591b7bf62af72080343aa3",
     "3mf/electronics_deck_native.3mf": "03b7c1a9766563051cf7f515b44fa5db1c9ba342e9bd4b67618051a0193bdf85",
     "3mf/face_part_native.3mf": "b274133738def934a8387f8b68c8ec9d0fcd6b431aa8dd0c51adbe2e43f3c0cb",
-    "3mf/face_radxa_bracket_native.3mf": "c05aa349bb358896101c8003be5f7250e60ab4b3ee6e631a23a1b13088da3b7c",
+    "3mf/face_radxa_bracket_native.3mf": "bd7fe4ec3409f8e9b59c5d2a3248e3c3d5e29baf51dcb7c20e547bb3c931cbc1",
     "3mf/foot_left_native_a.3mf": "41914012dfd6c1476f7d8ffd826f81970d19edaffc10128dd5bcb3be4e16de75",
     "3mf/foot_left_native_a_right.3mf": "258357a2bef848220e64114c68509751a77ad8c8e176f1e0083e04f4564da5e2",
     "3mf/foot_left_native_b.3mf": "de0b5c65cec2afc5ac722eae7f36b49e4905a058e823d411a26e13ab158d6a5d",
     "3mf/foot_left_native_b_right.3mf": "11bc4d29d3baffca69941b92eee086628c690aba5950dc146432dba8d774f6df",
-    "3mf/head_frame_native.3mf": "3ef72a71573bf22eb084072dbe2d363eaa7f406640fb9ed0af7cc4da87f757fb",
+    "3mf/head_frame_native.3mf": "4c0a6a67a5b9b4484106a4bba36d7037708d84c8e4747643c5a51df42ad580cc",
     "3mf/hip_left_native.3mf": "f4a173ec3780c4fb7a337686e8ef32ac859e2c18a3c860270b458e2cb2e195ad",
     "3mf/hip_left_native_right.3mf": "615a36293e7163b48fd6741c20bbaeb9a37a1235e6aeffb18cba4a25ce7d8342",
     "3mf/imu_yoke_bridge_native.3mf": "b51ee84e9a4cbf20ae8fc1f5afe8cd025dccbda8a4bcf5b0b907fc19ea806253",
@@ -3426,7 +3426,7 @@
     "3mf/soft_mouth_top_native.3mf": "7b5ab5931d4dfad4acbff58b4f38adf882c3771b02bede743824eac5067a507d",
     "3mf/sole_left_native.3mf": "00dead991517db85877cbfacc3cf50219f72c6697beb607ddce3e139b8f68a78",
     "3mf/sole_left_native_right.3mf": "6df89bde91a8f5ab1e4fad2e7b00039cd05c00178cbda34794b7d713923d98e5",
-    "3mf/top_head_shell_native.3mf": "28e4ec5e9edc1eefda453cbdd63ca44f1aa75a4e2fa9572a11ed57620c3e8e37",
+    "3mf/top_head_shell_native.3mf": "3d3e4bb8e1a6e7dd9ec1abdded7268645b1a5f13d19d944c534d7c049a38afbd",
     "3mf/trunk_base_native.3mf": "678bf211aaa9351b049f69232d2090b42bedfd8980e013527123c8d376cd627d",
     "3mf/ubec_clamp_native.3mf": "1ca0c4223a9021c99cbf5ef963005cdbe63f613f8b6a72b8b81a048900125d6a",
     "3mf/upper_leg_left_native.3mf": "c661f0e39da5a34cedbf9c63aaaf14b6da6200f635be3d4841b63bbb65ca3cd6",
@@ -3437,5 +3437,5 @@
     "PARTS.csv": "f5d3a1eaeed0a685ce69491d8fea6908d24d6b1158576e64401d3b707a7ae904",
     "README.md": "b56447cd186284ed5e05965ac4788d6c04b7a30d1f92be40eac91c14dd4ca9a6"
   },
-  "manifest_content_sha256": "b9a32eddf374abc5327e994f40f09ea453b4b75d2a6f6dfac0555afaa4c06a84"
+  "manifest_content_sha256": "116c2b5ff5e18eb1ce92d74bb0ec95f1453ac2dc425d1dabda483c5efa1f12be"
 }
