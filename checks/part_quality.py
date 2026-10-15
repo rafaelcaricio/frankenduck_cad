@@ -253,22 +253,61 @@ def thickness(m, limit, spacing=0.5, seed=1):
     return findings, summary
 
 
-def symmetry(shape, normal=(1, 0, 0), origin=(0, 0, 0)):
-    """Material that differs between the part and its mirror image across a plane."""
-    import cadquery as cq
-    from OCP.gp import gp_Trsf, gp_Ax2, gp_Pnt, gp_Dir
-    from OCP.BRepBuilderAPI import BRepBuilderAPI_Transform
-    a = _cq(shape)
-    t = gp_Trsf()
-    t.SetMirror(gp_Ax2(gp_Pnt(*origin), gp_Dir(*normal)))
-    mirrored = cq.Shape.cast(BRepBuilderAPI_Transform(a.wrapped, t, True).Shape())
-    findings = []
-    for side, diff in (('missing on the mirror side', a.cut(mirrored)), ('extra on the mirror side', mirrored.cut(a))):
-        for solid in diff.Solids():
-            volume = _volume(solid)
-            if volume > TOLERANCE:
-                findings.append(dict(kind='asymmetry', side=side, volume_mm3=volume, box=box(solid)))
-    return findings
+def _slice(m, z):
+    """Section of a closed mesh at height z, as one shapely region (even-odd over its closed outlines)."""
+    from shapely import LineString, MultiLineString, Polygon
+    from shapely.ops import linemerge
+    v, f = m['v'], m['f']
+    h = v[f][:, :, 2] - z
+    above = h > 0
+    crossing = above.any(axis=1) & ~above.all(axis=1)
+    segments = []
+    for tri, d in zip(v[f[crossing]], h[crossing]):
+        points = []
+        for i, j in ((0, 1), (1, 2), (2, 0)):
+            if (d[i] > 0) != (d[j] > 0):
+                t = d[i] / (d[i] - d[j])
+                points.append(tuple(np.round(tri[i, :2] + t * (tri[j, :2] - tri[i, :2]), 7)))
+        if points[0] != points[1]:
+            segments.append(points)
+    region = Polygon()
+    for line in getattr(linemerge(MultiLineString(segments)), 'geoms', None) or [linemerge(MultiLineString(segments))]:
+        assert line.is_ring, f'open section outline at z {z:.3f}: the mesh is not closed'
+        region = region.symmetric_difference(Polygon(line).buffer(0))
+    return region
+
+
+def symmetry(m, step=0.25, tolerance=0.05):
+    """Mirror symmetry about the X = 0 plane, on horizontal slices of the mesh.
+
+    Each slice (every step mm, offset from the mesh's flat faces) is compared with
+    its mirror image by an exact 2D symmetric difference. Bands up to tolerance
+    wide each side are mesh error (deflection 0.02 mm) and are ignored; any
+    differing region that survives that inset is a finding, with its full area.
+    Findings in touching boxes are merged; their volume is area times step.
+    """
+    from shapely import affinity
+    lo, hi = m['v'][:, 2].min(), m['v'][:, 2].max()
+    found = []
+    for z in np.arange(lo + step / 2 + 0.0123, hi, step):
+        region = _slice(m, z)
+        diff = region.symmetric_difference(affinity.scale(region, -1.0, 1.0, origin=(0, 0)))
+        for piece in getattr(diff, 'geoms', [diff]):
+            if piece.is_empty or piece.buffer(-tolerance).is_empty:
+                continue
+            x0, y0, x1, y1 = piece.bounds
+            found.append(dict(volume=piece.area * step, box=[float(b) for b in (x0, y0, z - step / 2, x1, y1, z + step / 2)]))
+    merged = [dict(item) for item in found]
+    joined = True
+    while joined:
+        joined = False
+        for a in range(len(merged)):
+            for b in range(len(merged) - 1, a, -1):
+                if _boxes_touch(_grow(merged[a]['box'], 0.5), merged[b]['box']):
+                    merged[a]['box'] = _union([merged[a]['box'], merged[b]['box']])
+                    merged[a]['volume'] += merged.pop(b)['volume']
+                    joined = True
+    return [dict(kind='asymmetry', volume_mm3=g['volume'], box=[round(b, 4) for b in g['box']]) for g in merged]
 
 
 # Edges: every outside edge is rounded with at least the minimum radius
@@ -676,7 +715,7 @@ def _fixtures():
     # A half pipe (radii 1.5 and 4): its square cut faces meet the outer cylinder, which curves away from them.
     pipe = bd.Cylinder(4, 10) - bd.Cylinder(1.5, 12)
     pipe = pipe - bd.Box(10, 10, 12, align=(bd.Align.CENTER, bd.Align.MAX, bd.Align.CENTER))
-    return dict(geometry_bad=bad, geometry_good=plain, geometry_wedge=wedge, geometry_pipe=pipe, edges_sharp=sharp,
+    return dict(geometry_bad=bad, geometry_good=plain, geometry_shifted=bd.Pos(0.1, 0, 0) * plain, geometry_wedge=wedge, geometry_pipe=pipe, edges_sharp=sharp,
                 edges_small=small, edges_good=round_,
                 print_bad=shelf, print_void=hollow, print_good=plain)
 
@@ -718,9 +757,11 @@ def self_test():
     pipe, _ = thickness(mesh(fx['geometry_pipe']), 1.2)
     expect('geometry.thickness', '60 degree wedge; half pipe 2.5 mm thick', 'thin knife edge; pipe quiet beside its cuts',
            any(f['min_mm'] < 0.5 and f['box'][0] < 1 for f in knife), not pipe)
-    asym = symmetry(fx['geometry_bad'])
+    asym = symmetry(mesh(fx['geometry_bad']))
     expect('geometry.symmetry', 'fin on one side of the YZ plane', 'about 256 mm3 differing',
-           abs(sum(f['volume_mm3'] for f in asym) - 2 * 0.8 * 20 * 8) < 1.0, not symmetry(fx['geometry_good']))
+           abs(sum(f['volume_mm3'] for f in asym) - 2 * 0.8 * 20 * 8) < 1.0, not symmetry(mesh(fx['geometry_good'])))
+    expect('geometry.symmetry', 'symmetric block moved 0.1 mm along X', 'both X faces differ',
+           len(symmetry(mesh(fx['geometry_shifted']))) == 2)
     sharp, _ = edges(fx['edges_sharp'], 0.5)
     good, corner = edges(fx['edges_good'], 0.5)
     expect('edges.sharp', 'block rounded on its vertical edges only', 'sixteen sharp rim edges',
@@ -771,23 +812,6 @@ def _pod_joints(sp):
                  insert_top=(x, y, sp.PLATE_BOTTOM_Z), driver=dict(diameter=6.0, length=60.0)) for x, y in sp.SCREWS]
 
 
-def _pod_skin(sp, pod, skin):
-    """The pod less everything deeper than skin mm inside the fairing, the floor and the socket tube with its mirror.
-
-    Only this outer skin (and the tongue) is meant to be mirror symmetric: the
-    socket follows the stick, whose contacts are not mirrored. Removing the tube
-    and its mirror keeps the removed region symmetric.
-    """
-    import cadquery as cq
-    z0 = sp._stick().rim_height + sp.SEAT_GAP
-    tube = sp.prism('stick', sp.CLEARANCE + sp.WALL + 0.05, z0 - 1.0, sp.SOCKET_TOP + 1.0)
-    floor = cq.Solid.makeBox(200, 200, 1.0 + skin, cq.Vector(-100, -100, z0 - 1.0))
-    inside = sp.fairing(skin).fuse(tube).fuse(tube.mirror('YZ')).fuse(floor)
-    out = pod.cut(sp.local_to_world(inside))
-    assert out.isValid() and out.Solids(), 'pod skin for the symmetry check must be valid'
-    return out
-
-
 def stick_pod():
     """The printed stick pod against the quality checks, after the checkers prove themselves."""
     import cadquery as cq
@@ -813,7 +837,7 @@ def stick_pod():
     results['wall'] = judge('wall', thin, accepted)
     results['wall']['summary'] = wall
     s = config['symmetry']
-    results['symmetry'] = judge('symmetry', symmetry(_pod_skin(sp, pod, s['skin_mm']), s['normal'], s['origin']), accepted)
+    results['symmetry'] = judge('symmetry', symmetry(m, s['step_mm'], s['tolerance_mm']), accepted)
     edge_findings, inside = edges(pod, limits['min_edge_radius_mm'])
     results['edges'] = judge('edges', edge_findings, accepted)
     results['edges']['inside_corners'] = inside
@@ -832,7 +856,7 @@ def stick_pod():
                   unknown_accepted_checks=unused, **{k: v for k, v in results.items()},
                   seconds=time.monotonic() - started,
                   coverage='Stick pod only, as saved in the assembly. Checkers prove themselves on known-error fixtures '
-                           'first. Short edges, small and narrow faces, ray-cast wall thickness, mirror symmetry of the outer skin, sharp '
+                           'first. Short edges, small and narrow faces, ray-cast wall thickness, mirror symmetry of the whole pod on 0.25 mm slices, sharp '
                            'edges and curvature radius, closed voids, support area for six build directions (reported), '
                            'every hole owned by a fastener or a named reason, and the two bd_warehouse M3 screws with '
                            'CNC Kitchen inserts (clearance, seat, alignment, pilot, wall, engagement, tip and driver path). '

@@ -33,6 +33,19 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def solid_volume(shape):
+    """Volume by adaptive integration, the reference for mesh volumes.
+
+    The fixed-order default reads about 2 % high on dense B-spline faces (the
+    stick pod), which is as large as the mesh tolerance it is compared with.
+    """
+    from OCP.BRepGProp import BRepGProp
+    from OCP.GProp import GProp_GProps
+    props = GProp_GProps()
+    BRepGProp.VolumeProperties_s(getattr(shape, "wrapped", shape), props, 1e-6)
+    return props.Mass()
+
+
 def transform(point, text):
     if not text:
         return point
@@ -307,7 +320,8 @@ def convert_worker(record, stage_path, bundle_path):
     box = native.bounding_box()
     bounds = [box.min.X,box.min.Y,box.min.Z,box.max.X,box.max.Y,box.max.Z]
     bounds_error = max(abs(a-b) for a,b in zip(bounds,record["expected_bounds_mm"]))
-    volume_error = abs(native.volume-record["source_volume_mm3"])
+    native_volume = solid_volume(native)
+    volume_error = abs(native_volume-record["source_volume_mm3"])
     differences = None
     if volume_error > max(.02,record["source_volume_mm3"]*1e-6):
         saved = bd.import_brep(stage/(name+".brep"))
@@ -319,7 +333,7 @@ def convert_worker(record, stage_path, bundle_path):
             bidirectional_difference_mm3=differences,
             saved_step_valid=record["saved_step_comparison"].get("saved_step_valid", True)
                 if record["saved_step_comparison"] else True),
-        source_volume_mm3=native.volume)
+        source_volume_mm3=native_volume)
     record["tessellation"] = write_export_3mf(native, bundle/record["filename"])
     measured = inspect_3mf(bundle/record["filename"], allow_numerical_overlaps=True)
     allowed = max(.01, 2*MESH_TOLERANCE+1e-5)
@@ -467,7 +481,7 @@ def export(force=False):
             expected_bounds = [-box.size.X/2, -box.size.Y/2, 0, box.size.X/2, box.size.Y/2, box.size.Z]
             records.append(dict(model=entry["model"], filename=f"3mf/{entry['model']}.3mf", quantity=len(bindings[entry["model"]]),
                 occurrences=bindings[entry["model"]], role=entry["role"], print_release=entry["print_release"],
-                material_hint=entry["material_hint"], source_volume_mm3=solids[0].volume,
+                material_hint=entry["material_hint"], source_volume_mm3=solid_volume(solids[0]),
                 geometry_source=geometry_source, saved_step_comparison=comparison,
                 translation_mm=[-v for v in xyz], expected_bounds_mm=expected_bounds))
         def launch(record):

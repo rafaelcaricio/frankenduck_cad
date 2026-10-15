@@ -1,7 +1,7 @@
 """Regression coverage for rounding-error recovery without filling real openings."""
 import unittest
 
-from tools.print_export import complete_planar_boundaries, geometric_difference
+from tools.print_export import complete_planar_boundaries, geometric_difference, solid_volume
 
 
 class NumericalGeometry(unittest.TestCase):
@@ -15,6 +15,14 @@ class NumericalGeometry(unittest.TestCase):
         from cadgen import build123d as bd
         values = geometric_difference(bd.Box(2, 3, 4), bd.Box(1, 3, 4))
         self.assertAlmostEqual(sum(values), 12)
+
+
+    def test_reference_volume_is_exact_on_bspline_faces(self):
+        import math
+        from cadgen import build123d as bd
+        from OCP.BRepBuilderAPI import BRepBuilderAPI_NurbsConvert
+        sphere = BRepBuilderAPI_NurbsConvert(bd.Sphere(10).wrapped, True).Shape()
+        self.assertAlmostEqual(solid_volume(sphere) / (4 / 3 * math.pi * 1000), 1, places=5)
 
 
 class PlanarTriangulation(unittest.TestCase):

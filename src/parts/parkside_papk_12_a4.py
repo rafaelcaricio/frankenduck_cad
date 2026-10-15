@@ -20,7 +20,11 @@ at about 45.2 x 51.5 mm, not the listed 52 x 48 mm; the model follows the photos
 The photos put the stick about 1.2 mm towards -X in the collar and the back wall about 16 mm
 below the rim. Three third-party X12 prints centre the stick and put the back wall 17.0 mm
 below the rim, and the model follows them on both points; check them with a caliper before
-relying on them for a mating part.
+relying on them for a mating part. The photo fit also skewed the stick plan: its front corner
+sat 1.85 mm towards -X, the ID pin 1.27 mm, and the + and - channels at unequal distances
+from the front corner. That skew is taken as photo perspective, so the stick, its contacts and
+its moulded marks are mirror symmetric about X = 0, each pair placed at the mean of the
+fitted pair.
 The nameplate artwork (X, 12V, TEAM and ///) is traced from the front photo, unwrapped round
 the curved collar; PARKSIDE is set in DejaVu Sans Bold at the traced letter positions. The
 nameplate's height on the collar varies by about 1.5 mm either way between the photos (the
@@ -62,30 +66,30 @@ rim_drop = (7.0, 13.0)  # mm Y where the side rim starts to slope down, and wher
 slit_y = (-14.1, -12.0)  # mm Vertical slit in front of each latch arm
 slit_bottom = 14.0  # mm Bottom of the slit
 # ---------------------------------------------------------------- stick
-stick_lobes = ((-9.21, 7.88), (9.21, 7.88), (-1.85, -9.15))  # mm Plan centres of the stick's three rounded corners: back -X, back +X, front; centred in the collar
+stick_lobes = ((-9.21, 7.88), (9.21, 7.88), (0.0, -9.15))  # mm Plan centres of the stick's three rounded corners: back -X, back +X, front; mirror symmetric about X = 0
 stick_radius = 10.56  # mm Corner radius of the stick plan outline
 stick_top = 80.5  # mm Top face of the stick
 stick_top_round = 1.0  # mm Radius round the stick's top edge
 channel_depth = 2.2  # mm Depth of the contact channels in the stick sides
 channel_width = 9.0  # mm Width of the contact channels
-channel_s = {'plus': 8.2, 'minus': 11.2}  # mm Channel centre along the front side, from the front corner's tangent point
-t_channel_x = 0.18  # mm X of the T contact channel centre on the flat back
+channel_s = {'plus': 9.7, 'minus': 9.7}  # mm Channel centre along the front side, from the front corner's tangent point: mid-side, as mirrored pairs
+t_channel_x = 0.0  # mm X of the T contact channel centre on the flat back
 t_channel_width = 8.0  # mm Width of the T contact channel
 plate_width = 7.2  # mm Width of the contact plates
 plate_z = (63.1, 79.9)  # mm Bottom of the contact plates and top of their bent-over tabs
 plate_face_depth = 1.8  # mm Contact plate face below the stick side
 plate_thickness = 0.4  # mm Contact plate thickness
 plate_tab = 1.6  # mm Length of the plate tab bent over the stick top
-pin_centre = (-1.27, -8.3)  # mm Centre of the ID contact pin on the top
+pin_centre = (0.0, -8.3)  # mm Centre of the ID contact pin on the top
 pin_diameter = 5.4  # mm ID contact pin diameter
 pin_recess_diameter = 6.9  # mm Recess round the ID pin
 # ---------------------------------------------------------------- moulded marks on the stick top
 mark_depth = 0.2  # mm Depth of the moulded marks
-mark_t = ((-1.77, 1.38, 12.0, 12.77), (-0.82, 0.28, 9.65, 12.0))  # mm X and Y extents of the T's bar and stem, in front of the T contact
-mark_plus = (-8.84, -2.87, 3.3, 1.1, 19.5)  # mm Centre X and Y, span and arm width; rotation in degrees
-mark_minus = (6.78, -2.9, 3.8, 1.0, 55.0)  # mm Centre X and Y, length and width; rotation in degrees
-mark_id = (-3.01, 0.18, -15.45, -12.88)  # mm X and Y extents of the ID legend in front of the pin, read from the back
-mark_ring = (-0.74, 2.2, 3.6, 0.45)  # mm Centre X and Y, outer diameter and groove width of the ring mark
+mark_t = ((-1.575, 1.575, 12.0, 12.77), (-0.55, 0.55, 9.65, 12.0))  # mm X and Y extents of the T's bar and stem, in front of the T contact
+mark_plus = (-7.81, -2.89, 3.3, 1.1, 28.4)  # mm Centre X and Y, span and arm width; rotation in degrees (an arm along its side)
+mark_minus = (7.81, -2.89, 3.8, 1.0, 61.6)  # mm Centre X and Y, length and width; rotation in degrees (along its side)
+mark_id = (-1.595, 1.595, -15.45, -12.88)  # mm X and Y extents of the ID legend in front of the pin, read from the back
+mark_ring = (0.0, 2.2, 3.6, 0.45)  # mm Centre X and Y, outer diameter and groove width of the ring mark
 # ---------------------------------------------------------------- latch arms and buttons
 button_outline = [(-7.50, 32.52), (3.75, 33.02), (8.21, 19.80), (-7.09, 19.25)]  # mm (Y, Z) release button corners, both sides
 button_proud = 0.8  # mm Button face proud of the arm

@@ -121,9 +121,10 @@ are not stored in the repository:
   ([thing:4646324](https://www.thingiverse.com/thing:4646324)). It is a plain
   envelope for 18650 cells, so it is used only for interface heights.
 
-The modeled stick fits the adapter socket line to line (-0.03 mm), as does the
-A1 replica's stick (-0.11 mm). The model follows the references on three
-points:
+The earlier photo-fitted stick fitted the adapter socket line to line
+(-0.03 mm), as did the A1 replica's stick (-0.11 mm). The mirror-symmetric
+stick below has not been compared with the references again. The model
+follows the references on three points:
 
 - The stick is centred in the collar. The photos put it about 1.2 mm toward -X.
   All three references centre it, and it brings the teeth closer to the centres
@@ -132,6 +133,13 @@ points:
   references. The photos give about 16 mm.
 - The latch catch is 3.0 mm above the rim, as in both replicas and the side
   photo. The adapter's lip needs at least 2.7 mm.
+
+The photo fit also skewed the stick plan. Its front corner sat 1.85 mm toward
+-X, the ID pin 1.27 mm, and the + and - channels were 8.2 and 11.2 mm from the
+front corner. The model treats this as photo perspective. The stick, the
+contacts and the moulded marks are mirror symmetric about X = 0. Both channels
+are 9.7 mm from the front corner, at mid-side. Each mirrored pair sits at the
+mean of the fitted pair.
 
 The collar step-down behind the buttons follows both side photos, from z 36.5
 at y 7.0 down to the back wall at y 13.0. The adapter's -X cradle clears it with
@@ -178,7 +186,7 @@ Y − 58 and Z − 83.
 | Plate holes / insert pilots | Ø3.4 / Ø4.0 × 6 mm for M3 × 5.7 heat-set inserts |
 | Tongue clamp contact | 220 mm² |
 | Shell-to-pod gap / shell split | 0.395 mm (0.4 nominal) / 0.6 mm |
-| Battery to pod / trunk / shells | 0.2 (hook over lip) / 3.29 / 4.49 mm |
+| Battery to pod / trunk / shells | 0.2 (hook over lip) / 3.29 / 4.53 mm |
 | XT60 bay | 8.6 × 16 × 24 mm at X 22.5–31.1, Y 28.6–44.6, Z 130–154 |
 | Release | Press both buttons, pull 95 mm straight down |
 
@@ -231,8 +239,10 @@ The stick variant weighs 1.795 kg, 549 g less than the PAP 204 A1 revision
 revision. The basis is the microduck_rl HOME receipt for CAD `94c002d` with the
 battery-area rows replaced: printed parts as solid PLA at 1310 kg/m³, the
 battery at its listed 185 g at the stick's mid-height, and 3 g for the screws
-and inserts. The pod is 42.3 g (32 258 mm³), 4.8 g less than in commit
-`4967942`; that moves the centre of mass 0.14 mm forward and 0.03 mm up. Real
+and inserts. The pod is 42.2 g (32 227 mm³), 4.8 g less than in commit
+`4967942`; that moves the centre of mass 0.14 mm forward and 0.03 mm up. The
+mirror-symmetric stick changed the pod by −0.05 g and moved the centre of mass
+by less than 0.002 mm. Real
 infill, wiring and the cells' mass distribution will differ. The walking policy
 in microduck_rl is not updated.
 
@@ -256,7 +266,7 @@ combination of the declared joint ranges.
 `battery_pod.removal` checks the full 95 mm straight-down release at the home
 pose. Battery material inside the stick outline grown 0.3 mm stays in that
 column on the way down. The column meets no part; it stays 0.3 mm from the pod,
-2.99 mm from the trunk and 4.10 mm from the shells. Of the 23 battery pieces
+2.99 mm from the trunk and 4.19 mm from the shells. Of the 23 battery pieces
 outside the column, 22 have swept boxes that meet no part. The last, the body
 round the latch hooks, is checked against the pod with exact booleans every
 0.25 mm. The hooks ride over the lips from 0.25 to 4.75 mm of travel. All of
@@ -271,8 +281,10 @@ print. Each checker first finds the error in a part with a known error. It
 reports edges under 0.05 mm, faces under 0.05 mm² or narrower than 0.1 mm, and
 walls under 1.2 mm by rays from samples 0.5 mm apart; rays that leave a face at
 under 25° run along a wall beside an edge and are left to the edge check. The
-outer 1 mm skin must be mirror symmetric (the socket follows the stick, whose
-contacts are not mirrored). Outside edges need a 0.5 mm radius; closed voids
+whole pod must be mirror symmetric about X = 0, socket included. It is compared
+with its mirror image on horizontal mesh slices every 0.25 mm; differences
+inside a 0.05 mm band are mesh error. A 3D boolean against the mirror is not
+used, because OCCT returns null or wrong shapes for the near-coincident faces. Outside edges need a 0.5 mm radius; closed voids
 fail; every hole needs a fastener. Both bd_warehouse M3 × 12 ISO 4762 screws
 into CNC Kitchen M3 × 5.7 inserts are checked for clearance, seat, alignment,
 pilot, wall, thread engagement, tip and driver path. Support area is reported

@@ -944,7 +944,7 @@
       "material_hint": "mixed: ABS case, PC nameplate, metal contacts and screws; appearance only",
       "export": false,
       "active_variant": true,
-      "notes": "Active PAPK 12 A4 12 V 2 Ah stick battery as one coloured component, cap down in the rump pod. Photo-derived exterior visual model; outline, contacts and latches approximate; excluded from print exports."
+      "notes": "Active PAPK 12 A4 12 V 2 Ah stick battery as one coloured component, cap down in the rump pod. Photo-derived exterior visual model; stick, contacts and marks mirror symmetric about X = 0; outline, contacts and latches approximate; excluded from print exports."
     },
     {
       "model": "stick_pod_native",

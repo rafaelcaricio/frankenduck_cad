@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-15T10:07:30.979871+00:00",
-  "input_key": "22cc3958726450138e5b56d113b886e2d1cc9eb49df8f984b359bb8188c9ff59",
+  "generated_utc": "2026-10-15T13:26:37.310397+00:00",
+  "input_key": "57c636bff71b014713cea2b7813b8ae7c4294678ac300b6156d7a3ab15fc6971",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "ef3e5a9e2180f0baa897a412d7afc8054687458541bcc65749ccc58befbcc472",
-    "catalog_sha256": "3e99f9dbb5a00ac0a5d445d099363f3638b9815bfc56342bd26f36651d7d2d53",
+    "source_step_sha256": "843bcb3c57468ba83a63a894e1299bf73fc6cfbefb45e8727d4bf4f292033e0c",
+    "catalog_sha256": "af3619410601400ebb865a3f5a6c1d8fd7baeb4135783d6a5dfe797908268206",
     "implementation": {
-      "tools/print_export.py": "9fc89c93b562bdc3d48ac93f67225fbf632576822520f76e155b01d7563bd962",
+      "tools/print_export.py": "478570ad651c32f13993ce937e51760d6e3064afa026df7b54bbd6d32d7a1b58",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
     },
     "runtime": {
@@ -23,7 +23,7 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "b2702386989abedee50911c5e4e35603e22323aa2b188ee0dce7eb2281ede8c7",
+    "build_input_key": "543444cccf3639e831292f93354a3d3a13ed50e3ea28bab2dd8750ecfb093fc6",
     "assembly_data_sha256": "7e0a0a11d42966b7afb1e5a6ea23f28c9d27cae42a922c367e96902765e814a5"
   },
   "units": "mm",
@@ -49,7 +49,7 @@
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.551115123125783e-16,
-        "volume_difference_mm3": 2.0179413695586845e-12,
+        "volume_difference_mm3": 1.4210854715202004e-14,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -101,7 +101,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "cb2bb85dce42aa95c45427260eb6487d6e26c22f112f9ee52197484e6bc96c9e"
+      "sha256": "a0b9d3ad1986d4e1b600ffae3ec8e441055ce1c7faad6ef6a5bc7920909674e1"
     },
     {
       "model": "ankle_bearing_inner_cap_left_native_right",
@@ -120,7 +120,7 @@
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.551115123125783e-16,
-        "volume_difference_mm3": 2.0179413695586845e-12,
+        "volume_difference_mm3": 0.0,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -172,7 +172,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "e78f830b26f5a85161aed274e474df792986cf741cd12c4e6caecb198f48cba1"
+      "sha256": "c62cb865d38e27e907021405e541711fe98f4817d771ceec4da3f62590b1e69c"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native",
@@ -187,11 +187,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 617.7538782227123,
+      "source_volume_mm3": 617.7538782227124,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.105427357601002e-15,
-        "volume_difference_mm3": 1.2164491636212915e-11,
+        "volume_difference_mm3": 3.058175934711471e-11,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -242,8 +242,8 @@
       },
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0004143791596156667,
-      "sha256": "019785d7ce093d5b850a2da39fcea9b0095fc7f04e462af9f6d9c82f9b2e7828"
+      "relative_volume_error": 0.0004143791596158507,
+      "sha256": "4f2673883b374dc800723fbcfc5172e79f92d5f5f54ad10da58f01c7c74c1d74"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native_right",
@@ -258,11 +258,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 617.7538782227123,
+      "source_volume_mm3": 617.7538782227122,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 8.104628079763643e-15,
-        "volume_difference_mm3": 4.9112713895738125e-11,
+        "volume_difference_mm3": 3.1377567211166024e-11,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -313,8 +313,8 @@
       },
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.000414379111677573,
-      "sha256": "dede1481dc1118062d4592a3f4e5bee4d73bd720e710393e370b71836edcf05d"
+      "relative_volume_error": 0.00041437911167738905,
+      "sha256": "d062952206fae698fb0144f645948c5c0e03a051aaaceee2cab60d826fc172d6"
     },
     {
       "model": "ankle_eye_left_native",
@@ -329,7 +329,7 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 5704.676329474861,
+      "source_volume_mm3": 5704.676343208722,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.329070518200751e-15,
@@ -368,19 +368,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "t_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "t_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 292, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 292, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 279, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
+            "error": "        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 292, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n"
           }
         ]
       },
@@ -403,8 +403,8 @@
       },
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.015509193544368936,
-      "sha256": "50ae3cfc6c9b59f63e2edecbc7939eee179eda2bd8165fc79a09004969004785"
+      "relative_volume_error": 0.01550919109955675,
+      "sha256": "aa2827217e43c6791d02853546d87005b6fe0321945e5b95d097b080c98f9588"
     },
     {
       "model": "ankle_eye_left_native_right",
@@ -419,11 +419,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 5704.676329474864,
+      "source_volume_mm3": 5704.676343208722,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 2.7711166694643907e-13,
-        "volume_difference_mm3": 1.0600888344924897e-07,
+        "volume_difference_mm3": 4.619210812961683e-06,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -458,19 +458,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           }
         ]
       },
@@ -493,8 +493,8 @@
       },
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.015509186498616547,
-      "sha256": "a60ef366c80d2113ca97c1ceb4a86c6daf56522725f1aaec455b068fd363e2d0"
+      "relative_volume_error": 0.015509184053805027,
+      "sha256": "d0bd05f6c6f8a085b02de5cf761b69dcb3a002845c06dacdec67833ab402f349"
     },
     {
       "model": "ankle_left_native",
@@ -509,11 +509,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 13358.914757177827,
+      "source_volume_mm3": 13358.91477056724,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.263256414560601e-14,
-        "volume_difference_mm3": 1.1641532182693481e-10,
+        "volume_difference_mm3": 1.1641532182693481e-09,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -548,13 +548,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -577,8 +577,8 @@
       },
       "max_bound_error_mm": 0.00016706370800179116,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.010359028687267706,
-      "sha256": "1e10d7208f2ba9631c81373325139dcc71a06954a59d110cc4b58ce8f860381f"
+      "relative_volume_error": 0.010359029679168063,
+      "sha256": "ff4fff3ec151bf485353a9b66a27a714f9f5fca6c7264c444e3233b949e5a129"
     },
     {
       "model": "ankle_left_native_right",
@@ -593,11 +593,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 13358.914757177823,
+      "source_volume_mm3": 13358.914770567237,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.618527782440651e-14,
-        "volume_difference_mm3": 5.995389074087143e-09,
+        "volume_difference_mm3": 5.031324690207839e-09,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -632,13 +632,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -661,8 +661,8 @@
       },
       "max_bound_error_mm": 0.00016706370800534387,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.010359028687267437,
-      "sha256": "a556684e9514350ec64d2ece3412970f2b691d5ddf1a7317807f78e961df51c6"
+      "relative_volume_error": 0.010359029679167794,
+      "sha256": "f1ff055de3c6dc8a4556d28ed45923666237906626d53a91b130aafc4c67018c"
     },
     {
       "model": "bottom_head_shell_native",
@@ -677,11 +677,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 41363.83114214185,
+      "source_volume_mm3": 41363.833543343026,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.321076746942708e-11,
-        "volume_difference_mm3": 0.0003491066017886624,
+        "volume_difference_mm3": 0.00011566407920327038,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -716,7 +716,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: bottom_head_shell_native; bounds 2.0103298226104016e-07, volume fraction 0.04105345853528214\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: bottom_head_shell_native; bounds 2.0103298226104016e-07, volume fraction 0.041053514202839224\n"
           }
         ]
       },
@@ -739,8 +739,8 @@
       },
       "max_bound_error_mm": 2.0103298226104016e-07,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0002450962463139114,
-      "sha256": "551707fb3cc0b89c172910159365449b166daef549aaeea92c988ff675f5bc48"
+      "relative_volume_error": 0.00024515428282665953,
+      "sha256": "ac9ad9d70c15209b9b8f2e6a334f6e408d5b4163ad22a003c7f8a96749eed21d"
     },
     {
       "model": "electronics_deck_native",
@@ -755,11 +755,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9671.028193809601,
+      "source_volume_mm3": 9671.028193806793,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 0.0,
-        "volume_difference_mm3": 1.8735590856522322e-10,
+        "volume_difference_mm3": 2.419255906715989e-10,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -810,8 +810,8 @@
       },
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010542258992722753,
-      "sha256": "66ad5aa14094abb0f1bb75c04edd1785a3d9096f6157f95ee2a32b8133b3a9a5"
+      "relative_volume_error": 0.001054225898982176,
+      "sha256": "07afcd2a6605993335b061ae94d1f489ea1436c307070f6f9e283a9e24ae56ac"
     },
     {
       "model": "face_part_native",
@@ -826,11 +826,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 13277.604504654992,
+      "source_volume_mm3": 13315.640310707302,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 6.608047442568932e-13,
-        "volume_difference_mm3": 1.0732037480920553e-09,
+        "volume_difference_mm3": 1.2005330063402653e-10,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -881,8 +881,8 @@
       },
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0026956593828659703,
-      "sha256": "8e2a62ffb1998e9b17ed65fdd78be463897444e28641412b64739f500eac4cec"
+      "relative_volume_error": 0.0001685166341981543,
+      "sha256": "68407b6538785e68fdc48ab57bc3ae3c076c3b35fb35050eccf9d1ed9170079f"
     },
     {
       "model": "face_radxa_bracket_native",
@@ -897,11 +897,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 3607.022607324726,
+      "source_volume_mm3": 3607.022701752676,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.430233957464225e-12,
-        "volume_difference_mm3": 4.849166452913778e-05,
+        "volume_difference_mm3": 5.2367795433383435e-08,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -952,8 +952,8 @@
       },
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0014067341901328305,
-      "sha256": "48cd081f3888dd7b11ec34e335ef9db4e6391ee5e1a18580664cb47b79ef1130"
+      "relative_volume_error": 0.0014067603322236238,
+      "sha256": "77c8ee68302c35aedd4bdfca248a788f296ec56d077f3e96df1fa20b40e0624c"
     },
     {
       "model": "foot_left_native_a",
@@ -968,11 +968,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 20879.712767942474,
+      "source_volume_mm3": 20879.713945911513,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.105427357601002e-15,
-        "volume_difference_mm3": 1.0913936421275139e-11,
+        "volume_difference_mm3": 2.546585164964199e-11,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": false
       },
@@ -1007,13 +1007,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1036,8 +1036,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.006693505485108318,
-      "sha256": "54f249b8c22cc5ef181235212e67e40fb9e6063e7053057553d405fb3f8213f0"
+      "relative_volume_error": 0.006693561524396032,
+      "sha256": "19828af61f139ab9abbf687aa42330717acf73cb690502972f052c28848b5b27"
     },
     {
       "model": "foot_left_native_a_right",
@@ -1052,11 +1052,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 20879.712767938323,
+      "source_volume_mm3": 20879.713945907322,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.105427357601002e-15,
-        "volume_difference_mm3": 2.1827872842550278e-11,
+        "volume_difference_mm3": 3.2741809263825417e-11,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": false
       },
@@ -1091,13 +1091,13 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1120,8 +1120,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.006697659313369173,
-      "sha256": "620164f485ad47e953cfdde8fa84fc0d5e06129558d303ca795b869592abe5cf"
+      "relative_volume_error": 0.006697715352420637,
+      "sha256": "10ec2142c226f1150229651a5af988fd73713fbad83200e22c97883e7995b01d"
     },
     {
       "model": "foot_left_native_b",
@@ -1136,11 +1136,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9404.033406004837,
+      "source_volume_mm3": 9404.033381274243,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 2.830091716532479e-11,
-        "volume_difference_mm3": 7.12464316166006e-06,
+        "volume_difference_mm3": 7.194317731773481e-06,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1175,19 +1175,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1210,8 +1210,8 @@
       },
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.01826436630431138,
-      "sha256": "f123a7c8207cfeafdc873343c8f926f74ca70dcc844eb5c0f91bafbca88260fb"
+      "relative_volume_error": 0.01826436372255686,
+      "sha256": "1b87582673bd0a9a4495d8a0207084bc8c88417d85d0c8ce35162ff6eed4b75c"
     },
     {
       "model": "foot_left_native_b_right",
@@ -1226,11 +1226,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9404.03340600516,
+      "source_volume_mm3": 9404.033381274563,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 2.886224592657527e-11,
-        "volume_difference_mm3": 0.0005574726637860294,
+        "volume_difference_mm3": 9.601322744856589e-06,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1265,19 +1265,19 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "WatsonControlled",
             "tolerance_mm": 0.05,
             "exit_code": 1,
-            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 185, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
+            "error": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 198, in complete_planar_boundaries\n    if not accepted: raise ValueError(\"Open mesh boundary does not match a native planar surface\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Open mesh boundary does not match a native planar surface\n"
           },
           {
             "algorithm": "Delabella",
             "tolerance_mm": 0.0005,
             "exit_code": 1,
-            "error": "development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 280, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 242, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 144, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
+            "error": "development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 337, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(native, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 293, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 255, in write_native_3mf\n    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 157, in complete_planar_boundaries\n    raise ValueError(\"Planar mesh boundary is branched\")\nValueError: Planar mesh boundary is branched\n"
           }
         ]
       },
@@ -1300,8 +1300,8 @@
       },
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.018278258400240232,
-      "sha256": "367cf5d70b010ab526465e2dfda3012f41f3be30aa579e775b2b2b21fe867612"
+      "relative_volume_error": 0.018278255818522056,
+      "sha256": "b7b97f2c2f66ee858a9e1d6272f71409f78f0901e9a59782f5a735235f9d6b20"
     },
     {
       "model": "head_frame_native",
@@ -1316,11 +1316,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 32535.92757463223,
+      "source_volume_mm3": 32535.927145384245,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.1952360081531656e-12,
-        "volume_difference_mm3": 0.00010224881043541245,
+        "volume_difference_mm3": 5.146729017724283e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1371,8 +1371,8 @@
       },
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010496010200688492,
-      "sha256": "c1ae0095271f063ebb32baa5b61764291a9468f28009632ba8d081930acd82e8"
+      "relative_volume_error": 0.0010496142269623666,
+      "sha256": "20b9deee81ed615e8029c03455081d409de86b2f5fb836228d889b239da6e5d3"
     },
     {
       "model": "hip_left_native",
@@ -1387,11 +1387,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 10378.565534050584,
+      "source_volume_mm3": 10376.847035934756,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.3642420526593924e-12,
-        "volume_difference_mm3": 7.774621489237688,
+        "volume_difference_mm3": 9.78345694172458,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -1429,7 +1429,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native; bounds 0.003986100000680892, volume fraction 0.03306013482204716\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native; bounds 0.003986100000680892, volume fraction 0.033231218763930544\n"
           }
         ]
       },
@@ -1454,8 +1454,8 @@
       },
       "max_bound_error_mm": 2.000010894676052e-07,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0002288770787933186,
-      "sha256": "a574fb79b5d4bdbbd2024f26edbe559c2c46a616ac5c699173e20b44332990e0"
+      "relative_volume_error": 0.0003945238725355946,
+      "sha256": "4081cb1873e914a7ff42aa67dd1d177e657024817dc43b0b19588cc959770950"
     },
     {
       "model": "hip_left_native_right",
@@ -1470,11 +1470,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 10378.565534050587,
+      "source_volume_mm3": 10376.847035934758,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 2.1103119252074976e-12,
-        "volume_difference_mm3": 9.754732408779091,
+        "volume_difference_mm3": 10.515352154456195,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -1512,7 +1512,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native_right; bounds 0.003986100000684445, volume fraction 0.0330601348500766\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: hip_left_native_right; bounds 0.003986100000684445, volume fraction 0.03323121879196481\n"
           }
         ]
       },
@@ -1537,8 +1537,8 @@
       },
       "max_bound_error_mm": 2.0000285161358988e-07,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00022887705046924632,
-      "sha256": "13e25f8331a61fc2355c143a165e2a5a73d6febf63f078e669d221e24daa8293"
+      "relative_volume_error": 0.00039452384420700685,
+      "sha256": "cafd2ce343ce3545b343ff863d6d3f2531aa76f7782a10bc4d6f2e1182991db0"
     },
     {
       "model": "imu_yoke_bridge_native",
@@ -1553,11 +1553,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 3402.1785265611834,
+      "source_volume_mm3": 3402.178526561184,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 8.881784197001252e-16,
-        "volume_difference_mm3": 4.547473508864641e-12,
+        "volume_difference_mm3": 5.1386450650170445e-11,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1608,8 +1608,8 @@
       },
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 2.7941583612299156e-06,
-      "sha256": "cffe90f0f2c21b982cf9798ee80f15d452e70dfc1217c8ccf841ad5549ab0a00"
+      "relative_volume_error": 2.794158361363579e-06,
+      "sha256": "f33b606608b747cd0b04736009bd17a4b620da29c89b6c80059dc91136b1d03c"
     },
     {
       "model": "jaw_native",
@@ -1624,11 +1624,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 24703.49657432881,
+      "source_volume_mm3": 24491.33131100838,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.396749879262643e-12,
-        "volume_difference_mm3": 0.0013483792790793814,
+        "volume_difference_mm3": 0.0013460025693348143,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1663,7 +1663,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: jaw_native; bounds 0.003688213729176937, volume fraction 0.12161106711959703\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: jaw_native; bounds 0.003688213729176937, volume fraction 0.11400169640488401\n"
           }
         ]
       },
@@ -1686,8 +1686,8 @@
       },
       "max_bound_error_mm": 0.004724213729183191,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0012802706594627026,
-      "sha256": "afb91b9fe646d35b3e3854112c1135f2260339ad1cc9d9b3ae85b954e82d9dd7"
+      "relative_volume_error": 0.007371510318388839,
+      "sha256": "c2edaa2d2b01603085cbd36a2dc02f9813a7cf58ba906149a1838fcef523d1fc"
     },
     {
       "model": "jaw_soft_001_native",
@@ -1702,15 +1702,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "fdm-tpu",
-      "source_volume_mm3": 45784.072254371335,
+      "source_volume_mm3": 45741.78536135386,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 9.229950137523701e-12,
-        "volume_difference_mm3": 0.14661539846565574,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 0.009375722860568203,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -1760,8 +1757,8 @@
       },
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.013619572319715412,
-      "sha256": "fa71017f0f5f9ba19c1e0634b9cc5065e6d76e43b75f9b34e91fecd9c25aa528"
+      "relative_volume_error": 0.012707693535572311,
+      "sha256": "a4972251d98f886f5bf01f4dbaef46b034bb369daa807227abf95bbc932b1755"
     },
     {
       "model": "left_shell_native",
@@ -1776,15 +1773,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 20341.06779789193,
+      "source_volume_mm3": 20448.027117431695,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.412470389070222e-12,
-        "volume_difference_mm3": 1.4599030379358737,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 0.002060114133200841,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -1818,7 +1812,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 3.017176172903646e-05, volume fraction 0.0826777127440748\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 3.017176172903646e-05, volume fraction 0.0874760322631208\n"
           }
         ]
       },
@@ -1841,8 +1835,8 @@
       },
       "max_bound_error_mm": 0.006985,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.004736217855126483,
-      "sha256": "66f34512fcfc39ce51e8435e142634bc594c7dd498ab19f10c0423d3ebf180f8"
+      "relative_volume_error": 0.0005193455085942023,
+      "sha256": "9fc420dbb71c55bd4410f25c240477da9ddd4aaa65f990281a6e9d8994ff3d2c"
     },
     {
       "model": "leg_left_native",
@@ -1857,11 +1851,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 8908.128854126868,
+      "source_volume_mm3": 8908.128821310744,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.6992250948985702e-13,
-        "volume_difference_mm3": 7.782646207488142e-06,
+        "volume_difference_mm3": 9.676638001110405e-06,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1914,8 +1908,8 @@
       },
       "max_bound_error_mm": 7.220001617724847e-05,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0011353511981442711,
-      "sha256": "a3e68c8ca17f64ceafd28061ff2f11ce286d95417ed8eb88bb42312ce4e66772"
+      "relative_volume_error": 0.0011353548861670378,
+      "sha256": "dd3e41409e74acbbe4a7e9d2c06805542b2987caec6be44383d00ecbbf867262"
     },
     {
       "model": "leg_left_native_right",
@@ -1930,11 +1924,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 8908.12885412687,
+      "source_volume_mm3": 8908.128821310745,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.6992250948985702e-13,
-        "volume_difference_mm3": 4.1698385757626966e-06,
+        "volume_difference_mm3": 8.893024642020464e-06,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -1987,8 +1981,8 @@
       },
       "max_bound_error_mm": 7.220001617724847e-05,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0011353511813106947,
-      "sha256": "ccd15b8e74dcf306db7e17ecddfeb7591eb1c40406168b77d9b3fe64ff2bf64a"
+      "relative_volume_error": 0.0011353548693334612,
+      "sha256": "3f16a05a15eda167ad54bb1ab08a0c7fb1014f051b2eddc5af51fdaed62773a3"
     },
     {
       "model": "neck_001_native",
@@ -2003,11 +1997,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 1801.7721093712937,
+      "source_volume_mm3": 1801.7721093918879,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 6.809885988445785e-12,
-        "volume_difference_mm3": 7.273647497640923e-07,
+        "volume_difference_mm3": 7.210269359347876e-07,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2058,8 +2052,8 @@
       },
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 3.172962608289049e-05,
-      "sha256": "1a0813b132c13430e6bc4140c2e563b05a90258f256ad075d34bdddd0a53f467"
+      "relative_volume_error": 3.1729637512465704e-05,
+      "sha256": "ecf870187071788aa5fbb56dec341c1b71bd5fc1b110417e60a43f49c870b2bb"
     },
     {
       "model": "neck_002_native",
@@ -2074,11 +2068,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 3329.9653059207735,
+      "source_volume_mm3": 3329.96530594807,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 9.999999406318238e-08,
-        "volume_difference_mm3": 7.457856554538012e-09,
+        "volume_difference_mm3": 2.0463630789890885e-10,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2129,8 +2123,8 @@
       },
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 1.2712092171677171e-05,
-      "sha256": "1acce23f4ed88b4144bfbeaaceea5cc1c7fe7e3d6e4c4da7801ef52bf044051c"
+      "relative_volume_error": 1.2712100368854913e-05,
+      "sha256": "4b6646dc880ba834f145a1afaf455a5c8b2283c5a4f339727ecdfbdf7e3a6e41"
     },
     {
       "model": "neck_internal_yoke_native",
@@ -2145,11 +2139,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 11552.964913600661,
+      "source_volume_mm3": 11552.964761889707,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.713174450168028e-15,
-        "volume_difference_mm3": 0.00010918971929640975,
+        "volume_difference_mm3": 0.0003823185670626117,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2184,7 +2178,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_internal_yoke_native; bounds 0.0022021999999886077, volume fraction 0.15196862003182443\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_internal_yoke_native; bounds 0.0022021999999886077, volume fraction 0.15196860889566569\n"
           }
         ]
       },
@@ -2207,8 +2201,8 @@
       },
       "max_bound_error_mm": 0.007699,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00032907797537439366,
-      "sha256": "1b8014d96ca2d1d5160052a6f6c7e72fc466a04e7be80426517cd9b40694f5a1"
+      "relative_volume_error": 0.0003290648479190255,
+      "sha256": "464ecc8ca5faaa3d3f85f66bca0f20e0af35a546430d21e7ae0ffb0314220a3c"
     },
     {
       "model": "neck_pitch_001_native",
@@ -2223,11 +2217,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9976.264882028612,
+      "source_volume_mm3": 9976.33027438349,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.815970093361102e-14,
-        "volume_difference_mm3": 3.173921868437901e-05,
+        "volume_difference_mm3": 0.00026071453612530604,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2262,7 +2256,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_pitch_001_native; bounds 2.0000035050316e-07, volume fraction 0.05642141476893568\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: neck_pitch_001_native; bounds 2.0000035050316e-07, volume fraction 0.05642759969104669\n"
           }
         ]
       },
@@ -2285,8 +2279,8 @@
       },
       "max_bound_error_mm": 2.0000035050316e-07,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0003534472070186801,
-      "sha256": "513172a9b231409840c6adbac910cbeaba62331407757391e57efc05f712c154"
+      "relative_volume_error": 0.0003599996406626067,
+      "sha256": "49637daf061d64c3f59a8f659339f4dfc7bc5a4c7cad16bdd8effa970fce0d85"
     },
     {
       "model": "noenoeil_native",
@@ -2305,7 +2299,7 @@
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 8.881784197001252e-15,
-        "volume_difference_mm3": 2.219167072325945e-10,
+        "volume_difference_mm3": 4.2746250983327627e-10,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2357,7 +2351,7 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "68b2b6dd2659f2759b0c48628ec256b1e0b307decbad3d00276f7d666aa65a89"
+      "sha256": "c9f174052a3c01fc5cf17e569137157b31b2d5105135a633f2e51545c3843336"
     },
     {
       "model": "right_shell_native",
@@ -2372,15 +2366,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 21156.99319849501,
+      "source_volume_mm3": 21076.616970236002,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.872457909892546e-12,
-        "volume_difference_mm3": 0.8587158545669809,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 0.00114944510278292,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -2414,7 +2405,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 3.0171922254851324e-05, volume fraction 0.08507126750832439\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 3.0171922254851324e-05, volume fraction 0.0815821629358342\n"
           }
         ]
       },
@@ -2437,8 +2428,8 @@
       },
       "max_bound_error_mm": 0.006985,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.004340474113283075,
-      "sha256": "e456bbca1233f37a0c01d550d6e0df334b6d09123e3ffccdbad23ea8a3e17893"
+      "relative_volume_error": 0.0005435005556225427,
+      "sha256": "2dcf00e83dabca7644479c7ba11529c46e9a576edc673d6d310ff7a422396f61"
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -2453,11 +2444,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 13029.547594988391,
+      "source_volume_mm3": 13029.547609555031,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 2.5757174171303632e-14,
-        "volume_difference_mm3": 4.0590746721136384e-05,
+        "volume_difference_mm3": 2.213765401393175e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2508,8 +2499,8 @@
       },
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 4.820592742493965e-05,
-      "sha256": "d0dfe389e8b1c69ecdf83e519cedb5b5a3c296b9b68deff8539c2d192de74997"
+      "relative_volume_error": 4.8204809401307325e-05,
+      "sha256": "7c49d528a845908f7a04f3272f96b7554aa8e74a276a4fe2403daf0389028cf0"
     },
     {
       "model": "soft_mouth_top_native",
@@ -2524,11 +2515,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "fdm-tpu",
-      "source_volume_mm3": 6639.627411896121,
+      "source_volume_mm3": 6639.633965457471,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 8.151093788915182e-12,
-        "volume_difference_mm3": 0.0005792631045551389,
+        "volume_difference_mm3": 0.0005796253981316113,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2581,8 +2572,8 @@
       },
       "max_bound_error_mm": 0.001668739236990291,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.004789797356973398,
-      "sha256": "4e97623633810f2fa583246116274a76b06ef0d3e5be8c09f9eba9f72b72fd67"
+      "relative_volume_error": 0.004790779665810511,
+      "sha256": "27cd6c2aade3db0ef209cba15414afed302e756281ef2e5a23beb2f0e72fb4b0"
     },
     {
       "model": "sole_left_native",
@@ -2597,11 +2588,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "fdm-tpu",
-      "source_volume_mm3": 15336.180297673212,
+      "source_volume_mm3": 15343.578927540693,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.757780263588779e-12,
-        "volume_difference_mm3": 0.008314233398778015,
+        "volume_difference_mm3": 3.128661774098873e-10,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2652,8 +2643,8 @@
       },
       "max_bound_error_mm": 0.0026781147819932016,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0015575609715447068,
-      "sha256": "a0770a59f721ac62972389be38806ac922b896d28231f2fe432a6f8adf0cfe60"
+      "relative_volume_error": 0.0010746127806695901,
+      "sha256": "b26ddb9f34ac5909ed40434433135ab22eb81110371e7c6d3a41d6d50f7736f0"
     },
     {
       "model": "sole_left_native_right",
@@ -2668,15 +2659,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "fdm-tpu",
-      "source_volume_mm3": 15336.171981571757,
+      "source_volume_mm3": 15343.578927540717,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.757780263588779e-12,
-        "volume_difference_mm3": 8.94300094879327,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 8.385541150346398e-10,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -2726,8 +2714,8 @@
       },
       "max_bound_error_mm": 0.0026781147818191187,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0015573608296856807,
-      "sha256": "c6bcf32081692416e58c1a67514c04b47f2d4b82fa401d4795bdf4388af2853c"
+      "relative_volume_error": 0.0010738698989508776,
+      "sha256": "7881c0f705b262e8480ef907bf8d75a6207ad0e68ec9fc40a98c00af665c4879"
     },
     {
       "model": "top_head_shell_native",
@@ -2742,11 +2730,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 73277.79204004942,
+      "source_volume_mm3": 73305.9270590426,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.097001323883892e-09,
-        "volume_difference_mm3": 0.06724128320638556,
+        "volume_difference_mm3": 0.006497529975604266,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2781,7 +2769,7 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: top_head_shell_native; bounds 0.022370682961152966, volume fraction 0.4147544365251871\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: top_head_shell_native; bounds 0.022370682961152966, volume fraction 0.41497905540260444\n"
           }
         ]
       },
@@ -2804,8 +2792,8 @@
       },
       "max_bound_error_mm": 0.023411764568209037,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.000787357191551879,
-      "sha256": "bd99334c31580a8207a4cf35ba8fc5db7b75cf2b8ddd6fcf8ee1ee684c646ee4"
+      "relative_volume_error": 0.0011708577870903818,
+      "sha256": "1c990b88136dfefdab805a262665b37d2e7dddbb7adf6a4d308f1c3173d7048a"
     },
     {
       "model": "trunk_base_native",
@@ -2820,11 +2808,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 15974.295923444255,
+      "source_volume_mm3": 15974.295786100822,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.774758283725532e-12,
-        "volume_difference_mm3": 1.5440673450939357e-07,
+        "volume_difference_mm3": 4.470865133043844e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2875,8 +2863,8 @@
       },
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.010044937885108397,
-      "sha256": "d62feb00012d9a9aa68f2da3db086abae1df5558836b3aa25166bc756a4134c1"
+      "relative_volume_error": 0.010044946569249563,
+      "sha256": "075c7fd497d27dac4728532dbf51f615d3d5f313480e8d065c97491cb8bf4bc0"
     },
     {
       "model": "ubec_clamp_native",
@@ -2891,11 +2879,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 547.6774382386234,
+      "source_volume_mm3": 547.6774387560143,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.7763568394002505e-15,
-        "volume_difference_mm3": 5.32054400537163e-11,
+        "volume_difference_mm3": 4.7138928493950516e-07,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -2946,8 +2934,8 @@
       },
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00012975095540893557,
-      "sha256": "2499e474df6499ad032cab4cb34540a5a88616d240deb5d0fa074ee895fe10a8"
+      "relative_volume_error": 0.0001297518999865098,
+      "sha256": "41c0be9e986b80b6aa95fde071cf1852f809dcf82182ed5f55434741ba3ef7cf"
     },
     {
       "model": "upper_leg_left_native",
@@ -2962,15 +2950,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 12653.913189734958,
+      "source_volume_mm3": 12655.546328044358,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.9184653865522705e-12,
-        "volume_difference_mm3": 0.06442604891162773,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 0.0010083137185574742,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -3022,8 +3007,8 @@
       },
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.013769628327064312,
-      "sha256": "abcd70cc4b8b75b37d98d5db54b7a6c68154cc96b5891cc7a3aa9e81f09e254d"
+      "relative_volume_error": 0.013896896685152019,
+      "sha256": "5be8f9b37f47eecb44b16f69aa633976d6e4dc6033fd7b1d71426b205a1eac21"
     },
     {
       "model": "upper_leg_left_native_right",
@@ -3038,11 +3023,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 12653.913183890061,
+      "source_volume_mm3": 12655.54632479861,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 1.9184653865522705e-12,
-        "volume_difference_mm3": 0.0018739531424216693,
+        "volume_difference_mm3": 0.0001885007914097514,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -3095,8 +3080,8 @@
       },
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.013767187976067703,
-      "sha256": "ea313a60afef670b7e61d3dd9dd1c75b543c27f0b6af937585a49556082295dd"
+      "relative_volume_error": 0.01389445685165257,
+      "sha256": "6f0cfea90a1fed9b1a51cec69b99196f2f7333bd077c8a3a66cfa7e6276afd6d"
     },
     {
       "model": "yaw2roll_left_native",
@@ -3111,11 +3096,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 8898.556814294303,
+      "source_volume_mm3": 8898.55681434338,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 9.947598300641403e-14,
-        "volume_difference_mm3": 1.683981463429518e-05,
+        "volume_difference_mm3": 1.6505959138157777e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -3168,8 +3153,8 @@
       },
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00034436929403734517,
-      "sha256": "9ff77605eda99596af996a17d18434e33652ad335989db273c7c24124dc21a60"
+      "relative_volume_error": 0.00034436929955053506,
+      "sha256": "c3604c00702b132ad41364e37bd3079405923d74a2effc6e5b89cc024f8f05cf"
     },
     {
       "model": "yaw2roll_left_native_right",
@@ -3184,11 +3169,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 8898.556814294298,
+      "source_volume_mm3": 8898.556814343383,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 9.769962616701378e-14,
-        "volume_difference_mm3": 4.589582749758847e-05,
+        "volume_difference_mm3": 4.588289993989747e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -3241,8 +3226,8 @@
       },
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00034436929403673216,
-      "sha256": "013a4a10d1bc791784ea28437a034ac38a70d021dbaa8964757e345ec3e47bb4"
+      "relative_volume_error": 0.00034436929955094375,
+      "sha256": "32f67d68bde4ed85bf836bd426f8ddcabb1e8f02706b9dcffe4a987782277df3"
     },
     {
       "model": "yaw_roll_link_native",
@@ -3257,11 +3242,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 14018.873690760724,
+      "source_volume_mm3": 14018.873666918153,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 6.714628852932947e-13,
-        "volume_difference_mm3": 0.0005872142191947205,
+        "volume_difference_mm3": 0.0005212245850998443,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
@@ -3312,8 +3297,8 @@
       },
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00015423211005258225,
-      "sha256": "231eb506921cf408f18709dcdd11cbe8e00e7fcad08762bef5c5cdff2bc0e547"
+      "relative_volume_error": 0.00015423381106286386,
+      "sha256": "548c75b0c0ee2d59177a5a57bdbbe91b41af8465f4e04fc28a3f4d437a802a19"
     },
     {
       "model": "stick_pod_native",
@@ -3328,15 +3313,12 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 32820.969429535835,
+      "source_volume_mm3": 32226.511029573976,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.8825972044187215e-12,
-        "volume_difference_mm3": 17.031044128612848,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
+        "volume_difference_mm3": 0.0020516508448054083,
+        "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
@@ -3370,14 +3352,14 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: stick_pod_native; bounds 0.00035312607534621065, volume fraction 0.32924974769221727\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 532, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 343, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: stick_pod_native; bounds 0.00035312607534621065, volume fraction 0.30025269518815206\n"
           }
         ]
       },
       "mesh": {
-        "vertices": 20704,
-        "triangles": 41424,
-        "volume_mm3": 32239.81617771361,
+        "vertices": 20324,
+        "triangles": 40664,
+        "volume_mm3": 32204.52860190029,
         "bounds_mm": [
           -30.500268,
           -33.16943,
@@ -3393,57 +3375,57 @@
       },
       "max_bound_error_mm": 0.004575126075344826,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.01770676679949747,
-      "sha256": "a37c3c1d0c2a2e6c8553dffde2e03101bb28d6e1964a25f152337fdb58b9d224"
+      "relative_volume_error": 0.0006821224815033226,
+      "sha256": "8c31e506e64ce3f04c1f0cbaf75ef2ae31f513c40ba3f92c506032ed13400ab5"
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "cb2bb85dce42aa95c45427260eb6487d6e26c22f112f9ee52197484e6bc96c9e",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "e78f830b26f5a85161aed274e474df792986cf741cd12c4e6caecb198f48cba1",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "019785d7ce093d5b850a2da39fcea9b0095fc7f04e462af9f6d9c82f9b2e7828",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "dede1481dc1118062d4592a3f4e5bee4d73bd720e710393e370b71836edcf05d",
-    "3mf/ankle_eye_left_native.3mf": "50ae3cfc6c9b59f63e2edecbc7939eee179eda2bd8165fc79a09004969004785",
-    "3mf/ankle_eye_left_native_right.3mf": "a60ef366c80d2113ca97c1ceb4a86c6daf56522725f1aaec455b068fd363e2d0",
-    "3mf/ankle_left_native.3mf": "1e10d7208f2ba9631c81373325139dcc71a06954a59d110cc4b58ce8f860381f",
-    "3mf/ankle_left_native_right.3mf": "a556684e9514350ec64d2ece3412970f2b691d5ddf1a7317807f78e961df51c6",
-    "3mf/bottom_head_shell_native.3mf": "551707fb3cc0b89c172910159365449b166daef549aaeea92c988ff675f5bc48",
-    "3mf/electronics_deck_native.3mf": "66ad5aa14094abb0f1bb75c04edd1785a3d9096f6157f95ee2a32b8133b3a9a5",
-    "3mf/face_part_native.3mf": "8e2a62ffb1998e9b17ed65fdd78be463897444e28641412b64739f500eac4cec",
-    "3mf/face_radxa_bracket_native.3mf": "48cd081f3888dd7b11ec34e335ef9db4e6391ee5e1a18580664cb47b79ef1130",
-    "3mf/foot_left_native_a.3mf": "54f249b8c22cc5ef181235212e67e40fb9e6063e7053057553d405fb3f8213f0",
-    "3mf/foot_left_native_a_right.3mf": "620164f485ad47e953cfdde8fa84fc0d5e06129558d303ca795b869592abe5cf",
-    "3mf/foot_left_native_b.3mf": "f123a7c8207cfeafdc873343c8f926f74ca70dcc844eb5c0f91bafbca88260fb",
-    "3mf/foot_left_native_b_right.3mf": "367cf5d70b010ab526465e2dfda3012f41f3be30aa579e775b2b2b21fe867612",
-    "3mf/head_frame_native.3mf": "c1ae0095271f063ebb32baa5b61764291a9468f28009632ba8d081930acd82e8",
-    "3mf/hip_left_native.3mf": "a574fb79b5d4bdbbd2024f26edbe559c2c46a616ac5c699173e20b44332990e0",
-    "3mf/hip_left_native_right.3mf": "13e25f8331a61fc2355c143a165e2a5a73d6febf63f078e669d221e24daa8293",
-    "3mf/imu_yoke_bridge_native.3mf": "cffe90f0f2c21b982cf9798ee80f15d452e70dfc1217c8ccf841ad5549ab0a00",
-    "3mf/jaw_native.3mf": "afb91b9fe646d35b3e3854112c1135f2260339ad1cc9d9b3ae85b954e82d9dd7",
-    "3mf/jaw_soft_001_native.3mf": "fa71017f0f5f9ba19c1e0634b9cc5065e6d76e43b75f9b34e91fecd9c25aa528",
-    "3mf/left_shell_native.3mf": "66f34512fcfc39ce51e8435e142634bc594c7dd498ab19f10c0423d3ebf180f8",
-    "3mf/leg_left_native.3mf": "a3e68c8ca17f64ceafd28061ff2f11ce286d95417ed8eb88bb42312ce4e66772",
-    "3mf/leg_left_native_right.3mf": "ccd15b8e74dcf306db7e17ecddfeb7591eb1c40406168b77d9b3fe64ff2bf64a",
-    "3mf/neck_001_native.3mf": "1a0813b132c13430e6bc4140c2e563b05a90258f256ad075d34bdddd0a53f467",
-    "3mf/neck_002_native.3mf": "1acce23f4ed88b4144bfbeaaceea5cc1c7fe7e3d6e4c4da7801ef52bf044051c",
-    "3mf/neck_internal_yoke_native.3mf": "1b8014d96ca2d1d5160052a6f6c7e72fc466a04e7be80426517cd9b40694f5a1",
-    "3mf/neck_pitch_001_native.3mf": "513172a9b231409840c6adbac910cbeaba62331407757391e57efc05f712c154",
-    "3mf/noenoeil_native.3mf": "68b2b6dd2659f2759b0c48628ec256b1e0b307decbad3d00276f7d666aa65a89",
-    "3mf/right_shell_native.3mf": "e456bbca1233f37a0c01d550d6e0df334b6d09123e3ffccdbad23ea8a3e17893",
-    "3mf/roll_front_bulkhead_native.3mf": "d0dfe389e8b1c69ecdf83e519cedb5b5a3c296b9b68deff8539c2d192de74997",
-    "3mf/soft_mouth_top_native.3mf": "4e97623633810f2fa583246116274a76b06ef0d3e5be8c09f9eba9f72b72fd67",
-    "3mf/sole_left_native.3mf": "a0770a59f721ac62972389be38806ac922b896d28231f2fe432a6f8adf0cfe60",
-    "3mf/sole_left_native_right.3mf": "c6bcf32081692416e58c1a67514c04b47f2d4b82fa401d4795bdf4388af2853c",
-    "3mf/stick_pod_native.3mf": "a37c3c1d0c2a2e6c8553dffde2e03101bb28d6e1964a25f152337fdb58b9d224",
-    "3mf/top_head_shell_native.3mf": "bd99334c31580a8207a4cf35ba8fc5db7b75cf2b8ddd6fcf8ee1ee684c646ee4",
-    "3mf/trunk_base_native.3mf": "d62feb00012d9a9aa68f2da3db086abae1df5558836b3aa25166bc756a4134c1",
-    "3mf/ubec_clamp_native.3mf": "2499e474df6499ad032cab4cb34540a5a88616d240deb5d0fa074ee895fe10a8",
-    "3mf/upper_leg_left_native.3mf": "abcd70cc4b8b75b37d98d5db54b7a6c68154cc96b5891cc7a3aa9e81f09e254d",
-    "3mf/upper_leg_left_native_right.3mf": "ea313a60afef670b7e61d3dd9dd1c75b543c27f0b6af937585a49556082295dd",
-    "3mf/yaw2roll_left_native.3mf": "9ff77605eda99596af996a17d18434e33652ad335989db273c7c24124dc21a60",
-    "3mf/yaw2roll_left_native_right.3mf": "013a4a10d1bc791784ea28437a034ac38a70d021dbaa8964757e345ec3e47bb4",
-    "3mf/yaw_roll_link_native.3mf": "231eb506921cf408f18709dcdd11cbe8e00e7fcad08762bef5c5cdff2bc0e547",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "a0b9d3ad1986d4e1b600ffae3ec8e441055ce1c7faad6ef6a5bc7920909674e1",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "c62cb865d38e27e907021405e541711fe98f4817d771ceec4da3f62590b1e69c",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "4f2673883b374dc800723fbcfc5172e79f92d5f5f54ad10da58f01c7c74c1d74",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "d062952206fae698fb0144f645948c5c0e03a051aaaceee2cab60d826fc172d6",
+    "3mf/ankle_eye_left_native.3mf": "aa2827217e43c6791d02853546d87005b6fe0321945e5b95d097b080c98f9588",
+    "3mf/ankle_eye_left_native_right.3mf": "d0bd05f6c6f8a085b02de5cf761b69dcb3a002845c06dacdec67833ab402f349",
+    "3mf/ankle_left_native.3mf": "ff4fff3ec151bf485353a9b66a27a714f9f5fca6c7264c444e3233b949e5a129",
+    "3mf/ankle_left_native_right.3mf": "f1ff055de3c6dc8a4556d28ed45923666237906626d53a91b130aafc4c67018c",
+    "3mf/bottom_head_shell_native.3mf": "ac9ad9d70c15209b9b8f2e6a334f6e408d5b4163ad22a003c7f8a96749eed21d",
+    "3mf/electronics_deck_native.3mf": "07afcd2a6605993335b061ae94d1f489ea1436c307070f6f9e283a9e24ae56ac",
+    "3mf/face_part_native.3mf": "68407b6538785e68fdc48ab57bc3ae3c076c3b35fb35050eccf9d1ed9170079f",
+    "3mf/face_radxa_bracket_native.3mf": "77c8ee68302c35aedd4bdfca248a788f296ec56d077f3e96df1fa20b40e0624c",
+    "3mf/foot_left_native_a.3mf": "19828af61f139ab9abbf687aa42330717acf73cb690502972f052c28848b5b27",
+    "3mf/foot_left_native_a_right.3mf": "10ec2142c226f1150229651a5af988fd73713fbad83200e22c97883e7995b01d",
+    "3mf/foot_left_native_b.3mf": "1b87582673bd0a9a4495d8a0207084bc8c88417d85d0c8ce35162ff6eed4b75c",
+    "3mf/foot_left_native_b_right.3mf": "b7b97f2c2f66ee858a9e1d6272f71409f78f0901e9a59782f5a735235f9d6b20",
+    "3mf/head_frame_native.3mf": "20b9deee81ed615e8029c03455081d409de86b2f5fb836228d889b239da6e5d3",
+    "3mf/hip_left_native.3mf": "4081cb1873e914a7ff42aa67dd1d177e657024817dc43b0b19588cc959770950",
+    "3mf/hip_left_native_right.3mf": "cafd2ce343ce3545b343ff863d6d3f2531aa76f7782a10bc4d6f2e1182991db0",
+    "3mf/imu_yoke_bridge_native.3mf": "f33b606608b747cd0b04736009bd17a4b620da29c89b6c80059dc91136b1d03c",
+    "3mf/jaw_native.3mf": "c2edaa2d2b01603085cbd36a2dc02f9813a7cf58ba906149a1838fcef523d1fc",
+    "3mf/jaw_soft_001_native.3mf": "a4972251d98f886f5bf01f4dbaef46b034bb369daa807227abf95bbc932b1755",
+    "3mf/left_shell_native.3mf": "9fc420dbb71c55bd4410f25c240477da9ddd4aaa65f990281a6e9d8994ff3d2c",
+    "3mf/leg_left_native.3mf": "dd3e41409e74acbbe4a7e9d2c06805542b2987caec6be44383d00ecbbf867262",
+    "3mf/leg_left_native_right.3mf": "3f16a05a15eda167ad54bb1ab08a0c7fb1014f051b2eddc5af51fdaed62773a3",
+    "3mf/neck_001_native.3mf": "ecf870187071788aa5fbb56dec341c1b71bd5fc1b110417e60a43f49c870b2bb",
+    "3mf/neck_002_native.3mf": "4b6646dc880ba834f145a1afaf455a5c8b2283c5a4f339727ecdfbdf7e3a6e41",
+    "3mf/neck_internal_yoke_native.3mf": "464ecc8ca5faaa3d3f85f66bca0f20e0af35a546430d21e7ae0ffb0314220a3c",
+    "3mf/neck_pitch_001_native.3mf": "49637daf061d64c3f59a8f659339f4dfc7bc5a4c7cad16bdd8effa970fce0d85",
+    "3mf/noenoeil_native.3mf": "c9f174052a3c01fc5cf17e569137157b31b2d5105135a633f2e51545c3843336",
+    "3mf/right_shell_native.3mf": "2dcf00e83dabca7644479c7ba11529c46e9a576edc673d6d310ff7a422396f61",
+    "3mf/roll_front_bulkhead_native.3mf": "7c49d528a845908f7a04f3272f96b7554aa8e74a276a4fe2403daf0389028cf0",
+    "3mf/soft_mouth_top_native.3mf": "27cd6c2aade3db0ef209cba15414afed302e756281ef2e5a23beb2f0e72fb4b0",
+    "3mf/sole_left_native.3mf": "b26ddb9f34ac5909ed40434433135ab22eb81110371e7c6d3a41d6d50f7736f0",
+    "3mf/sole_left_native_right.3mf": "7881c0f705b262e8480ef907bf8d75a6207ad0e68ec9fc40a98c00af665c4879",
+    "3mf/stick_pod_native.3mf": "8c31e506e64ce3f04c1f0cbaf75ef2ae31f513c40ba3f92c506032ed13400ab5",
+    "3mf/top_head_shell_native.3mf": "1c990b88136dfefdab805a262665b37d2e7dddbb7adf6a4d308f1c3173d7048a",
+    "3mf/trunk_base_native.3mf": "075c7fd497d27dac4728532dbf51f615d3d5f313480e8d065c97491cb8bf4bc0",
+    "3mf/ubec_clamp_native.3mf": "41c0be9e986b80b6aa95fde071cf1852f809dcf82182ed5f55434741ba3ef7cf",
+    "3mf/upper_leg_left_native.3mf": "5be8f9b37f47eecb44b16f69aa633976d6e4dc6033fd7b1d71426b205a1eac21",
+    "3mf/upper_leg_left_native_right.3mf": "6f0cfea90a1fed9b1a51cec69b99196f2f7333bd077c8a3a66cfa7e6276afd6d",
+    "3mf/yaw2roll_left_native.3mf": "c3604c00702b132ad41364e37bd3079405923d74a2effc6e5b89cc024f8f05cf",
+    "3mf/yaw2roll_left_native_right.3mf": "32f67d68bde4ed85bf836bd426f8ddcabb1e8f02706b9dcffe4a987782277df3",
+    "3mf/yaw_roll_link_native.3mf": "548c75b0c0ee2d59177a5a57bdbbe91b41af8465f4e04fc28a3f4d437a802a19",
     "PARTS.csv": "783e0f10ce088e26670d397d8ac222b22b4bbe926203848a4a79dcba00d6cdfa",
     "README.md": "06262c3861de4f5f73fa6b73879156e7703061ff72ec7624f26b48fedf1a68be"
   },
-  "manifest_content_sha256": "648f246bae3fc2592e1e630f32eb8e3390f6e576c1ee09e03ab5b06025e7a86d"
+  "manifest_content_sha256": "75da25915fe878f40feda207c6795d641600c043271d3e2699285f2b57e67af7"
 }

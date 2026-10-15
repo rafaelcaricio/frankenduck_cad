@@ -11,110 +11,11 @@
     "support_angle_deg": 45.0
   },
   "symmetry": {
-    "normal": [
-      1,
-      0,
-      0
-    ],
-    "origin": [
-      0,
-      0,
-      0
-    ],
-    "skin_mm": 1.0
+    "plane": "X = 0 (world)",
+    "step_mm": 0.25,
+    "tolerance_mm": 0.05
   },
   "accepted": [
-    {
-      "check": "edges",
-      "name": "T window, centre",
-      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
-      "box": [
-        -11.17,
-        76.44,
-        140.5,
-        11.17,
-        80.04,
-        141.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "T window, left",
-      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
-      "box": [
-        -11.5,
-        76.44,
-        140.5,
-        -8.71,
-        80.04,
-        161.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "T window, right",
-      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
-      "box": [
-        8.71,
-        76.44,
-        140.5,
-        11.5,
-        80.04,
-        161.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "contact slot, left",
-      "reason": "Inside the fairing. Its square sides keep the full socket wall beside the slot (APPROXIMATE contact position).",
-      "box": [
-        -20.13,
-        45.87,
-        142.5,
-        -12.86,
-        57.04,
-        161.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "contact slot, right",
-      "reason": "Inside the fairing. Its square sides keep the full socket wall beside the slot (APPROXIMATE contact position).",
-      "box": [
-        10.39,
-        46.11,
-        142.5,
-        18.93,
-        56.86,
-        161.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "front opening inner edge, left",
-      "reason": "Hidden inside the body. OCCT cannot round it on the offset inner surface (0.5 and 0.6 mm tried); the outer edge is rounded.",
-      "box": [
-        -26.33,
-        42.93,
-        140.5,
-        0.5,
-        53.96,
-        166.29
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "front opening inner edge, right",
-      "reason": "Hidden inside the body. OCCT cannot round it on the offset inner surface (0.5 and 0.6 mm tried); the outer edge is rounded.",
-      "box": [
-        -0.5,
-        47.03,
-        140.5,
-        26.33,
-        53.96,
-        166.29
-      ]
-    },
     {
       "check": "edges",
       "name": "insert pilots, left",
@@ -122,7 +23,7 @@
       "box": [
         -7.5,
         22.5,
-        149.95,
+        149.94,
         -2.5,
         27.5,
         158.95
@@ -135,7 +36,7 @@
       "box": [
         2.5,
         22.5,
-        149.95,
+        149.94,
         7.5,
         27.5,
         158.95
@@ -143,106 +44,67 @@
     },
     {
       "check": "edges",
-      "name": "latch pocket, left",
-      "reason": "Inside the socket. The lip top must stay square so the hook catches; the pocket ends are square to the socket and fairing walls.",
+      "name": "T window, centre",
+      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
       "box": [
-        -22.15,
-        45.86,
-        119.3,
-        -13.19,
-        59.75,
-        127.3
+        -11.5,
+        76.44,
+        140.5,
+        11.5,
+        80.05,
+        141.5
       ]
     },
     {
       "check": "edges",
-      "name": "latch pocket, right",
-      "reason": "Inside the socket. The lip top must stay square so the hook catches; the pocket ends are square to the socket and fairing walls.",
+      "name": "T window, left",
+      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
       "box": [
-        11.26,
-        45.61,
-        119.3,
-        22.15,
-        60.3,
-        127.3
+        -11.5,
+        76.44,
+        140.5,
+        -10.17,
+        79.93,
+        161.5
       ]
     },
     {
       "check": "edges",
-      "name": "socket mouth, centre front",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "name": "T window, right",
+      "reason": "Hidden behind the stick inside the fairing. Its square sides keep the full socket wall beside the window.",
       "box": [
-        -12.59,
-        37.19,
-        119.3,
-        8.01,
-        44.92,
-        120.3
+        10.17,
+        76.44,
+        140.5,
+        11.5,
+        79.93,
+        161.5
       ]
     },
     {
       "check": "edges",
-      "name": "socket mouth, centre rear",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "name": "contact slot, left",
+      "reason": "Inside the fairing. Its square sides keep the full socket wall beside the slot (APPROXIMATE contact position).",
       "box": [
-        -9.71,
-        76.54,
-        119.3,
-        9.71,
-        77.54,
-        120.3
+        -19.51,
+        45.98,
+        142.5,
+        -11.55,
+        56.98,
+        161.5
       ]
     },
     {
       "check": "edges",
-      "name": "socket mouth, left front",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "name": "contact slot, right",
+      "reason": "Inside the fairing. Its square sides keep the full socket wall beside the slot (APPROXIMATE contact position).",
       "box": [
-        -14.19,
-        43.92,
-        119.3,
-        -11.59,
-        48.62,
-        120.3
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "socket mouth, left rear",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
-      "box": [
-        -23.37,
-        58.75,
-        119.3,
-        -8.71,
-        79.76,
-        120.3
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "socket mouth, right front",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
-      "box": [
-        7.01,
-        42.27,
-        119.3,
-        12.26,
-        49.82,
-        120.3
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "socket mouth, right rear",
-      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
-      "box": [
-        8.71,
-        59.3,
-        119.3,
-        23.37,
-        79.76,
-        120.3
+        11.55,
+        45.98,
+        142.5,
+        19.51,
+        56.98,
+        161.5
       ]
     },
     {
@@ -250,11 +112,11 @@
       "name": "socket top rim, centre front",
       "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
       "box": [
-        -14.89,
+        -12.52,
         34.69,
         160.5,
-        10.11,
-        44.92,
+        12.52,
+        44.05,
         161.5
       ]
     },
@@ -263,11 +125,50 @@
       "name": "socket top rim, left front",
       "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
       "box": [
-        -22.25,
-        55.05,
+        -14.76,
+        41.85,
         160.5,
-        -16.83,
-        61.95,
+        -9.31,
+        48.18,
+        161.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket top rim, right front",
+      "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
+      "box": [
+        9.31,
+        41.85,
+        160.5,
+        14.76,
+        48.18,
+        161.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket top rim, left side",
+      "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
+      "box": [
+        -21.73,
+        54.78,
+        160.5,
+        -16.3,
+        61.08,
+        161.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket top rim, right side",
+      "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
+      "box": [
+        16.3,
+        54.78,
+        160.5,
+        21.73,
+        61.08,
         161.5
       ]
     },
@@ -277,23 +178,10 @@
       "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
       "box": [
         -23.37,
-        59.96,
+        58.88,
         160.5,
         -10.17,
-        79.92,
-        161.5
-      ]
-    },
-    {
-      "check": "edges",
-      "name": "socket top rim, right front",
-      "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
-      "box": [
-        7.01,
-        40.91,
-        160.5,
-        21.17,
-        60.3,
+        79.93,
         161.5
       ]
     },
@@ -303,24 +191,141 @@
       "reason": "Hidden under the dome. The slots and the T window split it into short runs.",
       "box": [
         10.17,
-        57.94,
+        58.88,
         160.5,
         23.37,
-        79.92,
+        79.93,
         161.5
       ]
     },
     {
-      "check": "wall",
-      "name": "pocket body top, mesh reading left",
-      "reason": "Mesh ray reads 1.199 mm just under the floor top beside the pocket body; the exact B-rep ray gives 2.9 mm.",
+      "check": "edges",
+      "name": "front opening inner edge, left",
+      "reason": "Hidden inside the body. OCCT cannot round it on the offset inner surface (0.5 and 0.6 mm tried); the outer edge is rounded.",
       "box": [
-        -20.84,
-        57.0,
-        121.77,
-        -19.84,
-        58.0,
-        122.77
+        -26.33,
+        47.23,
+        140.49,
+        0.5,
+        53.96,
+        166.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front opening inner edge, right",
+      "reason": "Hidden inside the body. OCCT cannot round it on the offset inner surface (0.5 and 0.6 mm tried); the outer edge is rounded.",
+      "box": [
+        -0.5,
+        47.23,
+        140.49,
+        26.33,
+        53.96,
+        166.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, centre front",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        -10.32,
+        37.19,
+        119.3,
+        10.32,
+        44.05,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, left front",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        -13.1,
+        43.04,
+        119.3,
+        -9.31,
+        49.19,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, right front",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        9.31,
+        43.04,
+        119.3,
+        13.1,
+        49.19,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, centre rear",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        -9.72,
+        76.54,
+        119.3,
+        9.72,
+        77.55,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, left rear",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        -23.37,
+        59.0,
+        119.3,
+        -8.71,
+        79.77,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "socket mouth, right rear",
+      "reason": "Hidden: it rests on the collar rim under the pod. The latch pocket bodies split it into short runs; rounding it gives an invalid solid.",
+      "box": [
+        8.71,
+        59.0,
+        119.3,
+        23.37,
+        79.77,
+        120.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "latch pocket, left",
+      "reason": "Inside the socket. The lip top must stay square so the hook catches; the pocket ends are square to the socket and fairing walls.",
+      "box": [
+        -22.15,
+        45.65,
+        119.3,
+        -12.09,
+        60.01,
+        127.3
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "latch pocket, right",
+      "reason": "Inside the socket. The lip top must stay square so the hook catches; the pocket ends are square to the socket and fairing walls.",
+      "box": [
+        12.09,
+        45.65,
+        119.3,
+        22.15,
+        60.01,
+        127.3
       ]
     }
   ]

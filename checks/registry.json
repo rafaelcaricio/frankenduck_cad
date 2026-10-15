@@ -162,7 +162,7 @@
     {
       "id": "battery_pod.quality",
       "call": "checks.part_quality:stick_pod",
-      "purpose": "Printed stick pod: geometry, wall, skin symmetry, edges, voids, holes and the two tongue screws",
+      "purpose": "Printed stick pod: geometry, wall, symmetry, edges, voids, holes and the two tongue screws",
       "suites": [
         "full"
       ],
@@ -176,7 +176,7 @@
         "checks/part_quality.py"
       ],
       "report": "reports/latest/stick_pod_quality.json",
-      "coverage": "Stick pod only, as saved. Checkers first find the error in known-error fixtures. 0.05 mm short edges, 0.05 mm2 small and 0.1 mm narrow faces; 1.2 mm ray-cast wall (0.5 mm samples; rays leaving a face at under 25 degrees are left to the edge check); mirror symmetry of the outer 1 mm skin; outside edges rounded 0.5 mm or named; closed voids; support area for six build directions (reported); every hole owned by a fastener; bd_warehouse M3 ISO 4762 screws in CNC Kitchen inserts. Accepted problems are named boxes at most 40 mm a side and within 2 mm of their findings. No slicing, strength or physical fit test."
+      "coverage": "Stick pod only, as saved. Checkers first find the error in known-error fixtures. 0.05 mm short edges, 0.05 mm2 small and 0.1 mm narrow faces; 1.2 mm ray-cast wall (0.5 mm samples; rays leaving a face at under 25 degrees are left to the edge check); mirror symmetry of the whole pod about X = 0 on 0.25 mm mesh slices (0.05 mm band ignored); outside edges rounded 0.5 mm or named; closed voids; support area for six build directions (reported); every hole owned by a fastener; bd_warehouse M3 ISO 4762 screws in CNC Kitchen inserts. Accepted problems are named boxes at most 40 mm a side and within 2 mm of their findings. No slicing, strength or physical fit test."
     }
   ]
 }
