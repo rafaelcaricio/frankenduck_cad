@@ -5,8 +5,10 @@
 | `frankenduck.py` | Complete assembly: 73 occurrences, joints, poses and animation |
 | `radxa_fit_review.py` | Mounting context with GPIO and cooler clearance volumes |
 | `parts/*.py` | Individual component models and parameter variants |
-| `parts/parkside_pap_204_a1.py` | Exposed backpack battery with per-face colors |
-| `lib/backpack.py` | Two-part mount, shell reliefs, battery datum and access allowances |
+| `parts/parkside_pap_204_a1.py` | PAP 204 A1 backpack battery with per-face colors; not in this variant |
+| `parts/parkside_papk_12_a4.py` | PAPK 12 A4 12 V stick battery with per-face colors |
+| `parts/stick_pod_native.py` | Printed rump pod that holds the stick battery |
+| `lib/stick_pod.py` | Stick placement, pod, trunk and shell changes, release direction and adapter spaces |
 | `lib/cadquery_adapter.py` | Shared feature construction and build123d conversion |
 | `lib/import_paths.py` | Local purchased-component STEP inputs |
 | `lib/radxa_clearance.py` | Jumper-plug and upward cable space |

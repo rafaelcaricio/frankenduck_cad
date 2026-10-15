@@ -331,13 +331,13 @@
     "model": "radxa_6530b"
   },
   {
-    "component": "parkside_pap_204_a1",
+    "component": "parkside_papk_12_a4",
     "params": {},
-    "model": "parkside_pap_204_a1"
+    "model": "parkside_papk_12_a4"
   },
   {
-    "model": "backpack_dock_native",
-    "component": "backpack_dock_native",
+    "model": "stick_pod_native",
+    "component": "stick_pod_native",
     "params": {}
   }
 ]

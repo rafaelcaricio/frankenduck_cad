@@ -180,7 +180,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Frankenduck printed part. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
+      "notes": "Frankenduck printed part. Superseded by the PARKSIDE battery; retained as an inactive model."
     },
     {
       "model": "battery_donor_cover_native",
@@ -192,7 +192,7 @@
       "material_hint": "pla",
       "export": false,
       "active_variant": false,
-      "notes": "Frankenduck printed part. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
+      "notes": "Frankenduck printed part. Superseded by the PARKSIDE battery; retained as an inactive model."
     },
     {
       "model": "bottom_head_shell_native",
@@ -510,7 +510,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed body shell retaining the Microduck outline and mounting features, with reinforced lower corner and local clearance for the two-part backpack mount. Physical fit and strength unverified."
+      "notes": "Printed body shell retaining the Microduck outline, mounting features and closed rear top return, cut round the battery pod with a 0.4 mm nominal gap and stopping 0.3 mm short of the centre plane. Physical fit and strength unverified."
     },
     {
       "model": "leg_left_native",
@@ -662,7 +662,7 @@
       "material_hint": "not_applicable",
       "export": false,
       "active_variant": false,
-      "notes": "Purchased component representation. Superseded by the exposed PARKSIDE backpack; retained as an inactive model."
+      "notes": "Purchased component representation. Superseded by the PARKSIDE battery; retained as an inactive model."
     },
     {
       "model": "power_switch_kcd1_native",
@@ -698,7 +698,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed body shell retaining the Microduck outline and mounting features, with reinforced lower corner and local clearance for the two-part backpack mount. Physical fit and strength unverified."
+      "notes": "Printed body shell retaining the Microduck outline, mounting features and closed rear top return, cut round the battery pod with a 0.4 mm nominal gap and stopping 0.3 mm short of the centre plane. Physical fit and strength unverified."
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -812,7 +812,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed trunk frame with continuous compact gussets and four side-loaded M3 nut pockets; separate backpack dock. Physical fit and strength unverified."
+      "notes": "Printed trunk frame; the four obsolete carrier bores are filled and two M3 clearance holes hold the battery pod tongue. Physical fit and strength unverified."
     },
     {
       "model": "ubec_clamp_native",
@@ -931,20 +931,32 @@
       "print_release": "not_applicable",
       "material_hint": "mixed: ABS case, PC lens, metal contacts; appearance only",
       "export": false,
-      "active_variant": true,
-      "notes": "Active exposed PAP 204 A1 4 Ah backpack. Original single-component colors. Exterior visual model; rail/latch dimensions approximate; excluded from print exports."
+      "active_variant": false,
+      "notes": "PAP 204 A1 4 Ah backpack as one coloured component. Inactive in the PAPK 12 A4 rump variant; the screwed backpack revision is commit a94355e. Exterior visual model; rail/latch dimensions approximate; excluded from print exports."
     },
     {
-      "model": "backpack_dock_native",
-      "component": "backpack_dock_native",
+      "model": "parkside_papk_12_a4",
+      "component": "parkside_papk_12_a4",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "mixed: ABS case, PC nameplate, metal contacts and screws; appearance only",
+      "export": false,
+      "active_variant": true,
+      "notes": "Active PAPK 12 A4 12 V 2 Ah stick battery as one coloured component, cap down in the rump pod. Photo-derived exterior visual model; outline, contacts and latches approximate; excluded from print exports."
+    },
+    {
+      "model": "stick_pod_native",
+      "component": "stick_pod_native",
       "params": {},
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "unspecified",
+      "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Separate flat-backed exposed battery dock; four M3 x 12 socket-head screws and M3 hex nuts join it to the trunk. Physical rail/latch and printed joint fit unverified."
+      "notes": "Body-coloured rump pod for the PAPK 12 A4 stick: fairing on the back line closed by a low dome, socket with nominal latch lips, contact slots through to the body, T contact window, wire passes, and a front tongue held by two M3 x 10 socket-head screws into M3 x 5.7 heat-set inserts. Latch and contact geometry follow the photo-derived stick and are approximate; physical fit and strength unverified."
     }
   ],
   "review_geometry": [
@@ -965,6 +977,36 @@
       "role": "review_geometry",
       "provider": "src/lib/radxa_6530b_parameters.py:fan_inlet_allowance",
       "notes": "Empty space before modeled fan inlet; never printed."
+    },
+    {
+      "id": "x12_plus_contact_allowance",
+      "role": "review_geometry",
+      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"plus\"]",
+      "notes": "Space in and beside the + channel for a later contact adapter; approximate; never printed."
+    },
+    {
+      "id": "x12_minus_contact_allowance",
+      "role": "review_geometry",
+      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"minus\"]",
+      "notes": "Space in and beside the - channel for a later contact adapter; approximate; never printed."
+    },
+    {
+      "id": "x12_t_contact_allowance",
+      "role": "review_geometry",
+      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"t\"]",
+      "notes": "Space behind the T contact window; approximate; never printed."
+    },
+    {
+      "id": "x12_top_bay",
+      "role": "review_geometry",
+      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"top\"]",
+      "notes": "Hidden bay over the stick front half for a later terminal block; never printed."
+    },
+    {
+      "id": "x12_xt60_bay",
+      "role": "review_geometry",
+      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"xt60\"]",
+      "notes": "Space for a mated XT60 pair beside the pod with lead room above and below; nominal connector size; no wiring designed; never printed."
     }
   ]
 }

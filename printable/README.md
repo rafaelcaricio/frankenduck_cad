@@ -55,4 +55,4 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [yaw2roll_left_native.3mf](3mf/yaw2roll_left_native.3mf) | 1 | pla |
 | [yaw2roll_left_native_right.3mf](3mf/yaw2roll_left_native_right.3mf) | 1 | pla |
 | [yaw_roll_link_native.3mf](3mf/yaw_roll_link_native.3mf) | 1 | pla |
-| [backpack_dock_native.3mf](3mf/backpack_dock_native.3mf) | 1 | unspecified |
+| [stick_pod_native.3mf](3mf/stick_pod_native.3mf) | 1 | pla |

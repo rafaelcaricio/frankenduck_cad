@@ -49,9 +49,9 @@ check or export when a deliberate rerun is needed. Current reports and logs
 are in `reports/latest/`.
 
 The full suite checks the saved rest pose, all 1,702 recorded walking/sitting
-keyframes for backpack clearance, and 67 battery-removal positions with the head
-and legs neutral. It does not perform a continuous motion sweep or establish
-physical fit, printed strength, cable bending or thermal performance.
+keyframes for battery clearance, and the straight-down battery release at the
+home pose. It does not perform a continuous motion sweep or establish physical
+fit, printed strength, cable bending or thermal performance.
 
 ## Parts and printing
 
@@ -85,11 +85,15 @@ for individual jumper plugs and an upward cable path, plus a representation
 of the official Radxa 6530B cooler. Dimensions, fastener details and modeling
 assumptions are in [docs/design.md](docs/design.md).
 
-The assembly uses an exposed PARKSIDE PAP 204 A1 4 Ah backpack, with a screwed
-two-part mount and locally relieved body shells. The battery remains one selectable
-component with its original face colors and is excluded from the print set.
-Rail/latch dimensions are approximate; physical fit and printed load capacity
-remain unverified. See [the backpack design notes](docs/design.md#parkside-backpack).
+The assembly uses a PARKSIDE PAPK 12 A4 12 V stick battery. It stands cap down
+in a printed rump pod that continues the body's back line, held under the trunk
+plate by two M3 screws, and comes out straight down after pressing both release
+buttons. The battery is one selectable component with its own face colors and is
+excluded from the print set. Its outline, latch and contacts are approximate;
+physical fit and printed strength remain unverified. Openings and review volumes
+keep space for a later contact adapter and an XT60 plug. See
+[the stick pod design notes](docs/design.md#parkside-stick-pod). The PAP 204 A1
+backpack revision is commit `a94355e`.
 
 ## Repository layout
 

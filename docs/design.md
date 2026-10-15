@@ -73,11 +73,12 @@ The 4 mm kit screws are too short for the new 2.4 mm bracket grip plus
 1.75 mm PCB. Four M2 x 6 screws give 1.85 mm nominal thread engagement.
 Check the actual heatsink thread depth before choosing the final screws.
 
-## PARKSIDE battery component
+## PARKSIDE battery components
 
 `src/parts/parkside_pap_204_a1.py` provides the PARKSIDE PAP 204 A1, 20 V 4 Ah,
 as one selectable component with 66 solids and seven face colors. It is a
-purchased component in the exposed backpack and is excluded from print exports.
+purchased component and is excluded from print exports. This variant does not
+use it; the screwed backpack revision is commit `a94355e`.
 
 The origin is the center of the bottom face. +X points toward the release
 paddle, -X toward the contact nose and +Z points up. Its modeled envelope is
@@ -87,94 +88,170 @@ mating interface. CAD solid volume does not represent battery internals.
 The lettering uses the bundled DejaVu Sans Bold font and license in
 `source/fonts/`.
 
-## PARKSIDE backpack
+`src/parts/parkside_papk_12_a4.py` provides the PARKSIDE PAPK 12 A4, 12 V 2 Ah
+X12V stick battery (Lidl NL 100406214), as one selectable component with 71
+solids and nine face colors. It stands in the rump pod described below. It is
+cataloged as a purchased component and is excluded from print exports.
 
-Retain geometry only when it provides support, location/retention, access or
-clearance, or preserves the familiar Microduck appearance. The mount uses two
-printed parts: the trunk frame with compact gussets, and a separate battery dock.
-The battery leans 20 degrees from upright with its top toward the body. The
-original shell outline is retained, with local hidden relief at the rear opening;
-the upper crossbar and tall dock ears are removed to keep the release path open.
-World +Y is rearward and +Z upward. `src/lib/backpack.py` owns the shared geometry
-and battery pose; `source/assembly_data.json` records the matching placement.
+The origin is the center of the underside of the red cap. +Z points up along
+the stick, -Y is the front with the X12V TEAM nameplate, the release buttons
+face +X and -X, and the T contact is on the flat back of the stick at +Y. The
+modeled envelope is 45.2 × 51.5 × 82.0 mm, including the 1.5 mm feet. The
+82 mm height and the 185 g mass are manufacturer values. Everything else is
+fitted to six public product photos: about 0.5 mm on the cap, collar and stick
+outlines and about 1 mm elsewhere. The photo-derived plan differs from the
+listed 52 × 48 mm; the model follows the photos. The nameplate height varies
+by about 1.5 mm between the photos, and the model follows its gap to the red
+cap. The nameplate and underside artwork is traced from the photos; the text
+uses the same bundled DejaVu Sans Bold font. The faint brand line on the small
+underside plate is unreadable in the photo and is drawn as /// PARKSIDE. The
+contacts and latches are drawn as they look, not to the X12V interface
+tolerances. The latch teeth are hooks: a 1 mm notch under the catch at z 39.5
+takes the tool's lip, and a lead-in ramp runs from z 40.6 to the top at z 43.
+CAD solid volume does not represent the battery mass.
 
-The placement rotates the reference upright geometry 20 degrees about the X axis
-through (0, 101.2, 126.815), then translates it 15 mm forward and 23.761265 mm up.
-These are transform parameters, not a claim that every point on the pack moves
-15 mm toward the body. The final position accommodates the checked walking and
-sitting trajectory; the full independent hip ranges are not cleared.
+Three third-party X12 prints from Thingiverse served as fit references. They
+are not stored in the repository:
+
+- BabaYog's PAPK 12 A1 replica shell
+  ([thing:4230897](https://www.thingiverse.com/thing:4230897))
+- GLoL's double 12 V adapter
+  ([thing:4445736](https://www.thingiverse.com/thing:4445736))
+- GLoL's x12 DIY cell case
+  ([thing:4646324](https://www.thingiverse.com/thing:4646324)). It is a plain
+  envelope for 18650 cells, so it is used only for interface heights.
+
+The modeled stick fits the adapter socket line to line (-0.03 mm), as does the
+A1 replica's stick (-0.11 mm). The model follows the references on three
+points:
+
+- The stick is centred in the collar. The photos put it about 1.2 mm toward -X.
+  All three references centre it, and it brings the teeth closer to the centres
+  of the adapter's latch windows.
+- The back wall is 17.0 mm below the rim, at z 19.5, as in all three
+  references. The photos give about 16 mm.
+- The latch catch is 3.0 mm above the rim, as in both replicas and the side
+  photo. The adapter's lip needs at least 2.7 mm.
+
+The collar step-down behind the buttons follows both side photos, from z 36.5
+at y 7.0 down to the back wall at y 13.0. The adapter's -X cradle clears it with
+no overlap. Check the stick position and the back wall with a caliper before
+using either for a mating part. Two differences remain, and the model keeps the
+photos:
+
+- The adapter's +X cradle starts its slope about 3 mm further forward than its
+  -X cradle. The modeled battery therefore stops about 8.1 mm short of the
+  adapter rim. Its +X latch lip also reaches 0.7 mm into the +X tooth. Both
+  photographed sides match the -X cradle.
+- The x12 case has a straight slot behind each latch arm instead of the sloped
+  step, and is 1 to 3 mm wider than the photographed battery.
+
+## PARKSIDE stick pod
+
+This variant replaces the PAP 204 A1 backpack with the PAPK 12 A4 X12V stick
+battery. The backpack revision stays at commit `a94355e` for comparison.
+
+The stick stands cap down behind the trunk plate in one printed pod. The pod's
+fairing continues the body's back line and closes in a low rounded dome over the
+stick. The red cap, the collar and both release buttons stay below the body.
+World +Y is rearward and +Z upward. `src/lib/stick_pod.py` owns the geometry;
+`source/assembly_data.json` records the placement and the `battery_release`
+slider. The placement is a pure translation: stick-local x, y and z are world X,
+Y − 58 and Z − 83.
 
 | Feature | Modeled dimension |
 | --- | --- |
-| Battery world bounds X / Y / Z | ±41.5 / 39.116–137.919 / 89.464–218.791 mm |
-| Battery inclination | 20 degrees from upright, top toward the body |
-| Compact supports | 18 mm wide, continuous 18 mm roots, R2 profile transitions |
-| Dock backing / rail cheeks | 7 mm / 5 mm |
-| Rail lips / rail length | 4 mm nominal before local relief / 50 mm |
-| Dock upper shoulder | R6 corners; ends at reference Z=158.5 mm |
-| Turned lower support | 24 mm terminal width, R3 root blend |
-| Lower-support sampled normal sections | 5.04–6.80 mm |
-| Four screw axes, before inclination | X=±24; Z=138.5 and 150.5 mm; parallel to Y |
-| Mounting face, before inclination | Y=60 mm; intentional clamping contact |
-| Screw passages / head recesses | Ø3.4 / Ø6.4 mm; reference head seat Y=63.8 mm |
-| Nut side slots, before inclination | Y=53–55.8 mm, height 5.8 mm |
-| Thumb approach | Ø18 mm corridor along the slide direction, open from above |
-| Shell walls at six checked sections | 3 mm |
-| Shell-to-mount / shell-to-battery measured minimum gaps | 2.784 / 1.499 mm |
-| Battery-to-dock measured minimum gap | 0.690 mm |
-| Shell split | 0.6 mm total |
+| Battery world bounds X / Y / Z | ±22.59 / 32.27–83.72 / 81.5–163.5 mm |
+| Pod world bounds X / Y / Z | ±31.1 / 21.0–87.3 / 119.8–171.0 mm |
+| Pod and socket walls | 2.5 mm |
+| Socket clearance round the stick | 0.6 mm; socket top 0.5 mm above the stick |
+| Pod seat over the collar rim | 0.3 mm; the pod's lower edge is flat at this level |
+| Latch lips | Top 0.2 mm under the hook catch; 0.8 mm engagement |
+| Hook flex room | 1.5 mm behind each hook |
+| + and − contact slots | 10 mm wide, stick-local z 60–82, open to the body |
+| T contact window | 22 × 8 mm on the back, stick-local z 58–80 |
+| Wire passes | 10 × 12 × 10 mm, one each side |
+| Hidden top bay | 42 × 18 × 4 mm over the stick's front half, under the body top skin |
+| Front tongue | 19 × 21 × 8 mm under the trunk plate, R2 corners |
+| Screws | Two M3 × 10 socket head at X = ±5, Y = 25, from above |
+| Plate holes / insert pilots | Ø3.4 / Ø4.0 × 6 mm for M3 × 5.7 heat-set inserts |
+| Tongue clamp contact | 239 mm² |
+| Shell-to-pod gap / shell split | 0.395 mm (0.4 nominal) / 0.6 mm |
+| Battery to pod / trunk / shells | 0.2 (hook over lip) / 3.29 / 3.65 mm |
+| XT60 bay | 8.6 × 16 × 24 mm at X 22.5–31.1, Y 28.6–44.6, Z 130–154 |
+| Release | Press both buttons, pull 95 mm straight down |
 
-The required joint hardware is four M3 × 12 socket-head screws and four M3 hex
-nuts, nominally 5.5 mm across flats and 2.4 mm thick. Load the nuts from the sides
-before fitting the shells; remove the battery for screwdriver access from behind.
-The screws clamp broad planar faces directly together. Clearances belong in the
-screw/nut passages and around removable parts, not between the clamping faces.
-Actual hardware dimensions, seating, torque and printed strength need verification.
-Detailed fastener solids are not added as decorative assembly geometry.
+The fairing is a loft of superellipse sections from the cap outline to a
+4 × 1.6 mm oval just under the apex. Its closed face is split into four
+patches. OCCT's point classifier misjudges about 1 % of outside points against
+one closed loft face or a single apex point, which made distance checks report
+false contacts.
 
-The frame has a broad top face and the separate dock has a flat body-facing
-backing that can be evaluated as bed faces. The narrowed lower end turns toward
-the battery through a 45-degree root with a 3 mm blend. Rail lips retain short
-overhangs: this is not a support-free or sliced qualification. Material,
-orientation and support settings remain a slicer decision. The backing is
-continuous; the short side nut slots are necessary openings, not lightening cuts.
+The tongue's top face clamps flat against the trunk plate's underside. Fit the
+two heat-set inserts in the tongue, hold the pod under the plate and drive both
+screws from above through the shells' top service opening; a 3 mm driver has
+60 mm of free length above each head. The trunk keeps its original geometry,
+with the four obsolete carrier bores filled and the two screw holes added. The
+shells keep the original outline and closed rear top return. They are cut round
+the pod envelope with a 0.4 mm gap and stop 0.3 mm short of the centre plane.
 
-The shell modifications retain the original outer profile and screw features.
-The lower mount bay is open, with no obsolete locating tongues or thin corner
-pads. The upper service opening ends before the release paddle; there is no
-raised rear crown or crossbar. Local internal relief provides battery clearance
-without changing the outer body silhouette. Offset surfaces are converted to
-B-splines before STEP export so the saved shells remain closed single solids.
-Four obsolete carrier bores in the trunk remain filled. The battery remains one
-exposed selectable component with its existing geometry and face colors. Earlier
-NP-F550, carrier and donor cover models remain inactive library parts.
+The stick's + and − contacts face the front sides. Their slots run through the
+socket wall and the fairing's front wall into the body, so a later adapter can
+reach the contact plates and its leads can leave forward. The T contact window
+opens on the back, inside the fairing. The wire passes join the pod's side
+spaces to the body. The XT60 bay is on the +X side between the hip-yaw servo
+and the pod, beside the − contact slot. It holds a mated XT60 pair (nominally
+8.2 × 15.5 × 23.5 mm) with its axis vertical. Lead room continues 9 mm above
+it beside the trunk plate's rear edge, and a 5.4 × 5 mm channel runs under it
+toward the centre. No adapter, terminal or wiring is designed. The review
+volumes `x12_plus_contact_allowance`, `x12_minus_contact_allowance`,
+`x12_t_contact_allowance`, `x12_top_bay` and `x12_xt60_bay` keep these spaces
+free.
 
-`assembly.backpack` checks the saved frame, dock and shells as valid single solids;
-continuous support roots; four nominal screw/nut envelopes; clamping patches;
-battery-removed screwdriver paths; shell/battery gaps; sampled wall sections;
-static intersections; and the thumb approach. It also checks 30 moving leg
-occurrences at 43 discrete times against the battery, frame, dock and complete
-shells. Numerical positive-overlap tolerance is 1e-5 mm³.
+The stick, its latch hooks, buttons and contacts come from the photo-derived
+stick model and are approximate. The socket clearance, lips, flex room and
+contact openings are nominal. Check them against a real battery and a test print
+before relying on the fit. Printed strength is untested.
 
-`backpack.motion` checks all 1,702 keyframes of `walk_sit_stand_walk_sit`: 30 leg
-occurrences against five fixed backpack/body targets, totaling 255,300 pairs.
-Conservative bounding volumes reject pairs separated by at least 2 mm; nearby
-pairs use exact CAD distances. The approved model has a sampled minimum
-clearance lower bound of 2 mm. This covers the recorded keyframes, not continuous
-interpolation or every combination of the declared joint ranges.
+### Mass
 
-`backpack.removal` checks a 51 mm slide along the rails followed by an 80 mm
-outward departure normal to the backing, with the head and legs neutral. The
-path has 67 positions: 2 mm increments plus the rail endpoint. All checked
-positions are free of intersections; the minimum shell gap is 1.499 mm and dock
-gap is 0.690 mm. Gaps of at least 3 mm may be reported as 3 mm lower bounds.
+The stick variant weighs 1.80 kg, 543 g less than the PAP 204 A1 revision
+(2.344 kg). The whole-robot centre of mass at the home pose moves 21.8 mm
+forward and 3.5 mm down, to (−0.9, 0.4, 142.2) mm. The basis is the
+microduck_rl HOME receipt for CAD `94c002d` with the battery-area rows
+replaced: printed parts as solid PLA at 1310 kg/m³, the battery at its listed
+185 g at the stick's mid-height, and 3 g for the screws and inserts. Real
+infill, wiring and the cells' mass distribution will differ. The walking policy
+in microduck_rl is not updated.
 
-The rail and latch in the existing battery model are photo-derived. The dock is
-a prototype based on that geometry, not a verified X20V mating interface. Real
-seating, retention/release, contacts and swap travel need physical review; printed
-load capacity needs testing with the selected material and layer orientation.
-CAD acceptance and mesh export do not release the design for use.
+### Checks
 
+`assembly.battery_pod` checks the saved trunk, pod and shells as valid single
+solids; the seated battery bounds; the shell split, shell-to-pod and battery
+gaps; static overlaps of the five changed parts with every occurrence, where the
+pod may touch only the trunk; the tongue contact area; both screw bores, head
+seats, insert pilots, 1.5 mm insert walls, shanks and driver paths; the five
+review volumes; and pod or shell cover over every 2 mm grid point of the stick
+top. Numerical positive-overlap tolerance is 1e-5 mm³.
+
+`battery_pod.motion` checks all 1,702 keyframes of `walk_sit_stand_walk_sit`:
+30 leg occurrences against the battery, pod, trunk and both shells, totaling
+255,300 pairs. Conservative bounding volumes reject pairs separated by at least
+2 mm; nearby pairs use exact CAD distances. No pair comes within 2 mm. This
+covers the recorded keyframes, not continuous interpolation or every
+combination of the declared joint ranges.
+
+`battery_pod.removal` checks the full 95 mm straight-down release at the home
+pose. Battery material inside the stick outline grown 0.3 mm stays in that
+column on the way down. The column meets no part; it stays 0.3 mm from the pod,
+2.99 mm from the trunk and 3.29 mm from the shells. Of the 23 battery pieces
+outside the column, 22 have swept boxes that meet no part. The last, the body
+round the latch hooks, is checked against the pod with exact booleans every
+0.25 mm. The hooks ride over the lips from 0.25 to 4.75 mm of travel. All of
+that overlap lies inside the 0.8 mm lip zone, so each hook flexes inward at most
+0.84 mm into a 1.5 mm flex room that holds no pod material. A 20 mm finger space
+outside each button is free. The hook travel is sampled; arm bending, button
+force and physical fit are not modelled.
 
 ## Joints and poses
 

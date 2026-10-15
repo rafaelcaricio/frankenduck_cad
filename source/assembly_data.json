@@ -1248,27 +1248,23 @@
     },
     {
       "name": "parkside_battery",
-      "component": "parkside_pap_204_a1",
+      "component": "parkside_papk_12_a4",
       "params": {},
       "at": [
         [
-          0,
-          117.39779501009217,
-          161.93133375841222
+          0.0,
+          58.0,
+          83.0
         ],
         [
-          [
-            0.6336872742246419,
-            -0.6336872742246419,
-            0.4437126062796578
-          ],
-          132.14507055848216
+          "Z",
+          0.0
         ]
       ]
     },
     {
-      "name": "backpack_dock",
-      "component": "backpack_dock_native",
+      "name": "stick_pod",
+      "component": "stick_pod_native",
       "params": {},
       "at": [
         [
@@ -1915,16 +1911,30 @@
       "child": "#radxa_6530b"
     },
     {
-      "name": "fix_parkside_pap_204_a1",
+      "name": "stick_pod_mount",
       "kind": "fastened",
       "parent": "#trunk_base",
-      "child": "#parkside_battery"
+      "child": "#stick_pod"
     },
     {
-      "name": "backpack_dock_mount",
-      "kind": "fastened",
-      "parent": "#trunk_base",
-      "child": "#backpack_dock"
+      "name": "battery_release",
+      "kind": "slider",
+      "parent": "#stick_pod",
+      "child": "#parkside_battery",
+      "origin": [
+        0.0,
+        58.0,
+        83.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": [
+        0.0,
+        95.0
+      ]
     }
   ],
   "poses": {

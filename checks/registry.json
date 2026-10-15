@@ -100,9 +100,9 @@
       "coverage": "Saved rest pose; official outer envelope and modeled inlet, 1e-5 mm3 overlap threshold, five cover-wall samples >=2 mm and nominal mounting stack. Detailed cooler geometry approximate; no thermal validation."
     },
     {
-      "id": "assembly.backpack",
-      "call": "checks.assembly:backpack",
-      "purpose": "Inclined two-part battery mount, fastener paths, print gaps and sampled leg clearance",
+      "id": "assembly.battery_pod",
+      "call": "checks.assembly:battery_pod",
+      "purpose": "Stick pod, tongue screws, print gaps and adapter spaces at rest",
       "suites": [
         "full"
       ],
@@ -111,48 +111,53 @@
         "STEP/frankenduck.step.json",
         "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/backpack.py",
-        "checks/assembly.py",
-        "checks/common.py"
+        "src/lib/stick_pod.py",
+        "src/parts/parkside_papk_12_a4.py",
+        "checks/common.py",
+        "checks/assembly.py"
       ],
-      "report": "reports/latest/backpack_verification.json",
-      "coverage": "Valid single-solid frame, dock and shells; four M3 screw/nut envelopes, clamping patches and battery-removed driver paths; continuous support roots; 20-degree battery bounds; dock/shell/battery gaps; 3 mm shell-wall sections and an open lower mount bay; static overlaps and thumb approach; 43 discrete samples for 30 leg occurrences against battery, frame, dock and corners. No continuous sweep, slicing or physical fit/strength verification."
+      "report": "reports/latest/battery_pod_verification.json",
+      "coverage": "Valid single-solid trunk, pod and shells; seated battery bounds; shell split (0.6 mm), shell-pod (0.35 mm) and battery gaps; static overlaps of the five changed parts with every occurrence, the pod touching only the trunk; tongue contact area; two M3 bores, head seats, insert pilots, 1.5 mm insert walls, shank and 3 x 60 mm driver paths; four adapter review volumes free. Stick, latch and contacts are APPROXIMATE. No slicing, physical fit or strength test."
     },
     {
-      "id": "backpack.motion",
-      "call": "checks.backpack_paths:motion",
-      "purpose": "All 1702 recorded walking and sitting keyframes against the complete backpack and shells",
+      "id": "battery_pod.motion",
+      "call": "checks.battery_paths:motion",
+      "purpose": "All 1702 recorded walking and sitting keyframes against the stick battery, pod, trunk and shells",
       "suites": [
         "full"
       ],
       "inputs": [
         "STEP/frankenduck.step",
         "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/backpack.py",
-        "checks/backpack_paths.py",
-        "checks/common.py"
+        "src/lib/stick_pod.py",
+        "src/parts/parkside_papk_12_a4.py",
+        "checks/common.py",
+        "checks/battery_paths.py"
       ],
-      "report": "reports/latest/backpack_motion_verification.json",
-      "coverage": "Thirty leg occurrences; 1702 keyframes; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
+      "report": "reports/latest/battery_motion_verification.json",
+      "coverage": "Thirty leg occurrences; 1702 keyframes; 1 mm minimum gap; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
     },
     {
-      "id": "backpack.removal",
-      "call": "checks.backpack_paths:removal",
-      "purpose": "Neutral-pose rail disengagement and outward battery departure",
+      "id": "battery_pod.removal",
+      "call": "checks.battery_paths:removal",
+      "purpose": "Straight-down stick release at the home pose, hook travel through the lips and button thumb room",
       "suites": [
         "full"
       ],
       "inputs": [
         "STEP/frankenduck.step",
         "STEP/frankenduck.step.json",
+        "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/backpack.py",
-        "checks/backpack_paths.py",
-        "checks/common.py"
+        "src/lib/stick_pod.py",
+        "src/parts/parkside_papk_12_a4.py",
+        "checks/common.py",
+        "checks/battery_paths.py"
       ],
-      "report": "reports/latest/backpack_removal_verification.json",
-      "coverage": "Neutral head/legs; 51 mm rail slide followed by 80 mm outward departure, sampled at 2 mm and rail endpoint. Exact solid pairs near conservative bounds; 3 mm distances may be lower bounds. Nominal geometry only, no physical latch fit validation."
+      "report": "reports/latest/battery_removal_verification.json",
+      "coverage": "Home pose; full 95 mm straight-down release. Battery material inside the stick outline grown 0.3 mm is proven clear of every part by its swept column; outside pieces are proven clear by swept boxes or checked with exact booleans every 0.25 mm where a swept box meets a part. Rigid hooks may overlap the pod only inside the lip zone and within the flex room; empty flex room; thumb room outside both buttons. APPROXIMATE latch; no arm bending, button force or physical fit."
     }
   ]
 }

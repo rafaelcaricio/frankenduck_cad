@@ -26,7 +26,7 @@ def make():
     PANEL_SCALE = 0.72
     WALL = 3.0
     PROFILE_CTL_XZ = [(-61.969364, 141.721413), (-60.769652, 133.872594), (-57.276993, 126.803988), (-50.794014, 122.358513), (-43.022885, 120.769484), (-35.077182, 120.67624), (-27.125195, 120.697049), (-19.174847, 120.866402), (-11.224499, 121.035755), (-3.274151, 121.205108), (4.676196, 121.374461), (12.626544, 121.543815), (20.576892, 121.713168), (26.636799, 126.072967), (28.103164, 133.853673), (28.415338, 141.798651), (28.519343, 149.748904), (26.829561, 157.478466), (22.453743, 164.065265), (16.146531, 168.833552), (8.767016, 171.7796), (1.031361, 173.596575), (-6.854049, 174.594652), (-14.797595, 174.91515), (-22.749282, 174.893843), (-30.701087, 174.819608), (-38.641541, 174.419028), (-46.516012, 173.371864), (-53.96208, 170.678255), (-59.525821, 165.128391), (-61.936164, 157.59931), (-62.307761, 149.666182)]
-    # Preserve the original body silhouette; mount relief stays within this skin.
+    # Preserve the original body silhouette; only the battery pod cuts this skin.
     HIP_Y_HALF = 38.2
     HIP_Z_TOP = 127.5
     FRONT_X_MIN = 6.0
@@ -40,8 +40,7 @@ def make():
     CORRIDOR_X_MAX = -37.25
     CORRIDOR_Y_HALF = 22.5
     CORRIDOR_Z_TOP = 160.75
-    # Open the central upper return through the rear: no bridge by the release paddle.
-    SERVICE_X_MIN = -80.0
+    SERVICE_X_MIN = -28.5
     SERVICE_Y_HALF = 24.5
     SERVICE_Z_MIN = 164.0
     SERVICE_CORNER = 3.0
@@ -240,7 +239,7 @@ def make():
         model.add('switch_relief', _cone_in(SW_X, SW_Z, SW_RELIEF_R, SW_RELIEF_R + SW_RELIEF_DEPTH, SW_RELIEF_Y, SW_RELIEF_DEPTH), op='cut', name='KCD1 45-degree relief')
     model.material('pla', color='#99deef')
     result = model.result()
-    from lib.backpack import relieve_shell
+    from lib.stick_pod import relieve_shell
     return relieve_shell(to_build123d(model, 'right_shell_native'), 'right_shell_native')
 
 

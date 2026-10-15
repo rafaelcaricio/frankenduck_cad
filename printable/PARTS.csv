@@ -42,4 +42,4 @@ filename,model,quantity,material_hint,print_release,occurrences
 3mf/yaw2roll_left_native.3mf,yaw2roll_left_native,1,pla,unreviewed,#o1.35:yaw2roll_left
 3mf/yaw2roll_left_native_right.3mf,yaw2roll_left_native_right,1,pla,unreviewed,#o1.46:yaw2roll_right
 3mf/yaw_roll_link_native.3mf,yaw_roll_link_native,1,pla,unreviewed,#o1.4:yaw_roll_link_r05
-3mf/backpack_dock_native.3mf,backpack_dock_native,1,unspecified,unreviewed,#o1.73:backpack_dock
+3mf/stick_pod_native.3mf,stick_pod_native,1,pla,unreviewed,#o1.73:stick_pod

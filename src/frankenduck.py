@@ -4,7 +4,7 @@ import math
 import json
 from pathlib import Path
 from parts.trunk_base_native import trunk_base_native
-from parts.backpack_dock_native import backpack_dock_native
+from parts.stick_pod_native import stick_pod_native
 from parts.head_frame_native import head_frame_native
 from parts.roll_front_bulkhead_native import roll_front_bulkhead_native
 from parts.yaw_roll_link_native import yaw_roll_link_native
@@ -62,8 +62,8 @@ from parts.sole_left_native_right import sole_left_native_right
 from parts.foot_left_native_a_right import foot_left_native_a_right
 from parts.foot_left_native_b_right import foot_left_native_b_right
 from parts.sts3215_servo_native import sts3215_servo_native
-from parts.parkside_pap_204_a1 import parkside_pap_204_a1
-from lib.backpack import BATTERY_AT
+from parts.parkside_papk_12_a4 import parkside_papk_12_a4
+from lib.stick_pod import STICK_AT
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSEMBLY_PATH = ROOT / "source/assembly_data.json"
@@ -166,8 +166,8 @@ def frankenduck():
     children.append(place(sts3215_servo_native(), 'servo_head_yaw', ((0.0, -35.1, 258.0048), ('Z', -90))))
     children.append(place(sts3215_servo_native(), 'servo_jaw_direct', ((53.0, -35.235, 284.6348), ((-0.052265535382890235, -0.9972577629795188, 0.05239530502082981), 90.01400599288137))))
     children.append(place(radxa_6530b(), 'radxa_6530b', HEATSINK_AT))
-    children.append(place(parkside_pap_204_a1(), 'parkside_battery', BATTERY_AT))
-    children.append(place(backpack_dock_native(), 'backpack_dock', ((0,0,0), ('Z',0))))
+    children.append(place(parkside_papk_12_a4(), 'parkside_battery', STICK_AT))
+    children.append(place(stick_pod_native(), 'stick_pod', ((0, 0, 0), ('Z', 0))))
     return bd.Compound(children=children, label="frankenduck")
 
 if __name__ == "__main__":

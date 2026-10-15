@@ -150,7 +150,7 @@ def make():
     model.add('yoke_clearances', group(rec), op='cut')
     model.material('pla', color='#99deef')
     result = model.result()
-    from lib.backpack import integrate_trunk
+    from lib.stick_pod import integrate_trunk
     return integrate_trunk(to_build123d(model, 'trunk_base_native'))
 
 
