@@ -32,8 +32,9 @@ for board, bracket, speaker or cooler changes, and `./cad check full` before
 accepting a completed revision. `./cad status` distinguishes current results
 from stale, missing or failed checks. Checks never silently rebuild.
 
-`./cad review radxa` creates the clearance model. `./cad view` starts or reuses
-the viewer on `0.0.0.0` for LAN access. Review the saved artifact with suitable
+`./cad review radxa` creates the clearance model. `./cad review pod` renders the
+stick pod's views and sections; examine every picture after a pod change.
+`./cad view` starts or reuses the viewer on `0.0.0.0` for LAN access. Review the saved artifact with suitable
 snapshots after visible geometry changes. Keep the STEP and sidecar together.
 Report build, CAD checks, visual review and physical readiness accurately;
 the maintained fit checks cover the rest pose.

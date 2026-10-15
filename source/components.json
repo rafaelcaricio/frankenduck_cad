@@ -956,7 +956,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Body-coloured rump pod for the PAPK 12 A4 stick: fairing on the back line closed by a low dome, socket with nominal latch lips, contact slots through to the body, T contact window, wire passes, and a front tongue held by two M3 x 10 socket-head screws into M3 x 5.7 heat-set inserts. Latch and contact geometry follow the photo-derived stick and are approximate; physical fit and strength unverified."
+      "notes": "Body-coloured rump pod for the PAPK 12 A4 stick: fairing on the back line closed by a low dome, front opening into the body, socket with nominal latch lips, contact slots, T contact window, and a front tongue held by two M3 x 12 socket-head screws into M3 x 5.7 heat-set inserts. Latch and contact geometry follow the photo-derived stick and are approximate; physical fit and strength unverified."
     }
   ],
   "review_geometry": [
@@ -1000,7 +1000,7 @@
       "id": "x12_top_bay",
       "role": "review_geometry",
       "provider": "src/lib/stick_pod.py:adapter_allowances()[\"top\"]",
-      "notes": "Hidden bay over the stick front half for a later terminal block; never printed."
+      "notes": "Hidden bay over the stick front half under the body top skin, reached through the front opening, for a later terminal block; never printed."
     },
     {
       "id": "x12_xt60_bay",

@@ -232,6 +232,9 @@ def manifest():
 def review(target):
     if build_status()[0] != "PASS":
         raise RuntimeError("Build is stale; run ./cad build before review")
+    if target == "pod":
+        subprocess.run([sys.executable, "tools/part_review.py"], cwd=ROOT, check=True)
+        return
     command = [sys.executable, "src/radxa_fit_review.py"] if target == "radxa" else None
     if command:
         subprocess.run(command, cwd=ROOT, check=True)
@@ -253,8 +256,8 @@ def main():
     p.add_argument("target", choices=["print"])
     p.add_argument("--force", action="store_true", help="regenerate an unchanged print bundle")
     sub.add_parser("status", help="show current, stale and missing results")
-    p = sub.add_parser("review", help="prepare the saved assembly or Radxa review model")
-    p.add_argument("target", choices=["assembly", "radxa"])
+    p = sub.add_parser("review", help="prepare the saved assembly or Radxa review model, or the stick pod pictures")
+    p.add_argument("target", choices=["assembly", "radxa", "pod"])
     sub.add_parser("view", help="start/reuse the LAN viewer")
     args = parser.parse_args()
     if sys.flags.optimize:

@@ -162,30 +162,40 @@ Y − 58 and Z − 83.
 | Feature | Modeled dimension |
 | --- | --- |
 | Battery world bounds X / Y / Z | ±22.59 / 32.27–83.72 / 81.5–163.5 mm |
-| Pod world bounds X / Y / Z | ±31.1 / 21.0–87.3 / 119.8–171.0 mm |
+| Pod world bounds X / Y / Z | ±30.5 / 21.0–87.3 / 119.8–170.8 mm |
 | Pod and socket walls | 2.5 mm |
-| Socket clearance round the stick | 0.6 mm; socket top 0.5 mm above the stick |
+| Socket clearance round the stick | 0.6 mm; socket top 2.5 mm below the stick top, 2.4 mm under the dome |
 | Pod seat over the collar rim | 0.3 mm; the pod's lower edge is flat at this level |
 | Latch lips | Top 0.2 mm under the hook catch; 0.8 mm engagement |
 | Hook flex room | 1.5 mm behind each hook |
-| + and − contact slots | 10 mm wide, stick-local z 60–82, open to the body |
-| T contact window | 22 × 8 mm on the back, stick-local z 58–80 |
-| Wire passes | 10 × 12 × 10 mm, one each side |
-| Hidden top bay | 42 × 18 × 4 mm over the stick's front half, under the body top skin |
+| + and − contact slots | 10 mm wide, from stick-local z 60 through the socket top, open to the body |
+| T contact window | 22 mm wide on the back, from stick-local z 58 through the socket top |
+| Front opening | Fairing open into the body in front of stick-local y −6 and above z 58, R4 corners |
+| Hidden top bay | 42 × 18 × 4 mm over the stick's front half, under the body top skin (kept free) |
+| Outside edge round | 0.6 mm on the lower edge, the front opening's outer edge and the tongue |
 | Front tongue | 19 × 21 × 8 mm under the trunk plate, R2 corners |
-| Screws | Two M3 × 10 socket head at X = ±5, Y = 25, from above |
+| Screws | Two M3 × 12 socket head at X = ±5, Y = 25, from above; 5.7 mm in the insert thread |
 | Plate holes / insert pilots | Ø3.4 / Ø4.0 × 6 mm for M3 × 5.7 heat-set inserts |
-| Tongue clamp contact | 239 mm² |
+| Tongue clamp contact | 220 mm² |
 | Shell-to-pod gap / shell split | 0.395 mm (0.4 nominal) / 0.6 mm |
-| Battery to pod / trunk / shells | 0.2 (hook over lip) / 3.29 / 3.65 mm |
+| Battery to pod / trunk / shells | 0.2 (hook over lip) / 3.29 / 4.49 mm |
 | XT60 bay | 8.6 × 16 × 24 mm at X 22.5–31.1, Y 28.6–44.6, Z 130–154 |
 | Release | Press both buttons, pull 95 mm straight down |
 
-The fairing is a loft of superellipse sections from the cap outline to a
-4 × 1.6 mm oval just under the apex. Its closed face is split into four
-patches. OCCT's point classifier misjudges about 1 % of outside points against
-one closed loft face or a single apex point, which made distance checks report
-false contacts.
+The fairing is one cubic B-spline surface. At the seat it follows the cap
+outline grown 0.8 mm; up to stick-local z 50 it morphs into a superellipse box
+section with one smootherstep, rises straight to z 74 and closes in a
+superellipse dome at the apex. Its smallest radius is about 3 mm, so the 2.5 mm
+wall is a true normal offset. The surface is split into four patches: OCCT's
+point classifier misjudges some outside points against one closed face, which
+made distance checks report false contacts.
+
+The socket tube is wider than the fairing at the front, so the fairing is open
+there into the body above stick-local z 58. The cut faces follow the wall
+normal, so every wall end is square, and the body shells hide the opening. The
+contact slots, the top bay and later wires reach the body through it. The latch
+pockets open fully into the socket; their ends are square to the socket wall
+and turn onto the cap outline's normals beyond it.
 
 The tongue's top face clamps flat against the trunk plate's underside. Fit the
 two heat-set inserts in the tongue, hold the pod under the plate and drive both
@@ -196,10 +206,10 @@ shells keep the original outline and closed rear top return. They are cut round
 the pod envelope with a 0.4 mm gap and stop 0.3 mm short of the centre plane.
 
 The stick's + and − contacts face the front sides. Their slots run through the
-socket wall and the fairing's front wall into the body, so a later adapter can
+socket wall and the front opening into the body, so a later adapter can
 reach the contact plates and its leads can leave forward. The T contact window
-opens on the back, inside the fairing. The wire passes join the pod's side
-spaces to the body. The XT60 bay is on the +X side between the hip-yaw servo
+opens on the back, inside the fairing. The front opening joins the pod's inside
+to the body. The XT60 bay is on the +X side between the hip-yaw servo
 and the pod, beside the − contact slot. It holds a mated XT60 pair (nominally
 8.2 × 15.5 × 23.5 mm) with its axis vertical. Lead room continues 9 mm above
 it beside the trunk plate's rear edge, and a 5.4 × 5 mm channel runs under it
@@ -215,12 +225,14 @@ before relying on the fit. Printed strength is untested.
 
 ### Mass
 
-The stick variant weighs 1.80 kg, 543 g less than the PAP 204 A1 revision
-(2.344 kg). The whole-robot centre of mass at the home pose moves 21.8 mm
-forward and 3.5 mm down, to (−0.9, 0.4, 142.2) mm. The basis is the
-microduck_rl HOME receipt for CAD `94c002d` with the battery-area rows
-replaced: printed parts as solid PLA at 1310 kg/m³, the battery at its listed
-185 g at the stick's mid-height, and 3 g for the screws and inserts. Real
+The stick variant weighs 1.795 kg, 549 g less than the PAP 204 A1 revision
+(2.344 kg). The whole-robot centre of mass at the home pose is
+(−0.9, 0.26, 142.2) mm, 21.9 mm forward of and 3.5 mm below the backpack
+revision. The basis is the microduck_rl HOME receipt for CAD `94c002d` with the
+battery-area rows replaced: printed parts as solid PLA at 1310 kg/m³, the
+battery at its listed 185 g at the stick's mid-height, and 3 g for the screws
+and inserts. The pod is 42.3 g (32 258 mm³), 4.8 g less than in commit
+`4967942`; that moves the centre of mass 0.14 mm forward and 0.03 mm up. Real
 infill, wiring and the cells' mass distribution will differ. The walking policy
 in microduck_rl is not updated.
 
@@ -244,7 +256,7 @@ combination of the declared joint ranges.
 `battery_pod.removal` checks the full 95 mm straight-down release at the home
 pose. Battery material inside the stick outline grown 0.3 mm stays in that
 column on the way down. The column meets no part; it stays 0.3 mm from the pod,
-2.99 mm from the trunk and 3.29 mm from the shells. Of the 23 battery pieces
+2.99 mm from the trunk and 4.10 mm from the shells. Of the 23 battery pieces
 outside the column, 22 have swept boxes that meet no part. The last, the body
 round the latch hooks, is checked against the pod with exact booleans every
 0.25 mm. The hooks ride over the lips from 0.25 to 4.75 mm of travel. All of
@@ -252,6 +264,24 @@ that overlap lies inside the 0.8 mm lip zone, so each hook flexes inward at most
 0.84 mm into a 1.5 mm flex room that holds no pod material. A 20 mm finger space
 outside each button is free. The hook travel is sampled; arm bending, button
 force and physical fit are not modelled.
+
+`battery_pod.quality` (`checks/part_quality.py`; limits and accepted areas in
+`source/stick_pod_quality.json`) checks the saved pod as a 0.4 mm nozzle FDM
+print. Each checker first finds the error in a part with a known error. It
+reports edges under 0.05 mm, faces under 0.05 mm² or narrower than 0.1 mm, and
+walls under 1.2 mm by rays from samples 0.5 mm apart; rays that leave a face at
+under 25° run along a wall beside an edge and are left to the edge check. The
+outer 1 mm skin must be mirror symmetric (the socket follows the stick, whose
+contacts are not mirrored). Outside edges need a 0.5 mm radius; closed voids
+fail; every hole needs a fastener. Both bd_warehouse M3 × 12 ISO 4762 screws
+into CNC Kitchen M3 × 5.7 inserts are checked for clearance, seat, alignment,
+pilot, wall, thread engagement, tip and driver path. Support area is reported
+for six build directions. Each accepted problem is a named box at most 40 mm a
+side and within 2 mm of its findings. The hidden socket mouth, latch pockets,
+contact slots, T window, socket top rim, the front opening's inner edge (OCCT
+cannot round it) and the insert pilots keep square edges, each with its reason
+recorded. `./cad review pod` renders views and exact sections into
+`review/stick_pod_quality/`; look at all of them after a geometry change.
 
 ## Joints and poses
 

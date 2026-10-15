@@ -172,7 +172,7 @@ def battery_pod():
     contact = volume(pod_face.translate(cq.Vector(0, 0, 0.05)).intersect(plate_face)) / 0.05
     clamp = dict(contact_area_mm2=contact, minimum_mm2=150.0, passed=contact >= 150.0)
 
-    # Two M3 x 10 socket-head screws from above into heat-set inserts.
+    # Two M3 x 12 socket-head screws from above into heat-set inserts.
     screws = []
     def cylinder(x, y, r, z0, z1):
         return cq.Solid.makeCylinder(r, z1 - z0, cq.Vector(x, y, z0), cq.Vector(0, 0, 1))
@@ -185,7 +185,7 @@ def battery_pod():
         wall = ring(x, y, sp.INSERT_PILOT_D / 2, sp.INSERT_PILOT_D / 2 + 1.5, sp.PLATE_BOTTOM_Z - sp.INSERT_DEPTH, sp.PLATE_BOTTOM_Z)
         shank = cylinder(x, y, 1.5, sp.PLATE_TOP_Z - 10.0, sp.PLATE_TOP_Z)
         driver = cylinder(x, y, 3.0, sp.PLATE_TOP_Z + 0.01, sp.PLATE_TOP_Z + 63.0)
-        row = dict(x_mm=x, y_mm=y, nominal_screw='M3 x 10 socket head', nominal_insert='M3 x 5.7 heat-set',
+        row = dict(x_mm=x, y_mm=y, nominal_screw='M3 x 12 socket head', nominal_insert='M3 x 5.7 heat-set',
                    plate_bore_overlap_mm3=volume(shapes['trunk_base'].intersect(bore)),
                    head_seat_fill=volume(shapes['trunk_base'].intersect(seat)) / volume(seat),
                    pilot_overlap_mm3=volume(shapes['stick_pod'].intersect(pilot)),

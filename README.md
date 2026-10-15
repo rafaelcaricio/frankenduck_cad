@@ -41,6 +41,7 @@ after editing a part, then run the checks that cover the change.
 | `./cad parts` | List component roles, quantities and print selection |
 | `./cad export print` | Create or reuse the complete printable bundle |
 | `./cad review radxa` | Prepare the colored GPIO and cooler clearance model |
+| `./cad review pod` | Render stick pod views and exact sections with quality findings |
 | `./cad view` | Start or reuse the LAN viewer |
 
 Passing checks are reused while their inputs stay unchanged. Builds, print

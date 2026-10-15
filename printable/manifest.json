@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-10-15T06:32:27.847953+00:00",
-  "input_key": "f3bbc95b8be7ef0e65fececa531fa4816a9f2689bab3aa745c17f5798347924b",
+  "generated_utc": "2026-10-15T10:07:30.979871+00:00",
+  "input_key": "22cc3958726450138e5b56d113b886e2d1cc9eb49df8f984b359bb8188c9ff59",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "b9ecd62b12e0dccf13f7c7f2b798835dd4d0ff29be0c00369129e099bc912ada",
-    "catalog_sha256": "c473abc9c4a6536bd26c0f366a0423cc2709ed48f12abe02e04c988dc3194df8",
+    "source_step_sha256": "ef3e5a9e2180f0baa897a412d7afc8054687458541bcc65749ccc58befbcc472",
+    "catalog_sha256": "3e99f9dbb5a00ac0a5d445d099363f3638b9815bfc56342bd26f36651d7d2d53",
     "implementation": {
       "tools/print_export.py": "9fc89c93b562bdc3d48ac93f67225fbf632576822520f76e155b01d7563bd962",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
@@ -23,7 +23,7 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "84265eedcba3a1844d7eca724a0bd80e2cd4df960f9a757b7fc7d0a4fc6a2445",
+    "build_input_key": "b2702386989abedee50911c5e4e35603e22323aa2b188ee0dce7eb2281ede8c7",
     "assembly_data_sha256": "7e0a0a11d42966b7afb1e5a6ea23f28c9d27cae42a922c367e96902765e814a5"
   },
   "units": "mm",
@@ -101,7 +101,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "54862658a2c191871d582b00bd3ac12214471b640cfaa7fd1723a9605f36ece8"
+      "sha256": "cb2bb85dce42aa95c45427260eb6487d6e26c22f112f9ee52197484e6bc96c9e"
     },
     {
       "model": "ankle_bearing_inner_cap_left_native_right",
@@ -172,7 +172,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "715574d8f6c8ed12e5c1f5bb1ea2fdbbc314ab1a71aa2c28df86845f55b2cd90"
+      "sha256": "e78f830b26f5a85161aed274e474df792986cf741cd12c4e6caecb198f48cba1"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native",
@@ -243,7 +243,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791596156667,
-      "sha256": "d1c34204e39267f4aa22ea10c3f2670f22c71376b9bbd9bec1747da62f5d3a77"
+      "sha256": "019785d7ce093d5b850a2da39fcea9b0095fc7f04e462af9f6d9c82f9b2e7828"
     },
     {
       "model": "ankle_bearing_outer_keeper_left_native_right",
@@ -314,7 +314,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.000414379111677573,
-      "sha256": "f84252187d5512401bd7b85f795d5df99e0434ed0d1d82bb96564f915ad440ad"
+      "sha256": "dede1481dc1118062d4592a3f4e5bee4d73bd720e710393e370b71836edcf05d"
     },
     {
       "model": "ankle_eye_left_native",
@@ -404,7 +404,7 @@
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.015509193544368936,
-      "sha256": "a9f261e92dcf263a3205bc10d4f4f540e65ae8f4fa963091deffce4629f4c7dc"
+      "sha256": "50ae3cfc6c9b59f63e2edecbc7939eee179eda2bd8165fc79a09004969004785"
     },
     {
       "model": "ankle_eye_left_native_right",
@@ -494,7 +494,7 @@
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.015509186498616547,
-      "sha256": "238ecac8a3c8d75f833ff1c515f2dbf5d753b75ab45ae1e69c571f6335e23d88"
+      "sha256": "a60ef366c80d2113ca97c1ceb4a86c6daf56522725f1aaec455b068fd363e2d0"
     },
     {
       "model": "ankle_left_native",
@@ -578,7 +578,7 @@
       "max_bound_error_mm": 0.00016706370800179116,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.010359028687267706,
-      "sha256": "1d0393091f7d68229f00af0af4b363e5738dde13df34eebc8c0c21731ee424d3"
+      "sha256": "1e10d7208f2ba9631c81373325139dcc71a06954a59d110cc4b58ce8f860381f"
     },
     {
       "model": "ankle_left_native_right",
@@ -662,7 +662,7 @@
       "max_bound_error_mm": 0.00016706370800534387,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.010359028687267437,
-      "sha256": "b5478568580ff45bb4655d70ce728022e549dfc454570f7763f45df56436b0c3"
+      "sha256": "a556684e9514350ec64d2ece3412970f2b691d5ddf1a7317807f78e961df51c6"
     },
     {
       "model": "bottom_head_shell_native",
@@ -740,7 +740,7 @@
       "max_bound_error_mm": 2.0103298226104016e-07,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.0002450962463139114,
-      "sha256": "9351531cce7d4fb7e14041a3f4e9d448d4d9cfc1c91fc92b50c0e807fdb75542"
+      "sha256": "551707fb3cc0b89c172910159365449b166daef549aaeea92c988ff675f5bc48"
     },
     {
       "model": "electronics_deck_native",
@@ -811,7 +811,7 @@
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0010542258992722753,
-      "sha256": "98402ef63e881092def914ebc5a089dcc73c2b6f58de02a8977f86ac57bf8da6"
+      "sha256": "66ad5aa14094abb0f1bb75c04edd1785a3d9096f6157f95ee2a32b8133b3a9a5"
     },
     {
       "model": "face_part_native",
@@ -882,7 +882,7 @@
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0026956593828659703,
-      "sha256": "f770837c56eb5e4af0db267f881c73e3edbe42ce810e60fe3f70966b80e64fcf"
+      "sha256": "8e2a62ffb1998e9b17ed65fdd78be463897444e28641412b64739f500eac4cec"
     },
     {
       "model": "face_radxa_bracket_native",
@@ -953,7 +953,7 @@
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0014067341901328305,
-      "sha256": "edae10dafd18d256032ddc8b38c627b61191e100bd9cce27dc004311c45e0d3c"
+      "sha256": "48cd081f3888dd7b11ec34e335ef9db4e6391ee5e1a18580664cb47b79ef1130"
     },
     {
       "model": "foot_left_native_a",
@@ -1037,7 +1037,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.006693505485108318,
-      "sha256": "06f5131f722a48445efcca99d08f711464fafb080cc056646d435232acab06a9"
+      "sha256": "54f249b8c22cc5ef181235212e67e40fb9e6063e7053057553d405fb3f8213f0"
     },
     {
       "model": "foot_left_native_a_right",
@@ -1121,7 +1121,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.006697659313369173,
-      "sha256": "9bd489b1e870e1a61b240d7e457a967641d67b7a91fc569bf0fe41f75dbb3b96"
+      "sha256": "620164f485ad47e953cfdde8fa84fc0d5e06129558d303ca795b869592abe5cf"
     },
     {
       "model": "foot_left_native_b",
@@ -1211,7 +1211,7 @@
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.01826436630431138,
-      "sha256": "c8a8db05ee0c9d392fb2fcb398fee27549fa64f2c20d50e277160af6d57064ba"
+      "sha256": "f123a7c8207cfeafdc873343c8f926f74ca70dcc844eb5c0f91bafbca88260fb"
     },
     {
       "model": "foot_left_native_b_right",
@@ -1301,7 +1301,7 @@
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 0.018278258400240232,
-      "sha256": "703e350dc9fa0b05998257aa1744d8f7a0a42a5ad3f3f59701cb63cec129db76"
+      "sha256": "367cf5d70b010ab526465e2dfda3012f41f3be30aa579e775b2b2b21fe867612"
     },
     {
       "model": "head_frame_native",
@@ -1372,7 +1372,7 @@
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0010496010200688492,
-      "sha256": "97993fe9e517512cd50d8543c4343e641dce40fe52583a16388a40f08352ce88"
+      "sha256": "c1ae0095271f063ebb32baa5b61764291a9468f28009632ba8d081930acd82e8"
     },
     {
       "model": "hip_left_native",
@@ -1455,7 +1455,7 @@
       "max_bound_error_mm": 2.000010894676052e-07,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.0002288770787933186,
-      "sha256": "76993df97956eaccd740c19fa9abae7956dd921ceba4e0f90dc148eda3c383fc"
+      "sha256": "a574fb79b5d4bdbbd2024f26edbe559c2c46a616ac5c699173e20b44332990e0"
     },
     {
       "model": "hip_left_native_right",
@@ -1538,7 +1538,7 @@
       "max_bound_error_mm": 2.0000285161358988e-07,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.00022887705046924632,
-      "sha256": "7f26d4b4a66ca171ac6463b282f6bed152df95ced8794efe96c3962af630d0f4"
+      "sha256": "13e25f8331a61fc2355c143a165e2a5a73d6febf63f078e669d221e24daa8293"
     },
     {
       "model": "imu_yoke_bridge_native",
@@ -1609,7 +1609,7 @@
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.7941583612299156e-06,
-      "sha256": "2b72430c3bff2883b6d182ee31dd74e42704b167360fef5eb61bbdab46427dd7"
+      "sha256": "cffe90f0f2c21b982cf9798ee80f15d452e70dfc1217c8ccf841ad5549ab0a00"
     },
     {
       "model": "jaw_native",
@@ -1687,7 +1687,7 @@
       "max_bound_error_mm": 0.004724213729183191,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.0012802706594627026,
-      "sha256": "161193adf5646458514dcc10fa7328531e82115463fd3b8c73693b802a5fc856"
+      "sha256": "afb91b9fe646d35b3e3854112c1135f2260339ad1cc9d9b3ae85b954e82d9dd7"
     },
     {
       "model": "jaw_soft_001_native",
@@ -1761,7 +1761,7 @@
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.013619572319715412,
-      "sha256": "a6a0672beb1978620746c066a193ad6e41c2ce8a0e54b8f278811be616ca1f36"
+      "sha256": "fa71017f0f5f9ba19c1e0634b9cc5065e6d76e43b75f9b34e91fecd9c25aa528"
     },
     {
       "model": "left_shell_native",
@@ -1776,11 +1776,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 20447.29990668623,
+      "source_volume_mm3": 20341.06779789193,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.412470389070222e-12,
-        "volume_difference_mm3": 1.44711109202035,
+        "volume_difference_mm3": 1.4599030379358737,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -1789,15 +1789,15 @@
       },
       "translation_mm": [
         -21.65,
-        -16.859027845328185,
+        -16.876902425450464,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
         -21.350000100000003,
-        -45.28934257698214,
+        -45.30721715710442,
         0,
         21.350000100000003,
-        45.28934257698214,
+        45.30721715710442,
         52.55438217176173
       ],
       "tessellation": {
@@ -1818,20 +1818,20 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 5.457698214428319e-05, volume fraction 0.08272506954729074\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: left_shell_native; bounds 3.017176172903646e-05, volume fraction 0.0826777127440748\n"
           }
         ]
       },
       "mesh": {
-        "vertices": 7713,
-        "triangles": 15430,
-        "volume_mm3": 20519.37224977233,
+        "vertices": 7581,
+        "triangles": 15166,
+        "volume_mm3": 20437.407526388644,
         "bounds_mm": [
           -21.35,
-          -45.288484,
+          -45.30636,
           0.006985,
           21.35,
-          45.288684,
+          45.303268,
           52.554252
         ],
         "nonmanifold_edges": 0,
@@ -1841,8 +1841,8 @@
       },
       "max_bound_error_mm": 0.006985,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0035247853464765947,
-      "sha256": "1ba36bd45b105577bfffa823281f7fc648dc1a08bf03f58a531786a2947ea083"
+      "relative_volume_error": 0.004736217855126483,
+      "sha256": "66f34512fcfc39ce51e8435e142634bc594c7dd498ab19f10c0423d3ebf180f8"
     },
     {
       "model": "leg_left_native",
@@ -1915,7 +1915,7 @@
       "max_bound_error_mm": 7.220001617724847e-05,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0011353511981442711,
-      "sha256": "362c3eae559c6cf5de2a4976bb282f7785eb05ec9d00763745f7b48645af5df8"
+      "sha256": "a3e68c8ca17f64ceafd28061ff2f11ce286d95417ed8eb88bb42312ce4e66772"
     },
     {
       "model": "leg_left_native_right",
@@ -1988,7 +1988,7 @@
       "max_bound_error_mm": 7.220001617724847e-05,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0011353511813106947,
-      "sha256": "ad35b3c0f777f523faeb6004d94ed94b9977e9b7df3cae10192001693bee65c9"
+      "sha256": "ccd15b8e74dcf306db7e17ecddfeb7591eb1c40406168b77d9b3fe64ff2bf64a"
     },
     {
       "model": "neck_001_native",
@@ -2059,7 +2059,7 @@
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.172962608289049e-05,
-      "sha256": "1cfb826bf3a1e14dca6de7a81d03002e039e7d61288f57a2e4537471138d600c"
+      "sha256": "1a0813b132c13430e6bc4140c2e563b05a90258f256ad075d34bdddd0a53f467"
     },
     {
       "model": "neck_002_native",
@@ -2130,7 +2130,7 @@
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2712092171677171e-05,
-      "sha256": "aa7df24e785ad03b19e6912d0809d5f7428f5c64fc8a11e96dd283871fdbaf73"
+      "sha256": "1acce23f4ed88b4144bfbeaaceea5cc1c7fe7e3d6e4c4da7801ef52bf044051c"
     },
     {
       "model": "neck_internal_yoke_native",
@@ -2208,7 +2208,7 @@
       "max_bound_error_mm": 0.007699,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.00032907797537439366,
-      "sha256": "0d9d9012150d2b0821d999220bf0c88537be4e4159412460eb5f395dc8efb825"
+      "sha256": "1b8014d96ca2d1d5160052a6f6c7e72fc466a04e7be80426517cd9b40694f5a1"
     },
     {
       "model": "neck_pitch_001_native",
@@ -2286,7 +2286,7 @@
       "max_bound_error_mm": 2.0000035050316e-07,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.0003534472070186801,
-      "sha256": "0d058fd2525ff896eb7790319659bd1e8c168e9ea75bb673883daa2302d5189f"
+      "sha256": "513172a9b231409840c6adbac910cbeaba62331407757391e57efc05f712c154"
     },
     {
       "model": "noenoeil_native",
@@ -2357,7 +2357,7 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "3afe8663f9ff62ec1e6b8fd8a1838191b0da361b35d3c65494c2d318d018f3d3"
+      "sha256": "68b2b6dd2659f2759b0c48628ec256b1e0b307decbad3d00276f7d666aa65a89"
     },
     {
       "model": "right_shell_native",
@@ -2372,11 +2372,11 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 21239.815369242628,
+      "source_volume_mm3": 21156.99319849501,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.872457909892546e-12,
-        "volume_difference_mm3": 0.8584781621138973,
+        "volume_difference_mm3": 0.8587158545669809,
         "bidirectional_difference_mm3": [
           0,
           0
@@ -2384,16 +2384,16 @@
         "saved_step_valid": true
       },
       "translation_mm": [
-        25.44999995,
-        -16.85902784532787,
+        25.449999950000002,
+        -16.8769024254502,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
-        -25.150000050000003,
-        -45.289342576981824,
+        -25.15000005,
+        -45.30721715710416,
         0,
-        25.150000050000003,
-        45.289342576981824,
+        25.15000005,
+        45.30721715710416,
         52.554382171922256
       ],
       "tessellation": {
@@ -2414,20 +2414,20 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 5.457698182453896e-05, volume fraction 0.08407019280917613\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: right_shell_native; bounds 3.0171922254851324e-05, volume fraction 0.08507126750832439\n"
           }
         ]
       },
       "mesh": {
-        "vertices": 8424,
-        "triangles": 16856,
-        "volume_mm3": 21147.78888076657,
+        "vertices": 8243,
+        "triangles": 16494,
+        "volume_mm3": 21065.161817202035,
         "bounds_mm": [
           -25.15,
-          -45.288484,
+          -45.30636,
           0.006985,
           25.15,
-          45.288684,
+          45.303268,
           52.554252
         ],
         "nonmanifold_edges": 0,
@@ -2437,8 +2437,8 @@
       },
       "max_bound_error_mm": 0.006985,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.004332734860271982,
-      "sha256": "b5c0ccfb92ad4776c61044f13c7e4a46b1d0ef34d71c5d148ddab33be9f8f4a8"
+      "relative_volume_error": 0.004340474113283075,
+      "sha256": "e456bbca1233f37a0c01d550d6e0df334b6d09123e3ffccdbad23ea8a3e17893"
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -2509,7 +2509,7 @@
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.820592742493965e-05,
-      "sha256": "a93afb65c4927393569a7d12c346c26a2e2ebd1845b003b2da92e33778efb2ca"
+      "sha256": "d0dfe389e8b1c69ecdf83e519cedb5b5a3c296b9b68deff8539c2d192de74997"
     },
     {
       "model": "soft_mouth_top_native",
@@ -2582,7 +2582,7 @@
       "max_bound_error_mm": 0.001668739236990291,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.004789797356973398,
-      "sha256": "20793fca88a286263988351f772a99f17b9c00226d8656f9e62c205b06e9e5cf"
+      "sha256": "4e97623633810f2fa583246116274a76b06ef0d3e5be8c09f9eba9f72b72fd67"
     },
     {
       "model": "sole_left_native",
@@ -2653,7 +2653,7 @@
       "max_bound_error_mm": 0.0026781147819932016,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0015575609715447068,
-      "sha256": "775c1d78dbabe9a5ad1d74b4c5d41284ee55f6075032e57afe4b0cb42ecf1a3e"
+      "sha256": "a0770a59f721ac62972389be38806ac922b896d28231f2fe432a6f8adf0cfe60"
     },
     {
       "model": "sole_left_native_right",
@@ -2727,7 +2727,7 @@
       "max_bound_error_mm": 0.0026781147818191187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0015573608296856807,
-      "sha256": "0c1b709427608169b3d0c2e8264053408cab8e4733a913052090c165fa38baf8"
+      "sha256": "c6bcf32081692416e58c1a67514c04b47f2d4b82fa401d4795bdf4388af2853c"
     },
     {
       "model": "top_head_shell_native",
@@ -2805,7 +2805,7 @@
       "max_bound_error_mm": 0.023411764568209037,
       "allowed_bound_error_mm": 0.10001,
       "relative_volume_error": 0.000787357191551879,
-      "sha256": "beb1201ce665475c0f5fa260a6296f96edf2a70ebebab5e15eb3ec93efd94d54"
+      "sha256": "bd99334c31580a8207a4cf35ba8fc5db7b75cf2b8ddd6fcf8ee1ee684c646ee4"
     },
     {
       "model": "trunk_base_native",
@@ -2876,7 +2876,7 @@
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.010044937885108397,
-      "sha256": "8a3542d2e6e587ef02cce16ba5a49ae29cf927cc1d3c66ec9e50c92ad7f61771"
+      "sha256": "d62feb00012d9a9aa68f2da3db086abae1df5558836b3aa25166bc756a4134c1"
     },
     {
       "model": "ubec_clamp_native",
@@ -2947,7 +2947,7 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00012975095540893557,
-      "sha256": "5506410f0eb1833f84d01ef61599bff3189213eceee2f5b91bd897daeb482925"
+      "sha256": "2499e474df6499ad032cab4cb34540a5a88616d240deb5d0fa074ee895fe10a8"
     },
     {
       "model": "upper_leg_left_native",
@@ -3023,7 +3023,7 @@
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.013769628327064312,
-      "sha256": "1dc6ddfe483aa67f3078ccf4ef72c06e3cae4a136bf7aef1b6482c10157b606c"
+      "sha256": "abcd70cc4b8b75b37d98d5db54b7a6c68154cc96b5891cc7a3aa9e81f09e254d"
     },
     {
       "model": "upper_leg_left_native_right",
@@ -3096,7 +3096,7 @@
       "max_bound_error_mm": 0.004519,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.013767187976067703,
-      "sha256": "ddb910ef83b7674b63aa55731123a3cd7e91e08e4d39a87ca2b2430c996e3a0f"
+      "sha256": "ea313a60afef670b7e61d3dd9dd1c75b543c27f0b6af937585a49556082295dd"
     },
     {
       "model": "yaw2roll_left_native",
@@ -3169,7 +3169,7 @@
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00034436929403734517,
-      "sha256": "3cafdf5a9282b95d2b7ce5a476552c70185919b1ded6731fe70863846de18a74"
+      "sha256": "9ff77605eda99596af996a17d18434e33652ad335989db273c7c24124dc21a60"
     },
     {
       "model": "yaw2roll_left_native_right",
@@ -3242,7 +3242,7 @@
       "max_bound_error_mm": 9.947598300641403e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00034436929403673216,
-      "sha256": "00f7410039332cb4bc53e9c2d71fe47477c89b0e50603426f6c2ecb9195c4798"
+      "sha256": "013a4a10d1bc791784ea28437a034ac38a70d021dbaa8964757e345ec3e47bb4"
     },
     {
       "model": "yaw_roll_link_native",
@@ -3313,7 +3313,7 @@
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00015423211005258225,
-      "sha256": "2c8714dc49363e3bfe9031d9f369d70a5f5bab5c4bbaf099fdf495074a72ecf7"
+      "sha256": "231eb506921cf408f18709dcdd11cbe8e00e7fcad08762bef5c5cdff2bc0e547"
     },
     {
       "model": "stick_pod_native",
@@ -3328,26 +3328,29 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 36024.743685195404,
+      "source_volume_mm3": 32820.969429535835,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "bounds_error_mm": 3.957723038183758e-12,
-        "volume_difference_mm3": 0.0003757729136850685,
-        "bidirectional_difference_mm3": null,
+        "bounds_error_mm": 4.8825972044187215e-12,
+        "volume_difference_mm3": 17.031044128612848,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
         "saved_step_valid": true
       },
       "translation_mm": [
-        -2.2648549702353193e-12,
-        -54.14565972119576,
-        -119.79999989999999
+        -1.6751044995544362e-12,
+        -54.169431126075345,
+        -119.79999989999504
       ],
       "expected_bounds_mm": [
-        -31.12924256866153,
-        -33.14565972119576,
+        -30.50027927136724,
+        -33.169431126075345,
         0,
-        31.12924256866153,
-        33.14565972119576,
-        51.19986474515187
+        30.50027927136724,
+        33.169431126075345,
+        51.000013768938715
       ],
       "tessellation": {
         "linear_deflection_mm": 0.05,
@@ -3367,80 +3370,80 @@
             "algorithm": "Watson",
             "tolerance_mm": 0.01,
             "exit_code": 1,
-            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: stick_pod_native; bounds 0.0005037211957628074, volume fraction 0.13206150919437112\n"
+            "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 518, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 329, in convert_worker\n    raise ValueError(f\"Mesh does not match saved geometry: {name}; bounds {bound_error}, volume fraction {volume_error}\")\nValueError: Mesh does not match saved geometry: stick_pod_native; bounds 0.00035312607534621065, volume fraction 0.32924974769221727\n"
           }
         ]
       },
       "mesh": {
-        "vertices": 69232,
-        "triangles": 138500,
-        "volume_mm3": 35931.624166425034,
+        "vertices": 20704,
+        "triangles": 41424,
+        "volume_mm3": 32239.81617771361,
         "bounds_mm": [
-          -31.120478,
-          -33.14566,
+          -30.500268,
+          -33.16943,
           0.0,
-          31.122,
-          33.145508,
-          51.199796
+          30.500268,
+          33.164856,
+          51.000016
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.00876456866153319,
+      "max_bound_error_mm": 0.004575126075344826,
       "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0025848766498965735,
-      "sha256": "99293e9fb68888cbdf62ec5a7bd83ad960dd62ef0f4408fd98fd491d3a5b813b"
+      "relative_volume_error": 0.01770676679949747,
+      "sha256": "a37c3c1d0c2a2e6c8553dffde2e03101bb28d6e1964a25f152337fdb58b9d224"
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "54862658a2c191871d582b00bd3ac12214471b640cfaa7fd1723a9605f36ece8",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "715574d8f6c8ed12e5c1f5bb1ea2fdbbc314ab1a71aa2c28df86845f55b2cd90",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "d1c34204e39267f4aa22ea10c3f2670f22c71376b9bbd9bec1747da62f5d3a77",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "f84252187d5512401bd7b85f795d5df99e0434ed0d1d82bb96564f915ad440ad",
-    "3mf/ankle_eye_left_native.3mf": "a9f261e92dcf263a3205bc10d4f4f540e65ae8f4fa963091deffce4629f4c7dc",
-    "3mf/ankle_eye_left_native_right.3mf": "238ecac8a3c8d75f833ff1c515f2dbf5d753b75ab45ae1e69c571f6335e23d88",
-    "3mf/ankle_left_native.3mf": "1d0393091f7d68229f00af0af4b363e5738dde13df34eebc8c0c21731ee424d3",
-    "3mf/ankle_left_native_right.3mf": "b5478568580ff45bb4655d70ce728022e549dfc454570f7763f45df56436b0c3",
-    "3mf/bottom_head_shell_native.3mf": "9351531cce7d4fb7e14041a3f4e9d448d4d9cfc1c91fc92b50c0e807fdb75542",
-    "3mf/electronics_deck_native.3mf": "98402ef63e881092def914ebc5a089dcc73c2b6f58de02a8977f86ac57bf8da6",
-    "3mf/face_part_native.3mf": "f770837c56eb5e4af0db267f881c73e3edbe42ce810e60fe3f70966b80e64fcf",
-    "3mf/face_radxa_bracket_native.3mf": "edae10dafd18d256032ddc8b38c627b61191e100bd9cce27dc004311c45e0d3c",
-    "3mf/foot_left_native_a.3mf": "06f5131f722a48445efcca99d08f711464fafb080cc056646d435232acab06a9",
-    "3mf/foot_left_native_a_right.3mf": "9bd489b1e870e1a61b240d7e457a967641d67b7a91fc569bf0fe41f75dbb3b96",
-    "3mf/foot_left_native_b.3mf": "c8a8db05ee0c9d392fb2fcb398fee27549fa64f2c20d50e277160af6d57064ba",
-    "3mf/foot_left_native_b_right.3mf": "703e350dc9fa0b05998257aa1744d8f7a0a42a5ad3f3f59701cb63cec129db76",
-    "3mf/head_frame_native.3mf": "97993fe9e517512cd50d8543c4343e641dce40fe52583a16388a40f08352ce88",
-    "3mf/hip_left_native.3mf": "76993df97956eaccd740c19fa9abae7956dd921ceba4e0f90dc148eda3c383fc",
-    "3mf/hip_left_native_right.3mf": "7f26d4b4a66ca171ac6463b282f6bed152df95ced8794efe96c3962af630d0f4",
-    "3mf/imu_yoke_bridge_native.3mf": "2b72430c3bff2883b6d182ee31dd74e42704b167360fef5eb61bbdab46427dd7",
-    "3mf/jaw_native.3mf": "161193adf5646458514dcc10fa7328531e82115463fd3b8c73693b802a5fc856",
-    "3mf/jaw_soft_001_native.3mf": "a6a0672beb1978620746c066a193ad6e41c2ce8a0e54b8f278811be616ca1f36",
-    "3mf/left_shell_native.3mf": "1ba36bd45b105577bfffa823281f7fc648dc1a08bf03f58a531786a2947ea083",
-    "3mf/leg_left_native.3mf": "362c3eae559c6cf5de2a4976bb282f7785eb05ec9d00763745f7b48645af5df8",
-    "3mf/leg_left_native_right.3mf": "ad35b3c0f777f523faeb6004d94ed94b9977e9b7df3cae10192001693bee65c9",
-    "3mf/neck_001_native.3mf": "1cfb826bf3a1e14dca6de7a81d03002e039e7d61288f57a2e4537471138d600c",
-    "3mf/neck_002_native.3mf": "aa7df24e785ad03b19e6912d0809d5f7428f5c64fc8a11e96dd283871fdbaf73",
-    "3mf/neck_internal_yoke_native.3mf": "0d9d9012150d2b0821d999220bf0c88537be4e4159412460eb5f395dc8efb825",
-    "3mf/neck_pitch_001_native.3mf": "0d058fd2525ff896eb7790319659bd1e8c168e9ea75bb673883daa2302d5189f",
-    "3mf/noenoeil_native.3mf": "3afe8663f9ff62ec1e6b8fd8a1838191b0da361b35d3c65494c2d318d018f3d3",
-    "3mf/right_shell_native.3mf": "b5c0ccfb92ad4776c61044f13c7e4a46b1d0ef34d71c5d148ddab33be9f8f4a8",
-    "3mf/roll_front_bulkhead_native.3mf": "a93afb65c4927393569a7d12c346c26a2e2ebd1845b003b2da92e33778efb2ca",
-    "3mf/soft_mouth_top_native.3mf": "20793fca88a286263988351f772a99f17b9c00226d8656f9e62c205b06e9e5cf",
-    "3mf/sole_left_native.3mf": "775c1d78dbabe9a5ad1d74b4c5d41284ee55f6075032e57afe4b0cb42ecf1a3e",
-    "3mf/sole_left_native_right.3mf": "0c1b709427608169b3d0c2e8264053408cab8e4733a913052090c165fa38baf8",
-    "3mf/stick_pod_native.3mf": "99293e9fb68888cbdf62ec5a7bd83ad960dd62ef0f4408fd98fd491d3a5b813b",
-    "3mf/top_head_shell_native.3mf": "beb1201ce665475c0f5fa260a6296f96edf2a70ebebab5e15eb3ec93efd94d54",
-    "3mf/trunk_base_native.3mf": "8a3542d2e6e587ef02cce16ba5a49ae29cf927cc1d3c66ec9e50c92ad7f61771",
-    "3mf/ubec_clamp_native.3mf": "5506410f0eb1833f84d01ef61599bff3189213eceee2f5b91bd897daeb482925",
-    "3mf/upper_leg_left_native.3mf": "1dc6ddfe483aa67f3078ccf4ef72c06e3cae4a136bf7aef1b6482c10157b606c",
-    "3mf/upper_leg_left_native_right.3mf": "ddb910ef83b7674b63aa55731123a3cd7e91e08e4d39a87ca2b2430c996e3a0f",
-    "3mf/yaw2roll_left_native.3mf": "3cafdf5a9282b95d2b7ce5a476552c70185919b1ded6731fe70863846de18a74",
-    "3mf/yaw2roll_left_native_right.3mf": "00f7410039332cb4bc53e9c2d71fe47477c89b0e50603426f6c2ecb9195c4798",
-    "3mf/yaw_roll_link_native.3mf": "2c8714dc49363e3bfe9031d9f369d70a5f5bab5c4bbaf099fdf495074a72ecf7",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "cb2bb85dce42aa95c45427260eb6487d6e26c22f112f9ee52197484e6bc96c9e",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "e78f830b26f5a85161aed274e474df792986cf741cd12c4e6caecb198f48cba1",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "019785d7ce093d5b850a2da39fcea9b0095fc7f04e462af9f6d9c82f9b2e7828",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "dede1481dc1118062d4592a3f4e5bee4d73bd720e710393e370b71836edcf05d",
+    "3mf/ankle_eye_left_native.3mf": "50ae3cfc6c9b59f63e2edecbc7939eee179eda2bd8165fc79a09004969004785",
+    "3mf/ankle_eye_left_native_right.3mf": "a60ef366c80d2113ca97c1ceb4a86c6daf56522725f1aaec455b068fd363e2d0",
+    "3mf/ankle_left_native.3mf": "1e10d7208f2ba9631c81373325139dcc71a06954a59d110cc4b58ce8f860381f",
+    "3mf/ankle_left_native_right.3mf": "a556684e9514350ec64d2ece3412970f2b691d5ddf1a7317807f78e961df51c6",
+    "3mf/bottom_head_shell_native.3mf": "551707fb3cc0b89c172910159365449b166daef549aaeea92c988ff675f5bc48",
+    "3mf/electronics_deck_native.3mf": "66ad5aa14094abb0f1bb75c04edd1785a3d9096f6157f95ee2a32b8133b3a9a5",
+    "3mf/face_part_native.3mf": "8e2a62ffb1998e9b17ed65fdd78be463897444e28641412b64739f500eac4cec",
+    "3mf/face_radxa_bracket_native.3mf": "48cd081f3888dd7b11ec34e335ef9db4e6391ee5e1a18580664cb47b79ef1130",
+    "3mf/foot_left_native_a.3mf": "54f249b8c22cc5ef181235212e67e40fb9e6063e7053057553d405fb3f8213f0",
+    "3mf/foot_left_native_a_right.3mf": "620164f485ad47e953cfdde8fa84fc0d5e06129558d303ca795b869592abe5cf",
+    "3mf/foot_left_native_b.3mf": "f123a7c8207cfeafdc873343c8f926f74ca70dcc844eb5c0f91bafbca88260fb",
+    "3mf/foot_left_native_b_right.3mf": "367cf5d70b010ab526465e2dfda3012f41f3be30aa579e775b2b2b21fe867612",
+    "3mf/head_frame_native.3mf": "c1ae0095271f063ebb32baa5b61764291a9468f28009632ba8d081930acd82e8",
+    "3mf/hip_left_native.3mf": "a574fb79b5d4bdbbd2024f26edbe559c2c46a616ac5c699173e20b44332990e0",
+    "3mf/hip_left_native_right.3mf": "13e25f8331a61fc2355c143a165e2a5a73d6febf63f078e669d221e24daa8293",
+    "3mf/imu_yoke_bridge_native.3mf": "cffe90f0f2c21b982cf9798ee80f15d452e70dfc1217c8ccf841ad5549ab0a00",
+    "3mf/jaw_native.3mf": "afb91b9fe646d35b3e3854112c1135f2260339ad1cc9d9b3ae85b954e82d9dd7",
+    "3mf/jaw_soft_001_native.3mf": "fa71017f0f5f9ba19c1e0634b9cc5065e6d76e43b75f9b34e91fecd9c25aa528",
+    "3mf/left_shell_native.3mf": "66f34512fcfc39ce51e8435e142634bc594c7dd498ab19f10c0423d3ebf180f8",
+    "3mf/leg_left_native.3mf": "a3e68c8ca17f64ceafd28061ff2f11ce286d95417ed8eb88bb42312ce4e66772",
+    "3mf/leg_left_native_right.3mf": "ccd15b8e74dcf306db7e17ecddfeb7591eb1c40406168b77d9b3fe64ff2bf64a",
+    "3mf/neck_001_native.3mf": "1a0813b132c13430e6bc4140c2e563b05a90258f256ad075d34bdddd0a53f467",
+    "3mf/neck_002_native.3mf": "1acce23f4ed88b4144bfbeaaceea5cc1c7fe7e3d6e4c4da7801ef52bf044051c",
+    "3mf/neck_internal_yoke_native.3mf": "1b8014d96ca2d1d5160052a6f6c7e72fc466a04e7be80426517cd9b40694f5a1",
+    "3mf/neck_pitch_001_native.3mf": "513172a9b231409840c6adbac910cbeaba62331407757391e57efc05f712c154",
+    "3mf/noenoeil_native.3mf": "68b2b6dd2659f2759b0c48628ec256b1e0b307decbad3d00276f7d666aa65a89",
+    "3mf/right_shell_native.3mf": "e456bbca1233f37a0c01d550d6e0df334b6d09123e3ffccdbad23ea8a3e17893",
+    "3mf/roll_front_bulkhead_native.3mf": "d0dfe389e8b1c69ecdf83e519cedb5b5a3c296b9b68deff8539c2d192de74997",
+    "3mf/soft_mouth_top_native.3mf": "4e97623633810f2fa583246116274a76b06ef0d3e5be8c09f9eba9f72b72fd67",
+    "3mf/sole_left_native.3mf": "a0770a59f721ac62972389be38806ac922b896d28231f2fe432a6f8adf0cfe60",
+    "3mf/sole_left_native_right.3mf": "c6bcf32081692416e58c1a67514c04b47f2d4b82fa401d4795bdf4388af2853c",
+    "3mf/stick_pod_native.3mf": "a37c3c1d0c2a2e6c8553dffde2e03101bb28d6e1964a25f152337fdb58b9d224",
+    "3mf/top_head_shell_native.3mf": "bd99334c31580a8207a4cf35ba8fc5db7b75cf2b8ddd6fcf8ee1ee684c646ee4",
+    "3mf/trunk_base_native.3mf": "d62feb00012d9a9aa68f2da3db086abae1df5558836b3aa25166bc756a4134c1",
+    "3mf/ubec_clamp_native.3mf": "2499e474df6499ad032cab4cb34540a5a88616d240deb5d0fa074ee895fe10a8",
+    "3mf/upper_leg_left_native.3mf": "abcd70cc4b8b75b37d98d5db54b7a6c68154cc96b5891cc7a3aa9e81f09e254d",
+    "3mf/upper_leg_left_native_right.3mf": "ea313a60afef670b7e61d3dd9dd1c75b543c27f0b6af937585a49556082295dd",
+    "3mf/yaw2roll_left_native.3mf": "9ff77605eda99596af996a17d18434e33652ad335989db273c7c24124dc21a60",
+    "3mf/yaw2roll_left_native_right.3mf": "013a4a10d1bc791784ea28437a034ac38a70d021dbaa8964757e345ec3e47bb4",
+    "3mf/yaw_roll_link_native.3mf": "231eb506921cf408f18709dcdd11cbe8e00e7fcad08762bef5c5cdff2bc0e547",
     "PARTS.csv": "783e0f10ce088e26670d397d8ac222b22b4bbe926203848a4a79dcba00d6cdfa",
     "README.md": "06262c3861de4f5f73fa6b73879156e7703061ff72ec7624f26b48fedf1a68be"
   },
-  "manifest_content_sha256": "d71d710d173f12d0a79502e2e092f52169e609e3b91d281b0184befb4ef220c3"
+  "manifest_content_sha256": "648f246bae3fc2592e1e630f32eb8e3390f6e576c1ee09e03ab5b06025e7a86d"
 }
