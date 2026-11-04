@@ -1,6 +1,6 @@
 # Frankenduck printable parts
 
-This directory contains **51 printable models, each supplied as 3MF and STL** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
+This directory contains **52 printable models, each supplied as 3MF and STL** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
 
 Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).
 
@@ -61,8 +61,9 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [bearing_roll_adapter_left.3mf](3mf/bearing_roll_adapter_left.3mf) | 1 | black printed polymer; unselected |
 | [bearing_roll_adapter_right.3mf](3mf/bearing_roll_adapter_right.3mf) | 1 | black printed polymer; unselected |
 | [bearing_shared_yaw_adapter.3mf](3mf/bearing_shared_yaw_adapter.3mf) | 1 | black printed polymer; unselected |
-| [bearing_ankle_adapter.3mf](3mf/bearing_ankle_adapter.3mf) | 2 | black printed polymer; unselected |
 | [bearing_head_adapter.3mf](3mf/bearing_head_adapter.3mf) | 2 | black printed polymer |
+| [passive_leg_support_left.3mf](3mf/passive_leg_support_left.3mf) | 1 | black printed polymer; unselected |
+| [passive_leg_support_right.3mf](3mf/passive_leg_support_right.3mf) | 1 | black printed polymer; unselected |
 
 ## STL copies
 

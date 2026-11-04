@@ -1391,42 +1391,34 @@
       ]
     },
     {
-      "name": "bearing_ankle_adapter_left",
-      "component": "bearing_ankle_adapter",
+      "name": "passive_leg_support_left",
+      "component": "passive_leg_support_left",
       "params": {},
       "at": [
         [
-          85.775,
-          42.8991,
-          3.9749999999999996
+          0,
+          0,
+          0
         ],
         [
-          [
-            0.5773502691896258,
-            0.5773502691896258,
-            -0.5773502691896258
-          ],
-          239.99999999999997
+          "Z",
+          -90
         ]
       ]
     },
     {
-      "name": "bearing_ankle_adapter_right",
-      "component": "bearing_ankle_adapter",
+      "name": "passive_leg_support_right",
+      "component": "passive_leg_support_right",
       "params": {},
       "at": [
         [
-          -85.77510000000001,
-          42.8991,
-          3.9749
+          0,
+          0,
+          0
         ],
         [
-          [
-            -0.5773502691896257,
-            0.5773502691896257,
-            -0.5773502691896258
-          ],
-          119.99999999999999
+          "Z",
+          -90
         ]
       ]
     },
@@ -1699,6 +1691,102 @@
             -0.5773502691896258
           ],
           119.99999999999999
+        ]
+      ]
+    },
+    {
+      "name": "knee_passive_horn_left",
+      "component": "knee_passive_horn_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "shell_screws_left",
+      "component": "shell_screws_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "passive_horn_screw_heads_left",
+      "component": "passive_horn_screw_heads_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "knee_passive_horn_right",
+      "component": "knee_passive_horn_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "shell_screws_right",
+      "component": "shell_screws_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "passive_horn_screw_heads_right",
+      "component": "passive_horn_screw_heads_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
         ]
       ]
     }
@@ -2403,16 +2491,16 @@
       "child": "#bearing_shared_yaw_adapter"
     },
     {
-      "name": "fix_bearing_ankle_adapter_left",
+      "name": "fix_passive_leg_support_left",
       "kind": "fastened",
-      "parent": "#servo_ankle_left",
-      "child": "#bearing_ankle_adapter_left"
+      "parent": "#leg_left",
+      "child": "#passive_leg_support_left"
     },
     {
-      "name": "fix_bearing_ankle_adapter_right",
+      "name": "fix_passive_leg_support_right",
       "kind": "fastened",
-      "parent": "#servo_ankle_right",
-      "child": "#bearing_ankle_adapter_right"
+      "parent": "#leg_right",
+      "child": "#passive_leg_support_right"
     },
     {
       "name": "fix_bearing_6704_servo_yaw2roll",
@@ -2497,6 +2585,42 @@
       "kind": "fastened",
       "parent": "#servo_head_roll",
       "child": "#bearing_6704_head_roll"
+    },
+    {
+      "name": "fix_knee_passive_horn_left",
+      "kind": "fastened",
+      "parent": "#leg_left",
+      "child": "#knee_passive_horn_left"
+    },
+    {
+      "name": "fix_shell_screws_left",
+      "kind": "fastened",
+      "parent": "#upper_leg_left",
+      "child": "#shell_screws_left"
+    },
+    {
+      "name": "fix_passive_horn_screw_heads_left",
+      "kind": "fastened",
+      "parent": "#passive_leg_support_left",
+      "child": "#passive_horn_screw_heads_left"
+    },
+    {
+      "name": "fix_knee_passive_horn_right",
+      "kind": "fastened",
+      "parent": "#leg_right",
+      "child": "#knee_passive_horn_right"
+    },
+    {
+      "name": "fix_shell_screws_right",
+      "kind": "fastened",
+      "parent": "#upper_leg_right",
+      "child": "#shell_screws_right"
+    },
+    {
+      "name": "fix_passive_horn_screw_heads_right",
+      "kind": "fastened",
+      "parent": "#passive_leg_support_right",
+      "child": "#passive_horn_screw_heads_right"
     }
   ],
   "poses": {

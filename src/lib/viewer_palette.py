@@ -13,8 +13,8 @@ def apply_palette(root):
     for part in root.children:
         name=part.label
         color=palette['colors'].get(name)
-        if name.startswith(('bearing_carrier','bearing_roll_adapter','bearing_shared','bearing_ankle_adapter','bearing_head_')):color=palette['new_printed']
-        if name.startswith(('bearing_6704','bearing_screws')):color=palette['bearing']
+        if name.startswith(('bearing_carrier','bearing_roll_adapter','bearing_shared','bearing_ankle_adapter','bearing_head_','passive_leg_support')):color=palette['new_printed']
+        if name.startswith(('bearing_6704','bearing_screws','knee_passive_horn','shell_screws','passive_horn_screw_heads')):color=palette['bearing']
         if color:paint(part,color)
     return root
 

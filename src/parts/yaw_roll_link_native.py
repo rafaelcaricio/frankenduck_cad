@@ -170,7 +170,8 @@ def baseline_make():
 def make():
     from lib.head_bearings import yaw_roll_link
     from cadgen import build123d as bd
-    return yaw_roll_link().rotate(bd.Axis.Z,90)
+    from lib.bearing_race_clearance import revise_native
+    return revise_native(yaw_roll_link().rotate(bd.Axis.Z,90),"yaw_roll_link_native")
 
 
 @step(out="../../STEP/parts/yaw_roll_link_native.step")

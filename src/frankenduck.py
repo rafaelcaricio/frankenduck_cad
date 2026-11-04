@@ -69,13 +69,21 @@ from parts.bearing_carrier_right import bearing_carrier_right
 from parts.bearing_roll_adapter_left import bearing_roll_adapter_left
 from parts.bearing_roll_adapter_right import bearing_roll_adapter_right
 from parts.bearing_shared_yaw_adapter import bearing_shared_yaw_adapter
-from parts.bearing_ankle_adapter import bearing_ankle_adapter
 from parts.bearing_6704 import bearing_6704
 from parts.bearing_screws_left import bearing_screws_left
 from parts.bearing_screws_right import bearing_screws_right
 from lib.viewer_palette import apply_palette
 from parts.bearing_servo_reference import bearing_servo_reference
 from parts.bearing_head_adapter import bearing_head_adapter
+
+from parts.passive_leg_support_left import passive_leg_support_left
+from parts.knee_passive_horn_left import knee_passive_horn_left
+from parts.shell_screws_left import shell_screws_left
+from parts.passive_horn_screw_heads_left import passive_horn_screw_heads_left
+from parts.passive_leg_support_right import passive_leg_support_right
+from parts.knee_passive_horn_right import knee_passive_horn_right
+from parts.shell_screws_right import shell_screws_right
+from parts.passive_horn_screw_heads_right import passive_horn_screw_heads_right
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSEMBLY_PATH = ROOT / "source/assembly_data.json"
@@ -187,8 +195,8 @@ def frankenduck():
     children.append(place(bearing_roll_adapter_right(), 'bearing_roll_adapter_right', [[0, 0, 0], ['Z', -90]]))
     children.append(place(bearing_screws_right(), 'bearing_screws_right', [[0, 0, 0], ['Z', -90]]))
     children.append(place(bearing_shared_yaw_adapter(), 'bearing_shared_yaw_adapter', [[0, 0, 0], ['Z', -90]]))
-    children.append(place(bearing_ankle_adapter(), 'bearing_ankle_adapter_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
-    children.append(place(bearing_ankle_adapter(), 'bearing_ankle_adapter_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(passive_leg_support_left(), 'passive_leg_support_left', [[0,0,0],['Z',-90]]))
+    children.append(place(passive_leg_support_right(), 'passive_leg_support_right', [[0,0,0],['Z',-90]]))
     children.append(place(bearing_6704(), 'bearing_6704_servo_yaw2roll', [[23.625, -8.1, 120.25], [[0.0, 0.0, -1.0], 180.0]]))
     children.append(place(bearing_6704(), 'bearing_6704_servo_bearing_roll', [[-23.625, -8.1, 120.25], [[0.0, 0.0, -1.0], 180.0]]))
     children.append(place(bearing_6704(), 'bearing_6704_servo_hip_l', [[23.625, -30.375, 100.375], [[0.0, -0.7071067811865475, -0.7071067811865476], 180.0]]))
@@ -203,6 +211,12 @@ def frankenduck():
     children.append(place(bearing_6704(), 'bearing_6704_head_yaw', [[0.0, -35.1, 258.0048], ['Z', -90]]))
     children.append(place(bearing_head_adapter(), 'bearing_head_roll_adapter', [[0.0, -14.935, 280.5798], [[-0.5773502691896257, -0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
     children.append(place(bearing_6704(), 'bearing_6704_head_roll', [[0.0, -14.935, 280.5798], [[-0.5773502691896257, -0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(knee_passive_horn_left(), 'knee_passive_horn_left', [[0,0,0],['Z',-90]]))
+    children.append(place(shell_screws_left(), 'shell_screws_left', [[0,0,0],['Z',-90]]))
+    children.append(place(passive_horn_screw_heads_left(), 'passive_horn_screw_heads_left', [[0,0,0],['Z',-90]]))
+    children.append(place(knee_passive_horn_right(), 'knee_passive_horn_right', [[0,0,0],['Z',-90]]))
+    children.append(place(shell_screws_right(), 'shell_screws_right', [[0,0,0],['Z',-90]]))
+    children.append(place(passive_horn_screw_heads_right(), 'passive_horn_screw_heads_right', [[0,0,0],['Z',-90]]))
     return apply_palette(bd.Compound(children=children, label="frankenduck"))
 
 if __name__ == "__main__":

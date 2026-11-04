@@ -48,5 +48,6 @@ filename,stl_filename,model,quantity,material_hint,print_release,occurrences
 3mf/bearing_roll_adapter_left.3mf,stl/bearing_roll_adapter_left.stl,bearing_roll_adapter_left,1,black printed polymer; unselected,unreviewed,#o1.75:bearing_roll_adapter_left
 3mf/bearing_roll_adapter_right.3mf,stl/bearing_roll_adapter_right.stl,bearing_roll_adapter_right,1,black printed polymer; unselected,unreviewed,#o1.78:bearing_roll_adapter_right
 3mf/bearing_shared_yaw_adapter.3mf,stl/bearing_shared_yaw_adapter.stl,bearing_shared_yaw_adapter,1,black printed polymer; unselected,unreviewed,#o1.80:bearing_shared_yaw_adapter
-3mf/bearing_ankle_adapter.3mf,stl/bearing_ankle_adapter.stl,bearing_ankle_adapter,2,black printed polymer; unselected,unreviewed,#o1.81:bearing_ankle_adapter_left;#o1.82:bearing_ankle_adapter_right
 3mf/bearing_head_adapter.3mf,stl/bearing_head_adapter.stl,bearing_head_adapter,2,black printed polymer,unreviewed,#o1.93:bearing_head_yaw_adapter;#o1.95:bearing_head_roll_adapter
+3mf/passive_leg_support_left.3mf,stl/passive_leg_support_left.stl,passive_leg_support_left,1,black printed polymer; unselected,unreviewed,#o1.81:passive_leg_support_left
+3mf/passive_leg_support_right.3mf,stl/passive_leg_support_right.stl,passive_leg_support_right,1,black printed polymer; unselected,unreviewed,#o1.82:passive_leg_support_right

@@ -838,7 +838,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Approved V9 integrated passive support system. Preserves original joint axes and sampled travel. See docs/passive-leg-support.md."
     },
     {
       "model": "upper_leg_left_native_right",
@@ -852,7 +852,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Approved V9 integrated passive support system. Preserves original joint axes and sampled travel. See docs/passive-leg-support.md."
     },
     {
       "model": "upper_leg_left_native_seated",
@@ -968,7 +968,7 @@
       "material_hint": "black printed polymer; unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+      "notes": "Approved V9 integrated passive support system. Preserves original joint axes and sampled travel. See docs/passive-leg-support.md."
     },
     {
       "model": "bearing_carrier_right",
@@ -980,7 +980,7 @@
       "material_hint": "black printed polymer; unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+      "notes": "Approved V9 integrated passive support system. Preserves original joint axes and sampled travel. See docs/passive-leg-support.md."
     },
     {
       "model": "bearing_roll_adapter_left",
@@ -1026,9 +1026,9 @@
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
       "material_hint": "black printed polymer; unselected",
-      "export": true,
-      "active_variant": true,
-      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+      "export": false,
+      "active_variant": false,
+      "notes": "Superseded by the bilateral integrated passive_leg_support parts; do not print as an additional ankle adapter."
     },
     {
       "model": "bearing_6704",
@@ -1089,6 +1089,102 @@
       "export": true,
       "active_variant": true,
       "notes": "Shared STS3215 head yaw and head roll bearing adapter; two assembly occurrences. Physical fit untested."
+    },
+    {
+      "model": "passive_leg_support_left",
+      "component": "passive_leg_support_left",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Approved V9. Integrated 2.6 mm wall arm and ankle adapter. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "knee_passive_horn_left",
+      "component": "knee_passive_horn_left",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Supplied STS3215 passive horn; vendor CAD. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "shell_screws_left",
+      "component": "shell_screws_left",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "passive_horn_screw_heads_left",
+      "component": "passive_horn_screw_heads_left",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "passive_leg_support_right",
+      "component": "passive_leg_support_right",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Approved V9. Integrated 2.6 mm wall arm and ankle adapter. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "knee_passive_horn_right",
+      "component": "knee_passive_horn_right",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Supplied STS3215 passive horn; vendor CAD. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "shell_screws_right",
+      "component": "shell_screws_right",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "passive_horn_screw_heads_right",
+      "component": "passive_horn_screw_heads_right",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
     }
   ],
   "review_geometry": [

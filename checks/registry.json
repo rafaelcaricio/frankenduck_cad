@@ -193,10 +193,50 @@
         "src/parts/yaw_roll_link_native.py",
         "src/parts/neck_pitch_001_native.py",
         "STEP/imported/*.step",
-        "checks/head_neck.py"
+        "checks/head_neck.py",
+        "src/lib/bearing_race_clearance.py",
+        "source/assembly_data.json"
       ],
       "report": "reports/latest/head_neck_verification.json",
       "coverage": "Nominal radial/axial clearances, four screw wells, open cable paths and servo insertion. Local sampled pitch/yaw/roll; not combined continuous motion or physical validation."
+    },
+    {
+      "id": "passive_leg.fit",
+      "call": "checks.passive_leg:fit",
+      "purpose": "Approved passive support, shell mounts and sampled knee/ankle travel",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "src/lib/passive_leg*.py",
+        "src/lib/bearing_race_clearance.py",
+        "src/lib/bearing_revision/*.py",
+        "src/parts/*.py",
+        "source/assembly_data.json",
+        "STEP/imported/*.step",
+        "checks/passive_leg.py"
+      ],
+      "report": "reports/latest/passive_leg_fit.json",
+      "coverage": "Native canonical geometry, local sampled motion and nominal fits; no physical or continuous-motion certification."
+    },
+    {
+      "id": "bearing.inner_ring",
+      "call": "checks.passive_leg:bearing_contacts",
+      "purpose": "Measured 22 mm inner-ring contact on all twelve horn bearings",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "src/lib/passive_leg*.py",
+        "src/lib/bearing_race_clearance.py",
+        "src/lib/bearing_revision/*.py",
+        "src/parts/*.py",
+        "source/assembly_data.json",
+        "STEP/imported/*.step",
+        "checks/passive_leg.py"
+      ],
+      "report": "reports/latest/bearing_inner_ring.json",
+      "coverage": "Native canonical geometry, local sampled motion and nominal fits; no physical or continuous-motion certification."
     }
   ]
 }

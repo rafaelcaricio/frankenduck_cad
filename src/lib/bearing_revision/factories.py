@@ -19,7 +19,7 @@ def native(shape):
     return s
 
 @cached_shape
-def revised(name):
+def original_revised(name):
     i=instances()
     side='right' if name.endswith('_right') else 'left'
     if name.startswith('hip_left_native'):return native((right_hip_dual if side=='right' else left_hip_dual)())
@@ -29,6 +29,11 @@ def revised(name):
     if name.startswith('leg_left_native'):return native(place((right_leg if side=='right' else left_leg)(),i[knee]['at']))
     if name.startswith('ankle_left_native'):return native(place((right_ankle if side=='right' else left_ankle)(),i[ankle]['at']).translate(delta(i[knee]['at'])))
     raise ValueError(name)
+
+@cached_shape
+def revised(name):
+    from ..bearing_race_clearance import revise_native
+    return revise_native(original_revised(name),name)
 
 @cached_shape
 def added(name):

@@ -11,7 +11,8 @@ def fit():
     from lib.bearing_revision.collision_bridge_v2 import place,volume
     from lib.bearing_revision.adapter_bridge_v3 import bearing_envelope,cyl
     from lib.bearing_revision.factories import servo
-    s=neck_pitch();local=place(s,((0,0,0),('Z',-90)),inverse=True)
+    from parts.neck_pitch_001_native import make as canonical_neck
+    s=canonical_neck().rotate(b.Axis.Z,-90);local=place(s,((0,0,0),('Z',-90)),inverse=True)
     report={'valid':s.is_valid,'solids':len(s.solids()),'volume_mm3':volume(s),'sampled_arm_thicknesses_mm':[]}
     for y0,y1 in [(PASSIVE_INNER_Y-4,PASSIVE_INNER_Y),(DRIVEN_INNER_Y,DRIVEN_INNER_Y+4)]:
      for x,z in [(35.1+9.7,232.769),(35.1+9.7,231.769),(35.1+9,230.769)]:
@@ -76,7 +77,8 @@ def fit():
     assert not pitch_hits,pitch_hits
     from lib.head_bearings import head_frame, yaw_roll_link
     from lib.head_bearings import ROLL
-    frame=head_frame();link=yaw_roll_link();adapter=place(base_adapter(),ROLL)
+    from parts.yaw_roll_link_native import make as canonical_link
+    frame=head_frame();link=canonical_link().rotate(b.Axis.Z,-90);adapter=place(base_adapter(),ROLL)
     report['frame_valid']=frame.is_valid
     report['frame_solids']=len(frame.solids())
     report['adapter_frame_overlap_mm3']=volume(frame.intersect(adapter))
@@ -148,7 +150,16 @@ def fit():
         ov=volume(roll_link.intersect(base_adapter().rotate(b.Axis.Z,angle)))
         if ov>.001:report['roll_sample_hits'].append([angle,ov])
     assert not report['roll_sample_hits']
-    assert roll_link.distance_to(bearing_envelope())>=.19999
+    # The approved rotating lip contacts the measured inner ring; only the
+    # shield and outer ring must remain clear.
+    inner_ring=cyl(11,-3.5,.5)-cyl(10,-3.6,.6)
+    shield=cyl(13.5,-3.5,.5)-cyl(11,-3.6,.6)
+    assert volume(roll_link.intersect(inner_ring))<1e-5
+    assert volume(roll_link.intersect(shield))<1e-5
+    report['roll_inner_ring_contact_mm']=roll_link.distance_to(inner_ring)
+    report['roll_shield_gap_mm']=roll_link.distance_to(shield)
+    assert report['roll_inner_ring_contact_mm']<1e-5
+    assert report['roll_shield_gap_mm']>=.19999
     report['passed']=True
     report['coverage']='Local fit and insertion; pitch +/-90 and yaw +/-170 sampled at 10 degrees; roll +/-25 at 5 degrees. Not physical fit or full combined motion.'
     Path(R/'reports/latest/head_neck_verification.json').write_text(json.dumps(report,indent=2))

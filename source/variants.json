@@ -366,11 +366,6 @@
     "params": {}
   },
   {
-    "model": "bearing_ankle_adapter",
-    "component": "bearing_ankle_adapter",
-    "params": {}
-  },
-  {
     "model": "bearing_6704",
     "component": "bearing_6704",
     "params": {}
@@ -394,5 +389,45 @@
     "component": "bearing_head_adapter",
     "params": {},
     "model": "bearing_head_adapter"
+  },
+  {
+    "model": "passive_leg_support_left",
+    "component": "passive_leg_support_left",
+    "params": {}
+  },
+  {
+    "model": "knee_passive_horn_left",
+    "component": "knee_passive_horn_left",
+    "params": {}
+  },
+  {
+    "model": "shell_screws_left",
+    "component": "shell_screws_left",
+    "params": {}
+  },
+  {
+    "model": "passive_horn_screw_heads_left",
+    "component": "passive_horn_screw_heads_left",
+    "params": {}
+  },
+  {
+    "model": "passive_leg_support_right",
+    "component": "passive_leg_support_right",
+    "params": {}
+  },
+  {
+    "model": "knee_passive_horn_right",
+    "component": "knee_passive_horn_right",
+    "params": {}
+  },
+  {
+    "model": "shell_screws_right",
+    "component": "shell_screws_right",
+    "params": {}
+  },
+  {
+    "model": "passive_horn_screw_heads_right",
+    "component": "passive_horn_screw_heads_right",
+    "params": {}
   }
 ]
