@@ -137,7 +137,7 @@
         "checks/battery_paths.py"
       ],
       "report": "reports/latest/battery_motion_verification.json",
-      "coverage": "Thirty leg occurrences; 1702 keyframes; 1 mm minimum gap; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
+      "coverage": "All articulated leg occurrences, including new fastened bearing parts, verified against the declared mate graph; 1702 keyframes; 1 mm minimum gap; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
     },
     {
       "id": "battery_pod.removal",

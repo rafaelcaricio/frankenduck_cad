@@ -339,5 +339,55 @@
     "model": "stick_pod_native",
     "component": "stick_pod_native",
     "params": {}
+  },
+  {
+    "model": "bearing_carrier_left",
+    "component": "bearing_carrier_left",
+    "params": {}
+  },
+  {
+    "model": "bearing_carrier_right",
+    "component": "bearing_carrier_right",
+    "params": {}
+  },
+  {
+    "model": "bearing_roll_adapter_left",
+    "component": "bearing_roll_adapter_left",
+    "params": {}
+  },
+  {
+    "model": "bearing_roll_adapter_right",
+    "component": "bearing_roll_adapter_right",
+    "params": {}
+  },
+  {
+    "model": "bearing_shared_yaw_adapter",
+    "component": "bearing_shared_yaw_adapter",
+    "params": {}
+  },
+  {
+    "model": "bearing_ankle_adapter",
+    "component": "bearing_ankle_adapter",
+    "params": {}
+  },
+  {
+    "model": "bearing_6704",
+    "component": "bearing_6704",
+    "params": {}
+  },
+  {
+    "model": "bearing_screws_left",
+    "component": "bearing_screws_left",
+    "params": {}
+  },
+  {
+    "model": "bearing_screws_right",
+    "component": "bearing_screws_right",
+    "params": {}
+  },
+  {
+    "model": "bearing_servo_reference",
+    "component": "bearing_servo_reference",
+    "params": {}
   }
 ]

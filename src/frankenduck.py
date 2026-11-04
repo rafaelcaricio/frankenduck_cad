@@ -64,6 +64,17 @@ from parts.foot_left_native_b_right import foot_left_native_b_right
 from parts.sts3215_servo_native import sts3215_servo_native
 from parts.parkside_papk_12_a4 import parkside_papk_12_a4
 from lib.stick_pod import STICK_AT
+from parts.bearing_carrier_left import bearing_carrier_left
+from parts.bearing_carrier_right import bearing_carrier_right
+from parts.bearing_roll_adapter_left import bearing_roll_adapter_left
+from parts.bearing_roll_adapter_right import bearing_roll_adapter_right
+from parts.bearing_shared_yaw_adapter import bearing_shared_yaw_adapter
+from parts.bearing_ankle_adapter import bearing_ankle_adapter
+from parts.bearing_6704 import bearing_6704
+from parts.bearing_screws_left import bearing_screws_left
+from parts.bearing_screws_right import bearing_screws_right
+from lib.viewer_palette import apply_palette
+from parts.bearing_servo_reference import bearing_servo_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSEMBLY_PATH = ROOT / "source/assembly_data.json"
@@ -133,33 +144,33 @@ def frankenduck():
     children.append(place(upper_leg_left_native(), 'upper_leg_left', ((0, 0, 0), ('Z', -90))))
     children.append(place(leg_left_native(), 'leg_left', ((0, 0, 0), ('Z', -90))))
     children.append(place(ankle_left_native(), 'ankle_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_eye_left_native(), 'ankle_eye_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_bearing_outer_keeper_left_native(), 'ankle_bearing_outer_keeper_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_bearing_inner_cap_left_native(), 'ankle_bearing_inner_cap_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(sole_left_native(), 'sole_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(foot_left_native_a(), 'foot_a_left', ((0, 0, 0), ('Z', -90))))
-    children.append(place(foot_left_native_b(), 'foot_b_left', ((0, 0, 0), ('Z', -90))))
+    children.append(place(ankle_eye_left_native(), 'ankle_eye_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(ankle_bearing_outer_keeper_left_native(), 'ankle_bearing_outer_keeper_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(ankle_bearing_inner_cap_left_native(), 'ankle_bearing_inner_cap_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(sole_left_native(), 'sole_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(foot_left_native_a(), 'foot_a_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(foot_left_native_b(), 'foot_b_left', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
     children.append(place(hip_left_native_right(), 'hip_right', ((0, 0, 0), ('Z', -90))))
     children.append(place(yaw2roll_left_native_right(), 'yaw2roll_right', ((0, 0, 0), ('Z', -90))))
     children.append(place(upper_leg_left_native_right(), 'upper_leg_right', ((0, 0, 0), ('Z', -90))))
     children.append(place(leg_left_native_right(), 'leg_right', ((0, 0, 0), ('Z', -90))))
     children.append(place(ankle_left_native_right(), 'ankle_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_eye_left_native_right(), 'ankle_eye_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_bearing_outer_keeper_left_native_right(), 'ankle_bearing_outer_keeper_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(ankle_bearing_inner_cap_left_native_right(), 'ankle_bearing_inner_cap_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(sole_left_native_right(), 'sole_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(foot_left_native_a_right(), 'foot_a_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(foot_left_native_b_right(), 'foot_b_right', ((0, 0, 0), ('Z', -90))))
-    children.append(place(sts3215_servo_native(), 'servo_hip_l', ((23.625, -30.375, 100.375), ((0.0, -0.7071067811865475, -0.7071067811865476), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_hip_l_2', ((-23.625, -30.375, 100.375), ((0.0, -0.7071067811865475, -0.7071067811865476), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_yaw2roll', ((23.625, -8.1, 120.25), ((0.0, 0.0, -1.0), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_bearing_roll', ((-23.625, -8.1, 120.25), ((0.0, 0.0, -1.0), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_leg', ((51.975, 42.8991, 70.675), ((-0.5773502691896257, 0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
-    children.append(place(sts3215_servo_native(), 'servo_leg_2', ((-51.975, 42.8991, 70.675), ((0.5773502691896258, 0.5773502691896258, -0.5773502691896258), 239.99999999999997))))
-    children.append(place(sts3215_servo_native(), 'servo_upper_leg_left', ((51.975, -5.4, 100.375), ((-0.7071067811865475, 0.0, -0.7071067811865476), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_upper_leg_right', ((-51.975, -5.4, 100.375), ((0.7071067811865475, 0.0, -0.7071067811865476), 180.0))))
-    children.append(place(sts3215_servo_native(), 'servo_ankle_left', ((87.075, 42.8991, 3.975), ((0.5773502691896258, 0.5773502691896258, -0.5773502691896258), 239.99999999999997))))
-    children.append(place(sts3215_servo_native(), 'servo_ankle_right', ((-87.0751, 42.8991, 3.9749), ((-0.5773502691896257, 0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
+    children.append(place(ankle_eye_left_native_right(), 'ankle_eye_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(ankle_bearing_outer_keeper_left_native_right(), 'ankle_bearing_outer_keeper_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(ankle_bearing_inner_cap_left_native_right(), 'ankle_bearing_inner_cap_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(sole_left_native_right(), 'sole_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(foot_left_native_a_right(), 'foot_a_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(foot_left_native_b_right(), 'foot_b_right', [[2.220446049250313e-16, 5.773159728050814e-16, -2.1649348980190552e-16], ['Z', -90]]))
+    children.append(place(bearing_servo_reference(), 'servo_hip_l', ((23.625, -30.375, 100.375), ((0.0, -0.7071067811865475, -0.7071067811865476), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_hip_l_2', ((-23.625, -30.375, 100.375), ((0.0, -0.7071067811865475, -0.7071067811865476), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_yaw2roll', ((23.625, -8.1, 120.25), ((0.0, 0.0, -1.0), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_bearing_roll', ((-23.625, -8.1, 120.25), ((0.0, 0.0, -1.0), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_leg', ((51.975, 42.8991, 70.675), ((-0.5773502691896257, 0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
+    children.append(place(bearing_servo_reference(), 'servo_leg_2', ((-51.975, 42.8991, 70.675), ((0.5773502691896258, 0.5773502691896258, -0.5773502691896258), 239.99999999999997))))
+    children.append(place(bearing_servo_reference(), 'servo_upper_leg_left', ((51.975, -5.4, 100.375), ((-0.7071067811865475, 0.0, -0.7071067811865476), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_upper_leg_right', ((-51.975, -5.4, 100.375), ((0.7071067811865475, 0.0, -0.7071067811865476), 180.0))))
+    children.append(place(bearing_servo_reference(), 'servo_ankle_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
+    children.append(place(bearing_servo_reference(), 'servo_ankle_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
     children.append(place(sts3215_servo_native(), 'servo_neck_upper', ((17.6, -35.1, 235.769), ((0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
     children.append(place(sts3215_servo_native(), 'servo_neck_lower', ((17.6, -35.1, 163.769), ((0.5773502691896258, 0.5773502691896258, -0.5773502691896258), 239.99999999999997))))
     children.append(place(sts3215_servo_native(), 'servo_head_roll', ((0.0, -14.935, 280.5798), ((-0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
@@ -168,7 +179,26 @@ def frankenduck():
     children.append(place(radxa_6530b(), 'radxa_6530b', HEATSINK_AT))
     children.append(place(parkside_papk_12_a4(), 'parkside_battery', STICK_AT))
     children.append(place(stick_pod_native(), 'stick_pod', ((0, 0, 0), ('Z', 0))))
-    return bd.Compound(children=children, label="frankenduck")
+    children.append(place(bearing_carrier_left(), 'bearing_carrier_left', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_roll_adapter_left(), 'bearing_roll_adapter_left', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_screws_left(), 'bearing_screws_left', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_carrier_right(), 'bearing_carrier_right', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_roll_adapter_right(), 'bearing_roll_adapter_right', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_screws_right(), 'bearing_screws_right', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_shared_yaw_adapter(), 'bearing_shared_yaw_adapter', [[0, 0, 0], ['Z', -90]]))
+    children.append(place(bearing_ankle_adapter(), 'bearing_ankle_adapter_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
+    children.append(place(bearing_ankle_adapter(), 'bearing_ankle_adapter_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_yaw2roll', [[23.625, -8.1, 120.25], [[0.0, 0.0, -1.0], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_bearing_roll', [[-23.625, -8.1, 120.25], [[0.0, 0.0, -1.0], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_hip_l', [[23.625, -30.375, 100.375], [[0.0, -0.7071067811865475, -0.7071067811865476], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_hip_l_2', [[-23.625, -30.375, 100.375], [[0.0, -0.7071067811865475, -0.7071067811865476], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_upper_leg_left', [[51.975, -5.4, 100.375], [[-0.7071067811865475, 0.0, -0.7071067811865476], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_upper_leg_right', [[-51.975, -5.4, 100.375], [[0.7071067811865475, 0.0, -0.7071067811865476], 180.0]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_leg', [[51.975, 42.8991, 70.675], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_leg_2', [[-51.975, 42.8991, 70.675], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_ankle_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
+    children.append(place(bearing_6704(), 'bearing_6704_servo_ankle_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    return apply_palette(bd.Compound(children=children, label="frankenduck"))
 
 if __name__ == "__main__":
     frankenduck()

@@ -2,7 +2,7 @@ from __future__ import annotations
 from cadgen import step
 
 
-def make():
+def make_original():
     from lib.cadquery_adapter import to_build123d
     import cadquery as cq
     from lib.cadquery_adapter import Model
@@ -67,6 +67,12 @@ def make():
     model.material('pla', color='#f96c0a')
     result = model.result()
     return to_build123d(model, 'ankle_left_native')
+
+
+def make():
+    from lib.bearing_revision.factories import revised
+    from lib.viewer_palette import paint_original
+    return paint_original(revised('ankle_left_native_right'), 'ankle_right')
 
 
 @step(out="../../STEP/parts/ankle_left_native_right.step")

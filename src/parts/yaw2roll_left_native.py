@@ -2,7 +2,7 @@ from __future__ import annotations
 from cadgen import step
 
 
-def make():
+def make_original():
     from lib.cadquery_adapter import to_build123d
     import cadquery as cq
     SIDE = 1
@@ -66,6 +66,12 @@ def make():
     model.material('pla', color='#1d1d1f')
     result = model.result()
     return to_build123d(model, 'yaw2roll_left_native')
+
+
+def make():
+    from lib.bearing_revision.factories import revised
+    from lib.viewer_palette import paint_original
+    return paint_original(revised('yaw2roll_left_native'), 'yaw2roll_left')
 
 
 @step(out="../../STEP/parts/yaw2roll_left_native.step")

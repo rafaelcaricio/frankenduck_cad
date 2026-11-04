@@ -1,0 +1,223 @@
+{
+  "scope": "Promotion comparison against the reviewed two-leg assembly; not a motion or physical validation",
+  "canonical_step_sha256": "3849527e856ff5e292d39c504591b3c9e552667ba4fed6b79f7f3237cca1a659",
+  "reviewed_step_sha256": "e7dfa7840b2eb934a09fe3625c66105dae3c34110267afdc86aaeba79b8ef384",
+  "bidirectional_boolean_comparisons": [
+    {
+      "part": "bearing_shared_yaw_adapter",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "hip_left",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "hip_right",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_roll_adapter_left",
+      "bounds_error_mm": 1.7763568394002505e-15,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "yaw2roll_left",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_roll_adapter_right",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "yaw2roll_right",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_carrier_left",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        13059.028212892776
+      ],
+      "passed": false
+    },
+    {
+      "part": "leg_left",
+      "bounds_error_mm": 7.105427357601002e-15,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_ankle_adapter_left",
+      "bounds_error_mm": 1.0000000116860974e-07,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "ankle_left",
+      "bounds_error_mm": 7.105427357601002e-15,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_carrier_right",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "leg_right",
+      "bounds_error_mm": 1.4210854715202004e-14,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "bearing_ankle_adapter_right",
+      "bounds_error_mm": 1.0000000116860974e-07,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "part": "ankle_right",
+      "bounds_error_mm": 0.0,
+      "bidirectional_difference_mm3": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    }
+  ],
+  "left_carrier_boolean_detail": {
+    "volume_difference_mm3": 4.5468368625734e-07,
+    "matching_vertices_1e5_mm": false,
+    "matching_edges_1e5_mm": false,
+    "matching_faces_1e5_mm": false,
+    "counts": {
+      "vertices": [
+        357,
+        410
+      ],
+      "edges": [
+        549,
+        638
+      ],
+      "faces": [
+        201,
+        234
+      ]
+    },
+    "solids_difference_mm3": [
+      0.0,
+      13059.028212892776
+    ],
+    "deepcopy_difference_mm3": [
+      0.0,
+      13059.028212892776
+    ]
+  },
+  "left_carrier_surface_comparison": [
+    {
+      "direction": "review_to_canonical",
+      "samples": 3522,
+      "maximum_surface_distance_mm": 6.699991672576289e-09,
+      "worst_point_mm": [
+        54.699999975,
+        29.8000001,
+        103.20323229721
+      ],
+      "passed": true
+    },
+    {
+      "direction": "canonical_to_review",
+      "samples": 4056,
+      "maximum_surface_distance_mm": 1.0000000116860974e-07,
+      "worst_point_mm": [
+        53.875,
+        49.09725153368971,
+        103.84319835953806
+      ],
+      "passed": true
+    }
+  ],
+  "interpretation": "Fourteen of fifteen placed print pieces have zero bidirectional difference. The left carrier has matching bounds and volume but different face splitting; its Boolean difference is inconsistent. 7578 sampled boundary points agree to 1.1e-7 mm. This is bounded surface comparison, not a complete continuous equivalence proof.",
+  "full_combined_hip_motion_validated": false,
+  "physical_fit_validated": false,
+  "appearance_only_successor_step_sha256": "6161e9252e08a15e0930a269943ee21fe029ed4ddaf4acfadfd64f491320cc6b",
+  "appearance_revision": "User clarification: existing modified parts retain MuJoCo colors; only entirely added carriers and adapters are black. Geometry factories and placements are unchanged by this correction.",
+  "color_samples_verified_from_saved_step": {
+    "hip_left": "#8a8a90",
+    "leg_left": "#8a8a90",
+    "ankle_left": "#f96c0a",
+    "bearing_carrier_left": "#1d1d1f"
+  },
+  "final_validation": {
+    "build": "PASS",
+    "implemented_full_checks": "PASS",
+    "recorded_poses": 1702,
+    "articulated_leg_occurrences": 46,
+    "obstacle_pairs": 391460,
+    "motion_scope": "Battery, pod, trunk and shells only; full combined hip motion not certified",
+    "python_regression_tests": 33,
+    "viewer_regression_tests": 5,
+    "print_models": 50,
+    "print_quantity": 51,
+    "formats": [
+      "3MF",
+      "STL"
+    ],
+    "print_manifest_content_sha256": "4437d720a79e987d3da791571f23e40f3fac102c73812511648cda02c3c22738",
+    "recovered_export": "Two hip meshes regenerated with controlled tessellation, small CAD-surface-checked seam patches, and an exact saved-solid fallback for the left hip; all 50 mesh records revalidated together before atomic publication."
+  }
+}

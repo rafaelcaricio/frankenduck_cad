@@ -1,0 +1,140 @@
+[
+  {
+    "occurrence": "trunk_base",
+    "file": "STEP/imported/bearing_baseline_trunk_base_native.step",
+    "sha256": "477a98587736bd8175bde624a0465ac28216e76af0e1d6494075c618ba0504ae",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "left_shell_native",
+    "file": "STEP/imported/bearing_baseline_left_shell_native.step",
+    "sha256": "675f61db62123540b99abd9590d8ad92d63baf021cc5319a964929793d208503",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "right_shell_native",
+    "file": "STEP/imported/bearing_baseline_right_shell_native.step",
+    "sha256": "3d66fb86659a1604b02e184ea91b86fff48e18424bec9baf026f2207f2ec54a0",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "hip_left",
+    "file": "STEP/imported/bearing_baseline_hip_left_native.step",
+    "sha256": "3a342f73137427f617d16bba0894532514090d4771502a7eeff2ae7d2bdd4a34",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "yaw2roll_left",
+    "file": "STEP/imported/bearing_baseline_yaw2roll_left_native.step",
+    "sha256": "fa5b6d9b5233c2bddb09380dc5b44a2af9c0908285ba6691fa1b5850f7c8b386",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "upper_leg_left",
+    "file": "STEP/imported/bearing_baseline_upper_leg_left_native.step",
+    "sha256": "1360cafe1f053c53e252b03c21e1a37203074807f61e38f66cb75a34a649af93",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "leg_left",
+    "file": "STEP/imported/bearing_baseline_leg_left_native.step",
+    "sha256": "cfc1e842636ecedc67a093afd538f6c70480ce6a92d355b191584847c28df0c2",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_left",
+    "file": "STEP/imported/bearing_baseline_ankle_left_native.step",
+    "sha256": "60a904535c97ffdd7da9808bca3cd630782da4337680f9f4659143ee4e90caf8",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_eye_left",
+    "file": "STEP/imported/bearing_baseline_ankle_eye_left_native.step",
+    "sha256": "a7b9687563a6e28fa3d88ddb16a1f1629f0c6c6d27bf25284f05ee53dd5a9838",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_bearing_outer_keeper_left",
+    "file": "STEP/imported/bearing_baseline_ankle_bearing_outer_keeper_left_native.step",
+    "sha256": "f468cae12de15a65eb65aa148d10bb29b2a54e29a9ea0933ba4b7fa7c9fb963c",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_bearing_inner_cap_left",
+    "file": "STEP/imported/bearing_baseline_ankle_bearing_inner_cap_left_native.step",
+    "sha256": "7e33126825d1242c2cea1e891da5129908e11c493aba7fe44919d384b36cfdee",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "foot_a_left",
+    "file": "STEP/imported/bearing_baseline_foot_left_native_a.step",
+    "sha256": "5cb75505e207b1dc13c3192a98be91b6e862a6b9ca0d5d59fceca33e59e3221f",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "foot_b_left",
+    "file": "STEP/imported/bearing_baseline_foot_left_native_b.step",
+    "sha256": "7d49461e8174cd90782c17e34549aa53c68f710625682ad57d13fed088c46415",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "hip_right",
+    "file": "STEP/imported/bearing_baseline_hip_left_native_right.step",
+    "sha256": "55fcd535210be48e6069cc104c44945a3501838718d5801e9e82f342a54cabf8",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "yaw2roll_right",
+    "file": "STEP/imported/bearing_baseline_yaw2roll_left_native_right.step",
+    "sha256": "d03924d4dc266ac6ed1ca3a132f361580823915ea5a32caf2e966c55c00e6792",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "upper_leg_right",
+    "file": "STEP/imported/bearing_baseline_upper_leg_left_native_right.step",
+    "sha256": "10d685cfd2f21b5a0631817d0275040c231207b1d5d1c2eb9bb3fe8f39dc0177",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "leg_right",
+    "file": "STEP/imported/bearing_baseline_leg_left_native_right.step",
+    "sha256": "436248e20bc89f0dc1c28bbe05e4136683ee3c5eb26278006df2f2192b070dea",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_right",
+    "file": "STEP/imported/bearing_baseline_ankle_left_native_right.step",
+    "sha256": "959f03569c99ef8788b09901d5ffff1e02571d092b6bb32159eee9cf27a7881f",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_eye_right",
+    "file": "STEP/imported/bearing_baseline_ankle_eye_left_native_right.step",
+    "sha256": "9ba9a332e7f2b2040cdafff94d9ea1d49fdf43d4ea8ac34c58507db89dec926a",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_bearing_outer_keeper_right",
+    "file": "STEP/imported/bearing_baseline_ankle_bearing_outer_keeper_left_native_right.step",
+    "sha256": "5c6253f84b497e218de8c50af9f3b5164729b5a3d49d68f16b8b6df35aeb21e3",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "ankle_bearing_inner_cap_right",
+    "file": "STEP/imported/bearing_baseline_ankle_bearing_inner_cap_left_native_right.step",
+    "sha256": "4c6fb015249620297335d6ce8646bf9713534b539076a9372e8a83b8f92a1f2a",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "foot_a_right",
+    "file": "STEP/imported/bearing_baseline_foot_left_native_a_right.step",
+    "sha256": "130b40a30585517895472b61bebb493a5134d5e58b1d32c5df3f4c950ea204f7",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  },
+  {
+    "occurrence": "foot_b_right",
+    "file": "STEP/imported/bearing_baseline_foot_left_native_b_right.step",
+    "sha256": "55c4fb38e2e7798a2f9cb2cf1794bf1440895ca6642dbf79437a68c51d861a50",
+    "origin": "Saved pre-revision native STEP used by the reviewed prototype"
+  }
+]

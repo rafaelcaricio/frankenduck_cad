@@ -1,4 +1,4 @@
-"""Produce a tracked, atomic 3MF print bundle from classified saved geometry."""
+"""Produce a tracked, atomic 3MF and STL print bundle from classified saved geometry."""
 from collections import Counter
 import ast
 import importlib
@@ -27,6 +27,8 @@ MESH_ALGORITHM = "Watson"
 MESH_SURFACE_CONTROL = False
 MESH_INTERNAL_VERTICES = False
 MESH_MIN_SIZE = 1e-5
+MESH_WELD_TOLERANCE = .0001
+MESH_COORD_DECIMALS = 6
 
 
 def sha(path):
@@ -149,8 +151,14 @@ def complete_planar_boundaries(vertices, triangles, shape):
     import numpy as np
     from shapely import Polygon, constrained_delaunay_triangles
     from cadgen import build123d as bd
-    counts = Counter(tuple(sorted((a,b))) for t in triangles for a,b in zip(t,t[1:]+t[:1]))
-    border = [(b,a) for t in triangles for a,b in zip(t,t[1:]+t[:1]) if counts[tuple(sorted((a,b)))] == 1]
+    directed = Counter((a,b) for t in triangles for a,b in zip(t,t[1:]+t[:1]))
+    border = []
+    for a,b in {tuple(sorted(edge)) for edge in directed}:
+        balance = directed[a,b]-directed[b,a]
+        if abs(balance) > 1:
+            raise ValueError("Multiply oriented open boundary")
+        if balance == 1: border.append((b,a))
+        elif balance == -1: border.append((a,b))
     if not border: return []
     successors = dict(border)
     if len(successors) != len(border) or set(successors) != set(successors.values()):
@@ -199,6 +207,68 @@ def complete_planar_boundaries(vertices, triangles, shape):
     return receipts
 
 
+def complete_small_surface_seams(vertices, triangles, shape):
+    """Fill sub-mm2 seam gaps only within the requested CAD mesh tolerance.
+
+    This is an export-only tessellation repair, never a change to the B-rep.
+    Each candidate triangle is checked at 45 barycentric surface samples.
+    """
+    import numpy as np
+    from shapely import Polygon, constrained_delaunay_triangles
+    from cadgen import build123d as bd
+    directed = Counter((a,b) for t in triangles for a,b in zip(t,t[1:]+t[:1]))
+    border = []
+    for a,b in {tuple(sorted(edge)) for edge in directed}:
+        balance = directed[a,b]-directed[b,a]
+        if abs(balance) > 1: raise ValueError("Multiply oriented seam")
+        if balance: border.append((b,a) if balance == 1 else (a,b))
+    successors = dict(border)
+    if len(successors) != len(border) or set(successors) != set(successors.values()):
+        raise ValueError("Surface seam boundary is branched")
+    remaining = set(successors)
+    surface = bd.Compound(list(shape.faces()))
+    receipts, pending = [], []
+    tolerance = min(.01, MESH_TOLERANCE)
+    while remaining:
+        ring = [min(remaining)]
+        while successors[ring[-1]] != ring[0]:
+            following = successors[ring[-1]]
+            if following in ring: raise ValueError("Surface seam is not a simple loop")
+            ring.append(following)
+        remaining.difference_update(ring)
+        xyz = np.array([vertices[i] for i in ring])
+        origin = xyz.mean(axis=0)
+        _,_,basis = np.linalg.svd(xyz-origin)
+        xy = [tuple(p) for p in (xyz-origin) @ basis[:2].T]
+        polygon = Polygon(xy)
+        diameter = float(np.max(np.linalg.norm(xyz[:,None]-xyz[None,:],axis=2)))
+        if not polygon.is_valid or not 0 < polygon.area < 1 or diameter >= 2:
+            raise ValueError("Open region exceeds bounded seam repair size")
+        indices = dict(zip(xy,ring))
+        signed_area = sum(a[0]*b[1]-a[1]*b[0] for a,b in zip(xy,xy[1:]+xy[:1]))
+        maximum, added = 0., []
+        for cell in constrained_delaunay_triangles(polygon).geoms:
+            coords = list(cell.exterior.coords)[:3]
+            triangle = [indices[tuple(p)] for p in coords]
+            points = np.array([vertices[i] for i in triangle])
+            for i in range(9):
+                for j in range(9-i):
+                    point = (points[0]*i+points[1]*j+points[2]*(8-i-j))/8
+                    distance = surface.distance_to(tuple(point))
+                    maximum = max(maximum,distance)
+                    if distance > tolerance:
+                        raise ValueError("Surface seam exceeds CAD deviation tolerance")
+            direction = sum(a[0]*b[1]-a[1]*b[0] for a,b in zip(coords,coords[1:]+coords[:1]))
+            if direction*signed_area < 0: triangle.reverse()
+            added.append(triangle)
+        pending.extend(added)
+        receipts.append(dict(area_mm2=polygon.area, diameter_mm=diameter,
+            triangles=len(added), samples_per_triangle=45,
+            maximum_sampled_surface_distance_mm=maximum, tolerance_mm=tolerance))
+    triangles.extend(pending)
+    return receipts
+
+
 def write_native_3mf(shape, path):
     """Triangulate native faces with OCCT; package using pinned build123d/Lib3MF."""
     from cadgen import build123d as bd
@@ -239,7 +309,7 @@ def write_native_3mf(shape, path):
         triangles.extend([triangle.Value(k)+offset-1 for k in order] for triangle in mesh.Triangles())
     from scipy.spatial import cKDTree
     unique = {}
-    remap = [unique.setdefault(tuple(round(x,6) for x in p), len(unique)) for p in vertices]
+    remap = [unique.setdefault(tuple(round(x,MESH_COORD_DECIMALS) for x in p), len(unique)) for p in vertices]
     vertices = list(unique)
     parents = list(range(len(vertices)))
     def find(i):
@@ -247,12 +317,19 @@ def write_native_3mf(shape, path):
             parents[i] = parents[parents[i]]
             i = parents[i]
         return i
-    for a,b in cKDTree(vertices).query_pairs(.0001):
+    for a,b in cKDTree(vertices).query_pairs(MESH_WELD_TOLERANCE):
         a,b = find(a),find(b)
         parents[max(a,b)] = min(a,b)
     remap = [find(i) for i in remap]
     triangles = [[remap[i] for i in t] for t in triangles if len({remap[i] for i in t}) == 3]
-    planar_receipt = complete_planar_boundaries(vertices, triangles, shape)
+    surface_receipt = []
+    try:
+        planar_receipt = complete_planar_boundaries(vertices, triangles, shape)
+    except ValueError:
+        if not MESH_SURFACE_CONTROL:
+            raise
+        surface_receipt = complete_small_surface_seams(vertices, triangles, shape)
+        planar_receipt = []
     package = bd.Mesher(unit=bd.Unit.MM)
     mesh_object = package.model.AddMeshObject()
     mesh_object.SetGeometry(*bd.Mesher._create_3mf_mesh(vertices, triangles))
@@ -265,8 +342,8 @@ def write_native_3mf(shape, path):
     return dict(linear_deflection_mm=actual_deflection,
                 algorithm=MESH_ALGORITHM, native_parallel=False, control_surface_deflection=MESH_SURFACE_CONTROL, internal_vertices=MESH_INTERNAL_VERTICES,
                 min_size_mm=MESH_MIN_SIZE, angular_deflection_rad=ANGULAR_TOLERANCE,
-                constrained_planar_faces=len(missing), planar_boundary_loops=planar_receipt,
-                seam_weld_tolerance_mm=.0001, library_valid=library_valid, library_manifold=library_manifold)
+                constrained_planar_faces=len(missing), planar_boundary_loops=planar_receipt, surface_seam_patches=surface_receipt,
+                seam_weld_tolerance_mm=MESH_WELD_TOLERANCE, library_valid=library_valid, library_manifold=library_manifold)
 
 
 def write_export_3mf(shape, path):
@@ -334,7 +411,21 @@ def convert_worker(record, stage_path, bundle_path):
             saved_step_valid=record["saved_step_comparison"].get("saved_step_valid", True)
                 if record["saved_step_comparison"] else True),
         source_volume_mm3=native_volume)
-    record["tessellation"] = write_export_3mf(native, bundle/record["filename"])
+    try:
+        record["tessellation"] = write_export_3mf(native, bundle/record["filename"])
+    except ValueError as error:
+        if not MESH_SURFACE_CONTROL:
+            raise
+        saved = bd.import_brep(stage/(name+".brep"))
+        saved.label = name
+        differences = geometric_difference(native, saved)
+        if not saved.is_valid or len(saved.solids()) != 1 or sum(differences) > .02:
+            raise ValueError("Saved export fallback differs from current source") from error
+        record["tessellation"] = write_export_3mf(saved, bundle/record["filename"])
+        record["tessellation"]["verified_saved_geometry_fallback"] = dict(
+            original_mesh_error=str(error), bidirectional_difference_mm3=differences)
+        record["geometry_source"] = "saved_assembly_brep_verified_against_current_factory"
+
     measured = inspect_3mf(bundle/record["filename"], allow_numerical_overlaps=True)
     allowed = max(.01, 2*MESH_TOLERANCE+1e-5)
     bound_error = max(abs(a-b) for a,b in zip(measured["bounds_mm"],record["expected_bounds_mm"]))
@@ -363,6 +454,56 @@ def export_inputs():
     return inputs,key
 
 
+def write_verified_stl(source, destination, reference):
+    """STL uses the validated 3MF triangles, with a checked float32 round trip."""
+    import struct
+    with zipfile.ZipFile(source) as archive:
+        model = ET.fromstring(archive.read("3D/3dmodel.model"))
+    ns = {"m": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"}
+    meshes = model.findall("m:resources/m:object/m:mesh", ns)
+    items = model.findall("m:build/m:item", ns)
+    if len(meshes) != 1 or len(items) != 1 or items[0].get("transform", "1 0 0 0 1 0 0 0 1 0 0 0") != "1 0 0 0 1 0 0 0 1 0 0 0":
+        raise ValueError("STL conversion requires one normalized 3MF mesh with identity placement")
+    mesh = meshes[0]
+    vertices = [tuple(float(v.get(a)) for a in ('x','y','z')) for v in mesh.findall('m:vertices/m:vertex',ns)]
+    faces = [tuple(int(t.get(k)) for k in ('v1','v2','v3')) for t in mesh.findall('m:triangles/m:triangle',ns)]
+    destination.parent.mkdir(exist_ok=True)
+    with destination.open('wb') as out:
+        out.write(b'Frankenduck; millimetres; from validated 3MF'.ljust(80,b' '))
+        out.write(struct.pack('<I',len(faces)))
+        for face in faces:
+            a,b,c=[vertices[i] for i in face]
+            u=[b[i]-a[i] for i in range(3)];v=[c[i]-a[i] for i in range(3)]
+            normal=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]]
+            length=math.sqrt(sum(n*n for n in normal))
+            normal=[n/length for n in normal] if length else [0.,0.,0.]
+            out.write(struct.pack('<12fH',*normal,*a,*b,*c,0))
+    blob=destination.read_bytes()
+    count=struct.unpack_from('<I',blob,80)[0]
+    assert count==len(faces) and len(blob)==84+50*count
+    edge_count,directions=Counter(),Counter();terms=[];points=[]
+    for index in range(count):
+        row=struct.unpack_from('<12fH',blob,84+50*index)
+        a,b,c=tuple(row[3:6]),tuple(row[6:9]),tuple(row[9:12])
+        if len({a,b,c})!=3:raise ValueError('STL float32 collapsed a triangle')
+        points.extend((a,b,c))
+        for u,v in ((a,b),(b,c),(c,a)):
+            edge=tuple(sorted((u,v)));edge_count[edge]+=1;directions[edge]+=1 if u<v else -1
+        terms.append((a[0]*(b[1]*c[2]-b[2]*c[1])+a[1]*(b[2]*c[0]-b[0]*c[2])+a[2]*(b[0]*c[1]-b[1]*c[0]))/6)
+    open_edges=sum(n==1 for n in edge_count.values());winding=sum(n!=0 for n in directions.values())
+    bad=sum(n!=2 for n in edge_count.values())
+    balanced=all(n>=2 and n%2==0 for n in edge_count.values()) and not winding
+    volume=math.fsum(terms)
+    bounds=[*[min(p[i] for p in points) for i in range(3)],*[max(p[i] for p in points) for i in range(3)]]
+    error=max(abs(a-b) for a,b in zip(bounds,reference['bounds_mm']))
+    fraction=abs(volume-reference['volume_mm3'])/reference['volume_mm3']
+    if open_edges or winding or (bad and not balanced) or volume<=0 or error>1e-4 or fraction>1e-5:
+        raise ValueError(f'STL conversion changed mesh: {destination.name}; edges={bad}, winding={winding}, volume_error={fraction}, bounds_error={error}')
+    return dict(triangles=count,units_assumed='mm',open_edges=open_edges,inconsistent_winding_edges=winding,
+                nonmanifold_edges=bad,volume_mm3=volume,bounds_mm=bounds,relative_volume_error=fraction,
+                max_bound_error_mm=error,sha256=sha(destination))
+
+
 def publish_bundle(records, bundle, stage, inputs, key):
     from tools.cad import build_status
     if build_status()[0] != "PASS" or export_inputs()[1] != key:
@@ -381,17 +522,20 @@ def publish_bundle(records, bundle, stage, inputs, key):
         if bounds_error > record["allowed_bound_error_mm"] or volume_error > MAX_RELATIVE_VOLUME_ERROR:
             raise ValueError("Print file differs from native geometry")
         record["mesh"] = measured
+        record["stl_filename"] = f"stl/{record['model']}.stl"
+        record["stl"] = write_verified_stl(path, bundle/record["stl_filename"], measured)
     destination = ROOT/"printable"
     with (bundle/"PARTS.csv").open("w", newline="") as stream:
-        fields = ["filename", "model", "quantity", "material_hint", "print_release", "occurrences"]
-        writer = csv.DictWriter(stream, fieldnames=fields)
+        fields = ["filename", "stl_filename", "model", "quantity", "material_hint", "print_release", "occurrences"]
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for record in records:
             row = {k:record[k] for k in fields}
             row["occurrences"] = ";".join(o["ref"]+":"+o["name"] for o in record["occurrences"])
             writer.writerow(row)
-    lines = ["# Frankenduck printable parts", "", f"This directory contains **{len(records)} individual 3MF files** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.", "", "Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).", "", "Print-release status is **unreviewed**. The exports have passed mesh integrity and geometry-conversion checks; these do not establish printability or physical fit. Choose material, orientation, supports and slicer settings for your printer. Material hints are listed in PARTS.csv; choose the final material and slicer settings for your printer.", "", "Geometry keeps its saved rest-pose axes, translated to centre X/Y and put its lowest Z at zero. No automatic print orientation is selected.", "", "The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes, mesh checks and export settings. Regenerate from the repository root with `./cad build` followed by `./cad export print`. An unchanged bundle is reused; `--force` regenerates it. This directory is generated and committed. Edit the model/catalog and regenerate rather than editing these files.", "", "| File | Quantity | Material hint |", "| --- | ---: | --- |"]
+    lines = ["# Frankenduck printable parts", "", f"This directory contains **{len(records)} printable models, each supplied as 3MF and STL** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.", "", "Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).", "", "Print-release status is **unreviewed**. The exports have passed mesh integrity and geometry-conversion checks; these do not establish printability or physical fit. Choose material, orientation, supports and slicer settings for your printer. Material hints are listed in PARTS.csv; choose the final material and slicer settings for your printer.", "", "Geometry keeps its saved rest-pose axes, translated to centre X/Y and put its lowest Z at zero. No automatic print orientation is selected.", "", "The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes, mesh checks and export settings. Regenerate from the repository root with `./cad build` followed by `./cad export print`. An unchanged bundle is reused; `--force` regenerates it. This directory is generated and committed. Edit the model/catalog and regenerate rather than editing these files.", "", "| File | Quantity | Material hint |", "| --- | ---: | --- |"]
     lines.extend(f"| [{r['model']}.3mf]({r['filename']}) | {r['quantity']} | {r['material_hint']} |" for r in records)
+    lines.extend(["", "## STL copies", "", "Matching binary STL files are in `stl/`. Import them as millimetres: STL cannot encode units or colors. They contain the same validated triangles as the 3MF files, checked again after float32 conversion. The CAD assembly carries the viewer colors. See `docs/bearing-revision.md` in the project for the bearing revision's unresolved movement and fit limitations."])
     (bundle/"README.md").write_text("\n".join(lines)+"\n")
     files = {str(p.relative_to(bundle)):sha(p) for p in sorted(bundle.rglob("*")) if p.is_file()}
     manifest = dict(generated_utc=datetime.now(timezone.utc).isoformat(), input_key=key, inputs=inputs,
@@ -408,7 +552,7 @@ def publish_bundle(records, bundle, stage, inputs, key):
     except Exception:
         if previous.exists(): previous.rename(destination)
         raise
-    print(f"Print bundle ready: {len(records)} validated 3MF files in printable/3mf/")
+    print(f"Print bundle ready: {len(records)} validated 3MF/STL pairs in printable/")
     return manifest
 
 
@@ -435,7 +579,7 @@ def export(force=False):
     except (OSError, ValueError, KeyError):
         unchanged = False
     if unchanged and not force:
-        print(f"Print bundle current: {len(selected)} 3MF files in printable/3mf/")
+        print(f"Print bundle current: {len(selected)} 3MF/STL pairs in printable/")
         return old
     # Native geometry is loaded only for an explicit export, never fast checks.
     from cadgen import read_scene
@@ -487,7 +631,7 @@ def export(force=False):
         def launch(record):
             task = stage/(record["model"]+".json")
             failures = []
-            for algorithm,tolerance in (("Watson",.01),("WatsonControlled",.05),("Delabella",.0005),("Watson",.00001)):
+            for algorithm,tolerance in (("Watson",.01),("WatsonControlled",.05),("Delabella",.0005),("Watson",.00001),("WatsonFineControlled",.01)):
                 task.write_text(json.dumps(record))
                 try:
                     result = subprocess.run([sys.executable,"-m","tools.print_export","--worker",
@@ -523,6 +667,11 @@ if __name__ == "__main__":
     if len(sys.argv) == 6 and sys.argv[1] == "--worker":
         MESH_ALGORITHM = sys.argv[4]
         MESH_TOLERANCE = float(sys.argv[5])
+        if MESH_ALGORITHM == "WatsonFineControlled":
+            MESH_WELD_TOLERANCE = .000001
+            MESH_COORD_DECIMALS = 8
+            MESH_ALGORITHM = "Watson"
+            MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True
         if MESH_ALGORITHM == "WatsonControlled":
             MESH_ALGORITHM = "Watson"
             MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True

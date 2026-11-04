@@ -636,9 +636,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -654,9 +654,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -672,9 +672,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -690,9 +690,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -708,9 +708,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -726,9 +726,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -834,9 +834,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -852,9 +852,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -870,9 +870,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -888,9 +888,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -906,9 +906,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -924,9 +924,9 @@
       },
       "at": [
         [
-          0,
-          0,
-          0
+          2.220446049250313e-16,
+          5.773159728050814e-16,
+          -2.1649348980190552e-16
         ],
         [
           "Z",
@@ -936,7 +936,7 @@
     },
     {
       "name": "servo_hip_l",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -956,7 +956,7 @@
     },
     {
       "name": "servo_hip_l_2",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -976,7 +976,7 @@
     },
     {
       "name": "servo_yaw2roll",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -996,7 +996,7 @@
     },
     {
       "name": "servo_bearing_roll",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1016,7 +1016,7 @@
     },
     {
       "name": "servo_leg",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1036,7 +1036,7 @@
     },
     {
       "name": "servo_leg_2",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1056,7 +1056,7 @@
     },
     {
       "name": "servo_upper_leg_left",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1076,7 +1076,7 @@
     },
     {
       "name": "servo_upper_leg_right",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1096,13 +1096,13 @@
     },
     {
       "name": "servo_ankle_left",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
-          87.075,
+          85.775,
           42.8991,
-          3.975
+          3.9749999999999996
         ],
         [
           [
@@ -1116,11 +1116,11 @@
     },
     {
       "name": "servo_ankle_right",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
-          -87.0751,
+          -85.77510000000001,
           42.8991,
           3.9749
         ],
@@ -1275,6 +1275,358 @@
         [
           "Z",
           0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_carrier_left",
+      "component": "bearing_carrier_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_roll_adapter_left",
+      "component": "bearing_roll_adapter_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_screws_left",
+      "component": "bearing_screws_left",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_carrier_right",
+      "component": "bearing_carrier_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_roll_adapter_right",
+      "component": "bearing_roll_adapter_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_screws_right",
+      "component": "bearing_screws_right",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_shared_yaw_adapter",
+      "component": "bearing_shared_yaw_adapter",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_ankle_adapter_left",
+      "component": "bearing_ankle_adapter",
+      "params": {},
+      "at": [
+        [
+          85.775,
+          42.8991,
+          3.9749999999999996
+        ],
+        [
+          [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          239.99999999999997
+        ]
+      ]
+    },
+    {
+      "name": "bearing_ankle_adapter_right",
+      "component": "bearing_ankle_adapter",
+      "params": {},
+      "at": [
+        [
+          -85.77510000000001,
+          42.8991,
+          3.9749
+        ],
+        [
+          [
+            -0.5773502691896257,
+            0.5773502691896257,
+            -0.5773502691896258
+          ],
+          119.99999999999999
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_yaw2roll",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          23.625,
+          -8.1,
+          120.25
+        ],
+        [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_bearing_roll",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          -23.625,
+          -8.1,
+          120.25
+        ],
+        [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_hip_l",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          23.625,
+          -30.375,
+          100.375
+        ],
+        [
+          [
+            0.0,
+            -0.7071067811865475,
+            -0.7071067811865476
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_hip_l_2",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          -23.625,
+          -30.375,
+          100.375
+        ],
+        [
+          [
+            0.0,
+            -0.7071067811865475,
+            -0.7071067811865476
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_upper_leg_left",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          51.975,
+          -5.4,
+          100.375
+        ],
+        [
+          [
+            -0.7071067811865475,
+            0.0,
+            -0.7071067811865476
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_upper_leg_right",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          -51.975,
+          -5.4,
+          100.375
+        ],
+        [
+          [
+            0.7071067811865475,
+            0.0,
+            -0.7071067811865476
+          ],
+          180.0
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_leg",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          51.975,
+          42.8991,
+          70.675
+        ],
+        [
+          [
+            -0.5773502691896257,
+            0.5773502691896257,
+            -0.5773502691896258
+          ],
+          119.99999999999999
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_leg_2",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          -51.975,
+          42.8991,
+          70.675
+        ],
+        [
+          [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          239.99999999999997
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_ankle_left",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          85.775,
+          42.8991,
+          3.9749999999999996
+        ],
+        [
+          [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          239.99999999999997
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_servo_ankle_right",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          -85.77510000000001,
+          42.8991,
+          3.9749
+        ],
+        [
+          [
+            -0.5773502691896257,
+            0.5773502691896257,
+            -0.5773502691896258
+          ],
+          119.99999999999999
         ]
       ]
     }
@@ -1480,9 +1832,9 @@
       "parent": "#leg_left",
       "child": "#ankle_left",
       "origin": [
-        87.075,
+        85.775,
         42.8991,
-        3.975
+        3.9749999999999996
       ],
       "direction": [
         1,
@@ -1640,7 +1992,7 @@
       "parent": "#leg_right",
       "child": "#ankle_right",
       "origin": [
-        -87.075,
+        -85.775,
         42.8991,
         3.975
       ],
@@ -1935,6 +2287,120 @@
         0.0,
         95.0
       ]
+    },
+    {
+      "name": "fix_bearing_carrier_left",
+      "kind": "fastened",
+      "parent": "#upper_leg_left",
+      "child": "#bearing_carrier_left"
+    },
+    {
+      "name": "fix_bearing_roll_adapter_left",
+      "kind": "fastened",
+      "parent": "#yaw2roll_left",
+      "child": "#bearing_roll_adapter_left"
+    },
+    {
+      "name": "fix_bearing_screws_left",
+      "kind": "fastened",
+      "parent": "#yaw2roll_left",
+      "child": "#bearing_screws_left"
+    },
+    {
+      "name": "fix_bearing_carrier_right",
+      "kind": "fastened",
+      "parent": "#upper_leg_right",
+      "child": "#bearing_carrier_right"
+    },
+    {
+      "name": "fix_bearing_roll_adapter_right",
+      "kind": "fastened",
+      "parent": "#yaw2roll_right",
+      "child": "#bearing_roll_adapter_right"
+    },
+    {
+      "name": "fix_bearing_screws_right",
+      "kind": "fastened",
+      "parent": "#yaw2roll_right",
+      "child": "#bearing_screws_right"
+    },
+    {
+      "name": "fix_bearing_shared_yaw_adapter",
+      "kind": "fastened",
+      "parent": "#trunk_base",
+      "child": "#bearing_shared_yaw_adapter"
+    },
+    {
+      "name": "fix_bearing_ankle_adapter_left",
+      "kind": "fastened",
+      "parent": "#servo_ankle_left",
+      "child": "#bearing_ankle_adapter_left"
+    },
+    {
+      "name": "fix_bearing_ankle_adapter_right",
+      "kind": "fastened",
+      "parent": "#servo_ankle_right",
+      "child": "#bearing_ankle_adapter_right"
+    },
+    {
+      "name": "fix_bearing_6704_servo_yaw2roll",
+      "kind": "fastened",
+      "parent": "#servo_yaw2roll",
+      "child": "#bearing_6704_servo_yaw2roll"
+    },
+    {
+      "name": "fix_bearing_6704_servo_bearing_roll",
+      "kind": "fastened",
+      "parent": "#servo_bearing_roll",
+      "child": "#bearing_6704_servo_bearing_roll"
+    },
+    {
+      "name": "fix_bearing_6704_servo_hip_l",
+      "kind": "fastened",
+      "parent": "#servo_hip_l",
+      "child": "#bearing_6704_servo_hip_l"
+    },
+    {
+      "name": "fix_bearing_6704_servo_hip_l_2",
+      "kind": "fastened",
+      "parent": "#servo_hip_l_2",
+      "child": "#bearing_6704_servo_hip_l_2"
+    },
+    {
+      "name": "fix_bearing_6704_servo_upper_leg_left",
+      "kind": "fastened",
+      "parent": "#servo_upper_leg_left",
+      "child": "#bearing_6704_servo_upper_leg_left"
+    },
+    {
+      "name": "fix_bearing_6704_servo_upper_leg_right",
+      "kind": "fastened",
+      "parent": "#servo_upper_leg_right",
+      "child": "#bearing_6704_servo_upper_leg_right"
+    },
+    {
+      "name": "fix_bearing_6704_servo_leg",
+      "kind": "fastened",
+      "parent": "#servo_leg",
+      "child": "#bearing_6704_servo_leg"
+    },
+    {
+      "name": "fix_bearing_6704_servo_leg_2",
+      "kind": "fastened",
+      "parent": "#servo_leg_2",
+      "child": "#bearing_6704_servo_leg_2"
+    },
+    {
+      "name": "fix_bearing_6704_servo_ankle_left",
+      "kind": "fastened",
+      "parent": "#servo_ankle_left",
+      "child": "#bearing_6704_servo_ankle_left"
+    },
+    {
+      "name": "fix_bearing_6704_servo_ankle_right",
+      "kind": "fastened",
+      "parent": "#servo_ankle_right",
+      "child": "#bearing_6704_servo_ankle_right"
     }
   ],
   "poses": {

@@ -137,10 +137,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "ankle_left_native_right",
@@ -151,10 +151,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "ankle_left_native_seated",
@@ -347,10 +347,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "hip_left_native_right",
@@ -361,10 +361,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "hip_left_native_seated",
@@ -521,10 +521,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "leg_left_native_right",
@@ -535,10 +535,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "leg_left_native_seated",
@@ -877,10 +877,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "yaw2roll_left_native_right",
@@ -891,10 +891,10 @@
       "role": "printed_part",
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
-      "material_hint": "pla",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
     },
     {
       "model": "yaw2roll_left_native_seated",
@@ -957,6 +957,126 @@
       "export": true,
       "active_variant": true,
       "notes": "Body-coloured rump pod for the PAPK 12 A4 stick: fairing on the back line closed by a low dome, front opening into the body, socket with nominal latch lips, contact slots, T contact window, and a front tongue held by two M3 x 12 socket-head screws into M3 x 5.7 heat-set inserts. Latch and contact geometry follow the photo-derived stick and are approximate; physical fit and strength unverified."
+    },
+    {
+      "model": "bearing_carrier_left",
+      "component": "bearing_carrier_left",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_carrier_right",
+      "component": "bearing_carrier_right",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_roll_adapter_left",
+      "component": "bearing_roll_adapter_left",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_roll_adapter_right",
+      "component": "bearing_roll_adapter_right",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_shared_yaw_adapter",
+      "component": "bearing_shared_yaw_adapter",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_ankle_adapter",
+      "component": "bearing_ankle_adapter",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "export": true,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_6704",
+      "component": "bearing_6704",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "steel appearance; reference envelope",
+      "export": false,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_screws_left",
+      "component": "bearing_screws_left",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "steel appearance; reference envelope",
+      "export": false,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_screws_right",
+      "component": "bearing_screws_right",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "steel appearance; reference envelope",
+      "export": false,
+      "active_variant": true,
+      "notes": "Promoted 6704 bearing revision. See docs/bearing-revision.md; movement and physical fit not released."
+    },
+    {
+      "model": "bearing_servo_reference",
+      "component": "bearing_servo_reference",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "imported_reference",
+      "print_release": "not_applicable",
+      "material_hint": "black servo casing; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Detailed vendor casing and measured horn envelope for the ten leg servos only. Rear case repaired for visual context. Horn seating provisional."
     }
   ],
   "review_geometry": [

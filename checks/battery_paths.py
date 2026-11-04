@@ -22,7 +22,7 @@ def _scene():
 
 
 def motion():
-    """All recorded walk/sit keyframes: 30 leg occurrences against the battery, pod, trunk and shells."""
+    """All articulated leg occurrences at recorded walk/sit keyframes against the battery area."""
     import itertools
     import numpy as np
     from checks.common import bound_gap, distance, volume, clip_data, joint_matrix, posed
@@ -30,7 +30,20 @@ def motion():
     clips, operations = clip_data(ROOT)
     clip = clips['walk_sit_stand_walk_sit']
     legs = [op for op in operations if any(j['name'].startswith(('left_', 'right_')) for j in op['joints'])]
-    assert len(legs) == 30, 'Leg occurrence coverage changed'
+    data = json.loads((ROOT/'source/assembly_data.json').read_text())
+    descendants = {}
+    for mate in data['mates']:
+        descendants.setdefault(mate['parent'].lstrip('#'), []).append(mate['child'].lstrip('#'))
+    pending = [m['child'].lstrip('#') for m in data['mates'] if m['name'] in ('left_hip_yaw', 'right_hip_yaw')]
+    assert len(pending) == 2, 'Both hip yaw chains must be declared'
+    expected = set()
+    while pending:
+        name = pending.pop()
+        if name not in expected:
+            expected.add(name)
+            pending.extend(descendants.get(name, []))
+    actual = {occurrences[op['target']].label for op in legs}
+    assert actual == expected and len(legs) == len(actual), ('Leg motion coverage differs from the mate graph', sorted(expected-actual), sorted(actual-expected))
 
     def sat_gap(moving_box, m, other_box):
         # Exact boxes enclose the B-reps; projected separation is a conservative
@@ -82,9 +95,9 @@ def motion():
         else:
             row['minimum_exact_tested_gap_mm'] = row.pop('gap_mm')
     result = {'document_sha256': scene.document_hash, 'units': 'mm', 'keyframes': len(clip['keys']), 'pairs': count,
-              'exact_distances': exact, 'near_minima': minima, 'proven_sampled_gap_lower_bound_mm': certified,
+              'leg_occurrences': len(legs), 'leg_occurrence_names': sorted(actual), 'exact_distances': exact, 'near_minima': minima, 'proven_sampled_gap_lower_bound_mm': certified,
               'minimum_gap_mm': 1.0, 'below_1mm': bad, 'passed': not bad,
-              'scope': '30 leg occurrences against the battery, stick pod, trunk and both shells. Keyframes only; '
+              'scope': f'{len(legs)} articulated leg occurrences, checked against the declared mate graph, against the battery, stick pod, trunk and both shells. Keyframes only; '
                        'linear interpolation is not certified. Distances of 2 mm or more may be rejected using conservative bounds.'}
     (OUT / 'battery_motion_verification.json').write_text(json.dumps(result, indent=2) + '\n')
     print('MOTION_RESULT', {k: v for k, v in result.items() if k != 'below_1mm'}, flush=True)
