@@ -2,7 +2,7 @@ from __future__ import annotations
 from cadgen import step
 
 
-def make():
+def baseline_make():
     from lib.cadquery_adapter import to_build123d
     """Head yaw-to-roll link. World millimetres, Z up."""
     import math
@@ -165,6 +165,12 @@ def make():
     model.material('pla', color='#8a8a90')
     result = model.result()
     return to_build123d(model, 'yaw_roll_link_native')
+
+
+def make():
+    from lib.head_bearings import yaw_roll_link
+    from cadgen import build123d as bd
+    return yaw_roll_link().rotate(bd.Axis.Z,90)
 
 
 @step(out="../../STEP/parts/yaw_roll_link_native.step")

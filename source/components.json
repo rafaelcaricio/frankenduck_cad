@@ -336,7 +336,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Promoted head/neck bearing revision with assembly access and explicit clearances. Physical fit untested."
     },
     {
       "model": "hip_left_native",
@@ -638,7 +638,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Promoted head/neck bearing revision with assembly access and explicit clearances. Physical fit untested."
     },
     {
       "model": "noenoeil_native",
@@ -920,7 +920,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part."
+      "notes": "Promoted head/neck bearing revision with assembly access and explicit clearances. Physical fit untested."
     },
     {
       "model": "parkside_pap_204_a1",
@@ -1076,7 +1076,19 @@
       "material_hint": "black servo casing; purchased hardware",
       "export": false,
       "active_variant": true,
-      "notes": "Detailed vendor casing and measured horn envelope for the ten leg servos only. Rear case repaired for visual context. Horn seating provisional."
+      "notes": "Detailed vendor casing and measured horn envelope for bearing-equipped leg and head servos; installed horn datums documented in head-neck design notes."
+    },
+    {
+      "model": "bearing_head_adapter",
+      "component": "bearing_head_adapter",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer",
+      "export": true,
+      "active_variant": true,
+      "notes": "Shared STS3215 head yaw and head roll bearing adapter; two assembly occurrences. Physical fit untested."
     }
   ],
   "review_geometry": [

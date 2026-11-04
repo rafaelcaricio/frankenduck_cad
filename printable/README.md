@@ -1,6 +1,6 @@
 # Frankenduck printable parts
 
-This directory contains **50 printable models, each supplied as 3MF and STL** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
+This directory contains **51 printable models, each supplied as 3MF and STL** for the printed components used in the current assembly. Purchased electronics, servos, horns, batteries, the heatsink, unused variants and review volumes are excluded.
 
 Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).
 
@@ -20,12 +20,6 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [ankle_eye_left_native_right.3mf](3mf/ankle_eye_left_native_right.3mf) | 1 | pla |
 | [ankle_left_native.3mf](3mf/ankle_left_native.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
 | [ankle_left_native_right.3mf](3mf/ankle_left_native_right.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
-| [bearing_ankle_adapter.3mf](3mf/bearing_ankle_adapter.3mf) | 2 | black printed polymer; unselected |
-| [bearing_carrier_left.3mf](3mf/bearing_carrier_left.3mf) | 1 | black printed polymer; unselected |
-| [bearing_carrier_right.3mf](3mf/bearing_carrier_right.3mf) | 1 | black printed polymer; unselected |
-| [bearing_roll_adapter_left.3mf](3mf/bearing_roll_adapter_left.3mf) | 1 | black printed polymer; unselected |
-| [bearing_roll_adapter_right.3mf](3mf/bearing_roll_adapter_right.3mf) | 1 | black printed polymer; unselected |
-| [bearing_shared_yaw_adapter.3mf](3mf/bearing_shared_yaw_adapter.3mf) | 1 | black printed polymer; unselected |
 | [bottom_head_shell_native.3mf](3mf/bottom_head_shell_native.3mf) | 1 | pla |
 | [electronics_deck_native.3mf](3mf/electronics_deck_native.3mf) | 1 | pla |
 | [face_part_native.3mf](3mf/face_part_native.3mf) | 1 | pla |
@@ -53,7 +47,6 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [soft_mouth_top_native.3mf](3mf/soft_mouth_top_native.3mf) | 1 | fdm-tpu |
 | [sole_left_native.3mf](3mf/sole_left_native.3mf) | 1 | fdm-tpu |
 | [sole_left_native_right.3mf](3mf/sole_left_native_right.3mf) | 1 | fdm-tpu |
-| [stick_pod_native.3mf](3mf/stick_pod_native.3mf) | 1 | pla |
 | [top_head_shell_native.3mf](3mf/top_head_shell_native.3mf) | 1 | pla |
 | [trunk_base_native.3mf](3mf/trunk_base_native.3mf) | 1 | pla |
 | [ubec_clamp_native.3mf](3mf/ubec_clamp_native.3mf) | 1 | pla |
@@ -62,6 +55,14 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [yaw2roll_left_native.3mf](3mf/yaw2roll_left_native.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
 | [yaw2roll_left_native_right.3mf](3mf/yaw2roll_left_native_right.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
 | [yaw_roll_link_native.3mf](3mf/yaw_roll_link_native.3mf) | 1 | pla |
+| [stick_pod_native.3mf](3mf/stick_pod_native.3mf) | 1 | pla |
+| [bearing_carrier_left.3mf](3mf/bearing_carrier_left.3mf) | 1 | black printed polymer; unselected |
+| [bearing_carrier_right.3mf](3mf/bearing_carrier_right.3mf) | 1 | black printed polymer; unselected |
+| [bearing_roll_adapter_left.3mf](3mf/bearing_roll_adapter_left.3mf) | 1 | black printed polymer; unselected |
+| [bearing_roll_adapter_right.3mf](3mf/bearing_roll_adapter_right.3mf) | 1 | black printed polymer; unselected |
+| [bearing_shared_yaw_adapter.3mf](3mf/bearing_shared_yaw_adapter.3mf) | 1 | black printed polymer; unselected |
+| [bearing_ankle_adapter.3mf](3mf/bearing_ankle_adapter.3mf) | 2 | black printed polymer; unselected |
+| [bearing_head_adapter.3mf](3mf/bearing_head_adapter.3mf) | 2 | black printed polymer |
 
 ## STL copies
 

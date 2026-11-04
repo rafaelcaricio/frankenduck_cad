@@ -2,7 +2,7 @@ from __future__ import annotations
 from cadgen import step
 
 
-def make():
+def baseline_make():
     from lib.cadquery_adapter import to_build123d
     """Head frame carrying the jaw and head electronics. World millimetres, Z up."""
     import math
@@ -258,6 +258,12 @@ def make():
     model.material('pla', color='#8a8a90')
     result = model.result()
     return to_build123d(model, 'head_frame_native')
+
+
+def make():
+    from lib.head_bearings import head_frame
+    from cadgen import build123d as bd
+    return head_frame().rotate(bd.Axis.Z,90)
 
 
 @step(out="../../STEP/parts/head_frame_native.step")

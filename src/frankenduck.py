@@ -75,6 +75,7 @@ from parts.bearing_screws_left import bearing_screws_left
 from parts.bearing_screws_right import bearing_screws_right
 from lib.viewer_palette import apply_palette
 from parts.bearing_servo_reference import bearing_servo_reference
+from parts.bearing_head_adapter import bearing_head_adapter
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSEMBLY_PATH = ROOT / "source/assembly_data.json"
@@ -171,10 +172,10 @@ def frankenduck():
     children.append(place(bearing_servo_reference(), 'servo_upper_leg_right', ((-51.975, -5.4, 100.375), ((0.7071067811865475, 0.0, -0.7071067811865476), 180.0))))
     children.append(place(bearing_servo_reference(), 'servo_ankle_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
     children.append(place(bearing_servo_reference(), 'servo_ankle_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
-    children.append(place(sts3215_servo_native(), 'servo_neck_upper', ((17.6, -35.1, 235.769), ((0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
+    children.append(place(bearing_servo_reference(), 'servo_neck_upper', ((17.6, -35.1, 235.769), ((0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
     children.append(place(sts3215_servo_native(), 'servo_neck_lower', ((17.6, -35.1, 163.769), ((0.5773502691896258, 0.5773502691896258, -0.5773502691896258), 239.99999999999997))))
-    children.append(place(sts3215_servo_native(), 'servo_head_roll', ((0.0, -14.935, 280.5798), ((-0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
-    children.append(place(sts3215_servo_native(), 'servo_head_yaw', ((0.0, -35.1, 258.0048), ('Z', -90))))
+    children.append(place(bearing_servo_reference(), 'servo_head_roll', ((0.0, -14.935, 280.5798), ((-0.5773502691896257, -0.5773502691896257, -0.5773502691896258), 119.99999999999999))))
+    children.append(place(bearing_servo_reference(), 'servo_head_yaw', ((0.0, -35.1, 258.0048), ('Z', -90))))
     children.append(place(sts3215_servo_native(), 'servo_jaw_direct', ((53.0, -35.235, 284.6348), ((-0.052265535382890235, -0.9972577629795188, 0.05239530502082981), 90.01400599288137))))
     children.append(place(radxa_6530b(), 'radxa_6530b', HEATSINK_AT))
     children.append(place(parkside_papk_12_a4(), 'parkside_battery', STICK_AT))
@@ -198,6 +199,10 @@ def frankenduck():
     children.append(place(bearing_6704(), 'bearing_6704_servo_leg_2', [[-51.975, 42.8991, 70.675], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
     children.append(place(bearing_6704(), 'bearing_6704_servo_ankle_left', [[85.775, 42.8991, 3.9749999999999996], [[0.5773502691896258, 0.5773502691896258, -0.5773502691896258], 239.99999999999997]]))
     children.append(place(bearing_6704(), 'bearing_6704_servo_ankle_right', [[-85.77510000000001, 42.8991, 3.9749], [[-0.5773502691896257, 0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(bearing_head_adapter(), 'bearing_head_yaw_adapter', [[0.0, -35.1, 258.0048], ['Z', -90]]))
+    children.append(place(bearing_6704(), 'bearing_6704_head_yaw', [[0.0, -35.1, 258.0048], ['Z', -90]]))
+    children.append(place(bearing_head_adapter(), 'bearing_head_roll_adapter', [[0.0, -14.935, 280.5798], [[-0.5773502691896257, -0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
+    children.append(place(bearing_6704(), 'bearing_6704_head_roll', [[0.0, -14.935, 280.5798], [[-0.5773502691896257, -0.5773502691896257, -0.5773502691896258], 119.99999999999999]]))
     return apply_palette(bd.Compound(children=children, label="frankenduck"))
 
 if __name__ == "__main__":

@@ -177,6 +177,26 @@
       ],
       "report": "reports/latest/stick_pod_quality.json",
       "coverage": "Stick pod only, as saved. Checkers first find the error in known-error fixtures. 0.05 mm short edges, 0.05 mm2 small and 0.1 mm narrow faces; 1.2 mm ray-cast wall (0.5 mm samples; rays leaving a face at under 25 degrees are left to the edge check); mirror symmetry of the whole pod about X = 0 on 0.25 mm mesh slices (0.05 mm band ignored); outside edges rounded 0.5 mm or named; closed voids; support area for six build directions (reported); every hole owned by a fastener; bd_warehouse M3 ISO 4762 screws in CNC Kitchen inserts. Accepted problems are named boxes at most 40 mm a side and within 2 mm of their findings. No slicing, strength or physical fit test."
+    },
+    {
+      "id": "head_neck.fit",
+      "call": "checks.head_neck:fit",
+      "purpose": "Head and neck bearing fits, openings and sampled motion",
+      "suites": [
+        "full"
+      ],
+      "inputs": [
+        "src/lib/head_bearings.py",
+        "src/lib/neck_pitch.py",
+        "src/lib/bearing_revision/*.py",
+        "src/parts/head_frame_native.py",
+        "src/parts/yaw_roll_link_native.py",
+        "src/parts/neck_pitch_001_native.py",
+        "STEP/imported/*.step",
+        "checks/head_neck.py"
+      ],
+      "report": "reports/latest/head_neck_verification.json",
+      "coverage": "Nominal radial/axial clearances, four screw wells, open cable paths and servo insertion. Local sampled pitch/yaw/roll; not combined continuous motion or physical validation."
     }
   ]
 }

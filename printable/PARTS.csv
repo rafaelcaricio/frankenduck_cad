@@ -7,12 +7,6 @@ filename,stl_filename,model,quantity,material_hint,print_release,occurrences
 3mf/ankle_eye_left_native_right.3mf,stl/ankle_eye_left_native_right.stl,ankle_eye_left_native_right,1,pla,unreviewed,#o1.50:ankle_eye_right
 3mf/ankle_left_native.3mf,stl/ankle_left_native.stl,ankle_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.38:ankle_left
 3mf/ankle_left_native_right.3mf,stl/ankle_left_native_right.stl,ankle_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.49:ankle_right
-3mf/bearing_ankle_adapter.3mf,stl/bearing_ankle_adapter.stl,bearing_ankle_adapter,2,black printed polymer; unselected,unreviewed,#o1.81:bearing_ankle_adapter_left;#o1.82:bearing_ankle_adapter_right
-3mf/bearing_carrier_left.3mf,stl/bearing_carrier_left.stl,bearing_carrier_left,1,black printed polymer; unselected,unreviewed,#o1.74:bearing_carrier_left
-3mf/bearing_carrier_right.3mf,stl/bearing_carrier_right.stl,bearing_carrier_right,1,black printed polymer; unselected,unreviewed,#o1.77:bearing_carrier_right
-3mf/bearing_roll_adapter_left.3mf,stl/bearing_roll_adapter_left.stl,bearing_roll_adapter_left,1,black printed polymer; unselected,unreviewed,#o1.75:bearing_roll_adapter_left
-3mf/bearing_roll_adapter_right.3mf,stl/bearing_roll_adapter_right.stl,bearing_roll_adapter_right,1,black printed polymer; unselected,unreviewed,#o1.78:bearing_roll_adapter_right
-3mf/bearing_shared_yaw_adapter.3mf,stl/bearing_shared_yaw_adapter.stl,bearing_shared_yaw_adapter,1,black printed polymer; unselected,unreviewed,#o1.80:bearing_shared_yaw_adapter
 3mf/bottom_head_shell_native.3mf,stl/bottom_head_shell_native.stl,bottom_head_shell_native,1,pla,unreviewed,#o1.9:bottom_head_shell_native
 3mf/electronics_deck_native.3mf,stl/electronics_deck_native.stl,electronics_deck_native,1,pla,unreviewed,#o1.5:electronics_deck_r02
 3mf/face_part_native.3mf,stl/face_part_native.stl,face_part_native,1,pla,unreviewed,#o1.14:face_part_native
@@ -40,7 +34,6 @@ filename,stl_filename,model,quantity,material_hint,print_release,occurrences
 3mf/soft_mouth_top_native.3mf,stl/soft_mouth_top_native.stl,soft_mouth_top_native,1,fdm-tpu,unreviewed,#o1.12:soft_mouth_top_native
 3mf/sole_left_native.3mf,stl/sole_left_native.stl,sole_left_native,1,fdm-tpu,unreviewed,#o1.42:sole_left
 3mf/sole_left_native_right.3mf,stl/sole_left_native_right.stl,sole_left_native_right,1,fdm-tpu,unreviewed,#o1.53:sole_right
-3mf/stick_pod_native.3mf,stl/stick_pod_native.stl,stick_pod_native,1,pla,unreviewed,#o1.73:stick_pod
 3mf/top_head_shell_native.3mf,stl/top_head_shell_native.stl,top_head_shell_native,1,pla,unreviewed,#o1.10:top_head_shell_native
 3mf/trunk_base_native.3mf,stl/trunk_base_native.stl,trunk_base_native,1,pla,unreviewed,#o1.1:trunk_base
 3mf/ubec_clamp_native.3mf,stl/ubec_clamp_native.stl,ubec_clamp_native,1,pla,unreviewed,#o1.7:ubec_clamp_r02
@@ -49,3 +42,11 @@ filename,stl_filename,model,quantity,material_hint,print_release,occurrences
 3mf/yaw2roll_left_native.3mf,stl/yaw2roll_left_native.stl,yaw2roll_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.35:yaw2roll_left
 3mf/yaw2roll_left_native_right.3mf,stl/yaw2roll_left_native_right.stl,yaw2roll_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.46:yaw2roll_right
 3mf/yaw_roll_link_native.3mf,stl/yaw_roll_link_native.stl,yaw_roll_link_native,1,pla,unreviewed,#o1.4:yaw_roll_link_r05
+3mf/stick_pod_native.3mf,stl/stick_pod_native.stl,stick_pod_native,1,pla,unreviewed,#o1.73:stick_pod
+3mf/bearing_carrier_left.3mf,stl/bearing_carrier_left.stl,bearing_carrier_left,1,black printed polymer; unselected,unreviewed,#o1.74:bearing_carrier_left
+3mf/bearing_carrier_right.3mf,stl/bearing_carrier_right.stl,bearing_carrier_right,1,black printed polymer; unselected,unreviewed,#o1.77:bearing_carrier_right
+3mf/bearing_roll_adapter_left.3mf,stl/bearing_roll_adapter_left.stl,bearing_roll_adapter_left,1,black printed polymer; unselected,unreviewed,#o1.75:bearing_roll_adapter_left
+3mf/bearing_roll_adapter_right.3mf,stl/bearing_roll_adapter_right.stl,bearing_roll_adapter_right,1,black printed polymer; unselected,unreviewed,#o1.78:bearing_roll_adapter_right
+3mf/bearing_shared_yaw_adapter.3mf,stl/bearing_shared_yaw_adapter.stl,bearing_shared_yaw_adapter,1,black printed polymer; unselected,unreviewed,#o1.80:bearing_shared_yaw_adapter
+3mf/bearing_ankle_adapter.3mf,stl/bearing_ankle_adapter.stl,bearing_ankle_adapter,2,black printed polymer; unselected,unreviewed,#o1.81:bearing_ankle_adapter_left;#o1.82:bearing_ankle_adapter_right
+3mf/bearing_head_adapter.3mf,stl/bearing_head_adapter.stl,bearing_head_adapter,2,black printed polymer,unreviewed,#o1.93:bearing_head_yaw_adapter;#o1.95:bearing_head_roll_adapter

@@ -13,3 +13,5 @@ __pycache__/
 /reports/latest/
 
 .DS_Store
+
+/STEP/head_assembly.step*

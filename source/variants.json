@@ -389,5 +389,10 @@
     "model": "bearing_servo_reference",
     "component": "bearing_servo_reference",
     "params": {}
+  },
+  {
+    "component": "bearing_head_adapter",
+    "params": {},
+    "model": "bearing_head_adapter"
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-11-04T08:39:07.836399+00:00",
-  "input_key": "80caf46dbd9d518f470c1a7c841effb223ce8347a50923f6fa27a1e78eeaf643",
+  "generated_utc": "2026-11-04T13:19:47.737048+00:00",
+  "input_key": "f2d6ee90eebfb4eecf7e3219ed0bb315dff80a8247fd31a930fe6db6ee5fc7d1",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-    "catalog_sha256": "924be3d918ca21918c208f27b638de82dd1fd872d7880698965e1de445c7065b",
+    "source_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+    "catalog_sha256": "e1060751a1bf02aee37f01a5bf704029a5a74b395d14603862f636ba28a38b70",
     "implementation": {
       "tools/print_export.py": "edeb2353acf15f3a3afba18e4bb6ce1e052cab1b46e4acfa60030b0076ad4f8f",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430",
@@ -24,12 +24,12 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "d4d60294a01aed08e2fcefec8553a405f322471fea0c6fc657af30a912af065e",
-    "assembly_data_sha256": "15aeabc6a78cd5da40fcd343385127c90ec760cf8422f03316db5a11d49cd01c"
+    "build_input_key": "d0bdc67a211a17ad6862b2e4d84f7ea16d28dd391e0a27d3a394127be1321d12",
+    "assembly_data_sha256": "de7aae58a368d40003a92f0fc99c12565c7dda3c31748d0f765866cb260c2c39"
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
-  "export_count": 50,
+  "export_count": 51,
   "orientation": "Saved rest-pose axes; translation only, XY centred and min Z=0",
   "max_relative_volume_error": 0.02,
   "parts": [
@@ -85,7 +85,9 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
           "current_canonical_volume_mm3": 65.79280414780425,
           "bounds_checked": true,
           "source_volume_difference_mm3": 1.4210854715202004e-14
@@ -185,10 +187,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 65.79280414780423,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 65.79280414780425,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
+          "source_volume_difference_mm3": 1.4210854715202004e-14
         }
       },
       "mesh": {
@@ -285,10 +289,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 617.753878222743,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 617.7538782227449,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.058175934711471e-11
+          "source_volume_difference_mm3": 3.2514435588382185e-11
         }
       },
       "mesh": {
@@ -385,10 +391,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 617.7538782227435,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 617.7538782227452,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.1377567211166024e-11
+          "source_volume_difference_mm3": 3.3082869776990265e-11
         }
       },
       "mesh": {
@@ -485,10 +493,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 5704.676343208726,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 5704.67634320872,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 4.547473508864641e-12
+          "source_volume_difference_mm3": 1.8189894035458565e-12
         }
       },
       "mesh": {
@@ -585,10 +595,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 5704.676338589511,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 5704.676338589515,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 4.619210812961683e-06
+          "source_volume_difference_mm3": 4.619207174982876e-06
         }
       },
       "mesh": {
@@ -685,10 +697,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12575.598412867588,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12575.598412867499,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 6.295522325672209e-09
+          "source_volume_difference_mm3": 6.206391844898462e-09
         }
       },
       "mesh": {
@@ -785,10 +799,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12575.558229510414,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12575.558229510458,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.801470509439241e-05
+          "source_volume_difference_mm3": 2.8014661438646726e-05
         }
       },
       "mesh": {
@@ -831,603 +847,6 @@
         "relative_volume_error": 1.2909134254997412e-08,
         "max_bound_error_mm": 1.4343261725002776e-06,
         "sha256": "eaca5012b299120743a356628ce783c254b822a1ef70a2067adf29dff3dd4baa"
-      }
-    },
-    {
-      "model": "bearing_ankle_adapter",
-      "filename": "3mf/bearing_ankle_adapter.3mf",
-      "quantity": 2,
-      "occurrences": [
-        {
-          "ref": "#o1.81",
-          "name": "bearing_ankle_adapter_left"
-        },
-        {
-          "ref": "#o1.82",
-          "name": "bearing_ankle_adapter_right"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 2779.6155358522615,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.4210854715202004e-14,
-        "volume_difference_mm3": 2.212846084148623e-08,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        -83.97250005000001,
-        -42.899100000000004,
-        11.675000000000002
-      ],
-      "expected_bounds_mm": [
-        -2.897500050000012,
-        -15.650000000000002,
-        0,
-        2.897500050000012,
-        15.650000000000002,
-        48.65000010000001
-      ],
-      "max_bound_error_mm": 0.004320000000001656,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 3.124450782430734e-05,
-      "tessellation": {
-        "surface_sample_count": 2120,
-        "maximum_sampled_face_deviation_mm": 0.0040601378775131725,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "face_mapping_fallbacks": 16,
-        "algorithm": "Gmsh",
-        "gmsh_version": "4.15.2",
-        "maximum_edge_mm": 0.4,
-        "curvature_elements_per_circle": 64,
-        "linear_deflection_mm": null,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 2779.61553587439,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 2.212846084148623e-08
-        }
-      },
-      "mesh": {
-        "vertices": 130291,
-        "triangles": 260590,
-        "volume_mm3": 2779.70238357162,
-        "bounds_mm": [
-          -2.8975,
-          -15.65,
-          0.0,
-          2.8975,
-          15.65,
-          48.65
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "sha256": "48a1e19ecca818ce5ea4c973eaa29f9b45c94e8221e36f071d52e7128c9d6bf6",
-      "stl_filename": "stl/bearing_ankle_adapter.stl",
-      "stl": {
-        "triangles": 260590,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 2779.702472381472,
-        "bounds_mm": [
-          -2.8975000381469727,
-          -15.649999618530273,
-          0.0,
-          2.8975000381469727,
-          15.649999618530273,
-          48.650001525878906
-        ],
-        "relative_volume_error": 3.194941033397478e-08,
-        "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "24547084f909405cc11c64218bc769d22a5c3ee18f264a6f90d1577d4de41111"
-      }
-    },
-    {
-      "model": "bearing_carrier_left",
-      "filename": "3mf/bearing_carrier_left.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.74",
-          "name": "bearing_carrier_left"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 13059.025014515762,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 2.4868995751603507e-14,
-        "volume_difference_mm3": 0.0031983770095393993,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        -72.35249999999999,
-        -18.74955,
-        -55.0249999
-      ],
-      "expected_bounds_mm": [
-        -21.4725001,
-        -39.799549999999996,
-        0,
-        21.4725001,
-        39.799549999999996,
-        61.00000010000001
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 6096,
-        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 13059.028212892772,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0031983770095393993
-        }
-      },
-      "mesh": {
-        "vertices": 21826,
-        "triangles": 43676,
-        "volume_mm3": 13058.308265815385,
-        "bounds_mm": [
-          -21.4725,
-          -39.798912,
-          0.000639,
-          21.4725,
-          39.799548,
-          61.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 0.000639,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 5.488531491290018e-05,
-      "sha256": "986d7aeffa5310499139d4a43b7960aebb7ee172094ed18437013973aa245b03",
-      "stl_filename": "stl/bearing_carrier_left.stl",
-      "stl": {
-        "triangles": 43676,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 13058.308560669208,
-        "bounds_mm": [
-          -21.47249984741211,
-          -39.798912048339844,
-          0.0006389999762177467,
-          21.47249984741211,
-          39.7995491027832,
-          61.0
-        ],
-        "relative_volume_error": 2.25797872278038e-08,
-        "max_bound_error_mm": 1.1027832016452521e-06,
-        "sha256": "4e8e82494099148e36a625a2afd554332aa8205017d1f156a49d501f8a636608"
-      }
-    },
-    {
-      "model": "bearing_carrier_right",
-      "filename": "3mf/bearing_carrier_right.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.77",
-          "name": "bearing_carrier_right"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 13059.025014515777,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.0000000294496658e-07,
-        "volume_difference_mm3": 0.0031797887168067973,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        72.35249999999999,
-        -18.74955,
-        -55.0249999
-      ],
-      "expected_bounds_mm": [
-        -21.4725001,
-        -39.799549999999996,
-        0,
-        21.4725001,
-        39.799549999999996,
-        61.00000010000001
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 6096,
-        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 13059.028194304494,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0031797887168067973
-        }
-      },
-      "mesh": {
-        "vertices": 21826,
-        "triangles": 43676,
-        "volume_mm3": 13058.308264675343,
-        "bounds_mm": [
-          -21.4725,
-          -39.798912,
-          0.000639,
-          21.4725,
-          39.799548,
-          61.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 0.000639,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 5.4885402213220345e-05,
-      "sha256": "9ed869756781da94e1d2c6e205716cf6b460daa18b3254de3a4e6ffe84c1f19b",
-      "stl_filename": "stl/bearing_carrier_right.stl",
-      "stl": {
-        "triangles": 43676,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 13058.308560393218,
-        "bounds_mm": [
-          -21.47249984741211,
-          -39.798912048339844,
-          0.0006389999762177467,
-          21.47249984741211,
-          39.7995491027832,
-          61.0
-        ],
-        "relative_volume_error": 2.2645956039009833e-08,
-        "max_bound_error_mm": 1.1027832016452521e-06,
-        "sha256": "0ec816113207f77efc02b766153869680d837bc64b8f6eab36c7b41e3562e1b7"
-      }
-    },
-    {
-      "model": "bearing_roll_adapter_left",
-      "filename": "3mf/bearing_roll_adapter_left.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.75",
-          "name": "bearing_roll_adapter_left"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 3034.4243775984687,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.0000000250087737e-07,
-        "volume_difference_mm3": 1.0990333976224065e-08,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        -23.625,
-        28.572499999999998,
-        -67.3749999
-      ],
-      "expected_bounds_mm": [
-        -15.65,
-        -2.8975000000000026,
-        0,
-        15.65,
-        2.8975000000000026,
-        50.00000010000001
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 2496,
-        "maximum_sampled_face_deviation_mm": 0.005162642878523351,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 3034.4243775874784,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 1.0990333976224065e-08
-        }
-      },
-      "mesh": {
-        "vertices": 9439,
-        "triangles": 18894,
-        "volume_mm3": 3034.294762714946,
-        "bounds_mm": [
-          -15.65,
-          -2.8975,
-          0.0,
-          15.65,
-          2.8975,
-          50.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 1.000000082740371e-07,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 4.271481750527068e-05,
-      "sha256": "b8a719539208cd90d6fbcde713c615f61463e359c423de19e522342fb01c34ac",
-      "stl_filename": "stl/bearing_roll_adapter_left.stl",
-      "stl": {
-        "triangles": 18894,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 3034.294823022354,
-        "bounds_mm": [
-          -15.649999618530273,
-          -2.8975000381469727,
-          0.0,
-          15.649999618530273,
-          2.8975000381469727,
-          50.0
-        ],
-        "relative_volume_error": 1.987526356676661e-08,
-        "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "32cf158bd20e952af8f877f281f0749c1b00e6558972e64971af065e2383c301"
-      }
-    },
-    {
-      "model": "bearing_roll_adapter_right",
-      "filename": "3mf/bearing_roll_adapter_right.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.78",
-          "name": "bearing_roll_adapter_right"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 3034.4243775984683,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 7.105427357601002e-15,
-        "volume_difference_mm3": 1.0988514986820519e-08,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        23.625,
-        28.572500050000002,
-        -67.3749999
-      ],
-      "expected_bounds_mm": [
-        -15.649999999999999,
-        -2.897500050000003,
-        0,
-        15.649999999999999,
-        2.897500050000003,
-        50.00000010000001
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 2496,
-        "maximum_sampled_face_deviation_mm": 0.0051626428785248825,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 3034.4243775874797,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 1.0988514986820519e-08
-        }
-      },
-      "mesh": {
-        "vertices": 9439,
-        "triangles": 18894,
-        "volume_mm3": 3034.2947634936368,
-        "bounds_mm": [
-          -15.65,
-          -2.8975,
-          0.0,
-          15.65,
-          2.8975,
-          50.0
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 1.000000082740371e-07,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 4.271456088619673e-05,
-      "sha256": "998c95c038df0448c8b6b0073d005b5b4f375574d77fb6e09c3d5f5cadbcefbd",
-      "stl_filename": "stl/bearing_roll_adapter_right.stl",
-      "stl": {
-        "triangles": 18894,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 3034.2948238024146,
-        "bounds_mm": [
-          -15.649999618530273,
-          -2.8975000381469727,
-          0.0,
-          15.649999618530273,
-          2.8975000381469727,
-          50.0
-        ],
-        "relative_volume_error": 1.987571496771838e-08,
-        "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "c720d3b68006dc996d255766008b68519992ea77e8caeb4381df0b25e754b7b2"
-      }
-    },
-    {
-      "model": "bearing_shared_yaw_adapter",
-      "filename": "3mf/bearing_shared_yaw_adapter.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.80",
-          "name": "bearing_shared_yaw_adapter"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 8801.423305362641,
-      "geometry_source": "current_saved_assembly_step",
-      "saved_step_comparison": null,
-      "translation_mm": [
-        -0.0,
-        -0.5749999999999993,
-        -119.1549999
-      ],
-      "expected_bounds_mm": [
-        -39.275,
-        -24.3250001,
-        0,
-        39.275,
-        24.3250001,
-        5.795000099999996
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 4180,
-        "maximum_sampled_face_deviation_mm": 0.008860193861339342,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 8801.423305362641,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
-        }
-      },
-      "mesh": {
-        "vertices": 15928,
-        "triangles": 31876,
-        "volume_mm3": 8801.738831736448,
-        "bounds_mm": [
-          -39.275,
-          -24.325,
-          0.0,
-          39.275,
-          24.325,
-          5.795
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 1.0000000116860974e-07,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 1.4819594840327362e-05,
-      "sha256": "f467e3a092512b09c62fb9c782f23958a690cd755cc78d3d2884b9abbe72f331",
-      "stl_filename": "stl/bearing_shared_yaw_adapter.stl",
-      "stl": {
-        "triangles": 31876,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 8801.738510780682,
-        "bounds_mm": [
-          -39.275001525878906,
-          -24.325000762939453,
-          0.0,
-          39.275001525878906,
-          24.325000762939453,
-          5.795000076293945
-        ],
-        "relative_volume_error": 3.646504077001548e-08,
-        "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "61d8fc573ac1540de725ff6478e6f4692c8b22a7dadd155050434c5a7c120489"
       }
     },
     {
@@ -1482,10 +901,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 41363.833659007105,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 41363.83365900697,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.00011566407920327038
+          "source_volume_difference_mm3": 0.0001156639409600757
         }
       },
       "mesh": {
@@ -1582,10 +1003,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 9671.028193806551,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 9671.028193806555,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.419255906715989e-10
+          "source_volume_difference_mm3": 2.382876118645072e-10
         }
       },
       "mesh": {
@@ -1682,10 +1105,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 13315.640310707182,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 13315.640310707195,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 1.2005330063402653e-10
+          "source_volume_difference_mm3": 1.0732037480920553e-10
         }
       },
       "mesh": {
@@ -1782,7 +1207,9 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
           "current_canonical_volume_mm3": 3607.022701700308,
           "bounds_checked": true,
           "source_volume_difference_mm3": 5.2367795433383435e-08
@@ -1882,10 +1309,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 20879.71394591154,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 20879.713945939897,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.546585164964199e-11
+          "source_volume_difference_mm3": 2.8383510652929544e-08
         }
       },
       "mesh": {
@@ -1982,10 +1411,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 20879.713945907355,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 20879.713945874122,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.2741809263825417e-11
+          "source_volume_difference_mm3": 3.320019459351897e-08
         }
       },
       "mesh": {
@@ -2082,10 +1513,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 9404.033374079925,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 9404.033374095952,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 7.194317731773481e-06
+          "source_volume_difference_mm3": 7.178290616138838e-06
         }
       },
       "mesh": {
@@ -2182,10 +1615,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 9404.03337167324,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 9404.03337166294,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 9.601322744856589e-06
+          "source_volume_difference_mm3": 9.611623681848869e-06
         }
       },
       "mesh": {
@@ -2243,32 +1678,33 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 32535.927145384245,
+      "source_volume_mm3": 31804.637736264907,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 5.1952360081531656e-12,
-        "volume_difference_mm3": 5.146729017724283e-05,
+        "volume_difference_mm3": 1.7916507204063237e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
         9.574999999999473,
-        24.36499999999929,
+        24.364999999999128,
         -261.79999989999465
       ],
       "expected_bounds_mm": [
         -43.42500000000052,
-        -49.635000000001035,
+        -49.63500000000087,
         0,
         43.42500000000052,
-        49.635000000001035,
+        49.63500000000087,
         44.200000100005354
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "surface_sample_count": 6880,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 6720,
         "maximum_sampled_face_deviation_mm": 0.007709600663493722,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
@@ -2280,18 +1716,12 @@
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 32535.927093916955,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 5.146729017724283e-05
-        }
+        "library_manifold": true
       },
       "mesh": {
-        "vertices": 7391,
-        "triangles": 14826,
-        "volume_mm3": 32535.556381013223,
+        "vertices": 7714,
+        "triangles": 15472,
+        "volume_mm3": 31804.272941181476,
         "bounds_mm": [
           -43.425,
           -49.635,
@@ -2307,16 +1737,16 @@
       },
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 1.1395537289148123e-05,
-      "sha256": "e4f015507598fa242547e7deaa5ce94b1e8767ed0f03120caa1e004294ae188a",
+      "relative_volume_error": 1.1469870729423108e-05,
+      "sha256": "eea376bcaafcdd2cb8908d47415b6c52b29fe7e62e98dc221f5b72fd79db79d2",
       "stl_filename": "stl/head_frame_native.stl",
       "stl": {
-        "triangles": 14826,
+        "triangles": 15472,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 32535.55293382514,
+        "volume_mm3": 31804.27013755667,
         "bounds_mm": [
           -43.42499923706055,
           -49.6349983215332,
@@ -2325,9 +1755,9 @@
           49.6349983215332,
           44.20000076293945
         ],
-        "relative_volume_error": 1.059514102748695e-07,
+        "relative_volume_error": 8.815245715242273e-08,
         "max_bound_error_mm": 1.6784667948854803e-06,
-        "sha256": "4f500948d581c52461690a1b20a79b6e8f10d88be4a6989a6d63a4b620f0605c"
+        "sha256": "d921fb8b4880639e865f07164e93a959b19973a05476c04c173b19fa0030f3c3"
       }
     },
     {
@@ -2398,10 +1828,12 @@
           ]
         },
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 7891.9344406126365,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 7891.934440612649,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.007217697748274077
+          "source_volume_difference_mm3": 0.007217697735541151
         }
       },
       "mesh": {
@@ -2488,10 +1920,12 @@
         "curvature_elements_per_circle": 64,
         "linear_deflection_mm": null,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 7892.172468010036,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 7892.172468010042,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
+          "source_volume_difference_mm3": 6.366462912410498e-12
         }
       },
       "mesh": {
@@ -2589,10 +2023,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 3402.1785265611325,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 3402.178526561131,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 5.1386450650170445e-11
+          "source_volume_difference_mm3": 5.275069270282984e-11
         }
       },
       "mesh": {
@@ -2689,10 +2125,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 24491.33265701095,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 24491.33265701164,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0013460025693348143
+          "source_volume_difference_mm3": 0.0013460032605507877
         }
       },
       "mesh": {
@@ -2789,10 +2227,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 45741.775985631,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 45741.77598563092,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.009375722860568203
+          "source_volume_difference_mm3": 0.009375722940603737
         }
       },
       "mesh": {
@@ -2889,7 +2329,9 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
           "current_canonical_volume_mm3": 20448.029177545828,
           "bounds_checked": true,
           "source_volume_difference_mm3": 0.002060114133200841
@@ -2996,10 +2438,12 @@
           ]
         },
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 8117.437538752834,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 8117.437538752833,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.415951712464448e-06
+          "source_volume_difference_mm3": 2.4159498934750445e-06
         }
       },
       "mesh": {
@@ -3103,10 +2547,12 @@
           ]
         },
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 8117.437537622268,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 8117.437537622291,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 1.2853852240368724e-06
+          "source_volume_difference_mm3": 1.2854079614044167e-06
         }
       },
       "mesh": {
@@ -3203,10 +2649,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 1801.7721101129148,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 1801.7721101129137,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 7.210269359347876e-07
+          "source_volume_difference_mm3": 7.210257990664104e-07
         }
       },
       "mesh": {
@@ -3303,10 +2751,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 3329.965305948275,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 3329.965305948276,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.0463630789890885e-10
+          "source_volume_difference_mm3": 2.0600054995156825e-10
         }
       },
       "mesh": {
@@ -3403,10 +2853,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 11552.965144208274,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 11552.96514420826,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0003823185670626117
+          "source_volume_difference_mm3": 0.00038231855251069646
         }
       },
       "mesh": {
@@ -3464,78 +2916,86 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9976.330013668954,
-      "geometry_source": "saved_assembly_step",
-      "saved_step_comparison": null,
+      "source_volume_mm3": 9440.388757473527,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.4210854715202004e-14,
+        "volume_difference_mm3": 8.430306479567662e-07,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
       "translation_mm": [
-        1.849999999999996,
+        0.37499999999999467,
         35.1,
-        -222.2689999
+        -223.56899990000002
       ],
       "expected_bounds_mm": [
-        -23.450000100000004,
-        -13.500000100000003,
+        -23.2750001,
+        -14.000000100000001,
         0,
-        23.450000100000004,
-        13.500000100000003,
-        35.73600020000035
+        23.2750001,
+        14.000000100000001,
+        33.135800099999955
       ],
       "tessellation": {
-        "surface_sample_count": 5336,
-        "maximum_sampled_face_deviation_mm": 0.006196184234218489,
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 3192,
+        "maximum_sampled_face_deviation_mm": 0.009920124813358518,
         "sampled_face_deviation_limit_mm": 0.02,
-        "face_mapping_fallbacks": 20,
-        "algorithm": "Gmsh",
-        "gmsh_version": "4.15.2",
-        "maximum_edge_mm": 0.4,
-        "curvature_elements_per_circle": 64,
-        "linear_deflection_mm": null,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 9976.330013668954,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
-        }
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true
       },
       "mesh": {
-        "vertices": 152538,
-        "triangles": 305128,
-        "volume_mm3": 9976.546793261388,
+        "vertices": 18007,
+        "triangles": 36070,
+        "volume_mm3": 9439.550681226352,
         "bounds_mm": [
-          -23.45,
-          -13.5,
-          0.0,
-          23.45,
-          13.5,
-          35.736
+          -23.275,
+          -14.0,
+          0.003792,
+          23.275,
+          14.0,
+          33.1358
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "sha256": "facf731e847d63c90251ee9f6f12ca31ac4cec24e05be7bf8fb01fc08d71fea3",
+      "max_bound_error_mm": 0.003792,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 2.172939268621145e-05,
+      "relative_volume_error": 8.87756075205831e-05,
+      "sha256": "d09676e8aa502267b4f924551ec2eae8c56f6fc9759a310b8c34e2894a6aed84",
       "stl_filename": "stl/neck_pitch_001_native.stl",
       "stl": {
-        "triangles": 305128,
+        "triangles": 36070,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9976.547061666959,
+        "volume_mm3": 9439.550323477984,
         "bounds_mm": [
-          -23.450000762939453,
-          -13.5,
-          0.0,
-          23.450000762939453,
-          13.5,
-          35.736000061035156
+          -23.274999618530273,
+          -14.0,
+          0.003792000003159046,
+          23.274999618530273,
+          14.0,
+          33.135799407958984
         ],
-        "relative_volume_error": 2.6903654772788444e-08,
-        "max_bound_error_mm": 7.629394538355427e-07,
-        "sha256": "bc214f96e0ebf4d47263759c44c54efdb3e04832acdec1ae0c7f081253c8114b"
+        "relative_volume_error": 3.7898876724808714e-08,
+        "max_bound_error_mm": 5.920410188764436e-07,
+        "sha256": "165e0a26584482dfb3a24f61ec71634606772e21dd6ad8d0b86a32fb68116309"
       }
     },
     {
@@ -3590,7 +3050,9 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
           "current_canonical_volume_mm3": 10470.413963047627,
           "bounds_checked": true,
           "source_volume_difference_mm3": 4.2746250983327627e-10
@@ -3690,10 +3152,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 21076.618119681105,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 21076.618119681054,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.00114944510278292
+          "source_volume_difference_mm3": 0.0011494450518512167
         }
       },
       "mesh": {
@@ -3790,10 +3254,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 13029.547587417377,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 13029.547587417383,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 2.213765401393175e-05
+          "source_volume_difference_mm3": 2.213764855696354e-05
         }
       },
       "mesh": {
@@ -3890,10 +3356,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 6639.634545082869,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 6639.634545082875,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0005796253981316113
+          "source_volume_difference_mm3": 0.0005796254035885795
         }
       },
       "mesh": {
@@ -3990,10 +3458,12 @@
         "library_valid": false,
         "library_manifold": false,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 15343.578927541006,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 15343.578927540999,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.128661774098873e-10
+          "source_volume_difference_mm3": 3.055902197957039e-10
         }
       },
       "mesh": {
@@ -4092,10 +3562,12 @@
         "library_valid": false,
         "library_manifold": false,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 15343.578927539878,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 15343.57892753987,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 8.385541150346398e-10
+          "source_volume_difference_mm3": 8.476490620523691e-10
         }
       },
       "mesh": {
@@ -4143,107 +3615,6 @@
       }
     },
     {
-      "model": "stick_pod_native",
-      "filename": "3mf/stick_pod_native.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.73",
-          "name": "stick_pod"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "pla",
-      "source_volume_mm3": 32226.511029573976,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 4.8825972044187215e-12,
-        "volume_difference_mm3": 0.0020516508448054083,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        -1.6751044995544362e-12,
-        -54.169431126075345,
-        -119.79999989999504
-      ],
-      "expected_bounds_mm": [
-        -30.50027927136724,
-        -33.169431126075345,
-        0,
-        30.50027927136724,
-        33.169431126075345,
-        51.000013768938715
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 2500,
-        "maximum_sampled_face_deviation_mm": 0.009995389259983192,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 32226.50897792313,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0020516508448054083
-        }
-      },
-      "mesh": {
-        "vertices": 94093,
-        "triangles": 188202,
-        "volume_mm3": 32221.863274189036,
-        "bounds_mm": [
-          -30.500256,
-          -33.16943,
-          0.0,
-          30.500256,
-          33.169078,
-          51.000016
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 0.00035312607534621065,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00014422148834773808,
-      "sha256": "9535c17e83bbcfdec051c0ea4e295818ae7c12003f7ae71d682e05e750dabbd6",
-      "stl_filename": "stl/stick_pod_native.stl",
-      "stl": {
-        "triangles": 188202,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 32221.864107746533,
-        "bounds_mm": [
-          -30.500255584716797,
-          -33.169429779052734,
-          0.0,
-          30.500255584716797,
-          33.1690788269043,
-          51.00001525878906
-        ],
-        "relative_volume_error": 2.586931393660166e-08,
-        "max_bound_error_mm": 8.269042979236474e-07,
-        "sha256": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9"
-      }
-    },
-    {
       "model": "top_head_shell_native",
       "filename": "3mf/top_head_shell_native.3mf",
       "quantity": 1,
@@ -4283,10 +3654,12 @@
         "curvature_elements_per_circle": 64,
         "linear_deflection_mm": null,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 73305.93355657258,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 73305.93355657299,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
+          "source_volume_difference_mm3": 4.0745362639427185e-10
         }
       },
       "mesh": {
@@ -4382,10 +3755,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 15974.295830809473,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 15974.29583080944,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 4.470865133043844e-05
+          "source_volume_difference_mm3": 4.470861858862918e-05
         }
       },
       "mesh": {
@@ -4482,10 +3857,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 547.677438284625,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 547.6774382846254,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 4.7138928493950516e-07
+          "source_volume_difference_mm3": 4.71388943878992e-07
         }
       },
       "mesh": {
@@ -4570,10 +3947,12 @@
         "curvature_elements_per_circle": 64,
         "linear_deflection_mm": null,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12655.54531973064,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12655.545319730669,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0
+          "source_volume_difference_mm3": 2.9103830456733704e-11
         }
       },
       "mesh": {
@@ -4670,10 +4049,12 @@
         "library_valid": false,
         "library_manifold": false,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12655.546513299401,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12655.546513298978,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0001885007914097514
+          "source_volume_difference_mm3": 0.00018850036758522037
         }
       },
       "mesh": {
@@ -4773,10 +4154,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12430.366773769972,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12430.366773769989,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.2917159842327237e-07
+          "source_volume_difference_mm3": 3.2915522751864046e-07
         }
       },
       "mesh": {
@@ -4874,10 +4257,12 @@
         "library_valid": true,
         "library_manifold": true,
         "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 12430.366773776088,
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 12430.36677377608,
           "bounds_checked": true,
-          "source_volume_difference_mm3": 3.6178062146063894e-07
+          "source_volume_difference_mm3": 3.617878974182531e-07
         }
       },
       "mesh": {
@@ -4935,34 +4320,34 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 14018.873666918153,
+      "source_volume_mm3": 11845.04274347219,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "bounds_error_mm": 6.714628852932947e-13,
-        "volume_difference_mm3": 0.0005212245850998443,
+        "bounds_error_mm": 4.508393658397836e-12,
+        "volume_difference_mm3": 0.0005164465019333875,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
         12.7,
-        36.8925000500045,
+        36.89250005000451,
         -268.3
       ],
       "expected_bounds_mm": [
         -25.7,
-        -21.957500050004498,
-        0,
-        25.7,
-        21.957500050004498,
-        28.905000000000655
+        -21.957500050000018,
+        -4.263256414560601e-14,
+        25.700000000000003,
+        21.95750005,
+        28.905000000000637
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 2120,
-        "maximum_sampled_face_deviation_mm": 0.007709602710520653,
+        "surface_sample_count": 2196,
+        "maximum_sampled_face_deviation_mm": 0.007709602710519714,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
@@ -4973,18 +4358,12 @@
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": {
-          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
-          "current_canonical_volume_mm3": 14018.874188142738,
-          "bounds_checked": true,
-          "source_volume_difference_mm3": 0.0005212245850998443
-        }
+        "library_manifold": true
       },
       "mesh": {
-        "vertices": 6227,
-        "triangles": 12490,
-        "volume_mm3": 14017.893122344947,
+        "vertices": 6434,
+        "triangles": 12904,
+        "volume_mm3": 11844.317274952264,
         "bounds_mm": [
           -25.7,
           -21.9575,
@@ -4998,18 +4377,18 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.0010879999999993117,
+      "max_bound_error_mm": 0.0010880000000028645,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 6.994460443133199e-05,
-      "sha256": "5b629fef48b7addb08f0fe243dd88675554a7e48efe8bcc8bddf1c6ec60e41e0",
+      "relative_volume_error": 6.124659367107239e-05,
+      "sha256": "15c678b793428a98e088435b62f638e302a8461169b06d2ae32e520a067aba58",
       "stl_filename": "stl/yaw_roll_link_native.stl",
       "stl": {
-        "triangles": 12490,
+        "triangles": 12904,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 14017.894087213272,
+        "volume_mm3": 11844.317528542015,
         "bounds_mm": [
           -25.700000762939453,
           -21.957500457763672,
@@ -5018,9 +4397,816 @@
           21.957500457763672,
           28.905000686645508
         ],
-        "relative_volume_error": 6.883119424751136e-08,
+        "relative_volume_error": 2.141024638192956e-08,
         "max_bound_error_mm": 7.629394538355427e-07,
-        "sha256": "a02ae047b3acc9d2e4a6f8971b7959db6991fc11d51dc018f3046c03fa70c46a"
+        "sha256": "770963bcd8900b63506f2e294529861e39a3579de0ed61502ee9b22a2e9d081d"
+      }
+    },
+    {
+      "model": "stick_pod_native",
+      "filename": "3mf/stick_pod_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.73",
+          "name": "stick_pod"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 32226.511029573976,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 4.8825972044187215e-12,
+        "volume_difference_mm3": 0.0020516508448054083,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -1.6751044995544362e-12,
+        -54.169431126075345,
+        -119.79999989999504
+      ],
+      "expected_bounds_mm": [
+        -30.50027927136724,
+        -33.169431126075345,
+        0,
+        30.50027927136724,
+        33.169431126075345,
+        51.000013768938715
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2500,
+        "maximum_sampled_face_deviation_mm": 0.009995389259983192,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 32226.50897792291,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0020516510667221155
+        }
+      },
+      "mesh": {
+        "vertices": 94093,
+        "triangles": 188202,
+        "volume_mm3": 32221.863274189036,
+        "bounds_mm": [
+          -30.500256,
+          -33.16943,
+          0.0,
+          30.500256,
+          33.169078,
+          51.000016
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00035312607534621065,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00014422148834773808,
+      "sha256": "9535c17e83bbcfdec051c0ea4e295818ae7c12003f7ae71d682e05e750dabbd6",
+      "stl_filename": "stl/stick_pod_native.stl",
+      "stl": {
+        "triangles": 188202,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 32221.864107746533,
+        "bounds_mm": [
+          -30.500255584716797,
+          -33.169429779052734,
+          0.0,
+          30.500255584716797,
+          33.1690788269043,
+          51.00001525878906
+        ],
+        "relative_volume_error": 2.586931393660166e-08,
+        "max_bound_error_mm": 8.269042979236474e-07,
+        "sha256": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9"
+      }
+    },
+    {
+      "model": "bearing_carrier_left",
+      "filename": "3mf/bearing_carrier_left.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.74",
+          "name": "bearing_carrier_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 13059.025014515762,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 2.4868995751603507e-14,
+        "volume_difference_mm3": 0.0031983770095393993,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -72.35249999999999,
+        -18.74955,
+        -55.0249999
+      ],
+      "expected_bounds_mm": [
+        -21.4725001,
+        -39.799549999999996,
+        0,
+        21.4725001,
+        39.799549999999996,
+        61.00000010000001
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 6096,
+        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 13059.028212892608,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.003198376845830353
+        }
+      },
+      "mesh": {
+        "vertices": 21826,
+        "triangles": 43676,
+        "volume_mm3": 13058.308265815385,
+        "bounds_mm": [
+          -21.4725,
+          -39.798912,
+          0.000639,
+          21.4725,
+          39.799548,
+          61.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000639,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 5.488531491290018e-05,
+      "sha256": "986d7aeffa5310499139d4a43b7960aebb7ee172094ed18437013973aa245b03",
+      "stl_filename": "stl/bearing_carrier_left.stl",
+      "stl": {
+        "triangles": 43676,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 13058.308560669208,
+        "bounds_mm": [
+          -21.47249984741211,
+          -39.798912048339844,
+          0.0006389999762177467,
+          21.47249984741211,
+          39.7995491027832,
+          61.0
+        ],
+        "relative_volume_error": 2.25797872278038e-08,
+        "max_bound_error_mm": 1.1027832016452521e-06,
+        "sha256": "4e8e82494099148e36a625a2afd554332aa8205017d1f156a49d501f8a636608"
+      }
+    },
+    {
+      "model": "bearing_carrier_right",
+      "filename": "3mf/bearing_carrier_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.77",
+          "name": "bearing_carrier_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 13059.025014515777,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.0000000294496658e-07,
+        "volume_difference_mm3": 0.0031797887168067973,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        72.35249999999999,
+        -18.74955,
+        -55.0249999
+      ],
+      "expected_bounds_mm": [
+        -21.4725001,
+        -39.799549999999996,
+        0,
+        21.4725001,
+        39.799549999999996,
+        61.00000010000001
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 6096,
+        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 13059.028194304507,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.003179788729539723
+        }
+      },
+      "mesh": {
+        "vertices": 21826,
+        "triangles": 43676,
+        "volume_mm3": 13058.308264675343,
+        "bounds_mm": [
+          -21.4725,
+          -39.798912,
+          0.000639,
+          21.4725,
+          39.799548,
+          61.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.000639,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 5.4885402213220345e-05,
+      "sha256": "9ed869756781da94e1d2c6e205716cf6b460daa18b3254de3a4e6ffe84c1f19b",
+      "stl_filename": "stl/bearing_carrier_right.stl",
+      "stl": {
+        "triangles": 43676,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 13058.308560393218,
+        "bounds_mm": [
+          -21.47249984741211,
+          -39.798912048339844,
+          0.0006389999762177467,
+          21.47249984741211,
+          39.7995491027832,
+          61.0
+        ],
+        "relative_volume_error": 2.2645956039009833e-08,
+        "max_bound_error_mm": 1.1027832016452521e-06,
+        "sha256": "0ec816113207f77efc02b766153869680d837bc64b8f6eab36c7b41e3562e1b7"
+      }
+    },
+    {
+      "model": "bearing_roll_adapter_left",
+      "filename": "3mf/bearing_roll_adapter_left.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.75",
+          "name": "bearing_roll_adapter_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 3034.4243775984687,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.0000000250087737e-07,
+        "volume_difference_mm3": 1.0990333976224065e-08,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -23.625,
+        28.572499999999998,
+        -67.3749999
+      ],
+      "expected_bounds_mm": [
+        -15.65,
+        -2.8975000000000026,
+        0,
+        15.65,
+        2.8975000000000026,
+        50.00000010000001
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2496,
+        "maximum_sampled_face_deviation_mm": 0.005162642878523351,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 3034.4243775874934,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.0975327313644812e-08
+        }
+      },
+      "mesh": {
+        "vertices": 9439,
+        "triangles": 18894,
+        "volume_mm3": 3034.294762714946,
+        "bounds_mm": [
+          -15.65,
+          -2.8975,
+          0.0,
+          15.65,
+          2.8975,
+          50.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.000000082740371e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 4.271481750527068e-05,
+      "sha256": "b8a719539208cd90d6fbcde713c615f61463e359c423de19e522342fb01c34ac",
+      "stl_filename": "stl/bearing_roll_adapter_left.stl",
+      "stl": {
+        "triangles": 18894,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 3034.294823022354,
+        "bounds_mm": [
+          -15.649999618530273,
+          -2.8975000381469727,
+          0.0,
+          15.649999618530273,
+          2.8975000381469727,
+          50.0
+        ],
+        "relative_volume_error": 1.987526356676661e-08,
+        "max_bound_error_mm": 3.8146972691777137e-07,
+        "sha256": "32cf158bd20e952af8f877f281f0749c1b00e6558972e64971af065e2383c301"
+      }
+    },
+    {
+      "model": "bearing_roll_adapter_right",
+      "filename": "3mf/bearing_roll_adapter_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.78",
+          "name": "bearing_roll_adapter_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 3034.4243775984683,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 7.105427357601002e-15,
+        "volume_difference_mm3": 1.0988514986820519e-08,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        23.625,
+        28.572500050000002,
+        -67.3749999
+      ],
+      "expected_bounds_mm": [
+        -15.649999999999999,
+        -2.897500050000003,
+        0,
+        15.649999999999999,
+        2.897500050000003,
+        50.00000010000001
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2496,
+        "maximum_sampled_face_deviation_mm": 0.0051626428785248825,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 3034.4243775874934,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.0974872566293925e-08
+        }
+      },
+      "mesh": {
+        "vertices": 9439,
+        "triangles": 18894,
+        "volume_mm3": 3034.2947634936368,
+        "bounds_mm": [
+          -15.65,
+          -2.8975,
+          0.0,
+          15.65,
+          2.8975,
+          50.0
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.000000082740371e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 4.271456088619673e-05,
+      "sha256": "998c95c038df0448c8b6b0073d005b5b4f375574d77fb6e09c3d5f5cadbcefbd",
+      "stl_filename": "stl/bearing_roll_adapter_right.stl",
+      "stl": {
+        "triangles": 18894,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 3034.2948238024146,
+        "bounds_mm": [
+          -15.649999618530273,
+          -2.8975000381469727,
+          0.0,
+          15.649999618530273,
+          2.8975000381469727,
+          50.0
+        ],
+        "relative_volume_error": 1.987571496771838e-08,
+        "max_bound_error_mm": 3.8146972691777137e-07,
+        "sha256": "c720d3b68006dc996d255766008b68519992ea77e8caeb4381df0b25e754b7b2"
+      }
+    },
+    {
+      "model": "bearing_shared_yaw_adapter",
+      "filename": "3mf/bearing_shared_yaw_adapter.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.80",
+          "name": "bearing_shared_yaw_adapter"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 8801.423305362641,
+      "geometry_source": "current_saved_assembly_step",
+      "saved_step_comparison": null,
+      "translation_mm": [
+        -0.0,
+        -0.5749999999999993,
+        -119.1549999
+      ],
+      "expected_bounds_mm": [
+        -39.275,
+        -24.3250001,
+        0,
+        39.275,
+        24.3250001,
+        5.795000099999996
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 4180,
+        "maximum_sampled_face_deviation_mm": 0.008860193861339342,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 8801.423305362625,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.6370904631912708e-11
+        }
+      },
+      "mesh": {
+        "vertices": 15928,
+        "triangles": 31876,
+        "volume_mm3": 8801.738831736448,
+        "bounds_mm": [
+          -39.275,
+          -24.325,
+          0.0,
+          39.275,
+          24.325,
+          5.795
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.0000000116860974e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 1.4819594840327362e-05,
+      "sha256": "f467e3a092512b09c62fb9c782f23958a690cd755cc78d3d2884b9abbe72f331",
+      "stl_filename": "stl/bearing_shared_yaw_adapter.stl",
+      "stl": {
+        "triangles": 31876,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 8801.738510780682,
+        "bounds_mm": [
+          -39.275001525878906,
+          -24.325000762939453,
+          0.0,
+          39.275001525878906,
+          24.325000762939453,
+          5.795000076293945
+        ],
+        "relative_volume_error": 3.646504077001548e-08,
+        "max_bound_error_mm": 1.5258789076710855e-06,
+        "sha256": "61d8fc573ac1540de725ff6478e6f4692c8b22a7dadd155050434c5a7c120489"
+      }
+    },
+    {
+      "model": "bearing_ankle_adapter",
+      "filename": "3mf/bearing_ankle_adapter.3mf",
+      "quantity": 2,
+      "occurrences": [
+        {
+          "ref": "#o1.81",
+          "name": "bearing_ankle_adapter_left"
+        },
+        {
+          "ref": "#o1.82",
+          "name": "bearing_ankle_adapter_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer; unselected",
+      "source_volume_mm3": 2779.6155358522615,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.4210854715202004e-14,
+        "volume_difference_mm3": 2.212846084148623e-08,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -83.97250005000001,
+        -42.899100000000004,
+        11.675000000000002
+      ],
+      "expected_bounds_mm": [
+        -2.897500050000012,
+        -15.650000000000002,
+        0,
+        2.897500050000012,
+        15.650000000000002,
+        48.65000010000001
+      ],
+      "max_bound_error_mm": 0.004320000000001656,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 3.124450782430734e-05,
+      "tessellation": {
+        "surface_sample_count": 2120,
+        "maximum_sampled_face_deviation_mm": 0.0040601378775131725,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 16,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "fc20f345cc2038c087a910af17e724e84ce543873cc5c798476c1b59794dbbcc",
+          "unchanged_part_source_and_placement": true,
+          "source_commit": "227b450543457f349ebff14c72b392a1f3ee2e4c",
+          "current_canonical_volume_mm3": 2779.6155358744054,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.214392225141637e-08
+        }
+      },
+      "mesh": {
+        "vertices": 130291,
+        "triangles": 260590,
+        "volume_mm3": 2779.70238357162,
+        "bounds_mm": [
+          -2.8975,
+          -15.65,
+          0.0,
+          2.8975,
+          15.65,
+          48.65
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "sha256": "48a1e19ecca818ce5ea4c973eaa29f9b45c94e8221e36f071d52e7128c9d6bf6",
+      "stl_filename": "stl/bearing_ankle_adapter.stl",
+      "stl": {
+        "triangles": 260590,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 2779.702472381472,
+        "bounds_mm": [
+          -2.8975000381469727,
+          -15.649999618530273,
+          0.0,
+          2.8975000381469727,
+          15.649999618530273,
+          48.650001525878906
+        ],
+        "relative_volume_error": 3.194941033397478e-08,
+        "max_bound_error_mm": 1.5258789076710855e-06,
+        "sha256": "24547084f909405cc11c64218bc769d22a5c3ee18f264a6f90d1577d4de41111"
+      }
+    },
+    {
+      "model": "bearing_head_adapter",
+      "filename": "3mf/bearing_head_adapter.3mf",
+      "quantity": 2,
+      "occurrences": [
+        {
+          "ref": "#o1.93",
+          "name": "bearing_head_yaw_adapter"
+        },
+        {
+          "ref": "#o1.95",
+          "name": "bearing_head_roll_adapter"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer",
+      "source_volume_mm3": 2779.615535874403,
+      "geometry_source": "current_saved_assembly_step",
+      "saved_step_comparison": {
+        "bounds_error_mm": 1.0000000116860974e-07,
+        "volume_difference_mm3": 2.2143467504065484e-08,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        8.675000050000001,
+        35.1,
+        -256.90979999999996
+      ],
+      "expected_bounds_mm": [
+        -24.32500005,
+        -15.650000000000002,
+        -1.0000002953193245e-07,
+        24.32500015,
+        15.65,
+        5.7949999999999715
+      ],
+      "tessellation": {
+        "surface_sample_count": 2112,
+        "maximum_sampled_face_deviation_mm": 0.004060137877528504,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 16,
+        "algorithm": "Gmsh",
+        "profile": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "warnings": []
+      },
+      "mesh": {
+        "vertices": 130332,
+        "triangles": 260672,
+        "volume_mm3": 2779.703139834308,
+        "bounds_mm": [
+          -24.325,
+          -15.65,
+          0.0,
+          24.325,
+          15.65,
+          5.795
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 1.5000000175291461e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 3.15165744233748e-05,
+      "sha256": "6459997e987c045c2e86362e1b8265b6ad6434c7fbcc9a913ec0835bdc5bb650",
+      "stl_filename": "stl/bearing_head_adapter.stl",
+      "stl": {
+        "triangles": 260672,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 2779.7031523686587,
+        "bounds_mm": [
+          -24.325000762939453,
+          -15.649999618530273,
+          0.0,
+          24.325000762939453,
+          15.649999618530273,
+          5.795000076293945
+        ],
+        "relative_volume_error": 4.50924081235135e-09,
+        "max_bound_error_mm": 7.629394538355427e-07,
+        "sha256": "dfba7fc70602a91a8f5e157a574eb92d0e8895d8c401402b223d2e2b153b5836"
       }
     }
   ],
@@ -5036,6 +5222,7 @@
     "3mf/bearing_ankle_adapter.3mf": "48a1e19ecca818ce5ea4c973eaa29f9b45c94e8221e36f071d52e7128c9d6bf6",
     "3mf/bearing_carrier_left.3mf": "986d7aeffa5310499139d4a43b7960aebb7ee172094ed18437013973aa245b03",
     "3mf/bearing_carrier_right.3mf": "9ed869756781da94e1d2c6e205716cf6b460daa18b3254de3a4e6ffe84c1f19b",
+    "3mf/bearing_head_adapter.3mf": "6459997e987c045c2e86362e1b8265b6ad6434c7fbcc9a913ec0835bdc5bb650",
     "3mf/bearing_roll_adapter_left.3mf": "b8a719539208cd90d6fbcde713c615f61463e359c423de19e522342fb01c34ac",
     "3mf/bearing_roll_adapter_right.3mf": "998c95c038df0448c8b6b0073d005b5b4f375574d77fb6e09c3d5f5cadbcefbd",
     "3mf/bearing_shared_yaw_adapter.3mf": "f467e3a092512b09c62fb9c782f23958a690cd755cc78d3d2884b9abbe72f331",
@@ -5047,7 +5234,7 @@
     "3mf/foot_left_native_a_right.3mf": "880d6dff1c64fbb88f05dfe7167d8756af4809b15913e70d15b5fe48cd4765fd",
     "3mf/foot_left_native_b.3mf": "92ab333b2fcada8c5c146a985af2d2939796e3beee2b12abc5e7854750f201ba",
     "3mf/foot_left_native_b_right.3mf": "7fa8fdc8c06fbcd155d74d35542279a953a590b5966ba485f61df861ad6098e4",
-    "3mf/head_frame_native.3mf": "e4f015507598fa242547e7deaa5ce94b1e8767ed0f03120caa1e004294ae188a",
+    "3mf/head_frame_native.3mf": "eea376bcaafcdd2cb8908d47415b6c52b29fe7e62e98dc221f5b72fd79db79d2",
     "3mf/hip_left_native.3mf": "239b20401a1e11fbf399fc584f9abeaec6dbf3b622f969a263246191d99abc04",
     "3mf/hip_left_native_right.3mf": "2619f667deb8bbcc631e0fdd706a522e1e3650fb692f230cc7c8917cc1e05bc8",
     "3mf/imu_yoke_bridge_native.3mf": "7a0df7672ea62dc7e71ffcf6b5353d0dee789ae1a7fcab18b9e6022eb13aafca",
@@ -5059,7 +5246,7 @@
     "3mf/neck_001_native.3mf": "56dcb8cdc6171b9605be6f0a3a171c15b4a77606e77bd2b6168b5273f8a1719c",
     "3mf/neck_002_native.3mf": "895d0792be9a917a7af2b6f0e88293c7ea451263d2a4f70a65982ab941bf277a",
     "3mf/neck_internal_yoke_native.3mf": "f9da54f11783dea6995b927b11563610537c1b2731c4ebf1b0d1d90b6a143a01",
-    "3mf/neck_pitch_001_native.3mf": "facf731e847d63c90251ee9f6f12ca31ac4cec24e05be7bf8fb01fc08d71fea3",
+    "3mf/neck_pitch_001_native.3mf": "d09676e8aa502267b4f924551ec2eae8c56f6fc9759a310b8c34e2894a6aed84",
     "3mf/noenoeil_native.3mf": "0d71683ff36f3518e9314e9f3afc65a9f3f7c5084e36b039cbf7bbdf1b4fc7ba",
     "3mf/right_shell_native.3mf": "49f50b0006cff403435df3c26253fb6448de7e64f99ca6be30011c8adc8e6541",
     "3mf/roll_front_bulkhead_native.3mf": "35053919fc52275ad40034183bb3333b8bf1fcca7bec94ab6caa83c04ca75802",
@@ -5074,9 +5261,9 @@
     "3mf/upper_leg_left_native_right.3mf": "3450b0553a9cecfb01c45e355917f477ac27ad0f99e05ffbbe12d8921af32d16",
     "3mf/yaw2roll_left_native.3mf": "affd13a51b9ad2e4c4695f224f3fadaef253a757e505af0381e6de9a49aa6748",
     "3mf/yaw2roll_left_native_right.3mf": "6bff21feec5e05a8c425d34d4ea6c0cffca99de58ec43e976d0906e9919be1df",
-    "3mf/yaw_roll_link_native.3mf": "5b629fef48b7addb08f0fe243dd88675554a7e48efe8bcc8bddf1c6ec60e41e0",
-    "PARTS.csv": "f3eaeeda7bd1b11f923cd9339a4bddc069dd74079f7db1090fc78b7dbd12388f",
-    "README.md": "cdb093b0073c13b6a7f118d2a2d0eadfbdd33219a49da242b1b7af41f3fe22b3",
+    "3mf/yaw_roll_link_native.3mf": "15c678b793428a98e088435b62f638e302a8461169b06d2ae32e520a067aba58",
+    "PARTS.csv": "65668939d83984abebc0da8fef25e1ff21e00a34407317a08ec62ff3072adaea",
+    "README.md": "58ed54dd9f88b036adcc6c49cb9479228d360ffefff985187a89a627606643ac",
     "stl/ankle_bearing_inner_cap_left_native.stl": "8990a9e39d06784f97c6571e3e9af0bb6911fd1fd3659ee416d0001da59e2c68",
     "stl/ankle_bearing_inner_cap_left_native_right.stl": "29083d6bf5b22e01f29c4396ccb09c309a52626564063a504c3e7750eaaf5b67",
     "stl/ankle_bearing_outer_keeper_left_native.stl": "5c45873d84a662b8b395b275d52a1b2bcdbbbe7df6da3be5924fd2d66b555a4b",
@@ -5088,6 +5275,7 @@
     "stl/bearing_ankle_adapter.stl": "24547084f909405cc11c64218bc769d22a5c3ee18f264a6f90d1577d4de41111",
     "stl/bearing_carrier_left.stl": "4e8e82494099148e36a625a2afd554332aa8205017d1f156a49d501f8a636608",
     "stl/bearing_carrier_right.stl": "0ec816113207f77efc02b766153869680d837bc64b8f6eab36c7b41e3562e1b7",
+    "stl/bearing_head_adapter.stl": "dfba7fc70602a91a8f5e157a574eb92d0e8895d8c401402b223d2e2b153b5836",
     "stl/bearing_roll_adapter_left.stl": "32cf158bd20e952af8f877f281f0749c1b00e6558972e64971af065e2383c301",
     "stl/bearing_roll_adapter_right.stl": "c720d3b68006dc996d255766008b68519992ea77e8caeb4381df0b25e754b7b2",
     "stl/bearing_shared_yaw_adapter.stl": "61d8fc573ac1540de725ff6478e6f4692c8b22a7dadd155050434c5a7c120489",
@@ -5099,7 +5287,7 @@
     "stl/foot_left_native_a_right.stl": "0c8437c019abd19fde69fac8261436ff9e5c2a44f72ede287404c42bf84d9042",
     "stl/foot_left_native_b.stl": "3b5a1308d27b95c0a285582927a84acc1cc50dd5c8bb0d629c1aecaf7ef2a89b",
     "stl/foot_left_native_b_right.stl": "28a000606f08189811bceb1a484a4a438a764b978b7ff82267349a2c77d642c9",
-    "stl/head_frame_native.stl": "4f500948d581c52461690a1b20a79b6e8f10d88be4a6989a6d63a4b620f0605c",
+    "stl/head_frame_native.stl": "d921fb8b4880639e865f07164e93a959b19973a05476c04c173b19fa0030f3c3",
     "stl/hip_left_native.stl": "5b3561f8d527e4ea7ed04ee2c8222ecde75d8886da06d0e26dd2ecbee1494cbc",
     "stl/hip_left_native_right.stl": "2d39064a2d5560ec519b3b75c96dd3b9a50bacda1f525314517ef2f0e02d2691",
     "stl/imu_yoke_bridge_native.stl": "53df4dc948d5a30a139317dcf08296c593a2faf439c7135a6e8d71b3298a242f",
@@ -5111,7 +5299,7 @@
     "stl/neck_001_native.stl": "628cc102e3ac93148ed95dcb8efe5f36f3ce4feeb946f746fad17c45778f53d9",
     "stl/neck_002_native.stl": "b67f60097bd5f20b328729f8aa9d3e54ed9c28c9ef9fad0ef14748d96cea9226",
     "stl/neck_internal_yoke_native.stl": "eac9864031a18fd81c6b97bbb2ded6063b34323b32bf84c4547e762424819bdd",
-    "stl/neck_pitch_001_native.stl": "bc214f96e0ebf4d47263759c44c54efdb3e04832acdec1ae0c7f081253c8114b",
+    "stl/neck_pitch_001_native.stl": "165e0a26584482dfb3a24f61ec71634606772e21dd6ad8d0b86a32fb68116309",
     "stl/noenoeil_native.stl": "474daa9c71ae77a6d26288cce0b602e2b9045abf1fa473ec97b702915ea0003b",
     "stl/right_shell_native.stl": "b7f90583930e7dac7091ec21ef0bdd2d6cfca68d42cb0ede746335d3bd5d1419",
     "stl/roll_front_bulkhead_native.stl": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815",
@@ -5126,7 +5314,7 @@
     "stl/upper_leg_left_native_right.stl": "a02137af16ceb9f787fdfdc5aca47a2bc1c0db6fe9917dadc721a33f93193366",
     "stl/yaw2roll_left_native.stl": "63c01a2abfe08f800cfc47844372f77a162338c913a9fe6a20ca1c14f0b902ce",
     "stl/yaw2roll_left_native_right.stl": "dbcf23e38dd8f79faedeae61eb752984dd553d1c7e1a19a75b9bc0e52dddf490",
-    "stl/yaw_roll_link_native.stl": "a02ae047b3acc9d2e4a6f8971b7959db6991fc11d51dc018f3046c03fa70c46a"
+    "stl/yaw_roll_link_native.stl": "770963bcd8900b63506f2e294529861e39a3579de0ed61502ee9b22a2e9d081d"
   },
-  "manifest_content_sha256": "2a2b4d0f5781ff9f9024f0ecf54440a9b68f8a63eaf1d660e23d3ee0e09409b8"
+  "manifest_content_sha256": "f4f4ac525c7956b41ba5c78610c18b377a922be9a44ed1fa739d6dd9f282ed4d"
 }

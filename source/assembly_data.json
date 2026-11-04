@@ -1136,7 +1136,7 @@
     },
     {
       "name": "servo_neck_upper",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1176,7 +1176,7 @@
     },
     {
       "name": "servo_head_roll",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1196,7 +1196,7 @@
     },
     {
       "name": "servo_head_yaw",
-      "component": "sts3215_servo_native",
+      "component": "bearing_servo_reference",
       "params": {},
       "at": [
         [
@@ -1624,6 +1624,78 @@
           [
             -0.5773502691896257,
             0.5773502691896257,
+            -0.5773502691896258
+          ],
+          119.99999999999999
+        ]
+      ]
+    },
+    {
+      "name": "bearing_head_yaw_adapter",
+      "component": "bearing_head_adapter",
+      "params": {},
+      "at": [
+        [
+          0.0,
+          -35.1,
+          258.0048
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_head_yaw",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          0.0,
+          -35.1,
+          258.0048
+        ],
+        [
+          "Z",
+          -90
+        ]
+      ]
+    },
+    {
+      "name": "bearing_head_roll_adapter",
+      "component": "bearing_head_adapter",
+      "params": {},
+      "at": [
+        [
+          0.0,
+          -14.935,
+          280.5798
+        ],
+        [
+          [
+            -0.5773502691896257,
+            -0.5773502691896257,
+            -0.5773502691896258
+          ],
+          119.99999999999999
+        ]
+      ]
+    },
+    {
+      "name": "bearing_6704_head_roll",
+      "component": "bearing_6704",
+      "params": {},
+      "at": [
+        [
+          0.0,
+          -14.935,
+          280.5798
+        ],
+        [
+          [
+            -0.5773502691896257,
+            -0.5773502691896257,
             -0.5773502691896258
           ],
           119.99999999999999
@@ -2401,6 +2473,30 @@
       "kind": "fastened",
       "parent": "#servo_ankle_right",
       "child": "#bearing_6704_servo_ankle_right"
+    },
+    {
+      "name": "fix_bearing_head_yaw_adapter",
+      "kind": "fastened",
+      "parent": "#servo_head_yaw",
+      "child": "#bearing_head_yaw_adapter"
+    },
+    {
+      "name": "fix_bearing_6704_head_yaw",
+      "kind": "fastened",
+      "parent": "#servo_head_yaw",
+      "child": "#bearing_6704_head_yaw"
+    },
+    {
+      "name": "fix_bearing_head_roll_adapter",
+      "kind": "fastened",
+      "parent": "#servo_head_roll",
+      "child": "#bearing_head_roll_adapter"
+    },
+    {
+      "name": "fix_bearing_6704_head_roll",
+      "kind": "fastened",
+      "parent": "#servo_head_roll",
+      "child": "#bearing_6704_head_roll"
     }
   ],
   "poses": {
