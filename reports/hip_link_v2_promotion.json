@@ -1,0 +1,576 @@
+{
+  "revision": "hip-flat-wall-v2",
+  "approved_by_user": true,
+  "promotion_method": "Approved geometry reused; only STEP root and top-level occurrence names normalized. No geometry rebuild or CAD check rerun.",
+  "validation_policy": "User explicitly requested no repeated checks. Existing V2 fit, screw-access and full-solid local movement receipts reused.",
+  "approved_review_sha256": "f5c933e2d5decd35aae31de49d35210dd7bc204a35db52cd426b5bc13249b64d",
+  "canonical_step_sha256": "da4eea4fd001473276f2960d86e7b0f817aa66b7286c5ea6a079e607526bf737",
+  "previous_canonical_step_sha256": "f0f8715e088b3ec572e4a1c8ce5470102f34362d45304ff650e5a3be65a94db8",
+  "changed_occurrences": [
+    "hip_left",
+    "hip_right"
+  ],
+  "unchanged_occurrences": 100,
+  "fit": {
+    "interfaces": [
+      {
+        "side": "left",
+        "servo": "servo_upper_leg_left",
+        "bearing_overlap_mm3": 0,
+        "horn_overlap_mm3": 0,
+        "inner_ring_contact_mm": 0.0,
+        "shield_gap_mm": 0.1999999999999993,
+        "wall_samples": [
+          [
+            11,
+            0,
+            5.400000000000004
+          ],
+          [
+            -11,
+            0,
+            5.400000000000004
+          ],
+          [
+            0,
+            11,
+            5.400000000000032
+          ],
+          [
+            0,
+            -11,
+            5.400000000000032
+          ],
+          [
+            8,
+            8,
+            5.40000000000003
+          ],
+          [
+            -8,
+            8,
+            5.400000000000032
+          ],
+          [
+            8,
+            -8,
+            5.3999999999999995
+          ],
+          [
+            -8,
+            -8,
+            5.400000000000002
+          ]
+        ],
+        "bore_overlap_mm3": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "side": "left",
+        "servo": "servo_hip_l",
+        "bearing_overlap_mm3": 0,
+        "horn_overlap_mm3": 0,
+        "inner_ring_contact_mm": 3.1086244689504383e-15,
+        "shield_gap_mm": 0.20000000000000284,
+        "wall_samples": [
+          [
+            11,
+            0,
+            5.400000000000002
+          ],
+          [
+            -11,
+            0,
+            8.100000000000009
+          ],
+          [
+            0,
+            11,
+            5.399999999999996
+          ],
+          [
+            0,
+            -11,
+            5.400000000000007
+          ],
+          [
+            8,
+            8,
+            5.399999999999997
+          ],
+          [
+            -8,
+            8,
+            7.401241748631321
+          ],
+          [
+            8,
+            -8,
+            5.400000000000006
+          ],
+          [
+            -8,
+            -8,
+            7.401241203300279
+          ]
+        ],
+        "bore_overlap_mm3": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "side": "right",
+        "servo": "servo_upper_leg_right",
+        "bearing_overlap_mm3": 0,
+        "horn_overlap_mm3": 0,
+        "inner_ring_contact_mm": 0.0,
+        "shield_gap_mm": 0.20000000000000284,
+        "wall_samples": [
+          [
+            11,
+            0,
+            5.400000000000005
+          ],
+          [
+            -11,
+            0,
+            5.400000000000007
+          ],
+          [
+            0,
+            11,
+            5.400000000000032
+          ],
+          [
+            0,
+            -11,
+            5.400000000000033
+          ],
+          [
+            8,
+            8,
+            5.400000000000032
+          ],
+          [
+            -8,
+            8,
+            5.400000000000034
+          ],
+          [
+            8,
+            -8,
+            5.3999999999999995
+          ],
+          [
+            -8,
+            -8,
+            5.400000000000006
+          ]
+        ],
+        "bore_overlap_mm3": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "side": "right",
+        "servo": "servo_hip_l_2",
+        "bearing_overlap_mm3": 0,
+        "horn_overlap_mm3": 0,
+        "inner_ring_contact_mm": 3.552713678800501e-15,
+        "shield_gap_mm": 0.20000000000000284,
+        "wall_samples": [
+          [
+            11,
+            0,
+            8.100000000000009
+          ],
+          [
+            -11,
+            0,
+            5.400000000000002
+          ],
+          [
+            0,
+            11,
+            5.3999999999999995
+          ],
+          [
+            0,
+            -11,
+            5.400000000000008
+          ],
+          [
+            8,
+            8,
+            7.401241524863854
+          ],
+          [
+            -8,
+            8,
+            5.400000000000002
+          ],
+          [
+            8,
+            -8,
+            7.40124085682443
+          ],
+          [
+            -8,
+            -8,
+            5.400000000000013
+          ]
+        ],
+        "bore_overlap_mm3": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "rest_collisions": []
+  },
+  "screw_access": [
+    {
+      "servo": "servo_upper_leg_left",
+      "four_counterbore_access_overlaps_mm3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "horn_screw_grip_mm": 5.925
+    },
+    {
+      "servo": "servo_hip_l",
+      "four_counterbore_access_overlaps_mm3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "horn_screw_grip_mm": 5.925
+    },
+    {
+      "servo": "servo_upper_leg_right",
+      "four_counterbore_access_overlaps_mm3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "horn_screw_grip_mm": 5.925
+    },
+    {
+      "servo": "servo_hip_l_2",
+      "four_counterbore_access_overlaps_mm3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "horn_screw_grip_mm": 5.925
+    }
+  ],
+  "motion": {
+    "passed": true,
+    "coverage": "Complete candidate versus local canonical hardware. Hip roll sampled every 5 degrees plus +/-31 degree end stops; pitch verified for all angles by axial separation. Not combined whole-robot motion or physical validation.",
+    "candidate_sha256": {
+      "left": "025a3ea6872440b97d42f1af84013c1fe65b621fee4a132c2309b99548ea8c28",
+      "right": "45b0cf30311a03e67007f9b730862ea7709bfc444f045c206920929b185b0af2"
+    },
+    "canonical_sha256": "f0f8715e088b3ec572e4a1c8ce5470102f34362d45304ff650e5a3be65a94db8",
+    "results": [
+      {
+        "side": "left",
+        "angles_deg": [
+          -31,
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          31
+        ],
+        "candidate_overlap_hits_mm3": [],
+        "volume_threshold_mm3": 0.01,
+        "pitch_limits_deg": [
+          -90,
+          90
+        ],
+        "pitch_check": "Exact separating planes perpendicular to pitch axis; all angles",
+        "pitch_axial_gaps": [
+          {
+            "part": "bearing_carrier_left",
+            "axial_gap_mm": 0.10499979999998743
+          },
+          {
+            "part": "upper_leg_left",
+            "axial_gap_mm": 6.599999799999985
+          },
+          {
+            "part": "servo_upper_leg_left casing",
+            "axial_gap_mm": 3.299999799999995
+          }
+        ]
+      },
+      {
+        "side": "right",
+        "angles_deg": [
+          -31,
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          31
+        ],
+        "candidate_overlap_hits_mm3": [],
+        "volume_threshold_mm3": 0.01,
+        "pitch_limits_deg": [
+          -90,
+          90
+        ],
+        "pitch_check": "Exact separating planes perpendicular to pitch axis; all angles",
+        "pitch_axial_gaps": [
+          {
+            "part": "bearing_carrier_right",
+            "axial_gap_mm": 0.10499979999998743
+          },
+          {
+            "part": "upper_leg_right",
+            "axial_gap_mm": 6.599999799999985
+          },
+          {
+            "part": "servo_upper_leg_right casing",
+            "axial_gap_mm": 3.2999997999999877
+          }
+        ]
+      }
+    ]
+  },
+  "source_body_sha256": "3105136cb31f095e804e471faa6b349b93860e9d1051c5e1ef8b43be944be886",
+  "approved_parts_sha256": {
+    "left": "025a3ea6872440b97d42f1af84013c1fe65b621fee4a132c2309b99548ea8c28",
+    "right": "45b0cf30311a03e67007f9b730862ea7709bfc444f045c206920929b185b0af2"
+  },
+  "full_checks_rerun": false,
+  "print_exports": [
+    {
+      "model": "hip_left_native",
+      "filename": "3mf/hip_left_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.34",
+          "name": "hip_left"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
+      "source_volume_mm3": 11619.49681843588,
+      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
+      "saved_step_comparison": {
+        "approved_step_sha256": "025a3ea6872440b97d42f1af84013c1fe65b621fee4a132c2309b99548ea8c28",
+        "cad_checks": "Reused existing V2 results at user request"
+      },
+      "translation_mm": [
+        -30.787500050000006,
+        17.512233889690567,
+        -87.5499999
+      ],
+      "expected_bounds_mm": [
+        -19.98750005,
+        -24.93723388969057,
+        0,
+        19.98750005,
+        24.93723388969057,
+        25.650000199999994
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "DEFAULT",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2524,
+        "maximum_sampled_face_deviation_mm": 0.01009108109040274,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": -1,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true
+      },
+      "mesh": {
+        "vertices": 26489,
+        "triangles": 53006,
+        "volume_mm3": 11616.740640751535,
+        "bounds_mm": [
+          -19.983514,
+          -24.937232,
+          0.0,
+          19.9875,
+          24.933248,
+          25.65
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.00398605000000174,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0002372028434115929,
+      "sha256": "c0292a472a2f353480480b080ce2fe0c491e645583dccdec9d3c0025c0190e64",
+      "stl_filename": "stl/hip_left_native.stl",
+      "stl": {
+        "triangles": 53006,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 11616.740870606402,
+        "bounds_mm": [
+          -19.9835147857666,
+          -24.937231063842773,
+          0.0,
+          19.987499237060547,
+          24.93324851989746,
+          25.649999618530273
+        ],
+        "relative_volume_error": 1.9786519577945842e-08,
+        "max_bound_error_mm": 9.361572281818553e-07,
+        "sha256": "c0659e973e764a20f87ee85374b20e1feb4370c01bcd718923f2f572538dfd7c"
+      }
+    },
+    {
+      "model": "hip_left_native_right",
+      "filename": "3mf/hip_left_native_right.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.45",
+          "name": "hip_right"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
+      "source_volume_mm3": 11619.497337601337,
+      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
+      "saved_step_comparison": {
+        "approved_step_sha256": "45b0cf30311a03e67007f9b730862ea7709bfc444f045c206920929b185b0af2",
+        "cad_checks": "Reused existing V2 results at user request"
+      },
+      "translation_mm": [
+        30.787500050000002,
+        17.51223383969057,
+        -87.5499999
+      ],
+      "expected_bounds_mm": [
+        -19.987500050000005,
+        -24.937233939690568,
+        0,
+        19.987500050000005,
+        24.937233939690568,
+        25.650000199999994
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "DEFAULT",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2516,
+        "maximum_sampled_face_deviation_mm": 0.008121693985198972,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": -1,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true
+      },
+      "mesh": {
+        "vertices": 26449,
+        "triangles": 52926,
+        "volume_mm3": 11616.742069934755,
+        "bounds_mm": [
+          -19.9875,
+          -24.937232,
+          0.0,
+          19.983514,
+          24.933248,
+          25.65
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.003986050000005292,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00023712451464364637,
+      "sha256": "1bbbd97fffd067b6e010d8921cd6f6d208791ed8c4b77513838180339377bbb9",
+      "stl_filename": "stl/hip_left_native_right.stl",
+      "stl": {
+        "triangles": 52926,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 11616.742291478839,
+        "bounds_mm": [
+          -19.987499237060547,
+          -24.937231063842773,
+          0.0,
+          19.9835147857666,
+          24.93324851989746,
+          25.649999618530273
+        ],
+        "relative_volume_error": 1.907110292038563e-08,
+        "max_bound_error_mm": 9.361572281818553e-07,
+        "sha256": "30bd75d6a246fa28f49c0d8fff91fedb49683d4aecc1358987079c3cf9055a0d"
+      }
+    }
+  ],
+  "canonical_native_part_sha256": {
+    "hip_left_native": "d806742a20d988c2776daa00da755cbf48786b7340577517b4537d071109f247",
+    "hip_left_native_right": "590293e928a264698ed016c309aeb19df683ce83c7577202eac2a2a8ffa61114"
+  }
+}

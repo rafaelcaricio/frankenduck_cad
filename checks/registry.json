@@ -233,7 +233,8 @@
         "src/parts/*.py",
         "source/assembly_data.json",
         "STEP/imported/*.step",
-        "checks/passive_leg.py"
+        "checks/passive_leg.py",
+        "src/lib/hip_link.py"
       ],
       "report": "reports/latest/bearing_inner_ring.json",
       "coverage": "Native canonical geometry, local sampled motion and nominal fits; no physical or continuous-motion certification."

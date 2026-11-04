@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-11-04T17:53:43.581317+00:00",
-  "input_key": "aae99054ba342d39e9385b7eb78164cb530e3793f87c9406c68a1a54971652a2",
+  "generated_utc": "2026-11-04T21:26:08.539914+00:00",
+  "input_key": "a936410bb63912088d8137f80c2967bb12594b11b596c41827d0345d37ca4056",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "f0f8715e088b3ec572e4a1c8ce5470102f34362d45304ff650e5a3be65a94db8",
-    "catalog_sha256": "bfc3f536088fc661ff3434a6db61f26956c043e80e59710493cd70114e66bd3a",
+    "source_step_sha256": "da4eea4fd001473276f2960d86e7b0f817aa66b7286c5ea6a079e607526bf737",
+    "catalog_sha256": "fe5b845f741e4c162e69c34b8fa8b17488c52863fc1d6ec6fe6fdb60ab94b47a",
     "implementation": {
       "tools/print_export.py": "edeb2353acf15f3a3afba18e4bb6ce1e052cab1b46e4acfa60030b0076ad4f8f",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430",
@@ -24,7 +24,7 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "9a993188aa3b0b24a1d03edfdb096ebfe753513ca17c1365ea4537d7e85a7a83",
+    "build_input_key": "ae2ad4c68994831baa54d6055805ec8e47c8a02ad7fef71cf4376e327ec4d861",
     "assembly_data_sha256": "d4413080603d134f4427861447e348becbf318c2232ac2faf08148f7ac234eb7"
   },
   "units": "mm",
@@ -1860,34 +1860,32 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
-      "source_volume_mm3": 7819.20810479061,
-      "geometry_source": "saved_assembly_brep_verified_against_current_factory",
+      "source_volume_mm3": 11619.49681843588,
+      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
       "saved_step_comparison": {
-        "bounds_error_mm": 2.070853498023598e-14,
-        "volume_difference_mm3": 0.007081409526108473,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
+        "approved_step_sha256": "025a3ea6872440b97d42f1af84013c1fe65b621fee4a132c2309b99548ea8c28",
+        "cad_checks": "Reused existing V2 results at user request"
       },
       "translation_mm": [
-        -31.050000050000005,
-        15.8625,
-        -87.54999989999997
+        -30.787500050000006,
+        17.512233889690567,
+        -87.5499999
       ],
       "expected_bounds_mm": [
-        -20.25000005,
-        -23.287500100000006,
+        -19.98750005,
+        -24.93723388969057,
         0,
-        20.25000005,
-        23.287500100000006,
-        25.65000020000005
+        19.98750005,
+        24.93723388969057,
+        25.650000199999994
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "DEFAULT",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 4440,
-        "maximum_sampled_face_deviation_mm": 0.015175395251979334,
+        "surface_sample_count": 2524,
+        "maximum_sampled_face_deviation_mm": 0.01009108109040274,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
@@ -1895,101 +1893,51 @@
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
-        "surface_seam_patches": [
-          {
-            "area_mm2": 0.11261204467645418,
-            "diameter_mm": 0.648957190971022,
-            "triangles": 4,
-            "samples_per_triangle": 45,
-            "maximum_sampled_surface_distance_mm": 0.001826960719788273,
-            "tolerance_mm": 0.01
-          }
-        ],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "verified_saved_geometry_fallback": {
-          "original_mesh_error": "Export topology cleanup failed geometry checks: hip_left_native",
-          "bidirectional_difference_mm3": [
-            0,
-            0
-          ]
-        },
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ngles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.195979 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "gles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0257112 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "gles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0281118 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native\n"
-          },
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 1e-05,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          },
-          {
-            "algorithm": "WatsonFineControlled",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ngles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.195979 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native\n"
-          }
-        ]
+        "library_valid": true,
+        "library_manifold": true
       },
       "mesh": {
-        "vertices": 29203,
-        "triangles": 58442,
-        "volume_mm3": 7818.328235959312,
+        "vertices": 26489,
+        "triangles": 53006,
+        "volume_mm3": 11616.740640751535,
         "bounds_mm": [
-          -20.246014,
-          -23.2875,
+          -19.983514,
+          -24.937232,
           0.0,
-          20.25,
-          23.28502,
+          19.9875,
+          24.933248,
           25.65
         ],
-        "nonmanifold_edges": 35,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
       "max_bound_error_mm": 0.00398605000000174,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00011252659086526715,
-      "sha256": "14a8e144f27c22e972b3d6d5b65b0cbbc48e3f3a203297e6c0e6539522b8433d",
+      "relative_volume_error": 0.0002372028434115929,
+      "sha256": "c0292a472a2f353480480b080ce2fe0c491e645583dccdec9d3c0025c0190e64",
       "stl_filename": "stl/hip_left_native.stl",
       "stl": {
-        "triangles": 58442,
+        "triangles": 53006,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 35,
-        "volume_mm3": 7818.32803289142,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 11616.740870606402,
         "bounds_mm": [
-          -20.246013641357422,
-          -23.287500381469727,
+          -19.9835147857666,
+          -24.937231063842773,
           0.0,
-          20.25,
-          23.28502082824707,
+          19.987499237060547,
+          24.93324851989746,
           25.649999618530273
         ],
-        "relative_volume_error": 2.5973313775337707e-08,
-        "max_bound_error_mm": 8.282470709275458e-07,
-        "sha256": "5d6a79e9e9b4ee544fe6a1e5a1a087de592edf70505a769f9d1cb08fa5b4b6fd"
+        "relative_volume_error": 1.9786519577945842e-08,
+        "max_bound_error_mm": 9.361572281818553e-07,
+        "sha256": "c0659e973e764a20f87ee85374b20e1feb4370c01bcd718923f2f572538dfd7c"
       }
     },
     {
@@ -2005,145 +1953,84 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
-      "source_volume_mm3": 7819.437939486532,
-      "geometry_source": "current_saved_assembly_step",
+      "source_volume_mm3": 11619.497337601337,
+      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
       "saved_step_comparison": {
-        "bounds_error_mm": 1.0000000116860974e-07,
-        "volume_difference_mm3": 0.031035765367960266,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
-        "saved_step_valid": true
+        "approved_step_sha256": "45b0cf30311a03e67007f9b730862ea7709bfc444f045c206920929b185b0af2",
+        "cad_checks": "Reused existing V2 results at user request"
       },
       "translation_mm": [
-        31.05000005,
-        15.862500000000004,
+        30.787500050000002,
+        17.51223383969057,
         -87.5499999
       ],
       "expected_bounds_mm": [
-        -20.250000050000004,
-        -23.287500100000003,
+        -19.987500050000005,
+        -24.937233939690568,
         0,
-        20.250000050000004,
-        23.287500100000003,
-        25.650000200000875
+        19.987500050000005,
+        24.937233939690568,
+        25.650000199999994
       ],
       "tessellation": {
-        "surface_sample_count": 4656,
-        "maximum_sampled_face_deviation_mm": 0.015446612434926444,
+        "linear_deflection_mm": 0.01,
+        "algorithm": "DEFAULT",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2516,
+        "maximum_sampled_face_deviation_mm": 0.008121693985198972,
         "sampled_face_deviation_limit_mm": 0.02,
-        "face_mapping_fallbacks": 30,
-        "algorithm": "Gmsh",
-        "profile": "Gmsh",
-        "gmsh_version": "4.15.2",
-        "maximum_edge_mm": 0.4,
-        "curvature_elements_per_circle": 64,
-        "linear_deflection_mm": null,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "warnings": [
-          "Warning : 2 elements remain invalid in surface 57",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : 2 elements remain invalid in surface 60",
-          "Warning : ------------------------------",
-          "Warning : Mesh generation error summary",
-          "Warning :     7 warnings",
-          "Warning :     0 errors",
-          "Warning : Check the full log for details",
-          "Warning : ------------------------------"
-        ],
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.198941 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "   raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0257112 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.28337 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          },
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 1e-05,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          },
-          {
-            "algorithm": "WatsonFineControlled",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.198941 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          },
-          {
-            "algorithm": "DEFAULT",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.189873 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          },
-          {
-            "algorithm": "DEFAULT",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.28337 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: hip_left_native_right\n"
-          }
-        ]
+        "min_size_mm": -1,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true
       },
       "mesh": {
-        "vertices": 139161,
-        "triangles": 278388,
-        "volume_mm3": 7820.487583268657,
+        "vertices": 26449,
+        "triangles": 52926,
+        "volume_mm3": 11616.742069934755,
         "bounds_mm": [
-          -20.25,
-          -23.2875,
+          -19.9875,
+          -24.937232,
           0.0,
-          20.25,
-          23.2875,
+          19.983514,
+          24.933248,
           25.65
         ],
-        "nonmanifold_edges": 20,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
-      "max_bound_error_mm": 2.0000087630478447e-07,
+      "max_bound_error_mm": 0.003986050000005292,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0001342351957068834,
-      "sha256": "097c59f8647d9af98ae01b0d787441a307b94cc281c42ac683c4809bfa32a459",
+      "relative_volume_error": 0.00023712451464364637,
+      "sha256": "1bbbd97fffd067b6e010d8921cd6f6d208791ed8c4b77513838180339377bbb9",
       "stl_filename": "stl/hip_left_native_right.stl",
       "stl": {
-        "triangles": 278388,
+        "triangles": 52926,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 20,
-        "volume_mm3": 7820.487366301594,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 11616.742291478839,
         "bounds_mm": [
-          -20.25,
-          -23.287500381469727,
+          -19.987499237060547,
+          -24.937231063842773,
           0.0,
-          20.25,
-          23.287500381469727,
+          19.9835147857666,
+          24.93324851989746,
           25.649999618530273
         ],
-        "relative_volume_error": 2.7743418825540767e-08,
-        "max_bound_error_mm": 3.8146972514141453e-07,
-        "sha256": "d1f4031613f5d61aef966072b3b26f78867ac72b954d0bcbf9d8ad5b5e92a904"
+        "relative_volume_error": 1.907110292038563e-08,
+        "max_bound_error_mm": 9.361572281818553e-07,
+        "sha256": "30bd75d6a246fa28f49c0d8fff91fedb49683d4aecc1358987079c3cf9055a0d"
       }
     },
     {
@@ -5453,8 +5340,8 @@
     "3mf/foot_left_native_b.3mf": "8764c9d2a9b8862b9502e634f3a9f369299ee73bb5c4f22491e163e8f7fb0674",
     "3mf/foot_left_native_b_right.3mf": "ace6d40c4bc2df1ced8839a07a3bb1dc30ecb1ac3eb021b93fdb5b9d6426c805",
     "3mf/head_frame_native.3mf": "adb44b0e711beb85ae626e8398775e22bf87e5b1ca45c00b16bdd0cafc021b6a",
-    "3mf/hip_left_native.3mf": "14a8e144f27c22e972b3d6d5b65b0cbbc48e3f3a203297e6c0e6539522b8433d",
-    "3mf/hip_left_native_right.3mf": "097c59f8647d9af98ae01b0d787441a307b94cc281c42ac683c4809bfa32a459",
+    "3mf/hip_left_native.3mf": "c0292a472a2f353480480b080ce2fe0c491e645583dccdec9d3c0025c0190e64",
+    "3mf/hip_left_native_right.3mf": "1bbbd97fffd067b6e010d8921cd6f6d208791ed8c4b77513838180339377bbb9",
     "3mf/imu_yoke_bridge_native.3mf": "7320531c05735226117960e7f1f159ad0f1cfdf69cf650f3d1def6914633cb9e",
     "3mf/jaw_native.3mf": "4c0341d32f78ed73cab959bac4219d05049fca258df17530dabdc19e3647ba25",
     "3mf/jaw_soft_001_native.3mf": "3df2a1747755a4eb7760dfb4a78f7ed1460c3584ffa80702056922d02779beec",
@@ -5507,8 +5394,8 @@
     "stl/foot_left_native_b.stl": "3b5a1308d27b95c0a285582927a84acc1cc50dd5c8bb0d629c1aecaf7ef2a89b",
     "stl/foot_left_native_b_right.stl": "28a000606f08189811bceb1a484a4a438a764b978b7ff82267349a2c77d642c9",
     "stl/head_frame_native.stl": "d921fb8b4880639e865f07164e93a959b19973a05476c04c173b19fa0030f3c3",
-    "stl/hip_left_native.stl": "5d6a79e9e9b4ee544fe6a1e5a1a087de592edf70505a769f9d1cb08fa5b4b6fd",
-    "stl/hip_left_native_right.stl": "d1f4031613f5d61aef966072b3b26f78867ac72b954d0bcbf9d8ad5b5e92a904",
+    "stl/hip_left_native.stl": "c0659e973e764a20f87ee85374b20e1feb4370c01bcd718923f2f572538dfd7c",
+    "stl/hip_left_native_right.stl": "30bd75d6a246fa28f49c0d8fff91fedb49683d4aecc1358987079c3cf9055a0d",
     "stl/imu_yoke_bridge_native.stl": "53df4dc948d5a30a139317dcf08296c593a2faf439c7135a6e8d71b3298a242f",
     "stl/jaw_native.stl": "53e9fb60d7f74a8fb0fbe8fb0201bd32e4812727c1e20daec0bf191015672f0d",
     "stl/jaw_soft_001_native.stl": "10e2e986f10e2916f1ced429f03d7f92b1362a196b140140e1e63c517aa34e40",
@@ -5537,5 +5424,13 @@
     "stl/yaw2roll_left_native_right.stl": "485cf9ddc9cd2f78510d811e73f31153b12dae91b1d00f55b08910664c7997fc",
     "stl/yaw_roll_link_native.stl": "2bbecdb4671564a56e2e6126f9fc3c6b08eabf6a98cfca7e8ffad42e6028a1a4"
   },
-  "manifest_content_sha256": "c9f2fcb521e3ebb79ae60a2d7387426b2e8a403da69953d188f640501b0ea098"
+  "promotion": {
+    "method": "Approved V2 geometry promoted directly; regenerated only two changed hip meshes",
+    "reused_unchanged_models": 50,
+    "full_checks_rerun": false,
+    "cad_validation": "Existing approved V2 results reused at explicit user request",
+    "previous_manifest_sha256": "382088bcb91869266e5fac478d9fdb25f8165b96bffd4ed62377eeb531133b55",
+    "evidence": "reports/hip_link_v2_promotion.json"
+  },
+  "manifest_content_sha256": "9e15fcb3300aa6ff6e0535d45ba631da6566b985f678162d1cb33dfe167fd7d6"
 }

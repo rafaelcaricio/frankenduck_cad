@@ -32,6 +32,9 @@ def original_revised(name):
 
 @cached_shape
 def revised(name):
+    if name in ('hip_left_native', 'hip_left_native_right'):
+        from ..hip_link import make_native
+        return make_native(-1 if name.endswith('_right') else 1).solids()[0]
     from ..bearing_race_clearance import revise_native
     return revise_native(original_revised(name),name)
 

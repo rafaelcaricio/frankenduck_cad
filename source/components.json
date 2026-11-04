@@ -350,7 +350,7 @@
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
+      "notes": "Approved V2: 5.4 mm flat walls, exposed horn bearings and raised reinforcing bar; unchanged joint axes. Horn screw grip increases 3.225 mm. Local CAD checks reused; physical and combined-motion validation remain unreviewed. See docs/hip-links.md."
     },
     {
       "model": "hip_left_native_right",
@@ -364,7 +364,7 @@
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "export": true,
       "active_variant": true,
-      "notes": "Frankenduck printed part. Promoted horn-bearing revision; full combined hip movement unresolved. See docs/bearing-revision.md."
+      "notes": "Approved V2: 5.4 mm flat walls, exposed horn bearings and raised reinforcing bar; unchanged joint axes. Horn screw grip increases 3.225 mm. Local CAD checks reused; physical and combined-motion validation remain unreviewed. See docs/hip-links.md."
     },
     {
       "model": "hip_left_native_seated",
