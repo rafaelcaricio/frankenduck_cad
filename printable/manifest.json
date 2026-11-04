@@ -1,13 +1,14 @@
 {
-  "generated_utc": "2026-11-04T03:34:36.865821+00:00",
-  "input_key": "3ad819d5ff941668386bec952f2f8a2797664fba846f3b089fed8315ba0fc4ac",
+  "generated_utc": "2026-11-04T08:39:07.836399+00:00",
+  "input_key": "80caf46dbd9d518f470c1a7c841effb223ce8347a50923f6fa27a1e78eeaf643",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "6161e9252e08a15e0930a269943ee21fe029ed4ddaf4acfadfd64f491320cc6b",
+    "source_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
     "catalog_sha256": "924be3d918ca21918c208f27b638de82dd1fd872d7880698965e1de445c7065b",
     "implementation": {
-      "tools/print_export.py": "9f637275086b989a11b5f68a08d9cc93d619d32678a4aab83a75c5c67db840f2",
-      "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
+      "tools/print_export.py": "edeb2353acf15f3a3afba18e4bb6ce1e052cab1b46e4acfa60030b0076ad4f8f",
+      "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430",
+      "tools/gmsh_mesh.py": "8f58ef80ada64f0a873819a0a434345cbff54801c0bfe04ad0543e5f40a2ba4a"
     },
     "runtime": {
       "python": "3.12.0",
@@ -21,9 +22,9 @@
     },
     "mesh_tolerance_absolute_mm": 0.01,
     "mesh_angular_tolerance_rad": 0.1,
-    "mesher": "OCCT Watson then Delabella via build123d/Lib3MF",
+    "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "95a16f3a6cb958767c7f15f9dd2db2b23f6bb344cf46881c3fb090559366f2e4",
+    "build_input_key": "d4d60294a01aed08e2fcefec8553a405f322471fea0c6fc657af30a912af065e",
     "assembly_data_sha256": "15aeabc6a78cd5da40fcd343385127c90ec760cf8422f03316db5a11d49cd01c"
   },
   "units": "mm",
@@ -70,16 +71,25 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 160,
+        "maximum_sampled_face_deviation_mm": 0.0014763854961229287,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 65.79280414780425,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.4210854715202004e-14
+        }
       },
       "mesh": {
         "vertices": 756,
@@ -101,7 +111,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "6724896671bfada28b904f2b41ed317f2e84cc7300b2372125e5fa80b6800e48",
+      "sha256": "88c18cdd56bff61f54a2e0df49216f588324f226b6e1ff60b05726504164fc87",
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native.stl",
       "stl": {
         "triangles": 1516,
@@ -120,7 +130,7 @@
         ],
         "relative_volume_error": 2.812815817997443e-09,
         "max_bound_error_mm": 1.889953615830109e-07,
-        "sha256": "37774422426d7d3107623e81c7b68e52df96c53a07e0dbbb801a7dc553642ac2"
+        "sha256": "8990a9e39d06784f97c6571e3e9af0bb6911fd1fd3659ee416d0001da59e2c68"
       }
     },
     {
@@ -161,16 +171,25 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 160,
+        "maximum_sampled_face_deviation_mm": 0.0014763854961232347,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 65.79280414780423,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
         "vertices": 756,
@@ -192,7 +211,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "d935597da31cf8a5c97c49f02be61458e7b94e27ff0116038fa3f12a81ad004d",
+      "sha256": "9b92d09b8de8c82cf5dcd2712a41b119a408af65ee6727391285673c9423eec7",
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native_right.stl",
       "stl": {
         "triangles": 1516,
@@ -211,7 +230,7 @@
         ],
         "relative_volume_error": 2.812815817997443e-09,
         "max_bound_error_mm": 1.889953615830109e-07,
-        "sha256": "e8db82a106716961a0eaafd76e5bf672826a912367d41584694c58a7d4aa0a93"
+        "sha256": "29083d6bf5b22e01f29c4396ccb09c309a52626564063a504c3e7750eaaf5b67"
       }
     },
     {
@@ -252,16 +271,25 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 348,
+        "maximum_sampled_face_deviation_mm": 0.004087256689269182,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 617.753878222743,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.058175934711471e-11
+        }
       },
       "mesh": {
         "vertices": 1638,
@@ -283,7 +311,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791596158507,
-      "sha256": "472ad425b6ecc8acbd65cbcb71b08ca8428212861c3dff156fb2643219182bf6",
+      "sha256": "ef91392bea6a193855f7a508900c54a9fee03d8195e5e27f93ad13e6a800da4e",
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native.stl",
       "stl": {
         "triangles": 3284,
@@ -291,7 +319,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 617.4978991865736,
+        "volume_mm3": 617.4978991865735,
         "bounds_mm": [
           -0.8500000238418579,
           -13.149999618530273,
@@ -300,9 +328,9 @@
           13.149999618530273,
           26.295913696289062
         ],
-        "relative_volume_error": 8.577792111882573e-09,
+        "relative_volume_error": 8.577791927773705e-09,
         "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "3cbb94befc4daf3515956f318b37c6975201f11606362392ee0f62f70ff8019a"
+        "sha256": "5c45873d84a662b8b395b275d52a1b2bcdbbbe7df6da3be5924fd2d66b555a4b"
       }
     },
     {
@@ -343,21 +371,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 348,
+        "maximum_sampled_face_deviation_mm": 0.004087256689272575,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 617.7538782227435,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.1377567211166024e-11
+        }
       },
       "mesh": {
         "vertices": 1638,
         "triangles": 3284,
-        "volume_mm3": 617.497893919419,
+        "volume_mm3": 617.4978939194189,
         "bounds_mm": [
           -0.85,
           -13.15,
@@ -373,8 +410,8 @@
       },
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00041437911167738905,
-      "sha256": "5f479b12f52151dd0f01307b8ab0b82dc687956868cb0809e5737ee7440e00c9",
+      "relative_volume_error": 0.0004143791116775731,
+      "sha256": "4883d71dfbf31cc444d2da08b4a41dcbb176583104ca94989c1a0484829911db",
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native_right.stl",
       "stl": {
         "triangles": 3284,
@@ -391,9 +428,9 @@
           13.149999618530273,
           26.295913696289062
         ],
-        "relative_volume_error": 8.5401295128434e-09,
+        "relative_volume_error": 8.540129696952269e-09,
         "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "fb6bb75858cfe9c1bfacaf4f4e1a101ea8cbb4da4fe61eb41a5b6f15623731a3"
+        "sha256": "9df697d07aa50a94e048b864f0ed2e1dfb6600812321e2bcf8eee1f627e3358c"
       }
     },
     {
@@ -434,21 +471,30 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 5736,
+        "maximum_sampled_face_deviation_mm": 9.906472588375624e-06,
+        "sampled_face_deviation_limit_mm": 0.0001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
+        "constrained_planar_faces": 2,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 5704.676343208726,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 4.547473508864641e-12
+        }
       },
       "mesh": {
         "vertices": 143224,
         "triangles": 277878,
-        "volume_mm3": 5793.1512587766665,
+        "volume_mm3": 5704.6758712786195,
         "bounds_mm": [
           -5.35,
           -24.6375,
@@ -464,8 +510,8 @@
       },
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.01550919109955675,
-      "sha256": "daee051b1b1408fc3776f0b490e81d99861baf104842b591d36c6566ceb1ed4c",
+      "relative_volume_error": 8.272688473962509e-08,
+      "sha256": "929aff2a5e6ddfbab69c2b2a65d0253bebef4adbcea31d9510be25a3d76e67cb",
       "stl_filename": "stl/ankle_eye_left_native.stl",
       "stl": {
         "triangles": 277878,
@@ -473,7 +519,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 5793.151285217483,
+        "volume_mm3": 5704.675897785073,
         "bounds_mm": [
           -5.349999904632568,
           -24.637500762939453,
@@ -482,9 +528,9 @@
           24.637500762939453,
           36.507930755615234
         ],
-        "relative_volume_error": 4.564150864775715e-09,
+        "relative_volume_error": 4.646443417426494e-09,
         "max_bound_error_mm": 1.2443847623444526e-06,
-        "sha256": "cbcfa810ec7f057c0466c3a6721c0f33c2b0d6e5ff4e81ecd889af8a82aa851e"
+        "sha256": "d8cc336cb00db3c105c96608862a0413713a85cbaec4151c43fbedaa925e1a09"
       }
     },
     {
@@ -525,21 +571,30 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 5740,
+        "maximum_sampled_face_deviation_mm": 9.906472581454941e-06,
+        "sampled_face_deviation_limit_mm": 0.0001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
+        "constrained_planar_faces": 2,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 5704.676338589511,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 4.619210812961683e-06
+        }
       },
       "mesh": {
         "vertices": 143224,
         "triangles": 277878,
-        "volume_mm3": 5793.151218582933,
+        "volume_mm3": 5704.675866059139,
         "bounds_mm": [
           -5.35,
           -24.6375,
@@ -555,8 +610,8 @@
       },
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.015509184053805027,
-      "sha256": "2caedcb0685ab381f67cc11bbb2c7cd070ae12f784a0cf21f1d8bb6dae9a7968",
+      "relative_volume_error": 8.364183251932241e-08,
+      "sha256": "9dcf4dd84542b8c364169a9a01667869920d805a8ca9e235d4d5021983f166e2",
       "stl_filename": "stl/ankle_eye_left_native_right.stl",
       "stl": {
         "triangles": 277878,
@@ -564,7 +619,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 5793.15124566988,
+        "volume_mm3": 5704.675892894924,
         "bounds_mm": [
           -5.349999904632568,
           -24.637500762939453,
@@ -573,9 +628,9 @@
           24.637500762939453,
           36.507930755615234
         ],
-        "relative_volume_error": 4.675684408621209e-09,
+        "relative_volume_error": 4.704173549948522e-09,
         "max_bound_error_mm": 1.2443847623444526e-06,
-        "sha256": "a736a130f089cbe456acf70c73e12acc182a08854aa67eb33a034835574055b9"
+        "sha256": "745d5e916e88492ca0f9d9783a77208296efc99ca34d655470fa26cdab979c99"
       }
     },
     {
@@ -616,21 +671,30 @@
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 10312,
+        "maximum_sampled_face_deviation_mm": 0.0003020470210085922,
+        "sampled_face_deviation_limit_mm": 0.001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 1,
+        "constrained_planar_faces": 2,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12575.598412867588,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 6.295522325672209e-09
+        }
       },
       "mesh": {
         "vertices": 20126,
         "triangles": 39008,
-        "volume_mm3": 12554.1527931425,
+        "volume_mm3": 12575.547331949743,
         "bounds_mm": [
           -22.2285,
           -24.662048,
@@ -646,8 +710,8 @@
       },
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.0017053359223732135,
-      "sha256": "194a75213a4e2a52d18c305ed476f155eb112d89575761cd94c36c347e0d513b",
+      "relative_volume_error": 4.06190702600622e-06,
+      "sha256": "d36dff3f188087b7c92746a410b7f1a38a7a35bd45a4ae4ff6b5f99840490219",
       "stl_filename": "stl/ankle_left_native.stl",
       "stl": {
         "triangles": 39008,
@@ -655,7 +719,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 12554.153269640534,
+        "volume_mm3": 12575.547842082375,
         "bounds_mm": [
           -22.228500366210938,
           -24.66204833984375,
@@ -664,9 +728,9 @@
           24.661882400512695,
           33.70399856567383
         ],
-        "relative_volume_error": 3.795541132452719e-08,
+        "relative_volume_error": 4.056544164607025e-08,
         "max_bound_error_mm": 1.4343261725002776e-06,
-        "sha256": "f5af6cd88fe888d53e68324ca0dd21b9cb0fd8a6ef850c543838ad71fca41596"
+        "sha256": "4ce56d56ce7c39010a4cb0ace8338f8be83ecb82fffd5b8e47ed3f0e10ac3238"
       }
     },
     {
@@ -707,21 +771,30 @@
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 10324,
+        "maximum_sampled_face_deviation_mm": 0.0003019734015145847,
+        "sampled_face_deviation_limit_mm": 0.001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 1,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12575.558229510414,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.801470509439241e-05
+        }
       },
       "mesh": {
         "vertices": 20126,
         "triangles": 39008,
-        "volume_mm3": 12554.119335569421,
+        "volume_mm3": 12575.507479592135,
         "bounds_mm": [
           -22.2285,
           -24.662048,
@@ -737,8 +810,8 @@
       },
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.0017048087660735847,
-      "sha256": "a8421ccac57d57abfd97b5b12e906366a2297d4de0c3f99d470f0d41ee41b5ab",
+      "relative_volume_error": 4.0378273428384e-06,
+      "sha256": "ff34a45ed590b272cbb82713a6a1dc4e39681e51a7871842181c2ebcd4f4394d",
       "stl_filename": "stl/ankle_left_native_right.stl",
       "stl": {
         "triangles": 39008,
@@ -746,7 +819,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 12554.119513301503,
+        "volume_mm3": 12575.50764193105,
         "bounds_mm": [
           -22.228500366210938,
           -24.66204833984375,
@@ -755,9 +828,9 @@
           24.661882400512695,
           33.70399856567383
         ],
-        "relative_volume_error": 1.4157271930648292e-08,
+        "relative_volume_error": 1.2909134254997412e-08,
         "max_bound_error_mm": 1.4343261725002776e-06,
-        "sha256": "f90a0b570dbe7a43a64d245bd5c543801ba8739d4008abe5a2ec2b8619aff734"
+        "sha256": "eaca5012b299120743a356628ce783c254b822a1ef70a2067adf29dff3dd4baa"
       }
     },
     {
@@ -798,30 +871,34 @@
         15.650000000000002,
         48.65000010000001
       ],
+      "max_bound_error_mm": 0.004320000000001656,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 3.124450782430734e-05,
       "tessellation": {
-        "linear_deflection_mm": 0.05,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "surface_sample_count": 2120,
+        "maximum_sampled_face_deviation_mm": 0.0040601378775131725,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 16,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 2779.61553587439,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.212846084148623e-08
+        }
       },
       "mesh": {
-        "vertices": 2942,
-        "triangles": 5892,
-        "volume_mm3": 2777.8386185312675,
+        "vertices": 130291,
+        "triangles": 260590,
+        "volume_mm3": 2779.70238357162,
         "bounds_mm": [
           -2.8975,
-          -15.64568,
-          0.00108,
+          -15.65,
+          0.0,
           2.8975,
           15.65,
           48.65
@@ -831,29 +908,26 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.004320000000001656,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.000639267300846048,
-      "sha256": "a3c5adba49c026db536567561329ceff6ed0e6a593f8e2b6aae6ae4d9cac9785",
+      "sha256": "48a1e19ecca818ce5ea4c973eaa29f9b45c94e8221e36f071d52e7128c9d6bf6",
       "stl_filename": "stl/bearing_ankle_adapter.stl",
       "stl": {
-        "triangles": 5892,
+        "triangles": 260590,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 2777.8386997675852,
+        "volume_mm3": 2779.702472381472,
         "bounds_mm": [
           -2.8975000381469727,
-          -15.64568042755127,
-          0.00107999995816499,
+          -15.649999618530273,
+          0.0,
           2.8975000381469727,
           15.649999618530273,
           48.650001525878906
         ],
-        "relative_volume_error": 2.9244433870621286e-08,
+        "relative_volume_error": 3.194941033397478e-08,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "1ead4a4ff7f5fa1a8f595eb1092eba7e1e5ea4b7f32de44590ae1428292524c3"
+        "sha256": "24547084f909405cc11c64218bc769d22a5c3ee18f264a6f90d1577d4de41111"
       }
     },
     {
@@ -894,21 +968,31 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 6096,
+        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 13059.028212892772,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0031983770095393993
+        }
       },
       "mesh": {
-        "vertices": 21527,
-        "triangles": 43078,
-        "volume_mm3": 13273.893003423012,
+        "vertices": 21826,
+        "triangles": 43676,
+        "volume_mm3": 13058.308265815385,
         "bounds_mm": [
           -21.4725,
           -39.798912,
@@ -917,25 +1001,23 @@
           39.799548,
           61.0
         ],
-        "nonmanifold_edges": 7,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.01645360114314916,
-      "sha256": "e0aa3e9bf973d5148cb1cd31ad5462ae1f681a933bbddc142d3c28e67d11d754",
+      "relative_volume_error": 5.488531491290018e-05,
+      "sha256": "986d7aeffa5310499139d4a43b7960aebb7ee172094ed18437013973aa245b03",
       "stl_filename": "stl/bearing_carrier_left.stl",
       "stl": {
-        "triangles": 43078,
+        "triangles": 43676,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 7,
-        "volume_mm3": 13273.893334317432,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 13058.308560669208,
         "bounds_mm": [
           -21.47249984741211,
           -39.798912048339844,
@@ -944,9 +1026,9 @@
           39.7995491027832,
           61.0
         ],
-        "relative_volume_error": 2.492821206188061e-08,
+        "relative_volume_error": 2.25797872278038e-08,
         "max_bound_error_mm": 1.1027832016452521e-06,
-        "sha256": "8bd0f817bf7797476ff17ddc6d48ae00700521a306be66a3fd640a8401c0457e"
+        "sha256": "4e8e82494099148e36a625a2afd554332aa8205017d1f156a49d501f8a636608"
       }
     },
     {
@@ -987,21 +1069,31 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 6096,
+        "maximum_sampled_face_deviation_mm": 0.0072870056542161535,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 13059.028194304494,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0031797887168067973
+        }
       },
       "mesh": {
-        "vertices": 21527,
-        "triangles": 43078,
-        "volume_mm3": 13273.893002283148,
+        "vertices": 21826,
+        "triangles": 43676,
+        "volume_mm3": 13058.308264675343,
         "bounds_mm": [
           -21.4725,
           -39.798912,
@@ -1010,25 +1102,23 @@
           39.799548,
           61.0
         ],
-        "nonmanifold_edges": 7,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.016453601055862473,
-      "sha256": "3def4bf6f24c37961b3dbfbcb1830ccef0c15429e3f3164d18dd79c9ac710daf",
+      "relative_volume_error": 5.4885402213220345e-05,
+      "sha256": "9ed869756781da94e1d2c6e205716cf6b460daa18b3254de3a4e6ffe84c1f19b",
       "stl_filename": "stl/bearing_carrier_right.stl",
       "stl": {
-        "triangles": 43078,
+        "triangles": 43676,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 7,
-        "volume_mm3": 13273.89333404167,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 13058.308560393218,
         "bounds_mm": [
           -21.47249984741211,
           -39.798912048339844,
@@ -1037,9 +1127,9 @@
           39.7995491027832,
           61.0
         ],
-        "relative_volume_error": 2.499330990841844e-08,
+        "relative_volume_error": 2.2645956039009833e-08,
         "max_bound_error_mm": 1.1027832016452521e-06,
-        "sha256": "81871b8686ca285555f6de01ea36e43ccbf3c215abb95ce3ed67672052154e8a"
+        "sha256": "0ec816113207f77efc02b766153869680d837bc64b8f6eab36c7b41e3562e1b7"
       }
     },
     {
@@ -1077,29 +1167,39 @@
         50.00000010000001
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2496,
+        "maximum_sampled_face_deviation_mm": 0.005162642878523351,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 3034.4243775874784,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.0990333976224065e-08
+        }
       },
       "mesh": {
-        "vertices": 3634,
-        "triangles": 7284,
-        "volume_mm3": 3033.944686384946,
+        "vertices": 9439,
+        "triangles": 18894,
+        "volume_mm3": 3034.294762714946,
         "bounds_mm": [
           -15.65,
           -2.8975,
           0.0,
-          15.648503,
+          15.65,
           2.8975,
           50.0
         ],
@@ -1108,29 +1208,29 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.0014970000000005257,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0001580831003942072,
-      "sha256": "28e71b1bbc84436f8424cf50e5f5a0be3c78848a05ff80f5e8faf929c0af8e3b",
+      "max_bound_error_mm": 1.000000082740371e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 4.271481750527068e-05,
+      "sha256": "b8a719539208cd90d6fbcde713c615f61463e359c423de19e522342fb01c34ac",
       "stl_filename": "stl/bearing_roll_adapter_left.stl",
       "stl": {
-        "triangles": 7284,
+        "triangles": 18894,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 3033.944738630393,
+        "volume_mm3": 3034.294823022354,
         "bounds_mm": [
           -15.649999618530273,
           -2.8975000381469727,
           0.0,
-          15.648503303527832,
+          15.649999618530273,
           2.8975000381469727,
           50.0
         ],
-        "relative_volume_error": 1.722030307847234e-08,
+        "relative_volume_error": 1.987526356676661e-08,
         "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "22a0cf8eb4e0dac801937f6ac3b85ee33ebc09fb0469dd5360ff3c881bced543"
+        "sha256": "32cf158bd20e952af8f877f281f0749c1b00e6558972e64971af065e2383c301"
       }
     },
     {
@@ -1168,29 +1268,39 @@
         50.00000010000001
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2496,
+        "maximum_sampled_face_deviation_mm": 0.0051626428785248825,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 3034.4243775874797,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.0988514986820519e-08
+        }
       },
       "mesh": {
-        "vertices": 3634,
-        "triangles": 7284,
-        "volume_mm3": 3033.94468698461,
+        "vertices": 9439,
+        "triangles": 18894,
+        "volume_mm3": 3034.2947634936368,
         "bounds_mm": [
           -15.65,
           -2.8975,
           0.0,
-          15.648503,
+          15.65,
           2.8975,
           50.0
         ],
@@ -1199,29 +1309,29 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.0014969999999987493,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00015808290277372205,
-      "sha256": "ff4dc9c11cb71c588b4cafa7dbce300f0293e0be6ce94342b3af8ded81bcdac5",
+      "max_bound_error_mm": 1.000000082740371e-07,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 4.271456088619673e-05,
+      "sha256": "998c95c038df0448c8b6b0073d005b5b4f375574d77fb6e09c3d5f5cadbcefbd",
       "stl_filename": "stl/bearing_roll_adapter_right.stl",
       "stl": {
-        "triangles": 7284,
+        "triangles": 18894,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 3033.9447392290813,
+        "volume_mm3": 3034.2948238024146,
         "bounds_mm": [
           -15.649999618530273,
           -2.8975000381469727,
           0.0,
-          15.648503303527832,
+          15.649999618530273,
           2.8975000381469727,
           50.0
         ],
-        "relative_volume_error": 1.7219981418639323e-08,
+        "relative_volume_error": 1.987571496771838e-08,
         "max_bound_error_mm": 3.8146972691777137e-07,
-        "sha256": "e765688c9e6a3fef88c1b701175ddd5853fba6ebb6a1a7a03d2ca89d65403d41"
+        "sha256": "c720d3b68006dc996d255766008b68519992ea77e8caeb4381df0b25e754b7b2"
       }
     },
     {
@@ -1237,14 +1347,9 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "black printed polymer; unselected",
-      "source_volume_mm3": 9307.704084596142,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 7.105427357601002e-15,
-        "volume_difference_mm3": 9.208633855450898e-08,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
+      "source_volume_mm3": 8801.423305362641,
+      "geometry_source": "current_saved_assembly_step",
+      "saved_step_comparison": null,
       "translation_mm": [
         -0.0,
         -0.5749999999999993,
@@ -1262,21 +1367,31 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 4180,
+        "maximum_sampled_face_deviation_mm": 0.008860193861339342,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 8801.423305362641,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
-        "vertices": 15432,
-        "triangles": 30884,
-        "volume_mm3": 9449.09156770563,
+        "vertices": 15928,
+        "triangles": 31876,
+        "volume_mm3": 8801.738831736448,
         "bounds_mm": [
           -39.275,
           -24.325,
@@ -1292,16 +1407,16 @@
       },
       "max_bound_error_mm": 1.0000000116860974e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.015190371527117793,
-      "sha256": "48d386946931b31db7a5944c758570a428cfbedc3fa0fee2bbd48d8fe868580a",
+      "relative_volume_error": 1.4819594840327362e-05,
+      "sha256": "f467e3a092512b09c62fb9c782f23958a690cd755cc78d3d2884b9abbe72f331",
       "stl_filename": "stl/bearing_shared_yaw_adapter.stl",
       "stl": {
-        "triangles": 30884,
+        "triangles": 31876,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9449.091204444509,
+        "volume_mm3": 8801.738510780682,
         "bounds_mm": [
           -39.275001525878906,
           -24.325000762939453,
@@ -1310,9 +1425,9 @@
           24.325000762939453,
           5.795000076293945
         ],
-        "relative_volume_error": 3.8444025860070275e-08,
+        "relative_volume_error": 3.646504077001548e-08,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "b221b5186a20c35ffe024f63714584fe0c44638d4e2eaaff0dbb9cfd27cbb003"
+        "sha256": "61d8fc573ac1540de725ff6478e6f4692c8b22a7dadd155050434c5a7c120489"
       }
     },
     {
@@ -1350,24 +1465,33 @@
         24.56440020103298
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "surface_sample_count": 29024,
+        "maximum_sampled_face_deviation_mm": 0.010407946256526336,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 41363.833659007105,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.00011566407920327038
+        }
       },
       "mesh": {
-        "vertices": 14453,
-        "triangles": 28918,
-        "volume_mm3": 41353.693022395746,
+        "vertices": 28317,
+        "triangles": 56646,
+        "volume_mm3": 41361.24481877316,
         "bounds_mm": [
           -61.903,
           -78.735,
@@ -1382,17 +1506,17 @@
         "warnings": []
       },
       "max_bound_error_mm": 2.0103298226104016e-07,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00024515428282665953,
-      "sha256": "163cec3c771eac5b337e106f8a7a3d7af8ace3eb648939835d3cf42b9cc0212e",
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 6.258425170278414e-05,
+      "sha256": "f4bee0b702c7ec65462139c811bd7cc311260add5df22b8e271f821f8e754261",
       "stl_filename": "stl/bottom_head_shell_native.stl",
       "stl": {
-        "triangles": 28918,
+        "triangles": 56646,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 41353.69418538864,
+        "volume_mm3": 41361.246156843445,
         "bounds_mm": [
           -61.90299987792969,
           -78.73500061035156,
@@ -1401,9 +1525,9 @@
           78.73500061035156,
           24.56439971923828
         ],
-        "relative_volume_error": 2.8123072141947435e-08,
+        "relative_volume_error": 3.2350822453841986e-08,
         "max_bound_error_mm": 6.103515630684342e-07,
-        "sha256": "8626991f815cb985f64e392ea02fabf976991d7073d5a194872d4fd2fbb7bcc2"
+        "sha256": "154eeda5038348a7edab8e78611c341df4ab43d3cbafc47486394b45d93b1a1f"
       }
     },
     {
@@ -1444,21 +1568,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 2108,
+        "maximum_sampled_face_deviation_mm": 0.0018476484156640049,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 9671.028193806551,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.419255906715989e-10
+        }
       },
       "mesh": {
         "vertices": 5547,
         "triangles": 11102,
-        "volume_mm3": 9660.832745415095,
+        "volume_mm3": 9670.864550651084,
         "bounds_mm": [
           -30.25,
           -43.0,
@@ -1474,8 +1607,8 @@
       },
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.001054225898982176,
-      "sha256": "da18644fa0a2c6eb30514e3ff782f4a587c11f3a1123b3ca2cacb047150c289e",
+      "relative_volume_error": 1.692096770163398e-05,
+      "sha256": "170e0f75e3dfbdbc77174de5f214301d89eb2c9b6e5cac6c9de8261721b0581b",
       "stl_filename": "stl/electronics_deck_native.stl",
       "stl": {
         "triangles": 11102,
@@ -1483,7 +1616,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9660.832712716832,
+        "volume_mm3": 9670.864516740805,
         "bounds_mm": [
           -30.25,
           -43.0,
@@ -1492,9 +1625,9 @@
           43.0,
           5.449999809265137
         ],
-        "relative_volume_error": 3.3846215454897195e-09,
+        "relative_volume_error": 3.506437171810704e-09,
         "max_bound_error_mm": 1.9073486345888568e-07,
-        "sha256": "afe5cd25c57b34b5e355ed143951cebd3f8965e40938667d09ee0ff149b552d4"
+        "sha256": "2373c90d41e38653afef49186b9b502c716d4e708fbc1605c1a4d1b04ada551e"
       }
     },
     {
@@ -1535,21 +1668,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 2480,
+        "maximum_sampled_face_deviation_mm": 0.0049978769280947894,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 13315.640310707182,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.2005330063402653e-10
+        }
       },
       "mesh": {
         "vertices": 22355,
         "triangles": 44726,
-        "volume_mm3": 13313.396403819948,
+        "volume_mm3": 13313.39640381994,
         "bounds_mm": [
           -59.1636,
           -8.4375,
@@ -1565,8 +1707,8 @@
       },
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0001685166341981543,
-      "sha256": "5880079cf609fe8f96ce1b76b056c21de072b3888ca959dacbfa5e31bb4a5df5",
+      "relative_volume_error": 0.0001685166341988373,
+      "sha256": "319b78e9a3e589d5a0f5210bb5d70c3a3cdb11b2e4aaf7950bc572e4a8d7559a",
       "stl_filename": "stl/face_part_native.stl",
       "stl": {
         "triangles": 44726,
@@ -1574,7 +1716,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 13313.396328205938,
+        "volume_mm3": 13313.396328205941,
         "bounds_mm": [
           -59.16360092163086,
           -8.4375,
@@ -1583,9 +1725,9 @@
           8.4375,
           60.238563537597656
         ],
-        "relative_volume_error": 5.679543252369305e-09,
+        "relative_volume_error": 5.679542295969797e-09,
         "max_bound_error_mm": 9.21630856964839e-07,
-        "sha256": "d7602e5e1fec39b56f1bec8e8a3b898876c2a79b9075902ad30b2e20f8f47150"
+        "sha256": "a0ef3bc5d6a78ff1d379bca9f7ec61b8db0a65d6637a74f54ab952f552cd92c0"
       }
     },
     {
@@ -1626,21 +1768,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 1632,
+        "maximum_sampled_face_deviation_mm": 0.005162019416142557,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 3607.022701700308,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 5.2367795433383435e-08
+        }
       },
       "mesh": {
         "vertices": 5109,
         "triangles": 10242,
-        "volume_mm3": 3601.94848529842,
+        "volume_mm3": 3606.9760056665023,
         "bounds_mm": [
           -44.375,
           -2.0,
@@ -1656,8 +1807,8 @@
       },
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0014067603322236238,
-      "sha256": "a4b3d05785989e788e981498458d9223f448b3e1714a0de37fbd70ab15737346",
+      "relative_volume_error": 1.2945880864821577e-05,
+      "sha256": "5525a26af45a4d82a84ef3036bf1f00e78b755e8ae5cd6e25145cd9e9b0444be",
       "stl_filename": "stl/face_radxa_bracket_native.stl",
       "stl": {
         "triangles": 10242,
@@ -1665,7 +1816,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 3601.948625371535,
+        "volume_mm3": 3606.976147248148,
         "bounds_mm": [
           -44.375,
           -2.0,
@@ -1674,9 +1825,9 @@
           2.0,
           38.63962173461914
         ],
-        "relative_volume_error": 3.88881505126521e-08,
+        "relative_volume_error": 3.9252172935456346e-08,
         "max_bound_error_mm": 1.734619139881488e-06,
-        "sha256": "f52904d3eccdd59eb9a574e047bc986130514372f9032b9f7922b046b049b38d"
+        "sha256": "26610aa564d3d9fcf2486f82688fcd878d37c8ba298436fef8d3404d823ff091"
       }
     },
     {
@@ -1717,21 +1868,30 @@
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 9828,
+        "maximum_sampled_face_deviation_mm": 0.00037806292317155973,
+        "sampled_face_deviation_limit_mm": 0.001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 20879.71394591154,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.546585164964199e-11
+        }
       },
       "mesh": {
         "vertices": 8241,
         "triangles": 16486,
-        "volume_mm3": 20739.954296002765,
+        "volume_mm3": 20879.679881314154,
         "bounds_mm": [
           -24.84029,
           -33.615,
@@ -1747,8 +1907,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.006693561524396032,
-      "sha256": "c3b52bde3d25c5b1cf07de03701d81ea1d37c89c5d059c3e5d8f55a72f82e89d",
+      "relative_volume_error": 1.6314685846506777e-06,
+      "sha256": "89bc252406e3238c1d9df84835cd868c1b5b77d963107e149412af60ca056713",
       "stl_filename": "stl/foot_left_native_a.stl",
       "stl": {
         "triangles": 16486,
@@ -1756,7 +1916,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 20739.95638771879,
+        "volume_mm3": 20879.681836593845,
         "bounds_mm": [
           -24.840290069580078,
           -33.6150016784668,
@@ -1765,9 +1925,9 @@
           33.6150016784668,
           22.815757751464844
         ],
-        "relative_volume_error": 1.0085441826958841e-07,
+        "relative_volume_error": 9.364509907662741e-08,
         "max_bound_error_mm": 1.6784667948854803e-06,
-        "sha256": "58df209dcb9a736ec706f8325270538bde0b16a7f08cffc611899202231bd226"
+        "sha256": "80a8b1c70e99ecb6f27a17dffff4353e3e420caa23312e862aef5d2abbe719fe"
       }
     },
     {
@@ -1808,21 +1968,30 @@
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 9832,
+        "maximum_sampled_face_deviation_mm": 0.00037806292317155973,
+        "sampled_face_deviation_limit_mm": 0.001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 20879.713945907355,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.2741809263825417e-11
+        }
       },
       "mesh": {
         "vertices": 8241,
         "triangles": 16486,
-        "volume_mm3": 20739.867565257668,
+        "volume_mm3": 20879.679312793505,
         "bounds_mm": [
           -24.840232,
           -33.615,
@@ -1838,8 +2007,8 @@
       },
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.006697715352420637,
-      "sha256": "f18256446992b81fd2e90f8ef1dba540c1d77b243b036661d87e1ddd9919b04d",
+      "relative_volume_error": 1.6586967573804625e-06,
+      "sha256": "880d6dff1c64fbb88f05dfe7167d8756af4809b15913e70d15b5fe48cd4765fd",
       "stl_filename": "stl/foot_left_native_a_right.stl",
       "stl": {
         "triangles": 16486,
@@ -1847,7 +2016,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 20739.86965825605,
+        "volume_mm3": 20879.68127059562,
         "bounds_mm": [
           -24.840232849121094,
           -33.6150016784668,
@@ -1856,9 +2025,9 @@
           33.6150016784668,
           22.815757751464844
         ],
-        "relative_volume_error": 1.0091667062488672e-07,
+        "relative_volume_error": 9.376590929354166e-08,
         "max_bound_error_mm": 1.6784667948854803e-06,
-        "sha256": "4736ac5dada5038cd4b53195a974689092154c688fb742b3931b5a53cb94d666"
+        "sha256": "0c8437c019abd19fde69fac8261436ff9e5c2a44f72ede287404c42bf84d9042"
       }
     },
     {
@@ -1899,21 +2068,30 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 3236,
+        "maximum_sampled_face_deviation_mm": 1.1850821157582776e-05,
+        "sampled_face_deviation_limit_mm": 0.0001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 9404.033374079925,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 7.194317731773481e-06
+        }
       },
       "mesh": {
         "vertices": 29159,
         "triangles": 57846,
-        "volume_mm3": 9232.274695139584,
+        "volume_mm3": 9404.032535677565,
         "bounds_mm": [
           -27.058,
           -36.45,
@@ -1929,8 +2107,8 @@
       },
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.01826436372255686,
-      "sha256": "c86a8ee56deb94e06214995b0e4cda5663faf6f0541ed993411b6ac7288d286f",
+      "relative_volume_error": 8.991851090216742e-08,
+      "sha256": "92ab333b2fcada8c5c146a985af2d2939796e3beee2b12abc5e7854750f201ba",
       "stl_filename": "stl/foot_left_native_b.stl",
       "stl": {
         "triangles": 57846,
@@ -1938,7 +2116,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9232.274836287435,
+        "volume_mm3": 9404.03263951329,
         "bounds_mm": [
           -27.058000564575195,
           -36.45000076293945,
@@ -1947,9 +2125,9 @@
           36.45000076293945,
           6.75
         ],
-        "relative_volume_error": 1.5288523814269163e-08,
+        "relative_volume_error": 1.104161704045135e-08,
         "max_bound_error_mm": 7.629394502828291e-07,
-        "sha256": "17e7623e87b2b287cb3940f3602e59ed72ac6e43d1b414a553d612ed1907744f"
+        "sha256": "3b5a1308d27b95c0a285582927a84acc1cc50dd5c8bb0d629c1aecaf7ef2a89b"
       }
     },
     {
@@ -1990,21 +2168,30 @@
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 3240,
+        "maximum_sampled_face_deviation_mm": 1.1850821157582776e-05,
+        "sampled_face_deviation_limit_mm": 0.0001,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 9404.03337167324,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 9.601322744856589e-06
+        }
       },
       "mesh": {
         "vertices": 29159,
         "triangles": 57846,
-        "volume_mm3": 9232.144053405706,
+        "volume_mm3": 9404.032536014374,
         "bounds_mm": [
           -27.058,
           -36.45,
@@ -2020,8 +2207,8 @@
       },
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
-      "relative_volume_error": 0.018278255818522056,
-      "sha256": "41897b83e077dc32b50ad673a8ba4be8a69d0e80fc3b6105567cd1e21d60d31b",
+      "relative_volume_error": 8.988272951144069e-08,
+      "sha256": "7fa8fdc8c06fbcd155d74d35542279a953a590b5966ba485f61df861ad6098e4",
       "stl_filename": "stl/foot_left_native_b_right.stl",
       "stl": {
         "triangles": 57846,
@@ -2029,7 +2216,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9232.144190463567,
+        "volume_mm3": 9404.032639360943,
         "bounds_mm": [
           -27.058000564575195,
           -36.45000076293945,
@@ -2038,9 +2225,9 @@
           36.45000076293945,
           6.75
         ],
-        "relative_volume_error": 1.4845723847651694e-08,
+        "relative_volume_error": 1.0989601357255981e-08,
         "max_bound_error_mm": 7.629394502828291e-07,
-        "sha256": "77c5b77a43e687a44efe81c90003a9814c068012e0f514c07872413cc01ed86f"
+        "sha256": "28a000606f08189811bceb1a484a4a438a764b978b7ff82267349a2c77d642c9"
       }
     },
     {
@@ -2081,21 +2268,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 6880,
+        "maximum_sampled_face_deviation_mm": 0.007709600663493722,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 32535.927093916955,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 5.146729017724283e-05
+        }
       },
       "mesh": {
         "vertices": 7391,
         "triangles": 14826,
-        "volume_mm3": 32570.07731740345,
+        "volume_mm3": 32535.556381013223,
         "bounds_mm": [
           -43.425,
           -49.635,
@@ -2111,8 +2307,8 @@
       },
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010496142269623666,
-      "sha256": "4d7525b630a06737885dfd5e899a5dc865fec54d1248d01660889fb09b4aa489",
+      "relative_volume_error": 1.1395537289148123e-05,
+      "sha256": "e4f015507598fa242547e7deaa5ce94b1e8767ed0f03120caa1e004294ae188a",
       "stl_filename": "stl/head_frame_native.stl",
       "stl": {
         "triangles": 14826,
@@ -2120,7 +2316,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 32570.073905558656,
+        "volume_mm3": 32535.55293382514,
         "bounds_mm": [
           -43.42499923706055,
           -49.6349983215332,
@@ -2129,9 +2325,9 @@
           49.6349983215332,
           44.20000076293945
         ],
-        "relative_volume_error": 1.0475396670095682e-07,
+        "relative_volume_error": 1.059514102748695e-07,
         "max_bound_error_mm": 1.6784667948854803e-06,
-        "sha256": "2f3e80748dd46c306d262557e7e22fe074236d8307c15b7f7642b9bcc0f6fd5a"
+        "sha256": "4f500948d581c52461690a1b20a79b6e8f10d88be4a6989a6d63a4b620f0605c"
       }
     },
     {
@@ -2170,25 +2366,28 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
+        "algorithm": "DEFAULT",
         "native_parallel": false,
+        "surface_sample_count": 4312,
+        "maximum_sampled_face_deviation_mm": 0.015175395251979334,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 1e-05,
+        "min_size_mm": -1,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [
           {
-            "area_mm2": 0.11261193684942009,
-            "diameter_mm": 0.648957265278879,
+            "area_mm2": 0.11261204467645418,
+            "diameter_mm": 0.648957190971022,
             "triangles": 4,
             "samples_per_triangle": 45,
-            "maximum_sampled_surface_distance_mm": 0.001826796848484285,
+            "maximum_sampled_surface_distance_mm": 0.001826960719788273,
             "tolerance_mm": 0.01
           }
         ],
-        "seam_weld_tolerance_mm": 1e-06,
+        "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
         "verified_saved_geometry_fallback": {
@@ -2198,12 +2397,17 @@
             0
           ]
         },
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 7891.9344406126365,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.007217697748274077
+        }
       },
       "mesh": {
-        "vertices": 28935,
-        "triangles": 57906,
-        "volume_mm3": 7891.058986620912,
+        "vertices": 28699,
+        "triangles": 57434,
+        "volume_mm3": 7891.061488690359,
         "bounds_mm": [
           -20.246014,
           -23.2875,
@@ -2212,7 +2416,7 @@
           23.28502,
           25.65
         ],
-        "nonmanifold_edges": 145,
+        "nonmanifold_edges": 35,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
@@ -2221,16 +2425,16 @@
       },
       "max_bound_error_mm": 0.00398605000000174,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00011184468001525329,
-      "sha256": "a32688614c60cdf3d71f3938ddb1b8baeb03d64ab3ec0c8fa41d29d9a83b7dd0",
+      "relative_volume_error": 0.00011152763896820891,
+      "sha256": "239b20401a1e11fbf399fc584f9abeaec6dbf3b622f969a263246191d99abc04",
       "stl_filename": "stl/hip_left_native.stl",
       "stl": {
-        "triangles": 57906,
+        "triangles": 57434,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 145,
-        "volume_mm3": 7891.059327442879,
+        "nonmanifold_edges": 35,
+        "volume_mm3": 7891.061831207631,
         "bounds_mm": [
           -20.246013641357422,
           -23.287500381469727,
@@ -2239,9 +2443,9 @@
           23.28502082824707,
           25.649999618530273
         ],
-        "relative_volume_error": 4.3190903506657745e-08,
+        "relative_volume_error": 4.34057285128818e-08,
         "max_bound_error_mm": 8.282470709275458e-07,
-        "sha256": "d5b67227a0c3a321face8ad574af7d4b52b4b1c706e831fe24212404e2dbfeb3"
+        "sha256": "5b3561f8d527e4ea7ed04ee2c8222ecde75d8886da06d0e26dd2ecbee1494cbc"
       }
     },
     {
@@ -2257,17 +2461,9 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
-      "source_volume_mm3": 7892.203271938851,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.0000000116860974e-07,
-        "volume_difference_mm3": 0.03080392881474836,
-        "bidirectional_difference_mm3": [
-          0,
-          0
-        ],
-        "saved_step_valid": true
-      },
+      "source_volume_mm3": 7892.172468010036,
+      "geometry_source": "saved_assembly_step",
+      "saved_step_comparison": null,
       "translation_mm": [
         31.05000005,
         15.862500000000004,
@@ -2282,72 +2478,63 @@
         25.650000200000875
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [
-          {
-            "area_mm2": 0.11261204467645418,
-            "diameter_mm": 0.648957190971022,
-            "triangles": 4,
-            "samples_per_triangle": 45,
-            "maximum_sampled_surface_distance_mm": 0.0018269607197882566,
-            "tolerance_mm": 0.01
-          }
-        ],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "surface_sample_count": 4520,
+        "maximum_sampled_face_deviation_mm": 0.019911882834019793,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 29,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 7892.172468010036,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
-        "vertices": 28965,
-        "triangles": 57822,
-        "volume_mm3": 7891.030882559841,
+        "vertices": 138755,
+        "triangles": 277576,
+        "volume_mm3": 7893.225965462323,
         "bounds_mm": [
           -20.25,
           -23.2875,
           0.0,
-          20.246014,
-          23.28502,
+          20.25,
+          23.2875,
           25.65
         ],
-        "nonmanifold_edges": 73,
+        "nonmanifold_edges": 20,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.003986050000005292,
+      "sha256": "2619f667deb8bbcc631e0fdd706a522e1e3650fb692f230cc7c8917cc1e05bc8",
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00014855032728033836,
-      "sha256": "5c489139d9b77329f65b002876d0d9343fb6bd895b5f5cecf3da4d88573a1211",
+      "relative_volume_error": 0.00013348636976159243,
       "stl_filename": "stl/hip_left_native_right.stl",
       "stl": {
-        "triangles": 57822,
+        "triangles": 277576,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 73,
-        "volume_mm3": 7891.031220119374,
+        "nonmanifold_edges": 20,
+        "volume_mm3": 7893.226293010343,
         "bounds_mm": [
           -20.25,
           -23.287500381469727,
           0.0,
-          20.246013641357422,
-          23.28502082824707,
+          20.25,
+          23.287500381469727,
           25.649999618530273
         ],
-        "relative_volume_error": 4.277762151460181e-08,
-        "max_bound_error_mm": 8.282470709275458e-07,
-        "sha256": "8013d019e7f9c4ae2b755f37e9c07aac46eaf1d0ade0234a2867221dfafa7436"
+        "relative_volume_error": 4.149735757674843e-08,
+        "max_bound_error_mm": 3.8146972514141453e-07,
+        "sha256": "2d39064a2d5560ec519b3b75c96dd3b9a50bacda1f525314517ef2f0e02d2691"
       }
     },
     {
@@ -2388,21 +2575,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 1064,
+        "maximum_sampled_face_deviation_mm": 0.0024831451557112763,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 3402.1785265611325,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 5.1386450650170445e-11
+        }
       },
       "mesh": {
         "vertices": 3218,
         "triangles": 6456,
-        "volume_mm3": 3402.169020335607,
+        "volume_mm3": 3402.1690203356075,
         "bounds_mm": [
           -31.5,
           -7.55,
@@ -2418,8 +2614,8 @@
       },
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 2.794158361363579e-06,
-      "sha256": "044fc3167d1c7db5d4765f4faa2e82381c620eb6faeb577711470dcfb1361e39",
+      "relative_volume_error": 2.7941583612299156e-06,
+      "sha256": "7a0df7672ea62dc7e71ffcf6b5353d0dee789ae1a7fcab18b9e6022eb13aafca",
       "stl_filename": "stl/imu_yoke_bridge_native.stl",
       "stl": {
         "triangles": 6456,
@@ -2427,7 +2623,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 3402.1689159484827,
+        "volume_mm3": 3402.168915948483,
         "bounds_mm": [
           -31.5,
           -7.550000190734863,
@@ -2436,9 +2632,9 @@
           7.550000190734863,
           42.45000076293945
         ],
-        "relative_volume_error": 3.068252156618257e-08,
+        "relative_volume_error": 3.0682521566182564e-08,
         "max_bound_error_mm": 7.629394502828291e-07,
-        "sha256": "99f48fa8d5a6a3c6d58c31f01278273dd18f159e326fe33c7311d990afabe7b2"
+        "sha256": "53df4dc948d5a30a139317dcf08296c593a2faf439c7135a6e8d71b3298a242f"
       }
     },
     {
@@ -2476,30 +2672,39 @@
         42.84547156257406
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "surface_sample_count": 1968,
+        "maximum_sampled_face_deviation_mm": 0.012760619875209578,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 24491.33265701095,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0013460025693348143
+        }
       },
       "mesh": {
-        "vertices": 8575,
-        "triangles": 17158,
-        "volume_mm3": 24671.869412478558,
+        "vertices": 41519,
+        "triangles": 83046,
+        "volume_mm3": 24686.110610831653,
         "bounds_mm": [
-          -61.697092,
+          -61.699888,
           -47.896884,
-          0.00161,
-          61.698964,
-          47.89216,
+          0.003047,
+          61.699944,
+          47.893196,
           42.845472
         ],
         "nonmanifold_edges": 0,
@@ -2507,29 +2712,29 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.004724213729183191,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.007371510318388839,
-      "sha256": "5cc7127d04a0626e0c7bc09919f3a4fb8377c40fbc28888c1de8d3b219046394",
+      "max_bound_error_mm": 0.003688213729176937,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.007952989461855962,
+      "sha256": "2b3764677a29ccab185d255e843cb374da71793ad55f508583be826fca95ca3d",
       "stl_filename": "stl/jaw_native.stl",
       "stl": {
-        "triangles": 17158,
+        "triangles": 83046,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 24671.869253208057,
+        "volume_mm3": 24686.110818534864,
         "bounds_mm": [
-          -61.69709014892578,
+          -61.699886322021484,
           -47.89688491821289,
-          0.001610000035725534,
-          61.6989631652832,
-          47.89215850830078,
+          0.003046999918296933,
+          61.69994354248047,
+          47.89319610595703,
           42.8454704284668
         ],
-        "relative_volume_error": 6.455550591198753e-09,
-        "max_bound_error_mm": 1.8510742165744887e-06,
-        "sha256": "271c09b07055826e2db16dd47c62fbddd4536d0d53233302856cfe4cf21bdb3b"
+        "relative_volume_error": 8.413768155670644e-09,
+        "max_bound_error_mm": 1.6779785170228934e-06,
+        "sha256": "53e9fb60d7f74a8fb0fbe8fb0201bd32e4812727c1e20daec0bf191015672f0d"
       }
     },
     {
@@ -2570,21 +2775,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 996,
+        "maximum_sampled_face_deviation_mm": 0.009113428101832128,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 45741.775985631,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.009375722860568203
+        }
       },
       "mesh": {
-        "vertices": 2094,
-        "triangles": 4184,
-        "volume_mm3": 45160.51277121185,
+        "vertices": 15430,
+        "triangles": 30856,
+        "volume_mm3": 45778.16351517192,
         "bounds_mm": [
           -59.17638,
           -21.75822,
@@ -2600,16 +2814,16 @@
       },
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.012707693535572311,
-      "sha256": "82d44c3b2cdaab313ceaa187548f1b2d7203c0e82127b2c782881af74cea0503",
+      "relative_volume_error": 0.000795293702042304,
+      "sha256": "9c30064ac7563efeb6e0f24ff8614b10a6c59297d373569620c32d4beaf0dd8b",
       "stl_filename": "stl/jaw_soft_001_native.stl",
       "stl": {
-        "triangles": 4184,
+        "triangles": 30856,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 45160.51279231532,
+        "volume_mm3": 45778.163610853335,
         "bounds_mm": [
           -59.1763801574707,
           -21.758220672607422,
@@ -2618,9 +2832,9 @@
           21.758220672607422,
           11.403730392456055
         ],
-        "relative_volume_error": 4.672991941751653e-10,
+        "relative_volume_error": 2.090110458096391e-09,
         "max_bound_error_mm": 6.726074204266297e-07,
-        "sha256": "78b69a180465a75907e090c8effccdd7e0ef3d6c84d40482839b9172bbbdd734"
+        "sha256": "10e2e986f10e2916f1ced429f03d7f92b1362a196b140140e1e63c517aa34e40"
       }
     },
     {
@@ -2658,60 +2872,69 @@
         52.55438217176173
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "surface_sample_count": 1524,
+        "maximum_sampled_face_deviation_mm": 0.010372072404877393,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 20448.029177545828,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.002060114133200841
+        }
       },
       "mesh": {
-        "vertices": 7581,
-        "triangles": 15166,
-        "volume_mm3": 20437.407526388644,
+        "vertices": 34886,
+        "triangles": 69776,
+        "volume_mm3": 20444.59145833472,
         "bounds_mm": [
           -21.35,
-          -45.30636,
-          0.006985,
+          -45.307216,
+          2.2e-05,
           21.35,
-          45.303268,
-          52.554252
+          45.307216,
+          52.554352
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.006985,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0005193455085942023,
-      "sha256": "1464237887fc08e6ab0aaf631b8bd37e3daea0e1e3bf41616bbd596166f2b7d7",
+      "max_bound_error_mm": 3.017176172903646e-05,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0001680190992141043,
+      "sha256": "192db72a162abe643fd0e6ae72661397a446e2c8a097eb49449480767f649222",
       "stl_filename": "stl/left_shell_native.stl",
       "stl": {
-        "triangles": 15166,
+        "triangles": 69776,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 20437.40763698812,
+        "volume_mm3": 20444.591728334657,
         "bounds_mm": [
           -21.350000381469727,
-          -45.306358337402344,
-          0.006984999869018793,
+          -45.30721664428711,
+          2.2000000171829015e-05,
           21.350000381469727,
-          45.30326843261719,
-          52.55425262451172
+          45.30721664428711,
+          52.554351806640625
         ],
-        "relative_volume_error": 5.4116195579175075e-09,
-        "max_bound_error_mm": 1.6625976542172793e-06,
-        "sha256": "abecc3ddb6ce786095210cb9f3f726142a6118710ba2b3cfac8dfa9c84bbce6d"
+        "relative_volume_error": 1.320642377030588e-08,
+        "max_bound_error_mm": 6.44287112550046e-07,
+        "sha256": "9df0592dd808e7bd456ef0f86f925f3c75eda1425c9d8a6c9f40273c7132ce9d"
       }
     },
     {
@@ -2728,7 +2951,7 @@
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "source_volume_mm3": 8117.437536336883,
-      "geometry_source": "current_source_factory",
+      "geometry_source": "saved_assembly_brep_verified_against_current_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 7.016609515630989e-14,
         "volume_difference_mm3": 2.415951712464448e-06,
@@ -2749,60 +2972,76 @@
         85.35100020001617
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
-        "algorithm": "Watson",
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "DEFAULT",
         "native_parallel": false,
+        "surface_sample_count": 4448,
+        "maximum_sampled_face_deviation_mm": 0.000530431475804298,
+        "sampled_face_deviation_limit_mm": 0.001,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": -1,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "verified_saved_geometry_fallback": {
+          "original_mesh_error": "Export topology cleanup failed geometry checks: leg_left_native",
+          "bidirectional_difference_mm3": [
+            0,
+            0
+          ]
+        },
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 8117.437538752834,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.415951712464448e-06
+        }
       },
       "mesh": {
-        "vertices": 6749,
-        "triangles": 13014,
-        "volume_mm3": 8115.6036771577965,
+        "vertices": 82985,
+        "triangles": 164074,
+        "volume_mm3": 8117.477198195648,
         "bounds_mm": [
           -6.26,
           -13.5,
           0.0,
           6.26,
           13.5,
-          85.351
+          85.350752
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 2.0001617428988538e-07,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00022591601978790617,
-      "sha256": "5ea660d3ef80644da1e885a5ce65bc9d1978301467256bb8c543ec7568a435cf",
+      "max_bound_error_mm": 0.0002482000161734277,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 4.8860072637540915e-06,
+      "sha256": "dc4d3567c8784aa4c7a5efdac66ff54f02eaf7bb3c222b0c58198e7a367852ba",
       "stl_filename": "stl/leg_left_native.stl",
       "stl": {
-        "triangles": 13014,
+        "triangles": 164074,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 8115.603693946347,
+        "volume_mm3": 8117.477230805419,
         "bounds_mm": [
           -6.260000228881836,
           -13.5,
           0.0,
           6.260000228881836,
           13.5,
-          85.35099792480469
+          85.35075378417969
         ],
-        "relative_volume_error": 2.068675558009672e-09,
-        "max_bound_error_mm": 2.0751953115905053e-06,
-        "sha256": "3c9831892c3033102042a61827bcab49c5822834ae5c6635378727977ebb62a6"
+        "relative_volume_error": 4.017229718767787e-09,
+        "max_bound_error_mm": 1.7841796875472937e-06,
+        "sha256": "ce0d1554f2c5fd45c1c23b3681ff6ae44523c39c2390fe5c110ebdcf673ee2e0"
       }
     },
     {
@@ -2819,7 +3058,7 @@
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
       "source_volume_mm3": 8117.437536336883,
-      "geometry_source": "current_source_factory",
+      "geometry_source": "saved_assembly_brep_verified_against_current_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.085620730620576e-14,
         "volume_difference_mm3": 1.2853852240368724e-06,
@@ -2840,60 +3079,76 @@
         85.35100020001617
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
-        "algorithm": "Watson",
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "DEFAULT",
         "native_parallel": false,
+        "surface_sample_count": 4400,
+        "maximum_sampled_face_deviation_mm": 0.0005304314758021052,
+        "sampled_face_deviation_limit_mm": 0.001,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": -1,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "verified_saved_geometry_fallback": {
+          "original_mesh_error": "Export topology cleanup failed geometry checks: leg_left_native_right",
+          "bidirectional_difference_mm3": [
+            0,
+            0
+          ]
+        },
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 8117.437537622268,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 1.2853852240368724e-06
+        }
       },
       "mesh": {
-        "vertices": 6749,
-        "triangles": 13014,
-        "volume_mm3": 8115.603678485332,
+        "vertices": 82941,
+        "triangles": 163986,
+        "volume_mm3": 8117.477173534043,
         "bounds_mm": [
           -6.26,
           -13.5,
           0.0,
           6.26,
           13.5,
-          85.351
+          85.350752
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 2.0001617428988538e-07,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.00022591585624667164,
-      "sha256": "77265edf4824d593094d7a05fe505c2d304c5ee6dd8fc131cb7e6996f60f964c",
+      "max_bound_error_mm": 0.0002482000161734277,
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 4.882969161473248e-06,
+      "sha256": "79d5efabeda1ed2737bb3a91702307742173b571ea119fdba7232dd7e969f7f0",
       "stl_filename": "stl/leg_left_native_right.stl",
       "stl": {
-        "triangles": 13014,
+        "triangles": 163986,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 8115.603694452422,
+        "volume_mm3": 8117.477206239162,
         "bounds_mm": [
           -6.260000228881836,
           -13.5,
           0.0,
           6.260000228881836,
           13.5,
-          85.35099792480469
+          85.35075378417969
         ],
-        "relative_volume_error": 1.967455598669682e-09,
-        "max_bound_error_mm": 2.0751953115905053e-06,
-        "sha256": "98b929b47c42def2ba50af6dd66ff06ab3262c07bfc3be5cec9563ca35591a1a"
+        "relative_volume_error": 4.028975830654861e-09,
+        "max_bound_error_mm": 1.7841796875472937e-06,
+        "sha256": "31a917cd1b89409afaaa6a88a5973d31c60defae1ecaddcba28bfa2042c60fff"
       }
     },
     {
@@ -2934,21 +3189,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 1880,
+        "maximum_sampled_face_deviation_mm": 0.004920919681260703,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 1801.7721101129148,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 7.210269359347876e-07
+        }
       },
       "mesh": {
         "vertices": 9864,
         "triangles": 19740,
-        "volume_mm3": 1801.7149398159768,
+        "volume_mm3": 1801.7140566086819,
         "bounds_mm": [
           -2.4,
           -14.3,
@@ -2964,8 +3228,8 @@
       },
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 3.1729637512465704e-05,
-      "sha256": "003ec47043e23e842d3899b0b13966a980fb950ece0b1c2ddf0860f7ddabbbcd",
+      "relative_volume_error": 3.22198256390968e-05,
+      "sha256": "56dcb8cdc6171b9605be6f0a3a171c15b4a77606e77bd2b6168b5273f8a1719c",
       "stl_filename": "stl/neck_001_native.stl",
       "stl": {
         "triangles": 19740,
@@ -2973,7 +3237,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 1801.7149959078615,
+        "volume_mm3": 1801.7141127365333,
         "bounds_mm": [
           -2.4000000953674316,
           -14.300000190734863,
@@ -2982,9 +3246,9 @@
           14.300000190734863,
           18.0
         ],
-        "relative_volume_error": 3.113249688089991e-08,
+        "relative_volume_error": 3.115247460512255e-08,
         "max_bound_error_mm": 1.9073486257070726e-07,
-        "sha256": "b5662bb009ea24ba23139bbcc559b4b416f15d94e086fdcb8748dee27bcd33c5"
+        "sha256": "628cc102e3ac93148ed95dcb8efe5f36f3ce4feeb946f746fad17c45778f53d9"
       }
     },
     {
@@ -3025,21 +3289,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 2204,
+        "maximum_sampled_face_deviation_mm": 0.0015526424473266893,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 3329.965305948275,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.0463630789890885e-10
+        }
       },
       "mesh": {
         "vertices": 10674,
         "triangles": 21360,
-        "volume_mm3": 3329.922975094876,
+        "volume_mm3": 3329.9241160716488,
         "bounds_mm": [
           -2.95,
           -14.3,
@@ -3055,8 +3328,8 @@
       },
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 1.2712100368854913e-05,
-      "sha256": "ba5ce9e736ce701a9b96e9833aeee023943c7a722a8f918332ddf1432b2156b3",
+      "relative_volume_error": 1.2369461131573503e-05,
+      "sha256": "895d0792be9a917a7af2b6f0e88293c7ea451263d2a4f70a65982ab941bf277a",
       "stl_filename": "stl/neck_002_native.stl",
       "stl": {
         "triangles": 21360,
@@ -3064,7 +3337,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 3329.92304395545,
+        "volume_mm3": 3329.924184880318,
         "bounds_mm": [
           -2.950000047683716,
           -14.300000190734863,
@@ -3073,9 +3346,9 @@
           14.300000190734863,
           25.5
         ],
-        "relative_volume_error": 2.0679329292177935e-08,
+        "relative_volume_error": 2.066373494206449e-08,
         "max_bound_error_mm": 1.9073486257070726e-07,
-        "sha256": "1c009e13fd9f66a7ea61be33f55600be2e001c7962a6e7ce8a949d3ef07ca5b6"
+        "sha256": "b67f60097bd5f20b328729f8aa9d3e54ed9c28c9ef9fad0ef14748d96cea9226"
       }
     },
     {
@@ -3113,60 +3386,69 @@
         25.000000199999988
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "surface_sample_count": 3268,
+        "maximum_sampled_face_deviation_mm": 0.009766993583821071,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 11552.965144208274,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0003823185670626117
+        }
       },
       "mesh": {
-        "vertices": 6209,
-        "triangles": 12462,
-        "volume_mm3": 11549.163087297322,
+        "vertices": 15890,
+        "triangles": 31824,
+        "volume_mm3": 11551.804777558244,
         "bounds_mm": [
           -34.0,
-          -34.049632,
-          0.007699,
+          -34.049724,
+          0.001378,
           34.0,
           34.05,
-          24.997562
+          24.997798
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.007699,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0003290648479190255,
-      "sha256": "2fade535fe5e12336dd4255f35bbb9382ee041f5494fe555106b26d360f87215",
+      "max_bound_error_mm": 0.0022021999999886077,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.0001004057707585081,
+      "sha256": "f9da54f11783dea6995b927b11563610537c1b2731c4ebf1b0d1d90b6a143a01",
       "stl_filename": "stl/neck_internal_yoke_native.stl",
       "stl": {
-        "triangles": 12462,
+        "triangles": 31824,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 11549.16314473198,
+        "volume_mm3": 11551.804794787724,
         "bounds_mm": [
           -34.0,
-          -34.04963302612305,
-          0.007699000183492899,
+          -34.04972457885742,
+          0.0013780000153928995,
           34.0,
           34.04999923706055,
-          24.997562408447266
+          24.997798919677734
         ],
-        "relative_volume_error": 4.9730579857114934e-09,
-        "max_bound_error_mm": 1.026123044312044e-06,
-        "sha256": "c71e394401211940fc5b189f30d7d5c746c5200218595b1f47c3a63a79a62ca7"
+        "relative_volume_error": 1.4914968435740868e-09,
+        "max_bound_error_mm": 9.196777348563501e-07,
+        "sha256": "eac9864031a18fd81c6b97bbb2ded6063b34323b32bf84c4547e762424819bdd"
       }
     },
     {
@@ -3182,14 +3464,9 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 9976.33027438349,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 7.815970093361102e-14,
-        "volume_difference_mm3": 0.00026071453612530604,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
+      "source_volume_mm3": 9976.330013668954,
+      "geometry_source": "saved_assembly_step",
+      "saved_step_comparison": null,
       "translation_mm": [
         1.849999999999996,
         35.1,
@@ -3204,24 +3481,26 @@
         35.73600020000035
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "surface_sample_count": 5336,
+        "maximum_sampled_face_deviation_mm": 0.006196184234218489,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 20,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 9976.330013668954,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
-        "vertices": 10950,
-        "triangles": 21952,
-        "volume_mm3": 9972.73879906958,
+        "vertices": 152538,
+        "triangles": 305128,
+        "volume_mm3": 9976.546793261388,
         "bounds_mm": [
           -23.45,
           -13.5,
@@ -3235,18 +3514,17 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 2.0000035050316e-07,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0003599996406626067,
-      "sha256": "e5b89e39105b986743a281a98d40a7eb694612069bc5cada827851f6d48db3b8",
+      "sha256": "facf731e847d63c90251ee9f6f12ca31ac4cec24e05be7bf8fb01fc08d71fea3",
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 2.172939268621145e-05,
       "stl_filename": "stl/neck_pitch_001_native.stl",
       "stl": {
-        "triangles": 21952,
+        "triangles": 305128,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 9972.739046774514,
+        "volume_mm3": 9976.547061666959,
         "bounds_mm": [
           -23.450000762939453,
           -13.5,
@@ -3255,9 +3533,9 @@
           13.5,
           35.736000061035156
         ],
-        "relative_volume_error": 2.4838205222056817e-08,
+        "relative_volume_error": 2.6903654772788444e-08,
         "max_bound_error_mm": 7.629394538355427e-07,
-        "sha256": "6d6c08a5f37e5a322774ef1b0aabc7946c48cd1607365c145ed3b79be34e7a6c"
+        "sha256": "bc214f96e0ebf4d47263759c44c54efdb3e04832acdec1ae0c7f081253c8114b"
       }
     },
     {
@@ -3298,16 +3576,25 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 516,
+        "maximum_sampled_face_deviation_mm": 0.006440147502330366,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 10470.413963047627,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 4.2746250983327627e-10
+        }
       },
       "mesh": {
         "vertices": 1055,
@@ -3329,7 +3616,7 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "14c0aa637e389095b2fd7cfa92bd2dd70c605dc5dcbaabafc4d0ce8af8e0095c",
+      "sha256": "0d71683ff36f3518e9314e9f3afc65a9f3f7c5084e36b039cbf7bbdf1b4fc7ba",
       "stl_filename": "stl/noenoeil_native.stl",
       "stl": {
         "triangles": 2110,
@@ -3348,7 +3635,7 @@
         ],
         "relative_volume_error": 1.30641981229266e-08,
         "max_bound_error_mm": 7.08251953085437e-07,
-        "sha256": "4dc2ad6397631f4594e8c6567a5c49e67adda6dee27a770d96ddfb22a39585ea"
+        "sha256": "474daa9c71ae77a6d26288cce0b602e2b9045abf1fa473ec97b702915ea0003b"
       }
     },
     {
@@ -3386,60 +3673,69 @@
         52.554382171922256
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "surface_sample_count": 1904,
+        "maximum_sampled_face_deviation_mm": 0.011515389973242052,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 21076.618119681105,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.00114944510278292
+        }
       },
       "mesh": {
-        "vertices": 8243,
-        "triangles": 16494,
-        "volume_mm3": 21065.161817202035,
+        "vertices": 36120,
+        "triangles": 72248,
+        "volume_mm3": 21072.99229589783,
         "bounds_mm": [
           -25.15,
-          -45.30636,
-          0.006985,
+          -45.307216,
+          2.2e-05,
           25.15,
-          45.303268,
-          52.554252
+          45.307216,
+          52.554352
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.006985,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0005435005556225427,
-      "sha256": "a54561a82a6c22afa30464f568d0a0b2755c61b5ba8bd6b3a901c19cf9378547",
+      "max_bound_error_mm": 3.0171922254851324e-05,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00017197609764837645,
+      "sha256": "49f50b0006cff403435df3c26253fb6448de7e64f99ca6be30011c8adc8e6541",
       "stl_filename": "stl/right_shell_native.stl",
       "stl": {
-        "triangles": 16494,
+        "triangles": 72248,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 21065.159477909285,
+        "volume_mm3": 21072.990434417534,
         "bounds_mm": [
           -25.149999618530273,
-          -45.306358337402344,
-          0.006984999869018793,
+          -45.30721664428711,
+          2.2000000171829015e-05,
           25.149999618530273,
-          45.30326843261719,
-          52.55425262451172
+          45.30721664428711,
+          52.554351806640625
         ],
-        "relative_volume_error": 1.1105031002600925e-07,
-        "max_bound_error_mm": 1.6625976542172793e-06,
-        "sha256": "627a7682dc82fab34dea36ccd4d7887e35ba0b54798cd965e6101ca87b67d4d3"
+        "relative_volume_error": 8.833488245915229e-08,
+        "max_bound_error_mm": 6.44287112550046e-07,
+        "sha256": "b7f90583930e7dac7091ec21ef0bdd2d6cfca68d42cb0ede746335d3bd5d1419"
       }
     },
     {
@@ -3480,21 +3776,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 2456,
+        "maximum_sampled_face_deviation_mm": 0.007709600663455037,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 13029.547587417377,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 2.213765401393175e-05
+        }
       },
       "mesh": {
         "vertices": 4390,
         "triangles": 8792,
-        "volume_mm3": 13030.175696414135,
+        "volume_mm3": 13029.83880915295,
         "bounds_mm": [
           -32.91,
           -7.244184,
@@ -3510,8 +3815,8 @@
       },
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 4.8204809401307325e-05,
-      "sha256": "99525fda72ff2a64bfae94d2da1399b4c14dc3d60743cdb69c48fb80b54db707",
+      "relative_volume_error": 2.2349171793637996e-05,
+      "sha256": "35053919fc52275ad40034183bb3333b8bf1fcca7bec94ab6caa83c04ca75802",
       "stl_filename": "stl/roll_front_bulkhead_native.stl",
       "stl": {
         "triangles": 8792,
@@ -3519,7 +3824,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 13030.175083513393,
+        "volume_mm3": 13029.838191242565,
         "bounds_mm": [
           -32.90999984741211,
           -7.2441840171813965,
@@ -3528,9 +3833,9 @@
           7.244999885559082,
           39.25
         ],
-        "relative_volume_error": 4.703702818930692e-08,
+        "relative_volume_error": 4.7422719094982424e-08,
         "max_bound_error_mm": 2.180175755484015e-07,
-        "sha256": "25eead8b208e00eba55e7aa3ec1c10865a2b7b5c4c387ce0d3fbd7ff96f55030"
+        "sha256": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815"
       }
     },
     {
@@ -3571,59 +3876,66 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 996,
+        "maximum_sampled_face_deviation_mm": 0.005922443317242552,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "library_valid": true,
+        "library_manifold": true,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 6639.634545082869,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0005796253981316113
+        }
       },
       "mesh": {
-        "vertices": 5769,
-        "triangles": 11534,
-        "volume_mm3": 6607.824942067333,
+        "vertices": 6077,
+        "triangles": 12150,
+        "volume_mm3": 6639.543257387674,
         "bounds_mm": [
-          -59.271928,
+          -59.273304,
           -21.978472,
           3.6e-05,
-          59.272,
+          59.273344,
           21.978486,
           4.422854
         ],
-        "nonmanifold_edges": 34,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
-      "max_bound_error_mm": 0.001668739236990291,
+      "max_bound_error_mm": 0.000292739236989803,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.004790779665810511,
-      "sha256": "4c7d88617f37f0f0843ec5649a09814cd827cf14c10e2b036ad67889105c98e6",
+      "relative_volume_error": 1.3661606990533e-05,
+      "sha256": "d085329aa362abe92e2e0bafa15afb9fa7cbd45ff1ab062a6cd1d12d6f200198",
       "stl_filename": "stl/soft_mouth_top_native.stl",
       "stl": {
-        "triangles": 11534,
+        "triangles": 12150,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 34,
-        "volume_mm3": 6607.824397666586,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 6639.5427444932375,
         "bounds_mm": [
-          -59.27192687988281,
+          -59.2733039855957,
           -21.978471755981445,
           3.600000127335079e-05,
-          59.27199935913086,
+          59.27334213256836,
           21.978485107421875,
           4.422853946685791
         ],
-        "relative_volume_error": 8.238728345883936e-08,
-        "max_bound_error_mm": 1.1201171901120688e-06,
-        "sha256": "ff6b4bd6f46a7c5a272a1ac300bb119066737a7ce881c8e563bb96d8badf833b"
+        "relative_volume_error": 7.724845171444933e-08,
+        "max_bound_error_mm": 1.867431642210704e-06,
+        "sha256": "481a4a56c21d5d2065c67334da2547b12dde731845900b572a8e2ec536fe3b1b"
       }
     },
     {
@@ -3661,60 +3973,71 @@
         17.45225057797078
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 160,
+        "maximum_sampled_face_deviation_mm": 0.001346931191782558,
+        "sampled_face_deviation_limit_mm": 0.01,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "library_valid": false,
+        "library_manifold": false,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 15343.578927541006,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.128661774098873e-10
+        }
       },
       "mesh": {
-        "vertices": 128267,
-        "triangles": 256450,
-        "volume_mm3": 15360.067333557441,
+        "vertices": 1215567,
+        "triangles": 2025610,
+        "volume_mm3": 15342.032119309575,
         "bounds_mm": [
-          -27.740128,
-          -36.526048,
-          0.0,
-          27.737456,
-          36.526264,
-          17.452032
+          -27.74009,
+          -36.526576,
+          9.2e-05,
+          27.739762,
+          36.526672,
+          17.45224
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 61328,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 0.0026781147819932016,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010746127806695901,
-      "sha256": "01a4f641acf9aa940fc3b1502ca946a301c4e57e8d3134950c0050defddbd4ff",
+      "max_bound_error_mm": 0.0003978287089765331,
+      "allowed_bound_error_mm": 0.01001,
+      "relative_volume_error": 0.00010081143639452355,
+      "sha256": "473f5fe9fb6ccd67beb48e773999eded073e510acbd3ea3c6ca491af9945e4d9",
       "stl_filename": "stl/sole_left_native.stl",
       "stl": {
-        "triangles": 256450,
+        "triangles": 2025610,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 15360.067536260802,
+        "nonmanifold_edges": 61328,
+        "volume_mm3": 15342.03246485872,
         "bounds_mm": [
-          -27.740127563476562,
-          -36.52604675292969,
-          0.0,
-          27.737455368041992,
-          36.52626419067383,
-          17.4520320892334
+          -27.740089416503906,
+          -36.52657699584961,
+          9.200000204145908e-05,
+          27.739761352539062,
+          36.52667236328125,
+          17.452239990234375
         ],
-        "relative_volume_error": 1.3196775523592285e-08,
-        "max_bound_error_mm": 1.2470703154576768e-06,
-        "sha256": "66dfa121e6eca7dfe58a891f6b02de8771c59b8323f3debee20bb43152f33e74"
+        "relative_volume_error": 2.252303615963541e-08,
+        "max_bound_error_mm": 9.958496107742576e-07,
+        "sha256": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882"
       }
     },
     {
@@ -3752,60 +4075,71 @@
         17.45225057797078
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 164,
+        "maximum_sampled_face_deviation_mm": 0.0013469311917967684,
+        "sampled_face_deviation_limit_mm": 0.01,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "library_valid": false,
+        "library_manifold": false,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 15343.578927539878,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 8.385541150346398e-10
+        }
       },
       "mesh": {
-        "vertices": 128267,
-        "triangles": 256450,
-        "volume_mm3": 15360.05593509318,
+        "vertices": 1210104,
+        "triangles": 2015750,
+        "volume_mm3": 15342.036372360715,
         "bounds_mm": [
-          -27.737456,
-          -36.526048,
-          0.0,
-          27.740128,
-          36.526264,
-          17.452032
+          -27.739762,
+          -36.526576,
+          9.2e-05,
+          27.739976,
+          36.526672,
+          17.452242
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 60455,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 0.0026781147818191187,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0010738698989508776,
-      "sha256": "48d636ae0dfce671c206a39879201fc2fe0bbe11dbbf131de8d4a2e048e67b8f",
+      "max_bound_error_mm": 0.00039782870898363853,
+      "allowed_bound_error_mm": 0.01001,
+      "relative_volume_error": 0.000100534248709924,
+      "sha256": "9b9cf9d820bec1e8ef8fd4147047380f1b75040051003d6bdf3d6c355c6d9bf8",
       "stl_filename": "stl/sole_left_native_right.stl",
       "stl": {
-        "triangles": 256450,
+        "triangles": 2015750,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 15360.056120449195,
+        "nonmanifold_edges": 60455,
+        "volume_mm3": 15342.036739735675,
         "bounds_mm": [
-          -27.737455368041992,
-          -36.52604675292969,
-          0.0,
-          27.740127563476562,
-          36.52626419067383,
-          17.4520320892334
+          -27.739761352539062,
+          -36.52657699584961,
+          9.200000204145908e-05,
+          27.73997688293457,
+          36.52667236328125,
+          17.452241897583008
         ],
-        "relative_volume_error": 1.206740496205114e-08,
-        "max_bound_error_mm": 1.2470703154576768e-06,
-        "sha256": "5c50f4d9218a857e56931fb55a36ada3688f0e60e5a465f383d29d22ce35b75b"
+        "relative_volume_error": 2.394564520866818e-08,
+        "max_bound_error_mm": 9.958496107742576e-07,
+        "sha256": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e"
       }
     },
     {
@@ -3843,30 +4177,40 @@
         51.000013768938715
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2500,
+        "maximum_sampled_face_deviation_mm": 0.009995389259983192,
+        "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 32226.50897792313,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0020516508448054083
+        }
       },
       "mesh": {
-        "vertices": 20324,
-        "triangles": 40664,
-        "volume_mm3": 32204.52860190029,
+        "vertices": 94093,
+        "triangles": 188202,
+        "volume_mm3": 32221.863274189036,
         "bounds_mm": [
-          -30.500268,
+          -30.500256,
           -33.16943,
           0.0,
-          30.500268,
-          33.164856,
+          30.500256,
+          33.169078,
           51.000016
         ],
         "nonmanifold_edges": 0,
@@ -3874,29 +4218,29 @@
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.004575126075344826,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0006821224815033226,
-      "sha256": "7b6ab12c23c2f737617284c3817eb24a11e2f5bcfb43594a5f266ff2bd7f2683",
+      "max_bound_error_mm": 0.00035312607534621065,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00014422148834773808,
+      "sha256": "9535c17e83bbcfdec051c0ea4e295818ae7c12003f7ae71d682e05e750dabbd6",
       "stl_filename": "stl/stick_pod_native.stl",
       "stl": {
-        "triangles": 40664,
+        "triangles": 188202,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 32204.52925944238,
+        "volume_mm3": 32221.864107746533,
         "bounds_mm": [
-          -30.500268936157227,
+          -30.500255584716797,
           -33.169429779052734,
           0.0,
-          30.500268936157227,
-          33.16485595703125,
+          30.500255584716797,
+          33.1690788269043,
           51.00001525878906
         ],
-        "relative_volume_error": 2.0417690325904997e-08,
-        "max_bound_error_mm": 9.361572281818553e-07,
-        "sha256": "69ed32d88ffd033d81e94bdc2cdc7b66decf364a182745f12bfebd88f5c20098"
+        "relative_volume_error": 2.586931393660166e-08,
+        "max_bound_error_mm": 8.269042979236474e-07,
+        "sha256": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9"
       }
     },
     {
@@ -3912,14 +4256,9 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 73305.9270590426,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 5.097001323883892e-09,
-        "volume_difference_mm3": 0.006497529975604266,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
+      "source_volume_mm3": 73305.93355657258,
+      "geometry_source": "saved_assembly_step",
+      "saved_step_comparison": null,
       "translation_mm": [
         1.1043965741919237e-10,
         41.82722658296116,
@@ -3934,60 +4273,61 @@
         62.43164376456821
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.05,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 0.01,
-        "angular_deflection_rad": 0.2,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "surface_sample_count": 4472,
+        "maximum_sampled_face_deviation_mm": 0.006237821994950195,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 12,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 73305.93355657258,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
-        "vertices": 16754,
-        "triangles": 33504,
-        "volume_mm3": 73220.09624350564,
+        "vertices": 487862,
+        "triangles": 975720,
+        "volume_mm3": 73300.43497299745,
         "bounds_mm": [
-          -62.028572,
-          -82.771488,
+          -62.028436,
+          -82.776712,
           0.0,
-          62.028572,
+          62.028436,
           82.777232,
-          62.408232
+          62.430416
         ],
         "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": []
       },
-      "max_bound_error_mm": 0.023411764568209037,
-      "allowed_bound_error_mm": 0.10001,
-      "relative_volume_error": 0.0011708577870903818,
-      "sha256": "fb3dce7e7f3232755cb9af6feea865f2ad00343b1d40c630f882cc9cbcf8574e",
+      "sha256": "9d55e086b57d0e38ea6fa143e3fc179fc8b75d42c539d24860acf04ff4fac0a8",
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 7.500871086902047e-05,
       "stl_filename": "stl/top_head_shell_native.stl",
       "stl": {
-        "triangles": 33504,
+        "triangles": 975720,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 73220.09695814137,
+        "volume_mm3": 73300.43533260305,
         "bounds_mm": [
-          -62.02857208251953,
-          -82.771484375,
+          -62.02843475341797,
+          -82.7767105102539,
           0.0,
-          62.02857208251953,
+          62.02843475341797,
           82.77722930908203,
-          62.408233642578125
+          62.430416107177734
         ],
-        "relative_volume_error": 9.760103585167549e-09,
-        "max_bound_error_mm": 3.6250000050586095e-06,
-        "sha256": "4d3f08295d898f64e6de0c84efa302b21459c99c698bdbb5ff792224255ea533"
+        "relative_volume_error": 4.905913655650039e-09,
+        "max_bound_error_mm": 2.690917966674533e-06,
+        "sha256": "64428c737a802fc43ab7c1ed5f06dd2c9776a7552727d44c17c21fc1996a79a5"
       }
     },
     {
@@ -4028,21 +4368,30 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 4692,
+        "maximum_sampled_face_deviation_mm": 0.0021678238393002735,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 15974.295830809473,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 4.470865133043844e-05
+        }
       },
       "mesh": {
         "vertices": 25215,
         "triangles": 50486,
-        "volume_mm3": 16134.756733753593,
+        "volume_mm3": 15974.676331311404,
         "bounds_mm": [
           -38.275,
           -29.85,
@@ -4058,8 +4407,8 @@
       },
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.010044946569249563,
-      "sha256": "fb728b19a5791516b9535ebf6f6115556a01ee8365b25db4cb11ca6b76bf8cb8",
+      "relative_volume_error": 2.38223465796645e-05,
+      "sha256": "3e1cb066fe2ebcd52fba86069cf2b4ebdb8215e0beac407874004ea63144b541",
       "stl_filename": "stl/trunk_base_native.stl",
       "stl": {
         "triangles": 50486,
@@ -4067,7 +4416,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 16134.756730533698,
+        "volume_mm3": 15974.67633854349,
         "bounds_mm": [
           -38.275001525878906,
           -29.850000381469727,
@@ -4076,9 +4425,9 @@
           29.850000381469727,
           9.0
         ],
-        "relative_volume_error": 1.995626621309488e-10,
+        "relative_volume_error": 4.527218742193822e-10,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "496c0554c5c3125204327d05376ac1ba1a68463cadc8fdbe956d473ac4147bc6"
+        "sha256": "1919c7d8377e57b05fd6a623b3926c5a1fd384fd192aa5f539b3d8792fdc7939"
       }
     },
     {
@@ -4119,16 +4468,25 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "surface_sample_count": 484,
+        "maximum_sampled_face_deviation_mm": 0.0012398525886369205,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 547.677438284625,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 4.7138928493950516e-07
+        }
       },
       "mesh": {
         "vertices": 1460,
@@ -4150,7 +4508,7 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001297518999865098,
-      "sha256": "b2ad06ca08305bc83f9a0bcc6f8a497bbe1f9e34fb1759f26da7de5d385df9cb",
+      "sha256": "a8f3e7e30ff296dac11e2cdc7659f5ce670fdff39a6fe4913f8d5ceb1567f34e",
       "stl_filename": "stl/ubec_clamp_native.stl",
       "stl": {
         "triangles": 2924,
@@ -4169,7 +4527,7 @@
         ],
         "relative_volume_error": 4.4521435420448155e-10,
         "max_bound_error_mm": 2.7795410062481096e-07,
-        "sha256": "45ffb06100fa8135d714c7130bd80c98a2295cf44b5063920dce6a0ef78a0a32"
+        "sha256": "f6064ddf82283b8d8bff428b546e0deabea0da2ff23165ec4a3912c2db007338"
       }
     },
     {
@@ -4185,14 +4543,9 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 12655.546328044358,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 1.9184653865522705e-12,
-        "volume_difference_mm3": 0.0010083137185574742,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
+      "source_volume_mm3": 12655.54531973064,
+      "geometry_source": "saved_assembly_step",
+      "saved_step_comparison": null,
       "translation_mm": [
         -76.27499999999999,
         -19.14600354555934,
@@ -4207,62 +4560,61 @@
         64.66795317107099
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": false,
-        "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "surface_sample_count": 5260,
+        "maximum_sampled_face_deviation_mm": 0.008150297507490863,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "face_mapping_fallbacks": 23,
+        "algorithm": "Gmsh",
+        "gmsh_version": "4.15.2",
+        "maximum_edge_mm": 0.4,
+        "curvature_elements_per_circle": 64,
+        "linear_deflection_mm": null,
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12655.54531973064,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0
+        }
       },
       "mesh": {
-        "vertices": 53292,
-        "triangles": 106612,
-        "volume_mm3": 12479.67350822937,
+        "vertices": 197544,
+        "triangles": 395116,
+        "volume_mm3": 12652.119422097703,
         "bounds_mm": [
           -18.9,
-          -41.33172,
-          0.004519,
+          -41.332908,
+          0.000386,
           18.9,
-          41.332844,
+          41.33296,
           64.667952
         ],
-        "nonmanifold_edges": 52,
+        "nonmanifold_edges": 0,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": [
-          "Balanced internal seam overlaps; review in slicer"
-        ]
+        "warnings": []
       },
-      "max_bound_error_mm": 0.004519,
+      "sha256": "1e9f21e789571712e96cde4a45c63575269da2890049487a76bd53bd96d99713",
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.013896896685152019,
-      "sha256": "96afd211fc5276d24d5894adf161431bc5c67e64dbc6110441f49bf20267239f",
+      "relative_volume_error": 0.0002707032803711264,
       "stl_filename": "stl/upper_leg_left_native.stl",
       "stl": {
-        "triangles": 106612,
+        "triangles": 395116,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 52,
-        "volume_mm3": 12479.673505940167,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 12652.119590211314,
         "bounds_mm": [
           -18.899999618530273,
-          -41.33171844482422,
-          0.004519000183790922,
+          -41.332908630371094,
+          0.0003859999997075647,
           18.899999618530273,
-          41.33284378051758,
+          41.33295822143555,
           64.66795349121094
         ],
-        "relative_volume_error": 1.8343457621877047e-10,
-        "max_bound_error_mm": 1.5551757783782705e-06,
-        "sha256": "0cf332983b0d8c31674693ee2fbf763a6045da83da3fd186635fe5492c5be341"
+        "relative_volume_error": 1.3287387299860717e-08,
+        "max_bound_error_mm": 1.778564453047693e-06,
+        "sha256": "6ee1b11c46bf0a9e0e4140004e9fd36d499439e1737a2a4f36d7b7b62f84c6bf"
       }
     },
     {
@@ -4300,62 +4652,72 @@
         64.66795317107099
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 4388,
+        "maximum_sampled_face_deviation_mm": 0.011794408927107883,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12655.546513299401,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0001885007914097514
+        }
       },
       "mesh": {
-        "vertices": 53569,
-        "triangles": 107166,
-        "volume_mm3": 12479.704382454605,
+        "vertices": 39732,
+        "triangles": 79490,
+        "volume_mm3": 12651.593808447169,
         "bounds_mm": [
           -18.9,
-          -41.33172,
-          0.004519,
+          -41.33288,
+          0.000145,
           18.9,
-          41.332872,
+          41.332848,
           64.667952
         ],
-        "nonmanifold_edges": 48,
+        "nonmanifold_edges": 1,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.004519,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.01389445685165257,
-      "sha256": "3c43cf523fd3dbe611ddbea4c1a7c139ab96b08142b51f0411306910b6143eba",
+      "max_bound_error_mm": 0.000145,
+      "allowed_bound_error_mm": 0.01001,
+      "relative_volume_error": 0.000312314952669873,
+      "sha256": "3450b0553a9cecfb01c45e355917f477ac27ad0f99e05ffbbe12d8921af32d16",
       "stl_filename": "stl/upper_leg_left_native_right.stl",
       "stl": {
-        "triangles": 107166,
+        "triangles": 79490,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 48,
-        "volume_mm3": 12479.704401222647,
+        "nonmanifold_edges": 1,
+        "volume_mm3": 12651.593885790873,
         "bounds_mm": [
           -18.899999618530273,
-          -41.33171844482422,
-          0.004519000183790922,
+          -41.33287811279297,
+          0.0001449999981559813,
           18.899999618530273,
-          41.33287048339844,
+          41.332847595214844,
           64.66795349121094
         ],
-        "relative_volume_error": 1.503885112364347e-09,
-        "max_bound_error_mm": 1.5551757783782705e-06,
-        "sha256": "77566a7ce243e26664392f9191be8c96ff52dadcf44f0c488723a9fc92ca0ca5"
+        "relative_volume_error": 6.113356568128926e-09,
+        "max_bound_error_mm": 1.8872070342013103e-06,
+        "sha256": "a02137af16ceb9f787fdfdc5aca47a2bc1c0db6fe9917dadc721a33f93193366"
       }
     },
     {
@@ -4396,21 +4758,31 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2896,
+        "maximum_sampled_face_deviation_mm": 0.004805400506731904,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12430.366773769972,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.2917159842327237e-07
+        }
       },
       "mesh": {
         "vertices": 7530,
         "triangles": 15100,
-        "volume_mm3": 12387.365721434875,
+        "volume_mm3": 12430.404103992867,
         "bounds_mm": [
           -15.525,
           -16.75,
@@ -4426,8 +4798,8 @@
       },
       "max_bound_error_mm": 5.000000768973223e-08,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0034593550975397878,
-      "sha256": "a3424d49e88dcb5efac070c6ea3db39dcb62a9bc90b3bfcbd6940c8794536cda",
+      "relative_volume_error": 3.0031208572791192e-06,
+      "sha256": "affd13a51b9ad2e4c4695f224f3fadaef253a757e505af0381e6de9a49aa6748",
       "stl_filename": "stl/yaw2roll_left_native.stl",
       "stl": {
         "triangles": 15100,
@@ -4435,7 +4807,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 12387.366092482202,
+        "volume_mm3": 12430.404431497087,
         "bounds_mm": [
           -15.524999618530273,
           -16.75,
@@ -4444,9 +4816,9 @@
           16.75,
           55.775001525878906
         ],
-        "relative_volume_error": 2.995369111535509e-08,
+        "relative_volume_error": 2.634702920577799e-08,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "b8c7f59e025a11070d6e52e86342baf735b9073b904a38a31a533a7b8ea20577"
+        "sha256": "63c01a2abfe08f800cfc47844372f77a162338c913a9fe6a20ca1c14f0b902ce"
       }
     },
     {
@@ -4484,24 +4856,34 @@
         55.77500000000001
       ],
       "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
+        "linear_deflection_mm": 0.0005,
+        "algorithm": "Delabella",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2424,
+        "maximum_sampled_face_deviation_mm": 0.000324390121562753,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 12430.366773776088,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 3.6178062146063894e-07
+        }
       },
       "mesh": {
-        "vertices": 6167,
-        "triangles": 12374,
-        "volume_mm3": 12514.398815201386,
+        "vertices": 10217,
+        "triangles": 20474,
+        "volume_mm3": 12430.4629429632,
         "bounds_mm": [
           -15.525,
           -16.75,
@@ -4516,17 +4898,17 @@
         "warnings": []
       },
       "max_bound_error_mm": 5.000000768973223e-08,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.006760222171267821,
-      "sha256": "8f2447da60e6e817cc2c2201e643567ef7c6b55fba090e502b248cc804313e2e",
+      "allowed_bound_error_mm": 0.01,
+      "relative_volume_error": 7.736604002063749e-06,
+      "sha256": "6bff21feec5e05a8c425d34d4ea6c0cffca99de58ec43e976d0906e9919be1df",
       "stl_filename": "stl/yaw2roll_left_native_right.stl",
       "stl": {
-        "triangles": 12374,
+        "triangles": 20474,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 12514.399218123326,
+        "volume_mm3": 12430.463302121992,
         "bounds_mm": [
           -15.524999618530273,
           -16.75,
@@ -4535,9 +4917,9 @@
           16.75,
           55.775001525878906
         ],
-        "relative_volume_error": 3.219666768211083e-08,
+        "relative_volume_error": 2.8893436521873466e-08,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "feedcb6278fab29b81f9dccbd59a6418fd8ba7407020915b835c30df285c3382"
+        "sha256": "dbcf23e38dd8f79faedeae61eb752984dd553d1c7e1a19a75b9bc0e52dddf490"
       }
     },
     {
@@ -4578,21 +4960,31 @@
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
-        "control_surface_deflection": false,
-        "internal_vertices": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 2120,
+        "maximum_sampled_face_deviation_mm": 0.007709602710520653,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
         "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
+        "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "publication_revalidation": "Revalidated actual mesh, source-volume/bounds receipt, and STL float32 round trip after recovery from interrupted aggregate export; canonical source unchanged."
+        "publication_revalidation": {
+          "canonical_step_sha256": "0a96eab74bd0cf85f6181c58b862585cba72913dad4fbe9de46f784100a5de7a",
+          "current_canonical_volume_mm3": 14018.874188142738,
+          "bounds_checked": true,
+          "source_volume_difference_mm3": 0.0005212245850998443
+        }
       },
       "mesh": {
         "vertices": 6227,
         "triangles": 12490,
-        "volume_mm3": 14021.03585123061,
+        "volume_mm3": 14017.893122344947,
         "bounds_mm": [
           -25.7,
           -21.9575,
@@ -4608,8 +5000,8 @@
       },
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00015423381106286386,
-      "sha256": "8f0a8fad601f94b35d54a9b792b5f940b42406258f3b237c4a2e051e1ec71554",
+      "relative_volume_error": 6.994460443133199e-05,
+      "sha256": "5b629fef48b7addb08f0fe243dd88675554a7e48efe8bcc8bddf1c6ec60e41e0",
       "stl_filename": "stl/yaw_roll_link_native.stl",
       "stl": {
         "triangles": 12490,
@@ -4617,7 +5009,7 @@
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 14021.03681549308,
+        "volume_mm3": 14017.894087213272,
         "bounds_mm": [
           -25.700000762939453,
           -21.957500457763672,
@@ -4626,115 +5018,115 @@
           21.957500457763672,
           28.905000686645508
         ],
-        "relative_volume_error": 6.87725557681766e-08,
+        "relative_volume_error": 6.883119424751136e-08,
         "max_bound_error_mm": 7.629394538355427e-07,
-        "sha256": "95f16f41c51ca9a1f20e1c0f2b10bdb7ef631f46c31866521a2d0b5cb8520730"
+        "sha256": "a02ae047b3acc9d2e4a6f8971b7959db6991fc11d51dc018f3046c03fa70c46a"
       }
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "6724896671bfada28b904f2b41ed317f2e84cc7300b2372125e5fa80b6800e48",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "d935597da31cf8a5c97c49f02be61458e7b94e27ff0116038fa3f12a81ad004d",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "472ad425b6ecc8acbd65cbcb71b08ca8428212861c3dff156fb2643219182bf6",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "5f479b12f52151dd0f01307b8ab0b82dc687956868cb0809e5737ee7440e00c9",
-    "3mf/ankle_eye_left_native.3mf": "daee051b1b1408fc3776f0b490e81d99861baf104842b591d36c6566ceb1ed4c",
-    "3mf/ankle_eye_left_native_right.3mf": "2caedcb0685ab381f67cc11bbb2c7cd070ae12f784a0cf21f1d8bb6dae9a7968",
-    "3mf/ankle_left_native.3mf": "194a75213a4e2a52d18c305ed476f155eb112d89575761cd94c36c347e0d513b",
-    "3mf/ankle_left_native_right.3mf": "a8421ccac57d57abfd97b5b12e906366a2297d4de0c3f99d470f0d41ee41b5ab",
-    "3mf/bearing_ankle_adapter.3mf": "a3c5adba49c026db536567561329ceff6ed0e6a593f8e2b6aae6ae4d9cac9785",
-    "3mf/bearing_carrier_left.3mf": "e0aa3e9bf973d5148cb1cd31ad5462ae1f681a933bbddc142d3c28e67d11d754",
-    "3mf/bearing_carrier_right.3mf": "3def4bf6f24c37961b3dbfbcb1830ccef0c15429e3f3164d18dd79c9ac710daf",
-    "3mf/bearing_roll_adapter_left.3mf": "28e71b1bbc84436f8424cf50e5f5a0be3c78848a05ff80f5e8faf929c0af8e3b",
-    "3mf/bearing_roll_adapter_right.3mf": "ff4dc9c11cb71c588b4cafa7dbce300f0293e0be6ce94342b3af8ded81bcdac5",
-    "3mf/bearing_shared_yaw_adapter.3mf": "48d386946931b31db7a5944c758570a428cfbedc3fa0fee2bbd48d8fe868580a",
-    "3mf/bottom_head_shell_native.3mf": "163cec3c771eac5b337e106f8a7a3d7af8ace3eb648939835d3cf42b9cc0212e",
-    "3mf/electronics_deck_native.3mf": "da18644fa0a2c6eb30514e3ff782f4a587c11f3a1123b3ca2cacb047150c289e",
-    "3mf/face_part_native.3mf": "5880079cf609fe8f96ce1b76b056c21de072b3888ca959dacbfa5e31bb4a5df5",
-    "3mf/face_radxa_bracket_native.3mf": "a4b3d05785989e788e981498458d9223f448b3e1714a0de37fbd70ab15737346",
-    "3mf/foot_left_native_a.3mf": "c3b52bde3d25c5b1cf07de03701d81ea1d37c89c5d059c3e5d8f55a72f82e89d",
-    "3mf/foot_left_native_a_right.3mf": "f18256446992b81fd2e90f8ef1dba540c1d77b243b036661d87e1ddd9919b04d",
-    "3mf/foot_left_native_b.3mf": "c86a8ee56deb94e06214995b0e4cda5663faf6f0541ed993411b6ac7288d286f",
-    "3mf/foot_left_native_b_right.3mf": "41897b83e077dc32b50ad673a8ba4be8a69d0e80fc3b6105567cd1e21d60d31b",
-    "3mf/head_frame_native.3mf": "4d7525b630a06737885dfd5e899a5dc865fec54d1248d01660889fb09b4aa489",
-    "3mf/hip_left_native.3mf": "a32688614c60cdf3d71f3938ddb1b8baeb03d64ab3ec0c8fa41d29d9a83b7dd0",
-    "3mf/hip_left_native_right.3mf": "5c489139d9b77329f65b002876d0d9343fb6bd895b5f5cecf3da4d88573a1211",
-    "3mf/imu_yoke_bridge_native.3mf": "044fc3167d1c7db5d4765f4faa2e82381c620eb6faeb577711470dcfb1361e39",
-    "3mf/jaw_native.3mf": "5cc7127d04a0626e0c7bc09919f3a4fb8377c40fbc28888c1de8d3b219046394",
-    "3mf/jaw_soft_001_native.3mf": "82d44c3b2cdaab313ceaa187548f1b2d7203c0e82127b2c782881af74cea0503",
-    "3mf/left_shell_native.3mf": "1464237887fc08e6ab0aaf631b8bd37e3daea0e1e3bf41616bbd596166f2b7d7",
-    "3mf/leg_left_native.3mf": "5ea660d3ef80644da1e885a5ce65bc9d1978301467256bb8c543ec7568a435cf",
-    "3mf/leg_left_native_right.3mf": "77265edf4824d593094d7a05fe505c2d304c5ee6dd8fc131cb7e6996f60f964c",
-    "3mf/neck_001_native.3mf": "003ec47043e23e842d3899b0b13966a980fb950ece0b1c2ddf0860f7ddabbbcd",
-    "3mf/neck_002_native.3mf": "ba5ce9e736ce701a9b96e9833aeee023943c7a722a8f918332ddf1432b2156b3",
-    "3mf/neck_internal_yoke_native.3mf": "2fade535fe5e12336dd4255f35bbb9382ee041f5494fe555106b26d360f87215",
-    "3mf/neck_pitch_001_native.3mf": "e5b89e39105b986743a281a98d40a7eb694612069bc5cada827851f6d48db3b8",
-    "3mf/noenoeil_native.3mf": "14c0aa637e389095b2fd7cfa92bd2dd70c605dc5dcbaabafc4d0ce8af8e0095c",
-    "3mf/right_shell_native.3mf": "a54561a82a6c22afa30464f568d0a0b2755c61b5ba8bd6b3a901c19cf9378547",
-    "3mf/roll_front_bulkhead_native.3mf": "99525fda72ff2a64bfae94d2da1399b4c14dc3d60743cdb69c48fb80b54db707",
-    "3mf/soft_mouth_top_native.3mf": "4c7d88617f37f0f0843ec5649a09814cd827cf14c10e2b036ad67889105c98e6",
-    "3mf/sole_left_native.3mf": "01a4f641acf9aa940fc3b1502ca946a301c4e57e8d3134950c0050defddbd4ff",
-    "3mf/sole_left_native_right.3mf": "48d636ae0dfce671c206a39879201fc2fe0bbe11dbbf131de8d4a2e048e67b8f",
-    "3mf/stick_pod_native.3mf": "7b6ab12c23c2f737617284c3817eb24a11e2f5bcfb43594a5f266ff2bd7f2683",
-    "3mf/top_head_shell_native.3mf": "fb3dce7e7f3232755cb9af6feea865f2ad00343b1d40c630f882cc9cbcf8574e",
-    "3mf/trunk_base_native.3mf": "fb728b19a5791516b9535ebf6f6115556a01ee8365b25db4cb11ca6b76bf8cb8",
-    "3mf/ubec_clamp_native.3mf": "b2ad06ca08305bc83f9a0bcc6f8a497bbe1f9e34fb1759f26da7de5d385df9cb",
-    "3mf/upper_leg_left_native.3mf": "96afd211fc5276d24d5894adf161431bc5c67e64dbc6110441f49bf20267239f",
-    "3mf/upper_leg_left_native_right.3mf": "3c43cf523fd3dbe611ddbea4c1a7c139ab96b08142b51f0411306910b6143eba",
-    "3mf/yaw2roll_left_native.3mf": "a3424d49e88dcb5efac070c6ea3db39dcb62a9bc90b3bfcbd6940c8794536cda",
-    "3mf/yaw2roll_left_native_right.3mf": "8f2447da60e6e817cc2c2201e643567ef7c6b55fba090e502b248cc804313e2e",
-    "3mf/yaw_roll_link_native.3mf": "8f0a8fad601f94b35d54a9b792b5f940b42406258f3b237c4a2e051e1ec71554",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "88c18cdd56bff61f54a2e0df49216f588324f226b6e1ff60b05726504164fc87",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "9b92d09b8de8c82cf5dcd2712a41b119a408af65ee6727391285673c9423eec7",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "ef91392bea6a193855f7a508900c54a9fee03d8195e5e27f93ad13e6a800da4e",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "4883d71dfbf31cc444d2da08b4a41dcbb176583104ca94989c1a0484829911db",
+    "3mf/ankle_eye_left_native.3mf": "929aff2a5e6ddfbab69c2b2a65d0253bebef4adbcea31d9510be25a3d76e67cb",
+    "3mf/ankle_eye_left_native_right.3mf": "9dcf4dd84542b8c364169a9a01667869920d805a8ca9e235d4d5021983f166e2",
+    "3mf/ankle_left_native.3mf": "d36dff3f188087b7c92746a410b7f1a38a7a35bd45a4ae4ff6b5f99840490219",
+    "3mf/ankle_left_native_right.3mf": "ff34a45ed590b272cbb82713a6a1dc4e39681e51a7871842181c2ebcd4f4394d",
+    "3mf/bearing_ankle_adapter.3mf": "48a1e19ecca818ce5ea4c973eaa29f9b45c94e8221e36f071d52e7128c9d6bf6",
+    "3mf/bearing_carrier_left.3mf": "986d7aeffa5310499139d4a43b7960aebb7ee172094ed18437013973aa245b03",
+    "3mf/bearing_carrier_right.3mf": "9ed869756781da94e1d2c6e205716cf6b460daa18b3254de3a4e6ffe84c1f19b",
+    "3mf/bearing_roll_adapter_left.3mf": "b8a719539208cd90d6fbcde713c615f61463e359c423de19e522342fb01c34ac",
+    "3mf/bearing_roll_adapter_right.3mf": "998c95c038df0448c8b6b0073d005b5b4f375574d77fb6e09c3d5f5cadbcefbd",
+    "3mf/bearing_shared_yaw_adapter.3mf": "f467e3a092512b09c62fb9c782f23958a690cd755cc78d3d2884b9abbe72f331",
+    "3mf/bottom_head_shell_native.3mf": "f4bee0b702c7ec65462139c811bd7cc311260add5df22b8e271f821f8e754261",
+    "3mf/electronics_deck_native.3mf": "170e0f75e3dfbdbc77174de5f214301d89eb2c9b6e5cac6c9de8261721b0581b",
+    "3mf/face_part_native.3mf": "319b78e9a3e589d5a0f5210bb5d70c3a3cdb11b2e4aaf7950bc572e4a8d7559a",
+    "3mf/face_radxa_bracket_native.3mf": "5525a26af45a4d82a84ef3036bf1f00e78b755e8ae5cd6e25145cd9e9b0444be",
+    "3mf/foot_left_native_a.3mf": "89bc252406e3238c1d9df84835cd868c1b5b77d963107e149412af60ca056713",
+    "3mf/foot_left_native_a_right.3mf": "880d6dff1c64fbb88f05dfe7167d8756af4809b15913e70d15b5fe48cd4765fd",
+    "3mf/foot_left_native_b.3mf": "92ab333b2fcada8c5c146a985af2d2939796e3beee2b12abc5e7854750f201ba",
+    "3mf/foot_left_native_b_right.3mf": "7fa8fdc8c06fbcd155d74d35542279a953a590b5966ba485f61df861ad6098e4",
+    "3mf/head_frame_native.3mf": "e4f015507598fa242547e7deaa5ce94b1e8767ed0f03120caa1e004294ae188a",
+    "3mf/hip_left_native.3mf": "239b20401a1e11fbf399fc584f9abeaec6dbf3b622f969a263246191d99abc04",
+    "3mf/hip_left_native_right.3mf": "2619f667deb8bbcc631e0fdd706a522e1e3650fb692f230cc7c8917cc1e05bc8",
+    "3mf/imu_yoke_bridge_native.3mf": "7a0df7672ea62dc7e71ffcf6b5353d0dee789ae1a7fcab18b9e6022eb13aafca",
+    "3mf/jaw_native.3mf": "2b3764677a29ccab185d255e843cb374da71793ad55f508583be826fca95ca3d",
+    "3mf/jaw_soft_001_native.3mf": "9c30064ac7563efeb6e0f24ff8614b10a6c59297d373569620c32d4beaf0dd8b",
+    "3mf/left_shell_native.3mf": "192db72a162abe643fd0e6ae72661397a446e2c8a097eb49449480767f649222",
+    "3mf/leg_left_native.3mf": "dc4d3567c8784aa4c7a5efdac66ff54f02eaf7bb3c222b0c58198e7a367852ba",
+    "3mf/leg_left_native_right.3mf": "79d5efabeda1ed2737bb3a91702307742173b571ea119fdba7232dd7e969f7f0",
+    "3mf/neck_001_native.3mf": "56dcb8cdc6171b9605be6f0a3a171c15b4a77606e77bd2b6168b5273f8a1719c",
+    "3mf/neck_002_native.3mf": "895d0792be9a917a7af2b6f0e88293c7ea451263d2a4f70a65982ab941bf277a",
+    "3mf/neck_internal_yoke_native.3mf": "f9da54f11783dea6995b927b11563610537c1b2731c4ebf1b0d1d90b6a143a01",
+    "3mf/neck_pitch_001_native.3mf": "facf731e847d63c90251ee9f6f12ca31ac4cec24e05be7bf8fb01fc08d71fea3",
+    "3mf/noenoeil_native.3mf": "0d71683ff36f3518e9314e9f3afc65a9f3f7c5084e36b039cbf7bbdf1b4fc7ba",
+    "3mf/right_shell_native.3mf": "49f50b0006cff403435df3c26253fb6448de7e64f99ca6be30011c8adc8e6541",
+    "3mf/roll_front_bulkhead_native.3mf": "35053919fc52275ad40034183bb3333b8bf1fcca7bec94ab6caa83c04ca75802",
+    "3mf/soft_mouth_top_native.3mf": "d085329aa362abe92e2e0bafa15afb9fa7cbd45ff1ab062a6cd1d12d6f200198",
+    "3mf/sole_left_native.3mf": "473f5fe9fb6ccd67beb48e773999eded073e510acbd3ea3c6ca491af9945e4d9",
+    "3mf/sole_left_native_right.3mf": "9b9cf9d820bec1e8ef8fd4147047380f1b75040051003d6bdf3d6c355c6d9bf8",
+    "3mf/stick_pod_native.3mf": "9535c17e83bbcfdec051c0ea4e295818ae7c12003f7ae71d682e05e750dabbd6",
+    "3mf/top_head_shell_native.3mf": "9d55e086b57d0e38ea6fa143e3fc179fc8b75d42c539d24860acf04ff4fac0a8",
+    "3mf/trunk_base_native.3mf": "3e1cb066fe2ebcd52fba86069cf2b4ebdb8215e0beac407874004ea63144b541",
+    "3mf/ubec_clamp_native.3mf": "a8f3e7e30ff296dac11e2cdc7659f5ce670fdff39a6fe4913f8d5ceb1567f34e",
+    "3mf/upper_leg_left_native.3mf": "1e9f21e789571712e96cde4a45c63575269da2890049487a76bd53bd96d99713",
+    "3mf/upper_leg_left_native_right.3mf": "3450b0553a9cecfb01c45e355917f477ac27ad0f99e05ffbbe12d8921af32d16",
+    "3mf/yaw2roll_left_native.3mf": "affd13a51b9ad2e4c4695f224f3fadaef253a757e505af0381e6de9a49aa6748",
+    "3mf/yaw2roll_left_native_right.3mf": "6bff21feec5e05a8c425d34d4ea6c0cffca99de58ec43e976d0906e9919be1df",
+    "3mf/yaw_roll_link_native.3mf": "5b629fef48b7addb08f0fe243dd88675554a7e48efe8bcc8bddf1c6ec60e41e0",
     "PARTS.csv": "f3eaeeda7bd1b11f923cd9339a4bddc069dd74079f7db1090fc78b7dbd12388f",
     "README.md": "cdb093b0073c13b6a7f118d2a2d0eadfbdd33219a49da242b1b7af41f3fe22b3",
-    "stl/ankle_bearing_inner_cap_left_native.stl": "37774422426d7d3107623e81c7b68e52df96c53a07e0dbbb801a7dc553642ac2",
-    "stl/ankle_bearing_inner_cap_left_native_right.stl": "e8db82a106716961a0eaafd76e5bf672826a912367d41584694c58a7d4aa0a93",
-    "stl/ankle_bearing_outer_keeper_left_native.stl": "3cbb94befc4daf3515956f318b37c6975201f11606362392ee0f62f70ff8019a",
-    "stl/ankle_bearing_outer_keeper_left_native_right.stl": "fb6bb75858cfe9c1bfacaf4f4e1a101ea8cbb4da4fe61eb41a5b6f15623731a3",
-    "stl/ankle_eye_left_native.stl": "cbcfa810ec7f057c0466c3a6721c0f33c2b0d6e5ff4e81ecd889af8a82aa851e",
-    "stl/ankle_eye_left_native_right.stl": "a736a130f089cbe456acf70c73e12acc182a08854aa67eb33a034835574055b9",
-    "stl/ankle_left_native.stl": "f5af6cd88fe888d53e68324ca0dd21b9cb0fd8a6ef850c543838ad71fca41596",
-    "stl/ankle_left_native_right.stl": "f90a0b570dbe7a43a64d245bd5c543801ba8739d4008abe5a2ec2b8619aff734",
-    "stl/bearing_ankle_adapter.stl": "1ead4a4ff7f5fa1a8f595eb1092eba7e1e5ea4b7f32de44590ae1428292524c3",
-    "stl/bearing_carrier_left.stl": "8bd0f817bf7797476ff17ddc6d48ae00700521a306be66a3fd640a8401c0457e",
-    "stl/bearing_carrier_right.stl": "81871b8686ca285555f6de01ea36e43ccbf3c215abb95ce3ed67672052154e8a",
-    "stl/bearing_roll_adapter_left.stl": "22a0cf8eb4e0dac801937f6ac3b85ee33ebc09fb0469dd5360ff3c881bced543",
-    "stl/bearing_roll_adapter_right.stl": "e765688c9e6a3fef88c1b701175ddd5853fba6ebb6a1a7a03d2ca89d65403d41",
-    "stl/bearing_shared_yaw_adapter.stl": "b221b5186a20c35ffe024f63714584fe0c44638d4e2eaaff0dbb9cfd27cbb003",
-    "stl/bottom_head_shell_native.stl": "8626991f815cb985f64e392ea02fabf976991d7073d5a194872d4fd2fbb7bcc2",
-    "stl/electronics_deck_native.stl": "afe5cd25c57b34b5e355ed143951cebd3f8965e40938667d09ee0ff149b552d4",
-    "stl/face_part_native.stl": "d7602e5e1fec39b56f1bec8e8a3b898876c2a79b9075902ad30b2e20f8f47150",
-    "stl/face_radxa_bracket_native.stl": "f52904d3eccdd59eb9a574e047bc986130514372f9032b9f7922b046b049b38d",
-    "stl/foot_left_native_a.stl": "58df209dcb9a736ec706f8325270538bde0b16a7f08cffc611899202231bd226",
-    "stl/foot_left_native_a_right.stl": "4736ac5dada5038cd4b53195a974689092154c688fb742b3931b5a53cb94d666",
-    "stl/foot_left_native_b.stl": "17e7623e87b2b287cb3940f3602e59ed72ac6e43d1b414a553d612ed1907744f",
-    "stl/foot_left_native_b_right.stl": "77c5b77a43e687a44efe81c90003a9814c068012e0f514c07872413cc01ed86f",
-    "stl/head_frame_native.stl": "2f3e80748dd46c306d262557e7e22fe074236d8307c15b7f7642b9bcc0f6fd5a",
-    "stl/hip_left_native.stl": "d5b67227a0c3a321face8ad574af7d4b52b4b1c706e831fe24212404e2dbfeb3",
-    "stl/hip_left_native_right.stl": "8013d019e7f9c4ae2b755f37e9c07aac46eaf1d0ade0234a2867221dfafa7436",
-    "stl/imu_yoke_bridge_native.stl": "99f48fa8d5a6a3c6d58c31f01278273dd18f159e326fe33c7311d990afabe7b2",
-    "stl/jaw_native.stl": "271c09b07055826e2db16dd47c62fbddd4536d0d53233302856cfe4cf21bdb3b",
-    "stl/jaw_soft_001_native.stl": "78b69a180465a75907e090c8effccdd7e0ef3d6c84d40482839b9172bbbdd734",
-    "stl/left_shell_native.stl": "abecc3ddb6ce786095210cb9f3f726142a6118710ba2b3cfac8dfa9c84bbce6d",
-    "stl/leg_left_native.stl": "3c9831892c3033102042a61827bcab49c5822834ae5c6635378727977ebb62a6",
-    "stl/leg_left_native_right.stl": "98b929b47c42def2ba50af6dd66ff06ab3262c07bfc3be5cec9563ca35591a1a",
-    "stl/neck_001_native.stl": "b5662bb009ea24ba23139bbcc559b4b416f15d94e086fdcb8748dee27bcd33c5",
-    "stl/neck_002_native.stl": "1c009e13fd9f66a7ea61be33f55600be2e001c7962a6e7ce8a949d3ef07ca5b6",
-    "stl/neck_internal_yoke_native.stl": "c71e394401211940fc5b189f30d7d5c746c5200218595b1f47c3a63a79a62ca7",
-    "stl/neck_pitch_001_native.stl": "6d6c08a5f37e5a322774ef1b0aabc7946c48cd1607365c145ed3b79be34e7a6c",
-    "stl/noenoeil_native.stl": "4dc2ad6397631f4594e8c6567a5c49e67adda6dee27a770d96ddfb22a39585ea",
-    "stl/right_shell_native.stl": "627a7682dc82fab34dea36ccd4d7887e35ba0b54798cd965e6101ca87b67d4d3",
-    "stl/roll_front_bulkhead_native.stl": "25eead8b208e00eba55e7aa3ec1c10865a2b7b5c4c387ce0d3fbd7ff96f55030",
-    "stl/soft_mouth_top_native.stl": "ff6b4bd6f46a7c5a272a1ac300bb119066737a7ce881c8e563bb96d8badf833b",
-    "stl/sole_left_native.stl": "66dfa121e6eca7dfe58a891f6b02de8771c59b8323f3debee20bb43152f33e74",
-    "stl/sole_left_native_right.stl": "5c50f4d9218a857e56931fb55a36ada3688f0e60e5a465f383d29d22ce35b75b",
-    "stl/stick_pod_native.stl": "69ed32d88ffd033d81e94bdc2cdc7b66decf364a182745f12bfebd88f5c20098",
-    "stl/top_head_shell_native.stl": "4d3f08295d898f64e6de0c84efa302b21459c99c698bdbb5ff792224255ea533",
-    "stl/trunk_base_native.stl": "496c0554c5c3125204327d05376ac1ba1a68463cadc8fdbe956d473ac4147bc6",
-    "stl/ubec_clamp_native.stl": "45ffb06100fa8135d714c7130bd80c98a2295cf44b5063920dce6a0ef78a0a32",
-    "stl/upper_leg_left_native.stl": "0cf332983b0d8c31674693ee2fbf763a6045da83da3fd186635fe5492c5be341",
-    "stl/upper_leg_left_native_right.stl": "77566a7ce243e26664392f9191be8c96ff52dadcf44f0c488723a9fc92ca0ca5",
-    "stl/yaw2roll_left_native.stl": "b8c7f59e025a11070d6e52e86342baf735b9073b904a38a31a533a7b8ea20577",
-    "stl/yaw2roll_left_native_right.stl": "feedcb6278fab29b81f9dccbd59a6418fd8ba7407020915b835c30df285c3382",
-    "stl/yaw_roll_link_native.stl": "95f16f41c51ca9a1f20e1c0f2b10bdb7ef631f46c31866521a2d0b5cb8520730"
+    "stl/ankle_bearing_inner_cap_left_native.stl": "8990a9e39d06784f97c6571e3e9af0bb6911fd1fd3659ee416d0001da59e2c68",
+    "stl/ankle_bearing_inner_cap_left_native_right.stl": "29083d6bf5b22e01f29c4396ccb09c309a52626564063a504c3e7750eaaf5b67",
+    "stl/ankle_bearing_outer_keeper_left_native.stl": "5c45873d84a662b8b395b275d52a1b2bcdbbbe7df6da3be5924fd2d66b555a4b",
+    "stl/ankle_bearing_outer_keeper_left_native_right.stl": "9df697d07aa50a94e048b864f0ed2e1dfb6600812321e2bcf8eee1f627e3358c",
+    "stl/ankle_eye_left_native.stl": "d8cc336cb00db3c105c96608862a0413713a85cbaec4151c43fbedaa925e1a09",
+    "stl/ankle_eye_left_native_right.stl": "745d5e916e88492ca0f9d9783a77208296efc99ca34d655470fa26cdab979c99",
+    "stl/ankle_left_native.stl": "4ce56d56ce7c39010a4cb0ace8338f8be83ecb82fffd5b8e47ed3f0e10ac3238",
+    "stl/ankle_left_native_right.stl": "eaca5012b299120743a356628ce783c254b822a1ef70a2067adf29dff3dd4baa",
+    "stl/bearing_ankle_adapter.stl": "24547084f909405cc11c64218bc769d22a5c3ee18f264a6f90d1577d4de41111",
+    "stl/bearing_carrier_left.stl": "4e8e82494099148e36a625a2afd554332aa8205017d1f156a49d501f8a636608",
+    "stl/bearing_carrier_right.stl": "0ec816113207f77efc02b766153869680d837bc64b8f6eab36c7b41e3562e1b7",
+    "stl/bearing_roll_adapter_left.stl": "32cf158bd20e952af8f877f281f0749c1b00e6558972e64971af065e2383c301",
+    "stl/bearing_roll_adapter_right.stl": "c720d3b68006dc996d255766008b68519992ea77e8caeb4381df0b25e754b7b2",
+    "stl/bearing_shared_yaw_adapter.stl": "61d8fc573ac1540de725ff6478e6f4692c8b22a7dadd155050434c5a7c120489",
+    "stl/bottom_head_shell_native.stl": "154eeda5038348a7edab8e78611c341df4ab43d3cbafc47486394b45d93b1a1f",
+    "stl/electronics_deck_native.stl": "2373c90d41e38653afef49186b9b502c716d4e708fbc1605c1a4d1b04ada551e",
+    "stl/face_part_native.stl": "a0ef3bc5d6a78ff1d379bca9f7ec61b8db0a65d6637a74f54ab952f552cd92c0",
+    "stl/face_radxa_bracket_native.stl": "26610aa564d3d9fcf2486f82688fcd878d37c8ba298436fef8d3404d823ff091",
+    "stl/foot_left_native_a.stl": "80a8b1c70e99ecb6f27a17dffff4353e3e420caa23312e862aef5d2abbe719fe",
+    "stl/foot_left_native_a_right.stl": "0c8437c019abd19fde69fac8261436ff9e5c2a44f72ede287404c42bf84d9042",
+    "stl/foot_left_native_b.stl": "3b5a1308d27b95c0a285582927a84acc1cc50dd5c8bb0d629c1aecaf7ef2a89b",
+    "stl/foot_left_native_b_right.stl": "28a000606f08189811bceb1a484a4a438a764b978b7ff82267349a2c77d642c9",
+    "stl/head_frame_native.stl": "4f500948d581c52461690a1b20a79b6e8f10d88be4a6989a6d63a4b620f0605c",
+    "stl/hip_left_native.stl": "5b3561f8d527e4ea7ed04ee2c8222ecde75d8886da06d0e26dd2ecbee1494cbc",
+    "stl/hip_left_native_right.stl": "2d39064a2d5560ec519b3b75c96dd3b9a50bacda1f525314517ef2f0e02d2691",
+    "stl/imu_yoke_bridge_native.stl": "53df4dc948d5a30a139317dcf08296c593a2faf439c7135a6e8d71b3298a242f",
+    "stl/jaw_native.stl": "53e9fb60d7f74a8fb0fbe8fb0201bd32e4812727c1e20daec0bf191015672f0d",
+    "stl/jaw_soft_001_native.stl": "10e2e986f10e2916f1ced429f03d7f92b1362a196b140140e1e63c517aa34e40",
+    "stl/left_shell_native.stl": "9df0592dd808e7bd456ef0f86f925f3c75eda1425c9d8a6c9f40273c7132ce9d",
+    "stl/leg_left_native.stl": "ce0d1554f2c5fd45c1c23b3681ff6ae44523c39c2390fe5c110ebdcf673ee2e0",
+    "stl/leg_left_native_right.stl": "31a917cd1b89409afaaa6a88a5973d31c60defae1ecaddcba28bfa2042c60fff",
+    "stl/neck_001_native.stl": "628cc102e3ac93148ed95dcb8efe5f36f3ce4feeb946f746fad17c45778f53d9",
+    "stl/neck_002_native.stl": "b67f60097bd5f20b328729f8aa9d3e54ed9c28c9ef9fad0ef14748d96cea9226",
+    "stl/neck_internal_yoke_native.stl": "eac9864031a18fd81c6b97bbb2ded6063b34323b32bf84c4547e762424819bdd",
+    "stl/neck_pitch_001_native.stl": "bc214f96e0ebf4d47263759c44c54efdb3e04832acdec1ae0c7f081253c8114b",
+    "stl/noenoeil_native.stl": "474daa9c71ae77a6d26288cce0b602e2b9045abf1fa473ec97b702915ea0003b",
+    "stl/right_shell_native.stl": "b7f90583930e7dac7091ec21ef0bdd2d6cfca68d42cb0ede746335d3bd5d1419",
+    "stl/roll_front_bulkhead_native.stl": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815",
+    "stl/soft_mouth_top_native.stl": "481a4a56c21d5d2065c67334da2547b12dde731845900b572a8e2ec536fe3b1b",
+    "stl/sole_left_native.stl": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882",
+    "stl/sole_left_native_right.stl": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e",
+    "stl/stick_pod_native.stl": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9",
+    "stl/top_head_shell_native.stl": "64428c737a802fc43ab7c1ed5f06dd2c9776a7552727d44c17c21fc1996a79a5",
+    "stl/trunk_base_native.stl": "1919c7d8377e57b05fd6a623b3926c5a1fd384fd192aa5f539b3d8792fdc7939",
+    "stl/ubec_clamp_native.stl": "f6064ddf82283b8d8bff428b546e0deabea0da2ff23165ec4a3912c2db007338",
+    "stl/upper_leg_left_native.stl": "6ee1b11c46bf0a9e0e4140004e9fd36d499439e1737a2a4f36d7b7b62f84c6bf",
+    "stl/upper_leg_left_native_right.stl": "a02137af16ceb9f787fdfdc5aca47a2bc1c0db6fe9917dadc721a33f93193366",
+    "stl/yaw2roll_left_native.stl": "63c01a2abfe08f800cfc47844372f77a162338c913a9fe6a20ca1c14f0b902ce",
+    "stl/yaw2roll_left_native_right.stl": "dbcf23e38dd8f79faedeae61eb752984dd553d1c7e1a19a75b9bc0e52dddf490",
+    "stl/yaw_roll_link_native.stl": "a02ae047b3acc9d2e4a6f8971b7959db6991fc11d51dc018f3046c03fa70c46a"
   },
-  "manifest_content_sha256": "4437d720a79e987d3da791571f23e40f3fac102c73812511648cda02c3c22738"
+  "manifest_content_sha256": "2a2b4d0f5781ff9f9024f0ecf54440a9b68f8a63eaf1d660e23d3ee0e09409b8"
 }

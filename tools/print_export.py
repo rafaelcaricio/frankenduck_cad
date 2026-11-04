@@ -23,12 +23,14 @@ ROOT = Path(__file__).resolve().parents[1]
 MESH_TOLERANCE = 0.01  # Absolute millimetres; resolves thin foot faces.
 ANGULAR_TOLERANCE = 0.1
 MAX_RELATIVE_VOLUME_ERROR = 0.02
+MAX_SURFACE_DEVIATION_MM = .02  # Fixed geometric acceptance, independent of retry recipe.
 MESH_ALGORITHM = "Watson"
-MESH_SURFACE_CONTROL = False
-MESH_INTERNAL_VERTICES = False
+MESH_SURFACE_CONTROL = True
+MESH_INTERNAL_VERTICES = True
 MESH_MIN_SIZE = 1e-5
 MESH_WELD_TOLERANCE = .0001
 MESH_COORD_DECIMALS = 6
+GMSH_MAX_EDGE_LENGTH = .4
 
 
 def sha(path):
@@ -269,6 +271,59 @@ def complete_small_surface_seams(vertices, triangles, shape):
     return receipts
 
 
+def check_face_triangles(vertices, triangles, face, tolerance):
+    """Check local chord error against the originating CAD face, not volume.
+
+    Sample the largest triangles and a deterministic spread on each face.
+    This is a sampled guard in addition to OCCT surface deflection control.
+    """
+    def area2(t):
+        a,b,c = (vertices[i] for i in t)
+        u = [b[k]-a[k] for k in range(3)]
+        v = [c[k]-a[k] for k in range(3)]
+        return sum(x*x for x in (u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]))
+    chosen = set(sorted(range(len(triangles)),key=lambda i:area2(triangles[i]),reverse=True)[:4])
+    chosen.update(range(0,len(triangles),max(1,len(triangles)//4)))
+    from OCP.BRepExtrema import BRepExtrema_DistShapeShape
+    from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeVertex
+    from OCP.gp import gp_Pnt
+    distance_query = BRepExtrema_DistShapeShape()
+    distance_query.LoadS1(face.wrapped)
+    maximum, count = 0., 0
+    for index in chosen:
+        points = [vertices[i] for i in triangles[index]]
+        samples = [tuple(sum(p[k] for p in points)/3 for k in range(3))]
+        samples.extend(tuple((a[k]+b[k])/2 for k in range(3)) for a,b in zip(points,points[1:]+points[:1]))
+        for point in samples:
+            distance_query.LoadS2(BRepBuilderAPI_MakeVertex(gp_Pnt(*point)).Vertex())
+            distance_query.Perform()
+            if not distance_query.IsDone():
+                raise ValueError("CAD surface distance query failed")
+            distance = distance_query.Value()
+            if distance > tolerance:
+                # OCCT's shape extrema can miss the interior of a trimmed
+                # periodic face. Independently project onto its exact surface,
+                # accepting only projections classified inside the face wires.
+                from OCP.BRep import BRep_Tool
+                from OCP.GeomAPI import GeomAPI_ProjectPointOnSurf
+                from OCP.BRepClass import BRepClass_FaceClassifier
+                from OCP.gp import gp_Pnt2d
+                from OCP.TopAbs import TopAbs_IN, TopAbs_ON
+                for candidate in face.faces():
+                    projection = GeomAPI_ProjectPointOnSurf(gp_Pnt(*point), BRep_Tool.Surface_s(candidate.wrapped))
+                    if not projection.NbPoints() or projection.LowerDistance() >= distance:
+                        continue
+                    u, v = projection.LowerDistanceParameters()
+                    classification = BRepClass_FaceClassifier(candidate.wrapped, gp_Pnt2d(u, v), 1e-7)
+                    if classification.State() in (TopAbs_IN, TopAbs_ON):
+                        distance = projection.LowerDistance()
+            maximum = max(maximum,distance)
+            count += 1
+            if distance > tolerance:
+                raise ValueError(f"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm")
+    return count, maximum
+
+
 def write_native_3mf(shape, path):
     """Triangulate native faces with OCCT; package using pinned build123d/Lib3MF."""
     from cadgen import build123d as bd
@@ -278,6 +333,10 @@ def write_native_3mf(shape, path):
     from OCP.BRep import BRep_Tool
     from OCP.TopLoc import TopLoc_Location
     from OCP.TopAbs import TopAbs_REVERSED
+    from OCP.BRepTools import BRepTools
+    # Imported and previously attempted shapes can carry older triangulations.
+    # Surface-control settings must be applied to a fresh mesh, not that cache.
+    BRepTools.Clean_s(shape.wrapped, True)
     parameters = IMeshTools_Parameters()
     parameters.Deflection = MESH_TOLERANCE
     parameters.Angle = ANGULAR_TOLERANCE
@@ -295,6 +354,7 @@ def write_native_3mf(shape, path):
     if any(faces[i].geom_type != bd.GeomType.PLANE for i in missing_indices):
         raise ValueError(f"Unsupported unmeshable faces in {shape.label}")
     vertices, triangles, missing = [], [], []
+    surface_samples, maximum_surface_deviation = 0, 0.
     for face_index,face in enumerate(faces):
         location = TopLoc_Location()
         mesh = BRep_Tool.Triangulation_s(face.wrapped, location)
@@ -306,7 +366,19 @@ def write_native_3mf(shape, path):
             point = mesh.Node(index).Transformed(location.Transformation())
             vertices.append((point.X(), point.Y(), point.Z()))
         order = (1,3,2) if face.wrapped.Orientation() == TopAbs_REVERSED else (1,2,3)
-        triangles.extend([triangle.Value(k)+offset-1 for k in order] for triangle in mesh.Triangles())
+        face_triangles = [[triangle.Value(k)+offset-1 for k in order] for triangle in mesh.Triangles()]
+        try:
+            count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)
+        except ValueError:
+            if face.geom_type != bd.GeomType.PLANE:
+                raise
+            # OCCT can triangulate a narrow planar sliver across its trim holes.
+            # Reconstruct only native planar material from the remaining boundary.
+            missing.append(face)
+            continue
+        surface_samples += count
+        maximum_surface_deviation = max(maximum_surface_deviation,deviation)
+        triangles.extend(face_triangles)
     from scipy.spatial import cKDTree
     unique = {}
     remap = [unique.setdefault(tuple(round(x,MESH_COORD_DECIMALS) for x in p), len(unique)) for p in vertices]
@@ -340,14 +412,71 @@ def write_native_3mf(shape, path):
     package.model.AddBuildItem(mesh_object, package.wrapper.GetIdentityTransform())
     package.write(path)
     return dict(linear_deflection_mm=actual_deflection,
-                algorithm=MESH_ALGORITHM, native_parallel=False, control_surface_deflection=MESH_SURFACE_CONTROL, internal_vertices=MESH_INTERNAL_VERTICES,
+                algorithm=MESH_ALGORITHM, native_parallel=False, discarded_cached_triangulation=True,
+                surface_sample_count=surface_samples, maximum_sampled_face_deviation_mm=maximum_surface_deviation,
+                sampled_face_deviation_limit_mm=MAX_SURFACE_DEVIATION_MM, control_surface_deflection=MESH_SURFACE_CONTROL, internal_vertices=MESH_INTERNAL_VERTICES,
                 min_size_mm=MESH_MIN_SIZE, angular_deflection_rad=ANGULAR_TOLERANCE,
                 constrained_planar_faces=len(missing), planar_boundary_loops=planar_receipt, surface_seam_patches=surface_receipt,
                 seam_weld_tolerance_mm=MESH_WELD_TOLERANCE, library_valid=library_valid, library_manifold=library_manifold)
 
 
+def write_gmsh_3mf(shape, path, maximum_edge):
+    """Alternative surface mesher, independently checked against the CAD faces."""
+    from cadgen import build123d as bd
+    with tempfile.TemporaryDirectory(prefix="gmsh-export-") as folder:
+        folder = Path(folder)
+        source, output = folder/"source.brep", folder/"mesh.json"
+        bd.export_brep(shape, source)
+        uv = shutil.which("uv") or str(Path.home()/".local/bin/uv")
+        result = subprocess.run([uv,"run","--script",str(ROOT/"tools/gmsh_mesh.py"),
+            str(source),str(output),str(maximum_edge)],capture_output=True,text=True,timeout=240)
+        if result.returncode:
+            raise ValueError("Gmsh surface export failed: "+result.stderr[-1200:])
+        data = json.loads(output.read_text())
+    receipt = validate_gmsh_mesh(shape, data, path)
+    receipt.update(algorithm="Gmsh",profile="Gmsh",gmsh_version=data['gmsh_version'],
+        maximum_edge_mm=maximum_edge,curvature_elements_per_circle=64,
+        linear_deflection_mm=None,control_surface_deflection=True,internal_vertices=True,
+        warnings=[line for line in result.stderr.splitlines() if "Warning" in line])
+    return receipt
+
+
+def validate_gmsh_mesh(shape, data, path):
+    """Validate sampled triangles against original surfaces before packaging."""
+    from cadgen import build123d as bd
+    faces = list(shape.faces())
+    centers = [tuple(f.center()) for f in faces]
+    surface = bd.Compound(faces)
+    indices = {tag:i for i,tag in enumerate(data['tags'])}
+    vertices = data['vertices']
+    maximum, samples, fallback_count = 0.,0,0
+    for group in data['groups']:
+        triangles = [[indices[n] for n in t] for batch in group['triangles'] for t in batch]
+        nearest = min(range(len(faces)),key=lambda i:sum((a-b)**2 for a,b in zip(centers[i],group['center'])))
+        try:
+            count,deviation = check_face_triangles(vertices,triangles,faces[nearest],MAX_SURFACE_DEVIATION_MM)
+        except ValueError:
+            # STEP/BREP import can split or merge faces; test the original boundary,
+            # never the solid interior, when a centre-based face match is ambiguous.
+            count,deviation = check_face_triangles(vertices,triangles,surface,MAX_SURFACE_DEVIATION_MM)
+            fallback_count += 1
+        maximum = max(maximum,deviation)
+        samples += count
+    triangles = [[indices[n] for n in t] for batch in data['triangles'] for t in batch]
+    package = bd.Mesher(unit=bd.Unit.MM)
+    obj = package.model.AddMeshObject()
+    obj.SetGeometry(*bd.Mesher._create_3mf_mesh(vertices,triangles))
+    obj.SetName(shape.label)
+    package.model.AddBuildItem(obj,package.wrapper.GetIdentityTransform())
+    package.write(path)
+    return dict(surface_sample_count=samples,maximum_sampled_face_deviation_mm=maximum,
+        sampled_face_deviation_limit_mm=MAX_SURFACE_DEVIATION_MM,face_mapping_fallbacks=fallback_count)
+
+
 def write_export_3mf(shape, path):
     """Keep topology cleanup confined to an export copy and verify its effect."""
+    if MESH_ALGORITHM == "Gmsh":
+        return write_gmsh_3mf(shape,path,GMSH_MAX_EDGE_LENGTH)
     try:
         return write_native_3mf(shape, path)
     except ValueError as error:
@@ -411,6 +540,16 @@ def convert_worker(record, stage_path, bundle_path):
             saved_step_valid=record["saved_step_comparison"].get("saved_step_valid", True)
                 if record["saved_step_comparison"] else True),
         source_volume_mm3=native_volume)
+    # The current, validated assembly STEP is the canonical export input.
+    # Gmsh imports its BREP directly; avoid reserializing a separately rebuilt
+    # factory, whose periodic-face trimming can differ across kernel bindings.
+    if MESH_ALGORITHM == "Gmsh":
+        saved = bd.import_brep(stage/(name+".brep"))
+        if saved.is_valid and len(saved.solids()) == 1:
+            native = saved
+            native.label = name
+            record["geometry_source"] = "current_saved_assembly_step"
+            record["source_volume_mm3"] = solid_volume(saved)
     try:
         record["tessellation"] = write_export_3mf(native, bundle/record["filename"])
     except ValueError as error:
@@ -445,9 +584,9 @@ def export_inputs():
     for name in ("cadgen", "cadquery", "build123d", "cadquery-ocp", "shapely", "scipy", "numpy"):
         runtime[name] = importlib.metadata.version(name)
     inputs = dict(schema_version=1, source_step_sha256=sha(step), catalog_sha256=sha(ROOT/"source/components.json"),
-        implementation={name:sha(ROOT/name) for name in ("tools/print_export.py", "tools/components.py")},
+        implementation={name:sha(ROOT/name) for name in ("tools/print_export.py", "tools/components.py", "tools/gmsh_mesh.py")},
         runtime=runtime, mesh_tolerance_absolute_mm=MESH_TOLERANCE, mesh_angular_tolerance_rad=ANGULAR_TOLERANCE,
-        mesher="OCCT Watson then Delabella via build123d/Lib3MF", mesh_min_size_mm=1e-5,
+        mesher="Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback", mesh_min_size_mm=1e-5,
         build_input_key=signature(BUILD_INPUTS)["key"],
         assembly_data_sha256=sha(ROOT/"source/assembly_data.json"))
     key = hashlib.sha256(json.dumps(inputs, sort_keys=True).encode()).hexdigest()
@@ -631,13 +770,13 @@ def export(force=False):
         def launch(record):
             task = stage/(record["model"]+".json")
             failures = []
-            for algorithm,tolerance in (("Watson",.01),("WatsonControlled",.05),("Delabella",.0005),("Watson",.00001),("WatsonFineControlled",.01)):
+            for algorithm,tolerance in (("Watson",.01),("WatsonControlled",.005),("Delabella",.0005),("Watson",.00001),("WatsonFineControlled",.01),("DEFAULT",.01),("DEFAULT",.0005),("Gmsh",.4),("Gmsh",.1)):
                 task.write_text(json.dumps(record))
                 try:
                     result = subprocess.run([sys.executable,"-m","tools.print_export","--worker",
-                    str(task),str(bundle),algorithm,str(tolerance)],cwd=ROOT,text=True,capture_output=True,timeout=180)
+                    str(task),str(bundle),algorithm,str(tolerance)],cwd=ROOT,text=True,capture_output=True,timeout=300 if algorithm=="Gmsh" else 180)
                 except subprocess.TimeoutExpired:
-                    failures.append(dict(algorithm=algorithm, tolerance_mm=tolerance, exit_code="timeout", error="180 second conversion limit"))
+                    failures.append(dict(algorithm=algorithm, tolerance_mm=tolerance, exit_code="timeout", error=f"{300 if algorithm=='Gmsh' else 180} second conversion limit"))
                     continue
                 print(result.stdout, end="", flush=True)
                 if result.returncode == 0:
@@ -667,6 +806,11 @@ if __name__ == "__main__":
     if len(sys.argv) == 6 and sys.argv[1] == "--worker":
         MESH_ALGORITHM = sys.argv[4]
         MESH_TOLERANCE = float(sys.argv[5])
+        if MESH_ALGORITHM == "Gmsh":
+            GMSH_MAX_EDGE_LENGTH = MESH_TOLERANCE
+            MESH_TOLERANCE = .01
+        if MESH_ALGORITHM == "DEFAULT":
+            MESH_MIN_SIZE = -1
         if MESH_ALGORITHM == "WatsonFineControlled":
             MESH_WELD_TOLERANCE = .000001
             MESH_COORD_DECIMALS = 8
@@ -675,7 +819,7 @@ if __name__ == "__main__":
         if MESH_ALGORITHM == "WatsonControlled":
             MESH_ALGORITHM = "Watson"
             MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True
-            MESH_MIN_SIZE = .01
+            MESH_MIN_SIZE = 1e-5
             ANGULAR_TOLERANCE = .2
         task = Path(sys.argv[2])
         record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])

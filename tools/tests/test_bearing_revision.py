@@ -41,6 +41,38 @@ class BearingRuntime(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'size'):
             complete_small_surface_seams([(-1,-1,1),(1,-1,1),(1,1,1)],[[0,1,2]],shape)
 
+    def test_face_check_rejects_flattened_cylindrical_wall(self):
+        from cadgen import build123d as bd
+        from tools.print_export import check_face_triangles
+        wall=next(f for f in bd.Cylinder(10,4).faces() if f.geom_type==bd.GeomType.CYLINDER)
+        # Vertices lie on the cylinder but its triangle crosses the bore.
+        with self.assertRaisesRegex(ValueError,'leaves its CAD face'):
+            check_face_triangles([(10,0,-1),(-10,0,-1),(0,10,1)],[[0,1,2]],wall,.02)
+
+    def test_projection_fallback_respects_face_holes(self):
+        from unittest.mock import patch
+        from cadgen import build123d as bd
+        from tools.print_export import check_face_triangles
+        ring = bd.Cylinder(5, 2) - bd.Cylinder(2, 4)
+        face = ring.faces().sort_by(bd.Axis.Z)[-1]
+        with patch('OCP.BRepExtrema.BRepExtrema_DistShapeShape') as query:
+            query.return_value.IsDone.return_value = True
+            query.return_value.Value.return_value = 1.
+            _, distance = check_face_triangles([(3, 0, 1), (3.2, 0, 1), (3, .2, 1)], [[0, 1, 2]], face, .02)
+            self.assertLess(distance, 1e-6)
+            with self.assertRaisesRegex(ValueError, 'leaves its CAD face'):
+                check_face_triangles([(0, 0, 1), (.2, 0, 1), (0, .2, 1)], [[0, 1, 2]], face, .02)
+
+    def test_curved_export_checks_local_surface_error(self):
+        from cadgen import build123d as bd
+        from tools.print_export import write_export_3mf,inspect_3mf
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'sphere.3mf'
+            receipt=write_export_3mf(bd.Sphere(6),path)
+            self.assertGreater(receipt['surface_sample_count'],0)
+            self.assertLessEqual(receipt['maximum_sampled_face_deviation_mm'],.02)
+            self.assertEqual(inspect_3mf(path)['open_edges'],0)
+
     def test_stl_copy_keeps_closed_mesh_and_dimensions(self):
         from cadgen import build123d as bd
         from tools.print_export import write_export_3mf,inspect_3mf,write_verified_stl

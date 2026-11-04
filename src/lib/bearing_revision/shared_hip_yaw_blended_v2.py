@@ -3,7 +3,7 @@ import json
 from cadgen import build123d as bd
 from .runtime import cached_shape as model
 from .hip_servos_bearing_revision import (instances,imported,right_import,hardware,left_hip_dual,right_hip_dual,yaw_adapter_shape,as_solid,seat_relief)
-from .adapter_bridge_v3 import cyl,world_parts,bearing_envelope
+from .adapter_bridge_v3 import cyl,world_parts,bearing_envelope,BRIDGE_INNER_D,RELIEF_D,SEAT,RACE_BACK_RELIEF
 from .collision_bridge_v2 import place,volume
 
 def box(x0,x1,y0,y1,z0,z1):
@@ -26,10 +26,17 @@ def blended_adapter():
  for p in cases:
   b=p.bounding_box()
   bridge=bridge-box(b.min.X-.2,b.max.X+.2,b.min.Y-.2,b.max.Y+.2,b.min.Z-.2,b.max.Z+.2)
+ # The connecting web must never fill either horn opening or inner-race relief.
+ # Cut the web before fusing so the approved seats and screw pads stay untouched.
+ for n in ('servo_yaw2roll','servo_bearing_roll'):
+  bridge=bridge-place(cyl(BRIDGE_INNER_D/2,-10,10),i[n]['at'])
+  bridge=bridge-place(cyl(RELIEF_D/2,SEAT-.001,SEAT+RACE_BACK_RELIEF),i[n]['at'])
  s=seats[0].fuse(seats[1],*bridge.solids(),tol=1e-6).clean()
  assert s.is_valid and len(s.solids())==1
  for seat in seats:assert volume(seat-s)<1e-4
  for n in ('servo_yaw2roll','servo_bearing_roll'):
+  opening=place(cyl(BRIDGE_INNER_D/2-.001,-10,10),i[n]['at'])
+  assert volume(s.intersect(opening))<1e-5, 'Shared bridge obstructs horn opening'
   for x in (-10.25,10.25):
    access=place(cyl(2,-10,.5).translate((x,-29,0)),i[n]['at'])
    bore=place(cyl(1.1,-10,3.21).translate((x,-29,0)),i[n]['at'])
