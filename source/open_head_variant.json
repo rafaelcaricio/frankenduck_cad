@@ -1,0 +1,34 @@
+{
+  "status": "review_alternative",
+  "default_variant_changed": false,
+  "revision": "open-head-v1",
+  "source": "src/lib/open_head.py",
+  "assembly_builder": "review/open_head.py",
+  "print_candidate_builder": "review/export_open_head.py",
+  "assembly_output": "scratch/open-head-v1/open.step",
+  "closed_assembly_output": "scratch/open-head-v1/closed.step",
+  "replaces": {
+    "top_head_shell_native": [
+      "open_head_skeleton_native",
+      "open_head_skin_native"
+    ]
+  },
+  "placement": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      "Z",
+      -90
+    ]
+  ],
+  "parent": "head_frame_r05",
+  "mount": "the four original M3 screws from below through the bottom head shell into the original self-forming pilots",
+  "face_plate_retention": "original top head shell front slot, unchanged in front of local X 101.5",
+  "skin_attachment": "two front tongues under the band and three snap tabs; no screws",
+  "physical_fit_verified": false,
+  "motion_sweep_run": false,
+  "documentation": "docs/open-head.md"
+}

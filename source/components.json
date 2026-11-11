@@ -1185,6 +1185,30 @@
       "export": false,
       "active_variant": true,
       "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
+    },
+    {
+      "model": "open_head_skeleton_native",
+      "component": "open_head_skeleton_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "black printed polymer",
+      "export": false,
+      "active_variant": false,
+      "notes": "Open development head skeleton, cut from the top head shell with no added material: front band keeping the face-plate slot and both front screw bosses, and a low belt along the bottom-shell seam keeping the rear and side bosses, rising over both jaw-pivot cutouts. The inner wall stands 2 mm past the seam as a lip behind the skin edge; three outside recesses with windows take the skin tabs. Alternative review; the default top head shell is unchanged. Physical fit and stiffness unverified. See docs/open-head.md."
+    },
+    {
+      "model": "open_head_skin_native",
+      "component": "open_head_skin_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "translucent PLA",
+      "export": false,
+      "active_variant": false,
+      "notes": "Clip-on skin for the open development head: the outer 0.8 mm of the top head shell above the skeleton belt and behind its front band, original outside surface, 0.3 mm seam gap. Two front tongues hook under the band; three 1.2 mm snap tabs with half-round bumps click into the belt windows. No screws. Alternative review; the default top head shell is unchanged. Snap force and physical fit unverified. See docs/open-head.md."
     }
   ],
   "review_geometry": [
