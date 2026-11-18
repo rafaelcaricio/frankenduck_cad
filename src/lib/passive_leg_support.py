@@ -220,8 +220,11 @@ def hardware_native(side,kind):
    shapes.append(screw)
  else:
   shapes=[xcyl(3,92.825,95.825,Y+dy,Z+dz) for dy,dz in ((7,0),(-7,0),(0,7),(0,-7))]
- shape=b.Compound(children=shapes)
- if side=='right':shape=shape.mirror(b.Plane.YZ)
- shape=shape.rotate(b.Axis.Z,90);shape.color='#bfc3c7'
- for child in shape.children:child.color=shape.color
+ # Transform each leaf before assembling. Mirroring the compound's BRep alone
+ # leaves its child tree unmirrored; the color-preserving STEP exporter uses
+ # that tree and would put the right-side fasteners on the left leg.
+ if side=='right':shapes=[leaf.mirror(b.Plane.YZ) for leaf in shapes]
+ shapes=[leaf.rotate(b.Axis.Z,90) for leaf in shapes]
+ for leaf in shapes:leaf.color='#bfc3c7'
+ shape=b.Compound(children=shapes);shape.color='#bfc3c7'
  return shape
