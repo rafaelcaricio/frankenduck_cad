@@ -22,7 +22,9 @@ def section(shape, plane, offset):
     """Exact cut of the part on a principal plane: filled triangles and outline polylines in plane coordinates.
 
     The part is intersected with the half-space below the plane; its faces lying
-    in the plane are the section, meshed for filling.
+    in the plane are the section, meshed for filling. The cut from above must give
+    the same section area: a part face lying in the plane, or a face split on it,
+    makes the two cuts disagree, and the picture would show a partial section.
     """
     import cadquery as cq
     from OCP.BRep import BRep_Tool
@@ -35,17 +37,32 @@ def section(shape, plane, offset):
     b = part.BoundingBox()
     lo = [b.xmin - 1, b.ymin - 1, b.zmin - 1]
     hi = [b.xmax + 1, b.ymax + 1, b.zmax + 1]
-    hi[k] = offset
-    if hi[k] <= lo[k]:
+    if not lo[k] < offset < hi[k]:
         return [], []
-    half = cq.Solid.makeBox(hi[0] - lo[0], hi[1] - lo[1], hi[2] - lo[2], cq.Vector(*lo))
-    cut = part.intersect(half)
+
+    def plane_faces(below):
+        box_lo, box_hi = list(lo), list(hi)
+        if below:
+            box_hi[k] = offset
+        else:
+            box_lo[k] = offset
+        half = cq.Solid.makeBox(*(box_hi[n] - box_lo[n] for n in range(3)), cq.Vector(*box_lo))
+        faces = []
+        for face in part.intersect(half).Faces():
+            fb = face.BoundingBox()
+            if face.geomType() == 'PLANE' and abs((fb.xmin, fb.ymin, fb.zmin)[k] - offset) <= 1e-6 and \
+                    abs((fb.xmax, fb.ymax, fb.zmax)[k] - offset) <= 1e-6:
+                faces.append(face)
+        return faces
+
+    faces = plane_faces(True)
+    below_area = sum(face.Area() for face in faces)
+    above_area = sum(face.Area() for face in plane_faces(False))
+    assert abs(below_area - above_area) <= 1e-3 * max(below_area, above_area, 1.0), \
+        f'section {plane} at {offset:g} mm is {below_area:.2f} mm2 from below but {above_area:.2f} mm2 ' \
+        f'from above; move the plane off the part face lying on it'
     triangles, outlines = [], []
-    for face in cut.Faces():
-        fb = face.BoundingBox()
-        if face.geomType() != 'PLANE' or abs((fb.xmin, fb.ymin, fb.zmin)[k] - offset) > 1e-6 or \
-                abs((fb.xmax, fb.ymax, fb.zmax)[k] - offset) > 1e-6:
-            continue
+    for face in faces:
         BRepMesh_IncrementalMesh(face.wrapped, 0.01, False, 0.1, True)
         location = TopLoc_Location()
         mesh = BRep_Tool.Triangulation_s(face.wrapped, location)
@@ -70,6 +87,8 @@ def draw_section(shape, plane, offset, path, findings=(), title='', limits=None)
     normal, (i, j) = PLANES[plane]
     k = 3 - i - j
     triangles, outlines = section(shape, plane, offset)
+    # A plane through the part that yields no section is a failed cut, not an empty picture.
+    assert triangles, f'{title} section {plane} at {offset:g} mm is empty; move the plane off a face boundary'
     fig, ax = plt.subplots(figsize=(9, 9), dpi=130)
     ax.add_collection(PolyCollection(triangles, facecolors='#99deef', edgecolors='none', zorder=1))
     for line in outlines:
@@ -115,15 +134,16 @@ def views_job(step, out, target, size):
                 outputs=outputs)
 
 
-def review_stick_pod():
+def review_holder():
+    """Views and exact sections of the Zeee 2S holder, with its quality findings drawn in."""
     import cadquery as cq
     sys.path[:0] = [str(ROOT / 'src'), str(ROOT)]
-    from lib import stick_pod as sp
-    out = ROOT / 'review/stick_pod_quality'
+    from lib import lipo_shoulders as ls, lipo_mount as lm
+    out = ROOT / 'review/lipo_pod_quality'
     out.mkdir(parents=True, exist_ok=True)
-    step = 'STEP/parts/stick_pod_native.step'
+    step = 'STEP/parts/lipo_pod_native.step'
     shape = cq.importers.importStep(str(ROOT / step)).val()
-    report_path = ROOT / 'reports/latest/stick_pod_quality.json'
+    report_path = ROOT / 'reports/latest/lipo_pod_quality.json'
     findings = []
     if report_path.exists():
         report = json.loads(report_path.read_text())
@@ -132,19 +152,20 @@ def review_stick_pod():
     b = shape.BoundingBox()
     centre = [(b.xmin + b.xmax) / 2, (b.ymin + b.ymax) / 2, (b.zmin + b.zmax) / 2]
     job = out / 'views_job.json'
-    job.write_text(json.dumps(dict(jobs=[views_job(step, out, centre, 45)]), indent=1))
+    job.write_text(json.dumps(dict(jobs=[views_job(step, out, centre, 50)]), indent=1))
     subprocess.run([str(ROOT / '.venv/bin/cadgen'), 'step', 'snapshot', '--job', str(job)], cwd=ROOT, check=True)
     job.unlink()
-    x, y = sp.SCREWS[1]
-    # Centre and screw planes, the latch pockets, contact slots, front opening (y 52), T window, floor, lips,
-    # tongue and dome.
-    planes = [('YZ', 0.0), ('YZ', x), ('YZ', 15.0), ('YZ', 21.0), ('XZ', y), ('XZ', 45.0), ('XZ', 52.0), ('XZ', 58.0),
-              ('XZ', 78.0), ('XY', 121.0), ('XY', 123.5), ('XY', 135.0), ('XY', 150.0), ('XY', 155.0), ('XY', 163.5),
-              ('XY', 168.0)]
+    # Centre, arm screw and shoulder planes; front panel, pack centre and rear wall; floor, arms,
+    # rim, shoulders and roof. The pack-centre cut is 0.25 mm off Y = 48.5 mm, where the holder's
+    # faces are split and the exact cut returns no section face. The outer screw cut is 0.25 mm
+    # off X = 25 mm, where the shoulder's inner face lies in the plane.
+    planes = [('YZ', 0.0), ('YZ', lm.SCREWS[2][0]), ('YZ', lm.SCREWS[3][0] + 0.25), ('YZ', 20.5), ('YZ', 27.0),
+              ('XZ', lm.SCREWS[0][1]), ('XZ', ls.COWL_REAR_Y - ls.COWL_WALL / 2), ('XZ', ls.PACK_CENTER_Y + 0.25), ('XZ', 60.0),
+              ('XY', 91.0), ('XY', 110.0), ('XY', 150.0), ('XY', 154.0), ('XY', 157.5), ('XY', 162.0), ('XY', 168.0)]
     for plane, offset in planes:
-        draw_section(shape, plane, offset, out / f'section_{plane}_{offset:g}.png', findings, 'stick_pod')
+        draw_section(shape, plane, offset, out / f'section_{plane}_{offset:g}.png', findings, 'lipo_pod')
     print(f'Pictures: {out}')
 
 
 if __name__ == '__main__':
-    review_stick_pod()
+    review_holder()

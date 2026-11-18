@@ -1,0 +1,88 @@
+{
+  "status": "default",
+  "default_variant_changed": true,
+  "source": "src/lib/lipo_shoulders.py",
+  "assembly_builder": "src/frankenduck.py",
+  "published_pack_dimensions_mm": [
+    73,
+    34,
+    18.5
+  ],
+  "specification": "https://zeeebattery.com/products/zeee-2s-lipo-battery-2200mah-7-4v-50c-xt60",
+  "adds": [
+    "lipo_pad_and_leads",
+    "lipo_mount_screws",
+    "lipo_mount_inserts"
+  ],
+  "mount": "four M3 x 10 screws at the original battery carrier positions",
+  "physical_fit_verified": false,
+  "revision": "V9 integrated shoulders closing the battery-holder side openings",
+  "insertion_direction": "down through open top; removal lifts 68 mm then withdraws 35 mm rearward",
+  "mouth_z_mm": 157,
+  "top_cover": false,
+  "assembly_output": "STEP/frankenduck.step",
+  "front_closure_wall_mm": 1.8,
+  "removal_travel_mm": 68,
+  "front_closure_edge_radius_mm": 0.5,
+  "body_profile_source": "src/lib/body_profile.py",
+  "body_shell_finish": "src/lib/lipo_shoulders.py",
+  "body_shell_corner_radius_mm": 1.5,
+  "base_source": "src/lib/lipo_pod.py",
+  "pack_center_y_mm": 48.5,
+  "shift_inward_mm": 19.5,
+  "shell_clearance_minimum_mm": 0.366658,
+  "shell_relief": "Expanded straight upper profile and front cowl; accepted lower seams preserved",
+  "rearward_exit_travel_mm": 35,
+  "placement_source": "src/lib/lipo_compact.py",
+  "rear_wall_mm": 1.8,
+  "rear_profile_transition_z_mm": [
+    128,
+    140
+  ],
+  "rear_lower_y_mm": 60.3,
+  "rear_outer_edge_radius_mm": 0.5,
+  "validation": "reports/latest/battery_pod_verification.json, battery_removal_verification.json, battery_motion_verification.json, lipo_pod_quality.json",
+  "profile_source": "src/lib/lipo_profile.py",
+  "mount_screws_xy_mm": [
+    [
+      -25,
+      31.7
+    ],
+    [
+      -18,
+      31.7
+    ],
+    [
+      18,
+      31.7
+    ],
+    [
+      25,
+      31.7
+    ]
+  ],
+  "mount_insert": "M3 x 5.7 heat-set, 4 mm pilot 6 mm deep",
+  "arm_width_mm": 17,
+  "arm_thickness_mm": 8,
+  "arm_root_radius_mm": 3,
+  "central_tongue": false,
+  "modifies": [
+    "trunk_base"
+  ],
+  "mount_assembly_sequence": "Insert nuts into holder; screw arms to trunk from above before fitting body shells.",
+  "mount_screw_seat_z_mm": 162.45,
+  "mount_recess_depth_mm": 2,
+  "mount_plate_grip_mm": 4,
+  "mount_shell_head_clearance_nominal_mm": 1.25,
+  "mount_source": "src/lib/lipo_mount.py",
+  "shoulder_inner_width_mm": 49,
+  "shoulder_runout_radius_mm": 4,
+  "opening_edge_radius_mm": 0.5,
+  "neck_opening_changed": false,
+  "pack_exposed_above_rear_rim_mm": 8,
+  "reviewed_revision_output": "scratch/lipo-battery-v9/assembly.step (V9 review, superseded by the default build)",
+  "replaced_occurrences": {
+    "stick_pod": "lipo_pod",
+    "parkside_battery": "zeee_2s_battery"
+  }
+}

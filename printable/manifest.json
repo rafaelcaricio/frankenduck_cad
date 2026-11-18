@@ -1,10 +1,10 @@
 {
-  "generated_utc": "2026-11-04T21:26:08.539914+00:00",
-  "input_key": "a936410bb63912088d8137f80c2967bb12594b11b596c41827d0345d37ca4056",
+  "generated_utc": "2026-11-18T17:32:57.293546+00:00",
+  "input_key": "2e753ecac3fa1baf64ec5a39b65aa8bf585fe17dedb01a998f9547751516d5c2",
   "inputs": {
     "schema_version": 1,
-    "source_step_sha256": "da4eea4fd001473276f2960d86e7b0f817aa66b7286c5ea6a079e607526bf737",
-    "catalog_sha256": "fe5b845f741e4c162e69c34b8fa8b17488c52863fc1d6ec6fe6fdb60ab94b47a",
+    "source_step_sha256": "de6b1d1e900afa7732f941968ad7d0775acfa9b2215531bd36e765336d3424f1",
+    "catalog_sha256": "beeeb62f842ec6e634de22b163f260ff4ce87a43437113d199b9508b31590339",
     "implementation": {
       "tools/print_export.py": "edeb2353acf15f3a3afba18e4bb6ce1e052cab1b46e4acfa60030b0076ad4f8f",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430",
@@ -24,8 +24,8 @@
     "mesh_angular_tolerance_rad": 0.1,
     "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
     "mesh_min_size_mm": 1e-05,
-    "build_input_key": "ae2ad4c68994831baa54d6055805ec8e47c8a02ad7fef71cf4376e327ec4d861",
-    "assembly_data_sha256": "d4413080603d134f4427861447e348becbf318c2232ac2faf08148f7ac234eb7"
+    "build_input_key": "c448c0c576bd898d7d6691132eaaf041f03569fda7cbb5f79b73886ca73836bd",
+    "assembly_data_sha256": "6e61bd7fc1394a0707403066691475c6a75e1c5c02294f5cfc1aa9f83fe1af2f"
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
@@ -39,7 +39,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.41",
+          "ref": "#o1.40",
           "name": "ankle_bearing_inner_cap_left"
         }
       ],
@@ -107,7 +107,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "9c94b2fe59000e9098f5bccebef896716aee96035282d4ebb0116eafa7c923ea",
+      "sha256": "59cf09319abed50ab66d05750ed03c4495e14b03452502fb0f6fe6471fe295d6",
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native.stl",
       "stl": {
         "triangles": 1516,
@@ -135,7 +135,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.52",
+          "ref": "#o1.51",
           "name": "ankle_bearing_inner_cap_right"
         }
       ],
@@ -203,7 +203,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "0b42a011f03d483f904658b5a0865b9d013dad39ec64fb6b8b2199550944ae0c",
+      "sha256": "c81e526abd71400865125988d568775bd67136cf54f3cc234cc4f157ac80d417",
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native_right.stl",
       "stl": {
         "triangles": 1516,
@@ -231,7 +231,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.40",
+          "ref": "#o1.39",
           "name": "ankle_bearing_outer_keeper_left"
         }
       ],
@@ -299,7 +299,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791596158507,
-      "sha256": "f9b6288a58d17930da70c20271c8509a75d137ae6f6e3cdb8e3e093e718fa1dd",
+      "sha256": "efaae8f9400d1487abc635885926e9574e48613110d86d0eda18cae12b0bfc2d",
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native.stl",
       "stl": {
         "triangles": 3284,
@@ -327,7 +327,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.51",
+          "ref": "#o1.50",
           "name": "ankle_bearing_outer_keeper_right"
         }
       ],
@@ -395,7 +395,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791116775731,
-      "sha256": "76bd2a238e9d366a9c2d42dc6c4d21f06c9d8a66c6c1bd68cd66313a8d032b39",
+      "sha256": "52682c4915e27bf8b55a63b4e992ffe81ad8b0a047902b2bc413cfb6fd5c9ec0",
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native_right.stl",
       "stl": {
         "triangles": 3284,
@@ -423,7 +423,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.39",
+          "ref": "#o1.38",
           "name": "ankle_eye_left"
         }
       ],
@@ -537,7 +537,7 @@
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.272688473962509e-08,
-      "sha256": "314064e02d000e5024a74504e402970e2e2d1edfaf00725ebb7095583dce606b",
+      "sha256": "be2f89c286f68ea398af7f975b274dee19911e4d8876f8b101fadb374f58a90b",
       "stl_filename": "stl/ankle_eye_left_native.stl",
       "stl": {
         "triangles": 277926,
@@ -565,7 +565,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.50",
+          "ref": "#o1.49",
           "name": "ankle_eye_right"
         }
       ],
@@ -679,7 +679,7 @@
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.364183251932241e-08,
-      "sha256": "5d8ed45d7bd36c23559a3e918468e724451b700b4e558f83a05b786bf8ce976d",
+      "sha256": "f3247eee9eb1d16aa15719dbb527f0387d5e100bc09e4075d28a21bb6226634a",
       "stl_filename": "stl/ankle_eye_left_native_right.stl",
       "stl": {
         "triangles": 277926,
@@ -707,7 +707,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.38",
+          "ref": "#o1.37",
           "name": "ankle_left"
         }
       ],
@@ -788,7 +788,7 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.090954093148115e-06,
-      "sha256": "73d91e9be9d3e0820bb180bb58425a512e21a79541dec833abaa85eb7c91bd07",
+      "sha256": "0edfb22c07f7a0807d0dc10c1dcb5a4673831e953574a30e54fad5bd2844f041",
       "stl_filename": "stl/ankle_left_native.stl",
       "stl": {
         "triangles": 40856,
@@ -816,7 +816,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.49",
+          "ref": "#o1.48",
           "name": "ankle_right"
         }
       ],
@@ -897,7 +897,7 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.066297066077291e-06,
-      "sha256": "f03b779b8831f9732b9c668734784af30a1bd069cbd056a21c2695b8d6ac952b",
+      "sha256": "e4782627b71d5d385aaa0d52869c5f198cc2629cac35e13a26f9436249227e6c",
       "stl_filename": "stl/ankle_left_native_right.stl",
       "stl": {
         "triangles": 40856,
@@ -993,7 +993,7 @@
       "max_bound_error_mm": 2.0103298226104016e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.258425170278414e-05,
-      "sha256": "1d6f3b072d5963f32601fa16a4e55dd7f4cdedb32efe8988349c2be32ba29a74",
+      "sha256": "22477ef73c222d36681b696a34ea2eb6a40fc2a679f8b5732cf66e54a62a7533",
       "stl_filename": "stl/bottom_head_shell_native.stl",
       "stl": {
         "triangles": 56646,
@@ -1089,7 +1089,7 @@
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.692096770163398e-05,
-      "sha256": "54e904f31cfeffe93fa4b7006c14162a9ae957514d8114804aa5e675639181aa",
+      "sha256": "f01f61fe95de7329ccb00eb416700ca98a69c905b76a09e557f05d2ad9d4965d",
       "stl_filename": "stl/electronics_deck_native.stl",
       "stl": {
         "triangles": 11102,
@@ -1185,7 +1185,7 @@
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001685166341988373,
-      "sha256": "104941d9910b78cea54f7d4df261969d3636637c2c1ce0fd8f7169b5a6ec8aa8",
+      "sha256": "1d485f322881b6c6f315f0e6ecc329ebc940da186b9fa045a58a832f8e9e32eb",
       "stl_filename": "stl/face_part_native.stl",
       "stl": {
         "triangles": 44726,
@@ -1281,7 +1281,7 @@
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2945880864821577e-05,
-      "sha256": "87bb358a6d6dedeeaa4652194671fd484b258181efe52d8fcdec64084b639a53",
+      "sha256": "d2831f2659e6a23374494fd1de739fd14bc8a82b3c6e560bc0d92afcdf4378fc",
       "stl_filename": "stl/face_radxa_bracket_native.stl",
       "stl": {
         "triangles": 10242,
@@ -1309,7 +1309,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.43",
+          "ref": "#o1.42",
           "name": "foot_a_left"
         }
       ],
@@ -1390,7 +1390,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6314685846506777e-06,
-      "sha256": "e84517c4b7e063bd0a0e9a3f881aa16dd9f27f8e4242ccd8cf70fde28e11b611",
+      "sha256": "5fa992e69fb3f0758e09da51c42d57ea64afaa3f7fe09f015a0c704f5c302003",
       "stl_filename": "stl/foot_left_native_a.stl",
       "stl": {
         "triangles": 16486,
@@ -1418,7 +1418,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.54",
+          "ref": "#o1.53",
           "name": "foot_a_right"
         }
       ],
@@ -1499,7 +1499,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6586967573804625e-06,
-      "sha256": "223f4872e79c264838dbfa9e85a86629f8c2944e7886bd78583d2ab9c47f8ded",
+      "sha256": "391a8ddff2c09942026a5c48e5f12da9bd9108772b6a35a8d069cac408bc8796",
       "stl_filename": "stl/foot_left_native_a_right.stl",
       "stl": {
         "triangles": 16486,
@@ -1527,7 +1527,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.44",
+          "ref": "#o1.43",
           "name": "foot_b_left"
         }
       ],
@@ -1614,7 +1614,7 @@
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.991851090216742e-08,
-      "sha256": "8764c9d2a9b8862b9502e634f3a9f369299ee73bb5c4f22491e163e8f7fb0674",
+      "sha256": "67d5f2cfe1aee4d1ecf72c20d010cddb9750607d3eac122260a566a8b3e4c9c5",
       "stl_filename": "stl/foot_left_native_b.stl",
       "stl": {
         "triangles": 57846,
@@ -1642,7 +1642,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.55",
+          "ref": "#o1.54",
           "name": "foot_b_right"
         }
       ],
@@ -1729,7 +1729,7 @@
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.988272951144069e-08,
-      "sha256": "ace6d40c4bc2df1ced8839a07a3bb1dc30ecb1ac3eb021b93fdb5b9d6426c805",
+      "sha256": "8c35b0804f3a3ecb6d04d3200c80722a8280583ed6f5307141e141d164fd03c7",
       "stl_filename": "stl/foot_left_native_b_right.stl",
       "stl": {
         "triangles": 57846,
@@ -1825,7 +1825,7 @@
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.1469870729423108e-05,
-      "sha256": "adb44b0e711beb85ae626e8398775e22bf87e5b1ca45c00b16bdd0cafc021b6a",
+      "sha256": "255badabce37caa60092c26159cd68dcd8c748c147445d55422fff132a0fa67e",
       "stl_filename": "stl/head_frame_native.stl",
       "stl": {
         "triangles": 15472,
@@ -1853,18 +1853,20 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.34",
+          "ref": "#o1.33",
           "name": "hip_left"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
-      "source_volume_mm3": 11619.49681843588,
-      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
+      "source_volume_mm3": 11619.497001601867,
+      "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "approved_step_sha256": "025a3ea6872440b97d42f1af84013c1fe65b621fee4a132c2309b99548ea8c28",
-        "cad_checks": "Reused existing V2 results at user request"
+        "bounds_error_mm": 2.1316282072803006e-14,
+        "volume_difference_mm3": 2.9467628337442875e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
       },
       "translation_mm": [
         -30.787500050000006,
@@ -1881,27 +1883,28 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
-        "algorithm": "DEFAULT",
+        "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 2524,
-        "maximum_sampled_face_deviation_mm": 0.01009108109040274,
+        "surface_sample_count": 2508,
+        "maximum_sampled_face_deviation_mm": 0.008890571477563787,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": -1,
+        "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
-        "library_manifold": true
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 26489,
-        "triangles": 53006,
-        "volume_mm3": 11616.740640751535,
+        "vertices": 26483,
+        "triangles": 52994,
+        "volume_mm3": 11616.740879345985,
         "bounds_mm": [
           -19.983514,
           -24.937232,
@@ -1917,16 +1920,16 @@
       },
       "max_bound_error_mm": 0.00398605000000174,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0002372028434115929,
-      "sha256": "c0292a472a2f353480480b080ce2fe0c491e645583dccdec9d3c0025c0190e64",
+      "relative_volume_error": 0.00023719806937439757,
+      "sha256": "b9278ee36b502a209c551c87ca028e13f5a4aba18d9bb87226ce561fc3e2862f",
       "stl_filename": "stl/hip_left_native.stl",
       "stl": {
-        "triangles": 53006,
+        "triangles": 52994,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 11616.740870606402,
+        "volume_mm3": 11616.741108694112,
         "bounds_mm": [
           -19.9835147857666,
           -24.937231063842773,
@@ -1935,9 +1938,9 @@
           24.93324851989746,
           25.649999618530273
         ],
-        "relative_volume_error": 1.9786519577945842e-08,
+        "relative_volume_error": 1.9742897683369304e-08,
         "max_bound_error_mm": 9.361572281818553e-07,
-        "sha256": "c0659e973e764a20f87ee85374b20e1feb4370c01bcd718923f2f572538dfd7c"
+        "sha256": "a28fe96e47c5e8f3c9df30750267eba3f735bccd42eb70271e4186b1146ffcc3"
       }
     },
     {
@@ -1946,18 +1949,20 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.45",
+          "ref": "#o1.44",
           "name": "hip_right"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "printed polymer; original MuJoCo color; material and slicer profile unselected",
-      "source_volume_mm3": 11619.497337601337,
-      "geometry_source": "approved_v2_step_reused_without_geometry_rebuild",
+      "source_volume_mm3": 11619.497001601861,
+      "geometry_source": "current_source_factory",
       "saved_step_comparison": {
-        "approved_step_sha256": "45b0cf30311a03e67007f9b730862ea7709bfc444f045c206920929b185b0af2",
-        "cad_checks": "Reused existing V2 results at user request"
+        "bounds_error_mm": 9.999999761589606e-08,
+        "volume_difference_mm3": 1.127773430198431e-10,
+        "bidirectional_difference_mm3": null,
+        "saved_step_valid": true
       },
       "translation_mm": [
         30.787500050000002,
@@ -1974,27 +1979,28 @@
       ],
       "tessellation": {
         "linear_deflection_mm": 0.01,
-        "algorithm": "DEFAULT",
+        "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 2516,
-        "maximum_sampled_face_deviation_mm": 0.008121693985198972,
+        "surface_sample_count": 2508,
+        "maximum_sampled_face_deviation_mm": 0.008504443806262056,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
-        "min_size_mm": -1,
+        "min_size_mm": 1e-05,
         "angular_deflection_rad": 0.1,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
-        "library_manifold": true
+        "library_manifold": true,
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 26449,
-        "triangles": 52926,
-        "volume_mm3": 11616.742069934755,
+        "vertices": 26497,
+        "triangles": 53022,
+        "volume_mm3": 11616.74579909516,
         "bounds_mm": [
           -19.9875,
           -24.937232,
@@ -2010,16 +2016,16 @@
       },
       "max_bound_error_mm": 0.003986050000005292,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00023712451464364637,
-      "sha256": "1bbbd97fffd067b6e010d8921cd6f6d208791ed8c4b77513838180339377bbb9",
+      "relative_volume_error": 0.00023677466471410186,
+      "sha256": "25c4061c779ab46323fb6c716d3ffe77185987d28b4276e6ad6e68223770de4c",
       "stl_filename": "stl/hip_left_native_right.stl",
       "stl": {
-        "triangles": 52926,
+        "triangles": 53022,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 11616.742291478839,
+        "volume_mm3": 11616.746019870934,
         "bounds_mm": [
           -19.987499237060547,
           -24.937231063842773,
@@ -2028,9 +2034,9 @@
           24.93324851989746,
           25.649999618530273
         ],
-        "relative_volume_error": 1.907110292038563e-08,
+        "relative_volume_error": 1.900495863749191e-08,
         "max_bound_error_mm": 9.361572281818553e-07,
-        "sha256": "30bd75d6a246fa28f49c0d8fff91fedb49683d4aecc1358987079c3cf9055a0d"
+        "sha256": "df055fd135c0b251782bb5d5774cb0ceef2f3f2245a43b5b44a46c88f3899e62"
       }
     },
     {
@@ -2107,7 +2113,7 @@
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.7941583612299156e-06,
-      "sha256": "7320531c05735226117960e7f1f159ad0f1cfdf69cf650f3d1def6914633cb9e",
+      "sha256": "54651a08f4614a4d61b53b9cebd3dad8277ea33e2982594ded3051d1301926f1",
       "stl_filename": "stl/imu_yoke_bridge_native.stl",
       "stl": {
         "triangles": 6456,
@@ -2203,7 +2209,7 @@
       "max_bound_error_mm": 0.003688213729176937,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.007952989461855962,
-      "sha256": "4c0341d32f78ed73cab959bac4219d05049fca258df17530dabdc19e3647ba25",
+      "sha256": "6011f038db89e91ed10c7b9968cabf72f91d7b11ca3846c36b9b5d1bea5133e7",
       "stl_filename": "stl/jaw_native.stl",
       "stl": {
         "triangles": 83046,
@@ -2299,7 +2305,7 @@
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.000795293702042304,
-      "sha256": "3df2a1747755a4eb7760dfb4a78f7ed1460c3584ffa80702056922d02779beec",
+      "sha256": "6a0fe3e24ba15d1423d97a2a935d2298b6a5c13a80c3e3d0b1e94c90938f27f7",
       "stl_filename": "stl/jaw_soft_001_native.stl",
       "stl": {
         "triangles": 30856,
@@ -2327,32 +2333,32 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.32",
+          "ref": "#o1.31",
           "name": "left_shell_native"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 20448.027117431695,
+      "source_volume_mm3": 9621.099407049649,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 4.412470389070222e-12,
-        "volume_difference_mm3": 0.002060114133200841,
+        "volume_difference_mm3": 0.0024901473607314983,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
-        -21.65,
-        -16.876902425450464,
+        -21.5,
+        -16.879653885926917,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
-        -21.350000100000003,
-        -45.30721715710442,
+        -21.5000001,
+        -45.30996861758088,
         0,
-        21.350000100000003,
-        45.30721715710442,
+        21.5000001,
+        45.30996861758088,
         52.55438217176173
       ],
       "tessellation": {
@@ -2360,8 +2366,8 @@
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 1524,
-        "maximum_sampled_face_deviation_mm": 0.010372072404877393,
+        "surface_sample_count": 3240,
+        "maximum_sampled_face_deviation_mm": 0.012810740881487856,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
@@ -2371,50 +2377,52 @@
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
+        "library_valid": false,
+        "library_manifold": false,
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 34886,
-        "triangles": 69776,
-        "volume_mm3": 20444.59145833472,
+        "vertices": 46288,
+        "triangles": 92572,
+        "volume_mm3": 9619.720799383245,
         "bounds_mm": [
-          -21.35,
-          -45.307216,
+          -21.5,
+          -45.309968,
           2.2e-05,
-          21.35,
-          45.307216,
+          21.5,
+          45.309432,
           52.554352
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 1,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 3.017176172903646e-05,
+      "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.0001680190992141043,
-      "sha256": "d390385b9463532652f0f33fc0b3c33501b9bcae9e99f57a7863ca6252c0af9c",
+      "relative_volume_error": 0.0001432900345456935,
+      "sha256": "b42f16f2d4c8da37790adddbadcf27d62167ab2caa0d182caf6f7df8e1435bd9",
       "stl_filename": "stl/left_shell_native.stl",
       "stl": {
-        "triangles": 69776,
+        "triangles": 92572,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 20444.591728334657,
+        "nonmanifold_edges": 1,
+        "volume_mm3": 9619.720504730536,
         "bounds_mm": [
-          -21.350000381469727,
-          -45.30721664428711,
+          -21.5,
+          -45.309967041015625,
           2.2000000171829015e-05,
-          21.350000381469727,
-          45.30721664428711,
+          21.5,
+          45.30943298339844,
           52.554351806640625
         ],
-        "relative_volume_error": 1.320642377030588e-08,
-        "max_bound_error_mm": 6.44287112550046e-07,
-        "sha256": "9df0592dd808e7bd456ef0f86f925f3c75eda1425c9d8a6c9f40273c7132ce9d"
+        "relative_volume_error": 3.0630068732415816e-08,
+        "max_bound_error_mm": 9.833984364604476e-07,
+        "sha256": "10d2a2502e121841e050b56e58f466fad014ba8365152d77b0c232efa67cc253"
       }
     },
     {
@@ -2423,7 +2431,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.37",
+          "ref": "#o1.36",
           "name": "leg_left"
         }
       ],
@@ -2504,7 +2512,7 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 5.202576116476348e-06,
-      "sha256": "6c5395d9dc3cf9dc51ccf7c74d1577ca2509bc2c920dab068805ccdfe1f39680",
+      "sha256": "c63cdd8ccaeaf98b808f076d07d77240b02913572a9bbe5dd79c29f3ae082786",
       "stl_filename": "stl/leg_left_native.stl",
       "stl": {
         "triangles": 166864,
@@ -2532,7 +2540,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.48",
+          "ref": "#o1.47",
           "name": "leg_right"
         }
       ],
@@ -2613,7 +2621,7 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.837823049176776e-06,
-      "sha256": "b276a671f9446c221b20d710176752346b60bc8c0898381937de4a47d79898af",
+      "sha256": "6a697de4c09ddd7cf0ee8e8922cb4dd1eb8035c9c781a34106fb6cbdb607f1f6",
       "stl_filename": "stl/leg_left_native_right.stl",
       "stl": {
         "triangles": 166838,
@@ -2709,7 +2717,7 @@
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.22198256390968e-05,
-      "sha256": "0012c4e1da13e8842c4f6f9c4338c18d764cb6e2ca85eb8ab2e6b97182ead00d",
+      "sha256": "accc252c48b40c724d6ff96e067151b00202495c4f30ea5ca4b926755fb4540c",
       "stl_filename": "stl/neck_001_native.stl",
       "stl": {
         "triangles": 19740,
@@ -2805,7 +2813,7 @@
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2369461131573503e-05,
-      "sha256": "c1bbf0659809a06730eb7c6de7e1f2c13f155a72a9259f96847c6d2a63504227",
+      "sha256": "d522d7221922ad57a4a3fab3a05a06e0f65c8c7d523cd36206052c8f861fc29a",
       "stl_filename": "stl/neck_002_native.stl",
       "stl": {
         "triangles": 21360,
@@ -2901,7 +2909,7 @@
       "max_bound_error_mm": 0.0022021999999886077,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001004057707585081,
-      "sha256": "25725e230c23c21631e51f3caac406c03f6256634f95e5d6a88d4d8d4e082936",
+      "sha256": "9cfd0646a17d0a1f18fd361f0b14712bc1711b132a5e1efc186a70b02690c686",
       "stl_filename": "stl/neck_internal_yoke_native.stl",
       "stl": {
         "triangles": 31824,
@@ -2997,7 +3005,7 @@
       "max_bound_error_mm": 0.003792,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 7.500292717846639e-05,
-      "sha256": "4baa2fd62e66fa9ad648e9f289ba754097933a91f70caec1414c73ef44e9dba4",
+      "sha256": "44bb2e0dda40e3f562540d07b574457dc93618df35323010867321ea8e6cca74",
       "stl_filename": "stl/neck_pitch_001_native.stl",
       "stl": {
         "triangles": 36970,
@@ -3093,7 +3101,7 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "fe5499a3e1ee9aed780e2cebfec0ce1667714ef609f1c16c0717149682628ff7",
+      "sha256": "69dab386ab9105cc7940dba4f4734ac2ba3fd0d315ce63055900042051610ac8",
       "stl_filename": "stl/noenoeil_native.stl",
       "stl": {
         "triangles": 2110,
@@ -3121,32 +3129,35 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.33",
+          "ref": "#o1.32",
           "name": "right_shell_native"
         }
       ],
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 21076.616970236002,
+      "source_volume_mm3": 9307.464090820258,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.872457909892546e-12,
-        "volume_difference_mm3": 0.00114944510278292,
-        "bidirectional_difference_mm3": null,
+        "volume_difference_mm3": 0.08073881193013221,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
         "saved_step_valid": true
       },
       "translation_mm": [
-        25.449999950000002,
-        -16.8769024254502,
+        21.5,
+        -16.879653885926917,
         -122.34246812578748
       ],
       "expected_bounds_mm": [
-        -25.15000005,
-        -45.30721715710416,
+        -21.5000001,
+        -45.30996861758088,
         0,
-        25.15000005,
-        45.30721715710416,
+        21.5000001,
+        45.30996861758088,
         52.554382171922256
       ],
       "tessellation": {
@@ -3154,7 +3165,7 @@
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 1904,
+        "surface_sample_count": 2900,
         "maximum_sampled_face_deviation_mm": 0.011515389973242052,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
@@ -3165,50 +3176,52 @@
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
+        "library_valid": false,
+        "library_manifold": false,
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 36120,
-        "triangles": 72248,
-        "volume_mm3": 21072.99229589783,
+        "vertices": 44053,
+        "triangles": 88118,
+        "volume_mm3": 9306.01900389553,
         "bounds_mm": [
-          -25.15,
-          -45.307216,
+          -21.5,
+          -45.309968,
           2.2e-05,
-          25.15,
-          45.307216,
+          21.5,
+          45.309432,
           52.554352
         ],
-        "nonmanifold_edges": 0,
+        "nonmanifold_edges": 1,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
-        "warnings": []
+        "warnings": [
+          "Balanced internal seam overlaps; review in slicer"
+        ]
       },
-      "max_bound_error_mm": 3.0171922254851324e-05,
+      "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00017197609764837645,
-      "sha256": "483ff2288d3ddf83d787a0269dce0352bb488ef518866464f7bdbfb965dcf850",
+      "relative_volume_error": 0.0001552610797772203,
+      "sha256": "1fbe2c27241be8bff7d47fe769d0b2c095007dc24e21eeda8c1c2061e33be6ff",
       "stl_filename": "stl/right_shell_native.stl",
       "stl": {
-        "triangles": 72248,
+        "triangles": 88118,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 21072.990434417534,
+        "nonmanifold_edges": 1,
+        "volume_mm3": 9306.018886552569,
         "bounds_mm": [
-          -25.149999618530273,
-          -45.30721664428711,
+          -21.5,
+          -45.309967041015625,
           2.2000000171829015e-05,
-          25.149999618530273,
-          45.30721664428711,
+          21.5,
+          45.30943298339844,
           52.554351806640625
         ],
-        "relative_volume_error": 8.833488245915229e-08,
-        "max_bound_error_mm": 6.44287112550046e-07,
-        "sha256": "b7f90583930e7dac7091ec21ef0bdd2d6cfca68d42cb0ede746335d3bd5d1419"
+        "relative_volume_error": 1.2609361844080478e-08,
+        "max_bound_error_mm": 9.833984364604476e-07,
+        "sha256": "59b29331d645df65e90ab6bd34151f5de5da14a31ff36fa63d8c4fafae4f7f4f"
       }
     },
     {
@@ -3285,7 +3298,7 @@
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.2349171793637996e-05,
-      "sha256": "894885d89274d687a027bbb95cc32d82f89cf2afb887b507425d4f18a5fa3440",
+      "sha256": "454c443d90ac2f56972bc1f8012f150b2b9e471bd4f9f893fc70e06631a95f58",
       "stl_filename": "stl/roll_front_bulkhead_native.stl",
       "stl": {
         "triangles": 8792,
@@ -3381,7 +3394,7 @@
       "max_bound_error_mm": 0.000292739236989803,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.3661606990533e-05,
-      "sha256": "c3b0ae83ca8e9aa3acea249510dbf91cbdcff47009ec303267bc0e4fff44e9a5",
+      "sha256": "23a32a721c934b15dfa09dc8607c2936daa3744803b6b609cea6d95644eb9858",
       "stl_filename": "stl/soft_mouth_top_native.stl",
       "stl": {
         "triangles": 12150,
@@ -3409,7 +3422,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.42",
+          "ref": "#o1.41",
           "name": "sole_left"
         }
       ],
@@ -3486,7 +3499,7 @@
       "max_bound_error_mm": 0.0003978287089765331,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.00010081143639452355,
-      "sha256": "ec06bf8ab7fb5bf24ca761c3cb4851d4291f1e2452ea345dd208bd4f333a401d",
+      "sha256": "e0f7300104a2202a0219fd9b7d0cee15db49f57c61152527877632d5593785c8",
       "stl_filename": "stl/sole_left_native.stl",
       "stl": {
         "triangles": 2025610,
@@ -3514,7 +3527,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.53",
+          "ref": "#o1.52",
           "name": "sole_right"
         }
       ],
@@ -3591,7 +3604,7 @@
       "max_bound_error_mm": 0.00039782870898363853,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.000100534248709924,
-      "sha256": "81d336528a1b49c5067625e04904a8b6d8e754aba0b9d0050ec9962831b11884",
+      "sha256": "087a85a41755ac1d8ce97d855b7f548a3a18fc487de6e604ee08f1038329243d",
       "stl_filename": "stl/sole_left_native_right.stl",
       "stl": {
         "triangles": 2015750,
@@ -3648,7 +3661,7 @@
         62.43164376456821
       ],
       "tessellation": {
-        "surface_sample_count": 4476,
+        "surface_sample_count": 4472,
         "maximum_sampled_face_deviation_mm": 0.006237821994950195,
         "sampled_face_deviation_limit_mm": 0.02,
         "face_mapping_fallbacks": 12,
@@ -3683,33 +3696,33 @@
           {
             "algorithm": "Watson",
             "tolerance_mm": 1e-05,
-            "exit_code": -15,
-            "error": ""
+            "exit_code": "timeout",
+            "error": "180 second conversion limit"
           },
           {
             "algorithm": "WatsonFineControlled",
             "tolerance_mm": 0.01,
-            "exit_code": -15,
-            "error": ""
+            "exit_code": 1,
+            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0247403 mm > 0.02 mm\n"
           },
           {
             "algorithm": "DEFAULT",
             "tolerance_mm": 0.01,
-            "exit_code": -15,
-            "error": ""
+            "exit_code": 1,
+            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0247403 mm > 0.02 mm\n"
           },
           {
             "algorithm": "DEFAULT",
             "tolerance_mm": 0.0005,
-            "exit_code": -15,
-            "error": ""
+            "exit_code": "timeout",
+            "error": "180 second conversion limit"
           }
         ]
       },
       "mesh": {
-        "vertices": 488042,
-        "triangles": 976080,
-        "volume_mm3": 73300.44007572671,
+        "vertices": 488045,
+        "triangles": 976086,
+        "volume_mm3": 73300.44027529816,
         "bounds_mm": [
           -62.028436,
           -82.776712,
@@ -3725,16 +3738,16 @@
       },
       "max_bound_error_mm": 0.0012277645682061689,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 7.493910219466394e-05,
-      "sha256": "1aa3dd05af8cd95502e11b761808cbe5426dff344f71825cfe3380e1d5483af4",
+      "relative_volume_error": 7.493637974872593e-05,
+      "sha256": "1b72cc6bc8a1b2e52429d7fed77837e5e0610332f37498c8ef3495389eb503df",
       "stl_filename": "stl/top_head_shell_native.stl",
       "stl": {
-        "triangles": 976080,
+        "triangles": 976086,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 73300.4404273717,
+        "volume_mm3": 73300.44066039046,
         "bounds_mm": [
           -62.02843475341797,
           -82.7767105102539,
@@ -3743,9 +3756,9 @@
           82.77722930908203,
           62.430416107177734
         ],
-        "relative_volume_error": 4.79731062064775e-09,
+        "relative_volume_error": 5.253615230644857e-09,
         "max_bound_error_mm": 2.690917966674533e-06,
-        "sha256": "b4324dce656d0298ba982bc0763c4ee0f1515a26b2057d50456dd687e6b18b92"
+        "sha256": "966271e63bc476bb27438397c4b74bf1d5f4773d0fb6407dd6a9ada64ce39832"
       }
     },
     {
@@ -3761,25 +3774,25 @@
       "role": "printed_part",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "source_volume_mm3": 15974.295786100822,
+      "source_volume_mm3": 14818.797369172835,
       "geometry_source": "current_source_factory",
       "saved_step_comparison": {
         "bounds_error_mm": 3.774758283725532e-12,
-        "volume_difference_mm3": 4.470865133043844e-05,
+        "volume_difference_mm3": 3.875533730024472e-05,
         "bidirectional_difference_mm3": null,
         "saved_step_valid": true
       },
       "translation_mm": [
         -0.0,
-        -5.8499999499991215,
+        -5.499999999999121,
         -155.45
       ],
       "expected_bounds_mm": [
         -38.2750001,
-        -29.85000005000088,
+        -29.500000100000882,
         0,
         38.2750001,
-        29.85000005000088,
+        29.500000100000882,
         9.000000100003803
       ],
       "tessellation": {
@@ -3787,7 +3800,7 @@
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 4692,
+        "surface_sample_count": 4536,
         "maximum_sampled_face_deviation_mm": 0.0021678238393002735,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
@@ -3803,15 +3816,15 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 25215,
-        "triangles": 50486,
-        "volume_mm3": 15974.676331311404,
+        "vertices": 25455,
+        "triangles": 50974,
+        "volume_mm3": 14819.244438117723,
         "bounds_mm": [
           -38.275,
-          -29.85,
+          -29.5,
           0.0,
           38.275,
-          29.85,
+          29.5,
           9.0
         ],
         "nonmanifold_edges": 0,
@@ -3821,27 +3834,27 @@
       },
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 2.38223465796645e-05,
-      "sha256": "6cf68a3c3580a508d4f760950717ed8ddd093e6744d2c8df93dbb2ac53d92a5a",
+      "relative_volume_error": 3.0169043664644046e-05,
+      "sha256": "db36ee055fd42d96db1c60be08b9cf7f9b5b44ae6f40be6b7d498134b3894bb1",
       "stl_filename": "stl/trunk_base_native.stl",
       "stl": {
-        "triangles": 50486,
+        "triangles": 50974,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 15974.67633854349,
+        "volume_mm3": 14819.244524284155,
         "bounds_mm": [
           -38.275001525878906,
-          -29.850000381469727,
+          -29.5,
           0.0,
           38.275001525878906,
-          29.850000381469727,
+          29.5,
           9.0
         ],
-        "relative_volume_error": 4.527218742193822e-10,
+        "relative_volume_error": 5.814495633938357e-09,
         "max_bound_error_mm": 1.5258789076710855e-06,
-        "sha256": "1919c7d8377e57b05fd6a623b3926c5a1fd384fd192aa5f539b3d8792fdc7939"
+        "sha256": "fd0ad20ffc088490ea1a92e3651df688993af55dd1c3db27290fac4c40b5d64f"
       }
     },
     {
@@ -3918,7 +3931,7 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001297518999865098,
-      "sha256": "c8464ede46580a20b6edcc92e43ecffad88244d0c8c83addac69a7329e277978",
+      "sha256": "43592f6df69fbeac71f51ce3e2efab36b3fd1b00219bb6bf27f4a5192341b4e5",
       "stl_filename": "stl/ubec_clamp_native.stl",
       "stl": {
         "triangles": 2924,
@@ -3946,7 +3959,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.36",
+          "ref": "#o1.35",
           "name": "upper_leg_left"
         }
       ],
@@ -4021,7 +4034,7 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.00029394233853546154,
-      "sha256": "94964f9e77bfc278a70acfe0b177602d953aa8d6a19f4d93d61b3c0b054f76cd",
+      "sha256": "24000b3bc9eb586449c4da2cba61f8cfbf3be516ba241b2da054f31998f4cdcd",
       "stl_filename": "stl/upper_leg_left_native.stl",
       "stl": {
         "triangles": 67170,
@@ -4049,7 +4062,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.47",
+          "ref": "#o1.46",
           "name": "upper_leg_right"
         }
       ],
@@ -4124,7 +4137,7 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.0002937865172201563,
-      "sha256": "493c436d424ff467d66a9d60116bac4a885b68f13f915da40544f0523c4d6387",
+      "sha256": "115262ac01029fb8a436416488dd5240f39589c309972ef950d0a79295569ba7",
       "stl_filename": "stl/upper_leg_left_native_right.stl",
       "stl": {
         "triangles": 67170,
@@ -4152,7 +4165,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.35",
+          "ref": "#o1.34",
           "name": "yaw2roll_left"
         }
       ],
@@ -4220,7 +4233,7 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.417312783360011e-06,
-      "sha256": "3549c264578e8ad1131eb42cf317fbed045374b6956d4d672807b6a519bb5104",
+      "sha256": "9691b9706a2a1b6fd7c52745ee5a51273a1b40a851ef0be30c54ed92f73240e7",
       "stl_filename": "stl/yaw2roll_left_native.stl",
       "stl": {
         "triangles": 16042,
@@ -4248,7 +4261,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.46",
+          "ref": "#o1.45",
           "name": "yaw2roll_right"
         }
       ],
@@ -4329,7 +4342,7 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 7.854892024061927e-06,
-      "sha256": "06cfdb4a1dc4336d98e94fe7b769ad17176f67f1fb7a629921cd566808db16be",
+      "sha256": "770e3b04b7a7078532cd4ad991fc5fbdc69d7b99257c79619577ee4497cdcd51",
       "stl_filename": "stl/yaw2roll_left_native_right.stl",
       "stl": {
         "triangles": 24170,
@@ -4425,7 +4438,7 @@
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.286096034766294e-05,
-      "sha256": "6dfd6d1dd42eb56523847572b77039306f7ea720d4087e9b22d9cd5ba032fb18",
+      "sha256": "03398e8b36c38e91171384b9cb027274a5adb33db57448ef74bce0b545769ce1",
       "stl_filename": "stl/yaw_roll_link_native.stl",
       "stl": {
         "triangles": 13512,
@@ -4448,108 +4461,12 @@
       }
     },
     {
-      "model": "stick_pod_native",
-      "filename": "3mf/stick_pod_native.3mf",
-      "quantity": 1,
-      "occurrences": [
-        {
-          "ref": "#o1.73",
-          "name": "stick_pod"
-        }
-      ],
-      "role": "printed_part",
-      "print_release": "unreviewed",
-      "material_hint": "pla",
-      "source_volume_mm3": 32226.511029573976,
-      "geometry_source": "current_source_factory",
-      "saved_step_comparison": {
-        "bounds_error_mm": 4.8825972044187215e-12,
-        "volume_difference_mm3": 0.0020516508448054083,
-        "bidirectional_difference_mm3": null,
-        "saved_step_valid": true
-      },
-      "translation_mm": [
-        -1.6751044995544362e-12,
-        -54.169431126075345,
-        -119.79999989999504
-      ],
-      "expected_bounds_mm": [
-        -30.50027927136724,
-        -33.169431126075345,
-        0,
-        30.50027927136724,
-        33.169431126075345,
-        51.000013768938715
-      ],
-      "tessellation": {
-        "linear_deflection_mm": 0.01,
-        "algorithm": "Watson",
-        "native_parallel": false,
-        "discarded_cached_triangulation": true,
-        "surface_sample_count": 2500,
-        "maximum_sampled_face_deviation_mm": 0.009995389259983192,
-        "sampled_face_deviation_limit_mm": 0.02,
-        "control_surface_deflection": true,
-        "internal_vertices": true,
-        "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.1,
-        "constrained_planar_faces": 0,
-        "planar_boundary_loops": [],
-        "surface_seam_patches": [],
-        "seam_weld_tolerance_mm": 0.0001,
-        "library_valid": true,
-        "library_manifold": true,
-        "prior_attempt_failures": []
-      },
-      "mesh": {
-        "vertices": 94093,
-        "triangles": 188202,
-        "volume_mm3": 32221.863274189036,
-        "bounds_mm": [
-          -30.500256,
-          -33.16943,
-          0.0,
-          30.500256,
-          33.169078,
-          51.000016
-        ],
-        "nonmanifold_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "open_edges": 0,
-        "warnings": []
-      },
-      "max_bound_error_mm": 0.00035312607534621065,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00014422148834773808,
-      "sha256": "4191040c3cfb1039635e1f7d624b1699e0eb079905f2832e7010ccfc14f85086",
-      "stl_filename": "stl/stick_pod_native.stl",
-      "stl": {
-        "triangles": 188202,
-        "units_assumed": "mm",
-        "open_edges": 0,
-        "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 0,
-        "volume_mm3": 32221.864107746533,
-        "bounds_mm": [
-          -30.500255584716797,
-          -33.169429779052734,
-          0.0,
-          30.500255584716797,
-          33.1690788269043,
-          51.00001525878906
-        ],
-        "relative_volume_error": 2.586931393660166e-08,
-        "max_bound_error_mm": 8.269042979236474e-07,
-        "sha256": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9"
-      }
-    },
-    {
       "model": "bearing_carrier_left",
       "filename": "3mf/bearing_carrier_left.3mf",
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.74",
+          "ref": "#o1.73",
           "name": "bearing_carrier_left"
         }
       ],
@@ -4617,7 +4534,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "da32ef1336ac0f56eec3c5a31e612a8587f5ca3cb807f3abafc044dd84371dfe",
+      "sha256": "b9feb005ed696bc1dd527679068cb5daa85d783c0e37ba6810e12edc044ea79a",
       "stl_filename": "stl/bearing_carrier_left.stl",
       "stl": {
         "triangles": 33748,
@@ -4645,7 +4562,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.77",
+          "ref": "#o1.76",
           "name": "bearing_carrier_right"
         }
       ],
@@ -4713,7 +4630,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "d892fbe2572a21c1734e1944948997a83ce8165eed5486d16ecc97afc598debc",
+      "sha256": "52ad7c7790307ba8fc0b5d9cb698a16c40f5dc92749e3c41fee44e087743e7cc",
       "stl_filename": "stl/bearing_carrier_right.stl",
       "stl": {
         "triangles": 33748,
@@ -4741,7 +4658,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.75",
+          "ref": "#o1.74",
           "name": "bearing_roll_adapter_left"
         }
       ],
@@ -4809,7 +4726,7 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271481750527068e-05,
-      "sha256": "38ac16df36e9bffc9058ec8934968af4b56b8bc114c621c500ee733a7e5ac7f6",
+      "sha256": "e15e31b0ae0194af35190450ac4786d44b40e665941506beee5c03bba11aff76",
       "stl_filename": "stl/bearing_roll_adapter_left.stl",
       "stl": {
         "triangles": 18894,
@@ -4837,7 +4754,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.78",
+          "ref": "#o1.77",
           "name": "bearing_roll_adapter_right"
         }
       ],
@@ -4905,7 +4822,7 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271456088619673e-05,
-      "sha256": "92d660e7d1e0b6857f0038e141c5d04aaad60a8fb1db39a53081760e4f1d0983",
+      "sha256": "de610b479438066d19271c68e39e000e9c4251d335b4a96b07c1eb4d5fd6c6af",
       "stl_filename": "stl/bearing_roll_adapter_right.stl",
       "stl": {
         "triangles": 18894,
@@ -4933,7 +4850,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.80",
+          "ref": "#o1.79",
           "name": "bearing_shared_yaw_adapter"
         }
       ],
@@ -5001,7 +4918,7 @@
       "max_bound_error_mm": 1.0000000116860974e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.5883097397679665e-05,
-      "sha256": "763c9bcb0640b68db826f8ea28ed64438a3a899704a959ad66aa3e23309ab941",
+      "sha256": "6a3b97d014ae7ae7e48e58729b77a3d88be81256fe13bb47e0f3f9e5c1c95b8f",
       "stl_filename": "stl/bearing_shared_yaw_adapter.stl",
       "stl": {
         "triangles": 31882,
@@ -5029,11 +4946,11 @@
       "quantity": 2,
       "occurrences": [
         {
-          "ref": "#o1.93",
+          "ref": "#o1.92",
           "name": "bearing_head_yaw_adapter"
         },
         {
-          "ref": "#o1.95",
+          "ref": "#o1.94",
           "name": "bearing_head_roll_adapter"
         }
       ],
@@ -5101,7 +5018,7 @@
       "max_bound_error_mm": 0.0006380499999991684,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00016362559807944394,
-      "sha256": "566573bc2a51b77310af0b13d2c454c9211029fc7b12e16fabc08c3dd70a4745",
+      "sha256": "bf630000562553f1089addd5d46b414bbb29a08a5849490fa1c2835993453801",
       "stl_filename": "stl/bearing_head_adapter.stl",
       "stl": {
         "triangles": 15924,
@@ -5129,7 +5046,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.81",
+          "ref": "#o1.80",
           "name": "passive_leg_support_left"
         }
       ],
@@ -5197,7 +5114,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "a1a23f0f32830435d2b098b545a4b490cf7fd456bb3f0d968464827303d0bc0f",
+      "sha256": "2e944dbbf98512aad9c057b590ebbbc4f5dad2bfc0a75f657422e91cac1bd65b",
       "stl_filename": "stl/passive_leg_support_left.stl",
       "stl": {
         "triangles": 19974,
@@ -5225,7 +5142,7 @@
       "quantity": 1,
       "occurrences": [
         {
-          "ref": "#o1.82",
+          "ref": "#o1.81",
           "name": "passive_leg_support_right"
         }
       ],
@@ -5293,7 +5210,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "c91665ad20e406edd807ce8e2fe836b26bd03967eef207fb9456514cfbaf9e41",
+      "sha256": "632b36ecb83a86584fa315398672d1b4a4634158598d1f3529cfa03cbffa11e9",
       "stl_filename": "stl/passive_leg_support_right.stl",
       "stl": {
         "triangles": 19974,
@@ -5314,63 +5231,162 @@
         "max_bound_error_mm": 3.051757815342171e-06,
         "sha256": "c657d6249e5040893be09cbc260496ba904ace2ef41fbb76a1c699d2a7c78bbc"
       }
+    },
+    {
+      "model": "lipo_pod_native",
+      "filename": "3mf/lipo_pod_native.3mf",
+      "quantity": 1,
+      "occurrences": [
+        {
+          "ref": "#o1.72",
+          "name": "lipo_pod"
+        }
+      ],
+      "role": "printed_part",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "source_volume_mm3": 34536.150929530166,
+      "geometry_source": "current_source_factory",
+      "saved_step_comparison": {
+        "bounds_error_mm": 4.092726157978177e-12,
+        "volume_difference_mm3": 0.1850416405213764,
+        "bidirectional_difference_mm3": [
+          0,
+          0
+        ],
+        "saved_step_valid": true
+      },
+      "translation_mm": [
+        -1.3553602684623911e-12,
+        -44.94481108361403,
+        -88.39999989999997
+      ],
+      "expected_bounds_mm": [
+        -30.501314968340857,
+        -17.244811083614024,
+        0,
+        30.501314968340857,
+        17.244811083614024,
+        86.06936528048188
+      ],
+      "tessellation": {
+        "linear_deflection_mm": 0.01,
+        "algorithm": "Watson",
+        "native_parallel": false,
+        "discarded_cached_triangulation": true,
+        "surface_sample_count": 3772,
+        "maximum_sampled_face_deviation_mm": 0.010482344399699375,
+        "sampled_face_deviation_limit_mm": 0.02,
+        "control_surface_deflection": true,
+        "internal_vertices": true,
+        "min_size_mm": 1e-05,
+        "angular_deflection_rad": 0.1,
+        "constrained_planar_faces": 0,
+        "planar_boundary_loops": [],
+        "surface_seam_patches": [],
+        "seam_weld_tolerance_mm": 0.0001,
+        "library_valid": true,
+        "library_manifold": true,
+        "prior_attempt_failures": []
+      },
+      "mesh": {
+        "vertices": 50548,
+        "triangles": 99746,
+        "volume_mm3": 34532.45725139889,
+        "bounds_mm": [
+          -30.500652,
+          -17.24481,
+          0.0,
+          30.500652,
+          17.243722,
+          86.069368
+        ],
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "open_edges": 0,
+        "warnings": []
+      },
+      "max_bound_error_mm": 0.0010890836140227123,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00010695106524212629,
+      "sha256": "5a998453399ff40d35fa958ba5bc5870fc56baf9f7eecddf8b102c770c52734e",
+      "stl_filename": "stl/lipo_pod_native.stl",
+      "stl": {
+        "triangles": 99746,
+        "units_assumed": "mm",
+        "open_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "nonmanifold_edges": 0,
+        "volume_mm3": 34532.45676673813,
+        "bounds_mm": [
+          -30.500652313232422,
+          -17.244810104370117,
+          0.0,
+          30.500652313232422,
+          17.243722915649414,
+          86.06936645507812
+        ],
+        "relative_volume_error": 1.4034934122024562e-08,
+        "max_bound_error_mm": 1.5449218722096703e-06,
+        "sha256": "0545be7d13f6229015d14b0a24c56b155fbc581a8001a39d6048cf81565c0de3"
+      }
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "9c94b2fe59000e9098f5bccebef896716aee96035282d4ebb0116eafa7c923ea",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "0b42a011f03d483f904658b5a0865b9d013dad39ec64fb6b8b2199550944ae0c",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "f9b6288a58d17930da70c20271c8509a75d137ae6f6e3cdb8e3e093e718fa1dd",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "76bd2a238e9d366a9c2d42dc6c4d21f06c9d8a66c6c1bd68cd66313a8d032b39",
-    "3mf/ankle_eye_left_native.3mf": "314064e02d000e5024a74504e402970e2e2d1edfaf00725ebb7095583dce606b",
-    "3mf/ankle_eye_left_native_right.3mf": "5d8ed45d7bd36c23559a3e918468e724451b700b4e558f83a05b786bf8ce976d",
-    "3mf/ankle_left_native.3mf": "73d91e9be9d3e0820bb180bb58425a512e21a79541dec833abaa85eb7c91bd07",
-    "3mf/ankle_left_native_right.3mf": "f03b779b8831f9732b9c668734784af30a1bd069cbd056a21c2695b8d6ac952b",
-    "3mf/bearing_carrier_left.3mf": "da32ef1336ac0f56eec3c5a31e612a8587f5ca3cb807f3abafc044dd84371dfe",
-    "3mf/bearing_carrier_right.3mf": "d892fbe2572a21c1734e1944948997a83ce8165eed5486d16ecc97afc598debc",
-    "3mf/bearing_head_adapter.3mf": "566573bc2a51b77310af0b13d2c454c9211029fc7b12e16fabc08c3dd70a4745",
-    "3mf/bearing_roll_adapter_left.3mf": "38ac16df36e9bffc9058ec8934968af4b56b8bc114c621c500ee733a7e5ac7f6",
-    "3mf/bearing_roll_adapter_right.3mf": "92d660e7d1e0b6857f0038e141c5d04aaad60a8fb1db39a53081760e4f1d0983",
-    "3mf/bearing_shared_yaw_adapter.3mf": "763c9bcb0640b68db826f8ea28ed64438a3a899704a959ad66aa3e23309ab941",
-    "3mf/bottom_head_shell_native.3mf": "1d6f3b072d5963f32601fa16a4e55dd7f4cdedb32efe8988349c2be32ba29a74",
-    "3mf/electronics_deck_native.3mf": "54e904f31cfeffe93fa4b7006c14162a9ae957514d8114804aa5e675639181aa",
-    "3mf/face_part_native.3mf": "104941d9910b78cea54f7d4df261969d3636637c2c1ce0fd8f7169b5a6ec8aa8",
-    "3mf/face_radxa_bracket_native.3mf": "87bb358a6d6dedeeaa4652194671fd484b258181efe52d8fcdec64084b639a53",
-    "3mf/foot_left_native_a.3mf": "e84517c4b7e063bd0a0e9a3f881aa16dd9f27f8e4242ccd8cf70fde28e11b611",
-    "3mf/foot_left_native_a_right.3mf": "223f4872e79c264838dbfa9e85a86629f8c2944e7886bd78583d2ab9c47f8ded",
-    "3mf/foot_left_native_b.3mf": "8764c9d2a9b8862b9502e634f3a9f369299ee73bb5c4f22491e163e8f7fb0674",
-    "3mf/foot_left_native_b_right.3mf": "ace6d40c4bc2df1ced8839a07a3bb1dc30ecb1ac3eb021b93fdb5b9d6426c805",
-    "3mf/head_frame_native.3mf": "adb44b0e711beb85ae626e8398775e22bf87e5b1ca45c00b16bdd0cafc021b6a",
-    "3mf/hip_left_native.3mf": "c0292a472a2f353480480b080ce2fe0c491e645583dccdec9d3c0025c0190e64",
-    "3mf/hip_left_native_right.3mf": "1bbbd97fffd067b6e010d8921cd6f6d208791ed8c4b77513838180339377bbb9",
-    "3mf/imu_yoke_bridge_native.3mf": "7320531c05735226117960e7f1f159ad0f1cfdf69cf650f3d1def6914633cb9e",
-    "3mf/jaw_native.3mf": "4c0341d32f78ed73cab959bac4219d05049fca258df17530dabdc19e3647ba25",
-    "3mf/jaw_soft_001_native.3mf": "3df2a1747755a4eb7760dfb4a78f7ed1460c3584ffa80702056922d02779beec",
-    "3mf/left_shell_native.3mf": "d390385b9463532652f0f33fc0b3c33501b9bcae9e99f57a7863ca6252c0af9c",
-    "3mf/leg_left_native.3mf": "6c5395d9dc3cf9dc51ccf7c74d1577ca2509bc2c920dab068805ccdfe1f39680",
-    "3mf/leg_left_native_right.3mf": "b276a671f9446c221b20d710176752346b60bc8c0898381937de4a47d79898af",
-    "3mf/neck_001_native.3mf": "0012c4e1da13e8842c4f6f9c4338c18d764cb6e2ca85eb8ab2e6b97182ead00d",
-    "3mf/neck_002_native.3mf": "c1bbf0659809a06730eb7c6de7e1f2c13f155a72a9259f96847c6d2a63504227",
-    "3mf/neck_internal_yoke_native.3mf": "25725e230c23c21631e51f3caac406c03f6256634f95e5d6a88d4d8d4e082936",
-    "3mf/neck_pitch_001_native.3mf": "4baa2fd62e66fa9ad648e9f289ba754097933a91f70caec1414c73ef44e9dba4",
-    "3mf/noenoeil_native.3mf": "fe5499a3e1ee9aed780e2cebfec0ce1667714ef609f1c16c0717149682628ff7",
-    "3mf/passive_leg_support_left.3mf": "a1a23f0f32830435d2b098b545a4b490cf7fd456bb3f0d968464827303d0bc0f",
-    "3mf/passive_leg_support_right.3mf": "c91665ad20e406edd807ce8e2fe836b26bd03967eef207fb9456514cfbaf9e41",
-    "3mf/right_shell_native.3mf": "483ff2288d3ddf83d787a0269dce0352bb488ef518866464f7bdbfb965dcf850",
-    "3mf/roll_front_bulkhead_native.3mf": "894885d89274d687a027bbb95cc32d82f89cf2afb887b507425d4f18a5fa3440",
-    "3mf/soft_mouth_top_native.3mf": "c3b0ae83ca8e9aa3acea249510dbf91cbdcff47009ec303267bc0e4fff44e9a5",
-    "3mf/sole_left_native.3mf": "ec06bf8ab7fb5bf24ca761c3cb4851d4291f1e2452ea345dd208bd4f333a401d",
-    "3mf/sole_left_native_right.3mf": "81d336528a1b49c5067625e04904a8b6d8e754aba0b9d0050ec9962831b11884",
-    "3mf/stick_pod_native.3mf": "4191040c3cfb1039635e1f7d624b1699e0eb079905f2832e7010ccfc14f85086",
-    "3mf/top_head_shell_native.3mf": "1aa3dd05af8cd95502e11b761808cbe5426dff344f71825cfe3380e1d5483af4",
-    "3mf/trunk_base_native.3mf": "6cf68a3c3580a508d4f760950717ed8ddd093e6744d2c8df93dbb2ac53d92a5a",
-    "3mf/ubec_clamp_native.3mf": "c8464ede46580a20b6edcc92e43ecffad88244d0c8c83addac69a7329e277978",
-    "3mf/upper_leg_left_native.3mf": "94964f9e77bfc278a70acfe0b177602d953aa8d6a19f4d93d61b3c0b054f76cd",
-    "3mf/upper_leg_left_native_right.3mf": "493c436d424ff467d66a9d60116bac4a885b68f13f915da40544f0523c4d6387",
-    "3mf/yaw2roll_left_native.3mf": "3549c264578e8ad1131eb42cf317fbed045374b6956d4d672807b6a519bb5104",
-    "3mf/yaw2roll_left_native_right.3mf": "06cfdb4a1dc4336d98e94fe7b769ad17176f67f1fb7a629921cd566808db16be",
-    "3mf/yaw_roll_link_native.3mf": "6dfd6d1dd42eb56523847572b77039306f7ea720d4087e9b22d9cd5ba032fb18",
-    "PARTS.csv": "a66dd28c147db15b04903bda4b9e873e548ed77312fd1e4124e4977d9043e6fa",
-    "README.md": "860b6c7550a33ce37a5b0081d9d8050a71e56c5c66fd368cf1c713ad281cd221",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "59cf09319abed50ab66d05750ed03c4495e14b03452502fb0f6fe6471fe295d6",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "c81e526abd71400865125988d568775bd67136cf54f3cc234cc4f157ac80d417",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "efaae8f9400d1487abc635885926e9574e48613110d86d0eda18cae12b0bfc2d",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "52682c4915e27bf8b55a63b4e992ffe81ad8b0a047902b2bc413cfb6fd5c9ec0",
+    "3mf/ankle_eye_left_native.3mf": "be2f89c286f68ea398af7f975b274dee19911e4d8876f8b101fadb374f58a90b",
+    "3mf/ankle_eye_left_native_right.3mf": "f3247eee9eb1d16aa15719dbb527f0387d5e100bc09e4075d28a21bb6226634a",
+    "3mf/ankle_left_native.3mf": "0edfb22c07f7a0807d0dc10c1dcb5a4673831e953574a30e54fad5bd2844f041",
+    "3mf/ankle_left_native_right.3mf": "e4782627b71d5d385aaa0d52869c5f198cc2629cac35e13a26f9436249227e6c",
+    "3mf/bearing_carrier_left.3mf": "b9feb005ed696bc1dd527679068cb5daa85d783c0e37ba6810e12edc044ea79a",
+    "3mf/bearing_carrier_right.3mf": "52ad7c7790307ba8fc0b5d9cb698a16c40f5dc92749e3c41fee44e087743e7cc",
+    "3mf/bearing_head_adapter.3mf": "bf630000562553f1089addd5d46b414bbb29a08a5849490fa1c2835993453801",
+    "3mf/bearing_roll_adapter_left.3mf": "e15e31b0ae0194af35190450ac4786d44b40e665941506beee5c03bba11aff76",
+    "3mf/bearing_roll_adapter_right.3mf": "de610b479438066d19271c68e39e000e9c4251d335b4a96b07c1eb4d5fd6c6af",
+    "3mf/bearing_shared_yaw_adapter.3mf": "6a3b97d014ae7ae7e48e58729b77a3d88be81256fe13bb47e0f3f9e5c1c95b8f",
+    "3mf/bottom_head_shell_native.3mf": "22477ef73c222d36681b696a34ea2eb6a40fc2a679f8b5732cf66e54a62a7533",
+    "3mf/electronics_deck_native.3mf": "f01f61fe95de7329ccb00eb416700ca98a69c905b76a09e557f05d2ad9d4965d",
+    "3mf/face_part_native.3mf": "1d485f322881b6c6f315f0e6ecc329ebc940da186b9fa045a58a832f8e9e32eb",
+    "3mf/face_radxa_bracket_native.3mf": "d2831f2659e6a23374494fd1de739fd14bc8a82b3c6e560bc0d92afcdf4378fc",
+    "3mf/foot_left_native_a.3mf": "5fa992e69fb3f0758e09da51c42d57ea64afaa3f7fe09f015a0c704f5c302003",
+    "3mf/foot_left_native_a_right.3mf": "391a8ddff2c09942026a5c48e5f12da9bd9108772b6a35a8d069cac408bc8796",
+    "3mf/foot_left_native_b.3mf": "67d5f2cfe1aee4d1ecf72c20d010cddb9750607d3eac122260a566a8b3e4c9c5",
+    "3mf/foot_left_native_b_right.3mf": "8c35b0804f3a3ecb6d04d3200c80722a8280583ed6f5307141e141d164fd03c7",
+    "3mf/head_frame_native.3mf": "255badabce37caa60092c26159cd68dcd8c748c147445d55422fff132a0fa67e",
+    "3mf/hip_left_native.3mf": "b9278ee36b502a209c551c87ca028e13f5a4aba18d9bb87226ce561fc3e2862f",
+    "3mf/hip_left_native_right.3mf": "25c4061c779ab46323fb6c716d3ffe77185987d28b4276e6ad6e68223770de4c",
+    "3mf/imu_yoke_bridge_native.3mf": "54651a08f4614a4d61b53b9cebd3dad8277ea33e2982594ded3051d1301926f1",
+    "3mf/jaw_native.3mf": "6011f038db89e91ed10c7b9968cabf72f91d7b11ca3846c36b9b5d1bea5133e7",
+    "3mf/jaw_soft_001_native.3mf": "6a0fe3e24ba15d1423d97a2a935d2298b6a5c13a80c3e3d0b1e94c90938f27f7",
+    "3mf/left_shell_native.3mf": "b42f16f2d4c8da37790adddbadcf27d62167ab2caa0d182caf6f7df8e1435bd9",
+    "3mf/leg_left_native.3mf": "c63cdd8ccaeaf98b808f076d07d77240b02913572a9bbe5dd79c29f3ae082786",
+    "3mf/leg_left_native_right.3mf": "6a697de4c09ddd7cf0ee8e8922cb4dd1eb8035c9c781a34106fb6cbdb607f1f6",
+    "3mf/lipo_pod_native.3mf": "5a998453399ff40d35fa958ba5bc5870fc56baf9f7eecddf8b102c770c52734e",
+    "3mf/neck_001_native.3mf": "accc252c48b40c724d6ff96e067151b00202495c4f30ea5ca4b926755fb4540c",
+    "3mf/neck_002_native.3mf": "d522d7221922ad57a4a3fab3a05a06e0f65c8c7d523cd36206052c8f861fc29a",
+    "3mf/neck_internal_yoke_native.3mf": "9cfd0646a17d0a1f18fd361f0b14712bc1711b132a5e1efc186a70b02690c686",
+    "3mf/neck_pitch_001_native.3mf": "44bb2e0dda40e3f562540d07b574457dc93618df35323010867321ea8e6cca74",
+    "3mf/noenoeil_native.3mf": "69dab386ab9105cc7940dba4f4734ac2ba3fd0d315ce63055900042051610ac8",
+    "3mf/passive_leg_support_left.3mf": "2e944dbbf98512aad9c057b590ebbbc4f5dad2bfc0a75f657422e91cac1bd65b",
+    "3mf/passive_leg_support_right.3mf": "632b36ecb83a86584fa315398672d1b4a4634158598d1f3529cfa03cbffa11e9",
+    "3mf/right_shell_native.3mf": "1fbe2c27241be8bff7d47fe769d0b2c095007dc24e21eeda8c1c2061e33be6ff",
+    "3mf/roll_front_bulkhead_native.3mf": "454c443d90ac2f56972bc1f8012f150b2b9e471bd4f9f893fc70e06631a95f58",
+    "3mf/soft_mouth_top_native.3mf": "23a32a721c934b15dfa09dc8607c2936daa3744803b6b609cea6d95644eb9858",
+    "3mf/sole_left_native.3mf": "e0f7300104a2202a0219fd9b7d0cee15db49f57c61152527877632d5593785c8",
+    "3mf/sole_left_native_right.3mf": "087a85a41755ac1d8ce97d855b7f548a3a18fc487de6e604ee08f1038329243d",
+    "3mf/top_head_shell_native.3mf": "1b72cc6bc8a1b2e52429d7fed77837e5e0610332f37498c8ef3495389eb503df",
+    "3mf/trunk_base_native.3mf": "db36ee055fd42d96db1c60be08b9cf7f9b5b44ae6f40be6b7d498134b3894bb1",
+    "3mf/ubec_clamp_native.3mf": "43592f6df69fbeac71f51ce3e2efab36b3fd1b00219bb6bf27f4a5192341b4e5",
+    "3mf/upper_leg_left_native.3mf": "24000b3bc9eb586449c4da2cba61f8cfbf3be516ba241b2da054f31998f4cdcd",
+    "3mf/upper_leg_left_native_right.3mf": "115262ac01029fb8a436416488dd5240f39589c309972ef950d0a79295569ba7",
+    "3mf/yaw2roll_left_native.3mf": "9691b9706a2a1b6fd7c52745ee5a51273a1b40a851ef0be30c54ed92f73240e7",
+    "3mf/yaw2roll_left_native_right.3mf": "770e3b04b7a7078532cd4ad991fc5fbdc69d7b99257c79619577ee4497cdcd51",
+    "3mf/yaw_roll_link_native.3mf": "03398e8b36c38e91171384b9cb027274a5adb33db57448ef74bce0b545769ce1",
+    "PARTS.csv": "d35e772b3118ed04b9ff24c979a3cd300cdfb25ee0fc469d705acadcf16d0f2d",
+    "README.md": "de9d463330e4ac1934c3afcd38003d5a2100af6697a4a6c1b4de30d86a2ea06a",
     "stl/ankle_bearing_inner_cap_left_native.stl": "8990a9e39d06784f97c6571e3e9af0bb6911fd1fd3659ee416d0001da59e2c68",
     "stl/ankle_bearing_inner_cap_left_native_right.stl": "29083d6bf5b22e01f29c4396ccb09c309a52626564063a504c3e7750eaaf5b67",
     "stl/ankle_bearing_outer_keeper_left_native.stl": "5c45873d84a662b8b395b275d52a1b2bcdbbbe7df6da3be5924fd2d66b555a4b",
@@ -5394,14 +5410,15 @@
     "stl/foot_left_native_b.stl": "3b5a1308d27b95c0a285582927a84acc1cc50dd5c8bb0d629c1aecaf7ef2a89b",
     "stl/foot_left_native_b_right.stl": "28a000606f08189811bceb1a484a4a438a764b978b7ff82267349a2c77d642c9",
     "stl/head_frame_native.stl": "d921fb8b4880639e865f07164e93a959b19973a05476c04c173b19fa0030f3c3",
-    "stl/hip_left_native.stl": "c0659e973e764a20f87ee85374b20e1feb4370c01bcd718923f2f572538dfd7c",
-    "stl/hip_left_native_right.stl": "30bd75d6a246fa28f49c0d8fff91fedb49683d4aecc1358987079c3cf9055a0d",
+    "stl/hip_left_native.stl": "a28fe96e47c5e8f3c9df30750267eba3f735bccd42eb70271e4186b1146ffcc3",
+    "stl/hip_left_native_right.stl": "df055fd135c0b251782bb5d5774cb0ceef2f3f2245a43b5b44a46c88f3899e62",
     "stl/imu_yoke_bridge_native.stl": "53df4dc948d5a30a139317dcf08296c593a2faf439c7135a6e8d71b3298a242f",
     "stl/jaw_native.stl": "53e9fb60d7f74a8fb0fbe8fb0201bd32e4812727c1e20daec0bf191015672f0d",
     "stl/jaw_soft_001_native.stl": "10e2e986f10e2916f1ced429f03d7f92b1362a196b140140e1e63c517aa34e40",
-    "stl/left_shell_native.stl": "9df0592dd808e7bd456ef0f86f925f3c75eda1425c9d8a6c9f40273c7132ce9d",
+    "stl/left_shell_native.stl": "10d2a2502e121841e050b56e58f466fad014ba8365152d77b0c232efa67cc253",
     "stl/leg_left_native.stl": "9e8b74869ca4d8d40017c6ec756cd155f709deb8ea1fbc517c2df356249370da",
     "stl/leg_left_native_right.stl": "1828043ef70e2d4ebaa61257dabefb216df9f0daa129395e71f0d9c1cd59ea36",
+    "stl/lipo_pod_native.stl": "0545be7d13f6229015d14b0a24c56b155fbc581a8001a39d6048cf81565c0de3",
     "stl/neck_001_native.stl": "628cc102e3ac93148ed95dcb8efe5f36f3ce4feeb946f746fad17c45778f53d9",
     "stl/neck_002_native.stl": "b67f60097bd5f20b328729f8aa9d3e54ed9c28c9ef9fad0ef14748d96cea9226",
     "stl/neck_internal_yoke_native.stl": "eac9864031a18fd81c6b97bbb2ded6063b34323b32bf84c4547e762424819bdd",
@@ -5409,14 +5426,13 @@
     "stl/noenoeil_native.stl": "474daa9c71ae77a6d26288cce0b602e2b9045abf1fa473ec97b702915ea0003b",
     "stl/passive_leg_support_left.stl": "d88ed377d344ab960650b548fbb57724de7ec8412cc0c81ffa029d853b3ad80f",
     "stl/passive_leg_support_right.stl": "c657d6249e5040893be09cbc260496ba904ace2ef41fbb76a1c699d2a7c78bbc",
-    "stl/right_shell_native.stl": "b7f90583930e7dac7091ec21ef0bdd2d6cfca68d42cb0ede746335d3bd5d1419",
+    "stl/right_shell_native.stl": "59b29331d645df65e90ab6bd34151f5de5da14a31ff36fa63d8c4fafae4f7f4f",
     "stl/roll_front_bulkhead_native.stl": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815",
     "stl/soft_mouth_top_native.stl": "481a4a56c21d5d2065c67334da2547b12dde731845900b572a8e2ec536fe3b1b",
     "stl/sole_left_native.stl": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882",
     "stl/sole_left_native_right.stl": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e",
-    "stl/stick_pod_native.stl": "381ce0866f2952410ee2584331ade4c23dffd67d2f7457956e029ee40f14dda9",
-    "stl/top_head_shell_native.stl": "b4324dce656d0298ba982bc0763c4ee0f1515a26b2057d50456dd687e6b18b92",
-    "stl/trunk_base_native.stl": "1919c7d8377e57b05fd6a623b3926c5a1fd384fd192aa5f539b3d8792fdc7939",
+    "stl/top_head_shell_native.stl": "966271e63bc476bb27438397c4b74bf1d5f4773d0fb6407dd6a9ada64ce39832",
+    "stl/trunk_base_native.stl": "fd0ad20ffc088490ea1a92e3651df688993af55dd1c3db27290fac4c40b5d64f",
     "stl/ubec_clamp_native.stl": "f6064ddf82283b8d8bff428b546e0deabea0da2ff23165ec4a3912c2db007338",
     "stl/upper_leg_left_native.stl": "81cbd7ed24a7bb18d23c603cd8f9c584a8b809f5ee5630cc560f082a272d3bbf",
     "stl/upper_leg_left_native_right.stl": "8d80fa8adc6952969d1fdeef19817a2ce313bf11fccfedd7dbc593dcbd75d845",
@@ -5424,13 +5440,5 @@
     "stl/yaw2roll_left_native_right.stl": "485cf9ddc9cd2f78510d811e73f31153b12dae91b1d00f55b08910664c7997fc",
     "stl/yaw_roll_link_native.stl": "2bbecdb4671564a56e2e6126f9fc3c6b08eabf6a98cfca7e8ffad42e6028a1a4"
   },
-  "promotion": {
-    "method": "Approved V2 geometry promoted directly; regenerated only two changed hip meshes",
-    "reused_unchanged_models": 50,
-    "full_checks_rerun": false,
-    "cad_validation": "Existing approved V2 results reused at explicit user request",
-    "previous_manifest_sha256": "382088bcb91869266e5fac478d9fdb25f8165b96bffd4ed62377eeb531133b55",
-    "evidence": "reports/hip_link_v2_promotion.json"
-  },
-  "manifest_content_sha256": "9e15fcb3300aa6ff6e0535d45ba631da6566b985f678162d1cb33dfe167fd7d6"
+  "manifest_content_sha256": "7c4424d63353e3409fa788c7f5c703efbb5a88ab068fccf141d8ff907cbc7b29"
 }

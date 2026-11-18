@@ -4,7 +4,7 @@ import math
 import json
 from pathlib import Path
 from parts.trunk_base_native import trunk_base_native
-from parts.stick_pod_native import stick_pod_native
+from parts.lipo_pod_native import lipo_pod_native
 from parts.head_frame_native import head_frame_native
 from parts.roll_front_bulkhead_native import roll_front_bulkhead_native
 from parts.yaw_roll_link_native import yaw_roll_link_native
@@ -35,7 +35,6 @@ from parts.neck_internal_yoke_native import neck_internal_yoke_native
 from parts.import_horn_upper_passive import import_horn_upper_passive
 from parts.import_horn_lower_passive import import_horn_lower_passive
 from parts.imu_yoke_bridge_native import imu_yoke_bridge_native
-from parts.power_switch_kcd1_native import power_switch_kcd1_native
 from parts.mpu6050_trunk_native import mpu6050_trunk_native
 from parts.left_shell_native import left_shell_native
 from parts.right_shell_native import right_shell_native
@@ -62,8 +61,10 @@ from parts.sole_left_native_right import sole_left_native_right
 from parts.foot_left_native_a_right import foot_left_native_a_right
 from parts.foot_left_native_b_right import foot_left_native_b_right
 from parts.sts3215_servo_native import sts3215_servo_native
-from parts.parkside_papk_12_a4 import parkside_papk_12_a4
-from lib.stick_pod import STICK_AT
+from parts.zeee_2s_2200_reference import zeee_2s_2200_reference
+from parts.lipo_pad_and_leads import lipo_pad_and_leads
+from parts.lipo_mount_screws import lipo_mount_screws
+from parts.lipo_mount_inserts import lipo_mount_inserts
 from parts.bearing_carrier_left import bearing_carrier_left
 from parts.bearing_carrier_right import bearing_carrier_right
 from parts.bearing_roll_adapter_left import bearing_roll_adapter_left
@@ -144,7 +145,6 @@ def frankenduck():
     children.append(place(import_horn_upper_passive(), 'import_horn_upper_passive', ((0, 0, 0), ('Z', -90))))
     children.append(place(import_horn_lower_passive(), 'import_horn_lower_passive', ((0, 0, 0), ('Z', -90))))
     children.append(place(imu_yoke_bridge_native(), 'imu_yoke_bridge_native', ((0, 0, 0), ('Z', -90))))
-    children.append(place(power_switch_kcd1_native(), 'power_switch_kcd1_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(mpu6050_trunk_native(), 'mpu6050_trunk_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(left_shell_native(), 'left_shell_native', ((0, 0, 0), ('Z', -90))))
     children.append(place(right_shell_native(), 'right_shell_native', ((0, 0, 0), ('Z', -90))))
@@ -186,8 +186,9 @@ def frankenduck():
     children.append(place(bearing_servo_reference(), 'servo_head_yaw', ((0.0, -35.1, 258.0048), ('Z', -90))))
     children.append(place(sts3215_servo_native(), 'servo_jaw_direct', ((53.0, -35.235, 284.6348), ((-0.052265535382890235, -0.9972577629795188, 0.05239530502082981), 90.01400599288137))))
     children.append(place(radxa_6530b(), 'radxa_6530b', HEATSINK_AT))
-    children.append(place(parkside_papk_12_a4(), 'parkside_battery', STICK_AT))
-    children.append(place(stick_pod_native(), 'stick_pod', ((0, 0, 0), ('Z', 0))))
+    # Zeee 2S LiPo holder and pack; these parts are modeled in world coordinates.
+    children.append(place(zeee_2s_2200_reference(), 'zeee_2s_battery', ((0, 0, 0), ('Z', 0))))
+    children.append(place(lipo_pod_native(), 'lipo_pod', ((0, 0, 0), ('Z', 0))))
     children.append(place(bearing_carrier_left(), 'bearing_carrier_left', [[0, 0, 0], ['Z', -90]]))
     children.append(place(bearing_roll_adapter_left(), 'bearing_roll_adapter_left', [[0, 0, 0], ['Z', -90]]))
     children.append(place(bearing_screws_left(), 'bearing_screws_left', [[0, 0, 0], ['Z', -90]]))
@@ -217,6 +218,9 @@ def frankenduck():
     children.append(place(knee_passive_horn_right(), 'knee_passive_horn_right', [[0,0,0],['Z',-90]]))
     children.append(place(shell_screws_right(), 'shell_screws_right', [[0,0,0],['Z',-90]]))
     children.append(place(passive_horn_screw_heads_right(), 'passive_horn_screw_heads_right', [[0,0,0],['Z',-90]]))
+    children.append(place(lipo_pad_and_leads(), 'lipo_pad_and_leads', ((0, 0, 0), ('Z', 0))))
+    children.append(place(lipo_mount_screws(), 'lipo_mount_screws', ((0, 0, 0), ('Z', 0))))
+    children.append(place(lipo_mount_inserts(), 'lipo_mount_inserts', ((0, 0, 0), ('Z', 0))))
     return apply_palette(bd.Compound(children=children, label="frankenduck"))
 
 if __name__ == "__main__":

@@ -1,5 +1,15 @@
 """Saved-rest-pose Radxa fit checks. Run through ./cad check radxa."""
 
+
+COOLER_LABEL = "radxa_6530b"
+
+
+def cooler_occurrence(occurrences):
+    """Return the one occurrence reference whose label is the 6530B cooler."""
+    refs = [ref for ref, row in occurrences.items() if row[0] == COOLER_LABEL]
+    assert len(refs) == 1, f"expected one {COOLER_LABEL} occurrence, found {refs}"
+    return refs[0]
+
 def mount():
     """Check the saved local revision, including jumper plugs and cable routing.
 
@@ -26,7 +36,7 @@ def mount():
     report = dict(document_sha256=current.document_hash,
                   units="mm",
                   overlap_tolerance_mm3=TOLERANCE_MM3, pose="saved rest",
-                  checked_occurrences=["#o1.3", "#o1.6", "#o1.10", "#o1.15", "#o1.16", "#o1.71"], pairs=[])
+                  pairs=[])
     checks = []
 
 
@@ -46,6 +56,10 @@ def mount():
         native = occurrence.shape()
         occurrences[occurrence.ref.lstrip("#")] = (occurrence.label, native,
                                        cq.Shape.cast(native.wrapped))
+    # The cooler follows the battery-area occurrences, so find it by its label
+    # instead of a fixed index.
+    cooler_ref = cooler_occurrence(occurrences)
+    report["checked_occurrences"] = ["#" + ref for ref in ("o1.3", "o1.6", "o1.10", "o1.15", "o1.16", cooler_ref)]
 
     bracket = occurrences["o1.6"][2]
     from cadgen import build123d as bd
@@ -53,13 +67,13 @@ def mount():
     board = occurrences["o1.15"][2]
     bulkhead = occurrences["o1.3"][2]
     speaker = occurrences["o1.16"][2]
-    heatsink = occurrences["o1.71"][2]
+    heatsink = occurrences[cooler_ref][2]
     plug, cable = [cq.Shape.cast(s.wrapped) for s in clearance_shapes()]
     targets = [("bulkhead", bulkhead, {"o1.3"}),
                ("single_Radxa_carrier", bracket, {"o1.3", "o1.6"}),
                ("board", board, {"o1.3", "o1.6", "o1.15"}),
                ("speaker", speaker, {"o1.3", "o1.6", "o1.15", "o1.16"}),
-               ("heatsink_representation", heatsink, {"o1.3", "o1.6", "o1.15", "o1.16", "o1.71"}),
+               ("heatsink_representation", heatsink, {"o1.3", "o1.6", "o1.15", "o1.16", cooler_ref}),
                ("gpio_jumper_plug_allowance", plug, {"o1.15"}),
                ("gpio_upward_cable_allowance", cable, set()),
                ("underside_button_clearance",cq.Shape.cast(button_clearance().wrapped),{"o1.15"})]
@@ -297,6 +311,8 @@ def heatsink():
     report=dict(document_sha256=scene.document_hash,units='mm',geometry_status='Dimensioned representation; detailed geometry approximate',tolerance_mm3=1e-5,pairs=[],assumptions=dict(outer_size_mm=[65,30,11.5],mounting_grid_mm=HOLE_GRID,pcb_component_plane_y_mm=-87.265,base_standoff_mm=5.0,fan_case_mm=21.5,inlet_radius_mm=8.5,clear_inlet_approach_mm=2.0,foot_diameter_mm=4.8,gpio_notch_mm=[53,7]))
     checks=[]
     shapes={x.ref.lstrip('#'):(x.label,cq.Shape.cast(x.shape().wrapped)) for x in scene.roots[0].children}
+    cooler_ref=cooler_occurrence(shapes)
+    report['cooler_occurrence']='#'+cooler_ref
     from checks.common import volume, intersection
     def pair(name, a, ref, b):
         row = intersection(name, a, ref, b, 1e-5)
@@ -308,7 +324,7 @@ def heatsink():
     env=cq.Shape.cast(outer_envelope().wrapped);air=cq.Shape.cast(fan_inlet_allowance().wrapped)
     for name,a in [('official_outer_envelope',env),('fan_inlet_allowance',air)]:
      for ref,(label,b) in shapes.items():
-      if ref=='o1.71' or (name=='official_outer_envelope' and ref=='o1.15'):continue
+      if ref==cooler_ref or (name=='official_outer_envelope' and ref=='o1.15'):continue
       pair(name,a,ref+':'+label,b)
     # The full bounding envelope intentionally includes GPIO/SoC regions that
     # actual cooler cutouts leave open. Actual-representation checks cover these.

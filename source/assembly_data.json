@@ -475,22 +475,6 @@
       ]
     },
     {
-      "name": "power_switch_kcd1_native",
-      "component": "power_switch_kcd1_native",
-      "params": {},
-      "at": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          "Z",
-          -90
-        ]
-      ]
-    },
-    {
       "name": "mpu6050_trunk_native",
       "component": "mpu6050_trunk_native",
       "params": {},
@@ -1247,24 +1231,24 @@
       "params": {}
     },
     {
-      "name": "parkside_battery",
-      "component": "parkside_papk_12_a4",
+      "name": "zeee_2s_battery",
+      "component": "zeee_2s_2200_reference",
       "params": {},
       "at": [
         [
-          0.0,
-          58.0,
-          83.0
+          0,
+          0,
+          0
         ],
         [
           "Z",
-          0.0
+          0
         ]
       ]
     },
     {
-      "name": "stick_pod",
-      "component": "stick_pod_native",
+      "name": "lipo_pod",
+      "component": "lipo_pod_native",
       "params": {},
       "at": [
         [
@@ -1789,6 +1773,54 @@
           -90
         ]
       ]
+    },
+    {
+      "name": "lipo_pad_and_leads",
+      "component": "lipo_pad_and_leads",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          0
+        ]
+      ]
+    },
+    {
+      "name": "lipo_mount_screws",
+      "component": "lipo_mount_screws",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          0
+        ]
+      ]
+    },
+    {
+      "name": "lipo_mount_inserts",
+      "component": "lipo_mount_inserts",
+      "params": {},
+      "at": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          "Z",
+          0
+        ]
+      ]
     }
   ],
   "mates": [
@@ -1797,12 +1829,6 @@
       "kind": "fastened",
       "parent": "#trunk_base",
       "child": "#imu_yoke_bridge_native"
-    },
-    {
-      "name": "fix_power_switch_kcd1_native",
-      "kind": "fastened",
-      "parent": "#trunk_base",
-      "child": "#power_switch_kcd1_native"
     },
     {
       "name": "fix_mpu6050_trunk_native",
@@ -2423,30 +2449,16 @@
       "child": "#radxa_6530b"
     },
     {
-      "name": "stick_pod_mount",
+      "name": "lipo_pod_mount",
       "kind": "fastened",
       "parent": "#trunk_base",
-      "child": "#stick_pod"
+      "child": "#lipo_pod"
     },
     {
-      "name": "battery_release",
-      "kind": "slider",
-      "parent": "#stick_pod",
-      "child": "#parkside_battery",
-      "origin": [
-        0.0,
-        58.0,
-        83.0
-      ],
-      "direction": [
-        0.0,
-        0.0,
-        -1.0
-      ],
-      "limits": [
-        0.0,
-        95.0
-      ]
+      "name": "fix_zeee_battery",
+      "kind": "fastened",
+      "parent": "#lipo_pod",
+      "child": "#zeee_2s_battery"
     },
     {
       "name": "fix_bearing_carrier_left",
@@ -2621,6 +2633,24 @@
       "kind": "fastened",
       "parent": "#passive_leg_support_right",
       "child": "#passive_horn_screw_heads_right"
+    },
+    {
+      "name": "fix_lipo_pad_and_leads",
+      "kind": "fastened",
+      "parent": "#lipo_pod",
+      "child": "#lipo_pad_and_leads"
+    },
+    {
+      "name": "fix_lipo_mount_screws",
+      "kind": "fastened",
+      "parent": "#lipo_pod",
+      "child": "#lipo_mount_screws"
+    },
+    {
+      "name": "fix_lipo_mount_inserts",
+      "kind": "fastened",
+      "parent": "#lipo_pod",
+      "child": "#lipo_mount_inserts"
     }
   ],
   "poses": {

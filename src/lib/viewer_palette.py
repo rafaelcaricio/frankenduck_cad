@@ -1,4 +1,10 @@
-"""MuJoCo visual colors; only entirely added printed parts are black; appearance only."""
+"""MuJoCo visual colors; only entirely added printed parts are black.
+
+Keep the established palette assignments consistent with the pinned cadgen exporter.
+Unlisted purchased components retain their own per-face materials. Review STEP
+round trips must use cadgen.read_step and cadgen's STEP exporter; build123d's
+importer reduces per-face materials to a single fallback color.
+"""
 import json
 from pathlib import Path
 from cadgen import declare_input

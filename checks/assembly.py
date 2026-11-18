@@ -104,14 +104,16 @@ def catalog():
 
 
 def battery_pod():
-    """Stick pod at rest: printed solids, gaps, static overlaps, tongue screws and adapter spaces.
+    """Zeee 2S holder at rest: printed solids, seated pack, gaps, static contacts, clamp and closed shoulders.
 
-    Bounded CAD evidence for the APPROXIMATE photo-derived stick; no physical fit,
-    print or strength test. Paths are in checks/battery_paths.py.
+    Nominal CAD evidence. The pack is a published-dimension reference; leads are
+    visual envelopes. No physical fit, print or strength test. Service and motion
+    paths are in checks/battery_paths.py; the four screw joints in checks/part_quality.py.
     """
+    import itertools
     import cadquery as cq
     from checks.common import read_scene, bounds, volume, pieces, pair_gap, bound_gap
-    from lib import stick_pod as sp
+    from lib import lipo_shoulders as ls, lipo_mount as lm, body_shell_fasteners as bf, stick_pod as sp
 
     tolerance = 1e-5  # mm3; coincident-face numerical tolerance
     scene = read_scene(ROOT / 'STEP/frankenduck.step')
@@ -119,129 +121,138 @@ def battery_pod():
     parts = {name: pieces(shape) for name, shape in shapes.items()}
     boxes = {name: bounds(shape) for name, shape in shapes.items()}
     shell_names = ('left_shell_native', 'right_shell_native')
-    assert not {'backpack_dock', 'parkside_pap_204_a1'} & shapes.keys(), 'PAP 204 A1 parts must not be in this variant'
+    retired = {'stick_pod', 'parkside_battery', 'power_switch_kcd1_native', 'backpack_dock', 'parkside_pap_204_a1'}
+    assert not retired & shapes.keys(), ('retired battery parts in the assembly', sorted(retired & shapes.keys()))
 
     prints = {}
-    for name in ('trunk_base', 'stick_pod', *shell_names):
+    for name in ('trunk_base', 'lipo_pod', *shell_names):
         shape = shapes[name]
         prints[name] = dict(valid=shape.isValid(), solids=len(shape.Solids()), volume_mm3=volume(shape))
         assert shape.isValid() and len(shape.Solids()) == 1, name
-    battery_bounds = boxes['parkside_battery']
-    expected = [-22.59, 32.27, 81.5, 22.59, 83.72, 163.5]
-    assert max(abs(a - b) for a, b in zip(battery_bounds, expected)) < 0.01, battery_bounds
 
-    # Gaps between the changed parts; nominal values are in src/lib/stick_pod.py.
+    # The pack is seated at its published size, top 8 mm above the rear rim.
+    variant = json.loads((ROOT / 'source/lipo_variant.json').read_text())
+    # The pack's largest solid is its nominal body; 0.1 mm colour panels sit on its rear face.
+    body = max(shapes['zeee_2s_battery'].Solids(), key=lambda q: q.Volume())
+    pack = bounds(body)
+    size = sorted(pack[i + 3] - pack[i] for i in range(3))
+    seated = dict(body_bounds_mm=pack, size_mm=size, published_mm=sorted(variant['published_pack_dimensions_mm']),
+                  with_panels_bounds_mm=boxes['zeee_2s_battery'],
+                  center_x_mm=(pack[0] + pack[3]) / 2, center_y_mm=(pack[1] + pack[4]) / 2,
+                  top_above_rim_mm=pack[5] - ls.MOUTH_Z)
+    seated['passed'] = (max(abs(a - b) for a, b in zip(size, seated['published_mm'])) < 1e-3
+                        and abs(seated['center_x_mm']) < 1e-4 and abs(seated['center_y_mm'] - variant['pack_center_y_mm']) < 1e-4
+                        and abs(seated['top_above_rim_mm'] - variant['pack_exposed_above_rear_rim_mm']) < 1e-3)
+
+    # Gaps between the changed parts; nominal values are in src/lib/lipo_*.py.
     gaps = []
-    def gap(interface, a, b, minimum):
-        result = pair_gap(parts[a], parts[b], cap=10.0)
-        row = dict(interface=interface, minimum_mm=minimum, measured_mm=result['gap_mm'],
-                   passed=result['gap_mm'] >= minimum - 1e-5)
+    def gap(interface, a, b, minimum, a_pieces=None, b_pieces=None):
+        result = pair_gap(a_pieces or parts[a], b_pieces or parts[b], cap=10.0)
+        row = dict(interface=interface, minimum_mm=minimum, measured_mm=result['gap_mm'], overlap_mm3=result['overlap_mm3'],
+                   passed=result['gap_mm'] >= minimum - 1e-5 and result['overlap_mm3'] < tolerance)
         gaps.append(row)
         return row
-    gap('shell centre split', *shell_names, 2 * sp.SHELL_SPLIT_HALF_GAP)
     for name in shell_names:
-        gap(name + ' to pod', name, 'stick_pod', sp.SHELL_GAP - 0.05)
-        gap('battery to ' + name, 'parkside_battery', name, 1.0)
-    gap('battery to pod (hook over lip)', 'parkside_battery', 'stick_pod', sp.LIP_GAP - 0.05)
-    gap('battery to trunk', 'parkside_battery', 'trunk_base', 1.0)
+        gap(name + ' to holder', name, 'lipo_pod', ls.SHELL_GAP - 0.05)
+        gap('pack to ' + name, 'zeee_2s_battery', name, 1.0)
+    gap('pack in holder cavity', 'zeee_2s_battery', 'lipo_pod', 0.55)
+    gap('pack to trunk', 'zeee_2s_battery', 'trunk_base', 1.0)
 
-    # Static overlaps of every changed part with every other occurrence. Face
-    # contact is reported; only the trunk may touch the pod (its clamp face),
-    # and the battery's gap is measured above.
-    changed = ('stick_pod', 'parkside_battery', 'trunk_base', *shell_names)
+    # The shells meet only at their two internal ties; elsewhere the centre split stays open.
+    ties = [cq.Solid.makeCylinder(bf.BOSS_RADIUS + bf.FRONT_ROOT_FILLET + 0.5, 4.0, cq.Vector(-2.0, y, z), cq.Vector(1, 0, 0))
+            for y, z in bf.CENTERS]
+    zone = ties[0].fuse(ties[1])
+    left, right = (shapes[n] for n in shell_names)
+    split = gap('shell centre split, outside the ties', *shell_names, 2 * sp.SHELL_SPLIT_HALF_GAP,
+                pieces(left.cut(zone)), pieces(right.cut(zone)))
+    tie_rows = []
+    for (y, z), tool in zip(bf.CENTERS, ties):
+        result = pair_gap(pieces(left.intersect(tool)), pieces(right.intersect(tool)), cap=1.0)
+        tie_rows.append(dict(tie_center_yz_mm=[y, z], gap_mm=result['gap_mm'], overlap_mm3=result['overlap_mm3'],
+                             passed=result['gap_mm'] < 1e-6 and result['overlap_mm3'] < tolerance))
+
+    # Static overlaps of every changed part with every other occurrence. The new
+    # LiPo parts may touch only at the declared interfaces; the heat-set inserts are
+    # melted into their pilots and the modeled leads start inside the pack's top face.
+    # The trunk and shells keep their existing mounting contacts, which are listed.
+    contact = {frozenset(p): why for p, why in (
+        (('lipo_pod', 'trunk_base'), 'arm support faces clamp the plate underside'),
+        (('lipo_mount_screws', 'trunk_base'), 'screw heads seat in the plate recesses'),
+        (('lipo_mount_screws', 'lipo_mount_inserts'), 'screw threads engage the inserts'),
+        (('lipo_mount_screws', 'lipo_pod'), 'screw tips in the 3 mm passages below the inserts'),
+        (('lipo_mount_inserts', 'trunk_base'), 'insert tops flush with the arm clamp face'),
+        (('lipo_pad_and_leads', 'lipo_pod'), 'foam pad rests on the holder floor'))}
+    pressed = {frozenset(('lipo_mount_inserts', 'lipo_pod')): 'heat-set inserts melted into the 4 mm pilots',
+               frozenset(('lipo_pad_and_leads', 'zeee_2s_battery')): 'pack rests on the pad; lead ends start inside the pack top'}
+    new_parts = {'lipo_pod', 'zeee_2s_battery', 'lipo_pad_and_leads', 'lipo_mount_screws', 'lipo_mount_inserts'}
+    changed = ('lipo_pod', 'zeee_2s_battery', 'lipo_pad_and_leads', 'lipo_mount_screws', 'lipo_mount_inserts',
+               'trunk_base', *shell_names)
     static = []; contacts = []
     for i, a in enumerate(changed):
         for b in shapes:
             if b == a or (b in changed and changed.index(b) < i) or bound_gap(boxes[a], boxes[b]) > 1e-7:
                 continue
             result = pair_gap(parts[a], parts[b], cap=0.5)
+            key = frozenset((a, b))
             row = dict(a=a, b=b, gap_lower_bound_mm=result['gap_mm'], overlap_mm3=result['overlap_mm3'],
-                       passed=result['overlap_mm3'] < tolerance)
-            if a == 'stick_pod' and b not in ('trunk_base', 'parkside_battery') and result['gap_mm'] < 0.3:
+                       interface=contact.get(key) or pressed.get(key))
+            row['passed'] = key in pressed or result['overlap_mm3'] < tolerance
+            declared = key in contact or key in pressed
+            if 'lipo_pod' in key and not declared and result['gap_mm'] < 0.3:
                 row['passed'] = False
             static.append(row)
             if result['gap_mm'] <= 1e-6:
                 contacts.append(f'{a} / {b}')
+                if key & new_parts and not declared:
+                    row['passed'] = False
+    insert_fit = []
+    for x, y in lm.SCREWS:
+        pilot = cq.Solid.makeCylinder(lm.INSERT_PILOT_D / 2 + 1.0, lm.INSERT_DEPTH + 0.2, cq.Vector(x, y, lm.ARM_TOP - lm.INSERT_DEPTH - 0.1))
+        inside = volume(shapes['lipo_mount_inserts'].intersect(shapes['lipo_pod']).intersect(pilot))
+        insert_fit.append(dict(x_mm=x, y_mm=y, melt_overlap_in_pilot_mm3=inside))
+    melt_total = volume(shapes['lipo_mount_inserts'].intersect(shapes['lipo_pod']))
+    melt = dict(per_insert=insert_fit, total_mm3=melt_total,
+                passed=abs(sum(r['melt_overlap_in_pilot_mm3'] for r in insert_fit) - melt_total) < 1e-4)
+    # The modeled leads overlap the pack only where they start at its top face; the pad only touches it.
+    lead_overlap = shapes['lipo_pad_and_leads'].intersect(shapes['zeee_2s_battery'])
+    lb = bounds(lead_overlap) if lead_overlap.Solids() else None
+    leads = dict(overlap_mm3=volume(lead_overlap), bounds_mm=lb,
+                 passed=lb is not None and lb[2] >= pack[5] - 1.5 and lb[5] <= pack[5] + 1e-4)
 
-    # Tongue clamp: the pod's top face meets the plate underside.
-    t = sp.TONGUE
-    def slab(z0, z1):
-        return cq.Solid.makeBox(2 * t['x'], t['y1'] - t['y0'], z1 - z0, cq.Vector(-t['x'], t['y0'], z0))
-    pod_face = shapes['stick_pod'].intersect(slab(sp.PLATE_BOTTOM_Z - 0.05, sp.PLATE_BOTTOM_Z))
-    plate_face = shapes['trunk_base'].intersect(slab(sp.PLATE_BOTTOM_Z, sp.PLATE_BOTTOM_Z + 0.05))
-    contact = volume(pod_face.translate(cq.Vector(0, 0, 0.05)).intersect(plate_face)) / 0.05
-    clamp = dict(contact_area_mm2=contact, minimum_mm2=150.0, passed=contact >= 150.0)
+    # Arm clamp: each arm's top face bears on the plate underside wherever the plate
+    # covers it. The plate ends at its rear edge; the arms continue to the front panel.
+    plate_rear = boxes['trunk_base'][4]
+    clamp = dict(plate_rear_edge_y_mm=plate_rear, arms=[])
+    for sign in (-1, 1):
+        x0, x1 = sorted((sign * lm.ARM_X0, sign * lm.ARM_X1))
+        def slab(z0, z1, y1):
+            return cq.Solid.makeBox(x1 - x0, y1 - lm.ARM_FRONT_Y, z1 - z0, cq.Vector(x0, lm.ARM_FRONT_Y, z0))
+        arm_face = shapes['lipo_pod'].intersect(slab(lm.ARM_TOP - 0.05, lm.ARM_TOP, plate_rear))
+        plate_face = shapes['trunk_base'].intersect(slab(lm.ARM_TOP, lm.ARM_TOP + 0.05, plate_rear))
+        area = volume(arm_face) / 0.05
+        bearing = volume(arm_face.translate(cq.Vector(0, 0, 0.05)).intersect(plate_face)) / 0.05
+        clamp['arms'].append(dict(x_mm=[x0, x1], arm_top_under_plate_mm2=area, bearing_area_mm2=bearing,
+                                  passed=area > 80 and bearing >= 0.99 * area))
+    clamp['passed'] = all(r['passed'] for r in clamp['arms'])
 
-    # Two M3 x 12 socket-head screws from above into heat-set inserts.
-    screws = []
-    def cylinder(x, y, r, z0, z1):
-        return cq.Solid.makeCylinder(r, z1 - z0, cq.Vector(x, y, z0), cq.Vector(0, 0, 1))
-    def ring(x, y, r0, r1, z0, z1):
-        return cylinder(x, y, r1, z0, z1).cut(cylinder(x, y, r0, z0 - 1, z1 + 1))
-    for x, y in sp.SCREWS:
-        bore = cylinder(x, y, sp.SCREW_CLEARANCE_D / 2 - 0.05, sp.PLATE_BOTTOM_Z - 0.01, sp.PLATE_TOP_Z + 0.01)
-        seat = ring(x, y, sp.SCREW_CLEARANCE_D / 2, 2.75, sp.PLATE_TOP_Z - 0.1, sp.PLATE_TOP_Z)
-        pilot = cylinder(x, y, sp.INSERT_PILOT_D / 2 - 0.05, sp.PLATE_BOTTOM_Z - sp.INSERT_DEPTH, sp.PLATE_BOTTOM_Z - 0.01)
-        wall = ring(x, y, sp.INSERT_PILOT_D / 2, sp.INSERT_PILOT_D / 2 + 1.5, sp.PLATE_BOTTOM_Z - sp.INSERT_DEPTH, sp.PLATE_BOTTOM_Z)
-        shank = cylinder(x, y, 1.5, sp.PLATE_TOP_Z - 10.0, sp.PLATE_TOP_Z)
-        driver = cylinder(x, y, 3.0, sp.PLATE_TOP_Z + 0.01, sp.PLATE_TOP_Z + 63.0)
-        row = dict(x_mm=x, y_mm=y, nominal_screw='M3 x 12 socket head', nominal_insert='M3 x 5.7 heat-set',
-                   plate_bore_overlap_mm3=volume(shapes['trunk_base'].intersect(bore)),
-                   head_seat_fill=volume(shapes['trunk_base'].intersect(seat)) / volume(seat),
-                   pilot_overlap_mm3=volume(shapes['stick_pod'].intersect(pilot)),
-                   insert_wall_fill=volume(shapes['stick_pod'].intersect(wall)) / volume(wall), blocked_by={})
-        for name, other in parts.items():
-            for tool, label, allowed in ((shank, 'shank', ('trunk_base', 'stick_pod')), (driver, 'head and 3 x 60 driver', ())):
-                if name in allowed or bound_gap(bounds(tool), boxes[name]) > 1e-7:
-                    continue
-                result = pair_gap(pieces(tool), other, cap=0.1)
-                if result['overlap_mm3'] > tolerance:
-                    row['blocked_by'][f'{label}: {name}'] = result['overlap_mm3']
-        row['passed'] = (row['plate_bore_overlap_mm3'] < tolerance and row['pilot_overlap_mm3'] < tolerance and
-                         row['head_seat_fill'] > 0.99 and row['insert_wall_fill'] > 0.99 and not row['blocked_by'])
-        screws.append(row)
+    # Closed side shoulders: solid holder wall beside the access, from the rim to the roof.
+    shoulders = []
+    for x, y, z in itertools.product((-27.0, 27.0), (42.0, 48.0, 54.0), (158.0, 164.0, 168.0)):
+        ray = cq.Edge.makeLine(cq.Vector(x - 1, y, z), cq.Vector(x + 1, y, z))
+        depth = sum(e.Length() for e in ray.intersect(shapes['lipo_pod']).Edges())
+        shoulders.append(dict(x_mm=x, y_mm=y, z_mm=z, solid_probe_mm=depth, passed=abs(depth - 2.0) < 0.01))
 
-    # Review volumes for a later contact adapter stay free of every occurrence.
-    allowances = []
-    for key, solid in sp.adapter_allowances().items():
-        hits = {}
-        for name, other in parts.items():
-            if bound_gap(bounds(solid), boxes[name]) > 1e-7:
-                continue
-            result = pair_gap(pieces(solid), other, cap=0.1)
-            if result['overlap_mm3'] > tolerance:
-                hits[name] = result['overlap_mm3']
-        allowances.append(dict(volume=key, volume_mm3=volume(solid), extent_mm=bounds(solid), blocked_by=hits, passed=not hits))
-
-    # Closed top: every vertical line above the stick meets the pod or a body shell.
-    stick_top = sp.STICK_ORIGIN[2] + sp._stick().stick_top
-    outline = sp.local_to_world(sp.prism('stick', -1.0, 0.0, 1.0))
-    covers = [shapes[name] for name in ('stick_pod', *shell_names)]
-    lines = 0; open_points = []
-    ob = bounds(outline)
-    x = ob[0]
-    while x <= ob[3]:
-        y = ob[1]
-        while y <= ob[4]:
-            if outline.isInside(cq.Vector(x, y, ob[2] + 0.5), 1e-6):
-                lines += 1
-                line = cq.Edge.makeLine(cq.Vector(x, y, stick_top + 0.1), cq.Vector(x, y, 200.0))
-                if not any(cover.intersect(line).Edges() for cover in covers):
-                    open_points.append([round(x, 2), round(y, 2)])
-            y += 2.0
-        x += 2.0
-    closed = dict(vertical_lines=lines, grid_mm=2.0, open_at_xy_mm=open_points, passed=lines > 100 and not open_points)
-
-    checks = [*gaps, *static, clamp, *screws, *allowances, closed]
+    checks = [seated, *gaps, *tie_rows, *static, melt, leads, clamp, *shoulders]
     report = dict(document_sha256=scene.document_hash, units='mm', pose='saved zero pose', overlap_tolerance_mm3=tolerance,
-                  prints=prints, battery_bounds_mm=battery_bounds, gaps=gaps, contacts=contacts, clamp=clamp,
-                  screws=screws, adapter_allowances=allowances, closed_top=closed, static_pairs=static,
-                  coverage='Valid single-solid trunk, pod and shells; seated battery bounds; shell split, shell-pod and '
-                           'battery gaps; static overlaps of the changed parts with every occurrence (the pod may touch '
-                           'only the trunk); tongue contact area; M3 bores, head seats, insert pilots and walls, shank and '
-                           'driver paths; adapter and XT60 review volumes free; pod or shell over every 2 mm grid point of the '
-                           'stick top. The stick, latch and contacts are APPROXIMATE. '
-                           'No slicing, physical fit or strength test.',
+                  prints=prints, seated_pack=seated, gaps=gaps, shell_ties=tie_rows, contacts=contacts,
+                  insert_melt=melt, lead_starts=leads, clamp=clamp, closed_shoulders=shoulders, static_pairs=static,
+                  coverage='Valid single-solid trunk, holder and shells; pack seated at its published size and datum; '
+                           'shell-holder, pack-cavity, pack-shell and pack-trunk gaps; shells touch only at their two ties '
+                           'with the 0.6 mm split elsewhere; static overlaps of the changed parts with every occurrence '
+                           '(the new parts touch only at declared interfaces, the holder keeps 0.3 mm from everything '
+                           'else, the inserts overlap the holder only in their pilots, the leads overlap the pack only at '
+                           'its top face); full arm-to-plate bearing under the plate; solid closed '
+                           'shoulders. The pack, pad and leads are references. No slicing, physical fit or strength test.',
                   passed=all(row['passed'] for row in checks))
     (ROOT / 'reports/latest/battery_pod_verification.json').write_text(json.dumps(report, indent=2) + '\n')
     print({key: value for key, value in report.items() if key != 'static_pairs'})

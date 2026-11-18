@@ -102,7 +102,7 @@
     {
       "id": "assembly.battery_pod",
       "call": "checks.assembly:battery_pod",
-      "purpose": "Stick pod, tongue screws, print gaps and adapter spaces at rest",
+      "purpose": "Zeee 2S holder, pack, shells, arm clamp and closed shoulders at rest",
       "suites": [
         "full"
       ],
@@ -111,18 +111,24 @@
         "STEP/frankenduck.step.json",
         "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/stick_pod.py",
-        "src/parts/parkside_papk_12_a4.py",
+        "src/lib/lipo_pod.py",
+        "src/lib/lipo_compact.py",
+        "src/lib/lipo_profile.py",
+        "src/lib/lipo_mount.py",
+        "src/lib/lipo_shoulders.py",
         "checks/common.py",
+        "src/lib/body_shell_fasteners.py",
+        "src/lib/stick_pod.py",
+        "source/lipo_variant.json",
         "checks/assembly.py"
       ],
       "report": "reports/latest/battery_pod_verification.json",
-      "coverage": "Valid single-solid trunk, pod and shells; seated battery bounds; shell split (0.6 mm), shell-pod (0.35 mm) and battery gaps; static overlaps of the five changed parts with every occurrence, the pod touching only the trunk; tongue contact area; two M3 bores, head seats, insert pilots, 1.5 mm insert walls, shank and 3 x 60 mm driver paths; four adapter review volumes free. Stick, latch and contacts are APPROXIMATE. No slicing, physical fit or strength test."
+      "coverage": "Valid single-solid trunk, holder and shells; pack seated at its published 73 x 34 x 18.5 mm size, Y = 48.5 mm and 8 mm above the rim; shell-holder (0.35 mm), pack-cavity (0.55 mm), pack-shell and pack-trunk (1 mm) gaps; shells touch only at their two ties, 0.6 mm split elsewhere; static overlaps of the eight changed parts with every occurrence, only declared interfaces touching, the holder 0.3 mm from everything else and the inserts overlapping it only in their pilots; full arm-to-plate bearing; 18 solid shoulder probes. Pack, pad and leads are references. No slicing, physical fit or strength test."
     },
     {
       "id": "battery_pod.motion",
       "call": "checks.battery_paths:motion",
-      "purpose": "All 1702 recorded walking and sitting keyframes against the stick battery, pod, trunk and shells",
+      "purpose": "All 1702 recorded walking and sitting keyframes against the LiPo holder, pack, leads, mount hardware, trunk and shells",
       "suites": [
         "full"
       ],
@@ -131,18 +137,21 @@
         "STEP/frankenduck.step.json",
         "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/stick_pod.py",
-        "src/parts/parkside_papk_12_a4.py",
+        "src/lib/lipo_pod.py",
+        "src/lib/lipo_compact.py",
+        "src/lib/lipo_profile.py",
+        "src/lib/lipo_mount.py",
+        "src/lib/lipo_shoulders.py",
         "checks/common.py",
         "checks/battery_paths.py"
       ],
       "report": "reports/latest/battery_motion_verification.json",
-      "coverage": "All articulated leg occurrences, including new fastened bearing parts, verified against the declared mate graph; 1702 keyframes; 1 mm minimum gap; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
+      "coverage": "Every articulated occurrence (leg coverage verified against the declared mate graph); 1702 keyframes; 1 mm minimum gap; 2 mm conservative bounds rejection and exact distance on nearby pairs. Not a continuous sweep or independent joint range guarantee."
     },
     {
       "id": "battery_pod.removal",
       "call": "checks.battery_paths:removal",
-      "purpose": "Straight-down stick release at the home pose, hook travel through the lips and button thumb room",
+      "purpose": "Pack removal at the home pose: 68 mm lift, then 35 mm rearward",
       "suites": [
         "full"
       ],
@@ -151,32 +160,39 @@
         "STEP/frankenduck.step.json",
         "source/assembly_data.json",
         "src/animation.js",
-        "src/lib/stick_pod.py",
-        "src/parts/parkside_papk_12_a4.py",
+        "src/lib/lipo_pod.py",
+        "src/lib/lipo_compact.py",
+        "src/lib/lipo_profile.py",
+        "src/lib/lipo_mount.py",
+        "src/lib/lipo_shoulders.py",
         "checks/common.py",
         "checks/battery_paths.py"
       ],
       "report": "reports/latest/battery_removal_verification.json",
-      "coverage": "Home pose; full 95 mm straight-down release. Battery material inside the stick outline grown 0.3 mm is proven clear of every part by its swept column; outside pieces are proven clear by swept boxes or checked with exact booleans every 0.25 mm where a swept box meets a part. Rigid hooks may overlap the pod only inside the lip zone and within the flex room; empty flex room; thumb room outside both buttons. APPROXIMATE latch; no arm bending, button force or physical fit."
+      "coverage": "Home pose. Exact swept boxes of the seated pack for the lift and the rearward withdrawal (0.5 mm minimum); leads and plugs as unions of full-travel prisms over exact 1 mm slices and full rearward boxes (0.15 mm minimum); against every other occurrence and the foam pad. Lead shapes are reference envelopes. No hand room, cable bending or physical fit."
     },
     {
       "id": "battery_pod.quality",
-      "call": "checks.part_quality:stick_pod",
-      "purpose": "Printed stick pod: geometry, wall, symmetry, edges, voids, holes and the two tongue screws",
+      "call": "checks.part_quality:lipo_pod",
+      "purpose": "Printed Zeee 2S holder: geometry, wall, symmetry, edges, voids, holes, sections and the four arm screws",
       "suites": [
         "full"
       ],
       "inputs": [
         "STEP/frankenduck.step",
         "STEP/frankenduck.step.json",
+        "src/lib/lipo_pod.py",
+        "src/lib/lipo_compact.py",
+        "src/lib/lipo_profile.py",
+        "src/lib/lipo_mount.py",
+        "src/lib/lipo_shoulders.py",
         "src/lib/stick_pod.py",
-        "src/parts/parkside_papk_12_a4.py",
-        "source/stick_pod_quality.json",
+        "source/lipo_pod_quality.json",
         "checks/common.py",
         "checks/part_quality.py"
       ],
-      "report": "reports/latest/stick_pod_quality.json",
-      "coverage": "Stick pod only, as saved. Checkers first find the error in known-error fixtures. 0.05 mm short edges, 0.05 mm2 small and 0.1 mm narrow faces; 1.2 mm ray-cast wall (0.5 mm samples; rays leaving a face at under 25 degrees are left to the edge check); mirror symmetry of the whole pod about X = 0 on 0.25 mm mesh slices (0.05 mm band ignored); outside edges rounded 0.5 mm or named; closed voids; support area for six build directions (reported); every hole owned by a fastener; bd_warehouse M3 ISO 4762 screws in CNC Kitchen inserts. Accepted problems are named boxes at most 40 mm a side and within 2 mm of their findings. No slicing, strength or physical fit test."
+      "report": "reports/latest/lipo_pod_quality.json",
+      "coverage": "Holder only, as saved. Checkers first find the error in known-error fixtures. 0.05 mm short edges, 0.05 mm2 small and 0.1 mm narrow faces; ray-cast wall at the configured minimum; mirror symmetry about X = 0 on 0.25 mm mesh slices; outside edges rounded 0.5 mm or named; closed voids; support area for six build directions (reported); every hole owned by a fastener; four bd_warehouse M3 x 10 ISO 4762 screws in CNC Kitchen inserts with the shells off; 1.8 mm front panel, 2.4 mm floor and 8 mm arm sections. Accepted problems are named boxes at most 40 mm a side and within 2 mm of their findings. No slicing, strength or physical fit test."
     },
     {
       "id": "head_neck.fit",

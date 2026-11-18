@@ -2,7 +2,8 @@ from __future__ import annotations
 from cadgen import step
 
 
-def make():
+def build(pod_relief):
+    """Body shell relieved by `pod_relief(shell, label)` round the battery holder."""
     from lib.cadquery_adapter import to_build123d
     """Frankenduck left body shell with collars and locating features. World millimetres."""
     import math
@@ -24,8 +25,8 @@ def make():
     Y_RETURN = 30.5
     RETURN_DEPTH = 12.5
     PANEL_SCALE = 0.72
-    WALL = 3.0
-    PROFILE_CTL_XZ = [(-61.969364, 141.721413), (-60.769652, 133.872594), (-57.276993, 126.803988), (-50.794014, 122.358513), (-43.022885, 120.769484), (-35.077182, 120.67624), (-27.125195, 120.697049), (-19.174847, 120.866402), (-11.224499, 121.035755), (-3.274151, 121.205108), (4.676196, 121.374461), (12.626544, 121.543815), (20.576892, 121.713168), (26.636799, 126.072967), (28.103164, 133.853673), (28.415338, 141.798651), (28.519343, 149.748904), (26.829561, 157.478466), (22.453743, 164.065265), (16.146531, 168.833552), (8.767016, 171.7796), (1.031361, 173.596575), (-6.854049, 174.594652), (-14.797595, 174.91515), (-22.749282, 174.893843), (-30.701087, 174.819608), (-38.641541, 174.419028), (-46.516012, 173.371864), (-53.96208, 170.678255), (-59.525821, 165.128391), (-61.936164, 157.59931), (-62.307761, 149.666182)]
+    WALL = 1.0
+    from lib.body_profile import PROFILE_CTL_XZ
     # Preserve the original body silhouette; only the battery pod cuts this skin.
     HIP_Y_HALF = 38.2
     HIP_Z_TOP = 127.5
@@ -167,6 +168,14 @@ def make():
             sew.Add(f.wrapped)
         sew.Perform()
         skin = cq.Shape.cast(sew.SewedShape())
+        center_edges = [e for e in band.Edges() if e.IsClosed() and abs(e.Center().y) < 1e-6]
+        center_face = cq.Face.makeFromWires(cq.Wire.assembleEdges(center_edges))
+        envelope_sew = BRepBuilderAPI_Sewing(1e-6)
+        for face in (band, ret, panel, center_face):
+            envelope_sew.Add(face.wrapped)
+        envelope_sew.Perform()
+        exterior = cq.Solid.makeSolid(cq.Shape.cast(envelope_sew.SewedShape()).Shells()[0])
+        assert exterior.isValid(), 'body exterior envelope'
         hip = _box(-120, 120, -HIP_Y_HALF, HIP_Y_HALF, 60, HIP_Z_TOP)
         front = _box(FRONT_X_MIN, 120, -FRONT_Y_HALF, FRONT_Y_HALF, FRONT_Z_MIN, 260)
         trimmed = skin.cut(hip, front)
@@ -175,7 +184,7 @@ def make():
         mk.Build()
         wall = cq.Shape.cast(mk.Shape()).Solids()[0]
         wall = cq.Shape.cast(ShapeCustom.ConvertToBSpline_s(wall.wrapped, False, False, True, False))
-        return _mirror_y(wall) if S > 0 else wall
+        return (_mirror_y(wall), _mirror_y(exterior)) if S > 0 else (wall, exterior)
     
     def seam_cut():
         slab = _box(-120, 120, _y(SEAM_GAP), _y(-1.0), 60, 260)
@@ -192,7 +201,8 @@ def make():
         if rnd > 0:
             edges = [e for e in b.Edges() if e.IsClosed() and abs(e.Center().y - _y(DECK_Y)) < 1e-06]
             b = b.fillet(rnd, edges)
-        return b
+        # Keep the mounting root inside the unchanged outer skin as the wall thins.
+        return b.intersect(exterior)
     
     def locator_ring():
         ring = _cyl_y(FRONT_X, BOSS_Z, SPOT_R, RING_START, RING_END)
@@ -216,7 +226,8 @@ def make():
         w = cq.Wire.makePolygon([cq.Vector(SW_X + r, _y(a), SW_Z) for r, a in pts], close=True)
         return cq.Solid.revolve(cq.Face.makeFromWires(w), 360, cq.Vector(SW_X, 0, SW_Z), cq.Vector(SW_X, 1, SW_Z))
     model = Model()
-    model.add('wall', thickened_wall(), name='Fair skin, trimmed, thickened 3 mm inward')
+    skin_wall, exterior = thickened_wall()
+    model.add('wall', skin_wall, name=f'Fair skin, trimmed, thickened {WALL:g} mm inward')
     model.add('seam', seam_cut(), op='cut', name='Seam gap with rear patch window')
     model.add('top_service', top_service_cut(), op='cut', name='Top service opening')
     model.add('neck_notch', _halfspace((NOTCH_NX, 0.0, NOTCH_NZ), NOTCH_D, (NOTCH_X_MIN, -NECK_NOTCH_HALF_WIDTH, 120), (60, NECK_NOTCH_HALF_WIDTH, 200)), op='cut', name='Neck notch')
@@ -239,8 +250,18 @@ def make():
         model.add('switch_relief', _cone_in(SW_X, SW_Z, SW_RELIEF_R, SW_RELIEF_R + SW_RELIEF_DEPTH, SW_RELIEF_Y, SW_RELIEF_DEPTH), op='cut', name='KCD1 45-degree relief')
     model.material('pla', color='#99deef')
     result = model.result()
-    from lib.stick_pod import relieve_shell
-    return relieve_shell(to_build123d(model, 'left_shell_native'), 'left_shell_native')
+    shell = pod_relief(to_build123d(model, 'left_shell_native'), 'left_shell_native')
+    from lib.body_shell_fasteners import add_fasteners
+    return add_fasteners(shell, exterior, SIDE)
+
+
+
+def make():
+    """Default shell, relieved round the Zeee 2S holder with its closed side shoulders."""
+    import sys
+    from lib.lipo_shoulders import body_shell
+    from lib.stick_pod import native
+    return native(body_shell(sys.modules[__name__], 'left'), 'left_shell_native')
 
 
 @step(out="../../STEP/parts/left_shell_native.step")

@@ -147,11 +147,6 @@
     "model": "imu_yoke_bridge_native"
   },
   {
-    "component": "power_switch_kcd1_native",
-    "params": {},
-    "model": "power_switch_kcd1_native"
-  },
-  {
     "component": "mpu6050_trunk_native",
     "params": {},
     "model": "mpu6050_trunk_native"
@@ -331,13 +326,13 @@
     "model": "radxa_6530b"
   },
   {
-    "component": "parkside_papk_12_a4",
+    "component": "zeee_2s_2200_reference",
     "params": {},
-    "model": "parkside_papk_12_a4"
+    "model": "zeee_2s_2200_reference"
   },
   {
-    "model": "stick_pod_native",
-    "component": "stick_pod_native",
+    "model": "lipo_pod_native",
+    "component": "lipo_pod_native",
     "params": {}
   },
   {
@@ -428,6 +423,21 @@
   {
     "model": "passive_horn_screw_heads_right",
     "component": "passive_horn_screw_heads_right",
+    "params": {}
+  },
+  {
+    "model": "lipo_pad_and_leads",
+    "component": "lipo_pad_and_leads",
+    "params": {}
+  },
+  {
+    "model": "lipo_mount_screws",
+    "component": "lipo_mount_screws",
+    "params": {}
+  },
+  {
+    "model": "lipo_mount_inserts",
+    "component": "lipo_mount_inserts",
     "params": {}
   }
 ]

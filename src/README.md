@@ -2,13 +2,17 @@
 
 | Entry | Purpose |
 | --- | --- |
-| `frankenduck.py` | Complete assembly: 73 occurrences, joints, poses and animation |
+| `frankenduck.py` | Complete assembly: 104 occurrences, joints, poses and animation |
 | `radxa_fit_review.py` | Mounting context with GPIO and cooler clearance volumes |
 | `parts/*.py` | Individual component models and parameter variants |
-| `parts/parkside_pap_204_a1.py` | PAP 204 A1 backpack battery with per-face colors; not in this variant |
-| `parts/parkside_papk_12_a4.py` | PAPK 12 A4 12 V stick battery with per-face colors |
-| `parts/stick_pod_native.py` | Printed rump pod that holds the stick battery |
-| `lib/stick_pod.py` | Stick placement, pod, trunk and shell changes, release direction and adapter spaces |
+| `parts/lipo_pod_native.py` | Printed holder for the Zeee 2S LiPo pack |
+| `parts/zeee_2s_2200_reference.py` | Zeee 2S 2200 mAh pack at its published size; reference |
+| `parts/lipo_pad_and_leads.py`, `parts/lipo_mount_screws.py`, `parts/lipo_mount_inserts.py` | Pack pad and lead envelopes, and the holder's M3 screws and heat-set inserts |
+| `lib/lipo_*.py` | Holder construction in stages, trunk and shell changes, fasteners; `lipo_shoulders.py` gives the final parts |
+| `lib/body_profile.py`, `lib/body_shell_fasteners.py`, `lib/body_shell_finish.py` | Shared body silhouette, internal shell ties and the shells' rear tip round |
+| `parts/parkside_pap_204_a1.py` | PAP 204 A1 backpack battery with per-face colors; not in the assembly |
+| `parts/parkside_papk_12_a4.py`, `parts/stick_pod_native.py` | Retired PAPK 12 A4 stick battery and its pod; not in the assembly |
+| `lib/stick_pod.py` | Stick pod geometry; the LiPo holder reuses its fairing, socket and shell-relief construction |
 | `lib/cadquery_adapter.py` | Shared feature construction and build123d conversion |
 | `lib/import_paths.py` | Local purchased-component STEP inputs |
 | `lib/radxa_clearance.py` | Jumper-plug and upward cable space |

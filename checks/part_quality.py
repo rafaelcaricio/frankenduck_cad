@@ -253,9 +253,13 @@ def thickness(m, limit, spacing=0.5, seed=1):
     return findings, summary
 
 
+# A mesh fold may cross a section outline over at most this area (deflection is 0.02 mm).
+FOLD_AREA_MM2 = 1e-3
+
+
 def _slice(m, z):
     """Section of a closed mesh at height z, as one shapely region (even-odd over its closed outlines)."""
-    from shapely import LineString, MultiLineString, Polygon
+    from shapely import LineString, MultiLineString, Polygon, make_valid
     from shapely.ops import linemerge
     v, f = m['v'], m['f']
     h = v[f][:, :, 2] - z
@@ -272,8 +276,18 @@ def _slice(m, z):
             segments.append(points)
     region = Polygon()
     for line in getattr(linemerge(MultiLineString(segments)), 'geoms', None) or [linemerge(MultiLineString(segments))]:
-        assert line.is_ring, f'open section outline at z {z:.3f}: the mesh is not closed'
-        region = region.symmetric_difference(Polygon(line).buffer(0))
+        assert line.is_closed, f'open section outline at z {z:.3f}: the mesh is not closed'
+        loop = Polygon(line)
+        if not line.is_simple:
+            # A solid's section never crosses itself; a crossing is a fold in the
+            # triangulation. Accept it only when the folded lobes are mesh-scale.
+            pieces = sorted((g for g in getattr(make_valid(loop), 'geoms', [make_valid(loop)])
+                             if g.geom_type in ('Polygon', 'MultiPolygon')), key=lambda g: -g.area)
+            folded = sum(g.area for g in pieces[1:])
+            assert pieces and folded <= FOLD_AREA_MM2, \
+                f'self-crossing section outline at z {z:.3f}: {folded:.6f} mm2 beyond the main loop'
+            loop = pieces[0]
+        region = region.symmetric_difference(loop.buffer(0))
     return region
 
 
@@ -665,12 +679,13 @@ def hole_owners(found, joints):
 
 # Accepted problems
 
-def judge(check, findings, accepted):
+def judge(check, findings, accepted, max_side=AREA_MAX_SIDE):
     """Findings of one check against its named accepted areas.
 
     A finding is accepted when its box lies inside an area of the same check.
     Every area must cover a finding, name a reason, stay within AREA_MARGIN of
-    the findings it covers and keep each side under AREA_MAX_SIDE.
+    the findings it covers and keep each side under max_side (AREA_MAX_SIDE
+    unless a part's configuration states a longer limit for long straight edges).
     """
     areas = [a for a in accepted if a['check'] == check]
     for f in findings:
@@ -679,7 +694,7 @@ def judge(check, findings, accepted):
     for a in areas:
         covered = [f for f in findings if f['accepted_as'] == a['name']]
         tight = bool(covered) and _inside(a['box'], _grow(_union([f['box'] for f in covered]), AREA_MARGIN))
-        small = max(a['box'][i + 3] - a['box'][i] for i in range(3)) <= AREA_MAX_SIDE
+        small = max(a['box'][i + 3] - a['box'][i] for i in range(3)) <= max_side
         rows.append(dict(name=a['name'], reason=a.get('reason', ''), box=a['box'], covers=len(covered), tight=tight,
                          small=small, passed=bool(covered and tight and small and a['name'] and a.get('reason'))))
     open_findings = [f for f in findings if not f['accepted_as']]
@@ -762,6 +777,18 @@ def self_test():
            abs(sum(f['volume_mm3'] for f in asym) - 2 * 0.8 * 20 * 8) < 1.0, not symmetry(mesh(fx['geometry_good'])))
     expect('geometry.symmetry', 'symmetric block moved 0.1 mm along X', 'both X faces differ',
            len(symmetry(mesh(fx['geometry_shifted']))) == 2)
+    # A prism whose section is an uneven bow tie: its outline crosses itself at
+    # (1.2, 1.2), away from every mesh node, leaving 1.8 and 0.8 mm2 lobes.
+    tie = np.array([(0, 0), (2, 2), (2, 0), (0, 3)], float)
+    tv = np.array([(x, y, z) for z in (0.0, 1.0) for x, y in tie])
+    tf = np.array([t for i in range(4) for t in ((i, (i + 1) % 4, 4 + i), ((i + 1) % 4, 4 + (i + 1) % 4, 4 + i))])
+    try:
+        _slice(dict(v=tv, f=tf), 0.5)
+        fold = False
+    except AssertionError as error:
+        fold = 'self-crossing' in str(error)
+    expect('geometry.sections', 'uneven bow-tie prism, 1.8 and 0.8 mm2 lobes', 'self-crossing outline refused',
+           fold, not _slice(mesh(fx['geometry_good']), 1.0).is_empty)
     sharp, _ = edges(fx['edges_sharp'], 0.5)
     good, corner = edges(fx['edges_good'], 0.5)
     expect('edges.sharp', 'block rounded on its vertical edges only', 'sixteen sharp rim edges',
@@ -804,66 +831,98 @@ def self_test():
     return rows
 
 
-# The stick pod
+# The Zeee 2S holder
 
-def _pod_joints(sp):
-    return [dict(name=f'pod screw x={x:+.0f}', screw=dict(sp.SCREW), insert=dict(sp.INSERT),
-                 seat=(x, y, sp.PLATE_TOP_Z), direction=(0.0, 0.0, -1.0), clamped=['trunk_base'], threaded='stick_pod',
-                 insert_top=(x, y, sp.PLATE_BOTTOM_Z), driver=dict(diameter=6.0, length=60.0)) for x, y in sp.SCREWS]
+def _holder_joints(lm, sp):
+    """The four arm screws: M3 x 10 down through the trunk plate into the holder inserts."""
+    return [dict(name=f'holder screw x={x:+.0f}', screw=dict(lm.SCREW), insert=dict(sp.INSERT),
+                 seat=(x, y, lm.SCREW_SEAT_Z), direction=(0.0, 0.0, -1.0), clamped=['trunk_base'], threaded='lipo_pod',
+                 insert_top=(x, y, lm.ARM_TOP), driver=dict(diameter=3.0, length=50.0)) for x, y in lm.SCREWS]
 
 
-def stick_pod():
-    """The printed stick pod against the quality checks, after the checkers prove themselves."""
+def _sections(holder, ls):
+    """Designed wall dimensions measured along rays: front panel, rear wall, floor and arms."""
+    import cadquery as cq
+
+    def depth(a, b):
+        return sum(e.Length() for e in cq.Edge.makeLine(cq.Vector(*a), cq.Vector(*b)).intersect(holder).Edges())
+    rows = []
+    front = ls.COWL_REAR_Y
+    # z 150 stays between the arms: their 3 mm root curves thicken the panel at X 12-29 mm.
+    for z, xs in ((100, (-17, 0, 17)), (140, (-25, 0, 25)), (150, (-8, 0, 8)), (159, (-22, -11, 0, 11, 22)), (164, (-15, 0, 15))):
+        for x in xs:
+            rows.append(dict(feature='front panel', at_mm=[x, z], nominal_mm=ls.COWL_WALL,
+                             measured_mm=depth((x, front - 3, z), (x, front + 0.1, z))))
+    for x, y in ((0, ls.PACK_CENTER_Y), (-15, 40.5), (15, 56.5)):   # inside the pack cavity
+        rows.append(dict(feature='floor', at_mm=[x, y], nominal_mm=ls.FLOOR_TOP - ls.BASE_BOTTOM,
+                         measured_mm=depth((x, y, ls.BASE_BOTTOM - 0.5), (x, y, ls.FLOOR_TOP + 0.01))))
+    for x, y in ((-27, 29), (-20.5, 33), (-14.5, 29), (14.5, 29), (20.5, 33), (27, 29)):
+        rows.append(dict(feature='arm', at_mm=[x, y], nominal_mm=8.0, measured_mm=depth((x, y, 150.4), (x, y, 158.5))))
+    for row in rows:
+        row['passed'] = abs(row['measured_mm'] - row['nominal_mm']) < 0.01
+    return rows
+
+
+def lipo_pod():
+    """The printed Zeee 2S holder against the quality checks, after the checkers prove themselves."""
     import cadquery as cq
     import sys
     sys.path[:0] = [str(ROOT / 'src')]
     from checks.common import read_scene
-    from lib import stick_pod as sp
+    from lib import lipo_shoulders as ls, lipo_mount as lm, stick_pod as sp
     started = time.monotonic()
     canaries = self_test()
     assert all(r['passed'] for r in canaries), [r for r in canaries if not r['passed']]
-    config = json.loads((ROOT / 'source/stick_pod_quality.json').read_text())
+    config = json.loads((ROOT / 'source/lipo_pod_quality.json').read_text())
     limits, accepted = config['limits'], config['accepted']
+    side = config.get('area_max_side_mm', AREA_MAX_SIDE)
     scene = read_scene(ROOT / 'STEP/frankenduck.step')
     shapes = {p.label: cq.Shape.cast(p.shape().wrapped) for p in scene.roots[0].children}
-    pod = shapes['stick_pod']
-    assert pod.isValid() and len(pod.Solids()) == 1, 'pod must be one valid solid'
-    m = mesh(pod)
+    holder = shapes['lipo_pod']
+    assert holder.isValid() and len(holder.Solids()) == 1, 'holder must be one valid solid'
+    m = mesh(holder)
 
     results = {}
-    geometry = topology(pod, limits['short_edge_mm'], limits['small_face_mm2'], limits['narrow_face_mm'])
+    geometry = topology(holder, limits['short_edge_mm'], limits['small_face_mm2'], limits['narrow_face_mm'])
     thin, wall = thickness(m, limits['min_wall_mm'])
-    results['geometry'] = judge('geometry', geometry, accepted)
-    results['wall'] = judge('wall', thin, accepted)
+    results['geometry'] = judge('geometry', geometry, accepted, side)
+    results['wall'] = judge('wall', thin, accepted, side)
     results['wall']['summary'] = wall
     s = config['symmetry']
-    results['symmetry'] = judge('symmetry', symmetry(m, s['step_mm'], s['tolerance_mm']), accepted)
-    edge_findings, inside = edges(pod, limits['min_edge_radius_mm'])
-    results['edges'] = judge('edges', edge_findings, accepted)
+    results['symmetry'] = judge('symmetry', symmetry(m, s['step_mm'], s['tolerance_mm']), accepted, side)
+    edge_findings, inside = edges(holder, limits['min_edge_radius_mm'])
+    results['edges'] = judge('edges', edge_findings, accepted, side)
     results['edges']['inside_corners'] = inside
-    results['voids'] = judge('voids', voids(pod), accepted)
+    results['voids'] = judge('voids', voids(holder), accepted, side)
     supports = {name: support(m, up, limits['support_angle_deg']) for name, up in ORIENTATIONS.items()}
-    joints = _pod_joints(sp)
-    parts = {name: shape for name, shape in shapes.items()}
+    joints = _holder_joints(lm, sp)
+    # The holder is screwed to the trunk before the body shells go on, so the
+    # shells are not in the driver path; the modeled screws and inserts are the
+    # parts under test and are left out.
+    parts = {name: shape for name, shape in shapes.items()
+             if name not in ('left_shell_native', 'right_shell_native', 'lipo_mount_screws', 'lipo_mount_inserts')}
     fasteners = [fastener(j, parts) for j in joints]
-    found_holes = holes(pod)
-    results['holes'] = judge('holes', hole_owners(found_holes, joints), accepted)
+    found_holes = holes(holder)
+    results['holes'] = judge('holes', hole_owners(found_holes, joints), accepted, side)
+    sections = _sections(holder, ls)
     unused = [a['name'] for a in accepted if a['check'] not in results]
-    report = dict(document_sha256=scene.document_hash, units='mm', part='stick_pod (stick_pod_native)',
-                  frame='world; the pod is placed with an identity transform', limits=limits,
+    report = dict(document_sha256=scene.document_hash, units='mm', part='lipo_pod (lipo_pod_native)',
+                  frame='world; the holder is placed with an identity transform', limits=limits, area_max_side_mm=side,
                   self_test=canaries, mesh=dict((k, m[k]) for k in ('mesh_volume_mm3', 'solid_volume_mm3')),
                   support_by_build_direction=supports, holes_found=found_holes, fasteners=fasteners,
-                  unknown_accepted_checks=unused, **{k: v for k, v in results.items()},
+                  sections=sections, unknown_accepted_checks=unused, **{k: v for k, v in results.items()},
                   seconds=time.monotonic() - started,
-                  coverage='Stick pod only, as saved in the assembly. Checkers prove themselves on known-error fixtures '
-                           'first. Short edges, small and narrow faces, ray-cast wall thickness, mirror symmetry of the whole pod on 0.25 mm slices, sharp '
-                           'edges and curvature radius, closed voids, support area for six build directions (reported), '
-                           'every hole owned by a fastener or a named reason, and the two bd_warehouse M3 screws with '
-                           'CNC Kitchen inserts (clearance, seat, alignment, pilot, wall, engagement, tip and driver path). '
+                  coverage='Zeee 2S holder only, as saved in the assembly. Checkers prove themselves on known-error fixtures '
+                           'first. Short edges, small and narrow faces, ray-cast wall thickness, mirror symmetry on 0.25 mm '
+                           'slices, sharp edges and curvature radius, closed voids, support area for six build directions '
+                           '(reported), every hole owned by a fastener or a named reason, the four bd_warehouse M3 x 10 '
+                           'screws with CNC Kitchen inserts (clearance, seat, alignment, pilot, wall, engagement, tip and '
+                           'driver path with the shells off), and the designed front panel, floor and arm sections. '
                            'No slicing, strength or physical fit test.')
     report['passed'] = (all(r['passed'] for r in results.values()) and all(f['passed'] for f in fasteners)
-                        and not unused)
-    (ROOT / 'reports/latest/stick_pod_quality.json').write_text(json.dumps(report, indent=2, default=float) + '\n')
-    print({k: (v['open'], len(v['areas'])) for k, v in results.items()}, [f['problems'] for f in fasteners])
-    assert report['passed'], 'stick pod quality findings; see reports/latest/stick_pod_quality.json'
+                        and all(r['passed'] for r in sections) and not unused)
+    (ROOT / 'reports/latest/lipo_pod_quality.json').write_text(json.dumps(report, indent=2, default=float) + '\n')
+    print({k: (v['open'], len(v['areas'])) for k, v in results.items()}, [f['problems'] for f in fasteners],
+          [r for r in sections if not r['passed']])
+    assert report['passed'], 'holder quality findings; see reports/latest/lipo_pod_quality.json'
     return report

@@ -73,7 +73,22 @@ The 4 mm kit screws are too short for the new 2.4 mm bracket grip plus
 1.75 mm PCB. Four M2 x 6 screws give 1.85 mm nominal thread engagement.
 Check the actual heatsink thread depth before choosing the final screws.
 
+## Zeee 2S LiPo battery
+
+The default battery is a Zeee 2S 2200 mAh LiPo pack in a printed holder behind
+the trunk plate. The holder is open at the top with no lid; the pack lifts
+68 mm and then withdraws 35 mm rearward. Two integral arms are screwed up to the
+trunk plate with four M3 × 10 screws into heat-set inserts, at the four original
+carrier holes. The holder's front panel, rear wall and closed side shoulders
+follow the body-shell silhouette, and both body shells are relieved round it
+with a 0.4 mm gap. The pack is a reference model at its published
+73 × 34 × 18.5 mm size, not a measurement. Geometry, datums, assembly order,
+checks and open points are in [lipo-battery.md](lipo-battery.md).
+
 ## PARKSIDE battery components
+
+Neither PARKSIDE battery is in the default assembly. Both models stay as
+inactive, cataloged references.
 
 `src/parts/parkside_pap_204_a1.py` provides the PARKSIDE PAP 204 A1, 20 V 4 Ah,
 as one selectable component with 66 solids and seven face colors. It is a
@@ -154,16 +169,23 @@ photos:
 - The x12 case has a straight slot behind each latch arm instead of the sloped
   step, and is 1 to 3 mm wider than the photographed battery.
 
-## PARKSIDE stick pod
+## PARKSIDE stick pod (retired)
 
-This variant replaces the PAP 204 A1 backpack with the PAPK 12 A4 X12V stick
+The Zeee 2S holder replaced the stick pod as the default. Commit `e883d4e` is
+the last revision with the stick pod in the assembly. `src/lib/stick_pod.py`
+stays because the holder reuses its fairing, socket and shell-relief
+construction; `stick_pod_native` and the stick battery remain inactive in the
+catalog. The text below describes that last stick pod revision. Its checks no
+longer run, and its `x12_*` review volumes were removed from the catalog.
+
+The stick pod replaced the PAP 204 A1 backpack with the PAPK 12 A4 X12V stick
 battery. The backpack revision stays at commit `a94355e` for comparison.
 
 The stick stands cap down behind the trunk plate in one printed pod. The pod's
 fairing continues the body's back line and closes in a low rounded dome over the
 stick. The red cap, the collar and both release buttons stay below the body.
 World +Y is rearward and +Z upward. `src/lib/stick_pod.py` owns the geometry;
-`source/assembly_data.json` records the placement and the `battery_release`
+`source/assembly_data.json` recorded the placement and the `battery_release`
 slider. The placement is a pure translation: stick-local x, y and z are world X,
 Y − 58 and Z − 83.
 
@@ -171,8 +193,8 @@ Y − 58 and Z − 83.
 | --- | --- |
 | Battery world bounds X / Y / Z | ±22.59 / 32.27–83.72 / 81.5–163.5 mm |
 | Pod world bounds X / Y / Z | ±30.5 / 21.0–87.3 / 119.8–170.8 mm |
-| Pod and socket walls | 2.5 mm |
-| Socket clearance round the stick | 0.6 mm; socket top 2.5 mm below the stick top, 2.4 mm under the dome |
+| Pod outer cover / structural socket | 1.2 mm / 2.5 mm; original 2.5 mm lower skirt retained through the latch pocket tops, blending to 1.2 mm by world Z = 133 mm |
+| Socket clearance round the stick | 0.6 mm; socket top 2.5 mm below the stick top, clear of the dome |
 | Pod seat over the collar rim | 0.3 mm; the pod's lower edge is flat at this level |
 | Latch lips | Top 0.2 mm under the hook catch; 0.8 mm engagement |
 | Hook flex room | 1.5 mm behind each hook |
@@ -193,10 +215,22 @@ Y − 58 and Z − 83.
 The fairing is one cubic B-spline surface. At the seat it follows the cap
 outline grown 0.8 mm; up to stick-local z 50 it morphs into a superellipse box
 section with one smootherstep, rises straight to z 74 and closes in a
-superellipse dome at the apex. Its smallest radius is about 3 mm, so the 2.5 mm
-wall is a true normal offset. The surface is split into four patches: OCCT's
+superellipse dome at the apex. Its smallest radius is about 3 mm. The broad cover uses a 1.2 mm inward normal
+offset. The lower skirt retains the original 2.5 mm offset through world
+Z = 126.8 mm, then smoothly transitions to 1.2 mm by Z = 133 mm. The lower
+seat, socket, latch geometry and mounting tongue retain their original stock. The surface is split into four patches: OCCT's
 point classifier misjudges some outside points against one closed face, which
 made distance checks report false contacts.
+
+The last thinning review was `scratch/stick-pod-thin-v1/assembly.step`, built
+from the accepted shell-fastener V4 assembly. The exterior surface, rounds,
+battery placement, fit cavity and screw interfaces are unchanged. The source
+separates the cover wall from the structural socket wall; thinning the entire
+part to the body shell's 1 mm would also weaken its battery supports. It was
+never exported for printing before the stick pod was retired. The local
+checks measure cover walls, protected support regions, topology and nearby
+clearances. They do not establish physical battery retention, impact strength
+or print readiness, and do not repeat a full robot motion sweep.
 
 The socket tube is wider than the fairing at the front, so the fairing is open
 there into the body above stick-local z 58. The cut faces follow the wall
@@ -211,7 +245,8 @@ screws from above through the shells' top service opening; a 3 mm driver has
 60 mm of free length above each head. The trunk keeps its original geometry,
 with the four obsolete carrier bores filled and the two screw holes added. The
 shells keep the original outline and closed rear top return. They are cut round
-the pod envelope with a 0.4 mm gap and stop 0.3 mm short of the centre plane.
+the pod envelope with a 0.4 mm gap and stop 0.3 mm short of the centre plane,
+except at the two [internal shell ties](body-shells.md) that meet at the seam.
 
 The stick's + and − contacts face the front sides. Their slots run through the
 socket wall and the front opening into the body, so a later adapter can
@@ -221,7 +256,8 @@ to the body. The XT60 bay is on the +X side between the hip-yaw servo
 and the pod, beside the − contact slot. It holds a mated XT60 pair (nominally
 8.2 × 15.5 × 23.5 mm) with its axis vertical. Lead room continues 9 mm above
 it beside the trunk plate's rear edge, and a 5.4 × 5 mm channel runs under it
-toward the centre. No adapter, terminal or wiring is designed. The review
+toward the centre. No adapter, terminal or wiring is designed; the
+[power study](power.md) estimates the current and proposes the wiring. The former review
 volumes `x12_plus_contact_allowance`, `x12_minus_contact_allowance`,
 `x12_t_contact_allowance`, `x12_top_bay` and `x12_xt60_bay` keep these spaces
 free.
@@ -246,9 +282,12 @@ by less than 0.002 mm. Real
 infill, wiring and the cells' mass distribution will differ. The walking policy
 in microduck_rl is not updated.
 
-### Checks
+### Checks (retired)
 
-`assembly.battery_pod` checks the saved trunk, pod and shells as valid single
+These checks ran while the stick pod was the default. The check IDs now cover
+the Zeee 2S holder; see [lipo-battery.md](lipo-battery.md#checks).
+
+`assembly.battery_pod` checked the saved trunk, pod and shells as valid single
 solids; the seated battery bounds; the shell split, shell-to-pod and battery
 gaps; static overlaps of the five changed parts with every occurrence, where the
 pod may touch only the trunk; the tongue contact area; both screw bores, head
@@ -256,14 +295,14 @@ seats, insert pilots, 1.5 mm insert walls, shanks and driver paths; the five
 review volumes; and pod or shell cover over every 2 mm grid point of the stick
 top. Numerical positive-overlap tolerance is 1e-5 mm³.
 
-`battery_pod.motion` checks all 1,702 keyframes of `walk_sit_stand_walk_sit`:
+`battery_pod.motion` checked all 1,702 keyframes of `walk_sit_stand_walk_sit`:
 30 leg occurrences against the battery, pod, trunk and both shells, totaling
 255,300 pairs. Conservative bounding volumes reject pairs separated by at least
 2 mm; nearby pairs use exact CAD distances. No pair comes within 2 mm. This
 covers the recorded keyframes, not continuous interpolation or every
 combination of the declared joint ranges.
 
-`battery_pod.removal` checks the full 95 mm straight-down release at the home
+`battery_pod.removal` checked the full 95 mm straight-down release at the home
 pose. Battery material inside the stick outline grown 0.3 mm stays in that
 column on the way down. The column meets no part; it stays 0.3 mm from the pod,
 2.99 mm from the trunk and 4.19 mm from the shells. Of the 23 battery pieces
@@ -275,8 +314,8 @@ that overlap lies inside the 0.8 mm lip zone, so each hook flexes inward at most
 outside each button is free. The hook travel is sampled; arm bending, button
 force and physical fit are not modelled.
 
-`battery_pod.quality` (`checks/part_quality.py`; limits and accepted areas in
-`source/stick_pod_quality.json`) checks the saved pod as a 0.4 mm nozzle FDM
+`battery_pod.quality` (`checks/part_quality.py`; limits and accepted areas were in
+`source/stick_pod_quality.json`, removed with the check) checked the saved pod as a 0.4 mm nozzle FDM
 print. Each checker first finds the error in a part with a known error. It
 reports edges under 0.05 mm, faces under 0.05 mm² or narrower than 0.1 mm, and
 walls under 1.2 mm by rays from samples 0.5 mm apart; rays that leave a face at
@@ -292,12 +331,13 @@ for six build directions. Each accepted problem is a named box at most 40 mm a
 side and within 2 mm of its findings. The hidden socket mouth, latch pockets,
 contact slots, T window, socket top rim, the front opening's inner edge (OCCT
 cannot round it) and the insert pilots keep square edges, each with its reason
-recorded. `./cad review pod` renders views and exact sections into
-`review/stick_pod_quality/`; look at all of them after a geometry change.
+recorded. `./cad review pod` rendered views and exact sections into
+`review/stick_pod_quality/`, which keeps the last pictures; it now renders the Zeee 2S
+holder into `review/lipo_pod_quality/`.
 
 ## Joints and poses
 
-The assembly declares 15 revolute joints, 57 rigid attachments, `zero` and
+The assembly declares 15 revolute joints, 88 rigid attachments, `zero` and
 `home` pose presets, and a non-looping walking/seated animation. The jaw's
 ±180-degree viewer range is a display range; its physical travel has not been
 measured. The model's 15 servo representations describe the CAD assembly.

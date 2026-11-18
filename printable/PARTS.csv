@@ -1,53 +1,53 @@
 filename,stl_filename,model,quantity,material_hint,print_release,occurrences
-3mf/ankle_bearing_inner_cap_left_native.3mf,stl/ankle_bearing_inner_cap_left_native.stl,ankle_bearing_inner_cap_left_native,1,unspecified,unreviewed,#o1.41:ankle_bearing_inner_cap_left
-3mf/ankle_bearing_inner_cap_left_native_right.3mf,stl/ankle_bearing_inner_cap_left_native_right.stl,ankle_bearing_inner_cap_left_native_right,1,unspecified,unreviewed,#o1.52:ankle_bearing_inner_cap_right
-3mf/ankle_bearing_outer_keeper_left_native.3mf,stl/ankle_bearing_outer_keeper_left_native.stl,ankle_bearing_outer_keeper_left_native,1,pla,unreviewed,#o1.40:ankle_bearing_outer_keeper_left
-3mf/ankle_bearing_outer_keeper_left_native_right.3mf,stl/ankle_bearing_outer_keeper_left_native_right.stl,ankle_bearing_outer_keeper_left_native_right,1,pla,unreviewed,#o1.51:ankle_bearing_outer_keeper_right
-3mf/ankle_eye_left_native.3mf,stl/ankle_eye_left_native.stl,ankle_eye_left_native,1,pla,unreviewed,#o1.39:ankle_eye_left
-3mf/ankle_eye_left_native_right.3mf,stl/ankle_eye_left_native_right.stl,ankle_eye_left_native_right,1,pla,unreviewed,#o1.50:ankle_eye_right
-3mf/ankle_left_native.3mf,stl/ankle_left_native.stl,ankle_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.38:ankle_left
-3mf/ankle_left_native_right.3mf,stl/ankle_left_native_right.stl,ankle_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.49:ankle_right
+3mf/ankle_bearing_inner_cap_left_native.3mf,stl/ankle_bearing_inner_cap_left_native.stl,ankle_bearing_inner_cap_left_native,1,unspecified,unreviewed,#o1.40:ankle_bearing_inner_cap_left
+3mf/ankle_bearing_inner_cap_left_native_right.3mf,stl/ankle_bearing_inner_cap_left_native_right.stl,ankle_bearing_inner_cap_left_native_right,1,unspecified,unreviewed,#o1.51:ankle_bearing_inner_cap_right
+3mf/ankle_bearing_outer_keeper_left_native.3mf,stl/ankle_bearing_outer_keeper_left_native.stl,ankle_bearing_outer_keeper_left_native,1,pla,unreviewed,#o1.39:ankle_bearing_outer_keeper_left
+3mf/ankle_bearing_outer_keeper_left_native_right.3mf,stl/ankle_bearing_outer_keeper_left_native_right.stl,ankle_bearing_outer_keeper_left_native_right,1,pla,unreviewed,#o1.50:ankle_bearing_outer_keeper_right
+3mf/ankle_eye_left_native.3mf,stl/ankle_eye_left_native.stl,ankle_eye_left_native,1,pla,unreviewed,#o1.38:ankle_eye_left
+3mf/ankle_eye_left_native_right.3mf,stl/ankle_eye_left_native_right.stl,ankle_eye_left_native_right,1,pla,unreviewed,#o1.49:ankle_eye_right
+3mf/ankle_left_native.3mf,stl/ankle_left_native.stl,ankle_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.37:ankle_left
+3mf/ankle_left_native_right.3mf,stl/ankle_left_native_right.stl,ankle_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.48:ankle_right
 3mf/bottom_head_shell_native.3mf,stl/bottom_head_shell_native.stl,bottom_head_shell_native,1,pla,unreviewed,#o1.9:bottom_head_shell_native
 3mf/electronics_deck_native.3mf,stl/electronics_deck_native.stl,electronics_deck_native,1,pla,unreviewed,#o1.5:electronics_deck_r02
 3mf/face_part_native.3mf,stl/face_part_native.stl,face_part_native,1,pla,unreviewed,#o1.14:face_part_native
 3mf/face_radxa_bracket_native.3mf,stl/face_radxa_bracket_native.stl,face_radxa_bracket_native,1,pla,unreviewed,#o1.6:face_radxa_bracket_r02
-3mf/foot_left_native_a.3mf,stl/foot_left_native_a.stl,foot_left_native_a,1,pla,unreviewed,#o1.43:foot_a_left
-3mf/foot_left_native_a_right.3mf,stl/foot_left_native_a_right.stl,foot_left_native_a_right,1,pla,unreviewed,#o1.54:foot_a_right
-3mf/foot_left_native_b.3mf,stl/foot_left_native_b.stl,foot_left_native_b,1,pla,unreviewed,#o1.44:foot_b_left
-3mf/foot_left_native_b_right.3mf,stl/foot_left_native_b_right.stl,foot_left_native_b_right,1,pla,unreviewed,#o1.55:foot_b_right
+3mf/foot_left_native_a.3mf,stl/foot_left_native_a.stl,foot_left_native_a,1,pla,unreviewed,#o1.42:foot_a_left
+3mf/foot_left_native_a_right.3mf,stl/foot_left_native_a_right.stl,foot_left_native_a_right,1,pla,unreviewed,#o1.53:foot_a_right
+3mf/foot_left_native_b.3mf,stl/foot_left_native_b.stl,foot_left_native_b,1,pla,unreviewed,#o1.43:foot_b_left
+3mf/foot_left_native_b_right.3mf,stl/foot_left_native_b_right.stl,foot_left_native_b_right,1,pla,unreviewed,#o1.54:foot_b_right
 3mf/head_frame_native.3mf,stl/head_frame_native.stl,head_frame_native,1,pla,unreviewed,#o1.2:head_frame_r05
-3mf/hip_left_native.3mf,stl/hip_left_native.stl,hip_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.34:hip_left
-3mf/hip_left_native_right.3mf,stl/hip_left_native_right.stl,hip_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.45:hip_right
+3mf/hip_left_native.3mf,stl/hip_left_native.stl,hip_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.33:hip_left
+3mf/hip_left_native_right.3mf,stl/hip_left_native_right.stl,hip_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.44:hip_right
 3mf/imu_yoke_bridge_native.3mf,stl/imu_yoke_bridge_native.stl,imu_yoke_bridge_native,1,pla,unreviewed,#o1.29:imu_yoke_bridge_native
 3mf/jaw_native.3mf,stl/jaw_native.stl,jaw_native,1,pla,unreviewed,#o1.8:jaw_r01
 3mf/jaw_soft_001_native.3mf,stl/jaw_soft_001_native.stl,jaw_soft_001_native,1,fdm-tpu,unreviewed,#o1.13:jaw_soft_001_native
-3mf/left_shell_native.3mf,stl/left_shell_native.stl,left_shell_native,1,pla,unreviewed,#o1.32:left_shell_native
-3mf/leg_left_native.3mf,stl/leg_left_native.stl,leg_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.37:leg_left
-3mf/leg_left_native_right.3mf,stl/leg_left_native_right.stl,leg_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.48:leg_right
+3mf/left_shell_native.3mf,stl/left_shell_native.stl,left_shell_native,1,pla,unreviewed,#o1.31:left_shell_native
+3mf/leg_left_native.3mf,stl/leg_left_native.stl,leg_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.36:leg_left
+3mf/leg_left_native_right.3mf,stl/leg_left_native_right.stl,leg_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.47:leg_right
 3mf/neck_001_native.3mf,stl/neck_001_native.stl,neck_001_native,1,pla,unreviewed,#o1.24:neck_001_native
 3mf/neck_002_native.3mf,stl/neck_002_native.stl,neck_002_native,1,pla,unreviewed,#o1.25:neck_002_native
 3mf/neck_internal_yoke_native.3mf,stl/neck_internal_yoke_native.stl,neck_internal_yoke_native,1,pla,unreviewed,#o1.26:import_neck_internal_yoke
 3mf/neck_pitch_001_native.3mf,stl/neck_pitch_001_native.stl,neck_pitch_001_native,1,pla,unreviewed,#o1.23:neck_pitch_001_native
 3mf/noenoeil_native.3mf,stl/noenoeil_native.stl,noenoeil_native,1,pla,unreviewed,#o1.11:noenoeil_native
-3mf/right_shell_native.3mf,stl/right_shell_native.stl,right_shell_native,1,pla,unreviewed,#o1.33:right_shell_native
+3mf/right_shell_native.3mf,stl/right_shell_native.stl,right_shell_native,1,pla,unreviewed,#o1.32:right_shell_native
 3mf/roll_front_bulkhead_native.3mf,stl/roll_front_bulkhead_native.stl,roll_front_bulkhead_native,1,pla,unreviewed,#o1.3:roll_front_bulkhead_r05
 3mf/soft_mouth_top_native.3mf,stl/soft_mouth_top_native.stl,soft_mouth_top_native,1,fdm-tpu,unreviewed,#o1.12:soft_mouth_top_native
-3mf/sole_left_native.3mf,stl/sole_left_native.stl,sole_left_native,1,fdm-tpu,unreviewed,#o1.42:sole_left
-3mf/sole_left_native_right.3mf,stl/sole_left_native_right.stl,sole_left_native_right,1,fdm-tpu,unreviewed,#o1.53:sole_right
+3mf/sole_left_native.3mf,stl/sole_left_native.stl,sole_left_native,1,fdm-tpu,unreviewed,#o1.41:sole_left
+3mf/sole_left_native_right.3mf,stl/sole_left_native_right.stl,sole_left_native_right,1,fdm-tpu,unreviewed,#o1.52:sole_right
 3mf/top_head_shell_native.3mf,stl/top_head_shell_native.stl,top_head_shell_native,1,pla,unreviewed,#o1.10:top_head_shell_native
 3mf/trunk_base_native.3mf,stl/trunk_base_native.stl,trunk_base_native,1,pla,unreviewed,#o1.1:trunk_base
 3mf/ubec_clamp_native.3mf,stl/ubec_clamp_native.stl,ubec_clamp_native,1,pla,unreviewed,#o1.7:ubec_clamp_r02
-3mf/upper_leg_left_native.3mf,stl/upper_leg_left_native.stl,upper_leg_left_native,1,pla,unreviewed,#o1.36:upper_leg_left
-3mf/upper_leg_left_native_right.3mf,stl/upper_leg_left_native_right.stl,upper_leg_left_native_right,1,pla,unreviewed,#o1.47:upper_leg_right
-3mf/yaw2roll_left_native.3mf,stl/yaw2roll_left_native.stl,yaw2roll_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.35:yaw2roll_left
-3mf/yaw2roll_left_native_right.3mf,stl/yaw2roll_left_native_right.stl,yaw2roll_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.46:yaw2roll_right
+3mf/upper_leg_left_native.3mf,stl/upper_leg_left_native.stl,upper_leg_left_native,1,pla,unreviewed,#o1.35:upper_leg_left
+3mf/upper_leg_left_native_right.3mf,stl/upper_leg_left_native_right.stl,upper_leg_left_native_right,1,pla,unreviewed,#o1.46:upper_leg_right
+3mf/yaw2roll_left_native.3mf,stl/yaw2roll_left_native.stl,yaw2roll_left_native,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.34:yaw2roll_left
+3mf/yaw2roll_left_native_right.3mf,stl/yaw2roll_left_native_right.stl,yaw2roll_left_native_right,1,printed polymer; original MuJoCo color; material and slicer profile unselected,unreviewed,#o1.45:yaw2roll_right
 3mf/yaw_roll_link_native.3mf,stl/yaw_roll_link_native.stl,yaw_roll_link_native,1,pla,unreviewed,#o1.4:yaw_roll_link_r05
-3mf/stick_pod_native.3mf,stl/stick_pod_native.stl,stick_pod_native,1,pla,unreviewed,#o1.73:stick_pod
-3mf/bearing_carrier_left.3mf,stl/bearing_carrier_left.stl,bearing_carrier_left,1,black printed polymer; unselected,unreviewed,#o1.74:bearing_carrier_left
-3mf/bearing_carrier_right.3mf,stl/bearing_carrier_right.stl,bearing_carrier_right,1,black printed polymer; unselected,unreviewed,#o1.77:bearing_carrier_right
-3mf/bearing_roll_adapter_left.3mf,stl/bearing_roll_adapter_left.stl,bearing_roll_adapter_left,1,black printed polymer; unselected,unreviewed,#o1.75:bearing_roll_adapter_left
-3mf/bearing_roll_adapter_right.3mf,stl/bearing_roll_adapter_right.stl,bearing_roll_adapter_right,1,black printed polymer; unselected,unreviewed,#o1.78:bearing_roll_adapter_right
-3mf/bearing_shared_yaw_adapter.3mf,stl/bearing_shared_yaw_adapter.stl,bearing_shared_yaw_adapter,1,black printed polymer; unselected,unreviewed,#o1.80:bearing_shared_yaw_adapter
-3mf/bearing_head_adapter.3mf,stl/bearing_head_adapter.stl,bearing_head_adapter,2,black printed polymer,unreviewed,#o1.93:bearing_head_yaw_adapter;#o1.95:bearing_head_roll_adapter
-3mf/passive_leg_support_left.3mf,stl/passive_leg_support_left.stl,passive_leg_support_left,1,black printed polymer; unselected,unreviewed,#o1.81:passive_leg_support_left
-3mf/passive_leg_support_right.3mf,stl/passive_leg_support_right.stl,passive_leg_support_right,1,black printed polymer; unselected,unreviewed,#o1.82:passive_leg_support_right
+3mf/bearing_carrier_left.3mf,stl/bearing_carrier_left.stl,bearing_carrier_left,1,black printed polymer; unselected,unreviewed,#o1.73:bearing_carrier_left
+3mf/bearing_carrier_right.3mf,stl/bearing_carrier_right.stl,bearing_carrier_right,1,black printed polymer; unselected,unreviewed,#o1.76:bearing_carrier_right
+3mf/bearing_roll_adapter_left.3mf,stl/bearing_roll_adapter_left.stl,bearing_roll_adapter_left,1,black printed polymer; unselected,unreviewed,#o1.74:bearing_roll_adapter_left
+3mf/bearing_roll_adapter_right.3mf,stl/bearing_roll_adapter_right.stl,bearing_roll_adapter_right,1,black printed polymer; unselected,unreviewed,#o1.77:bearing_roll_adapter_right
+3mf/bearing_shared_yaw_adapter.3mf,stl/bearing_shared_yaw_adapter.stl,bearing_shared_yaw_adapter,1,black printed polymer; unselected,unreviewed,#o1.79:bearing_shared_yaw_adapter
+3mf/bearing_head_adapter.3mf,stl/bearing_head_adapter.stl,bearing_head_adapter,2,black printed polymer,unreviewed,#o1.92:bearing_head_yaw_adapter;#o1.94:bearing_head_roll_adapter
+3mf/passive_leg_support_left.3mf,stl/passive_leg_support_left.stl,passive_leg_support_left,1,black printed polymer; unselected,unreviewed,#o1.80:passive_leg_support_left
+3mf/passive_leg_support_right.3mf,stl/passive_leg_support_right.stl,passive_leg_support_right,1,black printed polymer; unselected,unreviewed,#o1.81:passive_leg_support_right
+3mf/lipo_pod_native.3mf,stl/lipo_pod_native.stl,lipo_pod_native,1,pla,unreviewed,#o1.72:lipo_pod

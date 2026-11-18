@@ -55,7 +55,6 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [yaw2roll_left_native.3mf](3mf/yaw2roll_left_native.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
 | [yaw2roll_left_native_right.3mf](3mf/yaw2roll_left_native_right.3mf) | 1 | printed polymer; original MuJoCo color; material and slicer profile unselected |
 | [yaw_roll_link_native.3mf](3mf/yaw_roll_link_native.3mf) | 1 | pla |
-| [stick_pod_native.3mf](3mf/stick_pod_native.3mf) | 1 | pla |
 | [bearing_carrier_left.3mf](3mf/bearing_carrier_left.3mf) | 1 | black printed polymer; unselected |
 | [bearing_carrier_right.3mf](3mf/bearing_carrier_right.3mf) | 1 | black printed polymer; unselected |
 | [bearing_roll_adapter_left.3mf](3mf/bearing_roll_adapter_left.3mf) | 1 | black printed polymer; unselected |
@@ -64,6 +63,7 @@ The [manifest](manifest.json) records source/catalog hashes, dimensions, volumes
 | [bearing_head_adapter.3mf](3mf/bearing_head_adapter.3mf) | 2 | black printed polymer |
 | [passive_leg_support_left.3mf](3mf/passive_leg_support_left.3mf) | 1 | black printed polymer; unselected |
 | [passive_leg_support_right.3mf](3mf/passive_leg_support_right.3mf) | 1 | black printed polymer; unselected |
+| [lipo_pod_native.3mf](3mf/lipo_pod_native.3mf) | 1 | pla |
 
 ## STL copies
 

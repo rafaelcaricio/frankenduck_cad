@@ -150,8 +150,12 @@ def make():
     model.add('yoke_clearances', group(rec), op='cut')
     model.material('pla', color='#99deef')
     result = model.result()
-    from lib.stick_pod import integrate_trunk
-    return integrate_trunk(to_build123d(model, 'trunk_base_native'))
+    from lib.stick_pod import integrate_trunk, native, world
+    from lib.lipo_mount import trunk_frame
+    trunk = integrate_trunk(to_build123d(model, 'trunk_base_native'))
+    # Zeee 2S holder: the pod tongue holes are filled again and the plate takes
+    # the holder's two arms on the four original carrier hole positions.
+    return native(trunk_frame(world(trunk)), 'trunk_base_native')
 
 
 @step(out="../../STEP/parts/trunk_base_native.step")

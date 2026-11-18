@@ -1,11 +1,18 @@
 # Frankenduck CAD
 
+![The Frankenduck assembly at its rest pose](docs/images/frankenduck.png)
+
 Parametric CAD for the Frankenduck robot, built with Text to CAD. The project
 includes the complete assembly, editable part models, purchased-component
 representations, joint animation and individual files for 3D printing.
 
+Frankenduck is inspired by the [Microduck](https://github.com/pollen-robotics/microduck)
+from [Pollen Robotics](https://github.com/pollen-robotics). All rights to the
+Microduck design belong to Pollen Robotics.
+
 **Here to print?** Start with [printable/](printable/README.md). It contains
-44 individual millimetre 3MF files and a [parts list](printable/PARTS.csv).
+52 individual millimetre 3MF files with matching STL files and a
+[parts list](printable/PARTS.csv).
 
 ## Build and view
 
@@ -41,7 +48,7 @@ after editing a part, then run the checks that cover the change.
 | `./cad parts` | List component roles, quantities and print selection |
 | `./cad export print` | Create or reuse the complete printable bundle |
 | `./cad review radxa` | Prepare the colored GPIO and cooler clearance model |
-| `./cad review pod` | Render stick pod views and exact sections with quality findings |
+| `./cad review pod` | Render battery holder views and exact sections with quality findings |
 | `./cad view` | Start or reuse the LAN viewer |
 
 Passing checks are reused while their inputs stay unchanged. Builds, print
@@ -50,15 +57,15 @@ check or export when a deliberate rerun is needed. Current reports and logs
 are in `reports/latest/`.
 
 The full suite checks the saved rest pose, all 1,702 recorded walking/sitting
-keyframes for battery clearance, and the straight-down battery release at the
-home pose. It does not perform a continuous motion sweep or establish physical
+keyframes for battery clearance, and the battery's lift-and-rearward removal at
+the home pose. It does not perform a continuous motion sweep or establish physical
 fit, printed strength, cable bending or thermal performance.
 
 ## Parts and printing
 
 [source/components.json](source/components.json) defines each model's role,
 geometry fidelity, material hint and print status. The assembly contains
-44 printed parts and 29 purchased-component occurrences. Electronics, servos,
+53 printed parts and 51 purchased-component occurrences. Electronics, servos,
 horns, batteries and the heatsink are hardware representations. Colored
 clearance volumes belong only to the review model.
 
@@ -86,15 +93,16 @@ for individual jumper plugs and an upward cable path, plus a representation
 of the official Radxa 6530B cooler. Dimensions, fastener details and modeling
 assumptions are in [docs/design.md](docs/design.md).
 
-The assembly uses a PARKSIDE PAPK 12 A4 12 V stick battery. It stands cap down
-in a printed rump pod that continues the body's back line, held under the trunk
-plate by two M3 screws, and comes out straight down after pressing both release
-buttons. The battery is one selectable component with its own face colors and is
-excluded from the print set. Its outline, latch and contacts are approximate;
-physical fit and printed strength remain unverified. Openings and review volumes
-keep space for a later contact adapter and an XT60 plug. See
-[the stick pod design notes](docs/design.md#parkside-stick-pod). The PAP 204 A1
-backpack revision is commit `a94355e`.
+The assembly uses a Zeee 2S 2200 mAh LiPo pack in a printed holder behind the
+trunk plate. The holder is open at the top; the pack lifts out and then slides
+away rearward, with no lid or latch. Two holder arms are screwed to the trunk
+plate with four M3 screws into heat-set inserts. The holder and both 1 mm body
+shells keep the body's outline. The pack is a reference model at its published
+size and is excluded from the print set; physical fit, retention and printed
+strength remain unverified. See [the LiPo holder notes](docs/lipo-battery.md)
+and [the body shell notes](docs/body-shells.md). The PARKSIDE stick pod was the
+default up to commit `e883d4e`; the PAP 204 A1 backpack revision is commit
+`a94355e`.
 
 ## Repository layout
 
@@ -104,10 +112,12 @@ backpack revision is commit `a94355e`.
 | `source/` | Assembly declarations, component catalog, variants, fonts and component documentation |
 | `STEP/imported/` | Purchased-component STEP inputs used by the models |
 | `STEP/` | Generated assembly, component and review STEP files |
-| [printable/](printable/README.md) | Committed 3MF files, quantities and export manifest |
+| [printable/](printable/README.md) | Committed 3MF and STL files, quantities and export manifest |
 | [checks/registry.json](checks/registry.json) | Check purposes, dependencies and coverage |
 | [tools/](tools/README.md) | Workflow, print export and viewer support |
 | `review/` | Model images |
+| `docs/images/` | README render of `STEP/frankenduck.step`, made with `.venv/bin/cadgen step snapshot STEP/frankenduck.step docs/images/frankenduck.png --render '{"quality":"final","camera":"45:20"}' --width 1200 --height 1200` |
+| [jigs/](jigs/README.md) | Printed aids for measuring the robot (hip roll foot board) |
 | `reports/latest/` | Generated check results and logs |
 | `scratch/` | Ignored temporary investigations |
 

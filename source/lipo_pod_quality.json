@@ -1,0 +1,426 @@
+{
+  "part": "lipo_pod",
+  "units": "mm",
+  "frame": "world; the holder is placed with an identity transform",
+  "limits": {
+    "min_wall_mm": 0.9,
+    "min_edge_radius_mm": 0.5,
+    "short_edge_mm": 0.05,
+    "small_face_mm2": 0.05,
+    "narrow_face_mm": 0.1,
+    "support_angle_deg": 45.0
+  },
+  "symmetry": {
+    "plane": "X = 0 (world)",
+    "step_mm": 0.25,
+    "tolerance_mm": 0.05
+  },
+  "area_max_side_mm": 65.0,
+  "accepted": [
+    {
+      "check": "edges",
+      "name": "arm clamp face, left",
+      "reason": "Flat top of the mounting arm, clamped against the trunk plate underside. Its outline and the two 4 mm insert pilot mouths stay square so the face bears fully and the inserts seat; the plate and shells cover it.",
+      "box": [
+        -29.05,
+        27.65,
+        158.4,
+        -11.95,
+        36.75,
+        158.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "arm clamp face, right",
+      "reason": "Flat top of the mounting arm, clamped against the trunk plate underside. Its outline and the two 4 mm insert pilot mouths stay square so the face bears fully and the inserts seat; the plate and shells cover it.",
+      "box": [
+        11.95,
+        27.65,
+        158.4,
+        29.05,
+        36.75,
+        158.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "insert tip passages, left",
+      "reason": "The 3 mm screw tip passages below the insert pilots, at the pilot floor and the arm underside. The fastener check needs whole cylinders; the edges are under the arm, inside the body.",
+      "box": [
+        -26.55,
+        30.15,
+        150.4,
+        -16.45,
+        33.25,
+        152.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "insert tip passages, right",
+      "reason": "The 3 mm screw tip passages below the insert pilots, at the pilot floor and the arm underside. The fastener check needs whole cylinders; the edges are under the arm, inside the body.",
+      "box": [
+        16.45,
+        30.15,
+        150.4,
+        26.55,
+        33.25,
+        152.5
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel bottom edge",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Bottom front edge of the lower holder block, below the body shells and facing the hip servos, with the short corner edges where it meets the side fairing. Square 90 degree print edges with the full 1.8 mm panel and 2.4 mm floor behind them; no thin material.",
+      "box": [
+        -22.649,
+        36.65,
+        88.35,
+        22.649,
+        38.55,
+        88.95
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel lower side edge, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Slanted side edge of the 1.8 mm front panel on the lower holder block, where it meets the side fairing below the shells. Square 90 degree print edge; no thin material.",
+      "box": [
+        -29.794,
+        36.65,
+        88.85,
+        -21.344,
+        36.75,
+        133.05
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel lower side edge, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Slanted side edge of the 1.8 mm front panel on the lower holder block, where it meets the side fairing below the shells. Square 90 degree print edge; no thin material.",
+      "box": [
+        21.344,
+        36.65,
+        88.85,
+        29.794,
+        36.75,
+        133.05
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel upper side edge, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Vertical side edge of the 1.8 mm front panel beside the shell relief, with the two 0.17 mm ends of the arm root curves. Square 90 degree print edge; no thin material.",
+      "box": [
+        -29.793,
+        36.619,
+        132.95,
+        -12.323,
+        36.75,
+        174.519
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel upper side edge, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Vertical side edge of the 1.8 mm front panel beside the shell relief, with the two 0.17 mm ends of the arm root curves. Square 90 degree print edge; no thin material.",
+      "box": [
+        12.323,
+        36.619,
+        132.95,
+        29.793,
+        36.75,
+        174.519
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "front panel top edge",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Top edge of the front panel on the body roof line, meeting the shell relief across the seam. Square 90 degree print edge; no thin material.",
+      "box": [
+        -29.791,
+        36.65,
+        174.419,
+        29.791,
+        36.75,
+        174.519
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "shoulder roof edge, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Outer edge of the closed side shoulder along its nominal 0.4 mm seam with the shell roof, from the front panel back to the rear cover. Square print edge; no thin material.",
+      "box": [
+        -30.55,
+        36.65,
+        154.55,
+        -26.188,
+        62.037,
+        174.519
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "shoulder roof edge, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Outer edge of the closed side shoulder along its nominal 0.4 mm seam with the shell roof, from the front panel back to the rear cover. Square print edge; no thin material.",
+      "box": [
+        26.188,
+        36.65,
+        154.55,
+        30.55,
+        62.037,
+        174.519
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "pack mouth lead-in",
+      "reason": "Designed 0.5 mm 45 degree lead-in chamfer round the pack cavity mouth. Its edges are 135 degrees, not knife edges, and guide the pack in.",
+      "box": [
+        -18.15,
+        38.45,
+        156.45,
+        18.15,
+        59.05,
+        157.05
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "rear lower corner, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Rear corner of the lower holder block below the shells, between the flat 1.8 mm rear wall and the side fairing, with its short bottom corner edges. Square 90 degree print edges; no thin material.",
+      "box": [
+        -25.145,
+        58.4,
+        88.35,
+        -21.344,
+        60.35,
+        128.05
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "rear lower corner, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Rear corner of the lower holder block below the shells, between the flat 1.8 mm rear wall and the side fairing, with its short bottom corner edges. Square 90 degree print edges; no thin material.",
+      "box": [
+        21.344,
+        58.4,
+        88.35,
+        25.145,
+        60.35,
+        128.05
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "rear cover side edge, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Side edge of the rear cover where it curves out to meet the shell relief, from Z 128 to 154.6 mm. Square print edge; no thin material.",
+      "box": [
+        -27.53,
+        60.25,
+        127.95,
+        -25.045,
+        62.24,
+        154.65
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "rear cover side edge, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Side edge of the rear cover where it curves out to meet the shell relief, from Z 128 to 154.6 mm. Square print edge; no thin material.",
+      "box": [
+        25.045,
+        60.25,
+        127.95,
+        27.53,
+        62.24,
+        154.65
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "fairing bottom round end, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The bottom round of the side fairing narrows to a point at its widest station (Y 48.5 mm): a point-sized sharp spot and its short split edge on the lower holder block; no thin material.",
+      "box": [
+        -24.75,
+        47.45,
+        87.85,
+        -22.65,
+        49.55,
+        89.95
+      ]
+    },
+    {
+      "check": "edges",
+      "name": "fairing bottom round end, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The bottom round of the side fairing narrows to a point at its widest station (Y 48.5 mm): a point-sized sharp spot and its short split edge on the lower holder block; no thin material.",
+      "box": [
+        22.648,
+        47.45,
+        87.804,
+        24.748,
+        49.55,
+        89.904
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "access opening top corner, left",
+      "reason": "0.044 mm edge where the side wall of the 49 mm rear access opening meets the front panel at the roof. Far below print resolution; there is no thin wall there.",
+      "box": [
+        -24.552,
+        38.45,
+        173.771,
+        -24.45,
+        38.55,
+        173.915
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "access opening top corner, right",
+      "reason": "0.044 mm edge where the side wall of the 49 mm rear access opening meets the front panel at the roof. Far below print resolution; there is no thin wall there.",
+      "box": [
+        24.45,
+        38.45,
+        173.771,
+        24.552,
+        38.55,
+        173.915
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "fairing bottom round termination, front, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Fillet termination where the bottom round of the side fairing meets the front panel: a 0.06 mm2 step face. The slicer drops it; see the matching wall area.",
+      "box": [
+        -22.649,
+        38.45,
+        88.35,
+        -21.991,
+        38.55,
+        88.95
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "fairing bottom round termination, front, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Fillet termination where the bottom round of the side fairing meets the front panel: a 0.06 mm2 step face. The slicer drops it; see the matching wall area.",
+      "box": [
+        21.991,
+        38.45,
+        88.35,
+        22.649,
+        38.55,
+        88.95
+      ]
+    },
+    {
+      "check": "wall",
+      "name": "fairing bottom round termination, front, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The same fillet termination: 0.004 mm of material over 0.06 mm2, with one ray grazing its edge. It is 100 times thinner than a 0.4 mm line, so it does not print and is not a fragile lip.",
+      "box": [
+        -22.649,
+        38.45,
+        88.351,
+        -22.196,
+        38.55,
+        88.772
+      ]
+    },
+    {
+      "check": "wall",
+      "name": "fairing bottom round termination, front, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The same fillet termination: 0.004 mm of material over 0.06 mm2, with one ray grazing its edge. It is 100 times thinner than a 0.4 mm line, so it does not print and is not a fragile lip.",
+      "box": [
+        22.196,
+        38.45,
+        88.351,
+        22.649,
+        38.55,
+        88.772
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "fairing bottom round termination, rear, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Fillet termination where the bottom round of the side fairing meets the rear wall: a 0.06 mm2 step face. The slicer drops it; see the matching wall area.",
+      "box": [
+        -22.672,
+        58.4,
+        88.35,
+        -22.017,
+        58.5,
+        88.95
+      ]
+    },
+    {
+      "check": "geometry",
+      "name": "fairing bottom round termination, rear, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. Fillet termination where the bottom round of the side fairing meets the rear wall: a 0.06 mm2 step face. The slicer drops it; see the matching wall area.",
+      "box": [
+        22.017,
+        58.4,
+        88.35,
+        22.672,
+        58.5,
+        88.95
+      ]
+    },
+    {
+      "check": "wall",
+      "name": "fairing bottom round termination, rear, left",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The same fillet termination: 0.004 mm of material over 0.06 mm2, with one ray grazing its edge. It is 100 times thinner than a 0.4 mm line, so it does not print and is not a fragile lip.",
+      "box": [
+        -22.672,
+        58.4,
+        88.351,
+        -22.221,
+        58.5,
+        88.772
+      ]
+    },
+    {
+      "check": "wall",
+      "name": "fairing bottom round termination, rear, right",
+      "reason": "Kept from the reviewed V9 holder by the user's decision of 2026-11-18. The same fillet termination: 0.004 mm of material over 0.06 mm2, with one ray grazing its edge. It is 100 times thinner than a 0.4 mm line, so it does not print and is not a fragile lip.",
+      "box": [
+        22.221,
+        58.4,
+        88.351,
+        22.672,
+        58.5,
+        88.772
+      ]
+    },
+    {
+      "check": "voids",
+      "name": "weight relief chamber, left",
+      "reason": "Designed closed space between the socket wall and the outer side fairing, sealed by the front panel, rear wall, floor and shoulder. It saves material; it is not a second pocket and needs no drainage.",
+      "box": [
+        -29.352,
+        38.45,
+        90.75,
+        -19.34,
+        58.5,
+        154.65
+      ]
+    },
+    {
+      "check": "voids",
+      "name": "weight relief chamber, right",
+      "reason": "Designed closed space between the socket wall and the outer side fairing, sealed by the front panel, rear wall, floor and shoulder. It saves material; it is not a second pocket and needs no drainage.",
+      "box": [
+        19.34,
+        38.45,
+        90.75,
+        29.352,
+        58.5,
+        154.65
+      ]
+    }
+  ],
+  "area_max_side_reason": "The 63.8 mm tall weight-relief chambers and the 59.5 mm front panel top edge are single findings longer than the usual 40 mm area side.",
+  "min_wall_reason": "0.9 mm prints as two 0.45 mm lines, like the 1 mm body shells. The upper side walls of the reviewed V9 holder thin to 0.95 mm at their curved corners."
+}

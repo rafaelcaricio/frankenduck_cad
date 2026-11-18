@@ -26,12 +26,13 @@ STICK_AT = (STICK_ORIGIN, ('Z', 0.0))
 # Removal: press both buttons and pull the stick straight down.
 RELEASE_DIRECTION = (0.0, 0.0, -1.0)
 RELEASE_TRAVEL = 95.0       # mm; the stick top ends 51 mm below the pod's lower edge
-WALL = 2.5                  # pod and socket wall
+WALL = 2.5                  # structural socket wall and lower seat
+FAIRING_WALL = 1.2          # outer cover, offset inward without changing its exterior
 EDGE_ROUND = 0.6            # round on outside edges: the seat edge, the front opening's outer edge, the tongue
 CLEARANCE = 0.6             # stick outline to socket wall
 SEAT_GAP = 0.3              # pod underside to the collar rim
 FAIR_GROW = 0.8             # fairing starts this far outside the cap outline
-SOCKET_TOP = 78.0           # socket wall top, 2.5 below the stick top so it stays 2.4 under the dome
+SOCKET_TOP = 78.0           # socket wall top, 2.5 below the stick top and clear of the dome
 SHELL_GAP = 0.4             # body shells to pod
 SHELL_SPLIT_HALF_GAP = 0.3  # each shell stops this far from the X = 0 centre plane
 # Fairing (stick-local). At the seat it follows the cap outline grown by
@@ -626,7 +627,7 @@ def open_front(shell):
     split.Build()
     assert split.IsDone(), 'front opening split failed'
     pieces = cq.Shape.cast(split.Shape()).Solids()
-    back = cq.Vector(0.0, BOX['back'] - WALL / 2, (SKIRT_TOP + DOME_BASE) / 2)
+    back = cq.Vector(0.0, BOX['back'] - FAIRING_WALL / 2, (SKIRT_TOP + DOME_BASE) / 2)
     keep = [p for p in pieces if p.isInside(back)]
     front = [p for p in pieces if not p.isInside(back)]
     assert len(keep) == 1 and len(front) == 1, f'front opening must split the shell in two, got {len(pieces)}'
@@ -697,7 +698,20 @@ def plate_holes():
 def pod_local():
     """Hollow fairing and socket tube, cut for the stick (stick-local)."""
     s = _stick()
-    shell = round_outside(open_front(fairing().cut(fairing(WALL)).Solids()[0]))
+    # Keep the original lower skirt through the latch pocket tops. Blend the
+    # inward offset into the thin cover over the rest of the skirt, avoiding
+    # narrow pockets between the socket and its load-carrying lower junction.
+    rows = fairing_rows()
+    thin = _offset_rows(_outer_surface(), rows, FAIRING_WALL)
+    thick = _offset_rows(_outer_surface(), rows, WALL)
+    start = s.tooth_top + 2 * TOOTH_CLEAR
+    assert start < SKIRT_TOP
+    for j in range(len(rows)):
+        blend = _smootherstep((rows[j, 0, 2] - start) / (SKIRT_TOP - start))
+        thin[j] = (1 - blend) * thick[j] + blend * thin[j]
+    inner = _closed_solid(_surface(thin), float(thin[0, 0, 2]),
+                          s.rim_height + SEAT_GAP + WALL)
+    shell = round_outside(open_front(fairing().cut(inner).Solids()[0]))
     tube = prism('stick', CLEARANCE + WALL, s.rim_height + SEAT_GAP, SOCKET_TOP)
     return shell.fuse(tube).cut(socket_cavity()).clean()
 

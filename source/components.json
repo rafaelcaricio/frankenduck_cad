@@ -510,7 +510,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed body shell retaining the Microduck outline, mounting features and closed rear top return, cut round the battery pod with a 0.4 mm nominal gap and stopping 0.3 mm short of the centre plane. Physical fit and strength unverified."
+      "notes": "Printed 1 mm body shell retaining the Microduck outline, existing mounts and closed rear top return. Relieved round the Zeee 2S holder with a 0.4 mm nominal gap (0.367 mm measured minimum); the upper rear relief follows the holder's closed side shoulders and the lower rear tip has a 1.5 mm round. Two integrated shell ties meet at the centre plane, with the upper tie moved 7.3 mm rearward and 0.3 mm upward into the closed top rim; the remaining shell edge stops 0.3 mm short. Left receivers have blind 1.6 mm forming pilots for 6 mm nominal engagement of M2 x 8 mm screws, with 1.5 mm tip space. Internal tube roots have 1.5 mm front and 0.8 mm upper fillets. See docs/body-shells.md and docs/lipo-battery.md. Physical screw fit and strength unverified."
     },
     {
       "model": "leg_left_native",
@@ -673,8 +673,8 @@
       "print_release": "not_applicable",
       "material_hint": "not_applicable",
       "export": false,
-      "active_variant": true,
-      "notes": "Purchased component representation."
+      "active_variant": false,
+      "notes": "Purchased reference model retained inactive after removal of the right-shell switch opening and guard collar."
     },
     {
       "model": "radxa_6530b",
@@ -698,7 +698,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed body shell retaining the Microduck outline, mounting features and closed rear top return, cut round the battery pod with a 0.4 mm nominal gap and stopping 0.3 mm short of the centre plane. Physical fit and strength unverified."
+      "notes": "Printed 1 mm body shell retaining the Microduck outline, existing mounts and closed rear top return. Relieved round the Zeee 2S holder with a 0.4 mm nominal gap (0.367 mm measured minimum); the upper rear relief follows the holder's closed side shoulders and the lower rear tip has a 1.5 mm round. Two integrated shell ties meet at the centre plane, with the upper tie moved 7.3 mm rearward and 0.3 mm upward into the closed top rim; the remaining shell edge stops 0.3 mm short. Right entries have 4.6 mm recessed head/tool tunnels, 2.2 mm shank passages and 2 mm seats for M2 x 8 mm screws. The switch opening and guard collar remain removed. Internal tube roots have 1.5 mm front and 0.8 mm upper fillets. See docs/body-shells.md and docs/lipo-battery.md. Physical screw fit and strength unverified."
     },
     {
       "model": "roll_front_bulkhead_native",
@@ -812,7 +812,7 @@
       "material_hint": "pla",
       "export": true,
       "active_variant": true,
-      "notes": "Printed trunk frame; the four obsolete carrier bores are filled and two M3 clearance holes hold the battery pod tongue. Physical fit and strength unverified."
+      "notes": "Printed trunk frame for the Zeee 2S holder: the four original carrier holes at X = ±18 and ±25 mm, Y = 31.7 mm take M3 x 10 screws down into the holder arms; two open recesses lower the screw seats to Z = 162.45 mm with 4 mm of plate kept; the obsolete pads under the plate are removed and the former pod tongue holes are filled. See docs/lipo-battery.md. Physical fit and strength unverified."
     },
     {
       "model": "ubec_clamp_native",
@@ -943,8 +943,8 @@
       "print_release": "not_applicable",
       "material_hint": "mixed: ABS case, PC nameplate, metal contacts and screws; appearance only",
       "export": false,
-      "active_variant": true,
-      "notes": "Active PAPK 12 A4 12 V 2 Ah stick battery as one coloured component, cap down in the rump pod. Photo-derived exterior visual model; stick, contacts and marks mirror symmetric about X = 0; outline, contacts and latches approximate; excluded from print exports."
+      "active_variant": false,
+      "notes": "Retired PAPK 12 A4 12 V 2 Ah stick battery reference, kept inactive with the retired stick pod. Photo-derived exterior visual model; outline, contacts and latches approximate."
     },
     {
       "model": "stick_pod_native",
@@ -954,9 +954,9 @@
       "geometry_fidelity": "design_geometry",
       "print_release": "unreviewed",
       "material_hint": "pla",
-      "export": true,
-      "active_variant": true,
-      "notes": "Body-coloured rump pod for the PAPK 12 A4 stick: fairing on the back line closed by a low dome, front opening into the body, socket with nominal latch lips, contact slots, T contact window, and a front tongue held by two M3 x 12 socket-head screws into M3 x 5.7 heat-set inserts. Latch and contact geometry follow the photo-derived stick and are approximate; physical fit and strength unverified."
+      "export": false,
+      "active_variant": false,
+      "notes": "Retired PAPK 12 A4 stick pod, kept inactive; the Zeee 2S holder replaces it and reuses its fairing and socket construction from src/lib/stick_pod.py. Last state: 1.2 mm outer cover blending into the 2.5 mm lower skirt, nominal latch lips and a front tongue on two M3 x 12 screws. Never printed or verified."
     },
     {
       "model": "bearing_carrier_left",
@@ -1187,6 +1187,66 @@
       "notes": "Approved V9. Nominal fastener clearance envelopes, not printable geometry. See docs/passive-leg-support.md."
     },
     {
+      "model": "lipo_pod_native",
+      "component": "lipo_pod_native",
+      "params": {},
+      "role": "printed_part",
+      "geometry_fidelity": "design_geometry",
+      "print_release": "unreviewed",
+      "material_hint": "pla",
+      "export": true,
+      "active_variant": true,
+      "notes": "Default Zeee 2S 2200 mAh holder, body coloured: open top with no lid, integral 2.4 mm floor, 1.8 mm front panel and rear wall following the body-shell curve, closed side shoulders up to the body roof with a 49 mm rear access, and two 8 mm integral arms on the four original carrier holes with M3 x 5.7 heat-set inserts. The pack lifts 68 mm and then withdraws 35 mm rearward. Physical pack fit, retention and strength unverified. See docs/lipo-battery.md."
+    },
+    {
+      "model": "zeee_2s_2200_reference",
+      "component": "zeee_2s_2200_reference",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "mixed LiPo pack; appearance only",
+      "export": false,
+      "active_variant": true,
+      "notes": "Default Zeee 2S 2200 mAh 50C pack, 73 x 34 x 18.5 mm from the published specification, not measured; simplified wrapping, appearance only. See docs/lipo-battery.md."
+    },
+    {
+      "model": "lipo_pad_and_leads",
+      "component": "lipo_pad_and_leads",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "foam pad and PVC-insulated leads; appearance only",
+      "export": false,
+      "active_variant": true,
+      "notes": "1.2 mm foam pad under the Zeee 2S pack and reference envelopes of its power and balance leads, XT60 and balance plug, all exiting above the holder mouth. Not vendor geometry; lead lengths and bends unverified."
+    },
+    {
+      "model": "lipo_mount_screws",
+      "component": "lipo_mount_screws",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "metal; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Four ISO 4762 M3 x 10 socket-head screws from bd_warehouse, seated at Z = 162.45 mm, clamping the trunk plate onto the holder arms. Simplified threads."
+    },
+    {
+      "model": "lipo_mount_inserts",
+      "component": "lipo_mount_inserts",
+      "params": {},
+      "role": "purchased_component",
+      "geometry_fidelity": "dimensioned_approximation",
+      "print_release": "not_applicable",
+      "material_hint": "brass; purchased hardware",
+      "export": false,
+      "active_variant": true,
+      "notes": "Four CNC Kitchen M3 x 5.7 heat-set inserts from bd_warehouse in the holder arms; 4 mm pilots 6 mm deep."
+    },
+    {
       "model": "open_head_skeleton_native",
       "component": "open_head_skeleton_native",
       "params": {},
@@ -1229,36 +1289,6 @@
       "role": "review_geometry",
       "provider": "src/lib/radxa_6530b_parameters.py:fan_inlet_allowance",
       "notes": "Empty space before modeled fan inlet; never printed."
-    },
-    {
-      "id": "x12_plus_contact_allowance",
-      "role": "review_geometry",
-      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"plus\"]",
-      "notes": "Space in and beside the + channel for a later contact adapter; approximate; never printed."
-    },
-    {
-      "id": "x12_minus_contact_allowance",
-      "role": "review_geometry",
-      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"minus\"]",
-      "notes": "Space in and beside the - channel for a later contact adapter; approximate; never printed."
-    },
-    {
-      "id": "x12_t_contact_allowance",
-      "role": "review_geometry",
-      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"t\"]",
-      "notes": "Space behind the T contact window; approximate; never printed."
-    },
-    {
-      "id": "x12_top_bay",
-      "role": "review_geometry",
-      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"top\"]",
-      "notes": "Hidden bay over the stick front half under the body top skin, reached through the front opening, for a later terminal block; never printed."
-    },
-    {
-      "id": "x12_xt60_bay",
-      "role": "review_geometry",
-      "provider": "src/lib/stick_pod.py:adapter_allowances()[\"xt60\"]",
-      "notes": "Space for a mated XT60 pair beside the pod with lead room above and below; nominal connector size; no wiring designed; never printed."
     }
   ]
 }
