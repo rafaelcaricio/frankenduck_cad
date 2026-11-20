@@ -4,6 +4,8 @@ This directory contains **52 printable models, each supplied as 3MF and STL** fo
 
 Open the files in `3mf/` directly in your slicer. Each file represents one native CAD solid and explicitly uses millimetres. Any numerical seam-overlap warnings are listed in the manifest; inspect affected meshes in your slicer. Left/right variants have separate filenames. Quantities and material hints are in [PARTS.csv](PARTS.csv).
 
+These parts are an adaptation of the Microduck by Pollen Robotics (https://github.com/pollen-robotics/microduck_rl), derived from its 3D model files and modified. Copyright 2026 Rafael Caricio. Licensed under CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/): credit Pollen Robotics and Rafael Caricio, no commercial use, share adaptations under the same license. The legal code is in [LICENSE](LICENSE) and the attribution in [NOTICE.md](NOTICE.md). Pollen Robotics does not endorse this project.
+
 Print-release status is **unreviewed**. The exports have passed mesh integrity and geometry-conversion checks; these do not establish printability or physical fit. Choose material, orientation, supports and slicer settings for your printer. Material hints are listed in PARTS.csv; choose the final material and slicer settings for your printer.
 
 Geometry keeps its saved rest-pose axes, translated to centre X/Y and put its lowest Z at zero. No automatic print orientation is selected.

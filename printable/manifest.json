@@ -1,37 +1,101 @@
 {
-  "generated_utc": "2026-11-18T17:32:57.293546+00:00",
-  "input_key": "2e753ecac3fa1baf64ec5a39b65aa8bf585fe17dedb01a998f9547751516d5c2",
+  "generated_utc": "2026-11-20T11:21:19.401532+00:00",
+  "input_key": "3925e31ebe936a6de8feddaa806bd02f58d8a1328941e582ef1b0408e8202894",
   "inputs": {
-    "schema_version": 1,
+    "schema_version": 2,
     "source_step_sha256": "de6b1d1e900afa7732f941968ad7d0775acfa9b2215531bd36e765336d3424f1",
     "catalog_sha256": "beeeb62f842ec6e634de22b163f260ff4ce87a43437113d199b9508b31590339",
     "implementation": {
-      "tools/print_export.py": "edeb2353acf15f3a3afba18e4bb6ce1e052cab1b46e4acfa60030b0076ad4f8f",
-      "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430",
-      "tools/gmsh_mesh.py": "8f58ef80ada64f0a873819a0a434345cbff54801c0bfe04ad0543e5f40a2ba4a"
+      "tools/print_export.py": "e21a14ddeff6040b8545bd8c44c7c9799c04d5cf60e412842859019ee0b4a89e",
+      "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
     },
-    "runtime": {
-      "python": "3.12.0",
-      "cadgen": "0.6.5",
-      "cadquery": "2.8.0",
-      "build123d": "0.11.1",
-      "cadquery-ocp": "7.9.3.1.1",
-      "shapely": "2.2.0",
-      "scipy": "1.18.1",
-      "numpy": "2.5.4"
+    "mesh": {
+      "implementation": {
+        "tools/print_mesh.py": "507d5c1ed651f4d5dea518cb2afcfe93fbccb89f86c03fbdfe393a36ea3d6e73",
+        "tools/gmsh_mesh.py": "8f58ef80ada64f0a873819a0a434345cbff54801c0bfe04ad0543e5f40a2ba4a"
+      },
+      "runtime": {
+        "python": "3.12.0",
+        "cadgen": "0.6.5",
+        "cadquery": "2.8.0",
+        "build123d": "0.11.1",
+        "cadquery-ocp": "7.9.3.1.1",
+        "shapely": "2.2.0",
+        "scipy": "1.18.1",
+        "numpy": "2.5.4"
+      },
+      "mesh_tolerance_absolute_mm": 0.01,
+      "mesh_angular_tolerance_rad": 0.1,
+      "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
+      "mesh_min_size_mm": 1e-05,
+      "recipes": [
+        [
+          "Watson",
+          0.01
+        ],
+        [
+          "WatsonControlled",
+          0.005
+        ],
+        [
+          "Delabella",
+          0.0005
+        ],
+        [
+          "Watson",
+          1e-05
+        ],
+        [
+          "WatsonFineControlled",
+          0.01
+        ],
+        [
+          "DEFAULT",
+          0.01
+        ],
+        [
+          "DEFAULT",
+          0.0005
+        ],
+        [
+          "Gmsh",
+          0.4
+        ],
+        [
+          "Gmsh",
+          0.1
+        ]
+      ],
+      "part_recipes": {
+        "sole_left_native": [
+          [
+            "WatsonWideAngle",
+            0.01
+          ]
+        ],
+        "sole_left_native_right": [
+          [
+            "WatsonWideAngle",
+            0.01
+          ]
+        ]
+      }
     },
-    "mesh_tolerance_absolute_mm": 0.01,
-    "mesh_angular_tolerance_rad": 0.1,
-    "mesher": "Surface-controlled OCCT with sampled CAD-face validation; isolated Gmsh fallback",
-    "mesh_min_size_mm": 1e-05,
+    "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
     "build_input_key": "c448c0c576bd898d7d6691132eaaf041f03569fda7cbb5f79b73886ca73836bd",
-    "assembly_data_sha256": "6e61bd7fc1394a0707403066691475c6a75e1c5c02294f5cfc1aa9f83fe1af2f"
+    "assembly_data_sha256": "6e61bd7fc1394a0707403066691475c6a75e1c5c02294f5cfc1aa9f83fe1af2f",
+    "license_files": {
+      "LICENSE": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd",
+      "NOTICE.md": "bb2cf0ee0f9a5909ba471effd467e6dd532286a38f83c8126df36edeb2f69f4f"
+    }
   },
   "units": "mm",
   "source": "STEP/frankenduck.step",
   "export_count": 52,
   "orientation": "Saved rest-pose axes; translation only, XY centred and min Z=0",
   "max_relative_volume_error": 0.02,
+  "conversion_workers": 8,
+  "reused_meshes": 0,
   "parts": [
     {
       "model": "ankle_bearing_inner_cap_left_native",
@@ -67,6 +131,9 @@
         4.75,
         9.5
       ],
+      "geometry_sha256": "1daa2dd4ad66275083e261866e9b7d7d3e960e9ebfb818bcda11dc074a8dd7b0",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -107,7 +174,11 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "59cf09319abed50ab66d05750ed03c4495e14b03452502fb0f6fe6471fe295d6",
+      "sha256": "dc43324584a3fedab53433375406ed23a72842f29e542a034fc22ab5f5f2584e",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native.stl",
       "stl": {
         "triangles": 1516,
@@ -163,6 +234,9 @@
         4.75,
         9.5
       ],
+      "geometry_sha256": "42ea97196cbae48656279e6d91b77d56fa36b18e144dc16496ce9716dacb9c95",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -203,7 +277,11 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "c81e526abd71400865125988d568775bd67136cf54f3cc234cc4f157ac80d417",
+      "sha256": "6907ce1553433a391a72f1a230215586c3a93761a490733955e73af6f24ed9b2",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/ankle_bearing_inner_cap_left_native_right.stl",
       "stl": {
         "triangles": 1516,
@@ -259,6 +337,9 @@
         13.150000000000002,
         26.3
       ],
+      "geometry_sha256": "60f44d1bfed0d86179893f9bf69fc460db619b6f72e2a4e6c013469ee799c6b1",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -299,7 +380,11 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791596158507,
-      "sha256": "efaae8f9400d1487abc635885926e9574e48613110d86d0eda18cae12b0bfc2d",
+      "sha256": "8f277996efff014ac6aa1f7ebbc5a0d663a86e4e448cc923d2619fa0618ef18c",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native.stl",
       "stl": {
         "triangles": 3284,
@@ -355,6 +440,9 @@
         13.149999999999999,
         26.3
       ],
+      "geometry_sha256": "d2ada19dbbbacc8baf5f942ca6ac043c382480f0bb35b77996a1e2e09381f98b",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -395,7 +483,11 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791116775731,
-      "sha256": "52682c4915e27bf8b55a63b4e992ffe81ad8b0a047902b2bc413cfb6fd5c9ec0",
+      "sha256": "5fc936042cadd6c3708f9b9f59131963dfdbecdd4bfab5c74a4a75ed8ac3bdcc",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/ankle_bearing_outer_keeper_left_native_right.stl",
       "stl": {
         "triangles": 3284,
@@ -451,6 +543,9 @@
         24.637500000000006,
         36.507932193528525
       ],
+      "geometry_sha256": "dba15c63a0dacdd2ddd6ee42804ab6d88cd550638f185efc06d791881981e2c4",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
@@ -494,26 +589,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "sers/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "sers/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "sers/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_eye_left_native\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 143224,
@@ -537,7 +613,11 @@
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.272688473962509e-08,
-      "sha256": "be2f89c286f68ea398af7f975b274dee19911e4d8876f8b101fadb374f58a90b",
+      "sha256": "a868474beefc0af82f586c240925e69b5d89353689016ce57a8d2f2618e58ed4",
+      "mesh_recipe": [
+        "Watson",
+        1e-05
+      ],
       "stl_filename": "stl/ankle_eye_left_native.stl",
       "stl": {
         "triangles": 277926,
@@ -593,6 +673,9 @@
         24.637500000000006,
         36.507932193528006
       ],
+      "geometry_sha256": "842615ad0e03cfe4ed5f88f2bed879216caec4152c57ae5f785384a23d7aaceb",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
@@ -636,26 +719,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 229, in complete_small_surface_seams\n    raise ValueError(\"Surface seam boundary is branched\")\nValueError: Surface seam boundary is branched\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 560, in convert_worker\n    differences = geometric_difference(native, saved)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 511, in geometric_difference\n    raise ValueError(\"Invalid native geometry difference\")\nValueError: Invalid native geometry difference\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 143224,
@@ -679,7 +743,11 @@
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.364183251932241e-08,
-      "sha256": "f3247eee9eb1d16aa15719dbb527f0387d5e100bc09e4075d28a21bb6226634a",
+      "sha256": "8a8a3761a4310a6e75bae2d52292ce16a269adb0384beacd8746b2afad5dd48d",
+      "mesh_recipe": [
+        "Watson",
+        1e-05
+      ],
       "stl_filename": "stl/ankle_eye_left_native_right.stl",
       "stl": {
         "triangles": 277926,
@@ -735,6 +803,9 @@
         24.662049063707997,
         33.704000293939
       ],
+      "geometry_sha256": "6a339e2c1167f6f3d6d54835f2619303d76c3a24bfbedbe750a4b8a0af3f71fe",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -753,20 +824,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "48, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_left_native\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "48, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_left_native\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 21050,
@@ -788,7 +846,11 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.090954093148115e-06,
-      "sha256": "0edfb22c07f7a0807d0dc10c1dcb5a4673831e953574a30e54fad5bd2844f041",
+      "sha256": "df54acc126e0e66f92dc0386e30eb7231351f3d2d6815b4ee9e59cd2722653c4",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/ankle_left_native.stl",
       "stl": {
         "triangles": 40856,
@@ -844,6 +906,9 @@
         24.662049063707997,
         33.704000293938996
       ],
+      "geometry_sha256": "9dee9d9317533a8d25313e5ccfb5b0b969192bb655cc917c8e328d1fa8987f5c",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -862,20 +927,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": " complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_left_native_right\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": " complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: ankle_left_native_right\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 21050,
@@ -897,7 +949,11 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.066297066077291e-06,
-      "sha256": "e4782627b71d5d385aaa0d52869c5f198cc2629cac35e13a26f9436249227e6c",
+      "sha256": "65696c092dc2e97509abca01bb68a609902ffe0d66ecac4570cf59f772f10364",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/ankle_left_native_right.stl",
       "stl": {
         "triangles": 40856,
@@ -953,6 +1009,9 @@
         78.7350001000166,
         24.56440020103298
       ],
+      "geometry_sha256": "50eb18bfe6ee3bb86f8ebdfc7ecebc1fe419cc51028d1d1384a21fc161701802",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -993,7 +1052,11 @@
       "max_bound_error_mm": 2.0103298226104016e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.258425170278414e-05,
-      "sha256": "22477ef73c222d36681b696a34ea2eb6a40fc2a679f8b5732cf66e54a62a7533",
+      "sha256": "03c3371010aba91f586f2b7c486fad58dc13623e2474f505cde2177d56346a8f",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bottom_head_shell_native.stl",
       "stl": {
         "triangles": 56646,
@@ -1049,6 +1112,9 @@
         43.0,
         5.449999999999989
       ],
+      "geometry_sha256": "e6c1289a36facb73ad400633bc1b73e405869b1b1669d782cd55b044acd781c8",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -1089,7 +1155,11 @@
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.692096770163398e-05,
-      "sha256": "f01f61fe95de7329ccb00eb416700ca98a69c905b76a09e557f05d2ad9d4965d",
+      "sha256": "dd22d444dddad7ca4c8de78fcc34f83738473b626354ec352878021abee1e403",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/electronics_deck_native.stl",
       "stl": {
         "triangles": 11102,
@@ -1145,6 +1215,9 @@
         8.437500049999997,
         60.241021033332686
       ],
+      "geometry_sha256": "6bbcaf23c61e9d2f752675b640e5b214d390695cad4f15cc52b7d84536108e4d",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -1185,7 +1258,11 @@
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001685166341988373,
-      "sha256": "1d485f322881b6c6f315f0e6ecc329ebc940da186b9fa045a58a832f8e9e32eb",
+      "sha256": "88307971d871e5630ed819cb684e22deebf84462b05c7010733a962f0be540d5",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/face_part_native.stl",
       "stl": {
         "triangles": 44726,
@@ -1241,6 +1318,9 @@
         2.000000050000004,
         38.640000000004534
       ],
+      "geometry_sha256": "904dacdd38d9b2bf6eb7a97303c859eb41e2c62ec193f6a16e7bcd1a791a1f75",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -1281,7 +1361,11 @@
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2945880864821577e-05,
-      "sha256": "d2831f2659e6a23374494fd1de739fd14bc8a82b3c6e560bc0d92afcdf4378fc",
+      "sha256": "48369e84be1b8596ea5bc04baec291497187e7ca95b59bfcb661287769c9d858",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/face_radxa_bracket_native.stl",
       "stl": {
         "triangles": 10242,
@@ -1337,6 +1421,9 @@
         33.615000100000046,
         22.81575763078674
       ],
+      "geometry_sha256": "92c26497c69e45f1e250f31774a3ce26526c37c2c7dc4209c0deabeda71b5440",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -1355,20 +1442,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ent/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 229, in complete_small_surface_seams\n    raise ValueError(\"Surface seam boundary is branched\")\nValueError: Surface seam boundary is branched\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 8241,
@@ -1390,7 +1464,11 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6314685846506777e-06,
-      "sha256": "5fa992e69fb3f0758e09da51c42d57ea64afaa3f7fe09f015a0c704f5c302003",
+      "sha256": "504013866b4d078f92fdc9d8057ebb51c4d38522cf694be7334691f76f0e1b38",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/foot_left_native_a.stl",
       "stl": {
         "triangles": 16486,
@@ -1446,6 +1524,9 @@
         33.61500010000005,
         22.81575763078674
       ],
+      "geometry_sha256": "f27b73277a55ce042dcf4666e85cb37d6f3990eaba7ea70a17f95354bb02bf7e",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -1464,20 +1545,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ent/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 229, in complete_small_surface_seams\n    raise ValueError(\"Surface seam boundary is branched\")\nValueError: Surface seam boundary is branched\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 8241,
@@ -1499,7 +1567,11 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6586967573804625e-06,
-      "sha256": "391a8ddff2c09942026a5c48e5f12da9bd9108772b6a35a8d069cac408bc8796",
+      "sha256": "a6118abb0112ddadc37c3d123dfe0b9acc6c9a2a34c27a92aea1b3c80c2df528",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/foot_left_native_a_right.stl",
       "stl": {
         "triangles": 16486,
@@ -1555,6 +1627,9 @@
         36.45000010001502,
         6.750000200002343
       ],
+      "geometry_sha256": "8823c4854fa7955c69dfec5e6c23ce12abbd2a640a2bd271f741a52354e4b562",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
@@ -1573,26 +1648,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 29159,
@@ -1614,7 +1670,11 @@
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.991851090216742e-08,
-      "sha256": "67d5f2cfe1aee4d1ecf72c20d010cddb9750607d3eac122260a566a8b3e4c9c5",
+      "sha256": "231e4f076c0d23bb406d8b3b051dc432650825f530c9ca41bd422d4311a7f044",
+      "mesh_recipe": [
+        "Watson",
+        1e-05
+      ],
       "stl_filename": "stl/foot_left_native_b.stl",
       "stl": {
         "triangles": 57846,
@@ -1670,6 +1730,9 @@
         36.450000100015295,
         6.750000200002371
       ],
+      "geometry_sha256": "7974c169a2dab4a35f8db3a8437fabd54c55bb50bfa8830e78e3436efb51b51d",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
         "algorithm": "Watson",
@@ -1688,26 +1751,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ent/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 229, in complete_small_surface_seams\n    raise ValueError(\"Surface seam boundary is branched\")\nValueError: Surface seam boundary is branched\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": 1,
-            "error": "ols/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 403, in write_native_3mf\n    surface_receipt = complete_small_surface_seams(vertices, triangles, shape)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 29159,
@@ -1729,7 +1773,11 @@
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.988272951144069e-08,
-      "sha256": "8c35b0804f3a3ecb6d04d3200c80722a8280583ed6f5307141e141d164fd03c7",
+      "sha256": "819db37463f9d72fe94207c49f258e49001a0465ecdf3cd095f69acfed8ca871",
+      "mesh_recipe": [
+        "Watson",
+        1e-05
+      ],
       "stl_filename": "stl/foot_left_native_b_right.stl",
       "stl": {
         "triangles": 57846,
@@ -1785,6 +1833,9 @@
         49.63500000000087,
         44.200000100005354
       ],
+      "geometry_sha256": "53352f43bf090b62fe6624bfbaa4afc76e5bbf6babd4804748dea0adb77caf4d",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -1825,7 +1876,11 @@
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.1469870729423108e-05,
-      "sha256": "255badabce37caa60092c26159cd68dcd8c748c147445d55422fff132a0fa67e",
+      "sha256": "2f054d7d72f8dfb23813101e65a98b876bb340e3ab1799ce6828c31e8a37abd7",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/head_frame_native.stl",
       "stl": {
         "triangles": 15472,
@@ -1881,6 +1936,9 @@
         24.93723388969057,
         25.650000199999994
       ],
+      "geometry_sha256": "75dd17d860670900a60295d42e5dde03c235f5f2754ad64aa76185a81dc72e17",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -1921,7 +1979,11 @@
       "max_bound_error_mm": 0.00398605000000174,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00023719806937439757,
-      "sha256": "b9278ee36b502a209c551c87ca028e13f5a4aba18d9bb87226ce561fc3e2862f",
+      "sha256": "a458b32d17721c7256e3bda83ab43edf2b0057da9e7bdb5a7ac8a9faea15525f",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/hip_left_native.stl",
       "stl": {
         "triangles": 52994,
@@ -1977,6 +2039,9 @@
         24.937233939690568,
         25.650000199999994
       ],
+      "geometry_sha256": "4b3a975d3668d0c72b6eb7be05dc9a2281a5b2efdedef4ddb87731054b79eee1",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2017,7 +2082,11 @@
       "max_bound_error_mm": 0.003986050000005292,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00023677466471410186,
-      "sha256": "25c4061c779ab46323fb6c716d3ffe77185987d28b4276e6ad6e68223770de4c",
+      "sha256": "f6d3a695c22bfb1a6f3d1b78d3ed6a3d86f69a61bc949d26944c02fe2b2972ef",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/hip_left_native_right.stl",
       "stl": {
         "triangles": 53022,
@@ -2073,6 +2142,9 @@
         7.5500000000000025,
         42.44999999999999
       ],
+      "geometry_sha256": "9642e4a6cd5a922d97ffc60195994ffd716d35cc2db1e1fd5b8094ff47a83dce",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2113,7 +2185,11 @@
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.7941583612299156e-06,
-      "sha256": "54651a08f4614a4d61b53b9cebd3dad8277ea33e2982594ded3051d1301926f1",
+      "sha256": "99844d5593214423c20d692a7afb74e54ab7c7a089c975455070e91e9d1d5321",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/imu_yoke_bridge_native.stl",
       "stl": {
         "triangles": 6456,
@@ -2169,6 +2245,9 @@
         47.89688421372918,
         42.84547156257406
       ],
+      "geometry_sha256": "78832a1518cef61e248015579dedcd121625d8d3afc1c3e8477f0cb60cd21b1c",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2209,7 +2288,11 @@
       "max_bound_error_mm": 0.003688213729176937,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.007952989461855962,
-      "sha256": "6011f038db89e91ed10c7b9968cabf72f91d7b11ca3846c36b9b5d1bea5133e7",
+      "sha256": "6d115023e0837a9dea1971e8a3b6532ef9006938512d28edaaca63924451e908",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/jaw_native.stl",
       "stl": {
         "triangles": 83046,
@@ -2265,6 +2348,9 @@
         21.758220264098355,
         11.403730387205997
       ],
+      "geometry_sha256": "9fb0271cedec05d120ddd533e178bd882f6f4300963d3aaee6b36c191c9b79db",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2305,7 +2391,11 @@
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.000795293702042304,
-      "sha256": "6a0fe3e24ba15d1423d97a2a935d2298b6a5c13a80c3e3d0b1e94c90938f27f7",
+      "sha256": "c62e586bfcf1982619b8edfd32d9ccb278ba8c96e182636294cca93cc5108eaa",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/jaw_soft_001_native.stl",
       "stl": {
         "triangles": 30856,
@@ -2361,6 +2451,9 @@
         45.30996861758088,
         52.55438217176173
       ],
+      "geometry_sha256": "1cb082e8b702550e92532612fa71886cdfb25c45c6322c05141d9bf5b8f17fb3",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2403,7 +2496,11 @@
       "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001432900345456935,
-      "sha256": "b42f16f2d4c8da37790adddbadcf27d62167ab2caa0d182caf6f7df8e1435bd9",
+      "sha256": "7183ca1b30eb5e787136f63cb5713e1a589c624bcf133c3d68afad80a9077bf5",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/left_shell_native.stl",
       "stl": {
         "triangles": 92572,
@@ -2459,6 +2556,9 @@
         13.500000100000017,
         85.35100020001617
       ],
+      "geometry_sha256": "5304eecea34fb6a6dc5c452c47df7bd8bb531c6d8db5b3fa9194aaca0c7d18dd",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -2477,20 +2577,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": " 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: leg_left_native\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": " 248, in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: leg_left_native\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 84378,
@@ -2512,7 +2599,11 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 5.202576116476348e-06,
-      "sha256": "c63cdd8ccaeaf98b808f076d07d77240b02913572a9bbe5dd79c29f3ae082786",
+      "sha256": "bbf5e643e05d6388032b4d284f06f206131b3ceab4bf961861dfe1f6e8173f83",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/leg_left_native.stl",
       "stl": {
         "triangles": 166864,
@@ -2568,6 +2659,9 @@
         13.50000010000002,
         85.35100020001617
       ],
+      "geometry_sha256": "1fad9955f2ce097f12e297a7acaff8686559cec474e7769189aab68055e07169",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -2586,20 +2680,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: leg_left_native_right\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "in complete_small_surface_seams\n    raise ValueError(\"Open region exceeds bounded seam repair size\")\nValueError: Open region exceeds bounded seam repair size\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: leg_left_native_right\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 84365,
@@ -2621,7 +2702,11 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.837823049176776e-06,
-      "sha256": "6a697de4c09ddd7cf0ee8e8922cb4dd1eb8035c9c781a34106fb6cbdb607f1f6",
+      "sha256": "93f1c3d593ae4f4040ea623579b9881f81ce62d0f279a35ba1eb11f0f163283e",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/leg_left_native_right.stl",
       "stl": {
         "triangles": 166838,
@@ -2677,6 +2762,9 @@
         14.3,
         18.00000000000682
       ],
+      "geometry_sha256": "04d93ae90f5ec7ed550486ef2ac99c4a619f361705d9f60630e04ec4004e2b00",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2717,7 +2805,11 @@
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.22198256390968e-05,
-      "sha256": "accc252c48b40c724d6ff96e067151b00202495c4f30ea5ca4b926755fb4540c",
+      "sha256": "248d4322b58d36306c96c08da9ba0b0db1ea3f835ed8e13172f2e9604d9723fa",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/neck_001_native.stl",
       "stl": {
         "triangles": 19740,
@@ -2773,6 +2865,9 @@
         14.3,
         25.500000199999988
       ],
+      "geometry_sha256": "4387f4e1bc50d28dd51457d71996bf6751e862bb649856e9d5d753d3fe9d7eb4",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2813,7 +2908,11 @@
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2369461131573503e-05,
-      "sha256": "d522d7221922ad57a4a3fab3a05a06e0f65c8c7d523cd36206052c8f861fc29a",
+      "sha256": "ccc17c4a42ea67cbc8f31b252d57f12e3dd8837fc14d69f4d1e1bb045c9c8a8d",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/neck_002_native.stl",
       "stl": {
         "triangles": 21360,
@@ -2869,6 +2968,9 @@
         34.05000005,
         25.000000199999988
       ],
+      "geometry_sha256": "28228677a49894c23049975ca48d77ffcfd95ed6d03c6778d1137732c4d140bc",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -2909,7 +3011,11 @@
       "max_bound_error_mm": 0.0022021999999886077,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001004057707585081,
-      "sha256": "9cfd0646a17d0a1f18fd361f0b14712bc1711b132a5e1efc186a70b02690c686",
+      "sha256": "dd818386548ce904caeb19a40079a67cbe2d724bbb28dd51ada6223682764840",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/neck_internal_yoke_native.stl",
       "stl": {
         "triangles": 31824,
@@ -2965,6 +3071,9 @@
         14.000000100000003,
         33.13580009999998
       ],
+      "geometry_sha256": "23ecb99bb188886a0bca96992bf55a5269ee2a729fa75304bab9f83b583690e4",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3005,7 +3114,11 @@
       "max_bound_error_mm": 0.003792,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 7.500292717846639e-05,
-      "sha256": "44bb2e0dda40e3f562540d07b574457dc93618df35323010867321ea8e6cca74",
+      "sha256": "6038fb9edd6c06cc3ae284caaef857f0c929390d346b0eacd471a6b359f9d749",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/neck_pitch_001_native.stl",
       "stl": {
         "triangles": 36970,
@@ -3061,6 +3174,9 @@
         6.412500000000001,
         40.5
       ],
+      "geometry_sha256": "f9e4e1e29c5a17ff83bea6c5a2339b5e810e2af3c4fcbeaa05716e3d170f9e10",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3101,7 +3217,11 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "69dab386ab9105cc7940dba4f4734ac2ba3fd0d315ce63055900042051610ac8",
+      "sha256": "63965a7a0aa27c63ede169fa97f1aa317dea8ab015d8eec1d6617a04bc200dc8",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/noenoeil_native.stl",
       "stl": {
         "triangles": 2110,
@@ -3160,6 +3280,9 @@
         45.30996861758088,
         52.554382171922256
       ],
+      "geometry_sha256": "4d1ae6d5491243d2484003762323772dff0610a3b65ef56a7636d50f351dc62a",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3202,7 +3325,11 @@
       "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001552610797772203,
-      "sha256": "1fbe2c27241be8bff7d47fe769d0b2c095007dc24e21eeda8c1c2061e33be6ff",
+      "sha256": "1da2acc2a36918d01478e6d2ea74cce90c8d3cc51e5718e311315a8f19c36b23",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/right_shell_native.stl",
       "stl": {
         "triangles": 88118,
@@ -3258,6 +3385,9 @@
         7.245000000000001,
         39.25
       ],
+      "geometry_sha256": "db76d5fe7f9eb5cc9e9232f3b248d6a9faa61efdcb4b48aaf52d318d26bd0f9e",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3298,7 +3428,11 @@
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.2349171793637996e-05,
-      "sha256": "454c443d90ac2f56972bc1f8012f150b2b9e471bd4f9f893fc70e06631a95f58",
+      "sha256": "910d49c71c5fde306bd50ca3303eb7659b68e03f6c41482c942757055a84f3d7",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/roll_front_bulkhead_native.stl",
       "stl": {
         "triangles": 8792,
@@ -3354,6 +3488,9 @@
         21.978486387035026,
         4.422853690633588
       ],
+      "geometry_sha256": "ec561c7552a9e67bfeb24ce9b83b9d1744204730f38621dd7bec8ef19d62508d",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3394,7 +3531,11 @@
       "max_bound_error_mm": 0.000292739236989803,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.3661606990533e-05,
-      "sha256": "23a32a721c934b15dfa09dc8607c2936daa3744803b6b609cea6d95644eb9858",
+      "sha256": "7bad814ff4ad08e19a79acf5075a4c2fa37025035a09963610a15261dc519c92",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/soft_mouth_top_native.stl",
       "stl": {
         "triangles": 12150,
@@ -3450,75 +3591,75 @@
         36.526973828708975,
         17.45225057797078
       ],
+      "geometry_sha256": "c398c5d9fe903144b0df71a04d987420aa595ebddcbc86d56d00aa0d90bddb5e",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
-        "linear_deflection_mm": 0.005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 160,
-        "maximum_sampled_face_deviation_mm": 0.001346931191782558,
+        "surface_sample_count": 180,
+        "maximum_sampled_face_deviation_mm": 0.005195262277386732,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.2,
+        "angular_deflection_rad": 0.35,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 1215567,
-        "triangles": 2025610,
-        "volume_mm3": 15342.032119309575,
+        "vertices": 474115,
+        "triangles": 805114,
+        "volume_mm3": 15339.167522595864,
         "bounds_mm": [
-          -27.74009,
-          -36.526576,
-          9.2e-05,
-          27.739762,
-          36.526672,
-          17.45224
+          -27.740128,
+          -36.526596,
+          4.3e-05,
+          27.739602,
+          36.526524,
+          17.452242
         ],
-        "nonmanifold_edges": 61328,
+        "nonmanifold_edges": 11750,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.0003978287089765331,
-      "allowed_bound_error_mm": 0.01001,
-      "relative_volume_error": 0.00010081143639452355,
-      "sha256": "e0f7300104a2202a0219fd9b7d0cee15db49f57c61152527877632d5593785c8",
+      "max_bound_error_mm": 0.0005321147819934424,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00028750821211020056,
+      "sha256": "98506de84fb92277dc85cd931bd973f5a833fb7bb12954e0dc3ebb37ec9c094d",
+      "mesh_recipe": [
+        "WatsonWideAngle",
+        0.01
+      ],
       "stl_filename": "stl/sole_left_native.stl",
       "stl": {
-        "triangles": 2025610,
+        "triangles": 805114,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 61328,
-        "volume_mm3": 15342.03246485872,
+        "nonmanifold_edges": 11750,
+        "volume_mm3": 15339.167793418696,
         "bounds_mm": [
-          -27.740089416503906,
-          -36.52657699584961,
-          9.200000204145908e-05,
-          27.739761352539062,
-          36.52667236328125,
-          17.452239990234375
+          -27.740127563476562,
+          -36.52659606933594,
+          4.3000000005122274e-05,
+          27.739601135253906,
+          36.52652359008789,
+          17.452241897583008
         ],
-        "relative_volume_error": 2.252303615963541e-08,
-        "max_bound_error_mm": 9.958496107742576e-07,
-        "sha256": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882"
+        "relative_volume_error": 1.7655640752789865e-08,
+        "max_bound_error_mm": 8.647460951749508e-07,
+        "sha256": "bdb4defd52626e7aa9e90906fd3fc2b728b9ca85488e8cda2e1d894be1ce556b"
       }
     },
     {
@@ -3555,75 +3696,75 @@
         36.52697382870898,
         17.45225057797078
       ],
+      "geometry_sha256": "5c5e9dba766620240b9301cc452032c393379f248e9a0917c870e74638205b3b",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
-        "linear_deflection_mm": 0.005,
+        "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 164,
-        "maximum_sampled_face_deviation_mm": 0.0013469311917967684,
+        "surface_sample_count": 180,
+        "maximum_sampled_face_deviation_mm": 0.005195262277386731,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.2,
+        "angular_deflection_rad": 0.35,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": false,
         "library_manifold": false,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 1210104,
-        "triangles": 2015750,
-        "volume_mm3": 15342.036372360715,
+        "vertices": 470902,
+        "triangles": 799084,
+        "volume_mm3": 15339.083679586973,
         "bounds_mm": [
-          -27.739762,
-          -36.526576,
-          9.2e-05,
-          27.739976,
-          36.526672,
+          -27.739602,
+          -36.526704,
+          4.3e-05,
+          27.739784,
+          36.526524,
           17.452242
         ],
-        "nonmanifold_edges": 60455,
+        "nonmanifold_edges": 11577,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.00039782870898363853,
-      "allowed_bound_error_mm": 0.01001,
-      "relative_volume_error": 0.000100534248709924,
-      "sha256": "087a85a41755ac1d8ce97d855b7f548a3a18fc487de6e604ee08f1038329243d",
+      "max_bound_error_mm": 0.0005321147818193595,
+      "allowed_bound_error_mm": 0.02001,
+      "relative_volume_error": 0.00029297258318758396,
+      "sha256": "f863e7234120e81d7f5df33278c5387e63da021dccc7e1ea6aaa9c06306d7856",
+      "mesh_recipe": [
+        "WatsonWideAngle",
+        0.01
+      ],
       "stl_filename": "stl/sole_left_native_right.stl",
       "stl": {
-        "triangles": 2015750,
+        "triangles": 799084,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 60455,
-        "volume_mm3": 15342.036739735675,
+        "nonmanifold_edges": 11577,
+        "volume_mm3": 15339.083949337268,
         "bounds_mm": [
-          -27.739761352539062,
-          -36.52657699584961,
-          9.200000204145908e-05,
-          27.73997688293457,
-          36.52667236328125,
+          -27.739601135253906,
+          -36.526702880859375,
+          4.3000000005122274e-05,
+          27.739784240722656,
+          36.52652359008789,
           17.452241897583008
         ],
-        "relative_volume_error": 2.394564520866818e-08,
-        "max_bound_error_mm": 9.958496107742576e-07,
-        "sha256": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e"
+        "relative_volume_error": 1.7585815468613232e-08,
+        "max_bound_error_mm": 1.1191406272814675e-06,
+        "sha256": "3b332b0c19fdf447e95536a9c522caa40a7488aee721944d629bc798ad4d563b"
       }
     },
     {
@@ -3660,8 +3801,11 @@
         82.77722668296116,
         62.43164376456821
       ],
+      "geometry_sha256": "8523407d2b905569962de87eb892c927283d1a998bec2869c627168b8dabb4d4",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
-        "surface_sample_count": 4472,
+        "surface_sample_count": 4476,
         "maximum_sampled_face_deviation_mm": 0.006237821994950195,
         "sampled_face_deviation_limit_mm": 0.02,
         "face_mapping_fallbacks": 12,
@@ -3674,55 +3818,12 @@
         "control_surface_deflection": true,
         "internal_vertices": true,
         "warnings": [],
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0247403 mm > 0.02 mm\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0217138 mm > 0.02 mm\n"
-          },
-          {
-            "algorithm": "Delabella",
-            "tolerance_mm": 0.0005,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          },
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 1e-05,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          },
-          {
-            "algorithm": "WatsonFineControlled",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0247403 mm > 0.02 mm\n"
-          },
-          {
-            "algorithm": "DEFAULT",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 499, in write_export_3mf\n    result = write_native_3mf(cleaned, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 371, in write_native_3mf\n    count, deviation = check_face_triangles(vertices, face_triangles, face, MAX_SURFACE_DEVIATION_MM)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 323, in check_face_triangles\n    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0247403 mm > 0.02 mm\n"
-          },
-          {
-            "algorithm": "DEFAULT",
-            "tolerance_mm": 0.0005,
-            "exit_code": "timeout",
-            "error": "180 second conversion limit"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 488045,
-        "triangles": 976086,
-        "volume_mm3": 73300.44027529816,
+        "vertices": 488056,
+        "triangles": 976108,
+        "volume_mm3": 73300.44045896006,
         "bounds_mm": [
           -62.028436,
           -82.776712,
@@ -3738,16 +3839,20 @@
       },
       "max_bound_error_mm": 0.0012277645682061689,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 7.493637974872593e-05,
-      "sha256": "1b72cc6bc8a1b2e52429d7fed77837e5e0610332f37498c8ef3495389eb503df",
+      "relative_volume_error": 7.493387433209764e-05,
+      "sha256": "46fc71cd9b0f134f30b56632e5ac2f9394f805c0425783f93a7ce930092d17c9",
+      "mesh_recipe": [
+        "Gmsh",
+        0.4
+      ],
       "stl_filename": "stl/top_head_shell_native.stl",
       "stl": {
-        "triangles": 976086,
+        "triangles": 976108,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 73300.44066039046,
+        "volume_mm3": 73300.44087343247,
         "bounds_mm": [
           -62.02843475341797,
           -82.7767105102539,
@@ -3756,9 +3861,9 @@
           82.77722930908203,
           62.430416107177734
         ],
-        "relative_volume_error": 5.253615230644857e-09,
+        "relative_volume_error": 5.654432707572636e-09,
         "max_bound_error_mm": 2.690917966674533e-06,
-        "sha256": "966271e63bc476bb27438397c4b74bf1d5f4773d0fb6407dd6a9ada64ce39832"
+        "sha256": "3871f90549430ea207db5848e63fa9c57c33a7e8f6174bfac2a809d1eb16cd5e"
       }
     },
     {
@@ -3795,6 +3900,9 @@
         29.500000100000882,
         9.000000100003803
       ],
+      "geometry_sha256": "afeb6bb385908d93e4f3b249dc54719a6b0b12fe022811e4fd135a227b8d376d",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3835,7 +3943,11 @@
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.0169043664644046e-05,
-      "sha256": "db36ee055fd42d96db1c60be08b9cf7f9b5b44ae6f40be6b7d498134b3894bb1",
+      "sha256": "b503ca877ee54464dbaf00a8c1635ab5fe7fd6dd452221f5d5fbe636e955330d",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/trunk_base_native.stl",
       "stl": {
         "triangles": 50974,
@@ -3891,6 +4003,9 @@
         17.5,
         4.600000000000023
       ],
+      "geometry_sha256": "1ce8015f0058e770b54407cf88ff985ec240255007f8aa542d2255d70e36c184",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -3931,7 +4046,11 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001297518999865098,
-      "sha256": "43592f6df69fbeac71f51ce3e2efab36b3fd1b00219bb6bf27f4a5192341b4e5",
+      "sha256": "237b961c9a106c97be4771bd97d024377f581e757c69f475e29739f9cccd24d0",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/ubec_clamp_native.stl",
       "stl": {
         "triangles": 2924,
@@ -3987,6 +4106,9 @@
         41.332956616631336,
         64.18603181524207
       ],
+      "geometry_sha256": "086525481a7a0a117fe0f072e71ab4da262f889cff3ed60f84c6a1f9e35e51f5",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
@@ -4005,14 +4127,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "    raise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.021657 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: upper_leg_left_native\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 33567,
@@ -4034,7 +4149,11 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.00029394233853546154,
-      "sha256": "24000b3bc9eb586449c4da2cba61f8cfbf3be516ba241b2da054f31998f4cdcd",
+      "sha256": "565db11601a9caf98ba4879ba0561a34707836999f97a473d2a931687f508712",
+      "mesh_recipe": [
+        "WatsonControlled",
+        0.005
+      ],
       "stl_filename": "stl/upper_leg_left_native.stl",
       "stl": {
         "triangles": 67170,
@@ -4090,6 +4209,9 @@
         41.332956616631336,
         64.18603181524207
       ],
+      "geometry_sha256": "811009523e635b70e05ec904ac62a69653d5e68169e494736510e5e611ee5bbd",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
@@ -4108,14 +4230,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.021657 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: upper_leg_left_native_right\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 33567,
@@ -4137,7 +4252,11 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.0002937865172201563,
-      "sha256": "115262ac01029fb8a436416488dd5240f39589c309972ef950d0a79295569ba7",
+      "sha256": "6c17020a70ee4d062163451df90edec091eb297cfa9e97d75175c441bfbd0f1d",
+      "mesh_recipe": [
+        "WatsonControlled",
+        0.005
+      ],
       "stl_filename": "stl/upper_leg_left_native_right.stl",
       "stl": {
         "triangles": 67170,
@@ -4193,6 +4312,9 @@
         16.75000005000002,
         55.775000000000006
       ],
+      "geometry_sha256": "4ae538ce90afcf55a1230b59d08af234f7101e42de3a18120cdd8fbc8628d993",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4233,7 +4355,11 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.417312783360011e-06,
-      "sha256": "9691b9706a2a1b6fd7c52745ee5a51273a1b40a851ef0be30c54ed92f73240e7",
+      "sha256": "f721bd41a59afe430a7b5983d80c343af54e33ebc456828d959e8fefbc950bd8",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/yaw2roll_left_native.stl",
       "stl": {
         "triangles": 16042,
@@ -4289,6 +4415,9 @@
         16.75000005000002,
         55.775000000000006
       ],
+      "geometry_sha256": "be71be330507e22a392c6bfd8342060f1812f4328952a1e51ce091dec9bef0b1",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
         "algorithm": "Delabella",
@@ -4307,20 +4436,7 @@
         "seam_weld_tolerance_mm": 0.0001,
         "library_valid": true,
         "library_manifold": true,
-        "prior_attempt_failures": [
-          {
-            "algorithm": "Watson",
-            "tolerance_mm": 0.01,
-            "exit_code": 1,
-            "error": "ise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.0523546 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: yaw2roll_left_native_right\n"
-          },
-          {
-            "algorithm": "WatsonControlled",
-            "tolerance_mm": 0.005,
-            "exit_code": 1,
-            "error": "aise ValueError(f\"Triangle leaves its CAD face: {distance:.6g} mm > {tolerance:.6g} mm\")\nValueError: Triangle leaves its CAD face: 0.167509 mm > 0.02 mm\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 825, in <module>\n    record = convert_worker(json.loads(task.read_text()), task.parent, sys.argv[3])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 563, in convert_worker\n    record[\"tessellation\"] = write_export_3mf(saved, bundle/record[\"filename\"])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rafaelcaricio/development/frankenduck_cad/tools/print_export.py\", line 498, in write_export_3mf\n    raise ValueError(f\"Export topology cleanup failed geometry checks: {shape.label}\") from error\nValueError: Export topology cleanup failed geometry checks: yaw2roll_left_native_right\n"
-          }
-        ]
+        "prior_attempt_failures": []
       },
       "mesh": {
         "vertices": 12065,
@@ -4342,7 +4458,11 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 7.854892024061927e-06,
-      "sha256": "770e3b04b7a7078532cd4ad991fc5fbdc69d7b99257c79619577ee4497cdcd51",
+      "sha256": "c99a53cb7d4a440ca6b602b873d67489da205e6565c88487de1b5f29c222f73e",
+      "mesh_recipe": [
+        "Delabella",
+        0.0005
+      ],
       "stl_filename": "stl/yaw2roll_left_native_right.stl",
       "stl": {
         "triangles": 24170,
@@ -4398,6 +4518,9 @@
         21.957500050000014,
         28.90500000000071
       ],
+      "geometry_sha256": "8ea9b2619e3f982f678c82e928e508d9248c783eb4229b2f6e6ec1718e1631c9",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4438,7 +4561,11 @@
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.286096034766294e-05,
-      "sha256": "03398e8b36c38e91171384b9cb027274a5adb33db57448ef74bce0b545769ce1",
+      "sha256": "dbaa2a53be0058aeb267a9cea75d6c6d9acb674b776b3af4aeee29ef06e4277d",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/yaw_roll_link_native.stl",
       "stl": {
         "triangles": 13512,
@@ -4494,6 +4621,9 @@
         39.799549999999996,
         61.00000010000001
       ],
+      "geometry_sha256": "2a30fb1e86d946ffe75c6253d68fc206b251a7c122140673fdbd02a10a4603ac",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4534,7 +4664,11 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "b9feb005ed696bc1dd527679068cb5daa85d783c0e37ba6810e12edc044ea79a",
+      "sha256": "9f9f52f932a909fb03051255b266c3878bf7857a205dfefa9cc844d38bf9ebae",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_carrier_left.stl",
       "stl": {
         "triangles": 33748,
@@ -4590,6 +4724,9 @@
         39.799549999999996,
         61.00000010000001
       ],
+      "geometry_sha256": "ba2a71f9dda0921bd58418c9d17853fbb00c1ec792ff69d84148946f730ee50c",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4630,7 +4767,11 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "52ad7c7790307ba8fc0b5d9cb698a16c40f5dc92749e3c41fee44e087743e7cc",
+      "sha256": "7946a034d32cd47aa2f1a92e36a8267fd8bc11239971512337434cc83f93eade",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_carrier_right.stl",
       "stl": {
         "triangles": 33748,
@@ -4686,6 +4827,9 @@
         2.8975000000000026,
         50.00000010000001
       ],
+      "geometry_sha256": "621dc18cd41319d14a4430719a507a2f60af9898c625f1fb3f8e6076b614a714",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4726,7 +4870,11 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271481750527068e-05,
-      "sha256": "e15e31b0ae0194af35190450ac4786d44b40e665941506beee5c03bba11aff76",
+      "sha256": "56abf52f191a7df477033b247dace42d14084da6bb1b1bdf364148c6e2410505",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_roll_adapter_left.stl",
       "stl": {
         "triangles": 18894,
@@ -4782,6 +4930,9 @@
         2.897500050000003,
         50.00000010000001
       ],
+      "geometry_sha256": "b282c969e3cfb507553df525213d7e0dbb651c938802c484fcd22bfbedfe93f1",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4822,7 +4973,11 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271456088619673e-05,
-      "sha256": "de610b479438066d19271c68e39e000e9c4251d335b4a96b07c1eb4d5fd6c6af",
+      "sha256": "ccff6c837398f4ff4473950a01335ec132ed4258fe7f86ae6c70db7ba382412f",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_roll_adapter_right.stl",
       "stl": {
         "triangles": 18894,
@@ -4878,6 +5033,9 @@
         24.3250001,
         5.795000099999996
       ],
+      "geometry_sha256": "c4b1682a5368e1082db7d6b86b85f259e185a3ddd6b3507ae1af943dbafb955c",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -4918,7 +5076,11 @@
       "max_bound_error_mm": 1.0000000116860974e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.5883097397679665e-05,
-      "sha256": "6a3b97d014ae7ae7e48e58729b77a3d88be81256fe13bb47e0f3f9e5c1c95b8f",
+      "sha256": "1caace7c32ce9655f52e4b3d700773404f6aef9de89dee778441e93704a8f6d3",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_shared_yaw_adapter.stl",
       "stl": {
         "triangles": 31882,
@@ -4978,6 +5140,9 @@
         15.650000000000002,
         5.795000000000016
       ],
+      "geometry_sha256": "1941675e78f1e43ec83b68b870a90c101e66c088039dfb9bbdc1713c3880db50",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -5018,7 +5183,11 @@
       "max_bound_error_mm": 0.0006380499999991684,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00016362559807944394,
-      "sha256": "bf630000562553f1089addd5d46b414bbb29a08a5849490fa1c2835993453801",
+      "sha256": "a99d5b288c7c7e2ec3a8de8922b817d2dae9ee5ffa7f4c64ae5cf4ed12788326",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/bearing_head_adapter.stl",
       "stl": {
         "triangles": 15924,
@@ -5074,6 +5243,9 @@
         15.650000000000002,
         91.95000009999998
       ],
+      "geometry_sha256": "bc4b4600423712fe1381fd623cda1f3e32642c6b3c915a6e61d5980d8b7e5eab",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -5114,7 +5286,11 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "2e944dbbf98512aad9c057b590ebbbc4f5dad2bfc0a75f657422e91cac1bd65b",
+      "sha256": "ef19d28d7be3389b355f2878fc3930a8869de57b4850f3645a18e8c98971de9a",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/passive_leg_support_left.stl",
       "stl": {
         "triangles": 19974,
@@ -5170,6 +5346,9 @@
         15.650000000000002,
         91.95000009999998
       ],
+      "geometry_sha256": "a71f8539079ad6cf22b7c3cc314376dfff3f6623908750319fb543fd79570f05",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -5210,7 +5389,11 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "632b36ecb83a86584fa315398672d1b4a4634158598d1f3529cfa03cbffa11e9",
+      "sha256": "777c27630bda7005e30088d7b3d9b8c9112eda9eb1b691fe7637dfc00d0592f0",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/passive_leg_support_right.stl",
       "stl": {
         "triangles": 19974,
@@ -5269,6 +5452,9 @@
         17.244811083614024,
         86.06936528048188
       ],
+      "geometry_sha256": "bf3abaeabd223a181ca142f022e1a62e8d27b1e51b9636ba6e30955f4f3832af",
+      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
         "algorithm": "Watson",
@@ -5309,7 +5495,11 @@
       "max_bound_error_mm": 0.0010890836140227123,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00010695106524212629,
-      "sha256": "5a998453399ff40d35fa958ba5bc5870fc56baf9f7eecddf8b102c770c52734e",
+      "sha256": "bf833824b7d9bdf8755ced7487b01c66121f5c490433db501f392206c04d281a",
+      "mesh_recipe": [
+        "Watson",
+        0.01
+      ],
       "stl_filename": "stl/lipo_pod_native.stl",
       "stl": {
         "triangles": 99746,
@@ -5333,60 +5523,62 @@
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "59cf09319abed50ab66d05750ed03c4495e14b03452502fb0f6fe6471fe295d6",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "c81e526abd71400865125988d568775bd67136cf54f3cc234cc4f157ac80d417",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "efaae8f9400d1487abc635885926e9574e48613110d86d0eda18cae12b0bfc2d",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "52682c4915e27bf8b55a63b4e992ffe81ad8b0a047902b2bc413cfb6fd5c9ec0",
-    "3mf/ankle_eye_left_native.3mf": "be2f89c286f68ea398af7f975b274dee19911e4d8876f8b101fadb374f58a90b",
-    "3mf/ankle_eye_left_native_right.3mf": "f3247eee9eb1d16aa15719dbb527f0387d5e100bc09e4075d28a21bb6226634a",
-    "3mf/ankle_left_native.3mf": "0edfb22c07f7a0807d0dc10c1dcb5a4673831e953574a30e54fad5bd2844f041",
-    "3mf/ankle_left_native_right.3mf": "e4782627b71d5d385aaa0d52869c5f198cc2629cac35e13a26f9436249227e6c",
-    "3mf/bearing_carrier_left.3mf": "b9feb005ed696bc1dd527679068cb5daa85d783c0e37ba6810e12edc044ea79a",
-    "3mf/bearing_carrier_right.3mf": "52ad7c7790307ba8fc0b5d9cb698a16c40f5dc92749e3c41fee44e087743e7cc",
-    "3mf/bearing_head_adapter.3mf": "bf630000562553f1089addd5d46b414bbb29a08a5849490fa1c2835993453801",
-    "3mf/bearing_roll_adapter_left.3mf": "e15e31b0ae0194af35190450ac4786d44b40e665941506beee5c03bba11aff76",
-    "3mf/bearing_roll_adapter_right.3mf": "de610b479438066d19271c68e39e000e9c4251d335b4a96b07c1eb4d5fd6c6af",
-    "3mf/bearing_shared_yaw_adapter.3mf": "6a3b97d014ae7ae7e48e58729b77a3d88be81256fe13bb47e0f3f9e5c1c95b8f",
-    "3mf/bottom_head_shell_native.3mf": "22477ef73c222d36681b696a34ea2eb6a40fc2a679f8b5732cf66e54a62a7533",
-    "3mf/electronics_deck_native.3mf": "f01f61fe95de7329ccb00eb416700ca98a69c905b76a09e557f05d2ad9d4965d",
-    "3mf/face_part_native.3mf": "1d485f322881b6c6f315f0e6ecc329ebc940da186b9fa045a58a832f8e9e32eb",
-    "3mf/face_radxa_bracket_native.3mf": "d2831f2659e6a23374494fd1de739fd14bc8a82b3c6e560bc0d92afcdf4378fc",
-    "3mf/foot_left_native_a.3mf": "5fa992e69fb3f0758e09da51c42d57ea64afaa3f7fe09f015a0c704f5c302003",
-    "3mf/foot_left_native_a_right.3mf": "391a8ddff2c09942026a5c48e5f12da9bd9108772b6a35a8d069cac408bc8796",
-    "3mf/foot_left_native_b.3mf": "67d5f2cfe1aee4d1ecf72c20d010cddb9750607d3eac122260a566a8b3e4c9c5",
-    "3mf/foot_left_native_b_right.3mf": "8c35b0804f3a3ecb6d04d3200c80722a8280583ed6f5307141e141d164fd03c7",
-    "3mf/head_frame_native.3mf": "255badabce37caa60092c26159cd68dcd8c748c147445d55422fff132a0fa67e",
-    "3mf/hip_left_native.3mf": "b9278ee36b502a209c551c87ca028e13f5a4aba18d9bb87226ce561fc3e2862f",
-    "3mf/hip_left_native_right.3mf": "25c4061c779ab46323fb6c716d3ffe77185987d28b4276e6ad6e68223770de4c",
-    "3mf/imu_yoke_bridge_native.3mf": "54651a08f4614a4d61b53b9cebd3dad8277ea33e2982594ded3051d1301926f1",
-    "3mf/jaw_native.3mf": "6011f038db89e91ed10c7b9968cabf72f91d7b11ca3846c36b9b5d1bea5133e7",
-    "3mf/jaw_soft_001_native.3mf": "6a0fe3e24ba15d1423d97a2a935d2298b6a5c13a80c3e3d0b1e94c90938f27f7",
-    "3mf/left_shell_native.3mf": "b42f16f2d4c8da37790adddbadcf27d62167ab2caa0d182caf6f7df8e1435bd9",
-    "3mf/leg_left_native.3mf": "c63cdd8ccaeaf98b808f076d07d77240b02913572a9bbe5dd79c29f3ae082786",
-    "3mf/leg_left_native_right.3mf": "6a697de4c09ddd7cf0ee8e8922cb4dd1eb8035c9c781a34106fb6cbdb607f1f6",
-    "3mf/lipo_pod_native.3mf": "5a998453399ff40d35fa958ba5bc5870fc56baf9f7eecddf8b102c770c52734e",
-    "3mf/neck_001_native.3mf": "accc252c48b40c724d6ff96e067151b00202495c4f30ea5ca4b926755fb4540c",
-    "3mf/neck_002_native.3mf": "d522d7221922ad57a4a3fab3a05a06e0f65c8c7d523cd36206052c8f861fc29a",
-    "3mf/neck_internal_yoke_native.3mf": "9cfd0646a17d0a1f18fd361f0b14712bc1711b132a5e1efc186a70b02690c686",
-    "3mf/neck_pitch_001_native.3mf": "44bb2e0dda40e3f562540d07b574457dc93618df35323010867321ea8e6cca74",
-    "3mf/noenoeil_native.3mf": "69dab386ab9105cc7940dba4f4734ac2ba3fd0d315ce63055900042051610ac8",
-    "3mf/passive_leg_support_left.3mf": "2e944dbbf98512aad9c057b590ebbbc4f5dad2bfc0a75f657422e91cac1bd65b",
-    "3mf/passive_leg_support_right.3mf": "632b36ecb83a86584fa315398672d1b4a4634158598d1f3529cfa03cbffa11e9",
-    "3mf/right_shell_native.3mf": "1fbe2c27241be8bff7d47fe769d0b2c095007dc24e21eeda8c1c2061e33be6ff",
-    "3mf/roll_front_bulkhead_native.3mf": "454c443d90ac2f56972bc1f8012f150b2b9e471bd4f9f893fc70e06631a95f58",
-    "3mf/soft_mouth_top_native.3mf": "23a32a721c934b15dfa09dc8607c2936daa3744803b6b609cea6d95644eb9858",
-    "3mf/sole_left_native.3mf": "e0f7300104a2202a0219fd9b7d0cee15db49f57c61152527877632d5593785c8",
-    "3mf/sole_left_native_right.3mf": "087a85a41755ac1d8ce97d855b7f548a3a18fc487de6e604ee08f1038329243d",
-    "3mf/top_head_shell_native.3mf": "1b72cc6bc8a1b2e52429d7fed77837e5e0610332f37498c8ef3495389eb503df",
-    "3mf/trunk_base_native.3mf": "db36ee055fd42d96db1c60be08b9cf7f9b5b44ae6f40be6b7d498134b3894bb1",
-    "3mf/ubec_clamp_native.3mf": "43592f6df69fbeac71f51ce3e2efab36b3fd1b00219bb6bf27f4a5192341b4e5",
-    "3mf/upper_leg_left_native.3mf": "24000b3bc9eb586449c4da2cba61f8cfbf3be516ba241b2da054f31998f4cdcd",
-    "3mf/upper_leg_left_native_right.3mf": "115262ac01029fb8a436416488dd5240f39589c309972ef950d0a79295569ba7",
-    "3mf/yaw2roll_left_native.3mf": "9691b9706a2a1b6fd7c52745ee5a51273a1b40a851ef0be30c54ed92f73240e7",
-    "3mf/yaw2roll_left_native_right.3mf": "770e3b04b7a7078532cd4ad991fc5fbdc69d7b99257c79619577ee4497cdcd51",
-    "3mf/yaw_roll_link_native.3mf": "03398e8b36c38e91171384b9cb027274a5adb33db57448ef74bce0b545769ce1",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "dc43324584a3fedab53433375406ed23a72842f29e542a034fc22ab5f5f2584e",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "6907ce1553433a391a72f1a230215586c3a93761a490733955e73af6f24ed9b2",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "8f277996efff014ac6aa1f7ebbc5a0d663a86e4e448cc923d2619fa0618ef18c",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "5fc936042cadd6c3708f9b9f59131963dfdbecdd4bfab5c74a4a75ed8ac3bdcc",
+    "3mf/ankle_eye_left_native.3mf": "a868474beefc0af82f586c240925e69b5d89353689016ce57a8d2f2618e58ed4",
+    "3mf/ankle_eye_left_native_right.3mf": "8a8a3761a4310a6e75bae2d52292ce16a269adb0384beacd8746b2afad5dd48d",
+    "3mf/ankle_left_native.3mf": "df54acc126e0e66f92dc0386e30eb7231351f3d2d6815b4ee9e59cd2722653c4",
+    "3mf/ankle_left_native_right.3mf": "65696c092dc2e97509abca01bb68a609902ffe0d66ecac4570cf59f772f10364",
+    "3mf/bearing_carrier_left.3mf": "9f9f52f932a909fb03051255b266c3878bf7857a205dfefa9cc844d38bf9ebae",
+    "3mf/bearing_carrier_right.3mf": "7946a034d32cd47aa2f1a92e36a8267fd8bc11239971512337434cc83f93eade",
+    "3mf/bearing_head_adapter.3mf": "a99d5b288c7c7e2ec3a8de8922b817d2dae9ee5ffa7f4c64ae5cf4ed12788326",
+    "3mf/bearing_roll_adapter_left.3mf": "56abf52f191a7df477033b247dace42d14084da6bb1b1bdf364148c6e2410505",
+    "3mf/bearing_roll_adapter_right.3mf": "ccff6c837398f4ff4473950a01335ec132ed4258fe7f86ae6c70db7ba382412f",
+    "3mf/bearing_shared_yaw_adapter.3mf": "1caace7c32ce9655f52e4b3d700773404f6aef9de89dee778441e93704a8f6d3",
+    "3mf/bottom_head_shell_native.3mf": "03c3371010aba91f586f2b7c486fad58dc13623e2474f505cde2177d56346a8f",
+    "3mf/electronics_deck_native.3mf": "dd22d444dddad7ca4c8de78fcc34f83738473b626354ec352878021abee1e403",
+    "3mf/face_part_native.3mf": "88307971d871e5630ed819cb684e22deebf84462b05c7010733a962f0be540d5",
+    "3mf/face_radxa_bracket_native.3mf": "48369e84be1b8596ea5bc04baec291497187e7ca95b59bfcb661287769c9d858",
+    "3mf/foot_left_native_a.3mf": "504013866b4d078f92fdc9d8057ebb51c4d38522cf694be7334691f76f0e1b38",
+    "3mf/foot_left_native_a_right.3mf": "a6118abb0112ddadc37c3d123dfe0b9acc6c9a2a34c27a92aea1b3c80c2df528",
+    "3mf/foot_left_native_b.3mf": "231e4f076c0d23bb406d8b3b051dc432650825f530c9ca41bd422d4311a7f044",
+    "3mf/foot_left_native_b_right.3mf": "819db37463f9d72fe94207c49f258e49001a0465ecdf3cd095f69acfed8ca871",
+    "3mf/head_frame_native.3mf": "2f054d7d72f8dfb23813101e65a98b876bb340e3ab1799ce6828c31e8a37abd7",
+    "3mf/hip_left_native.3mf": "a458b32d17721c7256e3bda83ab43edf2b0057da9e7bdb5a7ac8a9faea15525f",
+    "3mf/hip_left_native_right.3mf": "f6d3a695c22bfb1a6f3d1b78d3ed6a3d86f69a61bc949d26944c02fe2b2972ef",
+    "3mf/imu_yoke_bridge_native.3mf": "99844d5593214423c20d692a7afb74e54ab7c7a089c975455070e91e9d1d5321",
+    "3mf/jaw_native.3mf": "6d115023e0837a9dea1971e8a3b6532ef9006938512d28edaaca63924451e908",
+    "3mf/jaw_soft_001_native.3mf": "c62e586bfcf1982619b8edfd32d9ccb278ba8c96e182636294cca93cc5108eaa",
+    "3mf/left_shell_native.3mf": "7183ca1b30eb5e787136f63cb5713e1a589c624bcf133c3d68afad80a9077bf5",
+    "3mf/leg_left_native.3mf": "bbf5e643e05d6388032b4d284f06f206131b3ceab4bf961861dfe1f6e8173f83",
+    "3mf/leg_left_native_right.3mf": "93f1c3d593ae4f4040ea623579b9881f81ce62d0f279a35ba1eb11f0f163283e",
+    "3mf/lipo_pod_native.3mf": "bf833824b7d9bdf8755ced7487b01c66121f5c490433db501f392206c04d281a",
+    "3mf/neck_001_native.3mf": "248d4322b58d36306c96c08da9ba0b0db1ea3f835ed8e13172f2e9604d9723fa",
+    "3mf/neck_002_native.3mf": "ccc17c4a42ea67cbc8f31b252d57f12e3dd8837fc14d69f4d1e1bb045c9c8a8d",
+    "3mf/neck_internal_yoke_native.3mf": "dd818386548ce904caeb19a40079a67cbe2d724bbb28dd51ada6223682764840",
+    "3mf/neck_pitch_001_native.3mf": "6038fb9edd6c06cc3ae284caaef857f0c929390d346b0eacd471a6b359f9d749",
+    "3mf/noenoeil_native.3mf": "63965a7a0aa27c63ede169fa97f1aa317dea8ab015d8eec1d6617a04bc200dc8",
+    "3mf/passive_leg_support_left.3mf": "ef19d28d7be3389b355f2878fc3930a8869de57b4850f3645a18e8c98971de9a",
+    "3mf/passive_leg_support_right.3mf": "777c27630bda7005e30088d7b3d9b8c9112eda9eb1b691fe7637dfc00d0592f0",
+    "3mf/right_shell_native.3mf": "1da2acc2a36918d01478e6d2ea74cce90c8d3cc51e5718e311315a8f19c36b23",
+    "3mf/roll_front_bulkhead_native.3mf": "910d49c71c5fde306bd50ca3303eb7659b68e03f6c41482c942757055a84f3d7",
+    "3mf/soft_mouth_top_native.3mf": "7bad814ff4ad08e19a79acf5075a4c2fa37025035a09963610a15261dc519c92",
+    "3mf/sole_left_native.3mf": "98506de84fb92277dc85cd931bd973f5a833fb7bb12954e0dc3ebb37ec9c094d",
+    "3mf/sole_left_native_right.3mf": "f863e7234120e81d7f5df33278c5387e63da021dccc7e1ea6aaa9c06306d7856",
+    "3mf/top_head_shell_native.3mf": "46fc71cd9b0f134f30b56632e5ac2f9394f805c0425783f93a7ce930092d17c9",
+    "3mf/trunk_base_native.3mf": "b503ca877ee54464dbaf00a8c1635ab5fe7fd6dd452221f5d5fbe636e955330d",
+    "3mf/ubec_clamp_native.3mf": "237b961c9a106c97be4771bd97d024377f581e757c69f475e29739f9cccd24d0",
+    "3mf/upper_leg_left_native.3mf": "565db11601a9caf98ba4879ba0561a34707836999f97a473d2a931687f508712",
+    "3mf/upper_leg_left_native_right.3mf": "6c17020a70ee4d062163451df90edec091eb297cfa9e97d75175c441bfbd0f1d",
+    "3mf/yaw2roll_left_native.3mf": "f721bd41a59afe430a7b5983d80c343af54e33ebc456828d959e8fefbc950bd8",
+    "3mf/yaw2roll_left_native_right.3mf": "c99a53cb7d4a440ca6b602b873d67489da205e6565c88487de1b5f29c222f73e",
+    "3mf/yaw_roll_link_native.3mf": "dbaa2a53be0058aeb267a9cea75d6c6d9acb674b776b3af4aeee29ef06e4277d",
+    "LICENSE": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd",
+    "NOTICE.md": "bb2cf0ee0f9a5909ba471effd467e6dd532286a38f83c8126df36edeb2f69f4f",
     "PARTS.csv": "d35e772b3118ed04b9ff24c979a3cd300cdfb25ee0fc469d705acadcf16d0f2d",
-    "README.md": "de9d463330e4ac1934c3afcd38003d5a2100af6697a4a6c1b4de30d86a2ea06a",
+    "README.md": "436152ec26bbc57a6b6fc72d8a2621bdf0ade441493777ac8ed53a6e4a5e79cf",
     "stl/ankle_bearing_inner_cap_left_native.stl": "8990a9e39d06784f97c6571e3e9af0bb6911fd1fd3659ee416d0001da59e2c68",
     "stl/ankle_bearing_inner_cap_left_native_right.stl": "29083d6bf5b22e01f29c4396ccb09c309a52626564063a504c3e7750eaaf5b67",
     "stl/ankle_bearing_outer_keeper_left_native.stl": "5c45873d84a662b8b395b275d52a1b2bcdbbbe7df6da3be5924fd2d66b555a4b",
@@ -5429,9 +5621,9 @@
     "stl/right_shell_native.stl": "59b29331d645df65e90ab6bd34151f5de5da14a31ff36fa63d8c4fafae4f7f4f",
     "stl/roll_front_bulkhead_native.stl": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815",
     "stl/soft_mouth_top_native.stl": "481a4a56c21d5d2065c67334da2547b12dde731845900b572a8e2ec536fe3b1b",
-    "stl/sole_left_native.stl": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882",
-    "stl/sole_left_native_right.stl": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e",
-    "stl/top_head_shell_native.stl": "966271e63bc476bb27438397c4b74bf1d5f4773d0fb6407dd6a9ada64ce39832",
+    "stl/sole_left_native.stl": "bdb4defd52626e7aa9e90906fd3fc2b728b9ca85488e8cda2e1d894be1ce556b",
+    "stl/sole_left_native_right.stl": "3b332b0c19fdf447e95536a9c522caa40a7488aee721944d629bc798ad4d563b",
+    "stl/top_head_shell_native.stl": "3871f90549430ea207db5848e63fa9c57c33a7e8f6174bfac2a809d1eb16cd5e",
     "stl/trunk_base_native.stl": "fd0ad20ffc088490ea1a92e3651df688993af55dd1c3db27290fac4c40b5d64f",
     "stl/ubec_clamp_native.stl": "f6064ddf82283b8d8bff428b546e0deabea0da2ff23165ec4a3912c2db007338",
     "stl/upper_leg_left_native.stl": "81cbd7ed24a7bb18d23c603cd8f9c584a8b809f5ee5630cc560f082a272d3bbf",
@@ -5440,5 +5632,5 @@
     "stl/yaw2roll_left_native_right.stl": "485cf9ddc9cd2f78510d811e73f31153b12dae91b1d00f55b08910664c7997fc",
     "stl/yaw_roll_link_native.stl": "2bbecdb4671564a56e2e6126f9fc3c6b08eabf6a98cfca7e8ffad42e6028a1a4"
   },
-  "manifest_content_sha256": "7c4424d63353e3409fa788c7f5c703efbb5a88ab068fccf141d8ff907cbc7b29"
+  "manifest_content_sha256": "77fc36e582a39299a058651b0f27aa730ade89f30ad7d8e3a04fb380ca8a64f6"
 }

@@ -52,3 +52,39 @@ class PlanarTriangulation(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MeshWorker(unittest.TestCase):
+    """Run the real worker process on a small committed part."""
+
+    def test_worker_exits_cleanly_and_reproduces_committed_mesh(self):
+        import json, os, subprocess, sys, tempfile
+        from pathlib import Path
+        from tools.print_mesh import ROOT, inspect_3mf
+        manifest = json.loads((ROOT/"printable/manifest.json").read_text())
+        part = next(p for p in manifest["parts"] if p["model"] == "ankle_bearing_inner_cap_left_native")
+        keys = ("model", "filename", "occurrences", "translation_mm", "expected_bounds_mm",
+                "source_volume_mm3", "saved_step_comparison")
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            (folder/"bundle/3mf").mkdir(parents=True)
+            task = folder/"task.json"
+            task.write_text(json.dumps({k:part[k] for k in keys}))
+            env = dict(os.environ, PYTHONPATH=f"{ROOT/'src'}{os.pathsep}{ROOT}")
+            algorithm, tolerance = part["mesh_recipe"]
+            result = subprocess.run([sys.executable, "-m", "tools.print_mesh", "--worker", str(task),
+                str(folder/"bundle"), algorithm, str(tolerance)], cwd=ROOT, env=env,
+                capture_output=True, text=True, timeout=300)
+            self.assertEqual(result.returncode, 0, result.stderr[-1200:])
+            self.assertIn("Exported ankle_bearing_inner_cap_left_native", result.stdout)
+            measured = inspect_3mf(folder/"bundle"/part["filename"], allow_numerical_overlaps=True)
+            self.assertEqual(measured["triangles"], part["mesh"]["triangles"])
+            self.assertEqual(measured["open_edges"], 0)
+            self.assertAlmostEqual(measured["volume_mm3"], part["mesh"]["volume_mm3"], places=6)
+
+    def test_module_refuses_direct_use(self):
+        import subprocess, sys
+        from tools.print_mesh import ROOT
+        result = subprocess.run([sys.executable, "-m", "tools.print_mesh"], cwd=ROOT,
+                                capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)

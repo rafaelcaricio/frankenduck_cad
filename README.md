@@ -6,9 +6,12 @@ Parametric CAD for the Frankenduck robot, built with Text to CAD. The project
 includes the complete assembly, editable part models, purchased-component
 representations, joint animation and individual files for 3D printing.
 
-Frankenduck is inspired by the [Microduck](https://github.com/pollen-robotics/microduck)
-from [Pollen Robotics](https://github.com/pollen-robotics). All rights to the
-Microduck design belong to Pollen Robotics.
+Frankenduck is an adaptation of the [Microduck](https://github.com/pollen-robotics/microduck)
+by [Pollen Robotics](https://github.com/pollen-robotics). Its printed parts were
+derived from Pollen Robotics' Microduck 3D model files in
+[microduck_rl](https://github.com/pollen-robotics/microduck_rl), licensed under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), and then
+modified. Pollen Robotics does not endorse this project.
 
 **Here to print?** Start with [printable/](printable/README.md). It contains
 52 individual millimetre 3MF files with matching STL files and a
@@ -86,6 +89,12 @@ hashes, mesh checks and export settings. Print status is currently `unreviewed`.
 Numerical seam warnings are recorded there; open boundaries and winding errors
 fail export. Failed exports preserve the previous complete bundle.
 
+Export meshes only the parts whose exact geometry changed. A part keeps its
+verified 3MF and STL when its saved geometry and the meshing code, runtime and
+settings are byte-identical to the run that verified it. A text-only change
+takes about 15 s; a full re-mesh of all 52 parts takes several minutes.
+`./cad export print --force` meshes every part again.
+
 ## Design notes
 
 The Radxa Cubie A7Z sits with USB-C facing up. Its mount provides GPIO space
@@ -124,3 +133,12 @@ default up to commit `e883d4e`; the PAP 204 A1 backpack revision is commit
 Read [AGENTS.md](AGENTS.md) before automated changes. Commit model changes with
 their matching printable bundle when updating a print revision. Environments,
 caches, generated working STEP files and temporary reports stay out of Git.
+
+## License
+
+Copyright 2026 Rafael Caricio. This repository is licensed under
+[CC BY-NC-SA 4.0](LICENSE): credit Pollen Robotics and Rafael Caricio, do not
+use it commercially and share adaptations under the same license. Purchased
+hardware models, the DejaVu font and the Radxa photos keep their owners' terms.
+[NOTICE.md](NOTICE.md) lists the attribution, the changes and the third-party
+files.
