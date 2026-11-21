@@ -645,12 +645,6 @@ if __name__ == "__main__":
             MESH_COORD_DECIMALS = 8
             MESH_ALGORITHM = "Watson"
             MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True
-        if MESH_ALGORITHM == "WatsonWideAngle":
-            # Dense-knot lofted walls: a wider angle avoids millions of triangles
-            # without a larger measured surface deviation (see PART_RECIPES).
-            MESH_ALGORITHM = "Watson"
-            MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True
-            ANGULAR_TOLERANCE = .35
         if MESH_ALGORITHM == "WatsonControlled":
             MESH_ALGORITHM = "Watson"
             MESH_SURFACE_CONTROL = MESH_INTERNAL_VERTICES = True

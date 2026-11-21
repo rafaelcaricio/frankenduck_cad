@@ -28,9 +28,10 @@ in the manifest. A complete bundle replaces `printable/` only after validation.
 Up to eight workers run at once, heaviest parts first. Each part tries the mesh
 recipe that passed for it last time before the rest of the ladder, with a 600 s
 limit instead of 180 s so that load from parallel workers cannot change which
-recipe a part ends up with. `PART_RECIPES` in `print_export.py` gives the soles
-their own first recipe (Watson 0.01 mm at 0.35 rad); their lofted walls have
-over 800 spline knots, and the general ladder meshed them at 2 M triangles.
+recipe a part ends up with. `PART_RECIPES` in `print_export.py` starts the soles
+at WatsonControlled 0.005 mm: their lofted walls have over 800 spline knots
+and Watson 0.01 mm times out on them. Their meshes stay at about 2 M triangles;
+a coarser angle was measured to move the surface up to 0.38 mm.
 
 Each manifest part records the hash of its normalized saved STEP geometry
 (`geometry_sha256`, taken before any rebuild of an invalid saved solid) and of everything else that can change its mesh

@@ -1,17 +1,17 @@
 {
-  "generated_utc": "2026-11-20T11:21:19.401532+00:00",
-  "input_key": "3925e31ebe936a6de8feddaa806bd02f58d8a1328941e582ef1b0408e8202894",
+  "generated_utc": "2026-11-20T19:22:45.780376+00:00",
+  "input_key": "81040e3d130d9b6653bb793f86646f6a72021090b43930a15f73f08c3afe9d7b",
   "inputs": {
     "schema_version": 2,
     "source_step_sha256": "de6b1d1e900afa7732f941968ad7d0775acfa9b2215531bd36e765336d3424f1",
     "catalog_sha256": "beeeb62f842ec6e634de22b163f260ff4ce87a43437113d199b9508b31590339",
     "implementation": {
-      "tools/print_export.py": "e21a14ddeff6040b8545bd8c44c7c9799c04d5cf60e412842859019ee0b4a89e",
+      "tools/print_export.py": "e7db67bda7a89e18ccaac306f831633fe85ee92ac318fe6fcb608e9cebe4943e",
       "tools/components.py": "96045afc463358da0e1ed3340e1478ffa1ba2eca1bf84c83c97f52863b2d4430"
     },
     "mesh": {
       "implementation": {
-        "tools/print_mesh.py": "507d5c1ed651f4d5dea518cb2afcfe93fbccb89f86c03fbdfe393a36ea3d6e73",
+        "tools/print_mesh.py": "1d5d1868ef7655ba43835f9bccc741697a4e51ce3428689e5f2d128f98f80808",
         "tools/gmsh_mesh.py": "8f58ef80ada64f0a873819a0a434345cbff54801c0bfe04ad0543e5f40a2ba4a"
       },
       "runtime": {
@@ -69,19 +69,19 @@
       "part_recipes": {
         "sole_left_native": [
           [
-            "WatsonWideAngle",
-            0.01
+            "WatsonControlled",
+            0.005
           ]
         ],
         "sole_left_native_right": [
           [
-            "WatsonWideAngle",
-            0.01
+            "WatsonControlled",
+            0.005
           ]
         ]
       }
     },
-    "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+    "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
     "build_input_key": "c448c0c576bd898d7d6691132eaaf041f03569fda7cbb5f79b73886ca73836bd",
     "assembly_data_sha256": "6e61bd7fc1394a0707403066691475c6a75e1c5c02294f5cfc1aa9f83fe1af2f",
     "license_files": {
@@ -132,7 +132,7 @@
         9.5
       ],
       "geometry_sha256": "1daa2dd4ad66275083e261866e9b7d7d3e960e9ebfb818bcda11dc074a8dd7b0",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -174,7 +174,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "dc43324584a3fedab53433375406ed23a72842f29e542a034fc22ab5f5f2584e",
+      "sha256": "80ab990ffa32d3d3d303859fc3a5157c7ea025d01ffa80d23e776b017ccbebfd",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -235,7 +235,7 @@
         9.5
       ],
       "geometry_sha256": "42ea97196cbae48656279e6d91b77d56fa36b18e144dc16496ce9716dacb9c95",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -277,7 +277,7 @@
       "max_bound_error_mm": 0.0014760000000002549,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00041441121801077843,
-      "sha256": "6907ce1553433a391a72f1a230215586c3a93761a490733955e73af6f24ed9b2",
+      "sha256": "a1d30632a37fe9030a257611882fdddc7ba4271bd9f8d12f7f3022cf2fb2b2c3",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -338,7 +338,7 @@
         26.3
       ],
       "geometry_sha256": "60f44d1bfed0d86179893f9bf69fc460db619b6f72e2a4e6c013469ee799c6b1",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -380,7 +380,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791596158507,
-      "sha256": "8f277996efff014ac6aa1f7ebbc5a0d663a86e4e448cc923d2619fa0618ef18c",
+      "sha256": "fb1e392bd621884bae9806d5416a8cf10b56f83d7fd594cc8061ef5478c1fdd9",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -441,7 +441,7 @@
         26.3
       ],
       "geometry_sha256": "d2ada19dbbbacc8baf5f942ca6ac043c382480f0bb35b77996a1e2e09381f98b",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -483,7 +483,7 @@
       "max_bound_error_mm": 0.004087,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0004143791116775731,
-      "sha256": "5fc936042cadd6c3708f9b9f59131963dfdbecdd4bfab5c74a4a75ed8ac3bdcc",
+      "sha256": "8c6f784ca476edd61610de15663ed3803ec46280a5af23c6a6ea78d5fdaa36e1",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -544,7 +544,7 @@
         36.507932193528525
       ],
       "geometry_sha256": "dba15c63a0dacdd2ddd6ee42804ab6d88cd550638f185efc06d791881981e2c4",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
@@ -613,7 +613,7 @@
       "max_bound_error_mm": 1.93528528313891e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.272688473962509e-08,
-      "sha256": "a868474beefc0af82f586c240925e69b5d89353689016ce57a8d2f2618e58ed4",
+      "sha256": "d0cac2e096a4d61d5eccae90996f8fc18f101ab0c4bd77857b663bb8a3ff263d",
       "mesh_recipe": [
         "Watson",
         1e-05
@@ -674,7 +674,7 @@
         36.507932193528006
       ],
       "geometry_sha256": "842615ad0e03cfe4ed5f88f2bed879216caec4152c57ae5f785384a23d7aaceb",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
@@ -743,7 +743,7 @@
       "max_bound_error_mm": 1.935280096176939e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.364183251932241e-08,
-      "sha256": "8a8a3761a4310a6e75bae2d52292ce16a269adb0384beacd8746b2afad5dd48d",
+      "sha256": "61e8580a9bb163546ecad928428abe136843183ac77dd91eafe5fb781f74cab5",
       "mesh_recipe": [
         "Watson",
         1e-05
@@ -804,7 +804,7 @@
         33.704000293939
       ],
       "geometry_sha256": "6a339e2c1167f6f3d6d54835f2619303d76c3a24bfbedbe750a4b8a0af3f71fe",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -846,7 +846,7 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.090954093148115e-06,
-      "sha256": "df54acc126e0e66f92dc0386e30eb7231351f3d2d6815b4ee9e59cd2722653c4",
+      "sha256": "5ce62b9c46fcd564bdac2c4ba9796d592b5f0caf6ad410e78ba3012008ac91e5",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -907,7 +907,7 @@
         33.704000293938996
       ],
       "geometry_sha256": "9dee9d9317533a8d25313e5ccfb5b0b969192bb655cc917c8e328d1fa8987f5c",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -949,7 +949,7 @@
       "max_bound_error_mm": 0.00016706370799823844,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.066297066077291e-06,
-      "sha256": "65696c092dc2e97509abca01bb68a609902ffe0d66ecac4570cf59f772f10364",
+      "sha256": "d28de4b95323e73fe1bae6ca809c926a678729fb17b2eab6713100c4d951363f",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -1010,7 +1010,7 @@
         24.56440020103298
       ],
       "geometry_sha256": "50eb18bfe6ee3bb86f8ebdfc7ecebc1fe419cc51028d1d1384a21fc161701802",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1052,7 +1052,7 @@
       "max_bound_error_mm": 2.0103298226104016e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.258425170278414e-05,
-      "sha256": "03c3371010aba91f586f2b7c486fad58dc13623e2474f505cde2177d56346a8f",
+      "sha256": "b9b355d3da70f1fc56e2257155d457a0a65bca935209ddf95e3da049a74d8868",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -1113,7 +1113,7 @@
         5.449999999999989
       ],
       "geometry_sha256": "e6c1289a36facb73ad400633bc1b73e405869b1b1669d782cd55b044acd781c8",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1155,7 +1155,7 @@
       "max_bound_error_mm": 1.1546319456101628e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.692096770163398e-05,
-      "sha256": "dd22d444dddad7ca4c8de78fcc34f83738473b626354ec352878021abee1e403",
+      "sha256": "35c1ae7657abdc1c0477a4dd054a9c0906de92b2742961ee517bafbe67edfc60",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -1216,7 +1216,7 @@
         60.241021033332686
       ],
       "geometry_sha256": "6bbcaf23c61e9d2f752675b640e5b214d390695cad4f15cc52b7d84536108e4d",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1258,7 +1258,7 @@
       "max_bound_error_mm": 0.002457033332689207,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001685166341988373,
-      "sha256": "88307971d871e5630ed819cb684e22deebf84462b05c7010733a962f0be540d5",
+      "sha256": "ee6917e9331495796a770498b76a618fbfd656d885b5328d84a30eb07828f87b",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -1319,7 +1319,7 @@
         38.640000000004534
       ],
       "geometry_sha256": "904dacdd38d9b2bf6eb7a97303c859eb41e2c62ec193f6a16e7bcd1a791a1f75",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1361,7 +1361,7 @@
       "max_bound_error_mm": 0.0003800000045330876,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2945880864821577e-05,
-      "sha256": "48369e84be1b8596ea5bc04baec291497187e7ca95b59bfcb661287769c9d858",
+      "sha256": "c42210a29a0c55aeb183e4bf272dd013b625e2257fb6752c9d63e8bc76eed681",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -1422,7 +1422,7 @@
         22.81575763078674
       ],
       "geometry_sha256": "92c26497c69e45f1e250f31774a3ce26526c37c2c7dc4209c0deabeda71b5440",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -1464,7 +1464,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6314685846506777e-06,
-      "sha256": "504013866b4d078f92fdc9d8057ebb51c4d38522cf694be7334691f76f0e1b38",
+      "sha256": "ce3b8a40f753a9bcaf63d57678b981b9983475351bc2f5f193e17775adc4ef15",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -1525,7 +1525,7 @@
         22.81575763078674
       ],
       "geometry_sha256": "f27b73277a55ce042dcf4666e85cb37d6f3990eaba7ea70a17f95354bb02bf7e",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -1567,7 +1567,7 @@
       "max_bound_error_mm": 5.786941493113318e-05,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 1.6586967573804625e-06,
-      "sha256": "a6118abb0112ddadc37c3d123dfe0b9acc6c9a2a34c27a92aea1b3c80c2df528",
+      "sha256": "e180300421086938190945cde3f31e8aeeabe40a68c37624861baba79ca5a69e",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -1628,7 +1628,7 @@
         6.750000200002343
       ],
       "geometry_sha256": "8823c4854fa7955c69dfec5e6c23ce12abbd2a640a2bd271f741a52354e4b562",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
@@ -1670,7 +1670,7 @@
       "max_bound_error_mm": 2.000023426873554e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.991851090216742e-08,
-      "sha256": "231e4f076c0d23bb406d8b3b051dc432650825f530c9ca41bd422d4311a7f044",
+      "sha256": "e93e05b519dd5705e0e2d1fa0e27ec44f775997440bfd8260c019323e0bd2d05",
       "mesh_recipe": [
         "Watson",
         1e-05
@@ -1731,7 +1731,7 @@
         6.750000200002371
       ],
       "geometry_sha256": "7974c169a2dab4a35f8db3a8437fabd54c55bb50bfa8830e78e3436efb51b51d",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 1e-05,
@@ -1773,7 +1773,7 @@
       "max_bound_error_mm": 2.0000237110906482e-07,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 8.988272951144069e-08,
-      "sha256": "819db37463f9d72fe94207c49f258e49001a0465ecdf3cd095f69acfed8ca871",
+      "sha256": "498c20134d047fea17283fd9a664270e05406bd4a5addbb261739ce5e367b4cc",
       "mesh_recipe": [
         "Watson",
         1e-05
@@ -1834,7 +1834,7 @@
         44.200000100005354
       ],
       "geometry_sha256": "53352f43bf090b62fe6624bfbaa4afc76e5bbf6babd4804748dea0adb77caf4d",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1876,7 +1876,7 @@
       "max_bound_error_mm": 1.0000535155541002e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.1469870729423108e-05,
-      "sha256": "2f054d7d72f8dfb23813101e65a98b876bb340e3ab1799ce6828c31e8a37abd7",
+      "sha256": "90d336b9a23eb02d5d9f323336cc6e7045a19141e5aac966e55bb0532f8f72f1",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -1937,7 +1937,7 @@
         25.650000199999994
       ],
       "geometry_sha256": "75dd17d860670900a60295d42e5dde03c235f5f2754ad64aa76185a81dc72e17",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -1979,7 +1979,7 @@
       "max_bound_error_mm": 0.00398605000000174,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00023719806937439757,
-      "sha256": "a458b32d17721c7256e3bda83ab43edf2b0057da9e7bdb5a7ac8a9faea15525f",
+      "sha256": "c01df562d3b99b01fa78edc77ad447f732701395a1d4d7831eecd178d89c645d",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2040,7 +2040,7 @@
         25.650000199999994
       ],
       "geometry_sha256": "4b3a975d3668d0c72b6eb7be05dc9a2281a5b2efdedef4ddb87731054b79eee1",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2082,7 +2082,7 @@
       "max_bound_error_mm": 0.003986050000005292,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00023677466471410186,
-      "sha256": "f6d3a695c22bfb1a6f3d1b78d3ed6a3d86f69a61bc949d26944c02fe2b2972ef",
+      "sha256": "8e11565f76d7bc948da01ebfe5e7b1333f2c75a5fe80c6537505fb2b762e4bc0",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2143,7 +2143,7 @@
         42.44999999999999
       ],
       "geometry_sha256": "9642e4a6cd5a922d97ffc60195994ffd716d35cc2db1e1fd5b8094ff47a83dce",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2185,7 +2185,7 @@
       "max_bound_error_mm": 1.4210854715202004e-14,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.7941583612299156e-06,
-      "sha256": "99844d5593214423c20d692a7afb74e54ab7c7a089c975455070e91e9d1d5321",
+      "sha256": "9cb27461a4803b6bc53756876ef52f194e821ac379853b056a3740e5c8c09caf",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2246,7 +2246,7 @@
         42.84547156257406
       ],
       "geometry_sha256": "78832a1518cef61e248015579dedcd121625d8d3afc1c3e8477f0cb60cd21b1c",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2288,7 +2288,7 @@
       "max_bound_error_mm": 0.003688213729176937,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.007952989461855962,
-      "sha256": "6d115023e0837a9dea1971e8a3b6532ef9006938512d28edaaca63924451e908",
+      "sha256": "f8e6d43e2966d76424300548bb405b0d7fd1102d196250411355bd4a9e85baa7",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2349,7 +2349,7 @@
         11.403730387205997
       ],
       "geometry_sha256": "9fb0271cedec05d120ddd533e178bd882f6f4300963d3aaee6b36c191c9b79db",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2391,7 +2391,7 @@
       "max_bound_error_mm": 0.002665,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.000795293702042304,
-      "sha256": "c62e586bfcf1982619b8edfd32d9ccb278ba8c96e182636294cca93cc5108eaa",
+      "sha256": "503b118ef5a81c84a6fb46d12467f0bbb8a2a9898f5d327c34aa2a4905f39039",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2452,7 +2452,7 @@
         52.55438217176173
       ],
       "geometry_sha256": "1cb082e8b702550e92532612fa71886cdfb25c45c6322c05141d9bf5b8f17fb3",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2496,7 +2496,7 @@
       "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001432900345456935,
-      "sha256": "7183ca1b30eb5e787136f63cb5713e1a589c624bcf133c3d68afad80a9077bf5",
+      "sha256": "5fcc385fd9e6428d4d5d2d712ed93625ac27bf72832ded3b3675fdbdafce50f9",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2557,7 +2557,7 @@
         85.35100020001617
       ],
       "geometry_sha256": "5304eecea34fb6a6dc5c452c47df7bd8bb531c6d8db5b3fa9194aaca0c7d18dd",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -2599,7 +2599,7 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 5.202576116476348e-06,
-      "sha256": "bbf5e643e05d6388032b4d284f06f206131b3ceab4bf961861dfe1f6e8173f83",
+      "sha256": "f654be1bcfc2a8045fd234065c9cc8bfb0fef704049388867464ae3de7e52f4e",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -2660,7 +2660,7 @@
         85.35100020001617
       ],
       "geometry_sha256": "1fad9955f2ce097f12e297a7acaff8686559cec474e7769189aab68055e07169",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -2702,7 +2702,7 @@
       "max_bound_error_mm": 0.0002482000161734277,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 4.837823049176776e-06,
-      "sha256": "93f1c3d593ae4f4040ea623579b9881f81ce62d0f279a35ba1eb11f0f163283e",
+      "sha256": "fdebc110e16102b9a5c313176464974f510efd1c8979e151b1038a76552e72d8",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -2763,7 +2763,7 @@
         18.00000000000682
       ],
       "geometry_sha256": "04d93ae90f5ec7ed550486ef2ac99c4a619f361705d9f60630e04ec4004e2b00",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2805,7 +2805,7 @@
       "max_bound_error_mm": 6.821210263296962e-12,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.22198256390968e-05,
-      "sha256": "248d4322b58d36306c96c08da9ba0b0db1ea3f835ed8e13172f2e9604d9723fa",
+      "sha256": "be1ac8e2090447af2be9e884e73d51f0e9ba31a7bacdb892c97ae2c7a96399ea",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2866,7 +2866,7 @@
         25.500000199999988
       ],
       "geometry_sha256": "4387f4e1bc50d28dd51457d71996bf6751e862bb649856e9d5d753d3fe9d7eb4",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -2908,7 +2908,7 @@
       "max_bound_error_mm": 1.9999998812636477e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.2369461131573503e-05,
-      "sha256": "ccc17c4a42ea67cbc8f31b252d57f12e3dd8837fc14d69f4d1e1bb045c9c8a8d",
+      "sha256": "f80829ac8ae0d4fa55208737a46a95181a631808ae7b05f87edcccac0ccdf5ee",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -2969,7 +2969,7 @@
         25.000000199999988
       ],
       "geometry_sha256": "28228677a49894c23049975ca48d77ffcfd95ed6d03c6778d1137732c4d140bc",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3011,7 +3011,7 @@
       "max_bound_error_mm": 0.0022021999999886077,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001004057707585081,
-      "sha256": "dd818386548ce904caeb19a40079a67cbe2d724bbb28dd51ada6223682764840",
+      "sha256": "5c44d795b2b7ac22158e86dd6f13c0abbbaf80cd0fe54954ad2b2617fac64e66",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3072,7 +3072,7 @@
         33.13580009999998
       ],
       "geometry_sha256": "23ecb99bb188886a0bca96992bf55a5269ee2a729fa75304bab9f83b583690e4",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3114,7 +3114,7 @@
       "max_bound_error_mm": 0.003792,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 7.500292717846639e-05,
-      "sha256": "6038fb9edd6c06cc3ae284caaef857f0c929390d346b0eacd471a6b359f9d749",
+      "sha256": "7e4187cc35999411be04e7a8e73aedda5e8ae21ad0026f80accf4ef05f7691d2",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3175,7 +3175,7 @@
         40.5
       ],
       "geometry_sha256": "f9e4e1e29c5a17ff83bea6c5a2339b5e810e2af3c4fcbeaa05716e3d170f9e10",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3217,7 +3217,7 @@
       "max_bound_error_mm": 0.004956,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00025939871115138814,
-      "sha256": "63965a7a0aa27c63ede169fa97f1aa317dea8ab015d8eec1d6617a04bc200dc8",
+      "sha256": "0ee0b0081aecbca83c0a2e5ba7a605c075c4f6cc65edaa08dcd3c117b7b32272",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3281,7 +3281,7 @@
         52.554382171922256
       ],
       "geometry_sha256": "4d1ae6d5491243d2484003762323772dff0610a3b65ef56a7636d50f351dc62a",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3325,7 +3325,7 @@
       "max_bound_error_mm": 0.0005366175808774187,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001552610797772203,
-      "sha256": "1da2acc2a36918d01478e6d2ea74cce90c8d3cc51e5718e311315a8f19c36b23",
+      "sha256": "77f41660b3910b7f2874ac8e756fc58e4bc98649c52b7b8359927b1f9cb3595b",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3386,7 +3386,7 @@
         39.25
       ],
       "geometry_sha256": "db76d5fe7f9eb5cc9e9232f3b248d6a9faa61efdcb4b48aaf52d318d26bd0f9e",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3428,7 +3428,7 @@
       "max_bound_error_mm": 0.0008160000000012602,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 2.2349171793637996e-05,
-      "sha256": "910d49c71c5fde306bd50ca3303eb7659b68e03f6c41482c942757055a84f3d7",
+      "sha256": "9d9d41dff4bded9e172a2062ae7d25f4bf722055ca1aa1df8bc8b922f3bcf6cf",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3489,7 +3489,7 @@
         4.422853690633588
       ],
       "geometry_sha256": "ec561c7552a9e67bfeb24ce9b83b9d1744204730f38621dd7bec8ef19d62508d",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3531,7 +3531,7 @@
       "max_bound_error_mm": 0.000292739236989803,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 1.3661606990533e-05,
-      "sha256": "7bad814ff4ad08e19a79acf5075a4c2fa37025035a09963610a15261dc519c92",
+      "sha256": "7b62848025489e0b70e618902cd69dc0d08ede38dd82a7a4466d029c727443f2",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -3592,20 +3592,20 @@
         17.45225057797078
       ],
       "geometry_sha256": "c398c5d9fe903144b0df71a04d987420aa595ebddcbc86d56d00aa0d90bddb5e",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 180,
-        "maximum_sampled_face_deviation_mm": 0.005195262277386732,
+        "surface_sample_count": 160,
+        "maximum_sampled_face_deviation_mm": 0.001346931191782558,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.35,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
@@ -3615,51 +3615,51 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 474115,
-        "triangles": 805114,
-        "volume_mm3": 15339.167522595864,
+        "vertices": 1215567,
+        "triangles": 2025610,
+        "volume_mm3": 15342.032119309575,
         "bounds_mm": [
-          -27.740128,
-          -36.526596,
-          4.3e-05,
-          27.739602,
-          36.526524,
-          17.452242
+          -27.74009,
+          -36.526576,
+          9.2e-05,
+          27.739762,
+          36.526672,
+          17.45224
         ],
-        "nonmanifold_edges": 11750,
+        "nonmanifold_edges": 61328,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.0005321147819934424,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00028750821211020056,
-      "sha256": "98506de84fb92277dc85cd931bd973f5a833fb7bb12954e0dc3ebb37ec9c094d",
+      "max_bound_error_mm": 0.0003978287089765331,
+      "allowed_bound_error_mm": 0.01001,
+      "relative_volume_error": 0.00010081143639452355,
+      "sha256": "06a047b9037573618f79eed21f52f49f93f55e50d1fd7da7d372e4ab200b8dd2",
       "mesh_recipe": [
-        "WatsonWideAngle",
-        0.01
+        "WatsonControlled",
+        0.005
       ],
       "stl_filename": "stl/sole_left_native.stl",
       "stl": {
-        "triangles": 805114,
+        "triangles": 2025610,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 11750,
-        "volume_mm3": 15339.167793418696,
+        "nonmanifold_edges": 61328,
+        "volume_mm3": 15342.03246485872,
         "bounds_mm": [
-          -27.740127563476562,
-          -36.52659606933594,
-          4.3000000005122274e-05,
-          27.739601135253906,
-          36.52652359008789,
-          17.452241897583008
+          -27.740089416503906,
+          -36.52657699584961,
+          9.200000204145908e-05,
+          27.739761352539062,
+          36.52667236328125,
+          17.452239990234375
         ],
-        "relative_volume_error": 1.7655640752789865e-08,
-        "max_bound_error_mm": 8.647460951749508e-07,
-        "sha256": "bdb4defd52626e7aa9e90906fd3fc2b728b9ca85488e8cda2e1d894be1ce556b"
+        "relative_volume_error": 2.252303615963541e-08,
+        "max_bound_error_mm": 9.958496107742576e-07,
+        "sha256": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882"
       }
     },
     {
@@ -3697,20 +3697,20 @@
         17.45225057797078
       ],
       "geometry_sha256": "5c5e9dba766620240b9301cc452032c393379f248e9a0917c870e74638205b3b",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
-        "linear_deflection_mm": 0.01,
+        "linear_deflection_mm": 0.005,
         "algorithm": "Watson",
         "native_parallel": false,
         "discarded_cached_triangulation": true,
-        "surface_sample_count": 180,
-        "maximum_sampled_face_deviation_mm": 0.005195262277386731,
+        "surface_sample_count": 164,
+        "maximum_sampled_face_deviation_mm": 0.0013469311917967684,
         "sampled_face_deviation_limit_mm": 0.02,
         "control_surface_deflection": true,
         "internal_vertices": true,
         "min_size_mm": 1e-05,
-        "angular_deflection_rad": 0.35,
+        "angular_deflection_rad": 0.2,
         "constrained_planar_faces": 0,
         "planar_boundary_loops": [],
         "surface_seam_patches": [],
@@ -3720,51 +3720,51 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 470902,
-        "triangles": 799084,
-        "volume_mm3": 15339.083679586973,
+        "vertices": 1210104,
+        "triangles": 2015750,
+        "volume_mm3": 15342.036372360715,
         "bounds_mm": [
-          -27.739602,
-          -36.526704,
-          4.3e-05,
-          27.739784,
-          36.526524,
+          -27.739762,
+          -36.526576,
+          9.2e-05,
+          27.739976,
+          36.526672,
           17.452242
         ],
-        "nonmanifold_edges": 11577,
+        "nonmanifold_edges": 60455,
         "inconsistent_winding_edges": 0,
         "open_edges": 0,
         "warnings": [
           "Balanced internal seam overlaps; review in slicer"
         ]
       },
-      "max_bound_error_mm": 0.0005321147818193595,
-      "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 0.00029297258318758396,
-      "sha256": "f863e7234120e81d7f5df33278c5387e63da021dccc7e1ea6aaa9c06306d7856",
+      "max_bound_error_mm": 0.00039782870898363853,
+      "allowed_bound_error_mm": 0.01001,
+      "relative_volume_error": 0.000100534248709924,
+      "sha256": "8acf1464b960cd579b7983f6d4661c48ecf1bcb15364e0b403f9fd043a1b5485",
       "mesh_recipe": [
-        "WatsonWideAngle",
-        0.01
+        "WatsonControlled",
+        0.005
       ],
       "stl_filename": "stl/sole_left_native_right.stl",
       "stl": {
-        "triangles": 799084,
+        "triangles": 2015750,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
-        "nonmanifold_edges": 11577,
-        "volume_mm3": 15339.083949337268,
+        "nonmanifold_edges": 60455,
+        "volume_mm3": 15342.036739735675,
         "bounds_mm": [
-          -27.739601135253906,
-          -36.526702880859375,
-          4.3000000005122274e-05,
-          27.739784240722656,
-          36.52652359008789,
+          -27.739761352539062,
+          -36.52657699584961,
+          9.200000204145908e-05,
+          27.73997688293457,
+          36.52667236328125,
           17.452241897583008
         ],
-        "relative_volume_error": 1.7585815468613232e-08,
-        "max_bound_error_mm": 1.1191406272814675e-06,
-        "sha256": "3b332b0c19fdf447e95536a9c522caa40a7488aee721944d629bc798ad4d563b"
+        "relative_volume_error": 2.394564520866818e-08,
+        "max_bound_error_mm": 9.958496107742576e-07,
+        "sha256": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e"
       }
     },
     {
@@ -3802,7 +3802,7 @@
         62.43164376456821
       ],
       "geometry_sha256": "8523407d2b905569962de87eb892c927283d1a998bec2869c627168b8dabb4d4",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "surface_sample_count": 4476,
@@ -3821,9 +3821,9 @@
         "prior_attempt_failures": []
       },
       "mesh": {
-        "vertices": 488056,
-        "triangles": 976108,
-        "volume_mm3": 73300.44045896006,
+        "vertices": 488057,
+        "triangles": 976110,
+        "volume_mm3": 73300.44039351716,
         "bounds_mm": [
           -62.028436,
           -82.776712,
@@ -3839,20 +3839,20 @@
       },
       "max_bound_error_mm": 0.0012277645682061689,
       "allowed_bound_error_mm": 0.02001,
-      "relative_volume_error": 7.493387433209764e-05,
-      "sha256": "46fc71cd9b0f134f30b56632e5ac2f9394f805c0425783f93a7ce930092d17c9",
+      "relative_volume_error": 7.49347670688666e-05,
+      "sha256": "0650ea0b3b13576a4aeae616e73cb80d8bd9f3df92ac6f6c2d7b39b93cdb6295",
       "mesh_recipe": [
         "Gmsh",
         0.4
       ],
       "stl_filename": "stl/top_head_shell_native.stl",
       "stl": {
-        "triangles": 976108,
+        "triangles": 976110,
         "units_assumed": "mm",
         "open_edges": 0,
         "inconsistent_winding_edges": 0,
         "nonmanifold_edges": 0,
-        "volume_mm3": 73300.44087343247,
+        "volume_mm3": 73300.44077803132,
         "bounds_mm": [
           -62.02843475341797,
           -82.7767105102539,
@@ -3861,9 +3861,9 @@
           82.77722930908203,
           62.430416107177734
         ],
-        "relative_volume_error": 5.654432707572636e-09,
+        "relative_volume_error": 5.245727853570499e-09,
         "max_bound_error_mm": 2.690917966674533e-06,
-        "sha256": "3871f90549430ea207db5848e63fa9c57c33a7e8f6174bfac2a809d1eb16cd5e"
+        "sha256": "dc1303181c116dab25459811829b41f8373e69e4df70ba0a911f157726fb3067"
       }
     },
     {
@@ -3901,7 +3901,7 @@
         9.000000100003803
       ],
       "geometry_sha256": "afeb6bb385908d93e4f3b249dc54719a6b0b12fe022811e4fd135a227b8d376d",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -3943,7 +3943,7 @@
       "max_bound_error_mm": 1.0000380257224606e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.0169043664644046e-05,
-      "sha256": "b503ca877ee54464dbaf00a8c1635ab5fe7fd6dd452221f5d5fbe636e955330d",
+      "sha256": "537a26b6b1873cb8fba848a4d693bb54eb140024dfbfb3b5446c35980643fde6",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4004,7 +4004,7 @@
         4.600000000000023
       ],
       "geometry_sha256": "1ce8015f0058e770b54407cf88ff985ec240255007f8aa542d2255d70e36c184",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4046,7 +4046,7 @@
       "max_bound_error_mm": 0.0009680000000016342,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001297518999865098,
-      "sha256": "237b961c9a106c97be4771bd97d024377f581e757c69f475e29739f9cccd24d0",
+      "sha256": "894de43e473aede14544221bc0fb2b8552a8c48b74aafd2d95a7b5a2b5d48b3a",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4107,7 +4107,7 @@
         64.18603181524207
       ],
       "geometry_sha256": "086525481a7a0a117fe0f072e71ab4da262f889cff3ed60f84c6a1f9e35e51f5",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.005,
@@ -4149,7 +4149,7 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.00029394233853546154,
-      "sha256": "565db11601a9caf98ba4879ba0561a34707836999f97a473d2a931687f508712",
+      "sha256": "1eccc0557eef7548cd6174cfc65c774c59bbf4ec33b5670b0bf0e95400ba7fd0",
       "mesh_recipe": [
         "WatsonControlled",
         0.005
@@ -4210,7 +4210,7 @@
         64.18603181524207
       ],
       "geometry_sha256": "811009523e635b70e05ec904ac62a69653d5e68169e494736510e5e611ee5bbd",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.005,
@@ -4252,7 +4252,7 @@
       "max_bound_error_mm": 0.000224,
       "allowed_bound_error_mm": 0.01001,
       "relative_volume_error": 0.0002937865172201563,
-      "sha256": "6c17020a70ee4d062163451df90edec091eb297cfa9e97d75175c441bfbd0f1d",
+      "sha256": "5d9660ece43600859be6272b6c4c2033a4bc55acfd6d7968ce805b22f55c1b95",
       "mesh_recipe": [
         "WatsonControlled",
         0.005
@@ -4313,7 +4313,7 @@
         55.775000000000006
       ],
       "geometry_sha256": "4ae538ce90afcf55a1230b59d08af234f7101e42de3a18120cdd8fbc8628d993",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4355,7 +4355,7 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.417312783360011e-06,
-      "sha256": "f721bd41a59afe430a7b5983d80c343af54e33ebc456828d959e8fefbc950bd8",
+      "sha256": "d3966f9ad080a3f3b35a2c17458a42d2a5067e6c50597099f6ff123e05562449",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4416,7 +4416,7 @@
         55.775000000000006
       ],
       "geometry_sha256": "be71be330507e22a392c6bfd8342060f1812f4328952a1e51ce091dec9bef0b1",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.0005,
@@ -4458,7 +4458,7 @@
       "max_bound_error_mm": 9.99999993922529e-08,
       "allowed_bound_error_mm": 0.01,
       "relative_volume_error": 7.854892024061927e-06,
-      "sha256": "c99a53cb7d4a440ca6b602b873d67489da205e6565c88487de1b5f29c222f73e",
+      "sha256": "4bb348b3eb5eaa47f9f1ae92f86142a49df498f5e73469ee41afffcdbf38ca23",
       "mesh_recipe": [
         "Delabella",
         0.0005
@@ -4519,7 +4519,7 @@
         28.90500000000071
       ],
       "geometry_sha256": "8ea9b2619e3f982f678c82e928e508d9248c783eb4229b2f6e6ec1718e1631c9",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4561,7 +4561,7 @@
       "max_bound_error_mm": 0.0010879999999993117,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 6.286096034766294e-05,
-      "sha256": "dbaa2a53be0058aeb267a9cea75d6c6d9acb674b776b3af4aeee29ef06e4277d",
+      "sha256": "25c97e94e7887ca4b74509ed6435064698b98bfb45ea157757b37a5b64785e9a",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4622,7 +4622,7 @@
         61.00000010000001
       ],
       "geometry_sha256": "2a30fb1e86d946ffe75c6253d68fc206b251a7c122140673fdbd02a10a4603ac",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4664,7 +4664,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "9f9f52f932a909fb03051255b266c3878bf7857a205dfefa9cc844d38bf9ebae",
+      "sha256": "4b97922e32d370d2f6b007249713510b426f1e8ff1f1483908fa4e2679f86fb1",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4725,7 +4725,7 @@
         61.00000010000001
       ],
       "geometry_sha256": "ba2a71f9dda0921bd58418c9d17853fbb00c1ec792ff69d84148946f730ee50c",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4767,7 +4767,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.0001091540908448394,
-      "sha256": "7946a034d32cd47aa2f1a92e36a8267fd8bc11239971512337434cc83f93eade",
+      "sha256": "377c41262dd646d33f497e0c16f6a59ca7407867c651cf133ea895fc78eb6d9d",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4828,7 +4828,7 @@
         50.00000010000001
       ],
       "geometry_sha256": "621dc18cd41319d14a4430719a507a2f60af9898c625f1fb3f8e6076b614a714",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4870,7 +4870,7 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271481750527068e-05,
-      "sha256": "56abf52f191a7df477033b247dace42d14084da6bb1b1bdf364148c6e2410505",
+      "sha256": "b18db5f19a71512585fc17a7607e09202f3160816cdf406dc7f71ce85793f0be",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -4931,7 +4931,7 @@
         50.00000010000001
       ],
       "geometry_sha256": "b282c969e3cfb507553df525213d7e0dbb651c938802c484fcd22bfbedfe93f1",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -4973,7 +4973,7 @@
       "max_bound_error_mm": 1.000000082740371e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 4.271456088619673e-05,
-      "sha256": "ccff6c837398f4ff4473950a01335ec132ed4258fe7f86ae6c70db7ba382412f",
+      "sha256": "ffca9d92e71bebf513325d84f54686ef0aae55a51cf2c254e8c172faced9d15b",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5034,7 +5034,7 @@
         5.795000099999996
       ],
       "geometry_sha256": "c4b1682a5368e1082db7d6b86b85f259e185a3ddd6b3507ae1af943dbafb955c",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -5076,7 +5076,7 @@
       "max_bound_error_mm": 1.0000000116860974e-07,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 3.5883097397679665e-05,
-      "sha256": "1caace7c32ce9655f52e4b3d700773404f6aef9de89dee778441e93704a8f6d3",
+      "sha256": "4fb96ad6fd080681de423770d6bff87d5f86203ac8b904cf6bc4acdcb0893134",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5141,7 +5141,7 @@
         5.795000000000016
       ],
       "geometry_sha256": "1941675e78f1e43ec83b68b870a90c101e66c088039dfb9bbdc1713c3880db50",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -5183,7 +5183,7 @@
       "max_bound_error_mm": 0.0006380499999991684,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00016362559807944394,
-      "sha256": "a99d5b288c7c7e2ec3a8de8922b817d2dae9ee5ffa7f4c64ae5cf4ed12788326",
+      "sha256": "c11a8d9ab6b5018f40696d9215b3c421721b296c6b605dc8083dd853942db521",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5244,7 +5244,7 @@
         91.95000009999998
       ],
       "geometry_sha256": "bc4b4600423712fe1381fd623cda1f3e32642c6b3c915a6e61d5980d8b7e5eab",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -5286,7 +5286,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "ef19d28d7be3389b355f2878fc3930a8869de57b4850f3645a18e8c98971de9a",
+      "sha256": "c1472feb9bfa6e21666fdadd41214a0441a6110afa2719f6a1066d003662f060",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5347,7 +5347,7 @@
         91.95000009999998
       ],
       "geometry_sha256": "a71f8539079ad6cf22b7c3cc314376dfff3f6623908750319fb543fd79570f05",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -5389,7 +5389,7 @@
       "max_bound_error_mm": 0.000639,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00013635440598026169,
-      "sha256": "777c27630bda7005e30088d7b3d9b8c9112eda9eb1b691fe7637dfc00d0592f0",
+      "sha256": "521c8935a97d8ec817559835f99cd4742f978a9c9f86e1b847b69679012221d5",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5453,7 +5453,7 @@
         86.06936528048188
       ],
       "geometry_sha256": "bf3abaeabd223a181ca142f022e1a62e8d27b1e51b9636ba6e30955f4f3832af",
-      "mesh_key": "d1684a7e721523aa97ffbb53006915ef5d93bddf992a00461ca24ecad7d21bdc",
+      "mesh_key": "91632651a46061669128d7c73a7a09cb579524bf2ca7c7998f0caa2e043061e3",
       "mesh_reused": false,
       "tessellation": {
         "linear_deflection_mm": 0.01,
@@ -5495,7 +5495,7 @@
       "max_bound_error_mm": 0.0010890836140227123,
       "allowed_bound_error_mm": 0.02001,
       "relative_volume_error": 0.00010695106524212629,
-      "sha256": "bf833824b7d9bdf8755ced7487b01c66121f5c490433db501f392206c04d281a",
+      "sha256": "0c93c89a7136091fd01fc0424d772537cb614d336fe3c05a0171f9d91dcb6192",
       "mesh_recipe": [
         "Watson",
         0.01
@@ -5523,58 +5523,58 @@
     }
   ],
   "files": {
-    "3mf/ankle_bearing_inner_cap_left_native.3mf": "dc43324584a3fedab53433375406ed23a72842f29e542a034fc22ab5f5f2584e",
-    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "6907ce1553433a391a72f1a230215586c3a93761a490733955e73af6f24ed9b2",
-    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "8f277996efff014ac6aa1f7ebbc5a0d663a86e4e448cc923d2619fa0618ef18c",
-    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "5fc936042cadd6c3708f9b9f59131963dfdbecdd4bfab5c74a4a75ed8ac3bdcc",
-    "3mf/ankle_eye_left_native.3mf": "a868474beefc0af82f586c240925e69b5d89353689016ce57a8d2f2618e58ed4",
-    "3mf/ankle_eye_left_native_right.3mf": "8a8a3761a4310a6e75bae2d52292ce16a269adb0384beacd8746b2afad5dd48d",
-    "3mf/ankle_left_native.3mf": "df54acc126e0e66f92dc0386e30eb7231351f3d2d6815b4ee9e59cd2722653c4",
-    "3mf/ankle_left_native_right.3mf": "65696c092dc2e97509abca01bb68a609902ffe0d66ecac4570cf59f772f10364",
-    "3mf/bearing_carrier_left.3mf": "9f9f52f932a909fb03051255b266c3878bf7857a205dfefa9cc844d38bf9ebae",
-    "3mf/bearing_carrier_right.3mf": "7946a034d32cd47aa2f1a92e36a8267fd8bc11239971512337434cc83f93eade",
-    "3mf/bearing_head_adapter.3mf": "a99d5b288c7c7e2ec3a8de8922b817d2dae9ee5ffa7f4c64ae5cf4ed12788326",
-    "3mf/bearing_roll_adapter_left.3mf": "56abf52f191a7df477033b247dace42d14084da6bb1b1bdf364148c6e2410505",
-    "3mf/bearing_roll_adapter_right.3mf": "ccff6c837398f4ff4473950a01335ec132ed4258fe7f86ae6c70db7ba382412f",
-    "3mf/bearing_shared_yaw_adapter.3mf": "1caace7c32ce9655f52e4b3d700773404f6aef9de89dee778441e93704a8f6d3",
-    "3mf/bottom_head_shell_native.3mf": "03c3371010aba91f586f2b7c486fad58dc13623e2474f505cde2177d56346a8f",
-    "3mf/electronics_deck_native.3mf": "dd22d444dddad7ca4c8de78fcc34f83738473b626354ec352878021abee1e403",
-    "3mf/face_part_native.3mf": "88307971d871e5630ed819cb684e22deebf84462b05c7010733a962f0be540d5",
-    "3mf/face_radxa_bracket_native.3mf": "48369e84be1b8596ea5bc04baec291497187e7ca95b59bfcb661287769c9d858",
-    "3mf/foot_left_native_a.3mf": "504013866b4d078f92fdc9d8057ebb51c4d38522cf694be7334691f76f0e1b38",
-    "3mf/foot_left_native_a_right.3mf": "a6118abb0112ddadc37c3d123dfe0b9acc6c9a2a34c27a92aea1b3c80c2df528",
-    "3mf/foot_left_native_b.3mf": "231e4f076c0d23bb406d8b3b051dc432650825f530c9ca41bd422d4311a7f044",
-    "3mf/foot_left_native_b_right.3mf": "819db37463f9d72fe94207c49f258e49001a0465ecdf3cd095f69acfed8ca871",
-    "3mf/head_frame_native.3mf": "2f054d7d72f8dfb23813101e65a98b876bb340e3ab1799ce6828c31e8a37abd7",
-    "3mf/hip_left_native.3mf": "a458b32d17721c7256e3bda83ab43edf2b0057da9e7bdb5a7ac8a9faea15525f",
-    "3mf/hip_left_native_right.3mf": "f6d3a695c22bfb1a6f3d1b78d3ed6a3d86f69a61bc949d26944c02fe2b2972ef",
-    "3mf/imu_yoke_bridge_native.3mf": "99844d5593214423c20d692a7afb74e54ab7c7a089c975455070e91e9d1d5321",
-    "3mf/jaw_native.3mf": "6d115023e0837a9dea1971e8a3b6532ef9006938512d28edaaca63924451e908",
-    "3mf/jaw_soft_001_native.3mf": "c62e586bfcf1982619b8edfd32d9ccb278ba8c96e182636294cca93cc5108eaa",
-    "3mf/left_shell_native.3mf": "7183ca1b30eb5e787136f63cb5713e1a589c624bcf133c3d68afad80a9077bf5",
-    "3mf/leg_left_native.3mf": "bbf5e643e05d6388032b4d284f06f206131b3ceab4bf961861dfe1f6e8173f83",
-    "3mf/leg_left_native_right.3mf": "93f1c3d593ae4f4040ea623579b9881f81ce62d0f279a35ba1eb11f0f163283e",
-    "3mf/lipo_pod_native.3mf": "bf833824b7d9bdf8755ced7487b01c66121f5c490433db501f392206c04d281a",
-    "3mf/neck_001_native.3mf": "248d4322b58d36306c96c08da9ba0b0db1ea3f835ed8e13172f2e9604d9723fa",
-    "3mf/neck_002_native.3mf": "ccc17c4a42ea67cbc8f31b252d57f12e3dd8837fc14d69f4d1e1bb045c9c8a8d",
-    "3mf/neck_internal_yoke_native.3mf": "dd818386548ce904caeb19a40079a67cbe2d724bbb28dd51ada6223682764840",
-    "3mf/neck_pitch_001_native.3mf": "6038fb9edd6c06cc3ae284caaef857f0c929390d346b0eacd471a6b359f9d749",
-    "3mf/noenoeil_native.3mf": "63965a7a0aa27c63ede169fa97f1aa317dea8ab015d8eec1d6617a04bc200dc8",
-    "3mf/passive_leg_support_left.3mf": "ef19d28d7be3389b355f2878fc3930a8869de57b4850f3645a18e8c98971de9a",
-    "3mf/passive_leg_support_right.3mf": "777c27630bda7005e30088d7b3d9b8c9112eda9eb1b691fe7637dfc00d0592f0",
-    "3mf/right_shell_native.3mf": "1da2acc2a36918d01478e6d2ea74cce90c8d3cc51e5718e311315a8f19c36b23",
-    "3mf/roll_front_bulkhead_native.3mf": "910d49c71c5fde306bd50ca3303eb7659b68e03f6c41482c942757055a84f3d7",
-    "3mf/soft_mouth_top_native.3mf": "7bad814ff4ad08e19a79acf5075a4c2fa37025035a09963610a15261dc519c92",
-    "3mf/sole_left_native.3mf": "98506de84fb92277dc85cd931bd973f5a833fb7bb12954e0dc3ebb37ec9c094d",
-    "3mf/sole_left_native_right.3mf": "f863e7234120e81d7f5df33278c5387e63da021dccc7e1ea6aaa9c06306d7856",
-    "3mf/top_head_shell_native.3mf": "46fc71cd9b0f134f30b56632e5ac2f9394f805c0425783f93a7ce930092d17c9",
-    "3mf/trunk_base_native.3mf": "b503ca877ee54464dbaf00a8c1635ab5fe7fd6dd452221f5d5fbe636e955330d",
-    "3mf/ubec_clamp_native.3mf": "237b961c9a106c97be4771bd97d024377f581e757c69f475e29739f9cccd24d0",
-    "3mf/upper_leg_left_native.3mf": "565db11601a9caf98ba4879ba0561a34707836999f97a473d2a931687f508712",
-    "3mf/upper_leg_left_native_right.3mf": "6c17020a70ee4d062163451df90edec091eb297cfa9e97d75175c441bfbd0f1d",
-    "3mf/yaw2roll_left_native.3mf": "f721bd41a59afe430a7b5983d80c343af54e33ebc456828d959e8fefbc950bd8",
-    "3mf/yaw2roll_left_native_right.3mf": "c99a53cb7d4a440ca6b602b873d67489da205e6565c88487de1b5f29c222f73e",
-    "3mf/yaw_roll_link_native.3mf": "dbaa2a53be0058aeb267a9cea75d6c6d9acb674b776b3af4aeee29ef06e4277d",
+    "3mf/ankle_bearing_inner_cap_left_native.3mf": "80ab990ffa32d3d3d303859fc3a5157c7ea025d01ffa80d23e776b017ccbebfd",
+    "3mf/ankle_bearing_inner_cap_left_native_right.3mf": "a1d30632a37fe9030a257611882fdddc7ba4271bd9f8d12f7f3022cf2fb2b2c3",
+    "3mf/ankle_bearing_outer_keeper_left_native.3mf": "fb1e392bd621884bae9806d5416a8cf10b56f83d7fd594cc8061ef5478c1fdd9",
+    "3mf/ankle_bearing_outer_keeper_left_native_right.3mf": "8c6f784ca476edd61610de15663ed3803ec46280a5af23c6a6ea78d5fdaa36e1",
+    "3mf/ankle_eye_left_native.3mf": "d0cac2e096a4d61d5eccae90996f8fc18f101ab0c4bd77857b663bb8a3ff263d",
+    "3mf/ankle_eye_left_native_right.3mf": "61e8580a9bb163546ecad928428abe136843183ac77dd91eafe5fb781f74cab5",
+    "3mf/ankle_left_native.3mf": "5ce62b9c46fcd564bdac2c4ba9796d592b5f0caf6ad410e78ba3012008ac91e5",
+    "3mf/ankle_left_native_right.3mf": "d28de4b95323e73fe1bae6ca809c926a678729fb17b2eab6713100c4d951363f",
+    "3mf/bearing_carrier_left.3mf": "4b97922e32d370d2f6b007249713510b426f1e8ff1f1483908fa4e2679f86fb1",
+    "3mf/bearing_carrier_right.3mf": "377c41262dd646d33f497e0c16f6a59ca7407867c651cf133ea895fc78eb6d9d",
+    "3mf/bearing_head_adapter.3mf": "c11a8d9ab6b5018f40696d9215b3c421721b296c6b605dc8083dd853942db521",
+    "3mf/bearing_roll_adapter_left.3mf": "b18db5f19a71512585fc17a7607e09202f3160816cdf406dc7f71ce85793f0be",
+    "3mf/bearing_roll_adapter_right.3mf": "ffca9d92e71bebf513325d84f54686ef0aae55a51cf2c254e8c172faced9d15b",
+    "3mf/bearing_shared_yaw_adapter.3mf": "4fb96ad6fd080681de423770d6bff87d5f86203ac8b904cf6bc4acdcb0893134",
+    "3mf/bottom_head_shell_native.3mf": "b9b355d3da70f1fc56e2257155d457a0a65bca935209ddf95e3da049a74d8868",
+    "3mf/electronics_deck_native.3mf": "35c1ae7657abdc1c0477a4dd054a9c0906de92b2742961ee517bafbe67edfc60",
+    "3mf/face_part_native.3mf": "ee6917e9331495796a770498b76a618fbfd656d885b5328d84a30eb07828f87b",
+    "3mf/face_radxa_bracket_native.3mf": "c42210a29a0c55aeb183e4bf272dd013b625e2257fb6752c9d63e8bc76eed681",
+    "3mf/foot_left_native_a.3mf": "ce3b8a40f753a9bcaf63d57678b981b9983475351bc2f5f193e17775adc4ef15",
+    "3mf/foot_left_native_a_right.3mf": "e180300421086938190945cde3f31e8aeeabe40a68c37624861baba79ca5a69e",
+    "3mf/foot_left_native_b.3mf": "e93e05b519dd5705e0e2d1fa0e27ec44f775997440bfd8260c019323e0bd2d05",
+    "3mf/foot_left_native_b_right.3mf": "498c20134d047fea17283fd9a664270e05406bd4a5addbb261739ce5e367b4cc",
+    "3mf/head_frame_native.3mf": "90d336b9a23eb02d5d9f323336cc6e7045a19141e5aac966e55bb0532f8f72f1",
+    "3mf/hip_left_native.3mf": "c01df562d3b99b01fa78edc77ad447f732701395a1d4d7831eecd178d89c645d",
+    "3mf/hip_left_native_right.3mf": "8e11565f76d7bc948da01ebfe5e7b1333f2c75a5fe80c6537505fb2b762e4bc0",
+    "3mf/imu_yoke_bridge_native.3mf": "9cb27461a4803b6bc53756876ef52f194e821ac379853b056a3740e5c8c09caf",
+    "3mf/jaw_native.3mf": "f8e6d43e2966d76424300548bb405b0d7fd1102d196250411355bd4a9e85baa7",
+    "3mf/jaw_soft_001_native.3mf": "503b118ef5a81c84a6fb46d12467f0bbb8a2a9898f5d327c34aa2a4905f39039",
+    "3mf/left_shell_native.3mf": "5fcc385fd9e6428d4d5d2d712ed93625ac27bf72832ded3b3675fdbdafce50f9",
+    "3mf/leg_left_native.3mf": "f654be1bcfc2a8045fd234065c9cc8bfb0fef704049388867464ae3de7e52f4e",
+    "3mf/leg_left_native_right.3mf": "fdebc110e16102b9a5c313176464974f510efd1c8979e151b1038a76552e72d8",
+    "3mf/lipo_pod_native.3mf": "0c93c89a7136091fd01fc0424d772537cb614d336fe3c05a0171f9d91dcb6192",
+    "3mf/neck_001_native.3mf": "be1ac8e2090447af2be9e884e73d51f0e9ba31a7bacdb892c97ae2c7a96399ea",
+    "3mf/neck_002_native.3mf": "f80829ac8ae0d4fa55208737a46a95181a631808ae7b05f87edcccac0ccdf5ee",
+    "3mf/neck_internal_yoke_native.3mf": "5c44d795b2b7ac22158e86dd6f13c0abbbaf80cd0fe54954ad2b2617fac64e66",
+    "3mf/neck_pitch_001_native.3mf": "7e4187cc35999411be04e7a8e73aedda5e8ae21ad0026f80accf4ef05f7691d2",
+    "3mf/noenoeil_native.3mf": "0ee0b0081aecbca83c0a2e5ba7a605c075c4f6cc65edaa08dcd3c117b7b32272",
+    "3mf/passive_leg_support_left.3mf": "c1472feb9bfa6e21666fdadd41214a0441a6110afa2719f6a1066d003662f060",
+    "3mf/passive_leg_support_right.3mf": "521c8935a97d8ec817559835f99cd4742f978a9c9f86e1b847b69679012221d5",
+    "3mf/right_shell_native.3mf": "77f41660b3910b7f2874ac8e756fc58e4bc98649c52b7b8359927b1f9cb3595b",
+    "3mf/roll_front_bulkhead_native.3mf": "9d9d41dff4bded9e172a2062ae7d25f4bf722055ca1aa1df8bc8b922f3bcf6cf",
+    "3mf/soft_mouth_top_native.3mf": "7b62848025489e0b70e618902cd69dc0d08ede38dd82a7a4466d029c727443f2",
+    "3mf/sole_left_native.3mf": "06a047b9037573618f79eed21f52f49f93f55e50d1fd7da7d372e4ab200b8dd2",
+    "3mf/sole_left_native_right.3mf": "8acf1464b960cd579b7983f6d4661c48ecf1bcb15364e0b403f9fd043a1b5485",
+    "3mf/top_head_shell_native.3mf": "0650ea0b3b13576a4aeae616e73cb80d8bd9f3df92ac6f6c2d7b39b93cdb6295",
+    "3mf/trunk_base_native.3mf": "537a26b6b1873cb8fba848a4d693bb54eb140024dfbfb3b5446c35980643fde6",
+    "3mf/ubec_clamp_native.3mf": "894de43e473aede14544221bc0fb2b8552a8c48b74aafd2d95a7b5a2b5d48b3a",
+    "3mf/upper_leg_left_native.3mf": "1eccc0557eef7548cd6174cfc65c774c59bbf4ec33b5670b0bf0e95400ba7fd0",
+    "3mf/upper_leg_left_native_right.3mf": "5d9660ece43600859be6272b6c4c2033a4bc55acfd6d7968ce805b22f55c1b95",
+    "3mf/yaw2roll_left_native.3mf": "d3966f9ad080a3f3b35a2c17458a42d2a5067e6c50597099f6ff123e05562449",
+    "3mf/yaw2roll_left_native_right.3mf": "4bb348b3eb5eaa47f9f1ae92f86142a49df498f5e73469ee41afffcdbf38ca23",
+    "3mf/yaw_roll_link_native.3mf": "25c97e94e7887ca4b74509ed6435064698b98bfb45ea157757b37a5b64785e9a",
     "LICENSE": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd",
     "NOTICE.md": "bb2cf0ee0f9a5909ba471effd467e6dd532286a38f83c8126df36edeb2f69f4f",
     "PARTS.csv": "d35e772b3118ed04b9ff24c979a3cd300cdfb25ee0fc469d705acadcf16d0f2d",
@@ -5621,9 +5621,9 @@
     "stl/right_shell_native.stl": "59b29331d645df65e90ab6bd34151f5de5da14a31ff36fa63d8c4fafae4f7f4f",
     "stl/roll_front_bulkhead_native.stl": "cc37ef64af24c0b5a4c9ead568085a135bd87adc44a05295e395c43f88fd6815",
     "stl/soft_mouth_top_native.stl": "481a4a56c21d5d2065c67334da2547b12dde731845900b572a8e2ec536fe3b1b",
-    "stl/sole_left_native.stl": "bdb4defd52626e7aa9e90906fd3fc2b728b9ca85488e8cda2e1d894be1ce556b",
-    "stl/sole_left_native_right.stl": "3b332b0c19fdf447e95536a9c522caa40a7488aee721944d629bc798ad4d563b",
-    "stl/top_head_shell_native.stl": "3871f90549430ea207db5848e63fa9c57c33a7e8f6174bfac2a809d1eb16cd5e",
+    "stl/sole_left_native.stl": "9186f40772157a43cbf3b9dba454d8014034e4e060026762d42b400c56178882",
+    "stl/sole_left_native_right.stl": "1a450018d8c7de72f50d766e0487746264e2d24bc6b530ed44b6fcc6724cf33e",
+    "stl/top_head_shell_native.stl": "dc1303181c116dab25459811829b41f8373e69e4df70ba0a911f157726fb3067",
     "stl/trunk_base_native.stl": "fd0ad20ffc088490ea1a92e3651df688993af55dd1c3db27290fac4c40b5d64f",
     "stl/ubec_clamp_native.stl": "f6064ddf82283b8d8bff428b546e0deabea0da2ff23165ec4a3912c2db007338",
     "stl/upper_leg_left_native.stl": "81cbd7ed24a7bb18d23c603cd8f9c584a8b809f5ee5630cc560f082a272d3bbf",
@@ -5632,5 +5632,5 @@
     "stl/yaw2roll_left_native_right.stl": "485cf9ddc9cd2f78510d811e73f31153b12dae91b1d00f55b08910664c7997fc",
     "stl/yaw_roll_link_native.stl": "2bbecdb4671564a56e2e6126f9fc3c6b08eabf6a98cfca7e8ffad42e6028a1a4"
   },
-  "manifest_content_sha256": "77fc36e582a39299a058651b0f27aa730ade89f30ad7d8e3a04fb380ca8a64f6"
+  "manifest_content_sha256": "d8b5ffac4bccc2d07ce7c31ce412a19a490754275575ad09c66afd0dc8cb8522"
 }

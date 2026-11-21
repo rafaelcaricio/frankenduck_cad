@@ -27,12 +27,12 @@ from tools.print_mesh import (sha, solid_volume, transform, inspect_3mf, source_
 MESH_RECIPES = (("Watson",.01),("WatsonControlled",.005),("Delabella",.0005),("Watson",.00001),
     ("WatsonFineControlled",.01),("DEFAULT",.01),("DEFAULT",.0005),("Gmsh",.4),("Gmsh",.1))
 # Parts that try their own recipes before the general ladder. The soles are
-# lofts through splines with over 800 knots around; Watson 0.01 mm at 0.35 rad
-# gives about 0.8 M triangles instead of 2 M, and dense sampling (12,000 points
-# with exact surface projection) measured a smaller maximum and 99.9th-percentile
-# CAD deviation than WatsonControlled 0.005 mm at 0.2 rad.
-PART_RECIPES = {"sole_left_native": (("WatsonWideAngle", .01),),
-                "sole_left_native_right": (("WatsonWideAngle", .01),)}
+# lofts through splines with over 800 knots around; Watson 0.01 mm times out on
+# them, so they start at the recipe that passes. A wider angle (0.35 rad) cut
+# them to 0.8 M triangles but moved sampled points up to 0.38 mm off the CAD
+# surface (0.07 mm at this recipe), so it was rejected.
+PART_RECIPES = {"sole_left_native": (("WatsonControlled", .005),),
+                "sole_left_native_right": (("WatsonControlled", .005),)}
 # Source of the worker and mesher; a cached mesh is valid only for these exact files.
 MESH_IMPLEMENTATION = ("tools/print_mesh.py", "tools/gmsh_mesh.py")
 # Workers are single-threaded processes; leave cores for the system and the parent.
